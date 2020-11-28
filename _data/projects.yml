@@ -2,15 +2,15 @@
 # uncomment the urls if you wish to display them, and add your own URL
 
 # jazznotes.io
-- project: jazznotes.io
-  role: Founder & Primary Developer
-  duration: 2012 &mdash; Present
+- project: Cinsel Terapi
+  role: CETAD
+  duration: 2020 &mdash; Halen
   # url: "#"
-  description: Jazz Notes is an open source node/ember app that helps you keep track of your music compositions and new ideas.
+  description: Cinsel Eğitim Tedavi ve Araştırma Derneği(CETAD) tarafından yürütülen cinsellik, cinsel işlev bozuklukları ve cinsel terapi eğitimlerine halen devam etmektedir.
 
-# Springfield Community Outreach Group
-- project: Springfield Community Outreach Group
-  role: Co-Founder & Organizer
-  duration: 2007 &mdash; Present
+# DP
+- project: Destekleyici Psikoterapi
+  role: Türkiye Psikiyatri Derneği
+  duration: 2017 &mdash; 2020
   # url: "#"
-  description: SCOG is a local monthly meetup in Springfield where we share opportunities to volunteer in the community and organize support for families and neighborhoods in need of assistance that the community can provide.
+  description: Türkiye Psikiyatri Derneği İstanbul şubesi tarafından yürütülen 110 saat kuramsal eğitim ve 80 saat süpervizyondan oluşan Destekleyici Psikoterapi eğitimini tamamlamıştır. 
