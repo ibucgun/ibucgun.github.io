@@ -1,12 +1,13 @@
 # Degree
 - degree: Tıp Fakültesi Lisans
-  uni: Mersin Üniversitesi Tıp Fakültesi
+  uni: Mersin Üniversitesi
   year: 2009 &mdash; 2015
-  award: 
-  summary: 
+  awards:
+    - award: Summa Cumme Laude graduate
+  summary: If you had any meaningful roles at college, feel free to write about them here
 
 - degree: Lise
   uni: Mersin Fen Lisesi
   year: 2009
-  award: 
-  summary: 
+  award: Most likely to succeed
+  summary: You can choose to have either a single or multiple awards
