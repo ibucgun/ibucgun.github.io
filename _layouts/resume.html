@@ -59,7 +59,7 @@
         <div class="resume-item" itemscope itemprop="alumniOf" itemtype="http://schema.org/CollegeOrUniversity">
           <h3 class="resume-item-title" itemprop="name">{{ education.uni }}</h3>
           <h4 class="resume-item-details group" itemprop="description">{{ education.degree }} &bull; {{ education.year }}</h4>
-		  <p class="resume-item-copy">{{ education.summary }}</p>
+		  <p class="resume-item-copy" style="text-align: justify;">{{ education.summary }}</p>
         </div>
         {% endfor %}
       </section>
@@ -80,7 +80,7 @@
         <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
           <h3 class="resume-item-title" itemprop="name">{{ job.company }}</h3>
           <h4 class="resume-item-details" itemprop="description">{{ job.position }} &bull; {{ job.duration }}</h4>
-          <p class="resume-item-copy">{{ job.summary }}</p>
+          <p class="resume-item-copy" style="text-align: justify;">{{ job.summary }}</p>
         </div><!-- end of resume-item -->
         {% endfor %}
 
@@ -101,7 +101,7 @@
           <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
           <h3 class="resume-item-title" itemprop="name">{% if project.url %}<a href="{{ project.url }}" itemprop="url">{{ project.project }}</a>{% else %}{{ project.project }}{% endif %}</h3>
           <h4 class="resume-item-details" itemprop="description">{{ project.role }}  &bull; {{ project.duration }}</h4>
-          <p class="resume-item-copy">{{ project.description }}</p>
+          <p class="resume-item-copy" style="text-align: justify;">{{ project.description }}</p>
         </div>
         {% endfor %}
 
@@ -119,7 +119,7 @@
         {% for skill in site.data.skills %}
         <div class="resume-item">
           <h4 class="resume-item-details">{{ skill.skill }}</h4>
-          <p class="resume-item-copy">{{ skill.description }}</p>
+          <p class="resume-item-copy" style="text-align: justify;">{{ skill.description }}</p>
         </div>
         {% endfor %}
 
