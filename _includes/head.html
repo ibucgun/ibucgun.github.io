@@ -1,5 +1,5 @@
 <head>
-  <meta charset="utf-8">
+  <meta http-equiv=”Content-Type” content=”text/html; charset=UTF8”/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,7 +11,11 @@
   {% endif %}
 
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-
+  <meta name="robots" content="index, follow">
+  <meta name="revisit-after" content="1 days">
+  <meta name="keywords" content="İsmail Buçgün, Dr. İsmail Buçgün, Dr.İsmail Buçgün, Uzm. Dr. İsmail Buçgün, Uzm.Dr. İsmail Buçgün, Uzm.Dr.İsmail Buçgün, Psikiyatrist İsmail Buçgün, Adana psikiyatri, adana psikiyatrist, adana psikoterapist, adana destekleyici psikoterapi, mersin destekleyici psikoterapi, adana ruh sağlığı, adana ruh sağlığı ve hastalıkları, adana ruh sağlığı hastanesi, adana dr. ekrem tok uzman, adana ruh sağlığı psikiyatri, adana ruh sağlığı hastanesi psikiyatri, adana ruh sağlığı hastanesi pskiyatrist">
+  <meta name="author" content="Uzm. Dr. İsmail Buçgün">
+  
   <link rel="stylesheet" href="css/main.css">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="icon" type="image/x-icon" href="/favicon.png" />
