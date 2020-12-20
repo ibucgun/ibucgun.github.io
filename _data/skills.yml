@@ -1,10 +1,8 @@
 # Mesleki İlgi Alanları
+
 - skill: 
-  description: Psikiyatrik hastalıkların tanı ve tedavisi konusunda bilgi ve deneyime sahiptir. Psikofarmakolojik ilaç tedavilerin yanı sıra tedavilerinde destekleyici psikoterapi yöntemlerini kullanmaktadır. Geriatrik psikiyatri (yaşlılık psikiyatrisi), nöropsikiyatri ve psikotik bozukluklar mesleki ilgi alanlarıdır.
-
-- skill: Destekleyici Psikoterapi
-  description: Destekleyici psikoterapi, günümüzde bireysel psikoterapiler arasında dünyada en yaygın kullanılan psikoterapi yöntemidir ve psikodinamik psikiyatri temellerine dayalıdır. Psikiyatrik tanısal değerlendirmeyi gerektiren, terapistin girişimlerini özgül bir hedefi başarmaya yönelik olarak tasarladığı bir psikoterapidir. <br><br>Bu tedavi yönteminin en sık kullanıldığı ruhsal sorun ve hastalıklar; depresyon, anksiyete bozuklukları, psikosomatik hastalıklar, yas süreci, özkıyım ve diğer kriz durumları, alkol-madde bağımlılığı ve kişilik bozukluklarıdır. 
-
+  description: Tüm psikiyatrik hastalıkların tanı ve tedavisi konusunda bilgi ve deneyime sahip olup geriatrik psikiyatri (yaşlılık psikiyatrisi), nöropsikiyatri ve psikotik bozukluklar mesleki ilgi alanlarıdır. Psikofarmakolojik ilaç tedavilerin yanı sıra tedavilerinde destekleyici psikoterapi yöntemlerini kullanmaktadır. 
+  
 - skill: Psikotik Bozukluklar
   description: Şizofreni, şizoaffektif bozukluk, kısa psikoz bozukluğu, sanrılı bozukluk başlıca psikotik bozukluklardır. Psikoz bu hastalıklara özgül bir durum olmayıp depresyon, bipolar duygudurum bozukluğu, alkol-madde bağımlılığı ve genel tıbbi duruma bağlı hastalıkların seyri sırasında eşlik edebilir.
 
@@ -13,3 +11,6 @@
 
 - skill: Nöropsikiyatri
   description: Nörolojik hastalıkların seyri sırasında görülen psikiyatrik belirtilerin tanı ve tedavisi ile ilgilen bilim dalıdır.  
+
+- skill: Destekleyici Psikoterapi
+  description: Destekleyici psikoterapi, günümüzde bireysel psikoterapiler arasında dünyada en yaygın kullanılan psikoterapi yöntemidir ve psikodinamik psikiyatri temellerine dayalıdır. Psikiyatrik tanısal değerlendirmeyi gerektiren, terapistin girişimlerini özgül bir hedefi başarmaya yönelik olarak tasarladığı bir psikoterapidir. <br><br>Bu tedavi yönteminin en sık kullanıldığı ruhsal sorun ve hastalıklar; depresyon, anksiyete bozuklukları, psikosomatik hastalıklar, yas süreci, özkıyım ve diğer kriz durumları, alkol-madde bağımlılığı ve kişilik bozukluklarıdır. 
