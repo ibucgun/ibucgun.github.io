@@ -1,7 +1,14 @@
 # Projects
 # uncomment the urls if you wish to display them, and add your own URL
 
-# jazznotes.io
+# DUSEP
+- project: Duygudurum Bozuklukları Uzmanlık Sonrası Eğitim Programı (DUSEP)
+  role: Bipolar Bozukluklar Derneği
+  duration: 2021 &mdash; Halen
+  # url: "#"
+  description: Bipolar Bozukluklar Derneği tarafından yürütülen Duygudurum Bozuklukları Uzmanlık Sonrası Eğitim Programı (DUSEP)'na halen devam etmektedir.
+
+# Cinsel Terapi
 - project: Cinsel Terapi
   role: CETAD
   duration: 2020 &mdash; Halen
