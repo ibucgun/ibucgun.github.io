@@ -14,7 +14,7 @@ resume_name:                    "Uzm. Dr. İsmail BUÇGÜN"
 resume_title:                   "Psikiyatrist&Psikoterapist"
 
 # used for the contact button in _layouts/resume.html
-resume_contact_email:           "https://www.instagram.com/dr.ismailbucgun/"
+resume_contact_email:           "http://www.instagram.com/dr.ismailbucgun/
 
 # the next two items are used for schema itemprops in _layouts/resume.html
 resume_contact_telephone:       "03222390475"
@@ -50,7 +50,7 @@ resume_social_links:
   resume_dribbble_url:          ""
   # resume_facebook_url:          "insert Facebook URL here"
   resume_linkedin_url:          ""
-  resume_instagram_url:         "https://www.instagram.com/dr.ismailbucgun/"
+  resume_instagram_url:         "http://www.instagram.com/dr.ismailbucgun/
   resume_website_url:           "http://"
   resume_medium_url:            ""
 resume_print_social_links:      true
