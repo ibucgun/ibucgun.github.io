@@ -14,7 +14,7 @@ resume_name:                    "Uzm. Dr. İsmail BUÇGÜN"
 resume_title:                   "Psikiyatrist&Psikoterapist"
 
 # used for the contact button in _layouts/resume.html
-resume_contact_email:           "http://www.instagram.com/dr.ismailbucgun/
+resume_contact_email:           "http://www.instagram.com/dr.ismailbucgun/"
 
 # the next two items are used for schema itemprops in _layouts/resume.html
 resume_contact_telephone:       "03222390475"
