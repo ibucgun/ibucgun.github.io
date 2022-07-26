@@ -8,12 +8,12 @@
   # url: "#"
   description: Bipolar Bozukluklar Derneği tarafından yürütülen Duygudurum Bozuklukları Uzmanlık Sonrası Eğitim Programı'nın süpervizyon aşamasına halen devam etmektedir.
 
-# BDT
-- project: Bilişsel Davranışçı Terapi Temel Eğitimi
-  role: Bilişsel Davranışçı Psikoterapiler Derneği
-  duration: 2022 &mdash;
+# DP
+- project: Destekleyici Psikoterapi
+  role: Türkiye Psikiyatri Derneği
+  duration: 2017 &mdash; 2020
   # url: "#"
-  description: Bilişsel Davranışcı Psikoterapiler Derneği tarafından yürütülen Bilişsel Davranışçı Psikoterapi Temel Eğimi’ni tamamlamıştır. 
+  description: Türkiye Psikiyatri Derneği İstanbul şubesi tarafından yürütülen 110 saat kuramsal eğitim ve 80 saat üzeri süpervizyondan oluşan Destekleyici Psikoterapi eğitimini tamamlamış ve Türkiye Psikiyatri Derneği <b>Destekleyici Psikoterapi Uygulayıcısı sertifikası</b> almıştır. 
 
 
 # Cinsel Terapi
@@ -23,9 +23,10 @@
   # url: "#"
   description: Cinsel Eğitim Tedavi ve Araştırma Derneği(CETAD) tarafından yürütülen Cinsellik ve Cinsel İşlev Bozuklukları Temel Eğitimi’ni tamamlamıştır. 
 
-# DP
-- project: Destekleyici Psikoterapi
-  role: Türkiye Psikiyatri Derneği
-  duration: 2017 &mdash; 2020
+# BDT
+- project: Bilişsel Davranışçı Terapi Temel Eğitimi
+  role: Bilişsel Davranışçı Psikoterapiler Derneği
+  duration: 2022
   # url: "#"
-  description: Türkiye Psikiyatri Derneği İstanbul şubesi tarafından yürütülen 110 saat kuramsal eğitim ve 80 saat üzeri süpervizyondan oluşan Destekleyici Psikoterapi eğitimini tamamlamış ve Türkiye Psikiyatri Derneği <b>Destekleyici Psikoterapi Uygulayıcısı sertifikası</b> almıştır. 
+  description: Bilişsel Davranışcı Psikoterapiler Derneği tarafından yürütülen Bilişsel Davranışçı Psikoterapi Temel Eğimi’ni tamamlamıştır. 
+
