@@ -6,7 +6,15 @@
   role: Bipolar Bozukluklar Derneği
   duration: 2021 &mdash; Halen
   # url: "#"
-  description: Bipolar Bozukluklar Derneği tarafından yürütülen Duygudurum Bozuklukları Uzmanlık Sonrası Eğitim Programı'na halen devam etmektedir.
+  description: Bipolar Bozukluklar Derneği tarafından yürütülen Duygudurum Bozuklukları Uzmanlık Sonrası Eğitim Programı'nın süpervizyon aşamasına halen devam etmektedir.
+
+# BDT
+- project: Bilişsel Davranışçı Terapi Temel Eğitimi
+  role: Bilişsel Davranışçı Psikoterapiler Derneği
+  duration: 2022 &mdash;
+  # url: "#"
+  description: Bilişsel Davranışcı Psikoterapiler Derneği tarafından yürütülen Bilişsel Davranışçı Psikoterapi Temel Eğimi’ni tamamlamıştır. 
+
 
 # Cinsel Terapi
 - project: Cinsellik ve Cinsel İşlev Bozuklukları Temel Eğitimi
