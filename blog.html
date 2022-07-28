@@ -5,14 +5,29 @@ title: Blog Sayfası
 
 <div class="catalogue">
   {% for post in site.posts %}
-    {% if post.sticky %}
-      {% include catalogue_item.html sticky='true' %}
+<a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
+  <div>
+    {% if include.sticky == 'true' %}
+    <span class="catalogue-pinned">Pinned &middot;</span>
     {% endif %}
+    <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time>
+    <h1 class="catalogue-title">{{ post.title }}</h1>
+    <div class="catalogue-line"></div>
+
+    <p>
+      {% if post.excerpt_separator %}
+        {{ post.excerpt | strip_html }}
+      {% else %}
+        {{ post.content | strip_html | truncatewords: 30 }}
+      {% endif %}
+    </p>
+
+  </div>
+</a>
+
   {% endfor %}
 
-  {% for post in paginator.posts %}
-    {% include catalogue_item.html %}
-  {% endfor %}
+
 </div>
 
 <div class="pagination">
