@@ -70,4 +70,4 @@ plugins:
   # - jemoji #Uncomment this to allow emoji in your post
 
 # Permalinks
-permalink:      /blog/:year-:month-:day/:title
+permalink:      /:title
