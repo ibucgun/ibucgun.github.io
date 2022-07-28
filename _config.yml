@@ -61,3 +61,17 @@ resume_theme:                   default
 # Note: when editing locally, remember to restart
 # your Jekyll server when you edit this file. Changes
 # to _config.yml are only recognized when the server starts
+
+# Build settings
+markdown:       kramdown
+
+# Gems
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  # - jemoji #Uncomment this to allow emoji in your post
+
+# Permalinks
+permalink:      /:year-:month-:day/:title
+paginate:       5
