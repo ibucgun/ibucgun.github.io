@@ -259,7 +259,6 @@
       padding: 0.2rem 0.5rem;
       background: rgba(0, 0, 0, 0.05);
       border-radius: 5px;
-      color: $default-color;
       text-decoration: none;
 
       &:hover,
@@ -277,8 +276,6 @@
     &-label {
       display: inline-block;
       margin: 2rem 0 0.5rem;
-      font-family: $sans-serif;
-      color: $default-color;
     }
   }
 
