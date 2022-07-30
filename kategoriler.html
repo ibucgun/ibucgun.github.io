@@ -30,7 +30,7 @@ title: "Kategoriler"
       <line x1="7" y1="7" x2="7.01" y2="7"></line>
     </svg>
     <h2 class="tags-item-label">Son Yazılan Yazı</h2>
-    {% for post.last in site.posts %}
+    {% for post in site.posts %}
         <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
           <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
           <h3 class="resume-item-title" style="text-align: justify;" itemprop="name"><a href="{{ post.last.url | prepend: site.baseurl }}" itemprop="url">{{ post.last.title }}</a></h3>
