@@ -33,7 +33,7 @@ title: "Kategoriler"
     {% for post in tag[1] %}
     <a class="tags-post" style="text-decoration:none" href="{{ post.url | prepend: site.baseurl }}">
       <div>
-        <span class="tags-post-title"><b>{{ post.title }}</b></span>
+        <span class="tags-post-title">{{ post.title }}</span>
         <div class="tags-post-line"></div>
       </div>
       <span class="tags-post-meta">
