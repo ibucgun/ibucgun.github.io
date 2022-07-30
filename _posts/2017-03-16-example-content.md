@@ -2,7 +2,7 @@
 layout: post
 title: "Example Content"
 author: "Chester"
-tags: Destekleyici Psikoterapi
+tags: [Destekleyici Psikoterapi]
 excerpt_separator: <!--more-->
 ---
 
