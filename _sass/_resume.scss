@@ -21,7 +21,8 @@
 .page-header { padding: 1.5rem 0;
 
   .avatar {
-    width: 100px;
+    width: 128px;
+	height: 128px;
     max-width: 100%;
     overflow: hidden;
     @include border-radius(100px);
