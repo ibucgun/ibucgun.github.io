@@ -82,7 +82,7 @@
   position: relative;
   top: 4px;
   text-align: center;
-  border-top: 2px solid #F5B428;
+  border-top: 2px solid #c7c7c7;
   padding-top: .4rem;
 
   @include media_larger_than_mobile {
@@ -178,7 +178,7 @@
 // footer styles
 
 .page-footer {
-  border-top: 4px solid #F5B428;
+  border-top: 4px solid #c7c7c7;
   padding-top: 1.5rem;
   text-align: center;
   margin-bottom: 3rem;
