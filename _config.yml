@@ -46,9 +46,9 @@ resume_section_associations:    true
 # uncomment the options you wish to display, and add your own URL
 resume_social_links:
   resume_github_url:            "https://github.com/jglovier/resume-template"
-  resume_twitter_url:           "http://"
+  resume_twitter_url:           "https://"
   resume_dribbble_url:          "http://"
-  # resume_facebook_url:          "insert Facebook URL here"
+  resume_facebook_url:          "https://"
   resume_linkedin_url:          "http://"
   resume_instagram_url:         "https://www.instagram.com/dr.ismailbucgun/"
   resume_website_url:           "http://"
