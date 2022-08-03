@@ -1,9 +1,20 @@
 ---
 layout: page
-title: Blog Sayfası
+title: "Blog"
 ---
 
-  {% for post in site.posts %}
+<div class="tags">
+  <div class="tags-clouds">
+    {% for tag in site.tags %}
+    <a href="#{{ tag[0] }}">{{ tag[0] }}</a>
+    {% endfor %}
+  </div>
+  <br>
+  <section class="content-section">
+        <header class="section-header">
+          <h2>Son Yazılan Yazılar</h2>
+        </header>
+    {% for post in site.posts limit:2 %}
         <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
           <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
           <h3 class="resume-item-title" style="text-align: justify;" itemprop="name"><a href="{{ post.url | prepend: site.baseurl }}" itemprop="url">{{ post.title }}</a></h3>
@@ -15,4 +26,43 @@ title: Blog Sayfası
       {% endif %}</p>
         </div>
   {% endfor %}
- 
+  </section>
+<div style="border-top:2px solid #c7c7c7;"></div>
+  {% for tag in site.tags %}
+  <div class="tags-item" id="{{ tag[0] }}">
+    <svg
+      class="tags-item-icon"
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="feather feather-tag"
+    >
+      <path
+        d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
+      ></path>
+      <line x1="7" y1="7" x2="7.01" y2="7"></line>
+    </svg>
+    <h2 class="tags-item-label">{{ tag[0] }}</h2>
+    {% for post in tag[1] %}
+    <a class="tags-post" style="text-decoration:none" href="{{ post.url | prepend: site.baseurl }}">
+      <div>
+        <span class="tags-post-title">{{ post.title }}</span>
+        <div class="tags-post-line"></div>
+      </div>
+      <span class="tags-post-meta">
+        <time datetime="{{ post.date }}">
+          {{ post.date | date:"%Y-%m-%d" }}
+        </time>
+      </span>
+    </a>
+    {% endfor %}
+  </div>
+  {% endfor %}
+</div>
+
