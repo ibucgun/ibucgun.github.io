@@ -1,6 +1,11 @@
 <!-- and guess where these are defined? Yup, you guessed it: the _config.yml file -->
 {% if site.resume_social_links %}
 <ul class="icon-links">
+
+  <!-- Anasayfa link -->
+  {% if site.resume_social_links.resume_anasayfa_url %}
+  <li class="icon-link-item"><a href="{{ site.resume_social_links.resume_anasayfa_url }}" class="icon-link" itemprop="sameAs">{% include icons/icon-anasayfa.html %}</a></li>
+  {% endif %}
   
   <!-- Facebook link -->
   {% if site.resume_social_links.resume_facebook_url %}

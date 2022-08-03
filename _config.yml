@@ -53,6 +53,7 @@ resume_social_links:
   resume_instagram_url:         "https://www.instagram.com/dr.ismailbucgun/"
   resume_website_url:           "http://"
   resume_medium_url:            "http://"
+  resume_anasayfa_url:          "https://ismailbucgun.com"
 resume_print_social_links:      true
 
 # Design settings
