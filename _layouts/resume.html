@@ -46,9 +46,7 @@
 	  
 	  {% if site.resume_section_egitim %}
       <!-- begin Eğitim -->
-      <section id="education" class="content-section">
-	    <section class="nav-buffer"></section>
-
+      <section id="egitim" class="content-section">
         <header class="section-header">
           <h2>Eğitim</h2>
         </header>
@@ -66,16 +64,15 @@
 	  
 	  
 
-      {% if site.resume_section_experience %}
-      <!-- begin Experience -->
-      <section id="experience" class="content-section">
-	    <section class="nav-buffer"></section>
+      {% if site.resume_section_calistigikurumlar %}
+      <!-- begin Çalıştığı Kurumlar -->
+      <section id="calistigikurumlar" class="content-section">
 
         <header class="section-header">
           <h2>Çalıştığı Kurumlar</h2>
         </header>
 
-        {% for job in site.data.experience %}
+        {% for job in site.data.calistigikurumlar %}
         <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
           <h3 class="resume-item-title" itemprop="name" style="text-align: justify;">{{ job.company }}</h3>
           <h4 class="resume-item-details" itemprop="description">{{ job.position }} &bull; {{ job.duration }}</h4>
@@ -84,7 +81,7 @@
         {% endfor %}
 
       </section>
-      <!-- end Experience -->
+      <!-- end Çalıştığı Kurumlar -->
       {% endif %}
 
 
