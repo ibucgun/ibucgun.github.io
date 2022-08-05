@@ -56,6 +56,11 @@ resume_social_links:
   resume_anasayfa_url:          "https://ismailbucgun.com"
 resume_print_social_links:      true
 
+# Navigation
+show_navigation: true
+show_introduction_nav_link: true
+
+
 # Design settings
 resume_theme:                   default
 
