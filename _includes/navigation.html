@@ -1,0 +1,10 @@
+{% if site.show_navigation %}
+<header class="nav-wrapper">
+  <nav>
+    <div class="nav-ul-wrapper">
+      {% include navigation-lib/links.html %}
+    </div>
+    {% include navigation-lib/mobile-menu.html %}
+  </nav>
+</header>
+{% endif %}

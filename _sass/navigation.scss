@@ -1,0 +1,169 @@
+$nav-height: 4.5rem;
+
+section.nav-buffer {
+  height: $nav-height;
+}
+
+header.nav-wrapper {
+  width: 100%;
+  z-index: 1100;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+
+  nav {
+    height: $nav-height;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div.nav-ul-wrapper {
+      @include media_mobile {
+        display: none;
+      }
+    }
+  }
+}
+
+ul.nav-ul {
+  list-style: none;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+
+  @include media_mobile {
+    flex-direction: column;
+  }
+
+  color: rgb(51, 51, 51);
+
+  li {
+    padding: 8px 15px;
+    a {
+      color: #333;
+      text-decoration: none;
+      border-bottom: 1px solid;
+
+      &:hover {
+        color: #9c9c9c;
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+div.nav-menu-wrapper {
+  display: none;
+
+  @include media_mobile {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+  }
+
+  .nav-header-name {
+    @include sans;
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: -0.05rem;
+    line-height: 1;
+  }
+
+  a.nav-menu-link {
+    color: #333;
+    text-decoration: none;
+
+    svg {
+      height: 28px;
+    }
+  }
+}
+
+div.nav-overlay {
+  display: none;
+
+  @include media_mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9000;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    // -ms-flex-align: center;
+    // align-items: center;
+    background: rgba(255, 255, 255, 0.87);
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+    pointer-events: none;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+
+    /* This is the magic! */
+    &:target {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  a.nav-overlay-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 35px;
+      right: 20px;
+      display: block;
+      width: 30px;
+      height: 2px;
+      background: #333;
+      opacity: 0.8;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  div.nav-overlay-content {
+    position: relative;
+    z-index: 9999;
+    padding: 30px 20px;
+    color: #fff;
+    text-align: center;
+  }
+}
+
+@media print {
+  section.nav-buffer,
+  header.nav-wrapper {
+    display: none;
+  }
+}
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privac
