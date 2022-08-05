@@ -87,7 +87,7 @@
 
       {% if site.resume_section_aldigiegitimler %}
       <!-- begin Aldığı Eğitimler -->
-      <section class="content-section">
+      <section id="aldigiegitimler" class="content-section">
         <header class="section-header">
           <h2>Aldığı Eğitimler</h2>
         </header>
@@ -105,14 +105,14 @@
       <!-- end Aldığı Eğitimler -->
       {% endif %}
 
-      {% if site.resume_section_skills %}
-      <!-- begin Skills -->
-      <section class="content-section">
+      {% if site.resume_section_meslekiilgialanlari %}
+      <!-- begin Mesleki İlgi Alanları -->
+      <section id="meslekiilgialanlari" class="content-section">
 
         <header class="section-header">
           <h2>Mesleki İlgi Alanları</h2>
         </header>
-        {% for skill in site.data.skills %}
+        {% for skill in site.data.meslekiilgialanlari %}
         <div class="resume-item">
           <h4 class="resume-item-details">{{ skill.skill }}</h4>
           <p class="resume-item-copy" style="text-align: justify;">{{ skill.description }}</p>
@@ -120,13 +120,13 @@
         {% endfor %}
 
       </section>
-      <!-- end Skills -->
+      <!-- end Mesleki İlgi Alanları -->
       {% endif %}
 
 
-      {% if site.resume_section_links %}
-      <!-- begin Links -->
-      <section class="content-section">
+      {% if site.resume_section_iletisimverandevu %}
+      <!-- begin İletişim ve Randevu -->
+      <section  id="iletisimverandevu" class="content-section">
 
         <header class="section-header">
           <h2>İletişim ve Randevu</h2>
@@ -141,7 +141,7 @@
         </div>
 
       </section>
-      <!-- end Links -->
+      <!-- end İletisim ve Randevu -->
       {% endif %}
 
 	{% include footer.html %}

@@ -36,9 +36,9 @@ resume_looking_for_work:        "yes"
 resume_section_calistigikurumlar:      true
 resume_section_egitim:       true
 resume_section_aldigiegitimler: true
-resume_section_skills:          true
+resume_section_meslekiilgialanlari: true
 resume_section_recognition:     true
-resume_section_links:           true
+resume_section_iletisimverandevu: true
 resume_section_associations:    true
 # resume_section_interests:       true
 
