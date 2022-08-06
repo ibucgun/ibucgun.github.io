@@ -1,6 +1,6 @@
 blockquote {
   background-color: $white;
-  color: $gray;
+  color: $black;
   border-left: 04px solid #eeeeee;
   padding-left: 15px;
   font-size: 16px !important;
@@ -17,7 +17,7 @@ blockquote {
 
 pre,
 code {
-  font-family: $code-font-family !important;
+  font-family: $mono-font !important;
   font-size: 15px !important;
   color: #586e75;
   border: 01px solid #dddddd;
