@@ -44,7 +44,6 @@ pre {
   isolation: isolate;
   border-radius: 03px;
   background: #fdf6e3;
-  @extend %vertical-rhythm;
 
   .highlighter-rouge & {
     background: #fdf6e3;
