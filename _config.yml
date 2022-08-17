@@ -1,6 +1,6 @@
 # Site settings
-title: "Uzm.Dr. İsmail BUÇGÜN"
-description: "Psikiyatri Uzmanı ve Psikoterapist • Adana Dr. Ekrem Tok Ruh Sağlığı ve Hastalıkları Hastanesi"
+title: "Uzm.Dr. İsmail BUÇGÜN • Adana Psikiyatri Uzmanı • Psikoterapist" 
+description: "Adana Psikiyatri • Adana Psikoterapist • Adana'da psikiyatri uzmanı olarak çalışmaktadır. Temel mesleki ilgili alanı bipolar duygudurum bozukluğu ve diğer duygudurum bozukluklarıdır. İlaç tedavileri yanında psikodinamik temellere dayanan destekleyici psikoterapi uygulayıcısıdır."
 
 # Build settings
 markdown: kramdown
@@ -17,10 +17,10 @@ resume_title:                   "Psikiyatrist&Psikoterapist"
 resume_contact_email:           "https://www.instagram.com/dr.ismailbucgun/"
 
 # the next two items are used for schema itemprops in _layouts/resume.html
-resume_contact_telephone:       "03222390475"
-resume_contact_address:         "Adana Dr. Ekrem Tok Ruh Sağlığı ve Hastalıkları Hastanesi"
+resume_contact_telephone:       "05510334896"
+resume_contact_address:         "Uzm. Dr. İsmail Buçgün Muayenehanesi • Hurmalı Mahallesi Kurtuluş Caddesi No:39 Central Plaza Kat:2 Daire:23, Adana, Türkiye 01060"
 
-resume_header_contact_info:     "Adana Dr. Ekrem Tok Ruh Sağlığı ve Hastalıkları Hastanesi • 03222390475 "
+resume_header_contact_info:     "Uzm. Dr. İsmail Buçgün Muayenehanesi • Hurmalı Mahallesi Kurtuluş Caddesi No:39 Central Plaza Kat:2 Daire:23, Adana, Türkiye 01060"
 display_header_contact_info:    "false"
 
 resume_header_intro: "<p><b>Temel mesleki ilgi alanı bipolar duygudurum bozukluğu ve diğer duygudurum bozukluklarıdır.</b> Yaşlılık (geriatrik) psikiyatrisi, nöropsikiyatri, şizofreni ve diğer psikotik bozukluklar ile destekleyici psikoterapi diğer mesleki ilgi alanlarıdır.</p>"
@@ -72,7 +72,7 @@ resume_theme:                   default
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  # - jemoji #Uncomment this to allow emoji in your post
+  - jemoji #Uncomment this to allow emoji in your post
 
 # Permalinks
 permalink:      /:title
