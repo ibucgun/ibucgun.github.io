@@ -2,7 +2,7 @@ blockquote {
   background-color: $white;
   color: $black;
   border-left: 04px solid #eeeeee;
-  padding-left: 15px;
+  padding-left: 5px;
   font-size: 16px !important;
   font-style: italic;
 
@@ -26,11 +26,11 @@ code {
 }
 
 code {
-  padding: 01px 03.55px;
+  padding: 01px 0;
 }
 
 pre {
-  padding: 08px 12px;
+  padding: 08px 0;
   overflow-x: auto;
 
   > code {
