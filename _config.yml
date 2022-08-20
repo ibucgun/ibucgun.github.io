@@ -1,9 +1,6 @@
 # Site settings
 title: "Uzm.Dr. İsmail BUÇGÜN • Adana Psikiyatri Uzmanı • Psikoterapist" 
 description: "Adana Psikiyatri • Adana Psikoterapist • Adana'da psikiyatri uzmanı olarak çalışmaktadır. Temel mesleki ilgili alanı bipolar duygudurum bozukluğu ve diğer duygudurum bozukluklarıdır. İlaç tedavileri yanında psikodinamik temellere dayanan destekleyici psikoterapi uygulayıcısıdır."
-url: https://ismailbucgun.com
-// Not used anymore
-enforce_ssl: ismailbucgun.com
 
 # Build settings
 markdown: kramdown
