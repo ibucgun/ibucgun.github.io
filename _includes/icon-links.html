@@ -2,19 +2,10 @@
 {% if site.resume_social_links %}
 <ul class="icon-links">
 
-  <!-- Anasayfa link -->
-  {% if site.resume_social_links.resume_anasayfa_url %}
-  <li class="icon-link-item"><a href="{{ site.resume_social_links.resume_anasayfa_url }}" class="icon-link" itemprop="sameAs">{% include icons/icon-anasayfa.html %}</a></li>
-  {% endif %}
   
   <!-- Facebook link -->
   {% if site.resume_social_links.resume_facebook_url %}
   <li class="icon-link-item"><a href="{{ site.resume_social_links.resume_facebook_url }}" class="icon-link" itemprop="sameAs">{% include icons/icon-facebook.html %}</a></li>
-  {% endif %}
-
-  <!-- Twitter link -->
-  {% if site.resume_social_links.resume_twitter_url %}
-  <li class="icon-link-item"><a href="{{ site.resume_social_links.resume_twitter_url }}" class="icon-link" itemprop="sameAs">{% include icons/icon-twitter.html %}</a></li>
   {% endif %}
 
   <!-- Instagram link -->
