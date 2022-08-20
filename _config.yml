@@ -79,5 +79,5 @@ plugins:
   - jekyll-sitemap
 
 # Permalinks
-permalink:      /:tags/:title
+permalink:      /:title/
 
