@@ -1,6 +1,6 @@
 # Site settings
 title: "Uzm.Dr. İsmail BUÇGÜN • Adana Psikiyatri Uzmanı • Psikoterapist" 
-description: "Adana'da psikiyatri uzmanı olarak çalışmaktadır. Temel mesleki ilgili alanı bipolar duygudurum bozukluğu ve diğer duygudurum bozukluklarıdır. İlaç tedavileri yanında psikodinamik temellere dayanan destekleyici psikoterapi uygulayıcısıdır."
+description: "Temel mesleki ilgili alanı bipolar duygudurum bozukluğu, major depresyon ve destekleyici psikoterapidir. İlaç tedavileri yanında psikodinamik temellere dayanan destekleyici psikoterapi uygulayıcısıdır."
 
 # Build settings
 markdown: kramdown
@@ -23,7 +23,7 @@ resume_contact_address:         "Uzm. Dr. İsmail Buçgün Muayenehanesi • Hur
 resume_header_contact_info:     "Uzm. Dr. İsmail Buçgün Muayenehanesi • Hurmalı Mahallesi Kurtuluş Caddesi No:39 Central Plaza Kat:2 Daire:23, Adana, Türkiye 01060"
 display_header_contact_info:    "false"
 
-resume_header_intro: "<p>Tüm psikiyatrik hastalıkların tanı ve tedavisinde klinik deneyim ve yetkinliğe sahip olmakla birlikte <b>temel mesleki ilgi alanı bipolar duygudurum bozukluğu, major depresif bozukluk ve diğer duygudurum bozukluklarıdır.</b> Yaşlılık (geriatrik) psikiyatrisi, nöropsikiyatri, şizofreni ve diğer psikotik bozukluklar ile destekleyici psikoterapi diğer mesleki ilgi alanlarıdır.<br><br><b>Türkiye Psikiyatri Derneği tarafından sertifiye edilen bir destekleyici psikoterapi uygulayıcısıdır. Adana ilindeki 2 destekleyici psikoterapi uygulayıcısı psikiyatri uzmanından birisidir.</b></p>"
+resume_header_intro: "<p>Tüm psikiyatrik hastalıkların tanı ve tedavisinde klinik deneyim ve yetkinliğe sahip olmakla birlikte <b>temel mesleki ilgi alanı bipolar duygudurum bozukluğu, major depresif bozukluk ve diğer duygudurum bozukluklarıdır.</b> Yaşlılık (geriatrik) psikiyatrisi, nöropsikiyatri, şizofreni ve diğer psikotik bozukluklar ile destekleyici psikoterapi diğer mesleki ilgi alanlarıdır.<br><br><b>Türkiye Psikiyatri Derneği tarafından sertifiye edilen bir destekleyici psikoterapi uygulayıcısıdır. Adana'da destekleyici psikoterapi uygulayıcısı olan iki psikiyatri uzmanından birisidir.</b></p>"
 
 # use "yes" to display the email contact button,
 # "no" to display an "I'm not looking for work" message,
