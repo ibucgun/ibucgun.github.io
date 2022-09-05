@@ -16,4 +16,4 @@ Bi iki, polar kutup demektir. **Bipolar iki kutuplu anlamına gelir. Bu isim has
 ### Duygudurum ne demektir? 
 **İniş çıkışlar olmakla birlikte genel olarak bellir bir sabitlikte devam eden, süreğen, kalıcı, içselleştirilmiş duygu tonudur.**
 
-Günlük yaşamda herkesin dünyasında inişler çıkışlar olur. Bipolar bozuklukta bu inişler daha derin, çıkışlar daha yükseğe olur, aralarda normal duyfudurum dönemleri olur. Bu değişimler duyguların yanında düşünceleri, davranışlar, uykuyu, iştahı, fiziksel sağlığı ve kişinin işlevselliğini etkiler. Duygudurum değişimleri günlük yaşam olayları ile bağlantılı olmayabilir.
+Günlük yaşamda herkesin dünyasında inişler çıkışlar olur. Bipolar bozuklukta bu inişler daha derin, çıkışlar daha yükseğe olur, aralarda normal duygudurum dönemleri olur. Bu değişimler duyguların yanında düşünceleri, davranışları, uykuyu, iştahı, fiziksel sağlığı ve kişinin işlevselliğini etkiler. Duygudurum değişimleri günlük yaşam olayları ile bağlantılı olmayabilir.
