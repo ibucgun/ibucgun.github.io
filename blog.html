@@ -28,7 +28,7 @@ description: Adana Psikiyatri • Psikiyatrik hastalıklar, tedavileri, takip s�
           <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
           <h3 class="resume-item-title" style="text-align: justify;" itemprop="name"><a href="{{ post.url | prepend: site.baseurl }}" itemprop="url">{{ post.title }}</a></h3>
           <h4 class="resume-item-details" itemprop="description">Yayınlanma Tarihi: {{ post.date | date: "%d.%m.%Y" }}</h4>
-          <p class="resume-item-copy" style="text-align: justify;">      {% if post.excerpt_separator %}
+          <p class="resume-item-copy" style="text-align: justify; font-size: 1.125rem;">      {% if post.excerpt_separator %}
         {{ post.excerpt | strip_html }}
       {% else %}
         {{ post.content | strip_html | truncatewords: 70 }}
@@ -36,7 +36,7 @@ description: Adana Psikiyatri • Psikiyatrik hastalıklar, tedavileri, takip s�
         </div>
   {% endfor %}
   </section>
-<div style="border-top:2px solid #c7c7c7;"></div>
+<div style="border-top:2px solid #c7c7c7; font-size: 1.125rem;"></div>
   {% for tag in site.tags %}
   <div class="tags-item" id="{{ tag[0] }}">
     <svg
@@ -60,11 +60,11 @@ description: Adana Psikiyatri • Psikiyatrik hastalıklar, tedavileri, takip s�
     <h2 class="tags-item-label">{{ tag[0] }}</h2>
     {% for post in tag[1] %}
     <a class="tags-post" style="text-decoration:none" href="{{ post.url | prepend: site.baseurl }}">
-      <div>
+      <div style=" font-size: 1.125rem;">
         <span class="tags-post-title">{{ post.title }}</span>
         <div class="tags-post-line"></div>
       </div>
-      <span class="tags-post-meta">
+      <span class="tags-post-meta" style=" font-size: 1.125rem;">
         <time datetime="{{ post.date }}">
           {{ post.date | date: "%d.%m.%Y" }}
         </time>
