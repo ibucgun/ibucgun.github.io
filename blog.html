@@ -4,6 +4,14 @@ title: "Blog"
 description: Adana Psikiyatri • Psikiyatrik hastalıklar, tedavileri, takip süreci, destekleyici ve psikanalitik yönelimli psikoterapi konusunda merak edilenler hakkında ayrıntılı ve özgün yazıların yer aldığı blog sayfamızı takip edebilirsiniz.• 
 ---
 
+        <div class="resume-item">
+		  <p style="text-align: justify;font-size: 1.125rem;">
+		  Mesleki ilgi alanlarım ve tüm psikiyatrik hastalıklar 
+		  </p>
+		
+		<div>
+
+
 <div class="tags">
   <div class="tags-clouds">
     {% for tag in site.tags %}
@@ -15,7 +23,7 @@ description: Adana Psikiyatri • Psikiyatrik hastalıklar, tedavileri, takip s�
         <header class="section-header">
           <h2>Son Yazılan Yazılar</h2>
         </header>
-    {% for post in site.posts limit:2 %}
+    {% for post in site.posts limit:1 %}
         <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
           <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
           <h3 class="resume-item-title" style="text-align: justify;" itemprop="name"><a href="{{ post.url | prepend: site.baseurl }}" itemprop="url">{{ post.title }}</a></h3>
@@ -23,7 +31,7 @@ description: Adana Psikiyatri • Psikiyatrik hastalıklar, tedavileri, takip s�
           <p class="resume-item-copy" style="text-align: justify;">      {% if post.excerpt_separator %}
         {{ post.excerpt | strip_html }}
       {% else %}
-        {{ post.content | strip_html | truncatewords: 50 }}
+        {{ post.content | strip_html | truncatewords: 70 }}
       {% endif %}</p>
         </div>
   {% endfor %}
