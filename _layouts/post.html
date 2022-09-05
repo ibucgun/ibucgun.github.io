@@ -5,6 +5,11 @@ title: {{page.title}}
 
 <div class="post">
   <div class="post-info">
+  
+    {% if page.date %}
+      <time datetime="{{ page.date }}">{{ page.date | date: "%d.%m.%Y" }}</time><span>tarihinde&nbsp;</span>
+    {% endif %}
+  
     {% if page.author %}
         {{ page.author }}
     {% else %}
@@ -12,10 +17,6 @@ title: {{page.title}}
     {% endif %}     
 	<span>tarafından yazıldı.</span>
 
-    {% if page.date %}
-      <br>
-      <span>on&nbsp;</span><time datetime="{{ page.date }}">{{ page.date | date: "%d.%m.%Y" }}</time>
-    {% endif %}
   </div>
 
   <div style="text-align: justify;">{{ content }}</div>
