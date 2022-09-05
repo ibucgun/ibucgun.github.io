@@ -7,3 +7,4 @@ description: Bipolar duygudurum bozukluğu nedir? Tarihte nasıl tanımlanmışt
 ---
 
 Merhaba, bu bölümmde hastalıklar ile ilgili psikoeğitim yazıları yayınlayacağım. Bu yazıların ilki ile başlayalım.
+<h3>Bipolar ne demektir?</h3>
