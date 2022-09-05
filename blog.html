@@ -19,7 +19,7 @@ description: Adana Psikiyatri • Psikiyatrik hastalıklar, tedavileri, takip s�
         <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
           <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
           <h3 class="resume-item-title" style="text-align: justify;" itemprop="name"><a href="{{ post.url | prepend: site.baseurl }}" itemprop="url">{{ post.title }}</a></h3>
-          <h4 class="resume-item-details" itemprop="description">Yayınlanma Tarihi: {{ post.date | date: "%B %d, %Y" }}</h4>
+          <h4 class="resume-item-details" itemprop="description">Yayınlanma Tarihi: {{ post.date | date: "%d.%m.%Y" }}</h4>
           <p class="resume-item-copy" style="text-align: justify;">      {% if post.excerpt_separator %}
         {{ post.excerpt | strip_html }}
       {% else %}
@@ -58,7 +58,7 @@ description: Adana Psikiyatri • Psikiyatrik hastalıklar, tedavileri, takip s�
       </div>
       <span class="tags-post-meta">
         <time datetime="{{ post.date }}">
-          {{ post.date | date:"%Y-%m-%d" }}
+          {{ post.date | date: "%d.%m.%Y" }}
         </time>
       </span>
     </a>
