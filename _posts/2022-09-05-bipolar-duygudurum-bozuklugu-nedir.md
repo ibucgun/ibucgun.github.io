@@ -3,7 +3,7 @@ layout: post
 title: "Bipolar Duygudurum Bozukluğu Nedir?"
 author: "Uzm. Dr. İsmail BUÇGÜN"
 tags: [Bipolar Bozukluk]
-description: Bipolar duygudurum bozukluğu nedir? Tarihte nasıl tanımlanmıştır? Bipolar ne anlama gelmektedir?
+description: Bipolar duygudurum bozukluğu nedir? Bipolar ne demektir? Duygudurum nedir? Bipolar bozukluğun diğer isimleri nelerdir?
 ---
 
 Bipolar duygudurum bozukluğu, yaklaşık her 50 kişiden birini etkileyen, arada iyilik hallerinin olduğu hastalık dönemleri ile seyreden, kronik bir psikiyatrik hastalıktır. Başka bir tanımlamayla **biyolojik, genetik ve çevresel bir çok etkene bağlı olarak ortaya
