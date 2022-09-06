@@ -1,6 +1,7 @@
 # Site settings
 title: "Uzm.Dr. İsmail BUÇGÜN • Adana Psikiyatri Uzmanı • Psikoterapist" 
-description: "Temel mesleki ilgili alanı bipolar duygudurum bozukluğu, major depresyon ve destekleyici psikoterapidir. İlaç tedavileri yanında psikodinamik temellere dayanan destekleyici psikoterapi uygulayıcısıdır."
+description: "Adana'da özel muayenehanesinde psikiyatri ve psikoterapi alanında hizmet vermektedir. Türkiye Psikiyatri Derneğinden sertifiye destekleyici psikoterapisttir."
+url: htp
 
 # Build settings
 markdown: kramdown
