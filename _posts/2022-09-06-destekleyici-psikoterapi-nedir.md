@@ -3,7 +3,7 @@ layout: post
 title: "Destekleyici Psikoterapi Nedir?"
 author: "Uzm. Dr. İsmail BUÇGÜN"
 tags: [Destekleyici Psikoterapi]
-description: Destekleyici psikoterapi nedir? Temel ilkeleri nelerdir? Destekleyici psikoterapi hangi durumlarda kullanılır? Adana'da destekleyici psikoterapist olan psikiyatri uzmanı var mıdır? 
+description: Destekleyici psikoterapi nedir? Temel ilkeleri nelerdir? Destekleyici psikoterapi hangi durumlarda kullanılır? Adana'da destekleyici psikoterapist olan psikiyatri uzmanı var mıdır? Terapi kuralları nelerdir?
 ---
 
 Destekleyici psikoterapi, günümüzde bireysel psikoterapiler arasında dünyada en yaygın kullanılan psikoterapi yöntemidir ve **Sigmund Freud ile başlayan psikanalitik kuram ve sonrasındaki psikodinamik psikiyatri temellerine dayalıdır.** Psikiyatrik tanısal değerlendirmeyi gerektiren, terapistin girişimlerini özgül bir hedefi başarmaya yönelik olarak tasarladığı bir psikoterapidir. **Hedefi kişilik değişimi değildir.** Ağır bir ruhsal bozukluğun yinelemesini önlemek amacıyla hastanın belirtilerle baş etmesine yardımcı olmak veya görece sağlıklı bir kişinin geçici güncel bir sorunla baş etmesine yardım etmek hedeflenir. Karşılıklı konuşmaya dayalı bir tarzı vardır. Tedavi planı hastanın hedefleri ve ihtiyaçları göz önünde bulundurularak yapılır. Pek çok durum ve psikiyatrik hastalıkta kullanılabilir.
