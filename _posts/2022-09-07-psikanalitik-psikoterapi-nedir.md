@@ -8,9 +8,13 @@ description: Psikanalitik psikoterapi nedir? Destekleyici psikoterapiden farkı 
 
 **Psikanalitik psikoterapi teorisini Freud’un psikanaliz kavramlarına ve Freud sonrası ortaya çıkan psikodinamik kuramlara dayandıran bir yaklaşımdır.** 
 
-Bireysel psikoterapiler destekleyici psikoterapiden psikanalize uzanan bir yelpaze veya süreklilik olarak kavramsallaştırılabilir.
+Psikanalitik, psikodinamik, açıklayıcı vb pek çok terminoloji olması nedeniyle kafa karışıklığı oluşabilir. Bu nedenle bu tanımlamaları yapmaya çalışacağım. Bireysel psikoterapiler destekleyici psikoterapiden psikanalize uzanan bir yelpaze veya süreklilik olarak kavramsallaştırılabilir.
 
+Açıklayıcı psikoterapi terimi, hasta ve terapist arasındaki ilişkilerin analizi ve daha önce tanınıp anlaşılmamış duygular, düşünceler, gereksinimler ve çatışmalarla ilgili içgörü gelişimi ve hastanın bilinçli olarak bu çatışmaları çözme ve daha iyi bir şekilde bütünselleştirme girişimi izleyen bir süreç yoluyla kişilik değişimini amaçlayan çeşitli yaklaşımlar için kullanılan ortak bir terimdir. Aşağıdaki resimde bireysel psikoterapiler yelpazesini ve terminolojik farklılıkları görebilirsiniz.
 
+![Psikoterapiler Yelpazesi](http://ismailbucgun.com/images/psikoterapileryelpazesi.png)
+
+Hangi hastada hangi yöntemin seçileceği hastanın psikopatoloji düzeyleri ve o anki gereksinimlerine göre belirlenir. Tedavi planları her zaman hastanın tedavi hedefleri dikkate alınarak şekillendirilir. **Hastaların çoğunluğunun tedavisi, uyumlu ve bütünleşmiş bir tarzda kullanılması gereken destekleyici ve açıklayıcı unsurların birlikteliğini gerektirir.**
 
 Psikanaliz ve psikodinamik kuramlara sırtını yaslayarak çalışan psikanalitik psikoterapide amaç kişinin bilinçdışında bulunan ve kişiyi zorlayan bastırılmış konuların bilinç düzeyine çıkarılarak farkındalık, içgörü kazandırılmasıdır. **İyileşmenin içgörü kazanmaya ikincil olarak gelişeceği varsayımına dayanır. Bu yönüyle destekleyici psikoterapiden farklıdır.** Destekleyici psikoterapi doğrudan etki ilkesine dayanır ve iyileşmenin içgörü kazanmanın bir yan ürünü olacağı varsayılmaz.
 
