@@ -6,7 +6,7 @@ tags: [Destekleyici Psikoterapi]
 description: Psikanalitik psikoterapi nedir? Destekleyici psikoterapiden farkı nedir? Adana'da psikanalitik psikoterapi yapan psikiyatri uzmanı var mıdır? 
 ---
 
-Bir önceki yazımda **[destekleyici psikoterapi nedir](/destekleyici-psikoterapi-nedir)** tanımlamaya çalıştım. Psikanalitik, psikodinamik, açıklayıcı, dinamik yönelimli psikoterapi, destekleyici psikoterapi gibi pek çok terim olması nedeniyle kafa karışıklığı oluşmuş olabilir, bu yazıda bu terimleri ve psikanalitik psikoterapinin temel özelliklerini ve destekleyici psikoterapiden farkını açıklamaya çalışacağım.
+Bir önceki yazımda destekleyici psikoterapi nedir anlatmaya çalıştım. Psikanalitik, psikodinamik, açıklayıcı, dinamik yönelimli psikoterapi, destekleyici psikoterapi gibi pek çok terim olması nedeniyle kafa karışıklığı oluşmuş olabilir, bu yazıda bu terimleri ve psikanalitik psikoterapinin temel özelliklerini ve destekleyici psikoterapiden farkını açıklamaya çalışacağım.
 
 **Psikanalitik psikoterapi teorisini Freud’un psikanaliz kavramlarına ve Freud sonrası ortaya çıkan psikodinamik kuramlara dayandıran bir yaklaşımdır.** 
 
@@ -21,4 +21,4 @@ Hangi hastada hangi yöntemin seçileceği hastanın psikopatoloji düzeyi ve o 
 
 Psikanaliz ve psikodinamik kuramlara sırtını yaslayarak çalışan psikanalitik psikoterapide amaç kişinin bilinçdışında bulunan ve kişiyi zorlayan bastırılmış konuların bilinç düzeyine çıkarılarak farkındalık, içgörü kazandırılmasıdır. **İyileşmenin içgörü kazanmaya ikincil olarak gelişeceği varsayımına dayanır. Bu yönüyle destekleyici psikoterapiden farklıdır.** Destekleyici psikoterapi doğrudan etki ilkesine dayanır ve iyileşmenin içgörü kazanmanın bir yan ürünü olacağı varsayılmaz.
 
-Kazanılan içgörüyle beraber kişi anlamlandırmakta zorlandığı sorunları anlamlandırabilir, kendini hayatının kontrolünü tekrar ele alarak ve yaşantılarıyla yüzleşmiş olarak durumların sonuçlarını üstlenir. P**sikanalitik psikoterapi de genellikle haftada 1-2 kere, çoğunlukla belirlenen sabit bir gün ve saatte, 50 dakikalık görüşme şeklinde gerçekleştirilir.** Psikanalitik psikoterapi kısa süreli bir psikoterapi değildir. Terapinin süresi ve görüşme sıklığı kişiden kişiye, psikopatolojinin ağırlığına göre değişmektedir.
+Kazanılan içgörüyle beraber kişi anlamlandırmakta zorlandığı sorunları anlamlandırabilir, kendini hayatının kontrolünü tekrar ele alarak ve yaşantılarıyla yüzleşmiş olarak durumların sonuçlarını üstlenir. **Psikanalitik psikoterapi de genellikle haftada 1-2 kere, çoğunlukla belirlenen sabit bir gün ve saatte, 50 dakikalık görüşme şeklinde gerçekleştirilir.** Psikanalitik psikoterapi kısa süreli bir psikoterapi değildir. Terapinin süresi ve görüşme sıklığı kişiden kişiye, psikopatolojinin ağırlığına göre değişmektedir.
