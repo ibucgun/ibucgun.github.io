@@ -6,7 +6,7 @@ tags: [Destekleyici Psikoterapi]
 description: Psikanalitik psikoterapi nedir? Destekleyici psikoterapiden farkı nedir? Adana'da psikanalitik psikoterapi yapan psikiyatri uzmanı var mıdır? 
 ---
 
-Bir önceki yazımda destekleyici psikoterapi nedir tanımlamaya çalıştım. Psikanalitik, psikodinamik, açıklayıcı, dinamik yönelimli psikoterapi, destekleyici psikoterapi gibi pek çok terminoloji olması nedeniyle kafa karışıklığı oluşabiliyor, bu yazıda bu terimleri ve psikanalitik psikoterapinin temel özelliklerini açıklamaya çalışacağım.
+Bir önceki yazımda **[destekleyici psikoterapi nedir](/destekleyici-psikoterapi-nedir)** tanımlamaya çalıştım. Psikanalitik, psikodinamik, açıklayıcı, dinamik yönelimli psikoterapi, destekleyici psikoterapi gibi pek çok terim olması nedeniyle kafa karışıklığı oluşmuş olabilir, bu yazıda bu terimleri ve psikanalitik psikoterapinin temel özelliklerini ve destekleyici psikoterapiden farkını açıklamaya çalışacağım.
 
 **Psikanalitik psikoterapi teorisini Freud’un psikanaliz kavramlarına ve Freud sonrası ortaya çıkan psikodinamik kuramlara dayandıran bir yaklaşımdır.** 
 
