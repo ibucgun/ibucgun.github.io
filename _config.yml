@@ -1,7 +1,6 @@
 # Site settings
 title: "Uzm.Dr. İsmail BUÇGÜN • Adana Psikiyatri Uzmanı • Psikoterapist" 
 description: "Adana'da özel muayenehanesinde psikiyatri ve psikoterapi alanında hizmet vermektedir. Türkiye Psikiyatri Derneğinden sertifiye destekleyici psikoterapisttir."
-url: htp
 
 # Build settings
 markdown: kramdown
