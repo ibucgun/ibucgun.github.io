@@ -215,7 +215,7 @@
   }
   .content-section {
     margin: 0 0 1rem;
-	a {
+	> a {
       color: #333;
       text-decoration: bold;
       border-bottom: none;
@@ -224,7 +224,6 @@
         border-bottom: none;
         color: #9c9c9c;
       }
-
     .resume-item { margin-bottom: 1rem; }
     .resume-item-title {
       font-size: 16px;
