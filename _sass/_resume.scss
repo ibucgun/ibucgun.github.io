@@ -135,6 +135,16 @@
 
 .content-section {
   margin: 0 0 3rem;
+  
+  > a {
+     color: #333;
+     text-decoration: bold;
+     border-bottom: none;
+
+     &:hover {
+       border-bottom: none;
+       color: #9c9c9c;
+    }
 
   .resume-item { margin-bottom: 2rem; }
 
@@ -215,15 +225,7 @@
   }
   .content-section {
     margin: 0 0 1rem;
-	> a {
-      color: #333;
-      text-decoration: bold;
-      border-bottom: none;
 
-      &:hover {
-        border-bottom: none;
-        color: #9c9c9c;
-      }
     .resume-item { margin-bottom: 1rem; }
     .resume-item-title {
       font-size: 16px;
