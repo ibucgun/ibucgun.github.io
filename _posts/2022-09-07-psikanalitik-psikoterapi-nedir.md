@@ -6,7 +6,7 @@ tags: [Destekleyici Psikoterapi]
 description: Psikanalitik psikoterapi nedir? Destekleyici psikoterapiden farkı nedir? Adana'da psikanalitik psikoterapi yapan psikiyatri uzmanı var mıdır? 
 ---
 
-Bir önceki yazımda **[destekleyici psikoterapi nedir](/destekleyici-psikoterapi-nedir)** anlatmaya çalıştım. Psikanalitik, psikodinamik, açıklayıcı, dinamik yönelimli psikoterapi, destekleyici psikoterapi gibi pek çok terim olması nedeniyle kafa karışıklığı oluşmuş olabilir, bu yazıda bu terimleri ve psikanalitik psikoterapinin temel özelliklerini ve destekleyici psikoterapiden farkını açıklamaya çalışacağım.
+Bir önceki yazımda ruh sağlığı alanındaki önemli tedavilerden birisi olan **[destekleyici psikoterapi nedir](/destekleyici-psikoterapi-nedir)** anlatmaya çalıştım. Psikanalitik, psikodinamik, açıklayıcı, dinamik yönelimli psikoterapi, destekleyici psikoterapi gibi pek çok terim olması nedeniyle kafa karışıklığı oluşmuş olabilir, bu yazıda bu terimleri ve psikanalitik psikoterapinin temel özelliklerini ve destekleyici psikoterapiden farkını açıklamaya çalışacağım.
 
 **Psikanalitik psikoterapi teorisini Freud’un psikanaliz kavramlarına ve Freud sonrası ortaya çıkan psikodinamik kuramlara dayandıran bir yaklaşımdır.** 
 
@@ -23,4 +23,4 @@ Psikanaliz ve psikodinamik kuramlara sırtını yaslayarak çalışan psikanalit
 
 Kazanılan içgörüyle beraber kişi anlamlandırmakta zorlandığı sorunları anlamlandırabilir, kendini hayatının kontrolünü tekrar ele alarak ve yaşantılarıyla yüzleşmiş olarak durumların sonuçlarını üstlenir. **Psikanalitik psikoterapi de genellikle haftada 1-2 kere, çoğunlukla belirlenen sabit bir gün ve saatte, 50 dakikalık görüşme şeklinde gerçekleştirilir.** **Psikanalitik psikoterapi kısa süreli bir psikoterapi değildir.** Terapinin süresi ve görüşme sıklığı kişiden kişiye, psikopatolojinin ağırlığına göre değişmektedir.
 
-Adana ilindeki psikiyatri uzmanları arasında Türkiye Psikiyatri Derneği tarafından sertifiye edilmiş iki destekleyici psikoterapistten birisi olarak ihtiyaç duyduğunuzda sizlere destekleyici psikoterapi ve psikanalitik psikoterapi hizmeti vermekteyim. Randevu için **[randevu](/randevu)** sayfasını kullanabilirsiniz.
+Adana ilindeki psikiyatri uzmanları arasında Türkiye Psikiyatri Derneği tarafından sertifiye edilmiş iki destekleyici psikoterapistten birisi olarak ihtiyaç duyduğunuzda sizlere Adana'da muayenehanemde ve online görüşme ile destekleyici psikoterapi ve psikanalitik psikoterapi hizmeti vermekteyim. Randevu için **[randevu](/randevu)** sayfasını kullanabilirsiniz.
