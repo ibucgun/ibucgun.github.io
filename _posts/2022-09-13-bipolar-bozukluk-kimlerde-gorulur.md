@@ -27,3 +27,5 @@ Hastalığın kesin nedeni bilinmemektedir. Genetik, biyokimyasal ve çevresel n
 Genetik faktörler tüm hastalığı açıklayamazlar. Akrabasında bipolar bozukluk hastalığı olmayanlarda bipolar bozukluk görülme oranı %1-2 iken **anne, baba, kardeş gibi birinci derece yakınında bipolar bozukluk hastalığı olanlarda bipolar bozukluk ortaya çıkma ihtimali toplumun 3-4 katıdır, yaklaşık %7-8'dir.**
 
 Tek yumurta ikizleri genetik olarak aynı olmalarına karşın birisinde bipolar bozukluk hastalığı görüldüğünde **diğerinde görülme oranı %45-60'dır.**
+
+Adana ilinde psikiyatri alanında hizmet veren muayenehanemde bipolar bozukluk tanılı hastalara güncel tedavi kılavuzları ve yüzlerce dirençli hastanın takibinden elde ettiğim deneyim ile tanı, tedavi ve takip hizmeti vermekteyim. Randevu için **[randevu](/randevu)** sayfasını kullanabilirsiniz.
