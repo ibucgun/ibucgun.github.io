@@ -105,26 +105,46 @@
       <!-- end Aldığı Eğitimler -->
       {% endif %}
 
-      {% if site.resume_section_meslekiilgialanlari %}
       <!-- begin Mesleki İlgi Alanları -->
       <section id="meslekiilgialanlari" class="content-section">
         <header class="section-header">
-          <h2>Mesleki İlgi Alanları</h2>
+          <h2>Mesleki İlgi Alanları ve Tedavi Hizmeti Verilen Hastalıklar</h2>
         </header>
 		  <div class="resume-item">
           <p class="resume-item-copy" style="text-align: justify;"><b>Temel mesleki ilgi alanı bipolar duygudurum bozukluğu, major depresif bozukluk ve diğer duygudurum bozukluklardır.</b> Yaşlılık (geriatrik) psikiyatrisi, nöropsikiyatri ve şizofreni ve diğer psikotik bozukluklar ile <b>destekleyici psikoterapi</b> diğer mesleki ilgi alanlarıdır.</p>
         </div>
 		
-        {% for skill in site.data.meslekiilgialanlari %}
-        <div class="resume-item">
-          <h3 class="resume-item-details">{{ skill.skill }}</h4>
-          <p class="resume-item-copy" style="text-align: justify;">{{ skill.description }}</p>
-        </div>
-        {% endfor %}
+		  <p class="resume-item-copy" style="text-align: justify;font-size: 1.125rem;">
+		  Tüm psikiyatrik hastalıkların tanı ve tedavisinde klinik deneyim, bilgi ve beceriye sahip olmakla birlikte temel mesleki ilgi alanım bipolar duygudurum bozukluğu, major depresif bozukluk ve diğer duygudurum bozukluklarıdır (yineleyici depresif bozukluk, kronik depresif bozuluk vb). Aşağıdaki listede yer alan durum ve psikiyatrik hastalıkların tanı, tedavi ve takibi için muayenehanemizden randevu alarak muayene olabilirsiniz.
+		  
+		  <ol style="text-align: justify;">
+		  <li>Major depresif bozukluk</li>
+		  <li>Yineleyici depresif bozukluk</li>
+		  <li>Kronik depresif bozukluk (distimi)</li>
+		  <li>Bipolar duygudurum bozukluğu</li>
+		  <li>Şizofreni ve diğer psikotik bozukluklar</li>
+		  <li>Yaşlılık depresyonu, demans ve deliryum</li>
+		  <li>Nörolojik hastalıkların seyri sırasında ortaya çıkan psikiyatrik tablolar</li>
+		  <li>Panik bozukluk ve diğer anksiyete bozuklukları</li>
+		  <li>Obsesif kompulsif bozukluk ve ilişkili bozukluklar (deri yolma, birikticilik, trikotillomani vb.)</li>
+		  <li>Travma sonrası stres bozukluğu ve travma ile ilişkili bozukluklar</li>
+		  <li>Yeme bozuklukları (blumia nervosa, anoreksia nervosa)</li>
+		  <li>Uyku bozuklukları</li>
+		  <li>Erişkin dikkat eksikliği ve hiperaktivite bozukluğu</li>
+		  <li>Somatizasyon bozukluğu ve diğer bedensel belirti ilişkili bozukluklar</li>
+		  <li>Konversiyon bozukluğu</li> 	 		
+		  <li>Borderline kişilik bozukluğu</li>
+		  <li>Narsistik kişilik bozukluğu ve diğer kişilik bozuklukları</li>
+		  <li>İlişki sorunları ve kişiler arası ilişkilerdeki sorunlar</li>
+		  <li>Akut kriz durumları ve intihar</li>
+		  <li>Yas</li>
+		  <li>Dürtü kontrol bozukluğu ve davranış sorunları</li>
+		  <li>Davranışsal bağımlılıklar</li>
+		  </ol>
+		  </p>
 
       </section>
       <!-- end Mesleki İlgi Alanları -->
-      {% endif %}
 
 
       {% if site.resume_section_iletisimverandevu %}
