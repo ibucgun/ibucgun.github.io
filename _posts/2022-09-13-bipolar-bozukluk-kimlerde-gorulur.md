@@ -18,6 +18,8 @@ Bipolar duygudurum bozukluğu ya da kısa adıyla bipolar bozukluk herkeste gör
 
 Hastalığın tek bir nedeni yoktur. Nörotransmitter denilen beyin kimyasallarının dengesinde ve iletiminde sorunlar olduğu ve genetik yatkınlık yaratan durumlar tespit edilmiştir.
 
+<center><img src="/images/bipolarbozukluknedeni.jpg" alt="Bipolar Bozukluk Nedeni" width="600px" height="338px" style="max-width:100%;"/></center>
+
 Hastalığın kesin nedeni bilinmemektedir. Genetik, biyokimyasal ve çevresel nedenlerden kaynaklanan bir hastalık olduğu kabul edilir. **Bipolar bozukluk kişinin herhangi bir hatasından, sosyal durumundan ya da kişiliğindeki güçsüzlükten kaynaklanmaz.** Stres ve yaşam olayları hastalığın tetikleyebilir. Tedavi edilebilir tıbbi bir bozukluktur.
 
 ### Bipolar Bozukluk Genetik midir? Hastanın çocuğunda bu hastalık ortaya çıkar mı?
