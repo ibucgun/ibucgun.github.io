@@ -3,7 +3,7 @@ layout: post
 title: "Bipolar Bozukluk Kimlerde Görülür?"
 author: "Uzm. Dr. İsmail BUÇGÜN"
 tags: [Bipolar Bozukluk]
-description: Bipolar duygudurum bozukluğu kimlerde görüşür? Nedeni Nedir?
+description: Bipolar duygudurum bozukluğu kimlerde görüşür? Nedeni Nedir? Genetik midir?
 ---
 
 Bipolar duygudurum bozukluğu ya da kısa adıyla bipolar bozukluk herkeste görülebilir. Dünyada 18 yaş üstü toplam nüfusun yaklaşık **yüzde 1-2’sinin bipolar bozukluk** hastalığına sahip olduğu düşünülmektedir. Bu da, **ülkemizde yaklaşık 1,5-2 milyon kişinin**, dünyada ise yaklaşık 250 milyon kişinin hastalığa sahip olduğu anlamına gelmektedir.
