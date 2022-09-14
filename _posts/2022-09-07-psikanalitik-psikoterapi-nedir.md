@@ -12,7 +12,7 @@ Bir önceki yazımda ruh sağlığı alanındaki önemli tedavilerden birisi ola
 
 Bireysel psikoterapiler destekleyici psikoterapiden psikanalize uzanan bir yelpaze veya süreklilik olarak kavramsallaştırılabilir.
 
-Açıklayıcı psikoterapi terimi, hasta ve terapist arasındaki ilişkilerin analizi ve daha önce tanınıp anlaşılmamış duygular, düşünceler, gereksinimler ve çatışmalarla ilgili içgörü gelişimi ve hastanın bilinçli olarak bu çatışmaları çözme ve daha iyi bir şekilde bütünselleştirme girişimi izleyen bir süreç yoluyla kişilik değişimini amaçlayan çeşitli yaklaşımlar için kullanılan ortak bir terimdir. Aşağıdaki resimde bireysel psikoterapiler yelpazesini ve terminolojik farklılıkları görebilirsiniz.
+Açıklayıcı psikoterapi terimi, hasta ve terapist arasındaki ilişkilerin analizi ve daha önce tanınıp anlaşılmamış duygular, düşünceler, gereksinimler ve çatışmalarla ilgili içgörü gelişimi ve hastanın bilinçli olarak bu çatışmaları çözme ve daha iyi bir şekilde bütünselleştirme girişimi izleyen bir süreç yoluyla kişilik değişimini amaçlayan çeşitli yaklaşımlar için kullanılan ortak bir terimdir, bir tür psikanalitik psikoterapidir. Aşağıdaki resimde bireysel psikoterapiler yelpazesini ve terminolojik farklılıkları görebilirsiniz.
 
 <center><img src="/images/psikoterapileryelpazesi.png" alt="Bireysel Psikoterapiler Yelpazesi" width="600px" height="270px" style="max-width:100%;"/></center>
 
@@ -23,4 +23,4 @@ Psikanaliz ve psikodinamik kuramlara sırtını yaslayarak çalışan psikanalit
 
 Kazanılan içgörüyle beraber kişi anlamlandırmakta zorlandığı sorunları anlamlandırabilir, kendini hayatının kontrolünü tekrar ele alarak ve yaşantılarıyla yüzleşmiş olarak durumların sonuçlarını üstlenir. **Psikanalitik psikoterapi de genellikle haftada 1-2 kere, çoğunlukla belirlenen sabit bir gün ve saatte, 50 dakikalık görüşme şeklinde gerçekleştirilir.** **Psikanalitik psikoterapi kısa süreli bir psikoterapi değildir.** Terapinin süresi ve görüşme sıklığı kişiden kişiye, psikopatolojinin ağırlığına göre değişmektedir.
 
-Adana ilindeki psikiyatri uzmanları arasında Türkiye Psikiyatri Derneği tarafından sertifiye edilmiş iki destekleyici psikoterapistten birisi olarak ihtiyaç duyduğunuzda sizlere Adana'da muayenehanemde ve online görüşme ile destekleyici psikoterapi ve psikanalitik psikoterapi hizmeti vermekteyim. Randevu için **[randevu](/randevu)** sayfasını kullanabilirsiniz.
+Adana ilindeki psikiyatri uzmanları arasında Türkiye Psikiyatri Derneği tarafından sertifiye edilmiş iki destekleyici psikoterapistten birisi olarak ihtiyaç duyduğunuzda sizlere Adana'da muayenehanemde ya da online görüşme ile destekleyici psikoterapi ve psikanalitik psikoterapi hizmeti vermekteyim. Randevu için **[randevu](/randevu)** sayfasını kullanabilirsiniz.
