@@ -76,7 +76,10 @@ plugins:
   - jekyll-seo-tag
   - jemoji
   - jekyll-sitemap
+  - jekyll-last-modified-at
 
 # Permalinks
 permalink:      /:title
 
+last-modified-at:
+    date-format: '%d-%m-%Y'

@@ -17,4 +17,7 @@
     {% endif %}
     {% endif %}
     {% endfor %}
+	
 </urlset>
+
+	<lastmod>{{ post.last_modified_at | date: '%d-%m-%Y' }}</lastmod>
