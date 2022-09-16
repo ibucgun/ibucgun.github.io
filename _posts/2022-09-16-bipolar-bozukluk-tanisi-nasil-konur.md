@@ -16,7 +16,4 @@ Bipolar bozukluğa benzeyen diğer hastalıklardan ayırt etmek için çeşitli 
 
 Ayırıcı tanı yapılırken psikotik belirtilerin bulunması, sık tedavi/doktor değişikliği olması, madde kullanımının eşlik etmesi, ek psikiyatrik tanıların bulunması ayırıcı tanıyı zorlaştıran durumlardır. **Hastaların 3'te 1'inde psikiyatrik bir ek tanı bulunur.** Mümkünse aynı psikiyatri uzmanı ile işbirliğini sürdürüp takip ve tedaviye devam etmek ayırıcı tanıyı kolaylaştırır.
 
-<center><img src="/images/bipolarbozukluknedeni.jpg" alt="Bipolar Bozukluk Nedeni" width="600px" height="338px" style="max-width:100%;"/></center>
-
-
 Adana ilinde psikiyatri alanında hizmet veren muayenehanemde bipolar bozukluk tanılı hastalara güncel tedavi kılavuzları ve yüzlerce dirençli hastanın takibinden elde ettiğim deneyim ile tanı, tedavi ve takip hizmeti vermekteyim. Bu hastalıkta Adana ilinde psikoterapi yöntemi olarak destekleyici psikoterapi ile hizmeti de vermekteyim.  Randevu için **[randevu](/randevu)** sayfasını kullanabilirsiniz.
