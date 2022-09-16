@@ -93,13 +93,13 @@
 @mixin section_border {
   border-top: 4px solid #c7c7c7;
   border-bottom: 2px solid #c7c7c7;
-  padding: .2rem .2rem .2rem .4rem;
+  padding: .2rem 0 .4rem;
   background: #F7F7F7;
 }
 
 @mixin section_border_thin {
   border-top: 1px solid #c7c7c7;
   border-bottom: 1px solid #c7c7c7;
-  padding: .2rem .2rem .2rem .4rem;
+  padding: .2rem 0.4rem;
   background: #F7F7F7;
 }
