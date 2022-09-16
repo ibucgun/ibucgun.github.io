@@ -22,7 +22,7 @@ Hastalığın tek bir nedeni yoktur. Nörotransmitter denilen beyin kimyasallar�
 
 Hastalığın kesin nedeni bilinmemektedir. Genetik, biyokimyasal ve çevresel nedenlerden kaynaklanan bir hastalık olduğu kabul edilir. **Bipolar bozukluk kişinin herhangi bir hatasından, sosyal durumundan ya da kişiliğindeki güçsüzlükten kaynaklanmaz.** Stres ve yaşam olayları hastalığın tetikleyebilir. Tedavi edilebilir tıbbi bir bozukluktur.
 
-### Bipolar Bozukluk Genetik midir? Hastanın çocuğunda bu hastalık ortaya çıkar mı?
+### Bipolar Bozukluk Genetik midir? Hastanın Çocuğunda Bu Hastalık Ortaya Çıkar mı?
 
 Genetik faktörler tüm hastalığı açıklayamazlar. Akrabasında bipolar bozukluk hastalığı olmayanlarda bipolar bozukluk görülme oranı %1-2 iken **anne, baba, kardeş gibi birinci derece yakınında bipolar bozukluk hastalığı olanlarda bipolar bozukluk ortaya çıkma ihtimali toplumun 3-4 katıdır, yaklaşık %7-8'dir.**
 
