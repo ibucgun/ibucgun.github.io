@@ -271,14 +271,14 @@
       display: inline-block;
       margin: 0 0.1rem 0.2rem;
       padding: 0.2rem 0.5rem;
-      background: rgba(0, 0, 0, 0.05);
+      background: #FAD992;
       border-radius: 5px;
       color: $text_color;
       text-decoration: none;
 
       &:hover,
       &:active {
-        background: rgba(0, 0, 0, 0.1);
+        background: #F5B428;
       }
     }
   }
