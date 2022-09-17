@@ -34,7 +34,7 @@
     @include sans;
     font-size: 3rem;
     font-weight: 900;
-    text-align: justify;
+    text-align: center;
     letter-spacing: -.15rem;
     line-height: 1;
     margin: 1rem 0 0;
@@ -60,7 +60,7 @@
       font-size: 1.75rem;
       line-height: 2rem;
       letter-spacing: -.05rem;
-      text-align: center;
+      text-align: left;
       margin: 0 0 .5rem;
 
       @include media_larger_than_mobile {
