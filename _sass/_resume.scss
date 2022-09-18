@@ -311,7 +311,7 @@
 
     &-line {
       @include transition(all 0.3s ease-out);
-      border-top: 0.1rem solid $text_color;
+      border-top: 0.1rem solid #F5B428;
       display: block;
       width: 0;
     }
