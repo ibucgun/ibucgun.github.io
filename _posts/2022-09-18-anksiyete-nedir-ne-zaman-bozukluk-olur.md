@@ -11,7 +11,7 @@ Herkes anksiyete (kaygı) yaşar. **Anksiyete genellikle yaygın, hoş olmaya ve
 **Anksiyete, normalde bireye yönelik olası bir tehlike tehdidine karşı onu, gereğini yapmak üzere harekete geçmesi için hazırlayan bir biyolojik uyarıcıdır.** 
 
 ### Anksiyetenin Korkudan Farkı Nedir?
-Anksiyete uyarıcı bir sinyaldir. Anksiyete olması yakın bir tehlikeye karşı uyarır ve kişinin tehdit ile başa çıkması için gerekli önlemler almasına, uyuma olanak sağlar. Evrimsel olarak hayatta kalmaya yönelik bir sinyaldir. **Korku** da uyarıcı bir sinyaldir; **bilinen, dış odaklı, belirli bir tehdide karşı bir yanıttır**. **Anksiyete ile farklı olarak bilinmeyen, içsel odaklı, belirsiz bir tehdide karşı ortaya çıkan bir yanıttır.** 
+Anksiyete uyarıcı bir sinyaldir. Anksiyete olması yakın bir tehlikeye karşı uyarır ve kişinin tehdit ile başa çıkması için gerekli önlemler almasına, uyuma olanak sağlar. Evrimsel olarak hayatta kalmaya yönelik bir sinyaldir. **Korku** da uyarıcı bir sinyaldir; **bilinen, dış odaklı, belirli bir tehdide karşı bir yanıttır**. **Anksiyete ise farklı olarak bilinmeyen, içsel odaklı, belirsiz bir tehdide karşı ortaya çıkan bir yanıttır.** 
 Freud, korkuyu gerçek bir tehdide, anksiyeteyi ise içsel bir tehlikeye karşı geliştirilen tepki olarak ayırmıştır.
 
 ### Anksiyete Ne Zaman Bozukluk Olarak Değerlendirilir?
