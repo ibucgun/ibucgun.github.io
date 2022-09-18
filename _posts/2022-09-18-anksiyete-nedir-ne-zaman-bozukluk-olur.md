@@ -15,7 +15,7 @@ Anksiyete uyarıcı bir sinyaldir. Anksiyete olması yakın bir tehlikeye karş�
 Freud, korkuyu gerçek bir tehdide, anksiyeteyi ise içsel bir tehlikeye karşı geliştirilen tepki olarak ayırmıştır.
 
 ### Anksiyete Ne Zaman Bozukluk Olarak Değerlendirilir?
-**Anksiyete, anksiyete bozukluklarının temel belirtisi olmakla birlikte, birçok farklı ruhsal bozuklukta belirti olarak ortaya çıkan bir duygudurumudur.** Bu duygudurumu ya da belirti şizofreni, hezeyanlı bozukluk, obsesif-kompulsif bozukluk ve diğer anksiyete bozuklukları yelpazesindeki bozukluklarda, kişilik bozukluklarında, depresyonda, hatta manide ortaya çıktığı gibi, bireyin gündelik hayatının içinde “normal” çerçevede de görüldüğünü görülebilir. 
+**Anksiyete, anksiyete bozukluklarının temel belirtisi olmakla birlikte, birçok farklı ruhsal bozuklukta belirti olarak ortaya çıkan bir duygudurumdur.** Bu duygudurumu ya da belirti şizofreni, hezeyanlı bozukluk, obsesif-kompulsif bozukluk ve diğer anksiyete bozuklukları yelpazesindeki bozukluklarda, kişilik bozukluklarında, depresyonda, hatta manide ortaya çıktığı gibi, bireyin gündelik hayatının içinde “normal” çerçevede de görüldüğünü görülebilir. 
 **Anksiyete, tanımlayıcı psikiyatride, psikiyatrik bozuklukların ayırıcı tanısında; ortaya çıkış yeri, zamanı, şekli ve içeriği, işlevsellik üzerine etkisi ile önem kazanır.**
 
 Tüm psikiyatrik hastalıklarda olduğu gibi bu anksiyete duygudurumuna ya da belirtilerine anksiyete bozukluğu tanısı konulabilmesi için **kişinin birden fazla alandaki işlevselliğini bu belirtilerin bozmuş olması** gerekir.
@@ -35,3 +35,10 @@ Pek çoğunun klinik belirtilerinin örtüşmesi tanının net bir şekilde konu
 
 
 Adana ilinde psikiyatri alanında hizmet veren muayenehanemde anksiyete bozukluklukları için bireysel psikoterapi, ilaç tedavisi ve takip hizmeti vermekteyim. Randevu için **[randevu](/randevu)** sayfasını kullanabilirsiniz.
+
+### Kaynaklar
+1. Kaplan ve Sadock Psikiyatri Kitabı, 11. Baskı, Güneş Tıp Kitabevi, 2016
+2. Anksiyete Bozukluklarının Tedavisine Çok Yönlü Bakış, Psikiyatride Güncel Dergisi, Türkiye Psikiyatri Derneği Yayınları, Bahar 2015
+3. Anksiyete Bozukluklarında Güncel Gelişmeler, Psikiyatride Güncel Dergisi, Türkiye Psikiyatri Derneği Yayınları, Bahar 2021
+4. Anksiyete Bozuklukları Kitabı, 1. Baskı, Türkiye Psikiyatri Derneği Yayınları, 2006
+
