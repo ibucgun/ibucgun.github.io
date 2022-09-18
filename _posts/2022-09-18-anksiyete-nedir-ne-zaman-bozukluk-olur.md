@@ -7,7 +7,7 @@ description: Anksiyete (kaygı) nedir? Korkudan farkı nedir? Ne zaman bozukluk 
 ---
 
 ### Anksiyete nedir?
-Herkes anksiyete (kaygı) yaşar. **Anksiyete genellikle yaygın, hoş olmaya ve belirsiz bir endişe hissi ile karakterizedir.** Sıklıkla baş ağrısı, terleme, çarpıntı, göğüste sıkışma hissi, hafif mide rahatsızlığı ve uzun süre oturamama ya da hareketsiz kalamama gibi otonomik belirtiler eşlik eder.
+**Anksiyete genellikle yaygın, hoş olmaya ve belirsiz bir endişe hissi ile karakterizedir.** Sıklıkla baş ağrısı, terleme, çarpıntı, göğüste sıkışma hissi, hafif mide rahatsızlığı ve uzun süre oturamama ya da hareketsiz kalamama gibi otonomik belirtiler eşlik eder. Herkes anksiyete (kaygı) yaşar.
 **Anksiyete, normalde bireye yönelik olası bir tehlike tehdidine karşı onu, gereğini yapmak üzere harekete geçmesi için hazırlayan bir biyolojik uyarıcıdır.** 
 
 ### Anksiyetenin Korkudan Farkı Nedir?
