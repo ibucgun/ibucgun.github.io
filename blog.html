@@ -59,16 +59,16 @@ description: Adana Psikiyatri • Psikiyatrik hastalıklar, tedavileri, takip s�
     </svg>
     <h2 class="tags-item-label">{{ tag[0] }}</h2>
     {% for post in tag[1] %}
-    <a class="tags-post" style="text-decoration:none; max-width: 100%" href="{{ post.url | prepend: site.baseurl }}">
+    <a class="tags-post" style="text-decoration:none; max-width: 80%;" href="{{ post.url | prepend: site.baseurl }}">
       <div style=" font-size: 1.125rem">
         <span class="tags-post-title">{{ post.title }}</span>
         <div class="tags-post-line"></div>
-	 <span class="tags-post-meta" style=" font-size: 1.125rem;">
+      </div>
+	  <span class="tags-post-meta" style=" font-size: 1.125rem; max-width: 20%;">
         <time datetime="{{ post.date }}">
           {{ post.date | date: "%d.%m.%Y" }}
         </time>
       </span>
-      </div>
     </a>
     {% endfor %}
   </div>
