@@ -51,7 +51,7 @@
 // type utilities
 
 @mixin sans {
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 @mixin sans_light {
@@ -75,7 +75,7 @@
 }
 
 @mixin serif {
-  font-family: "Poppins", serif;
+  font-family: "Lora", "Minion Pro", Palatino, Georgia, serif;
 }
 
 @mixin serif_regular {
