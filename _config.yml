@@ -1,6 +1,6 @@
 # Site settings
-title: "Uzm.Dr. İsmail BUÇGÜN • Adana Psikiyatri Uzmanı • Psikoterapist" 
-description: "Adana'da özel muayenehanesinde psikiyatri ve psikoterapi alanında hizmet vermektedir. Türkiye Psikiyatri Derneğinden sertifiye destekleyici psikoterapisttir."
+title: "Uzm.Dr. İsmail BUÇGÜN • Adana Psikiyatri Uzmanı • TMS Tedavisi" 
+description: "Adana'da özel muayenehanesinde psikiyatri alanında hizmet vermektedir. TMS ve derin TMS tedavileri uygulamaktadır."
 
 # Build settings
 markdown: kramdown
@@ -11,7 +11,7 @@ sass:
 # Resume settings
 resume_avatar:                  "true"
 resume_name:                    "Uzm. Dr. İsmail BUÇGÜN"
-resume_title:                   "Psikiyatri Uzmanı • Psikoterapist"
+resume_title:                   "Psikiyatri Uzmanı"
 
 # used for the contact button in _layouts/resume.html
 resume_contact_email:           "https://www.instagram.com/dr.ismailbucgun/"
