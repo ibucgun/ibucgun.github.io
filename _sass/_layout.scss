@@ -5,9 +5,10 @@
 
 // Fixed-width, centered column for site content.
 .container {
-  width: $container-width;
-  margin-right: auto;
-  margin-left: auto;
+  width: 100%;
+  max-width: 65ch;
+  padding-inline: 1rem;
+  margin-inline: auto;
   @include clearfix;
 }
 
