@@ -1,4 +1,7 @@
 $nav-height: 4.5rem;
+// Akışkan yükseklik
+$nav-height: clamp(3.5rem, 5vw, 4.5rem);
+
 
 section.nav-buffer {
   height: $nav-height;
@@ -7,12 +10,13 @@ section.nav-buffer {
 header.nav-wrapper {
   width: 100%;
   z-index: 1100;
-
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   background-color: #fff;
+  backdrop-filter: blur(6px);        // Cam efekti
+  border-bottom: 1px solid rgba(0,0,0,.05);
 
   nav {
     height: $nav-height;
