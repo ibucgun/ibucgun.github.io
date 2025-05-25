@@ -1,7 +1,5 @@
 $nav-height: 4.5rem;
 
-
-
 section.nav-buffer {
   height: $nav-height;
 }
@@ -9,6 +7,7 @@ section.nav-buffer {
 header.nav-wrapper {
   width: 100%;
   z-index: 1100;
+
   position: fixed;
   top: 0;
   left: 0;
