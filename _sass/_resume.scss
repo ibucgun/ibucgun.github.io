@@ -111,7 +111,7 @@
 
 .contact-button {
   @include border-radius(3px);
-  background-color: #FAD992;
+  background-color: #766de7;
   text-decoration: none;
   text-align: center;
   display: inline-block;
@@ -124,8 +124,8 @@
   @include transition(all .2s ease);
 
   &:hover {
-    background-color: #F5B428;
-    color: #333;
+    background-color: #4d41e0;
+    color: #fff;
   }
 
   &.not-looking { width: 400px; }
