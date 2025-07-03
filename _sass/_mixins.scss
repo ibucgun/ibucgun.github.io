@@ -91,15 +91,15 @@
 // layout
 
 @mixin section_border {
-  border-top: 4px solid #CC5500;
-  border-bottom: 2px solid #CC5500;
+  border-top: 4px solid #382BDC;
+  border-bottom: 2px solid #382BDC;
   padding: .2rem .1rem .4rem;
   background: #F7F7F5;
 }
 
 @mixin section_border_thin {
-  border-top: 1px solid #CC5500;
-  border-bottom: 1px solid #CC5500;
+  border-top: 1px solid #382BDC;
+  border-bottom: 1px solid #382BDC;
   padding: .2rem .1rem.4rem;
   background: #F7F7F5;
 }
