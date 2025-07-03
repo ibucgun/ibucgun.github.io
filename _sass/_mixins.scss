@@ -91,7 +91,8 @@
 // layout
 
 @mixin section_border {
-  border: 4px 1px 2px 1px solid #4d41e0;
+  border-top: 4px solid #4d41e0;
+  border-bottom: 2px solid #4d41e0;
   border-radius: 2px;
   padding: .2rem .1rem .4rem;
   background: #fbfbfe;
