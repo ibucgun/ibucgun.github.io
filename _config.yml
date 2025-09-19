@@ -56,7 +56,7 @@ resume_social_links:
   resume_website_url:           "http://"
   resume_medium_url:            "http://"
   resume_anasayfa_url:          "https://ismailbucgun.com"
-resume_print_social_links:      false
+  resume_print_social_links:    false
 
 # Navigation
 show_navigation: yes

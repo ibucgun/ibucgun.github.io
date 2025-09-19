@@ -1,16 +1,5 @@
 <!-- and guess where these are defined? Yup, you guessed it: the _config.yml file -->
 {% if site.resume_social_links %}
 <ul class="icon-links">
-
-  <!-- Facebook link -->
-  {% if site.resume_social_links.resume_facebook_url %}
-  <li class="icon-link-item"><a href="{{ site.resume_social_links.resume_facebook_url }}" target="_blank" class="icon-link" itemprop="sameAs">{% include icons/icon-facebook.html %}</a></li>
-  {% endif %}
-
-  <!-- Instagram link -->
-  {% if site.resume_social_links.resume_instagram_url %}
-  <li class="icon-link-item"><a href="{{ site.resume_social_links.resume_instagram_url }}" target="_blank"  class="icon-link" itemprop="sameAs">{% include icons/icon-instagram.html %}</a></li>
-  {% endif %}
-
 </ul>
 {% endif %}
