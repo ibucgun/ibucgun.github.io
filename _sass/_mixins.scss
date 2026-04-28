@@ -66,14 +66,20 @@
 
 @mixin sans_bold {
   @include sans;
-  font-weight: 700;
-  letter-spacing: 0.05em;
+  font-weight: 600;
+  // Bold için 0.05em bazen çok dağınık durabilir, 
+  // modern bir dokunuş için hafifçe daraltıp line-height ekleyelim.
+  letter-spacing: 0.01em; 
+  line-height: 1.4; // Dikeyde nefes alması için
 }
 
 @mixin sans_extrabold {
   @include sans;
+  // Eğer 800 çok boğuyorsa 700'e (Bold) çekebilirsin, 
+  // ama 800 kalacaksa arayı biraz daha açmalıyız.
   font-weight: 800;
-  letter-spacing: 0.05em;
+  letter-spacing: -0.01em; // Extrabold başlıklar genelde hafif dar olunca daha premium durur
+  line-height: 1.2; // Başlık olduğu için satır arası çok açık olmamalı
 }
 
 @mixin serif {
