@@ -402,25 +402,32 @@
 
 
 
-// Yeni modern kart yapımız
-.modern-section-card {
-  @include clean_card; 
-  padding: 1.5rem 2rem !important; 
-  border: 1px solid rgba(77, 65, 224, 0.15) !important; 
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+// =============================================================================
+// MODERN BÖLÜM KARTI (ismailbucgun.com Nihai Tasarım)
+// =============================================================================
 
+.modern-section-card {
+  @include clean_card; // Mixins dosyasındaki hafif gölgeli kural
+  padding: 1.8rem 2rem !important;
+  border: 1px solid rgba(77, 65, 224, 0.12) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+  margin-bottom: 2.5rem !important;
+
+  // Başlık Alanı (İkon + H2)
   .section-header {
     display: flex !important;
     align-items: center !important;
     gap: 15px !important;
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 1.8rem !important; // Başlık ile ilk madde arası ideal mesafe
     border: none !important;
     background: transparent !important;
     padding: 0 !important;
+    box-shadow: none !important;
 
+    // İkonun etrafındaki hafif mor/lavanta kutu
     .section-icon-wrapper {
       background: #f0ebff !important; 
-      width: 52px !important; // Biraz büyüttük
+      width: 52px !important;
       height: 52px !important;
       min-width: 52px !important;
       display: flex !important;
@@ -432,20 +439,25 @@
     .section-icon {
       width: 28px !important;
       height: 28px !important;
+      object-fit: contain;
     }
 
     h2 {
       @include sans_extrabold;
-      font-size: 1.8rem !important; // Başlık büyüdü
+      font-size: 1.7rem !important;
       color: #1a202c !important;
       margin: 0 !important;
+      line-height: 1 !important;
+      border: none !important;
+      padding: 0 !important;
     }
   }
 
+  // Maddeler (Eğitim, Deneyim, vb.)
   .resume-item {
-    margin-bottom: 1rem !important;
-    padding-bottom: 1rem !important;
-    border-bottom: 1px solid #e2e8f0 !important; 
+    margin-bottom: 1.2rem !important; // Maddeler arası dengeli boşluk
+    padding-bottom: 1.2rem !important;
+    border-bottom: 1px solid #e2e8f0 !important; // Belirgin ama ince ara çizgi
 
     &:last-child {
       border-bottom: none !important;
@@ -453,33 +465,59 @@
       margin-bottom: 0 !important;
     }
 
-	.resume-item-title {
-    @include sans_bold;
-    font-size: 1.35rem !important;
-    color: #1a202c !important;
-    margin-bottom: 0px !important; // Boşluğu tamamen kapattık
-    line-height: 1.1 !important;   // Satır yüksekliğini daralttık
-    text-align: left !important;
-  }
+    // Okul / Kurum İsmi
+    .resume-item-title {
+      @include sans_bold;
+      font-size: 1.35rem !important;
+      color: #1a202c !important;
+      margin-bottom: 4px !important; // Detay satırı ile arasındaki orta yol (ne yapışık ne uzak)
+      line-height: 1.3 !important;
+      text-align: left !important;
+    }
 
-	.resume-item-details {
-    @include sans_bold;
-    color: #4d41e0 !important;
-    font-size: 1.05rem !important;
-    text-transform: none !important;
-    margin-top: 0px !important;    // Üst boşluğu da sıfırladık
-    margin-bottom: 0.6rem !important; // Açıklama metniyle arasına mesafe bıraktık
-    display: block !important;
-    line-height: 1.1 !important;   // Satır yüksekliğini daralttık
-    text-align: left !important;
-  }
+    // Eğitim Türü / Pozisyon / Yıl
+    .resume-item-details {
+      @include sans_bold;
+      color: #4d41e0 !important; // Marka rengi indigo
+      font-size: 1.05rem !important;
+      text-transform: none !important; // Uppercase kaldırıldı, yazıldığı gibi
+      margin-top: 0 !important;
+      margin-bottom: 0.6rem !important; // Altındaki açıklama metniyle mesafe
+      display: block !important;
+      line-height: 1.3 !important;
+      text-align: left !important;
+    }
 
+    // Özet Metin / Açıklama
     .resume-item-copy {
       @include sans_regular;
-      font-size: 1.15rem !important; // Açıklama metni büyüdü
-      line-height: 1.6 !important;
+      font-size: 1.1rem !important;
+      line-height: 1.6 !important; // Okuma konforu için ferah satır aralığı
       color: #4a5568 !important;
       margin: 0 !important;
+      text-align: left !important;
+    }
+  }
+}
+
+// Mobil Düzenlemeler
+@include media_mobile {
+  .modern-section-card {
+    padding: 1.2rem !important;
+    
+    .section-header {
+      gap: 12px !important;
+      h2 { font-size: 1.4rem !important; }
+      .section-icon-wrapper {
+        width: 44px !important;
+        height: 44px !important;
+        min-width: 44px !important;
+      }
+    }
+    
+    .resume-item {
+      .resume-item-title { font-size: 1.2rem !important; }
+      .resume-item-details { font-size: 0.95rem !important; }
     }
   }
 }
