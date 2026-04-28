@@ -404,44 +404,50 @@
 
 // Yeni eklediğimiz section-card sınıfına stili veriyoruz
 .content-section.section-card {
-  @include modern_card; // 1. adımda yazdığımız kuralı buraya çağırdık
+  @include modern_card;
 
   .section-header {
-    border: none; // Eski çizgileri iptal ettik
-    background: transparent;
-    padding: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    text-align: left;
 
     h2 {
-      @include sans_extrabold;
-      font-size: 1.8rem;
-      color: #1a1a1a;
-      letter-spacing: -0.02em; // Harfleri hafifçe yaklaştırdık (modern durur)
+      @include sans_bold; // 900 yerine 700-800 daha zarif durur
+      font-size: 1.6rem;
+      color: #1a202c;
+      position: relative;
+      
+      // Başlığın soluna küçük bir nokta veya ince dikey bir çizgi
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background: #4d41e0;
+        border-radius: 50%;
+        margin-right: 12px;
+        vertical-align: middle;
+      }
     }
   }
 
   .resume-item {
-    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px dashed #f0f0f5; // Maddeler arasına çok ince kesik çizgi
     
-    &:last-child { margin-bottom: 0; } // Son madde altındaki boşluğu sildik
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
 
     .resume-item-title {
-      @include sans_bold;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       color: #2d3748;
-      margin-bottom: 0.5rem;
     }
 
     .resume-item-details {
-      color: #4d41e0; // Derece ve Yıl rengi
+      font-size: 0.9rem;
+      color: #718096; // Detayları biraz grileştirerek hiyerarşi sağlıyoruz
       font-weight: 500;
-      font-size: 1rem;
-    }
-
-    .resume-item-copy {
-      line-height: 1.7; // Satır arasını açtık, okuma kolaylaşsın
-      color: #4a5568;
-      text-align: left; // Sola yaslı her zaman daha moderndir
     }
   }
 }

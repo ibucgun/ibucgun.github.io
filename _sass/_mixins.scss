@@ -119,10 +119,21 @@
 
 @mixin modern_card {
   background: #ffffff;
-  border-radius: 16px; // Köşeleri yumuşatır
-  padding: 2.5rem 2rem; // İçerideki boşluğu artırır
-  margin-bottom: 3rem; // Kartlar arası mesafe
-  box-shadow: 0 10px 30px rgba(77, 65, 224, 0.05); // Hafif, modern bir gölge
-  border: 1px solid rgba(77, 65, 224, 0.1); // Çok ince bir çerçeve
-  border-left: 6px solid #4d41e0; // Sadece solda marka renginizle kalın bir çizgi
+  border-radius: 20px; // Daha yumuşak köşeler
+  padding: 3rem; // Daha geniş nefes alma alanı
+  margin-bottom: 3.5rem;
+  
+  // Çizgi yerine çok hafif bir çerçeve ve yumuşak gölge
+  border: 1px solid rgba(0, 0, 0, 0.03); 
+  box-shadow: 
+    0 10px 40px rgba(0, 0, 0, 0.04), // Ana yumuşak gölge
+    0 2px 10px rgba(0, 0, 0, 0.02);  // Yakınlık hissi veren gölge
+    
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); // Yumuşak geçiş
+
+  &:hover {
+    transform: translateY(-5px); // Hafifçe yukarı kalkma efekti
+    box-shadow: 0 20px 60px rgba(77, 65, 224, 0.08); // Marka renginde çok hafif bir parlama
+    border-color: rgba(77, 65, 224, 0.1);
+  }
 }
