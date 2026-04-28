@@ -642,7 +642,9 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* --- MODERN HERO LAYOUT --- */
 .modern-hero-layout {
+  /* Üstten 80px, alttan 60px boşluk bırakarak isme nefes aldırıyoruz */
   padding: 80px 0 60px 0 !important; 
   margin-top: 20px;
   border-bottom: none !important;
@@ -655,19 +657,19 @@
     justify-content: space-between;
   }
 
+  /* Metin Alanı */
   .hero-text-side {
     flex: 1.2;
-    /* İsim ve Ünvanı sol kenarda "ip gibi" hizalamak için: */
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
+    align-items: flex-start; // İsim ve ünvanın sola "ip gibi" hizalanması için
 
     .header-name {
-      @include sans_bold;
+      @include sans_bold; // Poppins 700
       font-size: 3.1rem;
       color: #1a202c;
       margin: 0 0 0.5rem 0 !important;
-      padding-left: 0 !important; // Kesin hizalama
+      padding-left: 0 !important;
       letter-spacing: -0.04em;
       line-height: 1.2;
     }
@@ -677,77 +679,175 @@
       font-size: 1.25rem;
       color: #4a5568;
       margin: 0 0 1.5rem 0 !important;
-      padding-left: 0 !important; // İsmin tam altına hizalanması için
+      padding-left: 0 !important;
       font-weight: 600;
+    }
+
+    .executive-summary p {
+      @include sans_regular;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #718096;
+      text-align: justify;
+      margin-bottom: 2.5rem;
+      max-width: 550px;
+
+      strong { color: #4d41e0; font-weight: 600; }
     }
   }
 
-  /* --- YENİ BUTON DÜZENİ --- */
+  /* --- YENİLENMİŞ BUTONLAR --- */
   .hero-action-btns {
     display: flex;
-    align-items: stretch; // Tüm butonları aynı boya getirir
+    align-items: stretch; // Buton boylarını eşitler
     gap: 15px;
     margin-bottom: 2rem;
 
-    /* Ortak Buton Temeli */
-    a {
+    .btn-double-line {
       display: inline-flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      border-radius: 50px;
-      text-decoration: none;
-      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-
-    /* İki Satırlı Randevu Butonu */
-    .btn-double-line {
-      flex-direction: column;
       background: #4d41e0;
       color: white;
       padding: 12px 35px;
+      border-radius: 50px;
+      text-decoration: none;
       box-shadow: 0 10px 25px rgba(77, 65, 224, 0.25);
-      
-      .btn-title {
+      transition: all 0.3s ease;
+      line-height: 1.2;
+
+      .btn-main-text {
+        font-weight: 800;
         font-size: 1.1rem;
-        font-weight: 700;
-        line-height: 1.2;
+        display: block;
       }
-      
-      .btn-phone {
-        font-size: 0.85rem;
+      .btn-sub-text {
         font-weight: 400;
+        font-size: 0.85rem;
         opacity: 0.9;
+        display: block;
         margin-top: 2px;
       }
 
-      &:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 15px 35px rgba(77, 65, 224, 0.35);
-      }
+      &:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(77, 65, 224, 0.35); }
     }
 
-    /* WhatsApp Butonu */
     .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       background: #5851db;
       color: white;
-      padding: 0 30px;
+      padding: 0 32px;
+      border-radius: 50px;
+      text-decoration: none;
       font-weight: 700;
-      font-size: 1rem;
-      &:hover { transform: translateY(-4px); opacity: 0.9; }
+      transition: all 0.3s ease;
+      &:hover { transform: translateY(-3px); opacity: 0.9; }
     }
 
-    /* Instagram Butonu (Karemsi/Oval İkon) */
     .btn-instagram {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       background: white;
       color: #4d41e0;
       border: 1px solid rgba(77, 65, 224, 0.2);
-      width: 60px; // Karemsi görünüm için sabit genişlik
+      width: 60px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      
       &:hover { 
-        background: #f8fafc;
-        color: #E1306C; // Instagram rengine dönüş
+        color: #E1306C;
         border-color: #E1306C;
-        transform: translateY(-4px) rotate(5deg);
+        transform: translateY(-3px) rotate(8deg);
       }
     }
+  }
+
+  .hero-social-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    .social-mini-link {
+      font-size: 0.85rem;
+      color: #a0aec0;
+      text-decoration: none;
+      font-weight: 600;
+      &:hover { color: #4d41e0; }
+    }
+  }
+
+  /* Görsel ve Parlama (Glow) */
+  .hero-image-side {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+
+    .avatar-glow-wrapper {
+      position: relative;
+      z-index: 1;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 10%; left: -10%;
+        width: 120%; height: 100%;
+        background: radial-gradient(circle, rgba(77, 65, 224, 0.15) 0%, transparent 70%);
+        filter: blur(40px);
+        z-index: -1;
+      }
+    }
+
+    .hero-avatar {
+      width: 380px;
+      height: auto;
+      border-radius: 24px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+      display: block;
+    }
+  }
+}
+
+/* MOBİL UYUM (GÜNCELLENDİ) */
+@include media_mobile {
+  .modern-hero-layout {
+    padding: 2rem 0 !important;
+    
+    .hero-flex-container {
+      flex-direction: column-reverse;
+      text-align: center;
+      gap: 2.5rem;
+      min-height: auto;
+    }
+
+    .hero-text-side {
+      align-items: center; // Mobilde metinleri ortalar
+      
+      .header-name { font-size: 2.4rem; text-align: center; }
+      .header-title { text-align: center; }
+      .executive-summary p { text-align: center; margin: 0 auto 2rem; }
+    }
+
+    .hero-action-btns { 
+      flex-direction: column; 
+      width: 100%;
+      align-items: center;
+
+      .btn-double-line, .btn-whatsapp {
+        width: 100%; // Mobilde butonlar tam genişlik
+        max-width: 300px;
+        height: auto;
+        padding: 15px 0;
+      }
+
+      .btn-instagram {
+        width: 50px; height: 50px; // Mobilde ikon butonu küçülür
+      }
+    }
+
+    .hero-avatar { width: 100% !important; max-width: 280px; }
   }
 }
