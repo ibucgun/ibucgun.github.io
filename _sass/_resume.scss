@@ -644,7 +644,9 @@
 
 /* --- MODERN HERO LAYOUT --- */
 .modern-hero-layout {
-  padding: 4rem 0;
+/* Üstten 80px, alttan 60px boşluk bırakarak isme nefes aldırıyoruz */
+  padding: 80px 0 60px 0 !important; 
+  margin-top: 20px;
   border-bottom: none !important; // Eski temadan kalan çizgiyi kaldırır
 
   .hero-flex-container {
