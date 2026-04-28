@@ -440,7 +440,9 @@
       width: 28px !important;
       height: 28px !important;
       object-fit: contain;
-    }
+	// Siyah ikonu #4d41e0 (Indigo) rengine dönüştüren sihirli satır:
+  	  filter: invert(26%) sepia(89%) saturate(5411%) hue-rotate(244deg) brightness(91%) contrast(98%);
+	}
 
     h2 {
       @include sans_extrabold;
