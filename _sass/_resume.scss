@@ -453,13 +453,14 @@
       margin-bottom: 0 !important;
     }
 
-    .resume-item-title {
-      @include sans_bold;
-      font-size: 1.4rem !important; // Okul isimleri büyüdü
-      color: #1a202c !important;
-      margin-bottom: 4px !important; 
-      line-height: 1.2 !important;
-    }
+.resume-item-title {
+    @include sans_bold;
+    font-size: 1.35rem !important;
+    color: #1a202c !important;
+    margin-bottom: 0px !important; // Boşluğu tamamen kapattık
+    line-height: 1.1 !important;   // Satır yüksekliğini daralttık
+    text-align: left !important;
+  }
 
     .resume-item-details {
       @include sans_bold;
