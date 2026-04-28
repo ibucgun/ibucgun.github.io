@@ -134,33 +134,59 @@
 </section>
 {% endif %}
 
-      {% if site.resume_section_iletisimverandevu %}
-      <!-- begin İletişim ve Randevu -->
-      <section  id="iletisimverandevu" class="content-section">
-        <header class="section-header">
-          <h2>İletişim ve Randevu</h2>
-        </header>
 
-        <div class="resume-item">
-          <p style="text-align: justify;font-size: 1.125rem;">
-		  Bilgi ve randevu için doğrudan arayarak ya da Whatsapp mesajı ile iletişim numarasından kliniğime ulaşabilirsiniz.</b><br> Daha fazla bilgiye <b><a href="/iletisim" title="Konum ve İletişim Bilgileri">İletişim</a></b> sayfasından ulaşabilirsiniz.
-		  
-		  <div itemscope itemtype="http://schema.org/MedicalClinic" style="font-size: 1.125rem;">
-		 
-		  <span itemprop="name"><b>Uzm. Dr. İsmail BUÇGÜN | Adana Psikiyatri ve TMS Kliniği</b></span><br>
-		  <span itemprop="address"/>Hurmalı Mahallesi Kurtuluş Caddesi No:39 Central Plaza Kat:6 Daire:62, Seyhan/Adana</span><br>
-		  <span itemprop="telephone"/><b>05510334896</b></span><br><br>
-		  <center><iframe name="iframe_cal" title="Uzm. Dr. İsmail BUÇGÜN | Adana Psikiyatri ve TMS Kliniği Konum Haritası" scrolling=auto width="1080px" height="500px" style="max-width:100%; border:0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1854.2674976427572!2d35.31911614513547!3d36.99118805876859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6958b8edf1a5c286!2sUzm.%20Dr.%20%C4%B0smail%20Bu%C3%A7g%C3%BCn-Adana%20Psikiyatri!5e0!3m2!1str!2str!4v1661104153808!5m2!1str!2str" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></center>
-          <span itemprop="medicalSpecialty" style="display:none;"><b>Psikiyatri</b></span>
-		  </div>		  
-		  </p>
-		  
-		  
+{% if site.resume_section_iletisimverandevu %}
+<section id="iletisimverandevu" class="content-section">
+  <header class="section-header">
+    <h2>İletişim ve Randevu</h2>
+  </header>
+
+  <div class="modern-contact-card" itemscope itemtype="http://schema.org/MedicalClinic">
+    <div class="contact-flex-container">
+      
+      <div class="contact-details-side">
+        <p class="contact-intro">
+          Bilgi ve randevu için doğrudan arayarak ya da <strong>WhatsApp</strong> mesajı ile kliniğime ulaşabilirsiniz.
+        </p>
+        
+        <div class="clinic-brand">
+          <h3 itemprop="name">Uzm. Dr. İsmail BUÇGÜN</h3>
+          <span class="clinic-subtitle">Adana Psikiyatri ve TMS Kliniği</span>
         </div>
 
-      </section>
-      <!-- end İletisim ve Randevu -->
-      {% endif %}
+        <div class="contact-list">
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <span itemprop="address">Hurmalı Mah. Kurtuluş Cad. No:39 Central Plaza Kat:6 Daire:62, Seyhan/Adana</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📞</span>
+            <a href="tel:+905510334896" itemprop="telephone" class="phone-link">0551 033 48 96</a>
+          </div>
+        </div>
+
+        <a href="/iletisim" class="btn-outlined-contact">
+          Tüm İletişim Detayları →
+        </a>
+      </div>
+
+      <div class="contact-map-side no-print">
+        <a href="https://maps.app.goo.gl/SizinHaritaLinkiniz" target="_blank" class="map-link-container" title="Google Haritalar'da Aç">
+          <img src="images/klinikharita.webp" alt="Uzm. Dr. İsmail BUÇGÜN Klinik Konumu" class="static-map-img">
+          <div class="map-overlay">
+            <span class="map-btn">📍 Haritalarda Aç</span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+    
+    <span itemprop="medicalSpecialty" style="display:none;">Psikiyatri</span>
+  </div>
+</section>
+{% endif %}
+
+
 
 	{% include footer.html %}
 
