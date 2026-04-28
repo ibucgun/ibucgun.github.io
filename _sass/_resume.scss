@@ -403,24 +403,26 @@
 
 
 // Yeni modern kart yapımız
-// Modern Bölüm Kartı - Sıkılaştırılmış Versiyon
 .modern-section-card {
   @include clean_card; 
-  padding: 1.5rem 1.8rem !important; // Dış boşluğu azalttık
+  padding: 1.5rem 1.8rem !important;
+  
+  // KARTIN DIŞ ÇERÇEVESİ: Biraz daha belirgin hale getirdik
+  border: 1px solid rgba(77, 65, 224, 0.12) !important; 
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05) !important;
 
   .section-header {
     display: flex !important;
     align-items: center !important;
     gap: 15px !important;
-    margin-bottom: 1.5rem !important; // Başlık altı boşluğu daralttık
-    
+    margin-bottom: 1.5rem !important;
     border: none !important;
     background: transparent !important;
     padding: 0 !important;
 
     .section-icon-wrapper {
       background: #f0ebff !important; 
-      width: 48px !important; // Kutuyu biraz küçülttük
+      width: 48px !important;
       height: 48px !important;
       min-width: 48px !important;
       display: flex !important;
@@ -436,7 +438,7 @@
 
     h2 {
       @include sans_extrabold;
-      font-size: 1.5rem !important; // Başlığı biraz küçülttük
+      font-size: 1.5rem !important;
       color: #1a202c !important;
       margin: 0 !important;
       line-height: 1 !important;
@@ -444,9 +446,11 @@
   }
 
   .resume-item {
-    margin-bottom: 1.2rem !important; // Öğeler arası boşluğu daralttık
+    margin-bottom: 1.2rem !important;
     padding-bottom: 1.2rem !important;
-    border-bottom: 1px solid #f1f1f5 !important;
+    
+    // ARA ÇİZGİ: Daha belirgin bir gri (#e2e8f0) kullanarak netleştirdik
+    border-bottom: 1.5px solid #e2e8f0 !important; 
 
     &:last-child {
       border-bottom: none !important;
@@ -456,9 +460,9 @@
 
     .resume-item-title {
       @include sans_bold;
-      font-size: 1.15rem !important; // Başlık fontunu hafif küçülttük
+      font-size: 1.15rem !important;
       color: #2d3748 !important;
-      margin-bottom: 0.2rem !important; // Altındaki detayla arasını kapattık
+      margin-bottom: 0.2rem !important;
     }
 
     .resume-item-details {
@@ -466,8 +470,8 @@
       color: #4d41e0 !important;
       font-size: 0.8rem !important;
       text-transform: uppercase !important;
-      letter-spacing: 0.03em !important;
-      margin-bottom: 0.5rem !important; // Detay ile açıklama arasını kapattık
+      letter-spacing: 0.04em !important;
+      margin-bottom: 0.5rem !important;
       display: block !important;
     }
 
