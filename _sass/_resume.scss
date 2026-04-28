@@ -642,140 +642,112 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* --- MODERN HERO LAYOUT --- */
 .modern-hero-layout {
-/* Üstten 80px, alttan 60px boşluk bırakarak isme nefes aldırıyoruz */
   padding: 80px 0 60px 0 !important; 
   margin-top: 20px;
-  border-bottom: none !important; // Eski temadan kalan çizgiyi kaldırır
+  border-bottom: none !important;
 
   .hero-flex-container {
     display: flex;
     align-items: center;
     gap: 4rem;
-	min-height: 500px;
+    min-height: 500px;
     justify-content: space-between;
   }
 
-  /* Metin Alanı */
   .hero-text-side {
     flex: 1.2;
+    /* İsim ve Ünvanı sol kenarda "ip gibi" hizalamak için: */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
 
     .header-name {
-      @include sans_bold; // Poppins 700
+      @include sans_bold;
       font-size: 3.1rem;
       color: #1a202c;
-      margin: 0 0 0.5rem 0;
+      margin: 0 0 0.5rem 0 !important;
+      padding-left: 0 !important; // Kesin hizalama
       letter-spacing: -0.04em;
-      line-height: 1.1;
+      line-height: 1.2;
     }
 
     .header-title {
       @include sans_regular;
       font-size: 1.25rem;
       color: #4a5568;
-      margin-bottom: 1.5rem;
+      margin: 0 0 1.5rem 0 !important;
+      padding-left: 0 !important; // İsmin tam altına hizalanması için
       font-weight: 600;
-    }
-
-    .executive-summary p {
-      @include sans_regular;
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: #718096;
-      text-align: justify;
-      margin-bottom: 2.5rem;
-      max-width: 550px;
-
-      strong { color: #4d41e0; font-weight: 600; }
     }
   }
 
-  /* Butonlar */
+  /* --- YENİ BUTON DÜZENİ --- */
   .hero-action-btns {
     display: flex;
-    gap: 12px;
+    align-items: stretch; // Tüm butonları aynı boya getirir
+    gap: 15px;
     margin-bottom: 2rem;
 
-    .btn-primary {
-      background: #4d41e0;
-      color: white;
-      padding: 14px 32px;
-      border-radius: 50px; // Görseldeki gibi oval
-      text-decoration: none;
-      font-weight: 700;
-      box-shadow: 0 10px 25px rgba(77, 65, 224, 0.25);
-      transition: all 0.3s ease;
-      &:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(77, 65, 224, 0.35); }
-    }
-
-    .btn-whatsapp {
-      background: #5851db; // İndigo tonunda veya orijinal yeşil kalsın dersen #25d366
-      color: white;
-      padding: 14px 32px;
+    /* Ortak Buton Temeli */
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       border-radius: 50px;
       text-decoration: none;
-      font-weight: 700;
-      transition: all 0.3s ease;
-      &:hover { transform: translateY(-3px); opacity: 0.9; }
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
-  }
 
-  .hero-social-links {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    .social-mini-link {
-      font-size: 0.85rem;
-      color: #a0aec0;
-      text-decoration: none;
-      font-weight: 600;
-      &:hover { color: #4d41e0; }
-    }
-  }
+    /* İki Satırlı Randevu Butonu */
+    .btn-double-line {
+      flex-direction: column;
+      background: #4d41e0;
+      color: white;
+      padding: 12px 35px;
+      box-shadow: 0 10px 25px rgba(77, 65, 224, 0.25);
+      
+      .btn-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+      
+      .btn-phone {
+        font-size: 0.85rem;
+        font-weight: 400;
+        opacity: 0.9;
+        margin-top: 2px;
+      }
 
-  /* Görsel ve Parlama (Glow) */
-  .hero-image-side {
-    flex: 0.8;
-    display: flex;
-    justify-content: center;
-
-    .avatar-glow-wrapper {
-      position: relative;
-      z-index: 1;
-
-      &::after {
-        content: "";
-        position: absolute;
-        top: 10%; left: -10%;
-        width: 120%; height: 100%;
-        background: radial-gradient(circle, rgba(77, 65, 224, 0.15) 0%, transparent 70%);
-        filter: blur(40px);
-        z-index: -1;
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 15px 35px rgba(77, 65, 224, 0.35);
       }
     }
 
-    .hero-avatar {
-      width: 380px;
-      height: auto;
-      border-radius: 24px; // Görseldeki yumuşak köşeler
-      box-shadow: 0 20px 50px rgba(0,0,0,0.08);
-      display: block;
+    /* WhatsApp Butonu */
+    .btn-whatsapp {
+      background: #5851db;
+      color: white;
+      padding: 0 30px;
+      font-weight: 700;
+      font-size: 1rem;
+      &:hover { transform: translateY(-4px); opacity: 0.9; }
     }
-  }
-}
 
-/* MOBİL UYUM */
-@include media_mobile {
-  .modern-hero-layout {
-    padding: 2rem 0;
-    .hero-flex-container {
-      flex-direction: column-reverse; // Yazı alta, resim üste
-      text-align: center;
-      gap: 2rem;
+    /* Instagram Butonu (Karemsi/Oval İkon) */
+    .btn-instagram {
+      background: white;
+      color: #4d41e0;
+      border: 1px solid rgba(77, 65, 224, 0.2);
+      width: 60px; // Karemsi görünüm için sabit genişlik
+      &:hover { 
+        background: #f8fafc;
+        color: #E1306C; // Instagram rengine dönüş
+        border-color: #E1306C;
+        transform: translateY(-4px) rotate(5deg);
+      }
     }
-    .hero-text-side .executive-summary p { text-align: center; margin: 0 auto 2rem; }
-    .hero-action-btns { justify-content: center; flex-direction: column; }
-    .hero-avatar { width: 100% !important; max-width: 300px; }
   }
 }
