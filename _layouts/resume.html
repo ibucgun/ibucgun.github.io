@@ -72,24 +72,25 @@
 {% endif %}
 	  
 
-      {% if site.resume_section_calistigikurumlar %}
-      <!-- begin Çalıştığı Kurumlar -->
-      <section id="calistigikurumlar" class="content-section">
-        <header class="section-header">
-          <h2>Çalıştığım Kurumlar</h2>
-        </header>
+{% if site.resume_section_calistigikurumlar %}
+<section id="calistigikurumlar" class="modern-section-card"> <header class="section-header">
+    <div class="section-icon-wrapper">
+      <img src="/images/icons/calistigikurumlar.svg" class="section-icon" alt="İş Deneyimi İkonu">
+    </div>
+    <h2>Çalıştığım Kurumlar</h2>
+  </header>
 
-        {% for job in site.data.calistigikurumlar %}
-        <div class="resume-item">
-          <h3 class="resume-item-title" itemprop="name" style="text-align: justify;">{{ job.company }}</h3>
-          <h4 class="resume-item-details" itemprop="description">{{ job.position }} &bull; {{ job.duration }}</h4>
-          <p class="resume-item-copy" style="text-align: justify;">{{ job.summary }}</p>
-        </div><!-- end of resume-item -->
-        {% endfor %}
+  <div class="section-content">
+    {% for job in site.data.calistigikurumlar %}
+    <div class="resume-item" itemscope itemtype="http://schema.org/Organization">
+      <h3 class="resume-item-title" itemprop="name">{{ job.company }}</h3>
+      <h4 class="resume-item-details" itemprop="description">{{ job.position }} &bull; {{ job.duration }}</h4>
+      <p class="resume-item-copy">{{ job.summary }}</p>
+    </div>{% endfor %}
+  </div>
 
-      </section>
-      <!-- end Çalıştığı Kurumlar -->
-      {% endif %}
+</section>
+{% endif %}
 
 
       {% if site.resume_section_aldigiegitimler %}
