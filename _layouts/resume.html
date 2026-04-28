@@ -97,7 +97,7 @@
   
   <header class="section-header">
     <div class="section-icon-wrapper">
-      <img src="/images/icons/aldigimegitimler.svg" class="section-icon" alt="Sertifika İkonu">
+      <img src="/images/icons/aldigimegitimler.svg" class="section-icon" alt="Eğitim İkonu">
     </div>
     <h2>Aldığım Eğitimler</h2>
   </header>
@@ -106,15 +106,16 @@
     {% for project in site.data.aldigiegitimler %}
     <details class="resume-item-collapsible">
       <summary class="resume-item-summary">
-        <h3 class="resume-item-title" itemprop="name">
-          {% if project.url %}<a href="{{ project.url }}" itemprop="url" onclick="event.stopPropagation();">{{ project.project }}</a>{% else %}{{ project.project }}{% endif %}
-        </h3>
+        <div class="summary-content-wrapper">
+          <h3 class="resume-item-title" itemprop="name">
+            {% if project.url %}<a href="{{ project.url }}" itemprop="url" onclick="event.stopPropagation();">{{ project.project }}</a>{% else %}{{ project.project }}{% endif %}
+          </h3>
+          <h4 class="resume-item-details" itemprop="description">{{ project.role }} &bull; {{ project.duration }}</h4>
+        </div>
         <span class="collapse-icon"></span>
       </summary>
 
-      <div class="collapsible-body" itemscope itemtype="http://schema.org/CreativeWork">
-        <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
-        <h4 class="resume-item-details" itemprop="description">{{ project.role }} &bull; {{ project.duration }}</h4>
+      <div class="collapsible-body">
         <p class="resume-item-copy">{{ project.description }}</p>
       </div>
     </details>
