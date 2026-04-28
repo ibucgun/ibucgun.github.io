@@ -77,7 +77,7 @@
 }
 
 @mixin serif {
-  font-family: "Lora", Palatino, Georgia, serif;
+  font-family: "Crimson Pro", Palatino, Georgia, serif;
 }
 
 @mixin serif_regular {
@@ -87,7 +87,7 @@
 
 @mixin serif_bold {
   @include serif;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.05em;
 }
 
