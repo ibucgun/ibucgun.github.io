@@ -12,7 +12,7 @@ html {
 }
 
 body{
-  @include serif;
+  @include sans;
   color: $text_color;
   font-size: 1.1rem;
   line-height: 1.7;
