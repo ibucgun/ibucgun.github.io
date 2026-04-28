@@ -337,69 +337,6 @@
 }
 
 
-.whatsapp-button {
-  @include border-radius(3px);
-  background-color: #129d45;
-  text-decoration: none;
-  text-align: center;
-  display: inline-block;
-  width: 200px;
-  font-size: 1.375rem;
-  @include sans_light;
-  color: #FFF;
-  line-height: 55px;
-  @include transition(all .2s ease);
-
-  &:hover {
-    background-color: #0e7a36;
-    color: #fff;
-  }
-
-  &.not-looking { width: 400px; }
-}
-
-.bulutklinik-button {
-  @include border-radius(3px);
-  background-color: #4ecac2;
-  text-decoration: none;
-  text-align: center;
-  display: inline-block;
-  width: 200px;
-  font-size: 1.375rem;
-  @include sans_light;
-  color: #FFF;
-  line-height: 55px;
-  @include transition(all .2s ease);
-
-  &:hover {
-    background-color:#3EAAA3;
-    color: #fff;
-  }
-
-}
-
-
-
-.doktortakvimi-button {
-  @include border-radius(3px);
-  background-color: #4d41e0;
-  text-decoration: none;
-  text-align: center;
-  display: inline-block;
-  width: 200px;
-  font-size: 1.375rem;
-  @include sans_light;
-  color: #FFF;
-  line-height: 55px;
-  @include transition(all .2s ease);
-
-  &:hover {
-    background-color:#291eb7;
-    color: #fff;
-  }
-
-}
-
 
 
 // =============================================================================
@@ -718,7 +655,7 @@
       line-height: 1.2;
 
       .btn-main-text {
-        font-weight: 800;
+        font-weight: 700;
         font-size: 1.1rem;
         display: block;
       }
@@ -764,19 +701,6 @@
         border-color: #E1306C;
         transform: translateY(-3px) rotate(8deg);
       }
-    }
-  }
-
-  .hero-social-links {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    .social-mini-link {
-      font-size: 0.85rem;
-      color: #a0aec0;
-      text-decoration: none;
-      font-weight: 600;
-      &:hover { color: #4d41e0; }
     }
   }
 
