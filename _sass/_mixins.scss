@@ -93,8 +93,11 @@
 
 @mixin serif_bold {
   @include serif;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  font-weight: 700;
+  // Serif fontlarda harfler kalınlaştıkça birbirine çok değer. 
+  // 0.02em - 0.03em arası bir değer sıkışıklığı çözer.
+  letter-spacing: 0.02em; 
+  line-height: 1.3;
 }
 
 // layout
