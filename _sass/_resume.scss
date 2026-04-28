@@ -403,51 +403,91 @@
 
 
 // Yeni modern kart yapımız
+// Modern Bölüm Kartı - Sıfırdan Temiz Yapı
 .modern-section-card {
-  @include clean_card;
+  @include clean_card; // Hafif gölgeli ana kutu
+  padding: 2.5rem !important; // İçerik ferahlığı
 
-  // Başlıktaki o "saçma" çizgileri burada öldürüyoruz
+  // Başlık Alanı - Çizgileri ve Arkaplanları Tamamen Temizler
   .section-header {
-    border: none !important;      // Üst-alt tüm çizgileri sildik
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px !important;
+    margin-bottom: 2.5rem !important;
+    
+    // Eski stilleri öldürmek için zorunlu temizlik
+    border: none !important;
     background: transparent !important;
-    padding: 0 !important;
-    margin-bottom: 2rem;
     box-shadow: none !important;
+    padding: 0 !important;
+
+    // İkonun etrafındaki hafif mor kutu
+    .section-icon-wrapper {
+      background: #f0ebff !important; 
+      width: 56px !important;
+      height: 56px !important;
+      min-width: 56px !important; // Daralmasını engelle
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      border-radius: 14px !important;
+    }
+
+    .section-icon {
+      width: 28px !important;
+      height: 28px !important;
+    }
 
     h2 {
-      @include sans_bold;
-      font-size: 1.6rem;
-      color: #1a202c;
-      margin: 0;
-      padding-left: 15px;
-      border-left: 4px solid #4d41e0; // Sadece solda zarif bir dikey çizgi
-      line-height: 1.2;
+      @include sans_extrabold;
+      font-size: 1.75rem !important;
+      color: #1a202c !important;
+      margin: 0 !important;
+      border: none !important; // Olası h2 çizgilerini siler
+      padding: 0 !important;
+      background: none !important;
+      line-height: 1 !important;
     }
   }
 
-  // İçerik maddeleri
+  // Maddeler (Eğitim/Deneyim Bilgileri)
   .resume-item {
-    margin-bottom: 2rem;
-    &:last-child { margin-bottom: 0; }
+    margin-bottom: 2rem !important;
+    padding-bottom: 2rem !important;
+    border-bottom: 1px solid #f1f1f5 !important; // Sadece aradaki o ince gri çizgi
+
+    &:last-child {
+      border-bottom: none !important;
+      padding-bottom: 0 !important;
+      margin-bottom: 0 !important;
+    }
 
     .resume-item-title {
       @include sans_bold;
-      font-size: 1.2rem;
-      color: #2d3748;
-      margin-bottom: 0.3rem;
+      font-size: 1.25rem !important;
+      color: #2d3748 !important;
+      margin-bottom: 0.5rem !important;
+      text-align: left !important;
     }
 
     .resume-item-details {
-      color: #4d41e0; // Marka renginiz
-      font-size: 0.95rem;
-      margin-bottom: 0.8rem;
+      @include sans_bold;
+      color: #4d41e0 !important; // Marka renginiz
+      font-size: 0.85rem !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.05em !important;
+      margin-bottom: 0.8rem !important;
+      display: block !important;
+      text-align: left !important;
     }
 
     .resume-item-copy {
-      font-size: 1.05rem;
-      line-height: 1.6;
-      color: #4a5568;
-      text-align: left !important; // Justify (iki yana yasla) karmaşasından kurtulduk
+      @include sans_regular;
+      font-size: 1.05rem !important;
+      line-height: 1.65 !important;
+      color: #4a5568 !important;
+      text-align: left !important; // Justify karmaşasını bitirir
+      margin: 0 !important;
     }
   }
 }

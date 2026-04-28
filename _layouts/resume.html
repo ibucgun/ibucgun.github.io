@@ -49,9 +49,14 @@
 	  </header>
 	  
 {% if site.resume_section_egitim %}
-<section id="egitim" class="modern-section-card"> <header class="section-header">
-    <h2>Akademik Eğitim</h2>
-  </header>
+<section id="egitim" class="modern-section-card"> 
+
+<header class="section-header">
+  <div class="section-icon-wrapper">
+    <img src="/images/icons/akademikegitim.svg" class="section-icon" alt="Eğitim İkonu">
+  </div>
+  <h2>Akademik Eğitim</h2>
+</header>
 
   <div class="section-content">
     {% for egitim in site.data.egitim %}
