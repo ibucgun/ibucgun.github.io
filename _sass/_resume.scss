@@ -399,3 +399,49 @@
   }
 
 }
+
+
+
+// Yeni eklediğimiz section-card sınıfına stili veriyoruz
+.content-section.section-card {
+  @include modern_card; // 1. adımda yazdığımız kuralı buraya çağırdık
+
+  .section-header {
+    border: none; // Eski çizgileri iptal ettik
+    background: transparent;
+    padding: 0;
+    margin-bottom: 2rem;
+
+    h2 {
+      @include sans_extrabold;
+      font-size: 1.8rem;
+      color: #1a1a1a;
+      letter-spacing: -0.02em; // Harfleri hafifçe yaklaştırdık (modern durur)
+    }
+  }
+
+  .resume-item {
+    margin-bottom: 2.5rem;
+    
+    &:last-child { margin-bottom: 0; } // Son madde altındaki boşluğu sildik
+
+    .resume-item-title {
+      @include sans_bold;
+      font-size: 1.3rem;
+      color: #2d3748;
+      margin-bottom: 0.5rem;
+    }
+
+    .resume-item-details {
+      color: #4d41e0; // Derece ve Yıl rengi
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+    .resume-item-copy {
+      line-height: 1.7; // Satır arasını açtık, okuma kolaylaşsın
+      color: #4a5568;
+      text-align: left; // Sola yaslı her zaman daha moderndir
+    }
+  }
+}

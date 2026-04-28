@@ -117,25 +117,12 @@
   }
 }
 
-// mixins.scss içindeki güncel hali böyle hayal edelim:
-@mixin section_card {
+@mixin modern_card {
   background: #ffffff;
-  border-radius: 16px;
-  padding: 2.5rem 2rem;
-  margin-bottom: 3rem;
-  box-shadow: 0 10px 30px rgba(77, 65, 224, 0.05);
-  border: 1px solid rgba(77, 65, 224, 0.08);
-  // Kalın çizgiyi sadece bir "vurgu" olarak bırakıyoruz
-  position: relative;
-  overflow: hidden;
-  
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 6px; // 4px yerine biraz daha tok 6px
-    height: 100%;
-    background: #4d41e0;
-  }
+  border-radius: 16px; // Köşeleri yumuşatır
+  padding: 2.5rem 2rem; // İçerideki boşluğu artırır
+  margin-bottom: 3rem; // Kartlar arası mesafe
+  box-shadow: 0 10px 30px rgba(77, 65, 224, 0.05); // Hafif, modern bir gölge
+  border: 1px solid rgba(77, 65, 224, 0.1); // Çok ince bir çerçeve
+  border-left: 6px solid #4d41e0; // Sadece solda marka renginizle kalın bir çizgi
 }
