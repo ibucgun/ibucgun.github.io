@@ -92,27 +92,37 @@
 </section>
 {% endif %}
 
+{% if site.resume_section_aldigiegitimler %}
+<section id="aldigiegitimler" class="modern-section-card">
+  
+  <header class="section-header">
+    <div class="section-icon-wrapper">
+      <img src="/images/icons/certificate.svg" class="section-icon" alt="Sertifika İkonu">
+    </div>
+    <h2>Aldığım Eğitimler</h2>
+  </header>
 
-      {% if site.resume_section_aldigiegitimler %}
-      <!-- begin Aldığı Eğitimler -->
-      <section id="aldigiegitimler" class="content-section">
-        <header class="section-header">
-          <h2>Aldığım Eğitimler</h2>
-        </header>
+  <div class="section-content">
+    {% for project in site.data.aldigiegitimler %}
+    <details class="resume-item-collapsible">
+      <summary class="resume-item-summary">
+        <h3 class="resume-item-title" itemprop="name">
+          {% if project.url %}<a href="{{ project.url }}" itemprop="url" onclick="event.stopPropagation();">{{ project.project }}</a>{% else %}{{ project.project }}{% endif %}
+        </h3>
+        <span class="collapse-icon"></span>
+      </summary>
 
-        {% for project in site.data.aldigiegitimler %}
-        <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
-          <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
-          <h3 class="resume-item-title" style="text-align: justify;" itemprop="name">{% if project.url %}<a href="{{ project.url }}" itemprop="url">{{ project.project }}</a>{% else %}{{ project.project }}{% endif %}</h3>
-          <h4 class="resume-item-details" itemprop="description">{{ project.role }}  &bull; {{ project.duration }}</h4>
-          <p class="resume-item-copy" style="text-align: justify;">{{ project.description }}</p>
-        </div>
-        {% endfor %}
+      <div class="collapsible-body" itemscope itemtype="http://schema.org/CreativeWork">
+        <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
+        <h4 class="resume-item-details" itemprop="description">{{ project.role }} &bull; {{ project.duration }}</h4>
+        <p class="resume-item-copy">{{ project.description }}</p>
+      </div>
+    </details>
+    {% endfor %}
+  </div>
 
-      </section>
-      <!-- end Aldığı Eğitimler -->
-      {% endif %}
-
+</section>
+{% endif %}
 
       {% if site.resume_section_iletisimverandevu %}
       <!-- begin İletişim ve Randevu -->
