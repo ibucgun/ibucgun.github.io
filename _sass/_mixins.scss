@@ -94,15 +94,25 @@
 // layout
 
 @mixin section_border {
-  border-top: 4px solid #4d41e0;
-  border-bottom: 2px solid #4d41e0;
-  padding: .2rem .1rem .4rem;
-  background: #fbfbfe;
+  background: #ffffff; // Daha temiz bir beyaz zemini öne çıkarır
+  border: 1px solid rgba(77, 65, 224, 0.1); // Tüm çevresine çok hafif bir çerçeve
+  border-top: 4px solid #4d41e0; // Sizin o imzayı (kalın çizgiyi) sadece üstte koruyoruz
+  border-radius: 12px; // Köşeleri yumuşatmak modern tasarımın ilk kuralıdır
+  padding: 2rem 1.5rem; // Mevcut .2rem çok dardı, içeriğe nefes aldırıyoruz
+  margin-bottom: 2.5rem; // Bölümlerin birbirine yapışmasını engeller
+  box-shadow: 0 10px 25px rgba(77, 65, 224, 0.05); // Çok hafif, modern bir gölge
 }
 
 @mixin section_border_thin {
-  border-top: 1px solid #4d41e0;
-  border-bottom: 1px solid #4d41e0;
-  padding: .2rem .1rem .4rem;
-  background: #fbfbfe;
+  background: #fbfbfe; 
+  border: 1px solid rgba(77, 65, 224, 0.15); // Üst-alt çizgi yerine ince bir tam çerçeve
+  border-radius: 8px; 
+  padding: 1.5rem; // İçerik ve kenarlar arasında dengeli bir boşluk
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease; // Üzerine gelince yapılacak efektler için hazırlık
+
+  &:hover {
+    border-color: #4d41e0; // Fareyle gelince çerçeve belirginleşir
+    background: #ffffff;
+  }
 }
