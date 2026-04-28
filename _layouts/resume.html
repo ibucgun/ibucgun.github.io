@@ -48,23 +48,22 @@
 	   </center><br>
 	  </header>
 	  
-	  {% if site.resume_section_egitim %}
-      <!-- begin Eğitim -->
-      <section id="egitim" class="content-section">
-        <header class="section-header">
-          <h2>Akademik Eğitim</h2>
-        </header>
+{% if site.resume_section_egitim %}
+<section id="egitim" class="content-section section-card"> <header class="section-header">
+    <h2>Akademik Eğitim</h2>
+  </header>
 
-        {% for egitim in site.data.egitim %}
-        <div class="resume-item">
-          <h3 class="resume-item-title" itemprop="name" style="text-align: justify;">{{ egitim.uni }}</h3>
-          <h4 class="resume-item-details group" itemprop="description">{{ egitim.derece }} &bull; {{ egitim.yil }}</h4>
-		  <p class="resume-item-copy" style="text-align: justify;">{{ egitim.ozet }}</p>
-        </div>
-        {% endfor %}
-      </section>
-      <!-- end Eğitim -->
-      {% endif %}
+  <div class="section-body"> {% for egitim in site.data.egitim %}
+    <div class="resume-item">
+      <h3 class="resume-item-title" itemprop="name">{{ egitim.uni }}</h3>
+      <h4 class="resume-item-details">{{ egitim.derece }} &bull; {{ egitim.yil }}</h4>
+      <p class="resume-item-copy">{{ egitim.ozet }}</p>
+    </div>
+    {% endfor %}
+  </div>
+
+</section>
+{% endif %}
 	  
 	  
 
