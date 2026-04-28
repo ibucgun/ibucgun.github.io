@@ -477,7 +477,7 @@
 
     // Eğitim Türü / Pozisyon / Yıl
     .resume-item-details {
-      @include serif_bold;
+      @include sans_bold;
       color: #4d41e0 !important; // Marka rengi indigo
       font-size: 1.05rem !important;
       text-transform: none !important; // Uppercase kaldırıldı, yazıldığı gibi
@@ -567,7 +567,7 @@
 
     // Rol ve Tarih (summary içinde olduğu için artık her zaman görünür)
     .resume-item-details {
-      @include serif_bold;
+      @include sans_bold;
       color: #4d41e0 !important;
       font-size: 1.05rem !important;
       margin: 0 !important;
