@@ -403,58 +403,50 @@
 
 
 // Yeni modern kart yapımız
-// Modern Bölüm Kartı - Sıfırdan Temiz Yapı
+// Modern Bölüm Kartı - Sıkılaştırılmış Versiyon
 .modern-section-card {
-  @include clean_card; // Hafif gölgeli ana kutu
-  padding: 2.5rem !important; // İçerik ferahlığı
+  @include clean_card; 
+  padding: 1.5rem 1.8rem !important; // Dış boşluğu azalttık
 
-  // Başlık Alanı - Çizgileri ve Arkaplanları Tamamen Temizler
   .section-header {
     display: flex !important;
     align-items: center !important;
-    gap: 20px !important;
-    margin-bottom: 2.5rem !important;
+    gap: 15px !important;
+    margin-bottom: 1.5rem !important; // Başlık altı boşluğu daralttık
     
-    // Eski stilleri öldürmek için zorunlu temizlik
     border: none !important;
     background: transparent !important;
-    box-shadow: none !important;
     padding: 0 !important;
 
-    // İkonun etrafındaki hafif mor kutu
     .section-icon-wrapper {
       background: #f0ebff !important; 
-      width: 56px !important;
-      height: 56px !important;
-      min-width: 56px !important; // Daralmasını engelle
+      width: 48px !important; // Kutuyu biraz küçülttük
+      height: 48px !important;
+      min-width: 48px !important;
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;
-      border-radius: 14px !important;
+      border-radius: 12px !important;
     }
 
     .section-icon {
-      width: 28px !important;
-      height: 28px !important;
+      width: 24px !important;
+      height: 24px !important;
     }
 
     h2 {
       @include sans_extrabold;
-      font-size: 1.75rem !important;
+      font-size: 1.5rem !important; // Başlığı biraz küçülttük
       color: #1a202c !important;
       margin: 0 !important;
-      border: none !important; // Olası h2 çizgilerini siler
-      padding: 0 !important;
-      background: none !important;
       line-height: 1 !important;
     }
   }
 
-  // Maddeler (Eğitim/Deneyim Bilgileri)
   .resume-item {
-    margin-bottom: 2rem !important;
-    padding-bottom: 2rem !important;
-    border-bottom: 1px solid #f1f1f5 !important; // Sadece aradaki o ince gri çizgi
+    margin-bottom: 1.2rem !important; // Öğeler arası boşluğu daralttık
+    padding-bottom: 1.2rem !important;
+    border-bottom: 1px solid #f1f1f5 !important;
 
     &:last-child {
       border-bottom: none !important;
@@ -464,30 +456,26 @@
 
     .resume-item-title {
       @include sans_bold;
-      font-size: 1.25rem !important;
+      font-size: 1.15rem !important; // Başlık fontunu hafif küçülttük
       color: #2d3748 !important;
-      margin-bottom: 0.5rem !important;
-      text-align: left !important;
+      margin-bottom: 0.2rem !important; // Altındaki detayla arasını kapattık
     }
 
     .resume-item-details {
       @include sans_bold;
-      color: #4d41e0 !important; // Marka renginiz
-      font-size: 0.85rem !important;
+      color: #4d41e0 !important;
+      font-size: 0.8rem !important;
       text-transform: uppercase !important;
-      letter-spacing: 0.05em !important;
-      margin-bottom: 0.8rem !important;
+      letter-spacing: 0.03em !important;
+      margin-bottom: 0.5rem !important; // Detay ile açıklama arasını kapattık
       display: block !important;
-      text-align: left !important;
     }
 
     .resume-item-copy {
       @include sans_regular;
-      font-size: 1.05rem !important;
-      line-height: 1.65 !important;
+      font-size: 1rem !important;
+      line-height: 1.5 !important;
       color: #4a5568 !important;
-      text-align: left !important; // Justify karmaşasını bitirir
-      margin: 0 !important;
     }
   }
 }
