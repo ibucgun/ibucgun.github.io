@@ -137,50 +137,50 @@
 
 {% if site.resume_section_iletisimverandevu %}
 <section id="iletisimverandevu" class="content-section">
-  <div class="modern-section-card" itemscope itemtype="http://schema.org/MedicalClinic">
-    
-    <header class="section-header">
-      <div class="section-icon-wrapper">
-        <span style="font-size: 24px;">📍</span>
-      </div>
-      <h2>İletişim ve Randevu</h2>
-    </header>
+  <header class="section-header">
+    <h2>İletişim ve Randevu</h2>
+  </header>
 
-    <div class="resume-item" style="border-bottom: none !important; padding-bottom: 0 !important; margin-bottom: 0 !important;">
-      <div class="contact-card-grid">
+  <div class="modern-contact-card" itemscope itemtype="http://schema.org/MedicalClinic">
+    <div class="contact-flex-container">
+      
+      <div class="contact-details-side">
+        <p class="contact-intro">
+          Bilgi ve randevu için doğrudan arayarak ya da <strong>WhatsApp</strong> mesajı ile kliniğime ulaşabilirsiniz.
+        </p>
         
-        <div class="contact-text-content">
-          <p class="resume-item-copy" style="margin-bottom: 1.5rem !important;">
-            Bilgi ve randevu için doğrudan arayarak ya da <strong>WhatsApp</strong> mesajı ile kliniğime ulaşabilirsiniz.
-          </p>
-          
-          <div class="clinic-info-block">
-            <h3 class="resume-item-title" itemprop="name">Uzm. Dr. İsmail BUÇGÜN</h3>
-            <span class="resume-item-details">Adana Psikiyatri ve TMS Kliniği</span>
-          </div>
+        <div class="clinic-brand">
+          <h3 itemprop="name">Uzm. Dr. İsmail BUÇGÜN</h3>
+          <span class="clinic-subtitle">Adana Psikiyatri ve TMS Kliniği</span>
+        </div>
 
-          <div class="contact-details-list">
-            <div class="contact-detail-row">
-              <span class="detail-label">ADRES</span>
-              <p class="resume-item-copy" itemprop="address">Hurmalı Mah. Kurtuluş Cad. No:39 Central Plaza Kat:6 Daire:62, Seyhan/Adana</p>
-            </div>
-            <div class="contact-detail-row" style="margin-top: 15px;">
-              <span class="detail-label">TELEFON</span>
-              <a href="tel:+905510334896" itemprop="telephone" class="resume-item-title" style="font-size: 1.2rem !important; text-decoration: none;">0551 033 48 96</a>
-            </div>
+        <div class="contact-list">
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <span itemprop="address">Hurmalı Mah. Kurtuluş Cad. No:39 Central Plaza Kat:6 Daire:62, Seyhan/Adana</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📞</span>
+            <a href="tel:+905510334896" itemprop="telephone" class="phone-link">0551 033 48 96</a>
           </div>
         </div>
 
-        <div class="contact-map-wrapper no-print">
-          <a href="https://maps.google.com/?q=Central+Plaza+Adana" target="_blank" class="static-map-link">
-            <img src="images/map-preview.webp" alt="Klinik Konumu" class="map-img">
-            <div class="map-overlay-btn">Haritalarda Aç</div>
-          </a>
-        </div>
-
+        <a href="/iletisim" class="btn-outlined-contact">
+          Tüm İletişim Detayları →
+        </a>
       </div>
-    </div>
 
+      <div class="contact-map-side no-print">
+        <a href="https://maps.app.goo.gl/SizinHaritaLinkiniz" target="_blank" class="map-link-container" title="Google Haritalar'da Aç">
+          <img src="images/map-preview.webp" alt="Uzm. Dr. İsmail BUÇGÜN Klinik Konumu" class="static-map-img">
+          <div class="map-overlay">
+            <span class="map-btn">📍 Haritalarda Aç</span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+    
     <span itemprop="medicalSpecialty" style="display:none;">Psikiyatri</span>
   </div>
 </section>

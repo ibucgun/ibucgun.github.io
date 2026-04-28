@@ -460,32 +460,33 @@
 }
 
 
-// Açılır Kapanır Eğitim Maddeleri (h4 detay satırı kapalıyken görünür)
+/* --- AÇILIR KAPANIR EĞİTİM MADDELERİ (Anayasa Uyumlu) --- */
 .resume-item-collapsible {
   border-bottom: 1px solid #e2e8f0 !important;
   transition: all 0.3s ease;
+  position: relative;
 
   &:last-child { border-bottom: none !important; }
 
-  // Tıklanan Başlık Alanı
+  /* Tıklanan Başlık Alanı */
   .resume-item-summary {
     padding: 1rem 0 !important;
     display: flex !important;
     justify-content: space-between !important;
-    align-items: center !important; // İkonu dikeyde ortalar
+    align-items: center !important; 
     cursor: pointer !important;
     list-style: none !important;
     outline: none !important;
 
     &::-webkit-details-marker { display: none !important; }
 
-    // Yazı Grubu (Başlık + Alt Detay)
+    /* Yazı Grubu */
     .summary-content-wrapper {
       display: flex;
       flex-direction: column;
-      gap: 4px; // Üniversite bölümündeki o ideal boşluk
+      gap: 4px;
       flex: 1;
-      padding-right: 20px;
+      padding-right: 15px; // İkonla mesafe
     }
 
     .resume-item-title {
@@ -495,76 +496,68 @@
       margin: 0 !important;
       line-height: 1.2 !important;
 
-      a { 
-        color: inherit !important; 
-        text-decoration: none !important;
-        border: none !important;
-      }
+      a { color: inherit !important; text-decoration: none !important; border: none !important; }
     }
 
-    // Rol ve Tarih (summary içinde olduğu için artık her zaman görünür)
     .resume-item-details {
       @include sans_bold;
       color: #4d41e0 !important;
       font-size: 1.05rem !important;
       margin: 0 !important;
       line-height: 1.2 !important;
-      text-transform: none !important; // Büyük harf iptal
+      text-transform: none !important;
       display: block !important;
     }
 
-    // Sağdaki Artı/Eksi İkonu
+    /* Sağdaki Artı/Eksi İkonu */
     .collapse-icon {
       position: relative;
-      width: 20px;
-      height: 20px;
-      min-width: 20px;
+      width: 18px;
+      height: 18px;
+      min-width: 18px;
 
       &::before, &::after {
         content: "";
         position: absolute;
         background-color: #4d41e0;
-        transition: transform 0.3s ease;
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       }
       
       &::before {
-        width: 100%;
-        height: 2px;
-        top: 50%;
-        left: 0;
+        width: 100%; height: 2px;
+        top: 50%; left: 0;
         transform: translateY(-50%);
       }
       
       &::after {
-        width: 2px;
-        height: 100%;
-        left: 50%;
-        top: 0;
+        width: 2px; height: 100%;
+        left: 50%; top: 0;
         transform: translateX(-50%);
       }
     }
   }
 
-  // Açık olduğunda dikey çizgiyi gizle (eksi yap)
-  &[open] .collapse-icon::after {
-    transform: translateX(-50%) rotate(90deg);
-    opacity: 0;
-  }
-  
+  /* Açık Durum Ayarları */
   &[open] {
-    background-color: rgba(77, 65, 224, 0.02); // Açıldığında çok hafif vurgu
-    margin-left: -1rem;
-    margin-right: -1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    background-color: rgba(77, 65, 224, 0.03); 
+    margin-left: -2rem; // Kartın iç padding'ini dengelemek için (Anayasa paddingi 2rem idi)
+    margin-right: -2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    .collapse-icon::after {
+      transform: translateX(-50%) rotate(90deg);
+      opacity: 0;
+    }
   }
 
-  // Gizlenen İçerik Alanı (Sadece Copy/Açıklama)
+  /* Gizlenen İçerik */
   .collapsible-body {
     padding-bottom: 1.2rem !important;
     animation: slideDown 0.3s ease-out;
 
     .resume-item-copy {
+      @include sans_regular;
       font-size: 1.1rem !important;
       line-height: 1.6 !important;
       color: #4a5568 !important;
@@ -573,11 +566,49 @@
   }
 }
 
-// Açılış animasyonu
+/* --- MOBİL UYUM AYARLARI --- */
+@include media_mobile {
+  .resume-item-collapsible {
+    
+    .resume-item-summary {
+      padding: 0.85rem 0 !important;
+
+      .resume-item-title {
+        font-size: 1.15rem !important; // Mobilde başlık biraz küçülür
+      }
+
+      .resume-item-details {
+        font-size: 0.95rem !important; // Mobilde detay satırı küçülür
+      }
+
+      .collapse-icon {
+        width: 16px; height: 16px; min-width: 16px;
+      }
+    }
+
+    &[open] {
+      margin-left: -1.2rem; // Mobil kart padding'i (Anayasada 1.2rem idi) ile eşitledik
+      margin-right: -1.2rem;
+      padding-left: 1.2rem;
+      padding-right: 1.2rem;
+    }
+
+    .collapsible-body {
+      .resume-item-copy {
+        font-size: 1rem !important; // Mobilde okuma fontu
+      }
+    }
+  }
+}
+
+/* Animasyon */
 @keyframes slideDown {
-  from { opacity: 0; transform: translateY(-10px); }
+  from { opacity: 0; transform: translateY(-8px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+
+
 
 /* --- MODERN HERO LAYOUT --- */
 .modern-hero-layout {
@@ -777,66 +808,86 @@
 }
 
 
-/* --- MODERN İLETİŞİM KARTI (Section Card Entegrasyonu) --- */
-.modern-section-card {
-  
-  // İçerikteki iki sütunlu yapı
+/* --- MODERN İLETİŞİM KARTI --- */
+.modern-contact-card {
+  background: #ffffff;
+  border: 2px solid #f0f2f5;
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+  margin-top: 2rem;
+
   .contact-flex-container {
     display: flex;
     gap: 3rem;
-    align-items: flex-start;
-    padding-top: 0.5rem;
+    align-items: center;
   }
 
+  /* Bilgi Tarafı */
   .contact-details-side {
-    flex: 1.2;
+    flex: 1;
 
-    .detail-label {
-      display: block;
-      font-size: 0.75rem;
-      color: #a0aec0;
-      letter-spacing: 1px;
-      font-weight: 800;
-      margin-bottom: 5px;
+    .contact-intro {
+      font-size: 1.1rem;
+      color: #718096;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+      strong { color: #4d41e0; }
     }
 
-    .phone-link {
-      @include sans_bold;
-      font-size: 1.3rem !important;
-      color: #1a202c !important;
-      text-decoration: none;
-      &:hover { color: #4d41e0 !important; }
+    .clinic-brand {
+      margin-bottom: 2rem;
+      h3 { font-size: 1.5rem; color: #1a202c; margin-bottom: 5px; }
+      .clinic-subtitle { color: #4d41e0; font-weight: 600; font-size: 0.95rem; }
+    }
+
+    .contact-list {
+      margin-bottom: 2rem;
+      .contact-item {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 15px;
+        font-size: 1.05rem;
+        color: #4a5568;
+        line-height: 1.5;
+        
+        .contact-icon { font-size: 1.2rem; }
+        .phone-link { 
+          color: #1a202c; 
+          font-weight: 700; 
+          text-decoration: none;
+          &:hover { color: #4d41e0; }
+        }
+      }
     }
 
     .btn-outlined-contact {
       display: inline-block;
-      margin-top: 1.5rem;
-      padding: 10px 20px;
-      border: 1px solid #edf2f7;
-      border-radius: 10px;
+      padding: 12px 25px;
+      border: 2px solid #edf2f7;
+      border-radius: 12px;
       color: #4a5568;
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.9rem;
-      transition: all 0.3s;
+      transition: all 0.3s ease;
       &:hover { border-color: #4d41e0; color: #4d41e0; background: #f0ebff; }
     }
   }
 
+  /* Harita Görseli Tarafı */
   .contact-map-side {
-    flex: 0.8;
+    flex: 1;
     
     .map-link-container {
       position: relative;
       display: block;
-      border-radius: 16px;
+      border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-      border: 1px solid rgba(77, 65, 224, 0.1);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.05);
       
       .static-map-img {
         width: 100%;
-        height: 280px;
+        height: 300px;
         object-fit: cover;
         display: block;
         transition: transform 0.5s ease;
@@ -855,10 +906,9 @@
         .map-btn {
           background: #ffffff;
           color: #1a202c;
-          padding: 10px 18px;
+          padding: 12px 20px;
           border-radius: 50px;
           font-weight: 700;
-          font-size: 0.85rem;
           box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
       }
@@ -871,15 +921,12 @@
   }
 }
 
-/* MOBİL UYUM (Anayasa ile uyumlu) */
+/* MOBİL UYUM */
 @include media_mobile {
-  .contact-flex-container {
-    flex-direction: column !important;
-    gap: 2rem !important;
-    
-    .contact-map-side {
-      width: 100%;
-      .static-map-img { height: 200px !important; }
-    }
+  .modern-contact-card {
+    padding: 2rem;
+    .contact-flex-container { flex-direction: column; text-align: center; }
+    .contact-item { justify-content: center; text-align: center; }
+    .contact-map-side .static-map-img { height: 200px; }
   }
 }
