@@ -49,13 +49,14 @@
 	  </header>
 	  
 {% if site.resume_section_egitim %}
-<section id="egitim" class="content-section section-card"> <header class="section-header">
+<section id="egitim" class="modern-section-card"> <header class="section-header">
     <h2>Akademik Eğitim</h2>
   </header>
 
-  <div class="section-body"> {% for egitim in site.data.egitim %}
+  <div class="section-content">
+    {% for egitim in site.data.egitim %}
     <div class="resume-item">
-      <h3 class="resume-item-title" itemprop="name">{{ egitim.uni }}</h3>
+      <h3 class="resume-item-title">{{ egitim.uni }}</h3>
       <h4 class="resume-item-details">{{ egitim.derece }} &bull; {{ egitim.yil }}</h4>
       <p class="resume-item-copy">{{ egitim.ozet }}</p>
     </div>
@@ -64,7 +65,6 @@
 
 </section>
 {% endif %}
-	  
 	  
 
       {% if site.resume_section_calistigikurumlar %}

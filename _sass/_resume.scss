@@ -402,52 +402,52 @@
 
 
 
-// Yeni eklediğimiz section-card sınıfına stili veriyoruz
-.content-section.section-card {
-  @include modern_card;
+// Yeni modern kart yapımız
+.modern-section-card {
+  @include clean_card;
 
+  // Başlıktaki o "saçma" çizgileri burada öldürüyoruz
   .section-header {
-    margin-bottom: 3rem;
-    text-align: left;
+    border: none !important;      // Üst-alt tüm çizgileri sildik
+    background: transparent !important;
+    padding: 0 !important;
+    margin-bottom: 2rem;
+    box-shadow: none !important;
 
     h2 {
-      @include sans_bold; // 900 yerine 700-800 daha zarif durur
+      @include sans_bold;
       font-size: 1.6rem;
       color: #1a202c;
-      position: relative;
-      
-      // Başlığın soluna küçük bir nokta veya ince dikey bir çizgi
-      &::before {
-        content: "";
-        display: inline-block;
-        width: 8px;
-        height: 8px;
-        background: #4d41e0;
-        border-radius: 50%;
-        margin-right: 12px;
-        vertical-align: middle;
-      }
+      margin: 0;
+      padding-left: 15px;
+      border-left: 4px solid #4d41e0; // Sadece solda zarif bir dikey çizgi
+      line-height: 1.2;
     }
   }
 
+  // İçerik maddeleri
   .resume-item {
-    padding-bottom: 2rem;
-    border-bottom: 1px dashed #f0f0f5; // Maddeler arasına çok ince kesik çizgi
-    
-    &:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
+    margin-bottom: 2rem;
+    &:last-child { margin-bottom: 0; }
 
     .resume-item-title {
+      @include sans_bold;
       font-size: 1.2rem;
       color: #2d3748;
+      margin-bottom: 0.3rem;
     }
 
     .resume-item-details {
-      font-size: 0.9rem;
-      color: #718096; // Detayları biraz grileştirerek hiyerarşi sağlıyoruz
-      font-weight: 500;
+      color: #4d41e0; // Marka renginiz
+      font-size: 0.95rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .resume-item-copy {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #4a5568;
+      text-align: left !important; // Justify (iki yana yasla) karmaşasından kurtulduk
     }
   }
 }
