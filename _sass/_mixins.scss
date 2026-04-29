@@ -51,7 +51,7 @@
 // type utilities
 
 @mixin sans {
-  font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
 }
 
 @mixin sans_light {
@@ -77,13 +77,13 @@
   @include sans;
   // Eğer 800 çok boğuyorsa 700'e (Bold) çekebilirsin, 
   // ama 800 kalacaksa arayı biraz daha açmalıyız.
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: -0.01em; // Extrabold başlıklar genelde hafif dar olunca daha premium durur
   line-height: 1.2; // Başlık olduğu için satır arası çok açık olmamalı
 }
 
 @mixin serif {
-  font-family: "Poppins", "Minion Pro", Palatino, Georgia, serif;
+  font-family: "Poppins", Palatino, Georgia, serif;
 }
 
 @mixin serif_regular {
