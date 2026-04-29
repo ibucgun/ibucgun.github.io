@@ -780,7 +780,7 @@
       }
     }
 
-    .hero-avatar { display: none !important; }
+    .hero-avatar { width: 100% !important; max-width: 400px; }
   }
 }
 
