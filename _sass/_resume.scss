@@ -632,7 +632,7 @@
       @include sans_regular;
       font-size: 1.1rem;
       line-height: 1.7;
-      color: #718096;
+      color: $text_color;
       text-align: justify;
       margin-bottom: 2.5rem;
       max-width: 550px;
@@ -806,7 +806,7 @@
 
     .contact-intro {
       font-size: 1.1rem;
-      color: #718096;
+      color: $text_color;
       line-height: 1.6;
       margin-bottom: 2rem;
       strong { color: #4d41e0; }
