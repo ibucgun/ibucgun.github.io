@@ -437,6 +437,133 @@
   }
 }
 
+// TMS ve Çalışma Alanları Section
+.section-intro-text {
+  @include sans_regular;
+  font-size: 1.1rem;
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  padding-left: 15px;
+  border-left: 3px solid #f0ebff;
+}
+
+.practice-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  // Öne Çıkan Yatay Kart
+  .practice-box-featured {
+    display: flex;
+    background: #ffffff;
+    border: 1px solid rgba(77, 65, 224, 0.12);
+    border-radius: 20px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    .featured-img-side {
+      flex: 1;
+      background-size: cover;
+      background-position: center;
+      min-height: 250px;
+    }
+
+    .featured-text-side {
+      flex: 1.2;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .badge-blue {
+        background: #f4f3ff;
+        color: #4d41e0;
+        font-weight: 700;
+        font-size: 0.75rem;
+        padding: 6px 14px;
+        border-radius: 50px;
+        margin-bottom: 10px;
+        display: inline-block;
+        width: fit-content;
+      }
+
+      .box-title-large {
+        @include sans_extrabold;
+        font-size: 1.6rem;
+        color: $text_color;
+        margin-bottom: 8px;
+      }
+
+      .box-copy {
+        @include sans_regular;
+        font-size: 1rem;
+        color: #4a5568;
+        margin-bottom: 15px;
+      }
+
+      .detail-link-text {
+        font-weight: 700;
+        color: #4d41e0;
+        font-size: 0.9rem;
+      }
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(77, 65, 224, 0.08);
+    }
+  }
+
+  // Alt Grid
+  .practice-grid-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+
+    .practice-box-small {
+      background: #fcfdff;
+      border: 1px solid rgba(0, 0, 0, 0.03);
+      padding: 20px;
+      border-radius: 15px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+
+      .small-box-title {
+        @include sans_bold;
+        font-size: 1.15rem;
+        color: $text_color;
+        margin-bottom: 5px;
+      }
+
+      .small-box-copy {
+        @include sans_regular;
+        font-size: 0.95rem;
+        color: #718096;
+        line-height: 1.4;
+      }
+
+      &:hover {
+        border-color: #4d41e0;
+        background: #fff;
+      }
+    }
+  }
+}
+
+// Mobil Düzenleme
+@include media_mobile {
+  .practice-box-featured {
+    flex-direction: column !important;
+    .featured-img-side { height: 180px; min-height: 180px; }
+    .featured-text-side { padding: 20px; }
+  }
+  .practice-grid-bottom {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 
 /* --- AÇILIR KAPANIR EĞİTİM MADDELERİ (Anayasa Uyumlu) --- */
 .resume-item-collapsible {
