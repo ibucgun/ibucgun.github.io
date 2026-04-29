@@ -67,8 +67,6 @@
 @mixin sans_bold {
   @include sans;
   font-weight: 600;
-  // Bold için 0.05em bazen çok dağınık durabilir, 
-  // modern bir dokunuş için hafifçe daraltıp line-height ekleyelim.
   letter-spacing: 0.01em; 
   line-height: 1.4; // Dikeyde nefes alması için
 }
