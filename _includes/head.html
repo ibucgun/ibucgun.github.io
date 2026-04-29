@@ -57,16 +57,39 @@
   <meta name="twitter:creator" content="@drismailbucgun">
 
   
-  <!-- Google tag (gtag.js) -->
-  <!-- Google tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38847744-3">
-  </script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<script>
+  (function () {
+    var gaLoaded = false;
 
-  gtag('config', 'UA-38847744-3');
-  </script>
+    function loadGA() {
+      if (gaLoaded) return;
+      gaLoaded = true;
+
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
+      document.head.appendChild(script);
+
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () {
+        dataLayer.push(arguments);
+      };
+
+      gtag('js', new Date());
+      gtag('config', 'G-62LZJT42N1');
+    }
+
+    window.addEventListener('load', function () {
+      setTimeout(loadGA, 2500);
+    });
+
+    ['scroll', 'click', 'touchstart', 'keydown'].forEach(function (eventName) {
+      window.addEventListener(eventName, loadGA, {
+        once: true,
+        passive: true
+      });
+    });
+  })();
+</script>
   
 </head>
