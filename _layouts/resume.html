@@ -80,7 +80,7 @@ Kliniğimde genel psikiyatrik değerlendirme, tanı ve tedavi hizmeti sunmakla b
       <div class="featured-text-side">
         <span class="badge-blue">Beyin Uyarım Tedavileri</span>
         <h3 class="box-title-large">TMS ve Derin TMS Tedavileri</h3>
-        <p class="box-copy">TMS ve derin TMS, <b>tedaviye dirençli hastalarda</b> psikiyatrik tedavi planının bir parçası olabilen, girişimsel olmayan, <b>FDA onaylı</b> beyin uyarım yöntemleridir.</p>
+        <p class="box-copy">TMS ve derin TMS, <b>tedaviye dirençli hastalarda</b> psikiyatrik tedavi planının bir parçası olabilen, girişimsel olmayan, <b>FDA onaylı</b> beyin uyarım tedavi yöntemleridir.</p>
         <span class="detail-link-text">Detaylı Bilgi &rarr;</span>
       </div>
     </a>
@@ -154,7 +154,7 @@ Kliniğimde genel psikiyatrik değerlendirme, tanı ve tedavi hizmeti sunmakla b
 
   <div class="section-content">
     {% for egitim in site.data.egitim %}
-    <div class="resume-item">
+    <div class="resume-item" itemprop="alumniOf" itemscope itemtype="https://schema.org/EducationalOrganization">
       <h3 class="resume-item-title">{{ egitim.uni }}</h3>
       <h4 class="resume-item-details">{{ egitim.derece }} &bull; {{ egitim.yil }}</h4>
       <p class="resume-item-copy">{{ egitim.ozet }}</p>
