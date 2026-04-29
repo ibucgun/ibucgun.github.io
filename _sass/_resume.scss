@@ -441,7 +441,7 @@
 .section-intro-text {
   @include sans_regular;
   font-size: 1.1rem;
-  color: #4a5568;
+  color: $text-color;
   line-height: 1.6;
   margin-bottom: 2rem;
   padding-left: 15px;
@@ -499,7 +499,7 @@
       .box-copy {
         @include sans_regular;
         font-size: 1rem;
-        color: #4a5568;
+        color: $text-color;
         margin-bottom: 15px;
       }
 
@@ -540,7 +540,7 @@
       .small-box-copy {
         @include sans_regular;
         font-size: 0.95rem;
-        color: #718096;
+        color: $text-color;
         line-height: 1.4;
       }
 
