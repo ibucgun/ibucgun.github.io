@@ -12,7 +12,51 @@
 	   {% include navigation.html %}
 
 
+<header class="page-header modern-hero-layout" itemscope itemtype="http://schema.org/Person">
+  <div class="hero-flex-container">
+    
+    <div class="hero-text-side">
+      <h1 class="header-name" itemprop="name">{{ site.resume_name }}</h1>
+      
+      <div class="hero-title-wrapper">
+        <h2 class="header-title">{{ site.resume_title }}</h2>
+      </div>
 
+      <div class="executive-summary" itemprop="description">
+        <p>{{ site.resume_header_intro }}</p>
+      </div>
+
+     <div class="hero-action-btns no-print">
+  
+  <a href="tel:+905510334896" class="btn-primary btn-double-line" itemprop="telephone" title="Hemen Ara">
+    <span class="btn-main-text">Randevu Al</span>
+    <span class="btn-sub-text">0551 033 48 96</span>
+  </a>
+
+  <a href="https://wa.me/905510334896" class="btn-whatsapp" title="Whatsapp Mesajı Gönder">
+    <span>WhatsApp</span>
+  </a>
+
+  <a href="https://instagram.com/dr.ismailbucgun" target="_blank" class="btn-instagram" title="İnstagram'da Takip Edin">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+    </svg>
+  </a>
+</div>
+    </div>
+
+    <div class="hero-image-side no-print">
+      {% if site.resume_avatar == 'true' %}
+      <div class="avatar-glow-wrapper">
+
+        <img src="images/avatar.webp" width="400" height="400" alt="Uzm. Dr. İsmail BUÇGÜN" class="hero-avatar" itemprop="image" fetchpriority="high" loading="eager">
+
+      </div>
+      {% endif %}
+    </div>
+
+  </div>
+</header>
 
 	  
 {% if site.resume_section_egitim %}
