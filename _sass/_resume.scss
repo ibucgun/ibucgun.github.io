@@ -168,7 +168,7 @@
     color: #333333;
 
     > a {
-      font-weight: 700;
+      font-weight: 600;
       color: #333333;
     }
   }
@@ -611,7 +611,7 @@
     align-items: flex-start; // İsim ve ünvanın sola "ip gibi" hizalanması için
 
     .header-name {
-      @include sans_bold; // Poppins 700
+      @include sans_bold;
       font-size: 3.1rem;
       color: #1a202c;
       margin: 0 0 0.5rem 0 !important;
@@ -621,12 +621,11 @@
     }
 
     .header-title {
-      @include sans_regular;
+      @include sans_bold;
       font-size: 1.25rem;
       color: #4a5568;
       margin: 0 0 1.5rem 0 !important;
       padding-left: 0 !important;
-      font-weight: 600;
     }
 
     .executive-summary p {
@@ -664,7 +663,7 @@
       line-height: 1.2;
 
       .btn-main-text {
-        font-weight: 700;
+        font-weight: 600;
         font-size: 1.1rem;
         display: block;
       }
@@ -688,7 +687,7 @@
       padding: 0 32px;
       border-radius: 50px;
       text-decoration: none;
-      font-weight: 700;
+      font-weight: 600;
       transition: all 0.3s ease;
       &:hover { transform: translateY(-3px); opacity: 0.9; }
     }
@@ -832,7 +831,7 @@
         .contact-icon { font-size: 1.2rem; }
         .phone-link { 
           color: #1a202c; 
-          font-weight: 700; 
+          font-weight: 600; 
           text-decoration: none;
           &:hover { color: #4d41e0; }
         }
@@ -886,7 +885,7 @@
           color: #1a202c;
           padding: 12px 20px;
           border-radius: 50px;
-          font-weight: 700;
+          font-weight: 600;
           box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
       }

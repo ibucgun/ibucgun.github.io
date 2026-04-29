@@ -75,7 +75,7 @@
   @include sans;
   // Eğer 800 çok boğuyorsa 700'e (Bold) çekebilirsin, 
   // ama 800 kalacaksa arayı biraz daha açmalıyız.
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: -0.01em; // Extrabold başlıklar genelde hafif dar olunca daha premium durur
   line-height: 1.2; // Başlık olduğu için satır arası çok açık olmamalı
 }
@@ -91,7 +91,7 @@
 
 @mixin serif_bold {
   @include serif;
-  font-weight: 700;
+  font-weight: 600;
   // Serif fontlarda harfler kalınlaştıkça birbirine çok değer. 
   // 0.02em - 0.03em arası bir değer sıkışıklığı çözer.
   letter-spacing: 0.02em; 
