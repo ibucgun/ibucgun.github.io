@@ -1,15 +1,9 @@
 <div class="nav-menu-wrapper">
-  <!-- Ünvanı ismin önüne ekleyerek profesyonel hiyerarşiyi koruyoruz -->
-  <div class="nav-header-name">Uzm. Dr. İsmail BUÇGÜN</div>
-  <a class="nav-menu-link" href="#menu" title="Menü">
-    <!-- Menü ikonunuzun rengini SCSS'den indigo yapabilirsiniz -->
-    {% include icons/menu.html %}
-  </a>
+  <div class="nav-header-name">{{ site.resume_name }}</div>
+  <a class="nav-menu-link" href="#menu" title="Menü" alt="Menü">{% include icons/menu.html %}</a>
 </div>
-
 <div id="menu" class="nav-overlay">
-  <!-- Kapatma butonu -->
-  <a class="nav-overlay-close" href="#menukapat" title="Menüyü Kapat"></a>
+  <a class="nav-overlay-close" href="#menukapat" title="Menüyü Kapat" alt="Menüyü Kapat"></a>
   <div class="nav-overlay-content">
     {% include navigation-lib/links.html %}
   </div>
