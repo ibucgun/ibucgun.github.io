@@ -88,6 +88,7 @@
     margin-bottom: 1rem;
     h2 { font-size: 1.2rem; line-height: 1.5rem; }
   }
+  
   .content-section {
     margin: 0 0 1rem;
 
@@ -1000,5 +1001,73 @@
   strong {
     color: #1a202c;
     font-weight: 700;
+  }
+}
+
+
+/* =============================================================================
+   MODERN İÇERİK Stilleri
+   ============================================================================= */
+.content-section {
+  h2 {
+    @include sans_bold;
+    font-size: 1.85rem !important;
+    color: #1a202c !important;
+    margin: 3.5rem 0 1.5rem !important;
+    display: flex; align-items: center; gap: 15px;
+    border: none !important;
+    &::before {
+      content: ""; width: 6px; height: 1.8rem;
+      background: #4d41e0; border-radius: 4px;
+    }
+  }
+
+  h3 {
+    @include sans_bold;
+    font-size: 1.4rem !important;
+    color: #4d41e0 !important;
+    margin: 2.5rem 0 1rem !important;
+  }
+
+  p {
+    font-size: 1.18rem !important;
+    line-height: 1.95 !important;
+    text-align: justify;
+    margin-bottom: 2rem;
+  }
+
+  /* --- DİKEY ORTALANMIŞ KUTULAR --- */
+  .callout {
+    display: flex; gap: 20px;
+    padding: 20px 28px; border-radius: 18px;
+    margin: 2.5rem 0; align-items: center; // Dikey Ortalama
+    border: 1px solid transparent;
+
+    .callout-icon {
+      flex-shrink: 0; width: 32px; height: 32px;
+      display: flex; align-items: center;
+      svg { width: 100%; height: 100%; display: block; stroke-width: 2.5; }
+    }
+    .callout-content { flex: 1; }
+    .callout-label {
+      display: block; font-weight: 800; text-transform: uppercase;
+      font-size: 0.85rem; letter-spacing: 0.05em; margin-bottom: 2px;
+    }
+    .callout-text { font-size: 1.1rem; color: #1a202c; margin: 0 !important; text-align: left !important; }
+  }
+
+  .callout-info {
+    background-color: #f0ebff; border: 1px solid rgba(77, 65, 224, 0.2);
+    .callout-label, svg { color: #4d41e0; stroke: #4d41e0; }
+  }
+
+  .callout-medical {
+    background-color: #fff5f5; border: 1px solid #feb2b2;
+    .callout-label, svg { color: #c53030; stroke: #c53030; }
+  }
+
+  .callout-warning {
+    background-color: #fffbeb; border: 1px solid #fcd34d;
+    .callout-label, svg { color: #92400e; stroke: #92400e; }
   }
 }
