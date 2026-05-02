@@ -1035,62 +1035,65 @@
 
 
 
-// --- TÜM SAYFALAR İÇİN MODERN GENİŞ KART ---
-// -------------------------------------------/
+/* --- MODERN GENİŞ SAYFA KARTI (NİHAİ TASARIM) --- */
 
 .page-main-content {
-  padding: 40px 0; // Üst ve alttan ferahlık
-  background: #ffffff; // Arkaplan rengini beyaz yaptık
+  padding: 40px 0; // Navigasyon ve kart arası mesafe
+  background: transparent;
 }
 
 .modern-page-card {
-  // Anasayfadaki modern-section-card ile aynı stil
   background: #ffffff !important;
-  border: 1px solid rgba(77, 65, 224, 0.12) !important; // Indigo çerçeve
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important; // Yumuşak gölge
+  
+  // KENAR ÇİZGİLERİ: 2px kalınlık ve belirgin indigo tonu
+  border: 2px solid rgba(77, 65, 224, 0.3) !important;
+  
+  // GÖLGE: Çerçeveyi destekleyen hafif derinlik
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05) !important;
+  
   border-radius: 20px !important;
   
-  padding: 60px 80px !important; // Daha büyük ve geniş kutu
-  max-width: 1000px; // Kutu boyutunu büyüttük
+  // HİZALAMA: Menüdeki metinlerle (1080px wrapper içi) tam dikey hizada
+  width: 100% !important;
   margin: 0 auto !important;
+  padding: 70px 80px !important; // Geniş ve ferah iç boşluk
 
   @include media_mobile {
-    padding: 30px 20px !important;
+    padding: 40px 20px !important;
     border-radius: 0 !important;
-    border: none !important;
+    border: none !important; // Mobilde ekranı tam kaplaması için çizgiyi kaldırıyoruz
     box-shadow: none !important;
   }
 
-  // BAŞLIK ALANI VE ÇİZGİ
   .page-header {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     padding: 0 !important;
 
     .header-title {
       @include sans_bold;
-      font-size: 2.8rem !important; // Güçlü başlık
+      font-size: 2.8rem !important;
       color: #1a202c !important;
-      margin-bottom: 15px !important;
+      margin-bottom: 20px !important;
       letter-spacing: -0.04em !important;
     }
 
-    // Ekran görüntüsündeki o belirgin indigo çizgi
+    // BAŞLIK ALTI ÇİZGİSİ: Daha geniş ve daha kalın (Vurgulu)
     .header-accent-line {
-      width: 60px;
-      height: 5px;
-      background: #4d41e0; // Anasayfadaki marka rengi
+      width: 120px; // Çizgi boyu uzatıldı
+      height: 7px;  // Çizgi kalınlığı artırıldı
+      background: #4d41e0; // Marka indigo renginiz
       margin: 0 auto;
       border-radius: 10px;
     }
   }
 }
 
-// Metin Okunabilirliği
+// Kart içi metinlerin profesyonel yerleşimi
 .resume-item-copy {
   @include sans_regular;
-  font-size: 1.18rem !important; // Okumayı kolaylaştıran font boyutu
-  line-height: 1.9 !important; // Ferah satır aralığı
+  font-size: 1.18rem !important;
+  line-height: 1.95 !important;
   color: #4a5568 !important;
   text-align: justify; // Profesyonel yaslama
 

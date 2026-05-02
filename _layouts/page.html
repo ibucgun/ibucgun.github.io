@@ -2,18 +2,18 @@
 <html lang="tr">
   {% include head.html %}
   <body class="theme-{% if site.resume_theme %}{{ site.resume_theme }}{% endif %}">
-    <!-- Ana Wrapper Genişliği (1080px) İçinde -->
+    
     <div class="wrapper" itemscope itemtype="http://schema.org/Person">
       {% include navigation.html %}
 
+      <!-- Sayfa Ana İçerik Alanı -->
       <main class="page-main-content">
-        <!-- Anasayfadaki Modern Card Yapısı -->
         <article class="modern-page-card no-print">
           
           <header class="page-header">
             <div class="title-bar">
               <h1 class="header-title" itemprop="name">{{ page.title }}</h1>
-              <!-- Başlık Altındaki Belirgin Indigo Çizgi -->
+              <!-- Belirginleştirilmiş ve kalınlaştırılmış Indigo çizgi -->
               <div class="header-accent-line"></div>
             </div>
           </header>
@@ -31,5 +31,6 @@
 
       {% include footer.html %}
     </div>
+
   </body>
 </html>
