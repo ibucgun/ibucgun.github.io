@@ -1,16 +1,16 @@
 {% if site.show_navigation %}
 <header class="nav-wrapper no-print">
-  <nav class="nav-container">
-    <!-- Logo Alanı -->
+  <nav class="nav-container" aria-label="Ana Navigasyon">
+    <!-- SOL: Logo -->
     <a href="/" class="nav-logo-link">Uzm. Dr. İsmail BUÇGÜN</a>
     
-    <!-- Masaüstü Grubu -->
-    <div class="nav-desktop-wrapper">
+    <!-- SAĞ: Masaüstü Grubu (Mobilde gizlenir ve ekran okuyucuya kapatılır) -->
+    <div class="nav-desktop-wrapper" aria-hidden="false">
       {% include navigation-lib/links.html %}
     </div>
 
-    <!-- Mobil Grubu -->
-    <div class="nav-mobile-wrapper">
+    <!-- MOBİL: Hamburger Grubu (Masaüstünde gizlenir ve ekran okuyucuya kapatılır) -->
+    <div class="nav-mobile-wrapper" aria-hidden="true">
       {% include navigation-lib/mobile-menu.html %}
     </div>
   </nav>
