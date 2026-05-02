@@ -1,7 +1,10 @@
 $nav-height: 4.5rem;
 $brand-indigo: #4d41e0;
 
-.nav-buffer { height: $nav-height; display: block; }
+.nav-buffer {
+  height: $nav-height;
+  display: block;
+}
 
 header.nav-wrapper {
   width: 100% !important;
@@ -15,16 +18,20 @@ header.nav-wrapper {
 
   .nav-container {
     height: $nav-height !important;
-    max-width: 1080px; // base.scss'deki wrapper genişliğin
+    max-width: 1080px;
     margin: 0 auto !important;
-    padding: 0 24px !important; // base.scss'deki padding
+    padding: 0 24px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
-    text-align: left !important; // Ortalamayı zorla sola kırar
+    text-align: left !important;
+    position: relative;
 
-    // Clearfix (display:table) çakışmasını engellemek için
-    &::before, &::after { display: none !important; content: none !important; }
+    &::before,
+    &::after {
+      display: none !important;
+      content: none !important;
+    }
 
     @include media_mobile {
       padding: 0 20px !important;
@@ -41,30 +48,38 @@ header.nav-wrapper {
   display: flex !important;
   align-items: center !important;
   margin: 0 !important;
-  margin-right: auto !important; // MASAÜSTÜNDE HER ŞEYİ SAĞA İTER, KENDİ SOLDA KALIR
+  margin-right: auto !important;
   padding: 0 !important;
   white-space: nowrap;
 
   @include media_mobile {
     font-size: 1.1rem;
-    margin-right: 0 !important; // Mobilde standart flex dağılımına döner
+    margin-right: 0 !important;
   }
 }
 
-.nav-desktop-wrapper {
-  display: flex !important;
-  align-items: center !important;
-  @include media_mobile { display: none !important; }
+/* Checkbox görünmez ama çalışır */
+.nav-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
 }
 
-.nav-mobile-wrapper {
-  display: none !important;
-  @include media_mobile { 
-    display: flex !important;
-    align-items: center !important;
+/* Hamburger buton */
+.nav-menu-button {
+  display: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 10001;
+
+  @include media_mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
+/* Masaüstü menü */
 ul.nav-ul {
   list-style: none !important;
   margin: 0 !important;
@@ -72,11 +87,6 @@ ul.nav-ul {
   display: flex !important;
   align-items: center !important;
   gap: 12px;
-
-  @include media_mobile {
-    flex-direction: column !important;
-    gap: 15px !important;
-  }
 
   li {
     margin: 0 !important;
@@ -93,7 +103,9 @@ ul.nav-ul {
       line-height: 1 !important;
       transition: 0.3s;
 
-      &:hover { color: $brand-indigo; }
+      &:hover {
+        color: $brand-indigo;
+      }
 
       &.nav-cta {
         background: $brand-indigo;
@@ -107,47 +119,44 @@ ul.nav-ul {
   }
 }
 
-// MOBİL MENÜ KATMANI (OVERLAY)
-div.nav-overlay {
-  @include media_mobile {
+/* Mobil görünüm */
+@include media_mobile {
+  ul.nav-ul {
     position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
     z-index: 9999;
     background: #ffffff;
-    display: flex;
+
+    display: flex !important;
+    flex-direction: column !important;
     justify-content: center;
     align-items: center;
-    visibility: hidden;
+    gap: 18px !important;
+
     opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
     transition: 0.3s;
-
-    &:target { visibility: visible; opacity: 1; }
-
-    .nav-overlay-content .nav-ul li a { 
-      font-size: 1.4rem; 
-      font-weight: 600; 
-      color: $text_color !important; // Genel linkler siyah
-
-      // BURASI DÜZELTME: Randevu butonunun mobilde beyaz olmasını sağlar
-      &.nav-cta {
-        color: #ffffff !important; 
-        background-color: $brand-indigo;
-        padding: 12px 30px;
-      }
-    }
   }
-}
 
-// KAPATMA BUTONU
-a.nav-overlay-close {
-  @include media_mobile {
-    position: absolute; top: 25px; right: 25px;
-    width: 30px; height: 30px;
-    &::before, &::after {
-      content: ""; position: absolute; top: 15px; left: 0;
-      width: 30px; height: 2px; background: $brand-indigo;
+  .nav-toggle:checked ~ ul.nav-ul {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  ul.nav-ul li a {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: $text_color !important;
+
+    &.nav-cta {
+      color: #ffffff !important;
+      background-color: $brand-indigo;
+      padding: 12px 30px;
     }
-    &::before { transform: rotate(45deg); }
-    &::after { transform: rotate(-45deg); }
   }
 }

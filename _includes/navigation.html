@@ -1,18 +1,23 @@
 {% if site.show_navigation %}
 <header class="nav-wrapper no-print">
-  <nav class="nav-container" aria-label="Ana Navigasyon">
-    <!-- SOL: Logo -->
-    <a href="/" class="nav-logo-link">Uzm. Dr. İsmail BUÇGÜN</a>
-    
-    <!-- SAĞ: Masaüstü Grubu -->
-    <div class="nav-desktop-wrapper">
-      {% include navigation-lib/links.html %}
-    </div>
+  <nav class="nav-container" aria-label="Ana navigasyon">
 
-    <!-- MOBİL: Hamburger Grubu -->
-    <div class="nav-mobile-wrapper">
-      {% include navigation-lib/mobile-menu.html %}
-    </div>
+    <a href="/" class="nav-logo-link">Uzm. Dr. İsmail BUÇGÜN</a>
+
+    <input 
+      type="checkbox" 
+      id="nav-toggle" 
+      class="nav-toggle" 
+      aria-label="Mobil menüyü aç veya kapat">
+
+    <label for="nav-toggle" class="nav-menu-button" aria-label="Menüyü aç">
+      <svg width="28" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 4H21M3 12H21M3 20H21" stroke="#1a202c" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+    </label>
+
+    {% include navigation-lib/links.html %}
+
   </nav>
 </header>
 <div class="nav-buffer"></div>
