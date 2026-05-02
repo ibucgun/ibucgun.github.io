@@ -1,164 +1,130 @@
 $nav-height: 4.5rem;
+$brand-indigo: #4d41e0; 
 
-section.nav-buffer {
-  height: $nav-height;
-}
+.nav-buffer { height: $nav-height; display: block; }
 
 header.nav-wrapper {
   width: 100%;
   z-index: 1100;
-
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
-  background-color: #fff;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 
-  nav {
+  .nav-container {
     height: $nav-height;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; // Masaüstünde ortalar
+    padding: 0 20px;
 
-    div.nav-ul-wrapper {
-      @include media_mobile {
-        display: none;
-      }
-    }
+    @include media_mobile { justify-content: space-between; }
   }
 }
 
-ul.nav-ul {
-  list-style: none;
-  padding: 0px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-
-  @include media_mobile {
-    flex-direction: column;
-  }
-
-  color: rgb(51, 51, 51);
-
-  li {
-    padding: 8px 15px;
-    a {
-      color: #333;
-      text-decoration: none;
-      border-bottom: 1px solid;
-
-      &:hover {
-        color: #9c9c9c;
-        border-bottom: none;
-      }
-    }
-  }
+// Masaüstü Navigasyon Kontrolü
+.desktop-nav {
+  display: block;
+  @include media_mobile { display: none !important; }
 }
 
-div.nav-menu-wrapper {
-  display: none;
-
+// Mobil Başlık ve İkon Kontrolü
+.nav-menu-wrapper {
+  display: none !important;
   @include media_mobile {
+    display: flex !important;
     width: 100%;
-    display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 0 24px;
+    align-items: center;
   }
 
   .nav-header-name {
-    @include sans;
-    font-size: 1.5rem;
-    font-weight: 900;
-    text-align: center;
-    letter-spacing: -0.05rem;
-    line-height: 1;
+    @include sans_bold;
+    font-size: 1.1rem;
+    color: #1a202c;
   }
 
-  a.nav-menu-link {
-    color: #333;
-    text-decoration: none;
-
-    svg {
-      height: 28px;
+  .nav-menu-link {
+    color: #1a202c;
+    .menu-svg {
+      width: 30px;
+      height: 30px;
+      display: block;
     }
   }
 }
 
-div.nav-overlay {
-  display: none;
+// Link Stilleri
+ul.nav-ul {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: flex;
+  gap: 10px;
 
+  @include media_mobile { flex-direction: column; gap: 25px; }
+
+  li a {
+    text-decoration: none !important;
+    border: none !important;
+    color: #2d3748;
+    @include sans_regular;
+    padding: 8px 15px;
+    transition: 0.3s;
+
+    &:hover { color: $brand-indigo; }
+
+    &.nav-cta { // Randevu Butonu (Görsel Vurgu)
+      background: $brand-indigo;
+      color: #fff !important;
+      border-radius: 50px;
+      font-weight: 700;
+      padding: 10px 25px;
+      box-shadow: 0 4px 12px rgba(77, 65, 224, 0.2);
+    }
+  }
+}
+
+// Mobil Overlay
+div.nav-overlay {
   @include media_mobile {
     position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 9000;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-    justify-content: center;
-    // -ms-flex-align: center;
-    // align-items: center;
-    background: rgba(255, 255, 255, 0.87);
-    opacity: 0;
-    transition: opacity 0.2s ease-in;
-    pointer-events: none;
-    -webkit-backdrop-filter: blur(3px);
-    backdrop-filter: blur(3px);
-
-    /* This is the magic! */
-    &:target {
-      opacity: 1;
-      pointer-events: auto;
-    }
-  }
-
-  a.nav-overlay-close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: block;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 35px;
-      right: 20px;
-      display: block;
-      width: 30px;
-      height: 2px;
-      background: #333;
-      opacity: 0.8;
-    }
-
-    &::before {
-      transform: rotate(45deg);
-    }
-
-    &::after {
-      transform: rotate(-45deg);
-    }
-  }
-
-  div.nav-overlay-content {
-    position: relative;
+    top: 0; left: 0; right: 0; bottom: 0;
     z-index: 9999;
-    padding: 30px 20px;
-    color: #fff;
-    text-align: center;
+    background: #ffffff;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:target { opacity: 1; pointer-events: auto; }
+
+    .nav-overlay-content {
+      width: 100%;
+      text-align: center;
+      .nav-ul {
+        display: flex !important;
+        li a { font-size: 1.6rem; font-weight: 800; color: #1a202c !important; }
+      }
+    }
   }
 }
 
-@media print {
-  section.nav-buffer,
-  header.nav-wrapper {
-    display: none;
+// Kapatma İkonu (X)
+a.nav-overlay-close {
+  @include media_mobile {
+    position: absolute;
+    top: 25px; right: 25px;
+    width: 30px; height: 30px;
+    &::before, &::after {
+      content: ""; position: absolute; top: 15px; left: 0;
+      width: 30px; height: 2px; background: $brand-indigo;
+    }
+    &::before { transform: rotate(45deg); }
+    &::after { transform: rotate(-45deg); }
   }
 }

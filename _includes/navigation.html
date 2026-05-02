@@ -1,10 +1,16 @@
 {% if site.show_navigation %}
-<header class="nav-wrapper">
-  <nav>
-    <div class="nav-ul-wrapper">
+<header class="nav-wrapper no-print">
+  <nav class="nav-container">
+    
+    <!-- MASAÜSTÜ GÖRÜNÜM -->
+    <div class="desktop-nav">
       {% include navigation-lib/links.html %}
     </div>
+
+    <!-- MOBİL GÖRÜNÜM -->
     {% include navigation-lib/mobile-menu.html %}
+    
   </nav>
 </header>
+<div class="nav-buffer"></div>
 {% endif %}
