@@ -2,13 +2,15 @@
 <header class="nav-wrapper no-print">
   <nav class="nav-container">
     
-    <!-- MASAÜSTÜ GÖRÜNÜM -->
-    <div class="desktop-nav">
+    <!-- MASAÜSTÜ GRUBU -->
+    <div class="desktop-only">
       {% include navigation-lib/links.html %}
     </div>
 
-    <!-- MOBİL GÖRÜNÜM -->
-    {% include navigation-lib/mobile-menu.html %}
+    <!-- MOBİL GRUBU -->
+    <div class="mobile-only">
+      {% include navigation-lib/mobile-menu.html %}
+    </div>
     
   </nav>
 </header>

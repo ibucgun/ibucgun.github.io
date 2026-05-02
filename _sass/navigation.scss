@@ -1,5 +1,5 @@
 $nav-height: 4.5rem;
-$brand-indigo: #4d41e0; 
+$brand-indigo: #4d41e0;
 
 .nav-buffer { height: $nav-height; display: block; }
 
@@ -8,9 +8,8 @@ header.nav-wrapper {
   z-index: 1100;
   position: fixed;
   top: 0;
-  background: rgba(255, 255, 255, 0.98);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 
   .nav-container {
     height: $nav-height;
@@ -18,113 +17,106 @@ header.nav-wrapper {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: center; // Masaüstünde ortalar
+    justify-content: center;
     padding: 0 20px;
-
-    @include media_mobile { justify-content: space-between; }
   }
 }
 
-// Masaüstü Navigasyon Kontrolü
-.desktop-nav {
-  display: block;
-  @include media_mobile { display: none !important; }
+// --- GÖRÜNÜRLÜK SAVAŞINI BİTİREN KISIM ---
+
+// 1. Masaüstünde Mobili Gizle
+@media (min-width: 769px) {
+  .mobile-only { display: none !important; }
+  .desktop-only { display: block !important; }
 }
 
-// Mobil Başlık ve İkon Kontrolü
-.nav-menu-wrapper {
-  display: none !important;
-  @include media_mobile {
-    display: flex !important;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
+// 2. Mobilde Masaüstünü Gizle
+@media (max-width: 768px) {
+  .desktop-only { display: none !important; }
+  .mobile-only { 
+    display: block !important; 
+    width: 100%; 
   }
-
-  .nav-header-name {
-    @include sans_bold;
-    font-size: 1.1rem;
-    color: #1a202c;
-  }
-
-  .nav-menu-link {
-    color: #1a202c;
-    .menu-svg {
-      width: 30px;
-      height: 30px;
-      display: block;
-    }
+  
+  .nav-wrapper .nav-container {
+    justify-content: space-between !important; // Mobilde ismi sola, ikonu sağa iter
   }
 }
 
-// Link Stilleri
+// --- STİLLER ---
+
 ul.nav-ul {
-  list-style: none;
-  padding: 0; margin: 0;
-  display: flex;
-  gap: 10px;
+  list-style: none; margin: 0; padding: 0;
+  display: flex; gap: 10px;
 
-  @include media_mobile { flex-direction: column; gap: 25px; }
+  @media (max-width: 768px) {
+    flex-direction: column; gap: 30px;
+  }
 
   li a {
     text-decoration: none !important;
     border: none !important;
     color: #2d3748;
-    @include sans_regular;
     padding: 8px 15px;
-    transition: 0.3s;
-
-    &:hover { color: $brand-indigo; }
-
-    &.nav-cta { // Randevu Butonu (Görsel Vurgu)
+    font-weight: 500;
+    
+    &.nav-cta {
       background: $brand-indigo;
-      color: #fff !important;
+      color: white !important;
       border-radius: 50px;
-      font-weight: 700;
-      padding: 10px 25px;
-      box-shadow: 0 4px 12px rgba(77, 65, 224, 0.2);
+      padding: 10px 22px;
     }
   }
 }
 
-// Mobil Overlay
+.mobile-header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  .nav-header-name {
+    font-weight: 800;
+    color: #1a202c;
+  }
+}
+
+// MOBİL MENÜ ÜSTTE AÇILMA SORUNU ÇÖZÜMÜ
 div.nav-overlay {
-  @include media_mobile {
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    z-index: 9999;
-    background: #ffffff;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: white;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  // Varsayılan olarak gizli
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
 
-    &:target { opacity: 1; pointer-events: auto; }
+  &:target {
+    visibility: visible;
+    opacity: 1;
+  }
 
-    .nav-overlay-content {
-      width: 100%;
-      text-align: center;
-      .nav-ul {
-        display: flex !important;
-        li a { font-size: 1.6rem; font-weight: 800; color: #1a202c !important; }
-      }
-    }
+  .nav-overlay-content {
+    text-align: center;
+    .nav-ul li a { font-size: 1.6rem; font-weight: 800; }
   }
 }
 
-// Kapatma İkonu (X)
 a.nav-overlay-close {
-  @include media_mobile {
-    position: absolute;
-    top: 25px; right: 25px;
-    width: 30px; height: 30px;
-    &::before, &::after {
-      content: ""; position: absolute; top: 15px; left: 0;
-      width: 30px; height: 2px; background: $brand-indigo;
-    }
-    &::before { transform: rotate(45deg); }
-    &::after { transform: rotate(-45deg); }
+  position: absolute;
+  top: 20px; right: 20px;
+  width: 40px; height: 40px;
+  display: block;
+  
+  &::before, &::after {
+    content: ""; position: absolute; top: 20px; left: 5px;
+    width: 30px; height: 2px; background: #333;
   }
+  &::before { transform: rotate(45deg); }
+  &::after { transform: rotate(-45deg); }
 }
