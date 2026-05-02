@@ -1,17 +1,17 @@
 {% if site.show_navigation %}
 <header class="nav-wrapper no-print">
   <nav class="nav-container">
-    <!-- Logo Alanı: Her zaman solda -->
+    <!-- SOL: Logo / İsim -->
     <div class="nav-logo">
       <a href="/" class="nav-header-name">Uzm. Dr. İsmail BUÇGÜN</a>
     </div>
     
-    <!-- Masaüstü Grubu: Sadece büyük ekranlarda görünür -->
+    <!-- SAĞ/ORTA: Masaüstü Linkleri -->
     <div class="nav-desktop-wrapper">
       {% include navigation-lib/links.html %}
     </div>
 
-    <!-- Mobil Grubu: Sadece telefonlarda görünür -->
+    <!-- MOBİL: Hamburger Menü -->
     <div class="nav-mobile-wrapper">
       {% include navigation-lib/mobile-menu.html %}
     </div>

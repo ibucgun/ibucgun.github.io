@@ -8,48 +8,65 @@ header.nav-wrapper {
   z-index: 1100;
   position: fixed;
   top: 0;
-  background: white;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 
   .nav-container {
     height: $nav-height;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    align-items: center;
-    justify-content: space-between; // İsim sola, Menü sağa
-    padding: 0 30px; // Masaüstü yan boşluk
+    align-items: center; // DİKEYDE TAM ORTALAR
+    justify-content: space-between; // LOGO SOLDA, MENÜ SAĞDA
+    padding: 0 30px;
 
     @include media_mobile {
-      padding: 0 20px !important; // Mobilde ikonun kenara yapışmasını engeller
+      padding: 0 20px !important;
     }
   }
 }
 
-.nav-logo .nav-header-name {
-  @include sans_bold;
-  font-size: 1.2rem;
-  color: $text_color;
-  text-decoration: none;
+.nav-logo {
+  display: flex;
+  align-items: center; // İSMİ DİKEYDE ORTALAR
   
-  @include media_mobile { font-size: 1.1rem; }
+  .nav-header-name {
+    @include sans_bold;
+    font-size: 1.2rem;
+    color: $text_color;
+    text-decoration: none;
+    line-height: 1; // HİZALAMA İÇİN KRİTİK
+    
+    @include media_mobile { font-size: 1.1rem; }
+  }
 }
 
-// --- GÖRÜNÜRLÜK KONTROLÜ ---
+// GÖRÜNÜRLÜK KONTROLÜ
 .nav-desktop-wrapper {
-  display: block;
+  display: flex;
+  align-items: center;
   @include media_mobile { display: none !important; }
 }
 
 .nav-mobile-wrapper {
   display: none !important;
-  @include media_mobile { display: block !important; }
+  @include media_mobile { 
+    display: flex !important; 
+    align-items: center;
+  }
 }
 
-// LİNK STİLLERİ
 ul.nav-ul {
-  list-style: none; margin: 0; padding: 0;
-  display: flex; gap: 10px;
+  list-style: none;
+  margin: 0; padding: 0;
+  display: flex;
+  align-items: center; // LİNKLERİ DİKEYDE ORTALAR
+  gap: 8px;
+
+  @include media_mobile {
+    flex-direction: column;
+    gap: 15px; // MOBİL MENÜ ARALIKLARI DARALTILDI
+  }
 
   li a {
     text-decoration: none !important;
@@ -57,12 +74,15 @@ ul.nav-ul {
     color: #4a5568;
     @include sans_regular;
     padding: 8px 12px;
+    line-height: 1;
+    display: block;
     transition: 0.3s;
+
     &:hover { color: $brand-indigo; }
 
     &.nav-cta {
       background: $brand-indigo;
-      color: white !important;
+      color: #fff !important;
       border-radius: 50px;
       font-weight: 700;
       padding: 10px 20px;
@@ -70,13 +90,13 @@ ul.nav-ul {
   }
 }
 
-// MOBİL MENÜ KATMANI (OVERLAY)
+// MOBİL MENÜ KATMANI
 div.nav-overlay {
   @include media_mobile {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
     z-index: 9999;
-    background: white;
+    background: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,10 +106,13 @@ div.nav-overlay {
 
     &:target { visibility: visible; opacity: 1; }
 
-    .nav-overlay-content .nav-ul {
-      flex-direction: column;
-      gap: 15px; // Linkler arası mesafe daraltıldı
-      li a { font-size: 1.4rem; font-weight: 800; color: $text_color !important; }
+    .nav-overlay-content {
+      width: 100%;
+      .nav-ul li a { 
+        font-size: 1.4rem; 
+        font-weight: 800; 
+        color: $text_color !important; 
+      }
     }
   }
 }
