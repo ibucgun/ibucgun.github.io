@@ -99,7 +99,7 @@ ul.nav-ul {
         background: $brand-indigo;
         color: #fff !important;
         border-radius: 50px;
-        font-weight: 700;
+        font-weight: 600;
         padding: 10px 20px;
         margin-left: 5px;
       }
@@ -107,7 +107,7 @@ ul.nav-ul {
   }
 }
 
-// MOBİL OVERLAY
+// MOBİL MENÜ KATMANI (OVERLAY)
 div.nav-overlay {
   @include media_mobile {
     position: fixed;
@@ -120,11 +120,34 @@ div.nav-overlay {
     visibility: hidden;
     opacity: 0;
     transition: 0.3s;
+
     &:target { visibility: visible; opacity: 1; }
+
     .nav-overlay-content .nav-ul li a { 
       font-size: 1.4rem; 
-      font-weight: 800; 
-      color: $text_color !important; 
+      font-weight: 600; 
+      color: $text_color !important; // Genel linkler siyah
+
+      // BURASI DÜZELTME: Randevu butonunun mobilde beyaz olmasını sağlar
+      &.nav-cta {
+        color: #ffffff !important; 
+        background-color: $brand-indigo;
+        padding: 12px 30px;
+      }
     }
+  }
+}
+
+// KAPATMA BUTONU
+a.nav-overlay-close {
+  @include media_mobile {
+    position: absolute; top: 25px; right: 25px;
+    width: 30px; height: 30px;
+    &::before, &::after {
+      content: ""; position: absolute; top: 15px; left: 0;
+      width: 30px; height: 2px; background: $brand-indigo;
+    }
+    &::before { transform: rotate(45deg); }
+    &::after { transform: rotate(-45deg); }
   }
 }
