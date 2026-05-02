@@ -16,22 +16,30 @@ header.nav-wrapper {
 
   .nav-container {
     height: $nav-height !important;
+    max-width: 1080px; // base.scss'deki wrapper genişliği
+    margin: 0 auto;
+    padding: 0 24px; // base.scss'deki wrapper padding'i
     display: flex !important;
-    align-items: center !important; // Dikeyde milimetrik ortalar
+    align-items: center !important;
     justify-content: space-between !important;
-    // .wrapper zaten base.scss'den 1080px ve margin: 0 auto alıyor.
+
+    @include media_mobile {
+      padding: 0 20px !important; // Mobilde kenardan boşluk bırakır
+    }
   }
 }
 
+// SOLDAKİ İSİM: Margin-right: auto ile her şeyi sağa iter
 .nav-logo-link {
   @include sans_bold;
   font-size: 1.2rem;
-  color: #1a202c;
+  color: $text_color;
   text-decoration: none !important;
   line-height: 1 !important;
   display: flex;
   align-items: center;
-  margin: 0 !important;
+  margin-right: auto !important; // Bu komut ismi tam sola yaslar
+  margin-left: 0 !important;
 
   @include media_mobile {
     font-size: 1.1rem;
@@ -58,11 +66,11 @@ ul.nav-ul {
   padding: 0 !important;
   display: flex !important;
   align-items: center !important;
-  gap: 8px;
+  gap: 12px;
 
   @include media_mobile {
     flex-direction: column !important;
-    gap: 12px !important; // Mobilde metin arası mesafe daraltıldı
+    gap: 18px !important; // Mobil menü aralıkları optimize edildi
   }
 
   li {
@@ -110,7 +118,7 @@ div.nav-overlay {
     .nav-overlay-content .nav-ul li a { 
       font-size: 1.4rem; 
       font-weight: 800; 
-      color: #1a202c !important; 
+      color: $text_color !important; 
     }
   }
 }
