@@ -1,31 +1,23 @@
 <!DOCTYPE html>
 <html lang="tr">
-
   {% include head.html %}
-
   <body class="theme-{% if site.resume_theme %}{{ site.resume_theme }}{% endif %}">
-
+    <!-- Ana Wrapper Genişliği (1080px) İçinde -->
     <div class="wrapper" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="telephone" content="{{ site.resume_contact_telephone }}"/>
-      <meta itemprop="address" content="{{ site.resume_contact_address }}"/>
-      
       {% include navigation.html %}
 
-      <!-- Ana İçerik Kartı -->
-      <main class="page-card-container">
+      <main class="page-main-content">
+        <!-- Anasayfadaki Modern Card Yapısı -->
         <article class="modern-page-card no-print">
           
           <header class="page-header">
-            <!-- Başlık ve İkonlar -->
             <div class="title-bar">
               <h1 class="header-title" itemprop="name">{{ page.title }}</h1>
-              {% include icon-links.html %}
+              <!-- Başlık Altındaki Belirgin Indigo Çizgi -->
+              <div class="header-accent-line"></div>
             </div>
-
-
           </header>
 
-          <!-- Sayfa İçeriği -->
           <section class="content-section" itemprop="description">
             <div class="resume-item">
               <div class="resume-item-copy">
@@ -38,8 +30,6 @@
       </main>
 
       {% include footer.html %}
-
     </div>
-
   </body>
 </html>
