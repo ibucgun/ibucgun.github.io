@@ -982,7 +982,7 @@
   
   strong {
     color: #1a202c;
-    font-weight: 700;
+    font-weight: 600;
   }
 }
 
@@ -1044,8 +1044,8 @@
     }
     .callout-content { flex: 1; }
     .callout-label {
-      display: block; font-weight: 800; text-transform: uppercase;
-      font-size: 0.85rem; letter-spacing: 0.05em; margin-bottom: 2px;
+      display: block; font-weight: 600;
+      font-size: 1rem; letter-spacing: 0.05em; margin-bottom: 2px;
     }
     .callout-text { font-size: 1.1rem; color: #1a202c; margin: 0 !important; text-align: left !important; }
   }
