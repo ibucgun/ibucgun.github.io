@@ -16,8 +16,6 @@
   }
 }
 
-
-
 .icon-links {
   margin: 0;
   padding: 0;
@@ -50,51 +48,6 @@
   .icon {
     height: 28px;
   }
-}
-
-// resume content styles
-
-.content-section {
-  margin: 0 0 3rem;
-
-  .resume-item { margin-bottom: 2rem; }
-
-  .resume-item-title {
-    @include sans_bold;
-    margin: 0 0 .75rem;
-    font-size: 1.25rem;
-    letter-spacing: -.05rem;
-    line-height: 1;
-  }
-
-  .resume-item-details {
-    font-size: 1rem;
-    margin: 0 0 .75rem;
-	color: #4d41e0;
-    line-height: 1;
-
-    &.award-title {
-      font-size: 1rem;
-    }
-  }
-
-  .resume-item-title,
-  .resume-item-details,
-  .resume-item-copy,
-  .resume-item-list {
-    a {
-      color: #333;
-      text-decoration: none;
-      border-bottom: 1px solid;
-
-      &:hover {
-        border-bottom: none;
-        color: #9c9c9c;
-      }
-    }
-  }
-
-  .resume-item-copy { margin: .75rem 0 0; font-size: 1.125rem; }
 }
 
 // footer styles
