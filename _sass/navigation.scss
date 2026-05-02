@@ -15,10 +15,12 @@ header.nav-wrapper {
     height: $nav-height;
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    align-items: center; // DİKEYDE TAM ORTALAR
-    justify-content: space-between; // LOGO SOLDA, MENÜ SAĞDA
     padding: 0 30px;
+    
+    // DİKEYDE VE YATAYDA TAM HİZALAMA
+    display: flex !important;
+    align-items: center !important; 
+    justify-content: space-between !important;
 
     @include media_mobile {
       padding: 0 20px !important;
@@ -26,71 +28,84 @@ header.nav-wrapper {
   }
 }
 
-.nav-logo {
+// SOL TARAF: İSİM HİZALAMASI
+.nav-logo-link {
+  @include sans_bold;
+  font-size: 1.2rem;
+  color: $text_color;
+  text-decoration: none !important;
+  line-height: 1 !important; // Satır yüksekliğini sıfırlar
+  margin: 0 !important;
   display: flex;
-  align-items: center; // İSMİ DİKEYDE ORTALAR
-  
-  .nav-header-name {
-    @include sans_bold;
-    font-size: 1.2rem;
-    color: $text_color;
-    text-decoration: none;
-    line-height: 1; // HİZALAMA İÇİN KRİTİK
-    
-    @include media_mobile { font-size: 1.1rem; }
-  }
+  align-items: center;
+
+  @include media_mobile { font-size: 1.1rem; }
 }
 
-// GÖRÜNÜRLÜK KONTROLÜ
+// SAĞ TARAF: MASAÜSTÜ LİNKLER
 .nav-desktop-wrapper {
   display: flex;
   align-items: center;
   @include media_mobile { display: none !important; }
 }
 
-.nav-mobile-wrapper {
-  display: none !important;
-  @include media_mobile { 
-    display: flex !important; 
-    align-items: center;
-  }
-}
-
 ul.nav-ul {
-  list-style: none;
-  margin: 0; padding: 0;
-  display: flex;
-  align-items: center; // LİNKLERİ DİKEYDE ORTALAR
+  list-style: none !important;
+  margin: 0 !important; // Tarayıcının verdiği dış boşluğu siler
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
   gap: 8px;
 
   @include media_mobile {
-    flex-direction: column;
-    gap: 15px; // MOBİL MENÜ ARALIKLARI DARALTILDI
+    flex-direction: column !important;
+    gap: 15px !important;
   }
 
-  li a {
-    text-decoration: none !important;
-    border: none !important;
-    color: #4a5568;
-    @include sans_regular;
-    padding: 8px 12px;
-    line-height: 1;
-    display: block;
-    transition: 0.3s;
+  li {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
 
-    &:hover { color: $brand-indigo; }
+    a {
+      text-decoration: none !important;
+      border: none !important;
+      color: #4a5568;
+      @include sans_regular;
+      padding: 8px 12px;
+      line-height: 1 !important;
+      transition: 0.3s;
 
-    &.nav-cta {
-      background: $brand-indigo;
-      color: #fff !important;
-      border-radius: 50px;
-      font-weight: 700;
-      padding: 10px 20px;
+      &:hover { color: $brand-indigo; }
+
+      &.nav-cta {
+        background: $brand-indigo;
+        color: #fff !important;
+        border-radius: 50px;
+        font-weight: 700;
+        padding: 10px 20px;
+        margin-left: 5px;
+      }
     }
   }
 }
 
-// MOBİL MENÜ KATMANI
+// MOBİL TETİKLEYİCİ
+.nav-mobile-wrapper {
+  display: none !important;
+  @include media_mobile {
+    display: flex !important;
+    align-items: center;
+  }
+  .nav-menu-link {
+    display: flex;
+    align-items: center;
+    color: $text_color;
+  }
+}
+
+// MOBİL OVERLAY (TAM EKRAN MENÜ)
 div.nav-overlay {
   @include media_mobile {
     position: fixed;
@@ -106,18 +121,15 @@ div.nav-overlay {
 
     &:target { visibility: visible; opacity: 1; }
 
-    .nav-overlay-content {
-      width: 100%;
-      .nav-ul li a { 
-        font-size: 1.4rem; 
-        font-weight: 800; 
-        color: $text_color !important; 
-      }
+    .nav-overlay-content .nav-ul li a { 
+      font-size: 1.4rem; 
+      font-weight: 800; 
+      color: $text_color !important; 
     }
   }
 }
 
-// KAPATMA BUTONU
+// KAPATMA BUTONU (X)
 a.nav-overlay-close {
   @include media_mobile {
     position: absolute; top: 25px; right: 25px;
