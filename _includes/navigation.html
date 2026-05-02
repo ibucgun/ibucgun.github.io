@@ -1,12 +1,15 @@
 {% if site.show_navigation %}
 <header class="nav-wrapper no-print">
-  <nav class="nav-container"> <!-- 'wrapper' sınıfı buradan kaldırıldı -->
+  <nav class="nav-container">
+    <!-- Logo Alanı -->
     <a href="/" class="nav-logo-link">Uzm. Dr. İsmail BUÇGÜN</a>
     
+    <!-- Masaüstü Grubu -->
     <div class="nav-desktop-wrapper">
       {% include navigation-lib/links.html %}
     </div>
 
+    <!-- Mobil Grubu -->
     <div class="nav-mobile-wrapper">
       {% include navigation-lib/mobile-menu.html %}
     </div>
