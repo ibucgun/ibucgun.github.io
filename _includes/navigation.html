@@ -1,15 +1,12 @@
 {% if site.show_navigation %}
 <header class="nav-wrapper no-print">
-  <nav class="nav-container">
-    <!-- SOL: Logo (Tam sola yaslanacak) -->
+  <nav class="nav-container"> <!-- 'wrapper' sınıfı buradan kaldırıldı -->
     <a href="/" class="nav-logo-link">Uzm. Dr. İsmail BUÇGÜN</a>
     
-    <!-- SAĞ: Masaüstü Linkleri -->
     <div class="nav-desktop-wrapper">
       {% include navigation-lib/links.html %}
     </div>
 
-    <!-- MOBİL: Hamburger Menü -->
     <div class="nav-mobile-wrapper">
       {% include navigation-lib/mobile-menu.html %}
     </div>

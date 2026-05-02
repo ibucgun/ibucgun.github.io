@@ -1,10 +1,7 @@
 $nav-height: 4.5rem;
 $brand-indigo: #4d41e0;
 
-.nav-buffer { 
-  height: $nav-height; 
-  display: block; 
-}
+.nav-buffer { height: $nav-height; display: block; }
 
 header.nav-wrapper {
   width: 100%;
@@ -17,47 +14,38 @@ header.nav-wrapper {
   .nav-container {
     height: $nav-height !important;
     max-width: 1080px; // base.scss'deki wrapper genişliği
-    margin: 0 auto;
-    padding: 0 24px; // base.scss'deki wrapper padding'i
+    margin: 0 auto !important;
+    padding: 0 24px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
 
-    @include media_mobile {
-      padding: 0 20px !important; // Mobilde kenardan boşluk bırakır
-    }
+    // ÖNEMLİ: .wrapper'dan gelen çakışan clearfix'i burada iptal ediyoruz
+    &::before, &::after { display: none !important; content: none !important; }
+
+    @include media_mobile { padding: 0 20px !important; }
   }
 }
 
-// SOLDAKİ İSİM: Margin-right: auto ile her şeyi sağa iter
 .nav-logo-link {
   @include sans_bold;
   font-size: 1.2rem;
   color: $text_color;
   text-decoration: none !important;
   line-height: 1 !important;
-  display: flex;
-  align-items: center;
-  margin-right: auto !important; // Bu komut ismi tam sola yaslar
-  margin-left: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  flex-shrink: 0;
 
-  @include media_mobile {
-    font-size: 1.1rem;
-  }
+  @include media_mobile { font-size: 1.1rem; }
 }
 
 .nav-desktop-wrapper {
-  display: flex;
-  align-items: center;
+  display: flex !important;
+  align-items: center !important;
   @include media_mobile { display: none !important; }
-}
-
-.nav-mobile-wrapper {
-  display: none !important;
-  @include media_mobile { 
-    display: flex !important;
-    align-items: center;
-  }
 }
 
 ul.nav-ul {
@@ -66,11 +54,11 @@ ul.nav-ul {
   padding: 0 !important;
   display: flex !important;
   align-items: center !important;
-  gap: 12px;
+  gap: 8px;
 
   @include media_mobile {
     flex-direction: column !important;
-    gap: 18px !important; // Mobil menü aralıkları optimize edildi
+    gap: 15px !important; // Mobilde aralıklar daraltıldı
   }
 
   li {
@@ -100,6 +88,13 @@ ul.nav-ul {
   }
 }
 
+// MOBİL TETİKLEYİCİ
+.nav-mobile-wrapper {
+  display: none !important;
+  @include media_mobile { display: flex !important; align-items: center; }
+}
+
+// MOBİL MENÜ KATMANI (OVERLAY)
 div.nav-overlay {
   @include media_mobile {
     position: fixed;
@@ -120,18 +115,5 @@ div.nav-overlay {
       font-weight: 800; 
       color: $text_color !important; 
     }
-  }
-}
-
-a.nav-overlay-close {
-  @include media_mobile {
-    position: absolute; top: 25px; right: 25px;
-    width: 30px; height: 30px;
-    &::before, &::after {
-      content: ""; position: absolute; top: 15px; left: 0;
-      width: 30px; height: 2px; background: $brand-indigo;
-    }
-    &::before { transform: rotate(45deg); }
-    &::after { transform: rotate(-45deg); }
   }
 }
