@@ -1032,3 +1032,98 @@
     .contact-map-side .static-map-img { height: 200px; }
   }
 }
+
+
+
+/* --- MODERN SAYFA KARTI TASARIMI --- */
+
+// Sayfanın genel arka planı ve navigasyon mesafesi
+.page-card-container {
+  padding: 40px 0 80px 0;
+  background-color: #f8f9fa; // Hafif gri arka plan kartı öne çıkarır
+  min-height: 80vh;
+
+  @include media_mobile {
+    padding: 20px 0;
+    background-color: #ffffff; // Mobilde kart hissi yerine tam ekran beyazlık
+  }
+}
+
+// Ana içerik kartı
+.modern-page-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  padding: 60px 80px;
+  max-width: 900px; // Okuma konforu için ideal genişlik
+  margin: 0 auto;
+  border: 1px solid rgba(77, 65, 224, 0.08);
+
+  @include media_mobile {
+    padding: 40px 20px;
+    box-shadow: none;
+    border-radius: 0;
+    border: none;
+  }
+
+  // Kart içindeki sayfa başlığı alanı
+  .page-header {
+    padding: 0 !important;
+    margin-bottom: 40px;
+    text-align: center;
+
+    .title-bar {
+      border: none !important; // Eski section border'ı kaldırıyoruz
+      margin: 0 0 20px 0 !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      .header-title {
+        @include sans_bold;
+        font-size: 2.6rem !important;
+        color: $text_color;
+        margin: 0 !important;
+        float: none !important; // Float: left'i eziyoruz
+        line-height: 1.2 !important;
+
+        @include media_mobile {
+          font-size: 1.8rem !important;
+        }
+      }
+
+      // Başlık altına Indigo vurgu çizgisi
+      &::after {
+        content: "";
+        width: 60px;
+        height: 4px;
+        background: #4d41e0;
+        border-radius: 10px;
+        display: block;
+      }
+    }
+  }
+
+  // İkon linklerinin kart içindeki duruşu
+  .icon-links {
+    border: none !important;
+    padding: 0 !important;
+    top: 0 !important;
+    float: none !important;
+    opacity: 0.8;
+  }
+}
+
+// Kart içindeki metinlerin profesyonel yaslanması
+.resume-item-copy {
+  @include sans_regular;
+  font-size: 1.15rem !important;
+  line-height: 1.85 !important;
+  color: #4a5568 !important;
+  text-align: justify; // Profesyonel metin yaslama
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+}
