@@ -1,7 +1,10 @@
 $nav-height: 4.5rem;
 $brand-indigo: #4d41e0;
 
-.nav-buffer { height: $nav-height; display: block; }
+.nav-buffer { 
+  height: $nav-height; 
+  display: block; 
+}
 
 header.nav-wrapper {
   width: 100%;
@@ -12,162 +15,46 @@ header.nav-wrapper {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 
   .nav-container {
-    height: $nav-height;
-    // .wrapper sınıfından gelen max-width: 1080px ve padding: 0 24px burada otomatik çalışır
+    height: $nav-height !important;
     display: flex !important;
-    align-items: center !important; // Dikeyde tam merkezleme
-    justify-content: space-between !important; // Sol ve Sağ ayrımı
-    margin: 0 auto; 
+    align-items: center !important; // Dikeyde milimetrik ortalar
+    justify-content: space-between !important;
+    // .wrapper zaten base.scss'den 1080px ve margin: 0 auto alıyor.
   }
 }
 
-// SOL TARAF: İSİM
 .nav-logo-link {
   @include sans_bold;
   font-size: 1.2rem;
-  color: $text_color;
+  color: #1a202c;
   text-decoration: none !important;
-  line-height: 1 !important; // Metin etrafındaki hayalet boşluğu siler
-  margin: 0 !important;
+  line-height: 1 !important;
   display: flex;
   align-items: center;
+  margin: 0 !important;
 
-  @include media_mobile { font-size: 1.1rem; }
+  @include media_mobile {
+    font-size: 1.1rem;
+  }
 }
 
-// SAĞ TARAF: MASAÜSTÜ
 .nav-desktop-wrapper {
   display: flex;
   align-items: center;
-  height: 100%; // Kapsayıcıyı tam boy yapar
   @include media_mobile { display: none !important; }
 }
 
-ul.nav-ul {
-  list-style: none !important;
-  margin: 0 !important; // Tarayıcının verdiği üst/alt boşluğu zorla siler
-  padding: 0 !important;
-  display: flex !important;
-  align-items: center !important; // Linkleri dikeyde ortalar
-  gap: 10px;
-
-  @include media_mobile {
-    flex-direction: column !important;
-    gap: 15px !important;
-  }
-
-  li {
-    margin: 0 !important;
-    display: flex;
-    align-items: center;
-
-    a {
-      text-decoration: none !important;
-      border: none !important;
-      color: #4a5568;
-      @include sans_regular;
-      padding: 8px 12px;
-      line-height: 1 !important;
-      transition: 0.3s;
-
-      &:hover { color: $brand-indigo; }
-
-      &.nav-cta {
-        background: $brand-indigo;
-        color: #fff !important;
-        border-radius: 50px;
-        font-weight: 700;
-        padding: 10px 22px;
-      }
-    }
-  }
-}
-
-// MOBİL TETİKLEYİCİ
 .nav-mobile-wrapper {
   display: none !important;
-  @include media_mobile {
+  @include media_mobile { 
     display: flex !important;
     align-items: center;
   }
-}
-
-// MOBİL OVERLAY
-div.nav-overlay {
-  @include media_mobile {
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    z-index: 9999;
-    background: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.3s;
-
-    &:target { visibility: visible; opacity: 1; }
-
-    .nav-overlay-content .nav-ul li a { 
-      font-size: 1.4rem; 
-      font-weight: 800; 
-      color: $text_color !important; 
-    }
-  }
-}nav-height: 4.5rem;
-$brand-indigo: #4d41e0;
-
-.nav-buffer { height: $nav-height; display: block; }
-
-header.nav-wrapper {
-  width: 100%;
-  z-index: 1100;
-  position: fixed;
-  top: 0;
-  background: #ffffff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-
-  .nav-container {
-    height: $nav-height;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 30px;
-    
-    // DİKEYDE VE YATAYDA TAM HİZALAMA
-    display: flex !important;
-    align-items: center !important; 
-    justify-content: space-between !important;
-
-    @include media_mobile {
-      padding: 0 20px !important;
-    }
-  }
-}
-
-// SOL TARAF: İSİM HİZALAMASI
-.nav-logo-link {
-  @include sans_bold;
-  font-size: 1.2rem;
-  color: $text_color;
-  text-decoration: none !important;
-  line-height: 1 !important; // Satır yüksekliğini sıfırlar
-  margin: 0 !important;
-  display: flex;
-  align-items: center;
-
-  @include media_mobile { font-size: 1.1rem; }
-}
-
-// SAĞ TARAF: MASAÜSTÜ LİNKLER
-.nav-desktop-wrapper {
-  display: flex;
-  align-items: center;
-  @include media_mobile { display: none !important; }
 }
 
 ul.nav-ul {
   list-style: none !important;
-  margin: 0 !important; // Tarayıcının verdiği dış boşluğu siler
+  margin: 0 !important;
   padding: 0 !important;
   display: flex !important;
   align-items: center !important;
@@ -175,12 +62,11 @@ ul.nav-ul {
 
   @include media_mobile {
     flex-direction: column !important;
-    gap: 15px !important;
+    gap: 12px !important; // Mobilde metin arası mesafe daraltıldı
   }
 
   li {
     margin: 0 !important;
-    padding: 0 !important;
     display: flex;
     align-items: center;
 
@@ -201,27 +87,11 @@ ul.nav-ul {
         border-radius: 50px;
         font-weight: 700;
         padding: 10px 20px;
-        margin-left: 5px;
       }
     }
   }
 }
 
-// MOBİL TETİKLEYİCİ
-.nav-mobile-wrapper {
-  display: none !important;
-  @include media_mobile {
-    display: flex !important;
-    align-items: center;
-  }
-  .nav-menu-link {
-    display: flex;
-    align-items: center;
-    color: $text_color;
-  }
-}
-
-// MOBİL OVERLAY (TAM EKRAN MENÜ)
 div.nav-overlay {
   @include media_mobile {
     position: fixed;
@@ -240,12 +110,11 @@ div.nav-overlay {
     .nav-overlay-content .nav-ul li a { 
       font-size: 1.4rem; 
       font-weight: 800; 
-      color: $text_color !important; 
+      color: #1a202c !important; 
     }
   }
 }
 
-// KAPATMA BUTONU (X)
 a.nav-overlay-close {
   @include media_mobile {
     position: absolute; top: 25px; right: 25px;
