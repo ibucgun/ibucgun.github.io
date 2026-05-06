@@ -5,52 +5,48 @@
 
   <body class="theme-{% if site.resume_theme %}{{ site.resume_theme }}{% endif %}">
 
-    <div class="wrapper" itemscope itemtype="http://schema.org/MedicalClinic">
-      <meta itemprop="telephone" content="{{ site.resume_contact_telephone }}"/>
-      <meta itemprop="address" content="{{ site.resume_contact_address }}"/>
-	  
-	   {% include navigation.html %}
+    <div class="wrapper">
+
+      {% include navigation.html %}
 
 
-<header class="page-header modern-hero-layout" itemscope itemtype="http://schema.org/Person">
+<header class="page-header modern-hero-layout">
   <div class="hero-flex-container">
-    
+
     <div class="hero-text-side">
-      <h1 class="header-name" itemprop="name">{{ site.resume_name }}</h1>
-      
+      <h1 class="header-name">{{ site.resume_name }}</h1>
+
       <div class="hero-title-wrapper">
         <h2 class="header-title">{{ site.resume_title }}</h2>
       </div>
 
-      <div class="executive-summary" itemprop="description">
+      <div class="executive-summary">
         <p>{{ site.resume_header_intro }}</p>
       </div>
 
-     <div class="hero-action-btns no-print">
-  
-  <a href="tel:+905510334896" class="btn-primary btn-double-line" itemprop="telephone" title="Hemen Ara">
-    <span class="btn-main-text">Randevu Al</span>
-    <span class="btn-sub-text">0551 033 48 96</span>
-  </a>
+      <div class="hero-action-btns no-print">
 
-  <a href="https://wa.me/905510334896" class="btn-whatsapp" title="Whatsapp Mesajı Gönder">
-    <span>WhatsApp</span>
-  </a>
+        <a href="tel:+905510334896" class="btn-primary btn-double-line" title="Hemen Ara">
+          <span class="btn-main-text">Randevu Al</span>
+          <span class="btn-sub-text">0551 033 48 96</span>
+        </a>
 
-  <a href="https://instagram.com/dr.ismailbucgun" target="_blank" class="btn-instagram" title="İnstagram'da Takip Edin">
-    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-    </svg>
-  </a>
-</div>
+        <a href="https://wa.me/905510334896" class="btn-whatsapp" title="Whatsapp Mesajı Gönder" rel="noopener">
+          <span>WhatsApp</span>
+        </a>
+
+        <a href="https://instagram.com/dr.ismailbucgun" target="_blank" rel="noopener" class="btn-instagram" title="İnstagram'da Takip Edin">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
+      </div>
     </div>
 
     <div class="hero-image-side no-print">
       {% if site.resume_avatar == 'true' %}
       <div class="avatar-glow-wrapper">
-
-        <img src="images/avatar.webp" width="400" height="400" alt="Uzm. Dr. İsmail BUÇGÜN" class="hero-avatar" itemprop="image" fetchpriority="high" loading="eager">
-
+        <img src="/images/avatar.webp" width="400" height="400" alt="Uzm. Dr. İsmail BUÇGÜN" class="hero-avatar" fetchpriority="high" loading="eager">
       </div>
       {% endif %}
     </div>
@@ -59,21 +55,22 @@
 </header>
 
 <div class="modern-section-card">
-  <!-- Başlık Alanı (Sizin Şablonunuz) -->
+  <!-- Başlık Alanı -->
   <div class="section-header">
     <div class="section-icon-wrapper">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4d41e0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4d41e0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
     </div>
     <h2>Çalışma Alanlarım</h2>
   </div>
 
   <!-- Section Açıklaması -->
   <p class="section-intro-text">
-Kliniğimde genel psikiyatrik değerlendirme, tanı ve tedavi hizmeti sunmakla birlikte; mesleki olarak özellikle depresyon ve bipolar bozukluk gibi <b>duygudurum bozuklukları, yaşlılık psikiyatrisi ve TMS gibi beyin uyarım tedavileri</b> ile ilgileniyorum.</p>
+    Kliniğimde genel psikiyatrik değerlendirme, tanı ve tedavi hizmeti sunmakla birlikte; mesleki olarak özellikle depresyon ve bipolar bozukluk gibi <b>duygudurum bozuklukları, yaşlılık psikiyatrisi ve TMS gibi beyin uyarım tedavileri</b> ile ilgileniyorum.
+  </p>
 
   <!-- Çalışma Alanları-->
   <div class="practice-container">
-    
+
     <!-- Öne Çıkan: TMS ve Derin TMS (Yatay Kart) -->
     <a href="/tms" class="practice-box-featured">
       <div class="featured-img-side" style="background-image: url('/images/tmstedavisi.webp');"></div>
@@ -87,52 +84,42 @@ Kliniğimde genel psikiyatrik değerlendirme, tanı ve tedavi hizmeti sunmakla b
 
     <!-- Alt Grid Alanı -->
     <div class="practice-grid-bottom">
-      
-            
-    <!-- Madde 1 -->
+
       <a href="" class="practice-box-small">
         <h4 class="small-box-title">Bipolar Bozukluk</h4>
         <p class="small-box-copy">Duygudurum dönemlerinin tanı, tedavi ve uzun dönem takip planlaması.</p>
       </a>
-      
-      <!-- Madde 2 -->
+
       <a href="" class="practice-box-small">
         <h4 class="small-box-title">Depresyon</h4>
         <p class="small-box-copy">Depresif belirtilerin ayrıntılı değerlendirilmesi ve kişiye özel tedavi planı.</p>
       </a>
-      
-     <!-- Madde 3 -->
+
       <a href="" class="practice-box-small">
         <h4 class="small-box-title">Tedaviye Dirençli Depresyon</h4>
         <p class="small-box-copy">Standart tedavilerle yeterli yanıt alınamayan durumlarda ileri tedavi seçeneklerinin değerlendirilmesi.</p>
       </a>
-      
-     <!-- Madde 4 -->
+
       <a href="" class="practice-box-small">
         <h4 class="small-box-title">Yaşlılık Psikiyatrisi</h4>
         <p class="small-box-copy">İleri yaşta depresyon, anksiyete, unutkanlık gibi bilişsel yakınmalar ve ilaç güvenliği değerlendirmesi.</p>
       </a>
-	  
-	 <!-- Madde 5 -->
+
       <a href="" class="practice-box-small">
         <h4 class="small-box-title">Şizofreni ve Psikotik Bozukluklar</h4>
         <p class="small-box-copy">Gerçeklik değerlendirmesinin bozulduğu hastalıkların tanı, tedavi ve uzun dönem takip planlaması.</p>
       </a>
 
-
-      <!-- Madde 6 -->
       <a href="" class="practice-box-small">
         <h4 class="small-box-title">Obsesif Kompulsif Bozukluk (OKB)</h4>
         <p class="small-box-copy">Takıntı ve zorlantı döngülerinde ilaç tedavisi, psikoeğitim, kanıta dayalı psikoterapi ve uygun olgularda beyin uyarım tedavileri ile takip.</p>
       </a>
 
-      <!-- Madde 7 -->
       <a href="" class="practice-box-small">
         <h4 class="small-box-title">Erişkin Dikkat Eksikliği ve Hiperaktivite Bozukluğu (DEHB)</h4>
         <p class="small-box-copy">Yetişkinlik döneminde dikkat, karar verme, yürütücü işlev sorunları ve dürtüsellik sorunlarının tanı ve tedavisi.</p>
       </a>
 
-      <!-- Madde 8 -->
       <a href="" class="practice-box-small">
         <h4 class="small-box-title">Anksiyete (Kaygı) Bozuklukları</h4>
         <p class="small-box-copy">Yoğun kaygı, panik belirtileri ve kaçınma davranışlarının klinik değerlendirmesi.</p>
@@ -141,20 +128,20 @@ Kliniğimde genel psikiyatrik değerlendirme, tanı ve tedavi hizmeti sunmakla b
   </div>
 </div>
 
-	  
-{% if site.resume_section_egitim %}
-<section id="egitim" class="modern-section-card"> 
 
-<header class="section-header">
-  <div class="section-icon-wrapper">
-    <img src="/images/icons/akademikegitim.svg" class="section-icon" alt="Eğitim İkonu">
-  </div>
-  <h2>Akademik Eğitim</h2>
-</header>
+{% if site.resume_section_egitim %}
+<section id="egitim" class="modern-section-card">
+
+  <header class="section-header">
+    <div class="section-icon-wrapper">
+      <img src="/images/icons/akademikegitim.svg" class="section-icon" alt="Eğitim İkonu">
+    </div>
+    <h2>Akademik Eğitim</h2>
+  </header>
 
   <div class="section-content">
     {% for egitim in site.data.egitim %}
-    <div class="resume-item" itemprop="alumniOf" itemscope itemtype="https://schema.org/EducationalOrganization">
+    <div class="resume-item">
       <h3 class="resume-item-title">{{ egitim.uni }}</h3>
       <h4 class="resume-item-details">{{ egitim.derece }} &bull; {{ egitim.yil }}</h4>
       <p class="resume-item-copy">{{ egitim.ozet }}</p>
@@ -164,10 +151,12 @@ Kliniğimde genel psikiyatrik değerlendirme, tanı ve tedavi hizmeti sunmakla b
 
 </section>
 {% endif %}
-	  
+
 
 {% if site.resume_section_calistigikurumlar %}
-<section id="calistigikurumlar" class="modern-section-card"> <header class="section-header">
+<section id="calistigikurumlar" class="modern-section-card">
+
+  <header class="section-header">
     <div class="section-icon-wrapper">
       <img src="/images/icons/calistigikurumlar.svg" class="section-icon" alt="İş Deneyimi İkonu">
     </div>
@@ -176,19 +165,21 @@ Kliniğimde genel psikiyatrik değerlendirme, tanı ve tedavi hizmeti sunmakla b
 
   <div class="section-content">
     {% for job in site.data.calistigikurumlar %}
-    <div class="resume-item" itemscope itemtype="http://schema.org/Organization">
-      <h3 class="resume-item-title" itemprop="name">{{ job.company }}</h3>
-      <h4 class="resume-item-details" itemprop="description">{{ job.position }} &bull; {{ job.duration }}</h4>
+    <div class="resume-item">
+      <h3 class="resume-item-title">{{ job.company }}</h3>
+      <h4 class="resume-item-details">{{ job.position }} &bull; {{ job.duration }}</h4>
       <p class="resume-item-copy">{{ job.summary }}</p>
-    </div>{% endfor %}
+    </div>
+    {% endfor %}
   </div>
 
 </section>
 {% endif %}
 
+
 {% if site.resume_section_aldigiegitimler %}
 <section id="aldigiegitimler" class="modern-section-card">
-  
+
   <header class="section-header">
     <div class="section-icon-wrapper">
       <img src="/images/icons/aldigimegitimler.svg" class="section-icon" alt="Eğitim İkonu">
@@ -201,10 +192,10 @@ Kliniğimde genel psikiyatrik değerlendirme, tanı ve tedavi hizmeti sunmakla b
     <details class="resume-item-collapsible">
       <summary class="resume-item-summary">
         <div class="summary-content-wrapper">
-          <h3 class="resume-item-title" itemprop="name">
+          <h3 class="resume-item-title">
             {{ project.project }}
           </h3>
-          <h4 class="resume-item-details" itemprop="description">{{ project.role }} &bull; {{ project.duration }}</h4>
+          <h4 class="resume-item-details">{{ project.role }} &bull; {{ project.duration }}</h4>
         </div>
         <span class="collapse-icon"></span>
       </summary>
@@ -221,56 +212,50 @@ Kliniğimde genel psikiyatrik değerlendirme, tanı ve tedavi hizmeti sunmakla b
 
 
 {% if site.resume_section_iletisimverandevu %}
-  <div class="modern-contact-card" itemscope itemtype="http://schema.org/MedicalClinic">
-    <div class="contact-flex-container">
-      
-      <div class="contact-details-side">
-        <p class="contact-intro">
-          Bilgi ve randevu için doğrudan arayarak ya da <strong>WhatsApp</strong> mesajı ile kliniğime ulaşabilirsiniz.
-        </p>
-        
-        <div class="clinic-brand">
-          <h3 itemprop="name">Uzm. Dr. İsmail BUÇGÜN</h3>
-          <span class="clinic-subtitle">Adana Psikiyatri ve TMS Kliniği</span>
-        </div>
+<section id="iletisim" class="modern-contact-card">
+  <div class="contact-flex-container">
 
-        <div class="contact-list">
-          <div class="contact-item">
-            <span class="contact-icon">📍</span>
-            <span itemprop="address">Hurmalı Mah. Kurtuluş Cad. No:39 Central Plaza Kat:6 Daire:62, Seyhan/Adana</span>
-          </div>
-          <div class="contact-item">
-            <span class="contact-icon">📞</span>
-            <a href="tel:+905510334896" itemprop="telephone" class="phone-link">0551 033 48 96</a>
-          </div>
-        </div>
+    <div class="contact-details-side">
+      <p class="contact-intro">
+        Bilgi ve randevu için doğrudan arayarak ya da <strong>WhatsApp</strong> mesajı ile kliniğime ulaşabilirsiniz.
+      </p>
 
-        <a href="/iletisim" class="btn-outlined-contact">
-          Tüm İletişim Detayları →
-        </a>
+      <div class="clinic-brand">
+        <h3>Uzm. Dr. İsmail BUÇGÜN</h3>
+        <span class="clinic-subtitle">Adana Psikiyatri ve TMS Kliniği</span>
       </div>
 
-      <div class="contact-map-side no-print">
-        <a href="https://maps.app.goo.gl/5WCR9UoCiNTSsM4E9" target="_blank" class="map-link-container" title="Google Haritalar'da Aç">
-        <img src="/images/klinikkonumu.webp" alt="Klinik Konumu" class="static-map-img" loading="lazy">
-          <div class="map-overlay">
-            <span class="map-btn">📍 Haritalarda Aç</span>
-          </div>
-        </a>
+      <div class="contact-list">
+        <div class="contact-item">
+          <span class="contact-icon" aria-hidden="true">📍</span>
+          <span>Hurmalı Mah. Kurtuluş Cad. No:39 Central Plaza Kat:6 Daire:62, Seyhan/Adana</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon" aria-hidden="true">📞</span>
+          <a href="tel:+905510334896" class="phone-link">0551 033 48 96</a>
+        </div>
       </div>
 
+      <a href="/iletisim" class="btn-outlined-contact">
+        Tüm İletişim Detayları →
+      </a>
     </div>
-    
-    <span itemprop="medicalSpecialty" style="display:none;">Psikiyatri</span>
+
+    <div class="contact-map-side no-print">
+      <a href="https://maps.app.goo.gl/5WCR9UoCiNTSsM4E9" target="_blank" rel="noopener" class="map-link-container" title="Google Haritalar'da Aç">
+        <img src="/images/klinikkonumu.webp" alt="Klinik Konumu" class="static-map-img" loading="lazy">
+        <div class="map-overlay">
+          <span class="map-btn">📍 Haritalarda Aç</span>
+        </div>
+      </a>
+    </div>
+
   </div>
 </section>
 {% endif %}
 
 
-
-	{% include footer.html %}
-
-
+      {% include footer.html %}
 
     </div>
 
