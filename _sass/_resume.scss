@@ -989,6 +989,13 @@
   color: $text-color !important; // Daha yumuşak, modern bir gri
   text-align: center; // Başlıkla uyumlu merkezi hizalama
   margin: 0 !important;
+  
+  // MOBİL UYUMLULUK: Yazı boyutunu küçültme
+  @include media_mobile {
+    font-size: 1rem !important; // Mobilde daha zarif durması için küçültüldü
+    line-height: 1.2 !important; // Satır aralığı daraltıldı
+    text-align: center; // Merkezi hizalama korundu
+  }
 }
 
 // Kart içi metinlerin profesyonel yerleşimi
