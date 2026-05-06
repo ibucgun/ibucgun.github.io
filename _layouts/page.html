@@ -6,16 +6,21 @@
     <div class="wrapper" itemscope itemtype="http://schema.org/Person">
       {% include navigation.html %}
 
-      <!-- Sayfa Ana İçerik Alanı -->
       <main class="page-main-content">
         <article class="modern-page-card no-print">
           
           <header class="page-header">
             <div class="title-bar">
               <h1 class="header-title" itemprop="name">{{ page.title }}</h1>
-              <!-- Belirginleştirilmiş ve kalınlaştırılmış Indigo çizgi -->
               <div class="header-accent-line"></div>
             </div>
+
+            <!-- YENİ: Sayfa Giriş Özeti Bölümü -->
+            {% if page.description %}
+            <div class="page-intro-area">
+              <p class="page-intro-text">{{ page.description }}</p>
+            </div>
+            {% endif %}
           </header>
 
           <section class="content-section" itemprop="description">
