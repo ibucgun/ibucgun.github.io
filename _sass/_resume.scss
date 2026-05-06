@@ -972,7 +972,7 @@
 
 .page-intro-area {
   margin: 40px auto 0;
-  padding: 0 60px 40px; // Yanlardan daraltarak odak noktası oluşturur
+  padding: 0 20px 40px; // Yanlardan daraltarak odak noktası oluşturur
   border-bottom: 1px solid rgba(77, 65, 224, 0.1); // İçerikle araya çok hafif bir sınır
   max-width: 900px; // Okuma kolaylığı için genişliği sınırlıyoruz
 
@@ -986,8 +986,7 @@
   @include sans_regular;
   font-size: 1.4rem !important; // Ana metinden daha büyük ve belirgin
   line-height: 1.65 !important;
-  color: #4a5568 !important; // Daha yumuşak, modern bir gri
-  font-style: italic; // Editoryal giriş havası verir
+  color: $text-color !important; // Daha yumuşak, modern bir gri
   text-align: center; // Başlıkla uyumlu merkezi hizalama
   margin: 0 !important;
 }
