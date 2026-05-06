@@ -3,7 +3,7 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Physician",
+      "@type": ["Physician", "Person"],
       "@id": "{{ site.url }}/#hekim",
       "name": "Uzm. Dr. İsmail Buçgün",
       "givenName": "İsmail",
@@ -54,7 +54,7 @@
             "name": "T.C. Sağlık Bakanlığı"
           }
         },
-{
+        {
           "@type": "EducationalOccupationalCredential",
           "name": "Fellow of the European Board of Psychiatry (FEBP)",
           "description": "European Board Examination in Psychiatry (EBEP) sınavını başarıyla geçen psikiyatristlere verilen Avrupa düzeyinde yeterlilik unvanıdır.",
@@ -86,8 +86,9 @@
         {
           "@type": "Organization",
           "name": "Türkiye Psikiyatri Derneği"
+          "url": "https://psikiyatri.org.tr/"
         },
-		{
+        {
           "@type": "Organization",
           "name": "Bipolar Bozukluklar Derneği",
           "url": "https://bipolardernegi.org/"
@@ -137,7 +138,7 @@
       "geo": {
         "@type": "GeoCoordinates",
         "latitude": 36.9899075743665,
-        "longitude": 35.31947071342479 
+        "longitude": 35.31947071342479
       },
       "hasMap": "https://maps.app.goo.gl/5WCR9UoCiNTSsM4E9",
       "openingHoursSpecification": [
@@ -164,24 +165,23 @@
           "@type": "MedicalProcedure",
           "name": "Transkraniyal Manyetik Stimülasyon (TMS)",
           "url": "{{ site.url }}/tms",
-          "procedureType": "https://schema.org/TherapeuticProcedure"
+          "procedureType": "https://schema.org/NoninvasiveProcedure"
         },
         {
           "@type": "MedicalProcedure",
           "name": "Derin TMS",
           "url": "{{ site.url }}/tms",
-          "procedureType": "https://schema.org/TherapeuticProcedure"
+          "procedureType": "https://schema.org/NoninvasiveProcedure"
         },
         {
           "@type": "MedicalProcedure",
           "name": "Transkraniyal Doğru Akım Uyarımı (tDCS)",
           "url": "{{ site.url }}/tdcs",
-          "procedureType": "https://schema.org/TherapeuticProcedure"
+          "procedureType": "https://schema.org/NoninvasiveProcedure"
         },
         {
           "@type": "MedicalProcedure",
-          "name": "Psikiyatrik Değerlendirme",
-          "procedureType": "https://schema.org/DiagnosticProcedure"
+          "name": "Psikiyatrik Değerlendirme"
         },
         {
           "@type": "PsychologicalTreatment",
@@ -219,8 +219,7 @@
           "@type": "DiagnosticProcedure",
           "name": "Psikiyatrik İlaç Kan Düzeyi Takibi"
         }
-      ],
-      "employee": { "@id": "{{ site.url }}/#hekim" }
+      ]
     }
   ]
 }
