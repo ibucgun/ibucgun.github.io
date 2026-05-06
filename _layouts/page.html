@@ -16,11 +16,16 @@
             </div>
 
             <!-- YENİ: Sayfa Giriş Özeti Bölümü -->
-            {% if page.description %}
-            <div class="page-intro-area">
-              <p class="page-intro-text">{{ page.description }}</p>
-            </div>
-            {% endif %}
+ <!-- Eğer 'lead' varsa onu göster, yoksa SEO açıklamasını (description) kullan -->
+{% if page.lead %}
+<div class="page-intro-area">
+  <p class="page-intro-text">{{ page.lead }}</p>
+</div>
+{% elsif page.description %}
+<div class="page-intro-area">
+  <p class="page-intro-text">{{ page.description }}</p>
+</div>
+{% endif %}
           </header>
 
           <section class="content-section" itemprop="description">
