@@ -1095,3 +1095,82 @@
     .callout-label, svg { color: #92400e; stroke: #92400e; }
   }
 }
+
+
+/* =========================================================
+   TMS sayfası için ek stiller (4 küçük blok)
+   ========================================================= */
+
+/* 1) İçerik metnini eski inline stillerin yerine geçirir
+   (text-align: justify; font-size: 1.125rem;) */
+.tms-content p,
+.tms-content li {
+  text-align: justify;
+  font-size: 1.125rem;
+}
+
+/* 2) İçindekiler (TOC) — sade, tek blok */
+.tms-content .tms-toc {
+  background: #f7f8fa;
+  border-left: 4px solid #4d41e0;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 6px;
+}
+.tms-content .tms-toc strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #4d41e0;
+}
+.tms-content .tms-toc ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+.tms-content .tms-toc a {
+  color: #333;
+  text-decoration: none;
+}
+.tms-content .tms-toc a:hover {
+  color: #4d41e0;
+  text-decoration: underline;
+}
+
+/* 3) Açılır/kapanır FAQ bölümleri (<details>) */
+.tms-content details {
+  border-bottom: 1px solid #e5e7eb;
+  margin: 0.5rem 0;
+}
+.tms-content details > summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 0.5rem 0;
+}
+.tms-content details > summary::-webkit-details-marker { display: none; }
+.tms-content details > summary::after {
+  content: "▾";
+  float: right;
+  transition: transform 0.2s;
+}
+.tms-content details[open] > summary::after {
+  transform: rotate(180deg);
+}
+.tms-content details > summary > h2 {
+  display: inline;
+}
+
+/* 4) Görsel + alt yazı */
+.tms-content figure {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+.tms-content figure img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+.tms-content figcaption {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-top: 0.4rem;
+  font-style: italic;
+}
