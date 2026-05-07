@@ -986,7 +986,7 @@
   @include sans_regular;
   font-size: 1.3rem !important; // Ana metinden daha büyük ve belirgin
   line-height: 1.6 !important;
-  color: $text-color !important; // Daha yumuşak, modern bir gri
+  color: $text_color !important; // Daha yumuşak, modern bir gri
   text-align: center; // Başlıkla uyumlu merkezi hizalama
   margin: 0 !important;
   
@@ -1142,7 +1142,7 @@
   text-align: left;
 }
 .tms-content .tms-toc a {
-  color: #333;
+  color: $text_color;
   text-decoration: none;
 }
 .tms-content .tms-toc a:hover {
