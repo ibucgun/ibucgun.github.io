@@ -646,7 +646,7 @@
   }
 
   /* --- YENİLENMİŞ BUTONLAR --- */
-  .hero-action-btns {
+  .hero-action-btns, .cta-buttons {
     display: flex;
     align-items: stretch; // Buton boylarını eşitler
     gap: 15px;
@@ -767,7 +767,7 @@
       .executive-summary p { text-align: center; margin: 0 auto 2rem; }
     }
 
-    .hero-action-btns { 
+    .hero-action-btns, .cta-buttons { 
       flex-direction: column; 
       width: 100%;
       align-items: center;
@@ -1170,4 +1170,23 @@
 /* 5) TOC ve başlıklara smooth scroll (TOC linkleri çalışınca akıcı kayma) */
 html {
   scroll-behavior: smooth;
+}
+
+/* TMS sayfası altındaki CTA kartı */
+.tms-content .tms-cta-section {
+  background: #f7f8fa;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+.tms-content .tms-cta-section h2 {
+  color: #4d41e0;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+.tms-content .tms-cta-section p {
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
