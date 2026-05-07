@@ -1098,18 +1098,29 @@
 
 
 /* =========================================================
-   TMS sayfası için ek stiller (4 küçük blok)
+   TMS sayfası için ek stiller
    ========================================================= */
 
 /* 1) İçerik metnini eski inline stillerin yerine geçirir
-   (text-align: justify; font-size: 1.125rem;) */
+   (text-align: justify; font-size: 1.125rem;)
+   NOT: Sadece <p> ve <li> hedefleniyor — başlıklar (h1-h6) etkilenmez */
 .tms-content p,
 .tms-content li {
   text-align: justify;
   font-size: 1.125rem;
 }
 
-/* 2) İçindekiler (TOC) — sade, tek blok */
+/* 2) Başlıkların yaslı (justify) görünmesini önleme — koruma kuralı
+   Tema CSS'i veya kalıtım nedeniyle h2/h3 yaslı görünebiliyor;
+   bunu net bir şekilde sola yaslı yapar */
+.tms-content h1,
+.tms-content h2,
+.tms-content h3,
+.tms-content h4 {
+  text-align: left;
+}
+
+/* 3) İçindekiler (TOC) */
 .tms-content .tms-toc {
   background: #f7f8fa;
   border-left: 4px solid #4d41e0;
@@ -1126,6 +1137,10 @@
   margin: 0;
   padding-left: 1.25rem;
 }
+.tms-content .tms-toc li {
+  /* TOC içindeki linkler yaslı görünmesin */
+  text-align: left;
+}
 .tms-content .tms-toc a {
   color: #333;
   text-decoration: none;
@@ -1133,29 +1148,6 @@
 .tms-content .tms-toc a:hover {
   color: #4d41e0;
   text-decoration: underline;
-}
-
-/* 3) Açılır/kapanır FAQ bölümleri (<details>) */
-.tms-content details {
-  border-bottom: 1px solid #e5e7eb;
-  margin: 0.5rem 0;
-}
-.tms-content details > summary {
-  cursor: pointer;
-  list-style: none;
-  padding: 0.5rem 0;
-}
-.tms-content details > summary::-webkit-details-marker { display: none; }
-.tms-content details > summary::after {
-  content: "▾";
-  float: right;
-  transition: transform 0.2s;
-}
-.tms-content details[open] > summary::after {
-  transform: rotate(180deg);
-}
-.tms-content details > summary > h2 {
-  display: inline;
 }
 
 /* 4) Görsel + alt yazı */
@@ -1173,4 +1165,9 @@
   color: #6b7280;
   margin-top: 0.4rem;
   font-style: italic;
+}
+
+/* 5) TOC ve başlıklara smooth scroll (TOC linkleri çalışınca akıcı kayma) */
+html {
+  scroll-behavior: smooth;
 }
