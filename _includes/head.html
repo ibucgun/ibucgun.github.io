@@ -53,9 +53,12 @@
   <meta name="twitter:site" content="@drismailbucgun" />
   <meta name="twitter:creator" content="@drismailbucgun">
 
-  <!-- Schema.org JSON-LD: sadece anasayfada hekim + klinik kimliği -->
+  <!-- Schema.org JSON-LD: sadece anasayfada hekim + klinik kimliği, tms sayfasında tms -->
   {% if page.url == "/" %}
     {% include schema/hekim-klinik.html %}
+  {% endif %}
+  {% if page.url == "/tms" or page.url == "/tms/" or page.url == "/tms.html" %}
+  {% include schema/tms.html %}
   {% endif %}
 
   <!-- Google Analytics 4 — kullanıcı etkileşimi sonrası lazy load -->
