@@ -1249,3 +1249,107 @@ html {
     }
   }
 }
+
+
+/* =========================================================
+   YASAL SAYFALAR (KVKK, Çerez Politikası, Açık Rıza)
+   ========================================================= */
+.legal-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.legal-content h1 {
+  margin-bottom: 1.5rem;
+}
+.legal-content h2 {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  color: #4d41e0;
+}
+.legal-content h3 {
+  margin-top: 1.5rem;
+  font-size: 1.15rem;
+}
+.legal-content p,
+.legal-content li {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.legal-content .legal-intro {
+  background: #f7f8fa;
+  border-left: 4px solid #4d41e0;
+  padding: 1rem 1.25rem;
+  border-radius: 6px;
+  margin: 1rem 0 2rem 0;
+}
+.legal-content .legal-statement {
+  background: #f0ebff;
+  border: 1px solid #4d41e0;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+}
+.legal-content .legal-meta {
+  background: #f7f8fa;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+}
+.legal-content .legal-related {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+.legal-content .legal-related a {
+  color: #4d41e0;
+  text-decoration: none;
+}
+.legal-content .legal-related a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   FOOTER — Sade yapı: linkler satırı + telif + uyarı
+   ========================================================= */
+.page-footer {
+  padding: 2rem 1rem 1.5rem 1rem;
+  margin-top: 3rem;
+  border-top: 1px solid #e5e7eb;
+  text-align: center;
+}
+.page-footer .footer-links-row {
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+.page-footer .footer-links-row a {
+  color: #6b7280;
+  text-decoration: none;
+}
+.page-footer .footer-links-row a:hover {
+  color: #4d41e0;
+  text-decoration: underline;
+}
+.page-footer .footer-sep {
+  margin: 0 0.4rem;
+  color: #d1d5db;
+}
+.page-footer .footer-line {
+  margin: 0.25rem 0;
+  font-size: 0.85rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* Mobilde linkler satırı sarmal olabilsin */
+@media screen and (max-width: 600px) {
+  .page-footer .footer-links-row {
+    line-height: 2;
+  }
+  .page-footer .footer-line {
+    font-size: 0.8rem;
+  }
+}
