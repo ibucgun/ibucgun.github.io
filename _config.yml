@@ -32,7 +32,6 @@ resume_section_calistigikurumlar:      true
 resume_section_egitim:       true
 resume_section_aldigiegitimler: true
 resume_section_meslekiilgialanlari: true
-resume_section_iletisimverandevu: true
 resume_section_uyelikler: true
 
 # Resume social links
