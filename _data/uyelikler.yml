@@ -1,0 +1,25 @@
+# Mesleki Üyelikler
+# Yalnızca gerçekten üye olunan kuruluşlar listelenir.
+# logo: opsiyonel — /images/uyelikler/ altına ekleyin (logo kullanım izni gerekir).
+#       boş bırakılırsa kuruluşun kısaltması (monogram) gösterilir.
+# url:  opsiyonel — boş bırakılırsa kutu link olmaz, düz metin kalır.
+
+- organization: Türkiye Psikiyatri Derneği
+  kisa: TPD
+  logo:
+  url: https://www.psikiyatri.org.tr   # doğrulayın
+
+- organization: Bipolar Bozukluklar Derneği
+  kisa: BBD
+  logo:
+  url:
+
+- organization: Uluslararası Bipolar Bozukluklar Derneği (ISBD)
+  kisa: ISBD
+  logo:
+  url: https://www.isbd.org   # doğrulayın
+
+- organization: Academy of Brain Stimulation
+  kisa: ABS
+  logo:
+  url:
