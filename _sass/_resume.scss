@@ -1332,3 +1332,150 @@ html {
     font-size: 0.8rem;
   }
 }
+
+
+/* =========================================================
+   FOOTER — Sade yapı: linkler satırı + telif + uyarı
+   ========================================================= */
+.page-footer {
+  padding: 2rem 1rem 1.5rem 1rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+.page-footer .footer-links-row {
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+.page-footer .footer-links-row a {
+  color: #6b7280;
+  text-decoration: none;
+}
+.page-footer .footer-links-row a:hover {
+  color: #4d41e0;
+  text-decoration: underline;
+}
+.page-footer .footer-sep {
+  margin: 0 0.4rem;
+  color: #d1d5db;
+}
+.page-footer .footer-line {
+  margin: 0.25rem 0;
+  font-size: 0.85rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+ 
+/* Mobilde linkler satırı sarmal olabilsin */
+@media screen and (max-width: 600px) {
+  .page-footer .footer-links-row {
+    line-height: 2;
+  }
+  .page-footer .footer-line {
+    font-size: 0.8rem;
+  }
+}
+ 
+// ============================================
+// Yeterlilik ve Üyelikler (#uyelikler)
+// ============================================
+#uyelikler {
+ 
+  .cred-flex {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+ 
+  // Sol: FEBP belgesi
+  .cred-certificate {
+    flex: 0 0 38%;
+    margin: 0;
+    padding: 14px;
+    background: #faf9ff;
+    border: 1px solid rgba(77, 65, 224, 0.12);
+    border-radius: 16px;
+    text-align: center;
+ 
+    img {
+      display: block;
+      width: 100%;
+      border-radius: 10px;
+    }
+ 
+    figcaption {
+      @include sans_regular;
+      font-size: 0.8rem;
+      color: #6b7180;
+      line-height: 1.45;
+      margin-top: 12px;
+    }
+  }
+ 
+  // Sağ: açıklama + üyelik ızgarası
+  .cred-body {
+    flex: 1;
+ 
+    .section-intro-text {
+      margin-top: 0;
+      margin-bottom: 1.2rem;
+    }
+  }
+ 
+  .uyelik-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+ 
+  .uyelik-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    background: #fcfdff;
+    border: 1px solid rgba(77, 65, 224, 0.12);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+ 
+    .uyelik-logo {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+ 
+    .uyelik-mark {
+      @include sans_bold;
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f0ebff;
+      color: #4d41e0;
+      border-radius: 10px;
+      font-size: 0.78rem;
+    }
+ 
+    .uyelik-name {
+      @include sans_bold;
+      font-size: 0.95rem;
+      color: $text_color;
+      line-height: 1.3;
+    }
+ 
+    &:hover {
+      border-color: #4d41e0;
+      background: #fff;
+    }
+  }
+ 
+  @media screen and (max-width: 768px) {
+    .cred-flex { flex-direction: column; align-items: stretch; }
+    .cred-certificate { flex: none; width: 100%; max-width: 360px; margin: 0 auto; }
+    .uyelik-grid { grid-template-columns: 1fr; }
+  }
+}
