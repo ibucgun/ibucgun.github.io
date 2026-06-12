@@ -106,6 +106,6 @@
 
   &:hover {
     transform: translateY(-4px); // Üzerine gelince hafifçe kalkar
-    box-shadow: 0 12px 30px rgba(77, 65, 224, 0.08);
+    box-shadow: 0 12px 30px rgba($brand-indigo, 0.08);
   }
 }
