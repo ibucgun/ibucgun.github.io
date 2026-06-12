@@ -536,6 +536,126 @@
 
 
 
+/* =========================================================
+   GLOBAL CTA BUTONLARI (Telefon / WhatsApp / Instagram)
+   Üç sayfada kullanılır:
+     - Anasayfa hero  → .hero-action-btns konteynerinde
+     - TMS sayfası     → .cta-buttons konteynerinde
+     - Randevu sayfası → .cta-buttons konteynerinde
+   ========================================================= */
+
+.btn-double-line {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #4d41e0;
+  color: white;
+  padding: 12px 35px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(77, 65, 224, 0.25);
+  transition: all 0.3s ease;
+  line-height: 1.2;
+
+  .btn-main-text {
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: block;
+  }
+  .btn-sub-text {
+    font-weight: 400;
+    font-size: 0.85rem;
+    opacity: 0.9;
+    display: block;
+    margin-top: 2px;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(77, 65, 224, 0.35);
+  }
+}
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #5851db;
+  color: white;
+  padding: 0 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  &:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+  }
+}
+
+.btn-instagram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  color: #4d41e0;
+  border: 1px solid rgba(77, 65, 224, 0.2);
+  width: 60px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: #E1306C;
+    border-color: #E1306C;
+    transform: translateY(-3px) rotate(8deg);
+  }
+}
+
+/* Konteyner ortak kuralları */
+.hero-action-btns,
+.cta-buttons {
+  display: flex;
+  align-items: stretch;
+  gap: 15px;
+}
+
+.hero-action-btns {
+  margin-bottom: 2rem;
+}
+
+.cta-buttons {
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+@include media_mobile {
+  .btn-double-line,
+  .btn-whatsapp {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    padding: 15px 0;
+  }
+
+  .btn-instagram {
+    width: 50px;
+    height: 50px;
+  }
+
+  .hero-action-btns,
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-action-btns {
+    width: 100%;
+  }
+}
+
+
 /* --- MODERN HERO LAYOUT --- */
 .modern-hero-layout {
   /* Üstten 80px, alttan 60px boşluk bırakarak isme nefes aldırıyoruz */
@@ -589,76 +709,7 @@
     }
   }
 
-  /* --- YENİLENMİŞ BUTONLAR --- */
-  .hero-action-btns {
-    display: flex;
-    align-items: stretch; // Buton boylarını eşitler
-    gap: 15px;
-    margin-bottom: 2rem;
-
-    .btn-double-line {
-      display: inline-flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: #4d41e0;
-      color: white;
-      padding: 12px 35px;
-      border-radius: 50px;
-      text-decoration: none;
-      box-shadow: 0 10px 25px rgba(77, 65, 224, 0.25);
-      transition: all 0.3s ease;
-      line-height: 1.2;
-
-      .btn-main-text {
-        font-weight: 600;
-        font-size: 1.1rem;
-        display: block;
-      }
-      .btn-sub-text {
-        font-weight: 400;
-        font-size: 0.85rem;
-        opacity: 0.9;
-        display: block;
-        margin-top: 2px;
-      }
-
-      &:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(77, 65, 224, 0.35); }
-    }
-
-    .btn-whatsapp {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: #5851db;
-      color: white;
-      padding: 0 32px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      &:hover { transform: translateY(-3px); opacity: 0.9; }
-    }
-
-    .btn-instagram {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: white;
-      color: #4d41e0;
-      border: 1px solid rgba(77, 65, 224, 0.2);
-      width: 60px;
-      border-radius: 50px;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      
-      &:hover { 
-        color: #E1306C;
-        border-color: #E1306C;
-        transform: translateY(-3px) rotate(8deg);
-      }
-    }
-  }
+  /* Buton stilleri global blokta tanımlı (dosya başına bakın) */
 
   /* Görsel ve Parlama (Glow) */
   .hero-image-side {
@@ -711,22 +762,7 @@
       .executive-summary p { text-align: center; margin: 0 auto 2rem; }
     }
 
-    .hero-action-btns { 
-      flex-direction: column; 
-      width: 100%;
-      align-items: center;
-
-      .btn-double-line, .btn-whatsapp {
-        width: 100%; // Mobilde butonlar tam genişlik
-        max-width: 300px;
-        height: auto;
-        padding: 15px 0;
-      }
-
-      .btn-instagram {
-        width: 50px; height: 50px; // Mobilde ikon butonu küçülür
-      }
-    }
+    /* Buton mobil davranışı global blokta tanımlı */
 
     .hero-avatar { width: 100% !important; max-width: 400px; }
   }
@@ -1111,83 +1147,8 @@
   font-style: italic;
 }
 
-/* =========================================================
-   TMS sayfası CTA butonları — bağımsız stiller
-   .modern-hero-layout parent'ına bağımlı değil
-   ========================================================= */
-.tms-content .cta-buttons {
-  display: flex;
-  align-items: stretch;
-  gap: 15px;
-  justify-content: center;
-  margin-top: 1rem;
-  margin-bottom: 0;
-
-  .btn-double-line {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: #4d41e0;
-    color: white;
-    padding: 12px 35px;
-    border-radius: 50px;
-    text-decoration: none;
-    box-shadow: 0 10px 25px rgba(77, 65, 224, 0.25);
-    transition: all 0.3s ease;
-    line-height: 1.2;
-
-    .btn-main-text {
-      font-weight: 600;
-      font-size: 1.1rem;
-      display: block;
-    }
-    .btn-sub-text {
-      font-weight: 400;
-      font-size: 0.85rem;
-      opacity: 0.9;
-      display: block;
-      margin-top: 2px;
-    }
-
-    &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 35px rgba(77, 65, 224, 0.35);
-    }
-  }
-
-  .btn-whatsapp {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: #5851db;
-    color: white;
-    padding: 0 32px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    &:hover {
-      transform: translateY(-3px);
-      opacity: 0.9;
-    }
-  }
-}
-
-/* Mobilde butonlar dikey dizilsin, tam genişlik */
-  @include media_mobile {
-  .tms-content .cta-buttons {
-    flex-direction: column;
-    align-items: center;
-
-    .btn-double-line, .btn-whatsapp {
-      width: 100%;
-      max-width: 300px;
-      height: auto;
-      padding: 15px 0;
-    }
-  }
-}
+/* CTA buton stilleri global blokta tanımlı (dosya başına bakın).
+   .cta-buttons konteyneri hem TMS hem Randevu sayfasında çalışır. */
 
 
 /* =========================================================
