@@ -37,18 +37,12 @@ resume_section_uyelikler: true
 # Resume social links
 # uncomment the options you wish to display, and add your own URL
 resume_social_links:
-  resume_github_url:            "https://"
   resume_twitter_url:           "https://"
-  resume_dribbble_url:          "http://"
   resume_facebook_url:          "https://facebook.com/dr.ismailbucgun/"
   resume_linkedin_url:          "http://"
   resume_youtube_url:           "http://"
-  resume_spotify_url:           "http://"
   resume_instagram_url:         "https://instagram.com/dr.ismailbucgun/"
-  resume_website_url:           "http://"
-  resume_medium_url:            "http://"
   resume_anasayfa_url:          "https://ismailbucgun.com"
-  resume_print_social_links:    false
 
 # Navigation
 show_navigation: yes
