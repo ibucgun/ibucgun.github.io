@@ -1,42 +1,6 @@
 // Resume styles
 // ---------------------------------------/
 
-// util
-
-.icon-links {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  position: relative;
-  top: 4px;
-  text-align: center;
-  border-top: 2px solid #c7c7c7;
-  padding-top: .4rem;
-
-  @include media_larger_than_mobile {
-    float: right;
-    border-top: none;
-    padding-top: 0;
-  }
-
-  .icon-link-item {
-    display: inline-block;
-    margin-left: 5px;
-  }
-
-  .icon-link { display: inline-block;
-
-    &:hover .icon path {
-      fill: #333;
-      @include transition(all .2s ease);
-    }
-  }
-
-  .icon {
-    height: 28px;
-  }
-}
-
 .print-only { display: none !important }
 
 @media print {
@@ -1147,11 +1111,6 @@
   font-style: italic;
 }
 
-/* 5) TOC ve başlıklara smooth scroll (TOC linkleri çalışınca akıcı kayma) */
-html {
-  scroll-behavior: smooth;
-}
-
 /* =========================================================
    TMS sayfası CTA butonları — bağımsız stiller
    .modern-hero-layout parent'ına bağımlı değil
@@ -1290,49 +1249,6 @@ html {
 .legal-content .legal-related a:hover {
   text-decoration: underline;
 }
-
-/* =========================================================
-   FOOTER — Sade yapı: linkler satırı + telif + uyarı
-   ========================================================= */
-.page-footer {
-  padding: 2rem 1rem 1.5rem 1rem;
-  margin-top: 2rem;
-  text-align: center;
-}
-.page-footer .footer-links-row {
-  margin-bottom: 1rem;
-  font-size: 0.85rem;
-  color: #6b7280;
-}
-.page-footer .footer-links-row a {
-  color: #6b7280;
-  text-decoration: none;
-}
-.page-footer .footer-links-row a:hover {
-  color: #4d41e0;
-  text-decoration: underline;
-}
-.page-footer .footer-sep {
-  margin: 0 0.4rem;
-  color: #d1d5db;
-}
-.page-footer .footer-line {
-  margin: 0.25rem 0;
-  font-size: 0.85rem;
-  color: #6b7280;
-  line-height: 1.5;
-}
-
-/* Mobilde linkler satırı sarmal olabilsin */
-@media screen and (max-width: 600px) {
-  .page-footer .footer-links-row {
-    line-height: 2;
-  }
-  .page-footer .footer-line {
-    font-size: 0.8rem;
-  }
-}
-
 
 /* =========================================================
    FOOTER — Sade yapı: linkler satırı + telif + uyarı
