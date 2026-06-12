@@ -1175,7 +1175,7 @@
 }
 
 /* Mobilde butonlar dikey dizilsin, tam genişlik */
-@media screen and (max-width: 640px) {
+  @include media_mobile {
   .tms-content .cta-buttons {
     flex-direction: column;
     align-items: center;
@@ -1283,7 +1283,7 @@
 }
  
 /* Mobilde linkler satırı sarmal olabilsin */
-@media screen and (max-width: 600px) {
+  @include media_mobile {
   .page-footer .footer-links-row {
     line-height: 2;
   }
@@ -1389,7 +1389,7 @@
     }
   }
  
-  @media screen and (max-width: 768px) {
+  @include media_mobile {
     .cred-flex { flex-direction: column; align-items: stretch; }
     .cred-certificate { flex: none; width: 100%; max-width: 360px; margin: 0 auto; }
     .uyelik-grid { grid-template-columns: 1fr; }
