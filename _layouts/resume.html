@@ -128,6 +128,51 @@
   </div>
 </div>
 
+{% if site.resume_section_uyelikler %}
+<section id="uyelikler" class="modern-section-card">
+ 
+  <header class="section-header">
+    <div class="section-icon-wrapper">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4d41e0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="8" r="6"></circle>
+        <path d="M8.21 13.89 7 23l5-3 5 3-1.21-9.12"></path>
+      </svg>
+    </div>
+    <h2>Yeterlilik ve Üyelikler</h2>
+  </header>
+ 
+  <div class="cred-flex">
+ 
+    <figure class="cred-certificate">
+      <img src="/images/febp-avrupa-board-sertifikasi.webp" alt="Avrupa Psikiyatri Yeterlilik Belgesi (FEBP)" loading="lazy">
+      <figcaption>Avrupa Psikiyatri Yeterlilik Belgesi<br>Fellow of The European Board of Psychiatry (FEBP)</figcaption>
+    </figure>
+ 
+    <div class="cred-body">
+      <p class="section-intro-text">Avrupa Psikiyatri Yeterlilik Belgesi (FEBP) sahibiyim ve aşağıdaki mesleki kuruluşların üyesiyim.</p>
+ 
+      <div class="uyelik-grid">
+        {% for u in site.data.uyelikler %}
+        {% if u.url and u.url != "" %}
+        <a href="{{ u.url }}" class="uyelik-box" target="_blank" rel="noopener" title="{{ u.organization }}">
+        {% else %}
+        <div class="uyelik-box">
+        {% endif %}
+          {% if u.logo and u.logo != "" %}
+          <img src="{{ u.logo }}" alt="{{ u.organization }} logosu" class="uyelik-logo" loading="lazy">
+          {% else %}
+          <span class="uyelik-mark">{{ u.kisa }}</span>
+          {% endif %}
+          <span class="uyelik-name">{{ u.organization }}</span>
+        {% if u.url and u.url != "" %}</a>{% else %}</div>{% endif %}
+        {% endfor %}
+      </div>
+    </div>
+ 
+  </div>
+ 
+</section>
+{% endif %}
 
 {% if site.resume_section_egitim %}
 <section id="egitim" class="modern-section-card">
