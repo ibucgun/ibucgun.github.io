@@ -2,6 +2,7 @@
 layout: post
 title: "Bipolar Bozukluk Tanısı Nasıl Konur?"
 author: "Uzm. Dr. İsmail BUÇGÜN"
+category: bipolar
 tags: [Bipolar Bozukluk]
 description: Bipolar duygudurum bozukluğu tanısı nasıl konur? Ayırıcı tanısı nasıl yapılır?
 ---

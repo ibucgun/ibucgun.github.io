@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | Adana Psikiyatri | Uzm. Dr. İsmail Buçgün — DEMO v2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --indigo:#4D41E0;
+    --indigo-700:#3A30B8;
+    --indigo-050:#F3F1FD;
+    --ink:#1A1830;
+    --muted:#6B6880;
+    --faint:#9B98AC;
+    --line:#E8E6F4;
+    --bg:#FBFBFE;
+    --surface:#FFFFFF;
+    --shadow:0 1px 2px rgba(26,24,48,.04), 0 10px 30px rgba(77,65,224,.06);
+    --shadow-hover:0 6px 14px rgba(26,24,48,.07), 0 18px 44px rgba(77,65,224,.13);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.font-display{font-family:'Poppins',sans-serif}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .reader{max-width:840px;margin:0 auto;padding:0 24px}
+
+  /* ---------- NAV ---------- */
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{font-family:'Poppins';font-weight:600;font-size:16px;letter-spacing:-.01em}
+  .brand b{color:var(--indigo)}
+  .nav-links{display:flex;gap:26px;font-size:14.5px;font-weight:500;color:var(--muted)}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-links a.active{color:var(--indigo);font-weight:600}
+  .nav-cta{background:var(--indigo);color:#fff;padding:9px 18px;border-radius:999px;font-size:14px;font-weight:600;font-family:'Poppins';transition:background .2s}
+  .nav-cta:hover{background:var(--indigo-700)}
+  @media(max-width:760px){.nav-links{display:none}}
+
+  /* ---------- HERO + SEARCH ---------- */
+  .hero{background:radial-gradient(120% 130% at 12% 0%, #F4F2FE 0%, var(--bg) 58%);padding:56px 0 30px}
+  .hero .reader{padding-top:0;padding-bottom:0}
+  .eyebrow{font-family:'Poppins';font-weight:600;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--indigo);margin-bottom:14px}
+  .hero h1{font-size:clamp(34px,5vw,46px);font-weight:700;letter-spacing:-.02em;line-height:1.05}
+  .hero p.lead{margin-top:14px;max-width:600px;color:var(--muted);font-size:16.5px}
+  .search{margin-top:26px;position:relative;max-width:560px}
+  .search svg{position:absolute;left:20px;top:50%;transform:translateY(-50%);width:20px;height:20px;color:var(--muted)}
+  .search input{width:100%;font-family:'Inter';font-size:16px;color:var(--ink);padding:16px 20px 16px 52px;border:1.5px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow);transition:border-color .2s, box-shadow .2s}
+  .search input::placeholder{color:#9b98ac}
+  .search input:focus{outline:none;border-color:var(--indigo);box-shadow:0 0 0 4px rgba(77,65,224,.12)}
+
+  /* ---------- FILTER BAR ---------- */
+  .filterbar{position:sticky;top:68px;z-index:40;background:rgba(251,251,254,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:14px 0}
+  .filter-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .chips{display:flex;gap:9px;flex-wrap:wrap}
+  .chip{font-family:'Poppins';font-size:13.5px;font-weight:500;padding:8px 15px;border-radius:999px;cursor:pointer;background:#fff;border:1.5px solid var(--line);color:var(--muted);transition:all .18s;white-space:nowrap}
+  .chip:hover{border-color:#cfcbe9;color:var(--ink)}
+  .chip.active{background:var(--indigo);border-color:var(--indigo);color:#fff}
+  .count{font-size:14px;color:var(--muted);white-space:nowrap}
+  .count b{color:var(--ink);font-weight:600}
+  @media(max-width:620px){.chips{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:2px}.count{display:none}}
+
+  /* ---------- CATEGORY COLORS ---------- */
+  .c-bipolar    {--cc:#4D41E0;--cb:#EEECFD}
+  .c-depresyon  {--cc:#1F7A8C;--cb:#E4F1F4}
+  .c-anksiyete  {--cc:#B5532E;--cb:#FBEDE6}
+  .c-tms        {--cc:#6B3FC9;--cb:#F0EAFB}
+  .c-geriatrik  {--cc:#3D6098;--cb:#E9EFF8}
+  .c-psikoterapi{--cc:#2E7D5B;--cb:#E5F3EC}
+  .badge{font-family:'Poppins';font-size:11.5px;font-weight:600;padding:5px 11px;border-radius:999px;background:var(--cb);color:var(--cc);display:inline-block}
+
+  /* ---------- FEATURED ---------- */
+  main{padding:34px 0 70px}
+  .feat-eyebrow{font-family:'Poppins';font-weight:600;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:14px}
+  .feat{
+    display:block;position:relative;
+    background:linear-gradient(135deg,#F7F6FE 0%, #FFFFFF 70%);
+    border:1px solid var(--line);
+    border-radius:18px;padding:30px 32px;box-shadow:var(--shadow);
+    transition:transform .2s, box-shadow .2s;
+  }
+  .feat:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+  .feat .meta-top{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+  .feat .read{font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:5px}
+  .read svg{width:13px;height:13px}
+  .feat h2{font-size:clamp(23px,3.4vw,30px);font-weight:700;line-height:1.22;letter-spacing:-.015em;transition:color .2s}
+  .feat:hover h2{color:var(--indigo)}
+  .feat .excerpt{margin-top:13px;font-size:15.5px;color:var(--muted);max-width:62ch}
+  .feat .foot{margin-top:20px;display:flex;align-items:center;gap:14px}
+  .feat .date{font-size:13px;color:var(--faint)}
+  .feat .more{font-family:'Poppins';font-size:13.5px;font-weight:600;color:var(--indigo)}
+
+  /* ---------- CARD GRID ---------- */
+  .list-head{font-family:'Poppins';font-weight:600;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--faint);margin:44px 0 18px}
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  @media(max-width:640px){.grid{grid-template-columns:1fr}}
+
+  .card{
+    position:relative;overflow:hidden;
+    background:var(--surface);border:1px solid var(--line);border-radius:16px;
+    padding:24px;display:flex;flex-direction:column;gap:12px;min-height:210px;
+    box-shadow:var(--shadow);
+    transition:transform .2s, box-shadow .2s, border-color .2s;
+  }
+  a.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover);border-color:#d9d5f4}
+  .card-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+  .card .read{font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:5px}
+  .card h3{font-size:19px;font-weight:600;line-height:1.32;letter-spacing:-.01em;transition:color .2s}
+  a.card:hover h3{color:var(--indigo)}
+  .card .excerpt{font-size:14px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .card-foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;padding-top:6px}
+  .card .date{font-size:12.5px;color:var(--faint)}
+  .card .more{font-family:'Poppins';font-size:13px;font-weight:600;color:var(--indigo);display:flex;align-items:center;gap:5px;transition:gap .2s}
+  a.card:hover .more{gap:9px}
+
+  /* "soon" cards */
+  .card.soon{border-style:dashed;background:#FCFCFF;cursor:default}
+  .card.soon h3{color:var(--muted)}
+  .soon-tag{font-family:'Poppins';font-size:10.5px;font-weight:600;color:var(--muted);background:#F2F1F8;padding:4px 10px;border-radius:999px}
+
+  /* ---------- EMPTY ---------- */
+  .empty{text-align:center;padding:64px 20px;color:var(--muted);display:none}
+  .empty svg{width:42px;height:42px;color:#cfcbe9;margin-bottom:14px}
+  .empty h3{font-size:19px;color:var(--ink);margin-bottom:6px}
+  .empty button{margin-top:16px;font-family:'Poppins';font-weight:600;font-size:14px;color:var(--indigo);background:var(--indigo-050);border:none;cursor:pointer;padding:10px 18px;border-radius:999px}
+
+  /* ---------- FOOTER ---------- */
+  footer.ft{border-top:1px solid var(--line);background:#fff;padding:30px 0 40px}
+  .ft-links{display:flex;gap:8px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-bottom:14px}
+  .ft-links a:hover{color:var(--indigo)}
+  .ft small{display:block;color:var(--faint);font-size:12.5px;line-height:1.7}
+
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.feat:hover,a.card:hover{transform:none}}
+  .feat,.card{animation:fade .3s ease both}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <div class="brand">Uzm. Dr. <b>İsmail Buçgün</b></div>
+    <nav class="nav-links">
+      <a href="#">Anasayfa</a><a href="#">TMS</a><a href="#">SSS</a>
+      <a href="#" class="active">Blog</a><a href="#">İletişim</a>
+    </nav>
+    <a href="#" class="nav-cta">Randevu Al</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="reader">
+    <div class="eyebrow">Adana Psikiyatri</div>
+    <h1>Blog</h1>
+    <p class="lead">Psikiyatrik hastalıklar, tedavi yöntemleri ve takip süreci hakkında özgün, anlaşılır yazılar.</p>
+    <div class="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <input id="q" type="text" placeholder="Yazılarda ara: anksiyete, bipolar, TMS, depresyon…" aria-label="Yazılarda ara" autocomplete="off">
+    </div>
+  </div>
+</section>
+
+<div class="filterbar">
+  <div class="reader filter-inner">
+    <div class="chips" id="chips">
+      <button class="chip active" data-cat="all">Tümü</button>
+      <button class="chip" data-cat="depresyon">Depresyon</button>
+      <button class="chip" data-cat="bipolar">Bipolar Bozukluk</button>
+      <button class="chip" data-cat="anksiyete">Anksiyete</button>
+      <button class="chip" data-cat="tms">TMS &amp; Nöromodülasyon</button>
+      <button class="chip" data-cat="geriatrik">Geriatrik Psikiyatri</button>
+      <button class="chip" data-cat="psikoterapi">Psikoterapi</button>
+    </div>
+    <div class="count"><b id="num">0</b> yazı</div>
+  </div>
+</div>
+
+<main>
+  <div class="reader" id="content"></div>
+</main>
+
+<footer class="ft">
+  <div class="reader">
+    <div class="ft-links">
+      <a href="#">KVKK Aydınlatma Metni</a><span>·</span><a href="#">Çerez Politikası</a><span>·</span>
+      <a href="#">Açık Rıza Metni</a><span>·</span><a href="#">Site Haritası</a>
+    </div>
+    <small>© 2026 Uzm. Dr. İsmail Buçgün — Adana Psikiyatri ve TMS Muayenehanesi.<br>
+    Sitede yer alan bilgiler doktor tavsiyesi yerine geçmez, lütfen doktorunuza danışınız.</small>
+  </div>
+</footer>
+
+<script>
+/* Jekyll'de POSTS dizisi yerine site.posts döngüsü gelir.
+   En yeni published yazı otomatik "öne çıkan" olur; gerisi liste satırı. */
+const POSTS = [
+  {title:"Anksiyete Nedir? Ne Zaman Bozukluk Olur?", cat:"anksiyete", label:"Anksiyete",
+   url:"https://ismailbucgun.com/anksiyete-nedir-ne-zaman-bozukluk-olur", date:"18.09.2022", read:6, published:true,
+   excerpt:"Anksiyete; yaygın, belirsiz bir endişe hissiyle karakterizedir. Baş ağrısı, terleme, çarpıntı ve göğüste sıkışma gibi otonomik belirtiler eşlik edebilir. Peki ne zaman normal kaygının sınırını aşıp bir bozukluğa dönüşür?"},
+  {title:"Bipolar Bozukluk Tanısı Nasıl Konur?", cat:"bipolar", label:"Bipolar Bozukluk",
+   url:"https://ismailbucgun.com/bipolar-bozukluk-tanisi-nasil-konur", date:"16.09.2022", read:5, published:true,
+   excerpt:"Tanı, psikiyatri uzmanı tarafından yapılan muayene ile konur; detaylı değerlendirme, öykü, aile görüşmesi ve ölçekler kullanılır. İlk dönem depresyon olanlarda tanı yıllar alabilir."},
+  {title:"Bipolar Bozukluk Kimlerde Görülür?", cat:"bipolar", label:"Bipolar Bozukluk",
+   url:"https://ismailbucgun.com/bipolar-bozukluk-kimlerde-gorulur", date:"13.09.2022", read:4, published:true,
+   excerpt:"Bipolar bozukluğun görülme sıklığı, risk faktörleri ve hastalığın kimlerde daha sık ortaya çıktığına dair genel bir bakış."},
+  {title:"Bipolar Duygudurum Bozukluğu Nedir?", cat:"bipolar", label:"Bipolar Bozukluk",
+   url:"https://ismailbucgun.com/bipolar-duygudurum-bozuklugu-nedir", date:"05.09.2022", read:5, published:true,
+   excerpt:"Duygudurumda dönemsel iniş çıkışlarla seyreden bipolar bozukluğun temel kavramları, belirtileri ve seyri."},
+  {title:"Psikanalitik Psikoterapi Nedir?", cat:"psikoterapi", label:"Psikoterapi",
+   url:"https://ismailbucgun.com/psikanalitik-psikoterapi-nedir", date:"07.09.2022", read:5, published:true,
+   excerpt:"Bilinçdışı süreçleri ve geçmiş deneyimlerin bugüne etkisini ele alan psikanalitik psikoterapi yaklaşımının temelleri."},
+  {title:"Destekleyici Psikoterapi Nedir?", cat:"psikoterapi", label:"Psikoterapi",
+   url:"https://ismailbucgun.com/destekleyici-psikoterapi-nedir", date:"06.09.2022", read:4, published:true,
+   excerpt:"Kişinin mevcut baş etme becerilerini güçlendirmeyi amaçlayan destekleyici psikoterapinin ilkeleri ve kimlere uygun olduğu."},
+
+  // ÖRNEK / "Yakında" — eklemeni önerdiğim kategoriler nasıl görünür
+  {title:"TMS Tedavisi Nedir, Kimlere Uygulanır?", cat:"tms", label:"TMS & Nöromodülasyon",
+   url:"#", date:"Yakında", read:7, published:false,
+   excerpt:"Transkraniyal manyetik uyarımın çalışma prensibi, hangi durumlarda tercih edildiği ve tedavi süreci. (Örnek başlık)"},
+  {title:"Tedaviye Dirençli Depresyonda Yaklaşım", cat:"depresyon", label:"Depresyon",
+   url:"#", date:"Yakında", read:6, published:false,
+   excerpt:"İlaç tedavisine yeterli yanıt alınamayan depresyon vakalarında izlenen basamaklar ve seçenekler. (Örnek başlık)"},
+  {title:"Yaşlılarda Depresyon: Belirtiler ve Tedavi", cat:"geriatrik", label:"Geriatrik Psikiyatri",
+   url:"#", date:"Yakında", read:6, published:false,
+   excerpt:"İleri yaşta depresyonun atlanabilen belirtileri, bedensel hastalıklarla ilişkisi ve tedavi ilkeleri. (Örnek başlık)"},
+];
+
+const content = document.getElementById('content');
+const num = document.getElementById('num');
+const q   = document.getElementById('q');
+let activeCat = 'all';
+const low = s => s.toLocaleLowerCase('tr');
+const clock = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>`;
+
+function featHTML(p){
+  return `<div class="feat-eyebrow">En Son Yazı</div>
+  <a class="feat c-${p.cat}" href="${p.url}">
+    <div class="meta-top">
+      <span class="badge">${p.label}</span>
+      <span class="read">${clock}${p.read} dk okuma</span>
+    </div>
+    <h2>${p.title}</h2>
+    <p class="excerpt">${p.excerpt}</p>
+    <div class="foot"><span class="date">${p.date}</span><span class="more">Devamını oku →</span></div>
+  </a>`;
+}
+
+function cardHTML(p){
+  const soon = !p.published;
+  const top = soon
+    ? `<span class="soon-tag">Yakında</span>`
+    : `<span class="read">${clock}${p.read} dk okuma</span>`;
+  const foot = soon
+    ? `<div class="card-foot"><span class="date">${p.date}</span></div>`
+    : `<div class="card-foot"><span class="date">${p.date}</span><span class="more">Devamını oku →</span></div>`;
+  const inner = `
+    <div class="card-top">
+      <span class="badge">${p.label}</span>
+      ${top}
+    </div>
+    <h3>${p.title}</h3>
+    <p class="excerpt">${p.excerpt}</p>
+    ${foot}`;
+  return soon
+    ? `<div class="card soon c-${p.cat}">${inner}</div>`
+    : `<a class="card c-${p.cat}" href="${p.url}">${inner}</a>`;
+}
+
+function render(){
+  const term = low(q.value.trim());
+  const match = POSTS.filter(p=>{
+    const okCat = activeCat==='all' || p.cat===activeCat;
+    const okTerm = !term || low(p.title).includes(term) || low(p.excerpt).includes(term) || low(p.label).includes(term);
+    return okCat && okTerm;
+  });
+  num.textContent = match.length;
+
+  if(match.length===0){
+    content.innerHTML = `<div class="empty" style="display:block">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <h3>Sonuç bulunamadı</h3><p>“${q.value}” için yazı yok. Farklı bir kelime deneyin.</p>
+      <button onclick="resetAll()">Tüm yazıları göster</button></div>`;
+    return;
+  }
+
+  const pub  = match.filter(p=>p.published);
+  const soon = match.filter(p=>!p.published);
+  const feat = pub[0] || null;
+  const rest = (feat ? pub.slice(1) : pub).concat(soon);
+
+  let html = '';
+  if(feat) html += featHTML(feat);
+  if(rest.length){
+    html += `<div class="list-head">${feat?'Diğer Yazılar':'Yazılar'}</div>`;
+    html += `<div class="grid">${rest.map(cardHTML).join('')}</div>`;
+  }
+  content.innerHTML = html;
+}
+
+function resetAll(){
+  q.value=''; activeCat='all';
+  document.querySelectorAll('.chip').forEach(c=>c.classList.toggle('active', c.dataset.cat==='all'));
+  render();
+}
+document.getElementById('chips').addEventListener('click', e=>{
+  const b=e.target.closest('.chip'); if(!b) return;
+  activeCat=b.dataset.cat;
+  document.querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));
+  b.classList.add('active'); render();
+});
+q.addEventListener('input', render);
+render();
+</script>
+</body>
+</html>

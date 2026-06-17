@@ -1,78 +1,244 @@
 ---
 layout: page
 title: "Blog"
-description: Adana Psikiyatri • Psikiyatrik hastalıklar, tedavileri, takip süreci konusunda merak edilenler hakkında ayrıntılı ve özgün yazıların yer aldığı blog sayfamızı takip edebilirsiniz. 
-lead: Psikiyatrik hastalıklar, tedavileri, takip süreci konusunda merak edilenler hakkında ayrıntılı ve özgün yazıların yer aldığı blog sayfamızı takip edebilirsiniz. 
+description: Adana Psikiyatri • Psikiyatrik hastalıklar, tedavileri, takip süreci konusunda merak edilenler hakkında ayrıntılı ve özgün yazılar.
+lead: Psikiyatrik hastalıklar, tedavi yöntemleri ve takip süreci hakkında özgün, anlaşılır yazılar.
 ---
 
-        <div class="resume-item">
-		<p style="text-align: justify;font-size: 1.125rem;">
-		<b>Mesleki ilgi alanlarım ve tüm psikiyatrik hastalıklar hakkında özgün, ayrıntılı içeriklere bu sayfada ulaşabilirsiniz.</b> İyi okumalar! 
-		</p>
-		
-		<div>
-<div style="border-top:2px solid #c7c7c7; font-size: 1.125rem;"></div><br>
+{%- comment -%}
+  Liquid: kategori etiketleri (slug → görünen ad).
+  Yeni kategori eklemek için bu mapping'e + _sass/blog.scss .c-* sınıfına ekle.
+{%- endcomment -%}
+{%- assign cat_labels = "bipolar:Bipolar Bozukluk|psikoterapi:Psikoterapi|anksiyete:Anksiyete" | split: "|" -%}
 
-<div class="tags">
-  <div class="tags-clouds">
-    {% for tag in site.tags %}
-    <a href="#{{ tag[0] }}">{{ tag[0] }}</a>
-    {% endfor %}
-  </div>
-<br>
-  <section class="content-section">
-        <header class="section-header">
-          <h2>Son Yazılan Yazılar</h2>
-        </header>
-    {% for post in site.posts limit:2 %}
-        <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
-          <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
-          <h3 class="resume-item-title" style="text-align: justify;" itemprop="name"><a href="{{ post.url | prepend: site.baseurl }}" itemprop="url">{{ post.title }}</a></h3>
-          <h4 class="resume-item-details" itemprop="description">Yayınlanma Tarihi: {{ post.date | date: "%d.%m.%Y" }}</h4>
-          <p class="resume-item-copy" style="text-align: justify; font-size: 1.125rem;">      {% if post.excerpt_separator %}
-        {{ post.excerpt | strip_html }}
-      {% else %}
-        {{ post.content | strip_html | truncatewords: 50 }}
-      {% endif %}</p>
-        </div>
-  {% endfor %}
-  </section>
-<div style="border-top:2px solid #c7c7c7; font-size: 1.125rem;"></div>
-  {% for tag in site.tags %}
-  <div class="tags-item" id="{{ tag[0] }}">
-    <svg
-      class="tags-item-icon"
-      xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="feather feather-tag"
-    >
-      <path
-        d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
-      ></path>
-      <line x1="7" y1="7" x2="7.01" y2="7"></line>
-    </svg>
-    <h2 class="tags-item-label">{{ tag[0] }}</h2>
-    {% for post in tag[1] %}
-    <a class="tags-post" style="text-decoration:none;" href="{{ post.url | prepend: site.baseurl }}">
-      <div style=" font-size: 1.125rem;max-width: 80%;">
-        <span class="tags-post-title">{{ post.title }}</span>
-        <div class="tags-post-line"></div>
-      </div>
-	  <span class="tags-post-meta" style=" font-size: 1.125rem; max-width: 20%;">
-        <time datetime="{{ post.date }}">
-          {{ post.date | date: "%d.%m.%Y" }}
-        </time>
-      </span>
-    </a>
-    {% endfor %}
-  </div>
-  {% endfor %}
+{%- comment -%}
+  Sayfada gerçek olarak yer alan kategoriler (sahte chip üretilmiyor).
+  site.posts üzerinden uniq kategori sırasıyla.
+{%- endcomment -%}
+{%- assign active_cats = site.posts | map: "category" | compact | uniq -%}
+
+<div class="blog-search" role="search">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+    <circle cx="11" cy="11" r="7"></circle>
+    <path d="M21 21l-4.3-4.3"></path>
+  </svg>
+  <input id="blog-q" type="search" placeholder="Yazılarda ara: anksiyete, bipolar, psikoterapi…" aria-label="Yazılarda ara" autocomplete="off">
 </div>
 
+<div class="blog-filterbar">
+  <div class="blog-chips" id="blog-chips" role="tablist" aria-label="Kategori filtresi">
+    <button type="button" class="blog-chip active" data-cat="all" role="tab" aria-selected="true">Tümü</button>
+    {%- for cat in active_cats -%}
+      {%- assign label = cat -%}
+      {%- for pair in cat_labels -%}
+        {%- assign kv = pair | split: ":" -%}
+        {%- if kv[0] == cat -%}{%- assign label = kv[1] -%}{%- endif -%}
+      {%- endfor -%}
+      <button type="button" class="blog-chip" data-cat="{{ cat }}" role="tab" aria-selected="false">{{ label }}</button>
+    {%- endfor -%}
+  </div>
+  <div class="blog-count" aria-live="polite"><b id="blog-num">{{ site.posts | size }}</b> yazı</div>
+</div>
+
+<div id="blog-content">
+
+  {%- assign feat = site.posts.first -%}
+  {%- assign rest = site.posts | offset: 1 -%}
+
+  {%- if feat -%}
+  <div id="blog-feat-wrap">
+    {%- assign feat_label = feat.category -%}
+    {%- for pair in cat_labels -%}
+      {%- assign kv = pair | split: ":" -%}
+      {%- if kv[0] == feat.category -%}{%- assign feat_label = kv[1] -%}{%- endif -%}
+    {%- endfor -%}
+    {%- assign feat_words = feat.content | number_of_words -%}
+    {%- assign feat_read = feat_words | divided_by: 200 | plus: 1 -%}
+
+    <p class="blog-feat-eyebrow">En Son Yazı</p>
+    <a class="blog-feat c-{{ feat.category | default: 'bipolar' }}"
+       href="{{ feat.url | prepend: site.baseurl }}"
+       data-category="{{ feat.category }}"
+       data-search="{{ feat.title | downcase }} {{ feat_label | downcase }}">
+      <div class="meta-top">
+        <span class="blog-badge">{{ feat_label }}</span>
+        <span class="read">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          {{ feat_read }} dk okuma
+        </span>
+      </div>
+      <h2>{{ feat.title }}</h2>
+      <p class="excerpt">{% if feat.description %}{{ feat.description | strip_html | truncate: 220 }}{% else %}{{ feat.content | strip_html | truncatewords: 32 }}{% endif %}</p>
+      <div class="foot">
+        <span class="date">{{ feat.date | date: "%d.%m.%Y" }}</span>
+        <span class="more">Devamını oku →</span>
+      </div>
+    </a>
+  </div>
+  {%- endif -%}
+
+  {%- if rest.size > 0 -%}
+  <div id="blog-list-head-wrap">
+    <p class="blog-list-head">Diğer Yazılar</p>
+  </div>
+  <div class="blog-grid" id="blog-grid">
+    {%- for post in rest -%}
+      {%- assign post_label = post.category -%}
+      {%- for pair in cat_labels -%}
+        {%- assign kv = pair | split: ":" -%}
+        {%- if kv[0] == post.category -%}{%- assign post_label = kv[1] -%}{%- endif -%}
+      {%- endfor -%}
+      {%- assign words = post.content | number_of_words -%}
+      {%- assign read = words | divided_by: 200 | plus: 1 -%}
+
+      <a class="blog-card c-{{ post.category | default: 'bipolar' }}"
+         href="{{ post.url | prepend: site.baseurl }}"
+         data-category="{{ post.category }}"
+         data-search="{{ post.title | downcase }} {{ post_label | downcase }}">
+        <div class="card-top">
+          <span class="blog-badge">{{ post_label }}</span>
+          <span class="read">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            {{ read }} dk okuma
+          </span>
+        </div>
+        <h3>{{ post.title }}</h3>
+        <p class="excerpt">{% if post.description %}{{ post.description | strip_html | truncate: 180 }}{% else %}{{ post.content | strip_html | truncatewords: 24 }}{% endif %}</p>
+        <div class="card-foot">
+          <span class="date">{{ post.date | date: "%d.%m.%Y" }}</span>
+          <span class="more">Devamını oku →</span>
+        </div>
+      </a>
+    {%- endfor -%}
+  </div>
+  {%- endif -%}
+
+  <div class="blog-empty" id="blog-empty" role="status" aria-live="polite">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+      <circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>
+    </svg>
+    <h3>Sonuç bulunamadı</h3>
+    <p id="blog-empty-msg">Aradığınız kritere uyan yazı yok. Farklı bir kelime ya da kategori deneyin.</p>
+    <button type="button" class="blog-reset" id="blog-reset">Tüm yazıları göster</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var q       = document.getElementById('blog-q');
+  var chips   = document.getElementById('blog-chips');
+  var num     = document.getElementById('blog-num');
+  var featWrap = document.getElementById('blog-feat-wrap');
+  var listHead = document.getElementById('blog-list-head-wrap');
+  var grid    = document.getElementById('blog-grid');
+  var empty   = document.getElementById('blog-empty');
+  var emptyMsg = document.getElementById('blog-empty-msg');
+  var resetBtn = document.getElementById('blog-reset');
+
+  if (!q || !chips) return;
+
+  var cards = grid ? Array.prototype.slice.call(grid.querySelectorAll('.blog-card')) : [];
+  var feat  = featWrap ? featWrap.querySelector('.blog-feat') : null;
+  var totalPosts = cards.length + (feat ? 1 : 0);
+  var activeCat = 'all';
+
+  function tlow(s){ return (s || '').toLocaleLowerCase('tr'); }
+
+  function setCount(n){
+    num.textContent = n;
+  }
+
+  function render(){
+    var term = tlow(q.value.trim());
+    var filtering = term !== '' || activeCat !== 'all';
+
+    // Featured: yalnız filtre yokken görünür
+    var featVisible = false;
+    if (feat) {
+      featVisible = !filtering;
+      featWrap.style.display = featVisible ? '' : 'none';
+    }
+
+    // Kartları filtrele
+    var visibleCount = 0;
+    cards.forEach(function(card){
+      var cat = card.getAttribute('data-category') || '';
+      var search = card.getAttribute('data-search') || '';
+      var okCat  = activeCat === 'all' || cat === activeCat;
+      var okTerm = !term || tlow(search).indexOf(term) !== -1;
+      var show   = okCat && okTerm;
+      card.style.display = show ? '' : 'none';
+      if (show) visibleCount++;
+    });
+
+    // Liste başlığı: kart yoksa veya feat görünüyorsa "Diğer Yazılar"; filtre aktifse "Sonuçlar" yazılabilir ama sade tutuyoruz
+    if (listHead) {
+      listHead.style.display = visibleCount > 0 ? '' : 'none';
+    }
+    if (grid) {
+      grid.style.display = visibleCount > 0 ? '' : 'none';
+    }
+
+    // Sayaç: feat (görünüyorsa) + kart sayısı; ya da filtreli toplam
+    var displayed = (featVisible ? 1 : 0) + visibleCount;
+    setCount(displayed);
+
+    // Empty state
+    var noResults = visibleCount === 0 && !featVisible;
+    if (empty) {
+      empty.classList.toggle('is-visible', noResults);
+      if (noResults) {
+        if (term) {
+          emptyMsg.textContent = '“' + q.value + '” için yazı yok. Farklı bir kelime ya da kategori deneyin.';
+        } else {
+          emptyMsg.textContent = 'Seçili kategoride yazı yok. Farklı bir kategori deneyin.';
+        }
+      }
+    }
+  }
+
+  // Chip click delegation
+  chips.addEventListener('click', function(e){
+    var b = e.target.closest('.blog-chip');
+    if (!b) return;
+    var cat = b.getAttribute('data-cat');
+    activeCat = cat;
+    Array.prototype.forEach.call(chips.querySelectorAll('.blog-chip'), function(c){
+      var on = c === b;
+      c.classList.toggle('active', on);
+      c.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    render();
+  });
+
+  // Klavye desteği — chip'lerin sol/sağ ok ile dolaşımı
+  chips.addEventListener('keydown', function(e){
+    if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+    var list = Array.prototype.slice.call(chips.querySelectorAll('.blog-chip'));
+    var idx = list.indexOf(document.activeElement);
+    if (idx === -1) return;
+    var next = e.key === 'ArrowRight' ? (idx + 1) % list.length : (idx - 1 + list.length) % list.length;
+    list[next].focus();
+    e.preventDefault();
+  });
+
+  q.addEventListener('input', render);
+
+  if (resetBtn) {
+    resetBtn.addEventListener('click', function(){
+      q.value = '';
+      activeCat = 'all';
+      Array.prototype.forEach.call(chips.querySelectorAll('.blog-chip'), function(c){
+        var on = c.getAttribute('data-cat') === 'all';
+        c.classList.toggle('active', on);
+        c.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+      render();
+      q.focus();
+    });
+  }
+
+  // İlk render: tüm postlar görünür, sayaç toplam post sayısı
+  setCount(totalPosts);
+})();
+</script>
