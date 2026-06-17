@@ -3,7 +3,6 @@ layout: post
 title: "Psikanalitik Psikoterapi Nedir?"
 author: "Uzm. Dr. İsmail BUÇGÜN"
 category: psikoterapi
-tags: [Destekleyici Psikoterapi]
 description: Psikanalitik psikoterapi nedir? Destekleyici psikoterapiden farkı nedir? Adana'da psikanalitik psikoterapi yapan psikiyatri uzmanı var mıdır? 
 ---
 
@@ -23,5 +22,3 @@ Hangi hastada hangi yöntemin seçileceği hastanın psikopatoloji düzeyi ve o 
 Psikanaliz ve psikodinamik kuramlara sırtını yaslayarak çalışan psikanalitik psikoterapide amaç kişinin bilinçdışında bulunan ve kişiyi zorlayan bastırılmış konuların bilinç düzeyine çıkarılarak farkındalık, içgörü kazandırılmasıdır. **İyileşmenin içgörü kazanmaya ikincil olarak gelişeceği varsayımına dayanır. Bu yönüyle destekleyici psikoterapiden farklıdır.** Destekleyici psikoterapi doğrudan etki ilkesine dayanır ve iyileşmenin içgörü kazanmanın bir yan ürünü olacağı varsayılmaz.
 
 Kazanılan içgörüyle beraber kişi anlamlandırmakta zorlandığı sorunları anlamlandırabilir, kendini hayatının kontrolünü tekrar ele alarak ve yaşantılarıyla yüzleşmiş olarak durumların sonuçlarını üstlenir. **Psikanalitik psikoterapi de genellikle haftada 1-2 kere, çoğunlukla belirlenen sabit bir gün ve saatte, 50 dakikalık görüşme şeklinde gerçekleştirilir.** **Psikanalitik psikoterapi kısa süreli bir psikoterapi değildir.** Terapinin süresi ve görüşme sıklığı kişiden kişiye, psikopatolojinin ağırlığına göre değişmektedir.
-
-Adana ilindeki psikiyatri uzmanları arasında Türkiye Psikiyatri Derneği tarafından sertifiye edilmiş iki destekleyici psikoterapistten birisi olarak ihtiyaç duyduğunuzda sizlere Adana'da muayenehanemde ya da online görüşme ile destekleyici psikoterapi ve psikanalitik psikoterapi hizmeti vermekteyim. Randevu için **[randevu](/randevu)** sayfasını kullanabilirsiniz.

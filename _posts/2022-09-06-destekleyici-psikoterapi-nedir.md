@@ -3,7 +3,6 @@ layout: post
 title: "Destekleyici Psikoterapi Nedir?"
 author: "Uzm. Dr. İsmail BUÇGÜN"
 category: psikoterapi
-tags: [Destekleyici Psikoterapi]
 description: Destekleyici psikoterapi nedir? Temel ilkeleri nelerdir? Destekleyici psikoterapi hangi durumlarda kullanılır? Adana'da destekleyici psikoterapist olan psikiyatri uzmanı var mıdır? Terapi kuralları nelerdir?
 ---
 
@@ -32,5 +31,3 @@ Karşılıklı konuşmaya dayalı bir tarzı vardır. Tedavi planı hastanın he
 10. Tıbbi kronik hastalıklardır.
 
 **Tedavi bir takım kurallar içerir ve bu kurallar ilk görüşmede hastaya açıklanır, hasta ile konuşularak netleştirilir. Destekleyici psikoterapi genellikle haftada 1 kere, çoğunlukla belirlenen sabit bir gün ve saatte, 50 dakikalık görüşme şeklinde gerçekleştirilir.** 1 yıldan kısa süren tedaviler kısa süreli, 1 yıldan uzun süren tedaviler ise uzun süreli destekleyici psikoterapi olarak tanımlanır. Akut krize müdahale amacıyla da kullanılabilir. Bu durumda daha az sayıda görüşme genellikle hedeflere ulaşmak için yeterlidir. Fakat kişilik bozukluğu gibi durumlarda daha çok sayıda görüşme ve uzun tedavi süreleri gerekebilir. Tedavi, hastanın mevcut belirtileri azaldığında, hedeflere ulaşıldığında ve daha yeterli başa çıkma mekanizmaları geliştirildiğinde tamamlanmış olur.
-
-Adana ilindeki psikiyatri uzmanları arasında Türkiye Psikiyatri Derneği tarafından sertifiye edilmiş iki destekleyici psikoterapistten birisi olarak ihtiyaç duyduğunuzda sizlere Adana'da muayenehanemde ya da online görüşme ile destekleyici psikoterapi ve psikanalitik psikoterapi hizmeti vermekteyim. Randevu için **[randevu](/randevu)** sayfasını kullanabilirsiniz.

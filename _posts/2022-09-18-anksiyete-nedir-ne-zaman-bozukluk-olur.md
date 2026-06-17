@@ -3,7 +3,6 @@ layout: post
 title: "Anksiyete Nedir? Ne Zaman Bozukluk Olur?"
 author: "Uzm. Dr. İsmail BUÇGÜN"
 category: anksiyete
-tags: [Anksiyete Bozuklukları]
 description: Anksiyete (kaygı) nedir? Korkudan farkı nedir? Ne zaman bozukluk olarak tanımlanır? Anksiyete bozuklukları nelerdir?
 ---
 
