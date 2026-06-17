@@ -7,36 +7,58 @@
       {% include navigation.html %}
 
       <main class="page-main-content">
-        <article class="modern-page-card no-print">
-          
-          <header class="page-header">
+        {% if page.wide_layout %}
+          {% comment %} Geniş yerleşim — dış kart yok, başlık ve içerik sayfa zeminine oturur (örn. /blog). {% endcomment %}
+          <header class="page-header page-header--wide">
             <div class="title-bar">
               <h1 class="header-title" itemprop="name">{{ page.title }}</h1>
               <div class="header-accent-line"></div>
             </div>
 
-            <!-- YENİ: Sayfa Giriş Özeti Bölümü -->
- <!-- Eğer 'lead' varsa onu göster, yoksa SEO açıklamasını (description) kullan -->
-{% if page.lead %}
-<div class="page-intro-area">
-  <p class="page-intro-text">{{ page.lead }}</p>
-</div>
-{% elsif page.description %}
-<div class="page-intro-area">
-  <p class="page-intro-text">{{ page.description }}</p>
-</div>
-{% endif %}
+            {% if page.lead %}
+            <div class="page-intro-area">
+              <p class="page-intro-text">{{ page.lead }}</p>
+            </div>
+            {% elsif page.description %}
+            <div class="page-intro-area">
+              <p class="page-intro-text">{{ page.description }}</p>
+            </div>
+            {% endif %}
           </header>
 
-          <section class="content-section" itemprop="description">
-            <div class="resume-item">
-              <div class="resume-item-copy">
-                {{ content | replace: '&#8617;', '&#8617;&#xfe0e;' }}
-              </div>
-            </div>
+          <section class="wide-content" itemprop="description">
+            {{ content | replace: '&#8617;', '&#8617;&#xfe0e;' }}
           </section>
+        {% else %}
+          <article class="modern-page-card no-print">
 
-        </article>
+            <header class="page-header">
+              <div class="title-bar">
+                <h1 class="header-title" itemprop="name">{{ page.title }}</h1>
+                <div class="header-accent-line"></div>
+              </div>
+
+              {% if page.lead %}
+              <div class="page-intro-area">
+                <p class="page-intro-text">{{ page.lead }}</p>
+              </div>
+              {% elsif page.description %}
+              <div class="page-intro-area">
+                <p class="page-intro-text">{{ page.description }}</p>
+              </div>
+              {% endif %}
+            </header>
+
+            <section class="content-section" itemprop="description">
+              <div class="resume-item">
+                <div class="resume-item-copy">
+                  {{ content | replace: '&#8617;', '&#8617;&#xfe0e;' }}
+                </div>
+              </div>
+            </section>
+
+          </article>
+        {% endif %}
       </main>
 
       {% include footer.html %}
