@@ -13,6 +13,11 @@ resume_avatar:                  "true"
 resume_name:                    "Uzm. Dr. İsmail BUÇGÜN"
 resume_title:                   "Psikiyatri Uzmanı • Fellow of The European Board of Psychiatry"
 
+# Blog / post layout — yazar künyesi
+author_initials:                "İB"
+author_specialty:               "Psikiyatri Uzmanı"
+author_bio:                     "Duygudurum bozuklukları, tedaviye dirençli depresyon ve nöromodülasyon (TMS) alanlarında çalışan psikiyatri uzmanı. Adana'daki muayenehanesinde yetişkin ve geriatrik psikiyatri hizmeti vermektedir."
+
 # used for the contact button in _layouts/resume.html
 resume_contact_email:           "https://www.instagram.com/dr.ismailbucgun/"
 
@@ -65,4 +70,11 @@ plugins:
 
 # Permalinks
 permalink:      /:title
+
+# Demo / referans dosyaları canlı sitede yayınlanmasın
+exclude:
+  - _design-reference/
+  - README.md
+  - Gemfile
+  - Gemfile.lock
 

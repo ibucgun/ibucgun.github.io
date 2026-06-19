@@ -1,0 +1,667 @@
+// =============================================================================
+// POST (YAZI) SAYFASI — Breadcrumb, Article kartı, Tipografi, TOC, CTA, Bio, Related
+// _layouts/post.html ile birlikte çalışır.
+// =============================================================================
+
+// Lokal yardımcı renkler (site genel paletiyle aynı kıyıda)
+$post-muted:   #4a5568;
+$post-faint:   #6b7280;
+$post-line:    #e8e6f4;
+$post-surface: #ffffff;
+$post-ink:     #1a1830;
+$post-text:    #2c2a42;
+$post-bg-tint: #faf9ff;
+
+// --- Breadcrumb ---
+.post-crumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 20px 24px 0;
+  font-size: 0.82rem;
+  color: $post-faint;
+
+  a {
+    color: $post-faint;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover { color: $brand-indigo; }
+
+    &:focus-visible {
+      outline: 2px solid $brand-indigo;
+      outline-offset: 2px;
+      border-radius: 3px;
+    }
+  }
+
+  .sep { opacity: 0.6; }
+  .current { color: $post-muted; }
+}
+
+// --- Article kartı (.modern-page-card analogu, ama post için bağımsız) ---
+.post-article {
+  max-width: 840px;
+  margin: 18px auto 40px;
+  background: $post-surface;
+  border: 1px solid $post-line;
+  border-radius: 22px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 10px 30px rgba($brand-indigo, 0.06);
+  padding: 48px 56px;
+
+  @media (max-width: 680px) {
+    padding: 30px 22px;
+    border-radius: 18px;
+    margin: 14px 16px 30px;
+  }
+}
+
+// --- Yazı başlığı bölgesi ---
+.post-head {
+  .meta-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+
+  .read {
+    font-size: 0.8rem;
+    color: $post-muted;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+
+    svg { width: 13px; height: 13px; }
+  }
+}
+
+.post-title {
+  @include sans_extrabold;
+  font-size: clamp(1.7rem, 4vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  color: $post-ink;
+  margin: 0;
+}
+
+.post-lead {
+  @include sans_regular;
+  margin-top: 16px;
+  font-size: 1.125rem;
+  color: $post-muted;
+  line-height: 1.6;
+}
+
+// --- Yazar künyesi (avatar + isim + tarih) ---
+.post-byline {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin: 24px 0 4px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid $post-line;
+  flex-wrap: wrap;
+}
+
+.post-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, $brand-indigo, #7a6ff0);
+  color: #fff;
+  @include sans_bold;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.post-author {
+  .who {
+    @include sans_bold;
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: $post-ink;
+    line-height: 1.3;
+  }
+
+  .sub {
+    font-size: 0.78rem;
+    color: $post-faint;
+    margin-top: 2px;
+    line-height: 1.3;
+  }
+}
+
+.post-byline .when {
+  margin-left: auto;
+  text-align: right;
+  font-size: 0.78rem;
+  color: $post-faint;
+  line-height: 1.5;
+
+  .when-label {
+    color: $post-muted;
+    font-weight: 500;
+  }
+
+  @media (max-width: 520px) {
+    margin-left: 0;
+    text-align: left;
+    width: 100%;
+    margin-top: 8px;
+  }
+}
+
+// --- İçindekiler (TOC) ---
+.post-toc {
+  background: #f3f1fd;
+  border-radius: 14px;
+  padding: 18px 22px;
+  margin: 30px 0;
+
+  h4 {
+    @include sans_bold;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $brand-indigo;
+    margin: 0 0 10px;
+  }
+
+  ol {
+    list-style: none;
+    counter-reset: t;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    counter-increment: t;
+    margin: 7px 0;
+    font-size: 0.92rem;
+
+    &::before {
+      content: counter(t);
+      display: inline-flex;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #fff;
+      color: $brand-indigo;
+      font-size: 0.7rem;
+      font-weight: 600;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      @include sans_bold;
+    }
+  }
+
+  a {
+    color: $post-text;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover { color: $brand-indigo; }
+
+    &:focus-visible {
+      outline: 2px solid $brand-indigo;
+      outline-offset: 2px;
+      border-radius: 3px;
+    }
+  }
+}
+
+// --- Gövde tipografisi ---
+// Önemli: özgüllüğü düşük tutuluyor, ::before bar gibi global kuralları
+// override etmek için sadece kendi bağlamımızda agresif olmalıyız.
+.post-body {
+  margin-top: 8px;
+  max-width: 68ch;
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    color: $post-text;
+    margin: 0 0 1.3em;
+  }
+
+  // .content-section h2::before bar'ı bizim h2'lere bulaşmasın
+  h2 {
+    @include sans_bold;
+    display: block !important;
+    font-size: 1.56rem;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+    margin: 2.4em 0 0.5em;
+    color: $post-ink;
+    scroll-margin-top: 90px;
+    gap: 0 !important;
+
+    &::before {
+      content: none !important;
+      display: none !important;
+    }
+
+    &:first-child { margin-top: 0; }
+  }
+
+  h3 {
+    @include sans_bold;
+    font-size: 1.22rem;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    margin: 1.8em 0 0.4em;
+    color: $post-ink;
+    scroll-margin-top: 90px;
+
+    &:first-child { margin-top: 0; }
+  }
+
+  strong {
+    font-weight: 600;
+    color: $post-ink;
+  }
+
+  ul {
+    margin: 0 0 1.4em;
+    padding-left: 0;
+    list-style: none;
+
+    li {
+      position: relative;
+      padding-left: 24px;
+      margin: 0.55em 0;
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: $post-text;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 4px;
+        top: 12px;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: $brand-indigo;
+      }
+    }
+  }
+
+  ol {
+    margin: 0 0 1.4em;
+    padding-left: 22px;
+
+    li {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: $post-text;
+      margin: 0.4em 0;
+    }
+  }
+
+  a {
+    color: $brand-indigo;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+
+    &:hover { border-bottom-color: $brand-indigo; }
+
+    &:focus-visible {
+      outline: 2px solid $brand-indigo;
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+  }
+
+  // Vurgu kutusu — yazar markdown'da <div class="callout">...</div> ile kullanabilir
+  .callout {
+    margin: 1.6em 0;
+    padding: 18px 22px;
+    background: #f3f1fd;
+    border-left: 3px solid $brand-indigo;
+    border-radius: 0 12px 12px 0;
+    font-size: 1.09rem;
+    line-height: 1.65;
+    color: $post-ink;
+    font-weight: 500;
+  }
+
+  // Resim
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.5em auto;
+    border-radius: 8px;
+  }
+}
+
+// --- Kaynaklar kutusu ---
+.post-refs {
+  margin-top: 36px;
+  background: #fafafd;
+  border: 1px solid $post-line;
+  border-radius: 14px;
+  padding: 22px 24px;
+
+  h3 {
+    @include sans_bold;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $post-muted;
+    margin: 0 0 12px;
+  }
+
+  ol {
+    padding-left: 18px;
+    margin: 0;
+
+    li {
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: $post-muted;
+      margin: 6px 0;
+    }
+  }
+}
+
+// --- Yumuşak CTA kutusu (kompliyans-dostu) ---
+.post-cta {
+  margin-top: 32px;
+  background: #f3f1fd;
+  border-radius: 16px;
+  padding: 24px 26px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  .txt {
+    flex: 1;
+    min-width: 220px;
+
+    b {
+      @include sans_bold;
+      display: block;
+      font-size: 0.97rem;
+      font-weight: 600;
+      color: $post-ink;
+      margin-bottom: 4px;
+    }
+
+    span {
+      font-size: 0.85rem;
+      color: $post-muted;
+      line-height: 1.5;
+    }
+  }
+
+  a {
+    background: $brand-indigo;
+    color: #fff;
+    @include sans_bold;
+    font-weight: 600;
+    font-size: 0.88rem;
+    padding: 11px 22px;
+    border-radius: 999px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s, transform 0.2s;
+
+    &:hover {
+      background: #3a30b8;
+      transform: translateY(-1px);
+    }
+
+    &:focus-visible {
+      outline: 2px solid $brand-indigo;
+      outline-offset: 3px;
+    }
+  }
+}
+
+// --- Paylaşım butonları ---
+.post-share {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  span {
+    font-size: 0.82rem;
+    color: $post-faint;
+    margin-right: 4px;
+  }
+
+  a {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    border: 1px solid $post-line;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: $post-muted;
+    background: #fff;
+    transition: all 0.18s;
+    text-decoration: none;
+
+    svg { width: 17px; height: 17px; }
+
+    &:hover {
+      border-color: $brand-indigo;
+      color: $brand-indigo;
+      background: #f3f1fd;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $brand-indigo;
+      outline-offset: 2px;
+    }
+  }
+}
+
+// --- Yazar bio (E-E-A-T) ---
+.post-bio {
+  max-width: 840px;
+  margin: 0 auto 40px;
+  background: $post-surface;
+  border: 1px solid $post-line;
+  border-radius: 18px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 10px 30px rgba($brand-indigo, 0.06);
+  padding: 26px 30px;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+
+  @media (max-width: 680px) {
+    margin: 0 16px 30px;
+    padding: 22px 20px;
+  }
+
+  .post-avatar {
+    width: 58px;
+    height: 58px;
+    font-size: 1.18rem;
+  }
+
+  .who {
+    @include sans_bold;
+    font-weight: 600;
+    font-size: 1rem;
+    color: $post-ink;
+  }
+
+  .role {
+    font-size: 0.82rem;
+    color: $brand-indigo;
+    font-weight: 500;
+    margin: 2px 0 8px;
+  }
+
+  p {
+    font-size: 0.88rem;
+    color: $post-muted;
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  .bio-more {
+    color: $brand-indigo;
+    font-weight: 500;
+    text-decoration: none;
+    transition: opacity 0.2s;
+
+    &:hover { opacity: 0.75; }
+  }
+}
+
+// --- İlgili yazılar ---
+.post-related {
+  max-width: 840px;
+  margin: 0 auto 60px;
+
+  @media (max-width: 680px) {
+    padding: 0 16px;
+  }
+
+  h3 {
+    @include sans_bold;
+    font-weight: 600;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $post-faint;
+    margin: 0 0 16px;
+  }
+}
+
+.rgrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rcard {
+  background: $post-surface;
+  border: 1px solid $post-line;
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 10px 30px rgba($brand-indigo, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.07), 0 18px 44px rgba($brand-indigo, 0.13);
+    border-color: #d9d5f4;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $brand-indigo;
+    outline-offset: 3px;
+  }
+
+  h4 {
+    @include sans_bold;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.32;
+    color: $post-ink;
+    margin: 0;
+    transition: color 0.2s;
+
+    // Global .content-section h2::before bar'a karşı koruma (h4 ama emin olmak için)
+    &::before { content: none !important; display: none !important; }
+  }
+
+  &:hover h4 { color: $brand-indigo; }
+
+  .rx {
+    font-size: 0.82rem;
+    color: $post-muted;
+    line-height: 1.55;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .rd {
+    font-size: 0.75rem;
+    color: $post-faint;
+    margin-top: auto;
+  }
+}
+
+// --- Geri dön linki ---
+.post-backlink {
+  max-width: 840px;
+  margin: 0 auto 50px;
+  padding: 0 24px;
+
+  a {
+    @include sans_bold;
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: $brand-indigo;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+    transition: gap 0.2s;
+
+    &:hover { gap: 11px; }
+
+    &:focus-visible {
+      outline: 2px solid $brand-indigo;
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+  }
+}
+
+// --- Hareket azaltma saygısı ---
+@media (prefers-reduced-motion: reduce) {
+  .post-article,
+  .rcard,
+  .post-cta a,
+  .post-backlink a,
+  .post-share a {
+    transition: none !important;
+  }
+
+  .rcard:hover,
+  .post-cta a:hover {
+    transform: none !important;
+  }
+}
