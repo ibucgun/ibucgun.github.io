@@ -231,9 +231,9 @@ $post-bg-tint: #faf9ff;
 // --- Gövde tipografisi ---
 // Önemli: özgüllüğü düşük tutuluyor, ::before bar gibi global kuralları
 // override etmek için sadece kendi bağlamımızda agresif olmalıyız.
+// Not: max-width: 68ch sınırı kaldırıldı; yazı kart genişliğine kadar yayılır.
 .post-body {
   margin-top: 8px;
-  max-width: 68ch;
 
   p {
     font-size: 1.125rem;

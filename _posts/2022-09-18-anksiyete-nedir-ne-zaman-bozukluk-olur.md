@@ -4,6 +4,11 @@ title: "Anksiyete Nedir? Ne Zaman Bozukluk Olur?"
 author: "Uzm. Dr. İsmail BUÇGÜN"
 category: anksiyete
 description: Anksiyete (kaygı) nedir? Korkudan farkı nedir? Ne zaman bozukluk olarak tanımlanır? Anksiyete bozuklukları nelerdir?
+refs:
+  - "Kaplan ve Sadock Psikiyatri Kitabı, 11. Baskı, Güneş Tıp Kitabevi, 2016"
+  - "Anksiyete Bozukluklarının Tedavisine Çok Yönlü Bakış, Psikiyatride Güncel Dergisi, Türkiye Psikiyatri Derneği Yayınları, Bahar 2015"
+  - "Anksiyete Bozukluklarında Güncel Gelişmeler, Psikiyatride Güncel Dergisi, Türkiye Psikiyatri Derneği Yayınları, Bahar 2021"
+  - "Anksiyete Bozuklukları Kitabı, 1. Baskı, Türkiye Psikiyatri Derneği Yayınları, 2006"
 ---
 
 ## Anksiyete nedir?
@@ -35,10 +40,4 @@ Pek çoğunun klinik belirtilerinin örtüşmesi tanının net bir şekilde konu
 
 
 Adana'da psikiyatri alanında hizmet verdiğim kliniğimde anksiyete bozukluklukları için kanıta dayalı bireysel psikoterapi, gerekli durumlarda ilaç tedavisi ve takip hizmeti de vermekteyim. Bilgi almak için **[randevu](/randevu)** sayfasını kullanabilirsiniz.
-
-## Kaynaklar
-1. Kaplan ve Sadock Psikiyatri Kitabı, 11. Baskı, Güneş Tıp Kitabevi, 2016
-2. Anksiyete Bozukluklarının Tedavisine Çok Yönlü Bakış, Psikiyatride Güncel Dergisi, Türkiye Psikiyatri Derneği Yayınları, Bahar 2015
-3. Anksiyete Bozukluklarında Güncel Gelişmeler, Psikiyatride Güncel Dergisi, Türkiye Psikiyatri Derneği Yayınları, Bahar 2021
-4. Anksiyete Bozuklukları Kitabı, 1. Baskı, Türkiye Psikiyatri Derneği Yayınları, 2006
 
