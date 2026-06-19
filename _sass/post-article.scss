@@ -13,16 +13,20 @@ $post-text:    #2c2a42;
 $post-bg-tint: #faf9ff;
 
 // --- Breadcrumb ---
+// Yatayda klinik card'ın content kenarlarıyla hizalı: padding 0 80px (article ile aynı)
 .post-crumbs {
   display: flex;
   align-items: center;
   gap: 8px;
   flex-wrap: wrap;
-  max-width: 840px;
-  margin: 0 auto;
-  padding: 20px 24px 0;
+  margin: 0;
+  padding: 20px 80px 0;
   font-size: 0.82rem;
   color: $post-faint;
+
+  @media (max-width: 680px) {
+    padding: 20px 24px 0;
+  }
 
   a {
     color: $post-faint;
@@ -43,14 +47,15 @@ $post-bg-tint: #faf9ff;
 }
 
 // --- Article kartı (.modern-page-card analogu, ama post için bağımsız) ---
+// Effective content width klinik/TMS kartlarıyla aynı (872px) olsun diye
+// max-width kaldırıldı (block 100% wrapper-içi 1032px), padding 80 her yan.
 .post-article {
-  max-width: 840px;
   margin: 18px auto 40px;
   background: $post-surface;
   border: 1px solid $post-line;
   border-radius: 22px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 10px 30px rgba($brand-indigo, 0.06);
-  padding: 48px 56px;
+  padding: 70px 80px;
 
   @media (max-width: 680px) {
     padding: 30px 22px;
@@ -482,14 +487,14 @@ $post-bg-tint: #faf9ff;
 }
 
 // --- Yazar bio (E-E-A-T) ---
+// Article ile hizalı: tam wrapper-içi genişlikte, yatay padding 80px
 .post-bio {
-  max-width: 840px;
-  margin: 0 auto 40px;
+  margin: 0 0 40px;
   background: $post-surface;
   border: 1px solid $post-line;
   border-radius: 18px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 10px 30px rgba($brand-indigo, 0.06);
-  padding: 26px 30px;
+  padding: 30px 80px;
   display: flex;
   gap: 18px;
   align-items: flex-start;
@@ -538,8 +543,8 @@ $post-bg-tint: #faf9ff;
 
 // --- İlgili yazılar ---
 .post-related {
-  max-width: 840px;
-  margin: 0 auto 60px;
+  margin: 0 0 60px;
+  padding: 0 80px;
 
   @media (max-width: 680px) {
     padding: 0 16px;
@@ -625,9 +630,12 @@ $post-bg-tint: #faf9ff;
 
 // --- Geri dön linki ---
 .post-backlink {
-  max-width: 840px;
-  margin: 0 auto 50px;
-  padding: 0 24px;
+  margin: 0 0 50px;
+  padding: 0 80px;
+
+  @media (max-width: 680px) {
+    padding: 0 24px;
+  }
 
   a {
     @include sans_bold;

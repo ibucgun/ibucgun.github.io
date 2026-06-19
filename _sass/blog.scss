@@ -36,9 +36,11 @@
 }
 
 .wide-content {
-  max-width: 920px; // Kartlı sayfaların effective content width'iyle aynı (1080 - 2*80)
+  // Klinik/TMS gibi .modern-page-card sayfalarının effective content
+  // genişliğiyle birebir eşit: wrapper-inner (1032) - 2*card-padding (80) = 872px.
+  max-width: 872px;
   margin: 0 auto;
-  padding: 0 8px;
+  padding: 0;
 
   @include media_mobile {
     padding: 0;
