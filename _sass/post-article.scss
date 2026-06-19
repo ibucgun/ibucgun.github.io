@@ -13,19 +13,19 @@ $post-text:    #2c2a42;
 $post-bg-tint: #faf9ff;
 
 // --- Breadcrumb ---
-// Yatayda klinik card'ın content kenarlarıyla hizalı: padding 0 80px (article ile aynı)
+// Kart sol kenarıyla hizalı: yatay padding yok (sadece wrapper'ın 24px padding'i devrede)
 .post-crumbs {
   display: flex;
   align-items: center;
   gap: 8px;
   flex-wrap: wrap;
   margin: 0;
-  padding: 20px 80px 0;
+  padding: 20px 0 0;
   font-size: 0.82rem;
   color: $post-faint;
 
   @media (max-width: 680px) {
-    padding: 20px 24px 0;
+    padding: 20px 16px 0;
   }
 
   a {

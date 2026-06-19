@@ -36,9 +36,8 @@
 }
 
 .wide-content {
-  // Blog için biraz daha geniş — kart grid'i ve filtre çubuğu rahatça nefes alsın.
-  // Klinik/TMS effective content (872px) ile tam hizalı değil; bilinçli olarak +48px.
-  max-width: 920px;
+  // Post sayfasının kart genişliğiyle (wrapper-içi 1032px) görsel olarak hizalı.
+  // Blog kart grid'i ve filtre çubuğu için maksimum nefes alanı.
   margin: 0 auto;
   padding: 0;
 
