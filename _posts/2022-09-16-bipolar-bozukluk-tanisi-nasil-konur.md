@@ -6,11 +6,11 @@ category: bipolar
 description: Bipolar duygudurum bozukluğu tanısı nasıl konur? Ayırıcı tanısı nasıl yapılır?
 ---
 
-### Tanı Nasıl Konur?
+## Tanı Nasıl Konur?
 **Esas olarak tanı psikiyatri uzmanı tarafından yapılan psikiyatrik muayene ile konur.** Tanı aşamasında; detaylı değerlendirme, öykü, muayene, aile görüşmesi, ölçekler gibi psikometrik incelemeler kullanılır.
 İlk değerlendirmelerde hastalık anlaşılamayabilir. Bir süre izlem gerekebilir. İlk hastalık dönemi depresyon olanlarda bu durum daha sık görülür. Tanının konulması 8-10 yılı bulabilir, bu tüm dünyada benzerdir. **Hastalığın tanısını tek başına koyduracak bir tetkik ya da görüntüleme yöntemi henüz yoktur.**
 
-### Bipolar Bozukluk Ayırıcı Tanısı Nasıl Yapılır?
+## Bipolar Bozukluk Ayırıcı Tanısı Nasıl Yapılır?
 
 Bipolar bozukluğa benzeyen diğer hastalıklardan ayırt etmek için çeşitli kan tetkikleri, beyin görüntüleme (MR vb.) yapılması gerekebilir.
 

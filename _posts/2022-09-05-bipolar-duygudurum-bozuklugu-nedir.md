@@ -10,10 +10,10 @@ Bipolar duygudurum bozukluğu, yaklaşık her 40-50 kişiden birini etkileyen, a
 çıkan ve beynin duygu, düşünce ve davranışları kontrol eden
 merkezlerini etkileyen bir beyin hastalığıdır.**
 
-### Bipolar ne demektir?
+## Bipolar ne demektir?
 Bi iki, polar kutup demektir. **Bipolar iki kutuplu anlamına gelir. Bu isim hastalığın depresyon ve mani şeklinde ortaya çıkan iki hastalık dönemine vurgu yapmaktadır.** Bipolar duygudurum bozukluğuna iki uçlu duygudurum bozukluğu, iki uçlu bozukluk, bipolar bozukluk, iki uçlu mizaç bozukluğu, bipolar affektif bozukluk da denmektedir.
 
-### Duygudurum ne demektir? 
+## Duygudurum ne demektir? 
 **İniş çıkışlar olmakla birlikte genel olarak belli bir sabitlikte devam eden, süreğen, kalıcı, içselleştirilmiş duygu tonudur.**
 
 Günlük yaşamda herkesin dünyasında inişler çıkışlar olur. Herkes
