@@ -15,7 +15,7 @@ resume_title:                   "Psikiyatri Uzmanı • Fellow of The European B
 
 # Blog / post layout — yazar künyesi
 author_initials:                "İB"
-author_specialty:               "Psikiyatri Uzmanı, FEBP"
+author_specialty:               "Psikiyatri Uzmanı"
 author_bio:                     "Bipolar bozukluk,depresyon gibi duygudurum bozuklukları, yaşlılık psikiyatrisi ve beyin uyarım tedavileri (TMS) alanlarında çalışan, Avrupa yeterlilik belgeli bir psikiyatri uzmanı. Adana'daki muayenehanesinde yetişkin ve geriatrik psikiyatri hizmeti vermektedir."
 
 # used for the contact button in _layouts/resume.html
