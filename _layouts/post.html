@@ -11,9 +11,14 @@
 
       {%- comment -%}
         Kategori adı doğrudan front matter'dan (örn. "Bipolar Bozukluk").
-        CSS class için slugify ile slug üretilir (TR karakter güvenli).
+        Renkler _data/categories.yml'den okunur; tanımsızsa default fallback.
       {%- endcomment -%}
       {%- assign cat_slug = page.category | slugify: 'latin' -%}
+      {%- assign cat_data = site.data.categories | where: 'name', page.category | first -%}
+      {%- assign cat_style = '' -%}
+      {%- if cat_data -%}
+        {%- assign cat_style = '--cc:' | append: cat_data.color | append: ';--cb:' | append: cat_data.bg -%}
+      {%- endif -%}
 
       {%- assign words = page.content | number_of_words -%}
       {%- assign read = words | divided_by: 200 | plus: 1 -%}
@@ -35,7 +40,7 @@
           <span class="current">{{ page.title }}</span>
         </nav>
 
-        <article class="post-article c-{{ cat_slug | default: 'bipolar-bozukluk' }}">
+        <article class="post-article" style="{{ cat_style }}">
 
           <header class="post-head">
             <div class="meta-top">
@@ -147,7 +152,12 @@
                   {%- assign p_words = p.content | number_of_words -%}
                   {%- assign p_read = p_words | divided_by: 200 | plus: 1 -%}
                   {%- assign p_slug = p.category | slugify: 'latin' -%}
-                  <a class="rcard c-{{ p_slug }}" href="{{ p.url | prepend: site.baseurl }}">
+                  {%- assign p_cat_data = site.data.categories | where: 'name', p.category | first -%}
+                  {%- assign p_style = '' -%}
+                  {%- if p_cat_data -%}
+                    {%- assign p_style = '--cc:' | append: p_cat_data.color | append: ';--cb:' | append: p_cat_data.bg -%}
+                  {%- endif -%}
+                  <a class="rcard" style="{{ p_style }}" href="{{ p.url | prepend: site.baseurl }}">
                     <span class="blog-badge">{{ p.category }}</span>
                     <h4>{{ p.title }}</h4>
                     {%- if p.description -%}

@@ -8,8 +8,8 @@ wide_layout: true
 
 {%- comment -%}
   Kategori adları doğrudan post front matter'ından gelir (örn. "Bipolar Bozukluk").
-  CSS class adı için Liquid slugify ile slug otomatik üretilir.
-  Yeni kategori eklemek için sadece _sass/blog.scss'e .c-<slug> kuralı ekle.
+  Renkler _data/categories.yml'den okunur, inline style ile uygulanır.
+  Tanımsız kategoriler default fallback rengi (indigo) alır.
 {%- endcomment -%}
 {%- assign active_cats = site.posts | map: "category" | compact | uniq -%}
 
@@ -39,11 +39,17 @@ wide_layout: true
   {%- if feat -%}
   <div id="blog-feat-wrap">
     {%- assign feat_slug = feat.category | slugify: 'latin' | default: 'bipolar-bozukluk' -%}
+    {%- assign feat_cat_data = site.data.categories | where: 'name', feat.category | first -%}
+    {%- assign feat_style = '' -%}
+    {%- if feat_cat_data -%}
+      {%- assign feat_style = '--cc:' | append: feat_cat_data.color | append: ';--cb:' | append: feat_cat_data.bg -%}
+    {%- endif -%}
     {%- assign feat_words = feat.content | number_of_words -%}
     {%- assign feat_read = feat_words | divided_by: 200 | plus: 1 -%}
 
     <p class="blog-feat-eyebrow">En Son Yazı</p>
-    <a class="blog-feat c-{{ feat_slug }}"
+    <a class="blog-feat"
+       style="{{ feat_style }}"
        href="{{ feat.url | prepend: site.baseurl }}"
        data-category="{{ feat_slug }}"
        data-search="{{ feat.title | downcase }} {{ feat.category | downcase }}">
@@ -71,10 +77,16 @@ wide_layout: true
   <div class="blog-grid" id="blog-grid">
     {%- for post in rest -%}
       {%- assign post_slug = post.category | slugify: 'latin' | default: 'bipolar-bozukluk' -%}
+      {%- assign post_cat_data = site.data.categories | where: 'name', post.category | first -%}
+      {%- assign post_style = '' -%}
+      {%- if post_cat_data -%}
+        {%- assign post_style = '--cc:' | append: post_cat_data.color | append: ';--cb:' | append: post_cat_data.bg -%}
+      {%- endif -%}
       {%- assign words = post.content | number_of_words -%}
       {%- assign read = words | divided_by: 200 | plus: 1 -%}
 
-      <a class="blog-card c-{{ post_slug }}"
+      <a class="blog-card"
+         style="{{ post_style }}"
          href="{{ post.url | prepend: site.baseurl }}"
          data-category="{{ post_slug }}"
          data-search="{{ post.title | downcase }} {{ post.category | downcase }}">

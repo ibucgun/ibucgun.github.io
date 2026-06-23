@@ -1,0 +1,37 @@
+# Blog kategorileri — renk tanımı
+# ----------------------------------------------------------------
+# Yeni kategori eklemek için:
+#   1. _posts/...md front matter'ında: category: "Yeni Kategori"
+#   2. Bu dosyaya 3 satır ekle (name + color + bg)
+# Eğer kategoriyi buraya eklemezsen, post otomatik default
+# (indigo) rengini alır — yine de düzgün görünür.
+#
+# Alanlar:
+#   name  — post front matter'daki "category" değeriyle BİREBİR aynı olmalı
+#   color — rozet metin rengi (--cc)
+#   bg    — rozet arka plan rengi (--cb)
+# ----------------------------------------------------------------
+
+- name: "Bipolar Bozukluk"
+  color: "#4d41e0"
+  bg:    "#eeecfd"
+
+- name: "Depresyon"
+  color: "#1f7a8c"
+  bg:    "#e4f1f4"
+
+- name: "Anksiyete Bozuklukları"
+  color: "#b5532e"
+  bg:    "#fbede6"
+
+- name: "TMS & Nöromodülasyon"
+  color: "#6b3fc9"
+  bg:    "#f0eafb"
+
+- name: "Geriatrik Psikiyatri"
+  color: "#3d6098"
+  bg:    "#e9eff8"
+
+- name: "Psikoterapi"
+  color: "#2e7d5b"
+  bg:    "#e5f3ec"
