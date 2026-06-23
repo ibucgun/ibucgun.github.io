@@ -10,15 +10,10 @@
       {% include navigation.html %}
 
       {%- comment -%}
-        Kategori slug → görünür ad eşlemesi (blog.html ile aynı).
-        Yeni kategori eklenince burada da eşle.
+        Kategori adı doğrudan front matter'dan (örn. "Bipolar Bozukluk").
+        CSS class için slugify ile slug üretilir (TR karakter güvenli).
       {%- endcomment -%}
-      {%- assign cat_labels = "bipolar:Bipolar Bozukluk|psikoterapi:Psikoterapi|anksiyete:Anksiyete" | split: "|" -%}
-      {%- assign cat_label = page.category -%}
-      {%- for pair in cat_labels -%}
-        {%- assign kv = pair | split: ":" -%}
-        {%- if kv[0] == page.category -%}{%- assign cat_label = kv[1] -%}{%- endif -%}
-      {%- endfor -%}
+      {%- assign cat_slug = page.category | slugify: 'latin' -%}
 
       {%- assign words = page.content | number_of_words -%}
       {%- assign read = words | divided_by: 200 | plus: 1 -%}
@@ -34,18 +29,18 @@
           <a href="/blog">Blog</a>
           {%- if page.category -%}
             <span class="sep" aria-hidden="true">›</span>
-            <a href="/blog#{{ page.category }}">{{ cat_label }}</a>
+            <a href="/blog#{{ cat_slug }}">{{ page.category }}</a>
           {%- endif -%}
           <span class="sep" aria-hidden="true">›</span>
           <span class="current">{{ page.title }}</span>
         </nav>
 
-        <article class="post-article c-{{ page.category | default: 'bipolar' }}">
+        <article class="post-article c-{{ cat_slug | default: 'bipolar-bozukluk' }}">
 
           <header class="post-head">
             <div class="meta-top">
               {%- if page.category -%}
-                <span class="blog-badge">{{ cat_label }}</span>
+                <span class="blog-badge">{{ page.category }}</span>
               {%- endif -%}
               <span class="read">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
@@ -151,8 +146,9 @@
                   {%- assign related_count = related_count | plus: 1 -%}
                   {%- assign p_words = p.content | number_of_words -%}
                   {%- assign p_read = p_words | divided_by: 200 | plus: 1 -%}
-                  <a class="rcard c-{{ p.category }}" href="{{ p.url | prepend: site.baseurl }}">
-                    <span class="blog-badge">{{ cat_label }}</span>
+                  {%- assign p_slug = p.category | slugify: 'latin' -%}
+                  <a class="rcard c-{{ p_slug }}" href="{{ p.url | prepend: site.baseurl }}">
+                    <span class="blog-badge">{{ p.category }}</span>
                     <h4>{{ p.title }}</h4>
                     {%- if p.description -%}
                       <p class="rx">{{ p.description | strip_html | truncate: 140 }}</p>
@@ -265,7 +261,7 @@
         { "@type": "ListItem", "position": 1, "name": "Anasayfa", "item": "{{ site.url }}/" },
         { "@type": "ListItem", "position": 2, "name": "Blog", "item": "{{ site.url }}/blog" }
         {%- if page.category -%}
-        ,{ "@type": "ListItem", "position": 3, "name": "{{ cat_label }}", "item": "{{ site.url }}/blog#{{ page.category }}" }
+        ,{ "@type": "ListItem", "position": 3, "name": {{ page.category | jsonify }}, "item": "{{ site.url }}/blog#{{ cat_slug }}" }
         ,{ "@type": "ListItem", "position": 4, "name": {{ page.title | jsonify }}, "item": "{{ site.url }}{{ page.url }}" }
         {%- else -%}
         ,{ "@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }}, "item": "{{ site.url }}{{ page.url }}" }

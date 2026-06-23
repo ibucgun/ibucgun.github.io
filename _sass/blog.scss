@@ -66,9 +66,9 @@ $blog-line:    #e8e6f4;
 $blog-surface: #ffffff;
 
 // --- Kategori rozet renkleri (kapsamı dar; ileride yeni kategori postu eklenirse buraya eklenir) ---
-.c-bipolar     { --cc: #{$brand-indigo}; --cb: #eeecfd; }
-.c-psikoterapi { --cc: #2e7d5b;          --cb: #e5f3ec; }
-.c-anksiyete   { --cc: #b5532e;          --cb: #fbede6; }
+.c-bipolar-bozukluk      { --cc: #{$brand-indigo}; --cb: #eeecfd; }
+.c-psikoterapi           { --cc: #2e7d5b;          --cb: #e5f3ec; }
+.c-anksiyete-bozukluklari{ --cc: #b5532e;          --cb: #fbede6; }
 
 .blog-badge {
   @include sans_bold;

@@ -2,7 +2,7 @@
 layout: post
 title: "Bipolar Duygudurum Bozukluğu Nedir?"
 author: "Uzm. Dr. İsmail BUÇGÜN"
-category: bipolar
+category: "Bipolar Bozukluk"
 description: Bipolar duygudurum bozukluğu nedir? Bipolar ne demektir? Duygudurum nedir? Bipolar bozukluğun diğer isimleri nelerdir?
 ---
 
