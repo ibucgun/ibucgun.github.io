@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Destekleyici Psikoterapi Nedir?"
+permalink: /:title
 author: "Uzm. Dr. İsmail BUÇGÜN"
 category: "Psikoterapi"
 description: Destekleyici psikoterapi nedir? Temel ilkeleri nelerdir? Destekleyici psikoterapi hangi durumlarda kullanılır? Adana'da destekleyici psikoterapist olan psikiyatri uzmanı var mıdır? Terapi kuralları nelerdir?

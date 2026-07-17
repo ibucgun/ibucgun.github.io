@@ -69,7 +69,10 @@ plugins:
   - jekyll-sitemap
 
 # Permalinks
-permalink:      /:title
+# Yeni yazılar /blog/:title altında yayınlanır.
+# Mevcut 6 yazı kendi front matter'ındaki "permalink: /:title" ile kökte kilitli
+# kalır (SEO korunur). Bkz. _posts/ içindeki eski yazılar.
+permalink:      /blog/:title
 
 # Demo / referans dosyaları canlı sitede yayınlanmasın
 exclude:
