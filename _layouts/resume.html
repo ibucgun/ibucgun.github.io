@@ -14,7 +14,10 @@
   <div class="hero-flex-container">
 
     <div class="hero-text-side">
-      <h1 class="header-name">{{ site.resume_name }}</h1>
+      <h1 class="header-name">
+        {{ site.resume_name }}
+        <span class="h1-alt">Adana Psikiyatri ve TMS Kliniği</span>
+      </h1>
 
       <div class="hero-title-wrapper">
         <h2 class="header-title">{{ site.resume_title }}</h2>
@@ -46,7 +49,7 @@
     <div class="hero-image-side no-print">
       {% if site.resume_avatar == 'true' %}
       <div class="avatar-glow-wrapper">
-        <img src="/images/avatar.webp" width="400" height="400" alt="Uzm. Dr. İsmail BUÇGÜN" class="hero-avatar" fetchpriority="high" loading="eager">
+        <img src="/images/avatar.webp" width="400" height="400" alt="Uzm. Dr. İsmail Buçgün" class="hero-avatar" fetchpriority="high" loading="eager">
       </div>
       {% endif %}
     </div>
@@ -264,7 +267,7 @@
       </p>
 
       <div class="clinic-brand">
-        <h3>Uzm. Dr. İsmail BUÇGÜN</h3>
+        <h3>Uzm. Dr. İsmail Buçgün</h3>
         <span class="clinic-subtitle">Adana Psikiyatri ve TMS Kliniği</span>
       </div>
 

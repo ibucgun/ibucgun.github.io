@@ -2,7 +2,7 @@
 layout: post
 title: "Psikanalitik Psikoterapi Nedir?"
 permalink: /:title
-author: "Uzm. Dr. İsmail BUÇGÜN"
+author: "Uzm. Dr. İsmail Buçgün"
 category: "Psikoterapi"
 description: Psikanalitik psikoterapi nedir? Destekleyici psikoterapiden farkı nedir? Adana'da psikanalitik psikoterapi yapan psikiyatri uzmanı var mıdır? 
 ---
