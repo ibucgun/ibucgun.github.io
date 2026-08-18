@@ -29,4 +29,4 @@ Genetik faktörler tüm hastalığı açıklayamazlar. Akrabasında bipolar bozu
 
 Tek yumurta ikizleri genetik olarak aynı olmalarına karşın birisinde bipolar bozukluk hastalığı görüldüğünde **diğerinde görülme oranı %45-60'dır.**
 
-Adana'da psikiyatri alanında hizmet veren muayenehanemde bipolar bozukluk tanılı hastalara güncel tedavi kılavuzları ve yüzlerce dirençli hastanın takibinden elde ettiğim deneyim ile tanı, tedavi ve takip hizmeti vermekteyim. Randevu için **[randevu](/randevu)** sayfasını kullanabilirsiniz.
+Adana'da psikiyatri alanında hizmet veren muayenehanemde bipolar bozukluk tanılı hastalara güncel tedavi kılavuzları doğrultusunda ve klinik deneyimimle tanı, tedavi ve takip hizmeti vermekteyim. Randevu için **[randevu](/randevu)** sayfasını kullanabilirsiniz.
