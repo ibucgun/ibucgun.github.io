@@ -41,5 +41,5 @@ Tanımlayıcı psikiyatrik yaklaşımda **DSM-5 tanı sınıflandırmasında ank
 Pek çoğunun klinik belirtilerinin örtüşmesi tanının net bir şekilde konulmasını zorlaştırmaktadır. **Çoğu zaman hastalara özelleşmiş bir anksiyete bozukluğu tanısı koymak yerine genel olarak anksiyete bozukluğu tanısı konulmaktadır.** **Bu durum, özellikle bazı belirtilerin gözden kaçmasına ve rahatsızlığın sürüp gitmesine neden olmaktadır.** 
 
 
-Adana'da psikiyatri alanında hizmet verdiğim kliniğimde anksiyete bozukluklukları için kanıta dayalı bireysel psikoterapi, gerekli durumlarda ilaç tedavisi ve takip hizmeti de vermekteyim. Bilgi almak için **[randevu](/randevu)** sayfasını kullanabilirsiniz.
+Adana'da psikiyatri alanında hizmet veren bir uzman olarak anksiyete bozuklukları için kanıta dayalı bireysel psikoterapi, gerekli durumlarda ilaç tedavisi ve takip hizmeti de vermekteyim. Bilgi almak için **[randevu](/randevu)** sayfasını kullanabilirsiniz.
 
