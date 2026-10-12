@@ -13,4 +13,16 @@
   <p class="footer-line">© 2026 Uzm. Dr. İsmail Buçgün — Adana Psikiyatri ve TMS. Tüm hakları saklıdır, izinsiz kullanılamaz.</p>
   <p class="footer-line">Sitede yer alan bilgiler doktor tavsiyesi yerine geçmez, lütfen doktorunuza danışınız.</p>
 
+  {%- comment -%}
+    Yönetmelik gereği: son güncelleme tarihi + site editörü iletişimi.
+    Tarih otomatik — her yayında (push) Jekyll yeniden derlendiği için kendiliğinden güncellenir.
+  {%- endcomment -%}
+  <p class="footer-line footer-meta">
+    Son güncelleme: {{ site.time | date: "%d.%m.%Y" }}
+    <span class="footer-sep">·</span>
+    Site editörü: Uzm. Dr. İsmail Buçgün
+    <span class="footer-sep">·</span>
+    <a href="mailto:bilgi@ismailbucgun.com">bilgi@ismailbucgun.com</a>
+  </p>
+
 </footer>

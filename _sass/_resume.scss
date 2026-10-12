@@ -1160,6 +1160,20 @@
   color: #6b7280;
   line-height: 1.5;
 }
+/* Yönetmelik bilgisi: son güncelleme + site editörü */
+.page-footer .footer-meta {
+  margin-top: 0.9rem;
+  font-size: 0.78rem;
+  color: #9ca3af;
+}
+.page-footer .footer-meta a {
+  color: #9ca3af;
+  text-decoration: none;
+}
+.page-footer .footer-meta a:hover {
+  color: $brand-indigo;
+  text-decoration: underline;
+}
  
 /* Mobilde linkler satırı sarmal olabilsin */
   @include media_mobile {
