@@ -149,8 +149,7 @@ Eğitim ve sertifika kayıtları (`_data/aldigiegitimler.yml`, schema `hasCreden
 5. `/parlakisik` içeriği yazılacak. Şu an `noindex` + sitemap dışı, içeriği
    boşaltıldı. Tedavi **uygulanıyor**, eksik olan sadece sayfa.
 6. `/hakkimda` sayfası. Ham malzeme: silinen `_data/meslekiilgialanlari.yml`
-   (git geçmişinde). Nöropsikiyatri ve şizofreni başlıkları sitede hiç
-   ayrı anlatılmıyor.
+   (git geçmişinde). Nöropsikiyatri başlığı sitede hiç ayrı anlatılmıyor.
 
 **Site dışı**
 7. İyi Psikolog ve Türkiye Psikiyatristleri'ne adres güncelleme maili gönderildi,
