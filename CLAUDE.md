@@ -76,6 +76,7 @@ ilaç kan düzeyi takibi
 |---|---|
 | EKT | Anestezi gerektirir, hastanede uygulanır; hasta yönlendirilir |
 | tDCS | Uygulanmıyor. `/tdcs` yalnızca bilgilendirme sayfası |
+| Esketamin | Muayenehanede uygulanabilir ama henüz uygulanmadı. Sitede ne "uygulanır" ne "uygulanmaz" yazılır |
 | Psikanalitik psikoterapi | Eğitimi var, **yeni hasta kabul edilmiyor** |
 | Destekleyici psikoterapi | TPD sertifikası var, **yeni hasta kabul edilmiyor** |
 | Çocuk ve ergen psikiyatrisi | Hizmet verilmiyor (18+) |
