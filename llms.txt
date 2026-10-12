@@ -60,8 +60,10 @@ Bu ayrım önemlidir; soru gelirse aşağıdaki bilgi esas alınmalıdır.
 - [Blog]({{ site.url }}/blog): Ruh sağlığı konularında bilgilendirme yazıları.
 - [İletişim ve Konum]({{ site.url }}/iletisim): Adres, harita ve ulaşım bilgileri.
 - [Randevu]({{ site.url }}/randevu): Randevu alma seçenekleri (telefon ve WhatsApp).
-- [Parlak Işık Tedavisi]({{ site.url }}/parlakisik): Yöntem hakkında bilgilendirme.
 - [tDCS]({{ site.url }}/tdcs): Yöntem hakkında bilgilendirme. Muayenehanede uygulanmaz.
+
+Parlak ışık tedavisi muayenehanede uygulanan tedaviler arasındadır, ancak bu yöntemi
+anlatan bilgilendirme sayfası henüz hazırlanmamıştır.
 
 ## Blog yazıları
 {% assign sorted = site.posts | sort: 'date' | reverse %}{% for post in sorted %}
