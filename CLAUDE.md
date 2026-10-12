@@ -161,3 +161,28 @@ Eğitim ve sertifika kayıtları (`_data/aldigiegitimler.yml`, schema `hasCreden
 - Toplu değişiklikten sonra doğrula (grep sayımı, JSON geçerliliği, link kontrolü).
 - Commit ve push kullanıcıya aittir — istemeden commit etme.
 - Push sonrası canlı doğrulama `curl` ile yapılır.
+
+---
+
+## Bu dosyanın bakımı
+
+Bu dosya **şu an neyin doğru olduğunu** anlatır, ne olduğunu değil. Değişiklik
+geçmişi `git log`'da zaten duruyor; buraya ikinci kez yazma.
+
+**Kullanıcı ayrıca söylemese bile güncelle:**
+
+- Bir iş bitti → "Kalan işler"den çıkar
+- Yeni iş çıktı → listeye ekle
+- Kalıcı bir karar verildi (hizmet kapsamı, mevzuat yorumu, teknik kısıt,
+  URL yapısı) → ilgili bölüme işle, gerekçesiyle
+- Tekrar edebilecek bir tuzak keşfedildi → "Bilinen tuzaklar"a ekle
+- NAP bilgisi, hizmet listesi veya dosya yapısı değişti → ilgili bölümü düzelt
+
+**Buraya yazma:**
+
+- Tek tek dosya değişiklikleri ("şu satırı güncelledim")
+- Yapılan işin anlatımı veya oturum özeti
+- Geçici durumlar, tek seferlik notlar
+
+Güncellemeyi işin sonunda, tek seferde yap ve kullanıcıya bir satırla bildir.
+Dosya uzadıkça değerini kaybeder; yeni bilgi eklerken eskiyen satırı sil.
