@@ -96,6 +96,8 @@ Eğitim ve sertifika kayıtları (`_data/aldigiegitimler.yml`, schema `hasCreden
 | `_includes/head.html` | Meta, OG, canonical, schema çağrıları, GA4 |
 | `_includes/schema/hekim-klinik.html` | Ana sayfa JSON-LD (Physician + MedicalClinic) |
 | `_includes/schema/tms.html` | `/tms` JSON-LD (FAQPage + MedicalProcedure) |
+| Kökteki hastalık sayfaları | `depresyon.html` vb.; tms.html yapısı (`tms-content`, `tms-toc`, callout, Kaynaklar) |
+| `_includes/iletisim-cta.html` | Ara / WhatsApp butonu; `baslik`, `metin`, `buton` parametreleri |
 | `_data/categories.yml` | Blog kategori renkleri |
 | `llms.txt` | Dil modelleri için site özeti — **hizmet değişince güncelle** |
 
@@ -128,28 +130,29 @@ Eğitim ve sertifika kayıtları (`_data/aldigiegitimler.yml`, schema `hasCreden
 ## Kalan işler
 
 **Site içi**
-1. Ana sayfada 8 boş link — `_layouts/resume.html:91-129`, `practice-box-small`
-   kutularının hepsi `href=""`. Hedefleri: bipolar ve anksiyete → ilgili blog
-   yazısı, tedaviye dirençli depresyon → `/tms`, kalanlar → `/klinik` veya `/sss`.
-2. İç linkleme yok — `index`, `tms`, `tdcs`, `klinik`, `randevu`, `iletisim`
-   sayfalarında sıfır iç link. 1. madde ile birlikte çözülür.
-3. `klinik`, `tdcs`, `sikca-sorulan-sorular` sayfalarında iletişim butonu yok.
+1. 8 hastalık sayfası yazıldı (`depresyon`, `tedaviye-direncli-depresyon`, `okb`,
+   `bipolar-bozukluk`, `anksiyete-bozukluklari`, `eriskin-dehb`, `yaslilik-psikiyatrisi`,
+   `sizofreni`), ana sayfa kutuları bunlara bağlı. Bekleyen senkron işler: `llms.txt`
+   ve blog yazılarından geri link. Bipolar ve anksiyete sayfaları muayenehane
+   sürecini anlatır, "nedir"i blog yazıları anlatır. Aynı metin iki yerde olmamalı.
+2. İç linkleme — `index`, `tms`, `klinik`, `randevu`, `iletisim` sayfalarında iç
+   link yok. Hastalık sayfaları yayına girdikçe birlikte çözülür.
 
 **Ölçüm**
-4. GA4 dönüşüm takibi yok. `head.html`'de GA kurulu (lazy-load, PageSpeed için)
+3. GA4 dönüşüm takibi yok. `head.html`'de GA kurulu (lazy-load, PageSpeed için)
    ama `tel:` / `wa.me` tıklamaları ölçülmüyor.
-5. `/tms` başlık ve açıklama CTR yazımı — 62.437 gösterim, %0,73 tıklama.
-   4. madde kurulmadan etkisi ölçülemez.
+4. `/tms` başlık ve açıklama CTR yazımı — 62.437 gösterim, %0,73 tıklama.
+   3. madde kurulmadan etkisi ölçülemez.
 
 **Bekleyen**
-6. `/parlakisik` içeriği yazılacak. Şu an `noindex` + sitemap dışı, içeriği
+5. `/parlakisik` içeriği yazılacak. Şu an `noindex` + sitemap dışı, içeriği
    boşaltıldı. Tedavi **uygulanıyor**, eksik olan sadece sayfa.
-7. `/hakkimda` sayfası. Ham malzeme: silinen `_data/meslekiilgialanlari.yml`
+6. `/hakkimda` sayfası. Ham malzeme: silinen `_data/meslekiilgialanlari.yml`
    (git geçmişinde). Nöropsikiyatri ve şizofreni başlıkları sitede hiç
    ayrı anlatılmıyor.
 
 **Site dışı**
-8. İyi Psikolog ve Türkiye Psikiyatristleri'ne adres güncelleme maili gönderildi,
+7. İyi Psikolog ve Türkiye Psikiyatristleri'ne adres güncelleme maili gönderildi,
    takip edilecek. Doktorum360 için KVKK 11. madde talebi opsiyonel.
    (DoktorTakvimi ve Doktorsitesi düzeltildi.)
 

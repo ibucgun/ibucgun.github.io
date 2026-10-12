@@ -1,0 +1,15 @@
+<div class="tms-cta-section">
+  <h2>{{ include.baslik | default: "Randevu ve bilgi için" }}</h2>
+  <p>
+    {{ include.metin | default: "Aşağıdaki numaradan <b>arayarak ya da WhatsApp mesajı göndererek</b> randevu alabilir, merak ettiklerinizi sorabilirsiniz." }}
+  </p>
+  <div class="cta-buttons">
+    <a href="tel:+905510334896" class="btn-double-line" title="Hemen Ara">
+      <span class="btn-main-text">{{ include.buton | default: "Randevu Al" }}</span>
+      <span class="btn-sub-text">0 (551) 033 48 96</span>
+    </a>
+    <a href="https://wa.me/905510334896" class="btn-whatsapp" title="WhatsApp Mesajı Gönder" rel="noopener">
+      <span>WhatsApp</span>
+    </a>
+  </div>
+</div>
