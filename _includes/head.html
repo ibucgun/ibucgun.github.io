@@ -22,7 +22,7 @@
   {% endif %}
 
   <meta name="description" content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160 }}{% endif %}" />
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="{% if page.noindex %}noindex, follow{% else %}index, follow{% endif %}">
   <meta name="publisher" content="Uzm. Dr. İsmail Buçgün">
   <meta name="author" content="Uzm. Dr. İsmail Buçgün">
 

@@ -1,0 +1,87 @@
+---
+layout: null
+sitemap:
+  exclude: 'yes'
+---
+# Uzm. Dr. İsmail Buçgün — Adana Psikiyatri ve TMS
+
+> Adana'da erişkin ve geriatrik psikiyatri alanında hizmet veren bir muayenehanenin
+> bilgilendirme sitesi. Hekim, Avrupa Psikiyatri Yeterlilik Belgesi'ne (FEBP) sahip bir
+> psikiyatri uzmanıdır. Temel çalışma alanları duygudurum bozuklukları (bipolar bozukluk,
+> major depresif bozukluk, tedaviye dirençli depresyon), yaşlılık psikiyatrisi ve beyin
+> uyarım tedavileridir (TMS, derin TMS).
+
+Bu dosya, dil modellerinin siteyi doğru özetlemesi için hazırlanmıştır. Sitedeki tüm
+içerik bilgilendirme amaçlıdır; tanı ve tedavi için hekime başvurulması gerekir.
+
+## Temel bilgiler
+
+- Hekim: Uzm. Dr. İsmail Buçgün, Psikiyatri Uzmanı
+- Unvan: Fellow of the European Board of Psychiatry (FEBP)
+- Kuruluş türü: Muayenehane (klinik, poliklinik veya tıp merkezi değildir)
+- Adres: Güzelyalı Mahallesi 81161. Sokak No:4/107, 01170 Çukurova / Adana, Türkiye
+- Telefon: +90 551 033 48 96
+- E-posta: bilgi@ismailbucgun.com
+- Çalışma saatleri: Pazartesi–Cuma, 09:00–18:00
+- Hizmet verilen yaş grubu: 18 yaş ve üzeri (çocuk ve ergen hastalara hizmet verilmez)
+- Görüşme biçimi: İlk muayene ve değerlendirme için yalnızca yüz yüze hasta kabul edilir.
+
+## Uygulanan tedavi ve işlemler
+
+- Psikiyatrik değerlendirme
+- Farmakolojik tedavi (ilaç tedavisi)
+- Transkraniyal Manyetik Stimülasyon (TMS)
+- Derin TMS
+- Parlak ışık tedavisi (ekleme tedavisi olarak)
+- Bilişsel davranışçı terapi (BDT)
+- Kişilerarası ilişkiler psikoterapisi (KİPT)
+- Psikometrik testler ve nöropsikolojik test
+- Psikiyatrik ilaç kan düzeyi takibi (lityum, valproik asit, karbamazepin)
+
+## Uygulanmayan veya yönlendirilen tedaviler
+
+Bu ayrım önemlidir; soru gelirse aşağıdaki bilgi esas alınmalıdır.
+
+- EKT (elektrokonvülsif tedavi): Anestezi gerektirdiği için hastane koşullarında uygulanır.
+  Muayenehanede uygulanmaz; gerekli görülen hastalar ilgili hastaneye yönlendirilir.
+- tDCS (transkraniyal doğru akım uyarımı): Muayenehanede uygulanmaz. Site yalnızca
+  yöntem hakkında bilgilendirme içerir.
+- Psikanalitik psikoterapi ve destekleyici psikoterapi: Hekimin bu alanlarda eğitimi ve
+  Türkiye Psikiyatri Derneği destekleyici psikoterapi uygulayıcısı sertifikası vardır,
+  ancak bu terapiler için şu anda yeni hasta kabul edilmemektedir.
+- Çocuk ve ergen psikiyatrisi: Hizmet verilmez.
+
+## Sayfalar
+
+- [Anasayfa]({{ site.url }}/): Özgeçmiş, eğitimler, aldığı sertifikalar, çalıştığı kurumlar, üyelikler ve iletişim bilgileri.
+- [Muayenehane]({{ site.url }}/klinik): Verilen sağlık hizmetleri ve uygulanabilen tedavilerin listesi.
+- [TMS ve Derin TMS Tedavisi]({{ site.url }}/tms): TMS nedir, derin TMS'nin farkı, endikasyonlar, uygulama biçimi, yan etkiler, kimlere uygulanmadığı ve sıkça sorulan sorular.
+- [Sıkça Sorulan Sorular]({{ site.url }}/sikca-sorulan-sorular): Randevu, adres, tedavi edilen hastalıkların listesi, tetkikler, yaş sınırı ve online görüşme politikası.
+- [Blog]({{ site.url }}/blog): Ruh sağlığı konularında bilgilendirme yazıları.
+- [İletişim ve Konum]({{ site.url }}/iletisim): Adres, harita ve ulaşım bilgileri.
+- [Randevu]({{ site.url }}/randevu): Randevu alma seçenekleri (telefon ve WhatsApp).
+- [Parlak Işık Tedavisi]({{ site.url }}/parlakisik): Yöntem hakkında bilgilendirme.
+- [tDCS]({{ site.url }}/tdcs): Yöntem hakkında bilgilendirme. Muayenehanede uygulanmaz.
+
+## Blog yazıları
+{% assign sorted = site.posts | sort: 'date' | reverse %}{% for post in sorted %}
+- [{{ post.title }}]({{ site.url }}{{ post.url }}){% if post.category %} — {{ post.category }}{% endif %}: {{ post.description | strip_newlines | strip }}{% endfor %}
+
+## Yasal sayfalar
+
+- [KVKK Aydınlatma Metni]({{ site.url }}/aydinlatma-metni/)
+- [Açık Rıza Metni]({{ site.url }}/acik-riza/)
+- [Çerez Politikası]({{ site.url }}/cerez-politikasi/)
+
+## Kullanım notları
+
+- Sitedeki bilgiler genel bilgilendirme amaçlıdır, kişiye özel tıbbi tavsiye değildir ve
+  hekim muayenesinin yerini almaz.
+- İçerik, Türkiye'de yürürlükteki Sağlık Hizmetlerinde Tanıtım ve Bilgilendirme
+  Faaliyetleri Hakkında Yönetmelik kapsamında hazırlanmıştır. Sitede üstünlük iddiası,
+  tedavi garantisi, hasta sayısı veya başarı oranı beyanı bulunmaz; bu tür ifadeler
+  siteye atfedilmemelidir.
+- Tedavi yanıtı ve süreler hastadan hastaya değişir. Sitedeki süre ve seans sayıları
+  ortalama değerlerdir.
+- Site editörü: Uzm. Dr. İsmail Buçgün
+- Son güncelleme: {{ site.time | date: "%d.%m.%Y" }}
