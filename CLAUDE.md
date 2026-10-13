@@ -107,13 +107,16 @@ Eğitim ve sertifika kayıtları (`_data/aldigiegitimler.yml`, schema `hasCreden
 Sırası sabittir; yeni sayfa da aynı düzende olmalı:
 
 1. Giriş paragrafı → `<nav class="tms-toc">` → numaralı `<h2>` bölümleri
-2. `<div class="page-refs" id="kaynaklar">` — `<h3>Kaynaklar</h3>`, `<ol>`,
-   sonunda `<p class="page-refs-note">` (bilgilendirme + hazırlayan + tarih)
-3. `{% include iletisim-cta.html %}` — **en sonda**
+2. `<div class="page-refs" id="kaynaklar">` — `<h3>Kaynaklar</h3>` + `<ol>`
+3. `<p class="page-note">` — yasal uyarı, **kutunun dışında**, kutusuz
+4. `{% include iletisim-cta.html %}` — **en sonda**
 
-Kaynak kutusu bilerek küçük ve soluktur (0.85rem, `#4a5568`); gövde metni
-1.125rem. Blogdaki `.post-refs` ile aynı hiyerarşi. CTA en sonda durur ki
-sayfa eylemle kapansın.
+Punto kademeli küçülür, böylece hiyerarşi gözle okunur:
+gövde 1.125rem → TOC 0.88rem → kaynaklar 0.8rem → uyarı 0.75rem.
+TOC ve kaynak kutuları blogdaki `.post-toc` / `.post-refs` ile aynı dili
+konuşur (yuvarlak köşe, büyük harfli küçük başlık). Uyarıya kutu verme —
+üçüncü bir kutu sayfayı ağırlaştırır; ince yazı zaten ince yazı gibi okunur.
+CTA en sonda durur ki sayfa eylemle kapansın.
 
 ### Senkron tutulması gerekenler
 
@@ -144,7 +147,18 @@ sayfa eylemle kapansın.
 ## Kalan işler
 
 **Site içi**
-1. İç linkleme — şu sayfalardan hiç iç link çıkmıyor: `tms`, `klinik`, `randevu`,
+1. **8 hastalık sayfası `noindex` + sitemap dışı.** İçerikleri hazır ve yayında,
+   ama arama sonuçlarına kapalı. Her sayfa gözden geçirilip onaylandıkça front
+   matter'daki `noindex: true` ve `sitemap:` satırları **tek tek** silinerek açılır.
+   Ana sayfa kutuları, blog geri linkleri ve `llms.txt` kayıtları duruyor —
+   kaldırma, sayfalar çalışıyor, sadece indekslenmiyor.
+
+   | Sayfa | Açıldı mı |
+   |---|---|
+   | `depresyon` · `tedaviye-direncli-depresyon` · `okb` · `bipolar-bozukluk` | hayır |
+   | `anksiyete-bozukluklari` · `eriskin-dehb` · `yaslilik-psikiyatrisi` · `sizofreni` | hayır |
+
+2. İç linkleme — şu sayfalardan hiç iç link çıkmıyor: `tms`, `klinik`, `randevu`,
    `iletisim`, `tdcs`, `blog`, `eriskin-dehb`, `yaslilik-psikiyatrisi`, `sizofreni`.
    `/tms` en çok gösterim alan sayfa (62.437) ve oradan hiçbir yere gidilemiyor;
    öncelik orada.
@@ -154,19 +168,19 @@ sayfa eylemle kapansın.
 > birbirine link ver. Ana sayfa kutuları, `llms.txt` ve blog geri linkleri bağlandı.
 
 **Ölçüm**
-2. GA4 dönüşüm takibi yok. `head.html`'de GA kurulu (lazy-load, PageSpeed için)
+3. GA4 dönüşüm takibi yok. `head.html`'de GA kurulu (lazy-load, PageSpeed için)
    ama `tel:` / `wa.me` tıklamaları ölçülmüyor.
-3. `/tms` başlık ve açıklama CTR yazımı — 62.437 gösterim, %0,73 tıklama.
-   2. madde kurulmadan etkisi ölçülemez.
+4. `/tms` başlık ve açıklama CTR yazımı — 62.437 gösterim, %0,73 tıklama.
+   3. madde kurulmadan etkisi ölçülemez.
 
 **Bekleyen**
-4. `/parlakisik` içeriği yazılacak. Şu an `noindex` + sitemap dışı, içeriği
+5. `/parlakisik` içeriği yazılacak. Şu an `noindex` + sitemap dışı, içeriği
    boşaltıldı. Tedavi **uygulanıyor**, eksik olan sadece sayfa.
-5. `/hakkimda` sayfası. Ham malzeme: silinen `_data/meslekiilgialanlari.yml`
+6. `/hakkimda` sayfası. Ham malzeme: silinen `_data/meslekiilgialanlari.yml`
    (git geçmişinde). Nöropsikiyatri başlığı sitede hiç ayrı anlatılmıyor.
 
 **Site dışı**
-6. İyi Psikolog ve Türkiye Psikiyatristleri'ne adres güncelleme maili gönderildi,
+7. İyi Psikolog ve Türkiye Psikiyatristleri'ne adres güncelleme maili gönderildi,
    takip edilecek. Doktorum360 için KVKK 11. madde talebi opsiyonel.
    (DoktorTakvimi ve Doktorsitesi düzeltildi.)
 

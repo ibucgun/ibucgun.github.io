@@ -1018,34 +1018,64 @@
   text-align: left;
 }
 
-/* 3) İçindekiler (TOC) */
+/* 3) İçindekiler (TOC) — blogdaki .post-toc ile aynı görünüm, biraz daha sıkı */
 .tms-content .tms-toc {
-  background: #f7f8fa;
-  border-left: 4px solid $brand-indigo;
-  padding: 1rem 1.25rem;
-  margin: 1.5rem 0;
-  border-radius: 6px;
+  background: #f3f1fd;
+  border-radius: 14px;
+  padding: 15px 20px;
+  margin: 26px 0;
 }
 .tms-content .tms-toc strong {
+  @include sans_bold;
   display: block;
-  margin-bottom: 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: $brand-indigo;
+  margin: 0 0 8px;
 }
 .tms-content .tms-toc ol {
+  list-style: none;
+  counter-reset: tmstoc;
   margin: 0;
-  padding-left: 1.25rem;
+  padding: 0;
 }
 .tms-content .tms-toc li {
-  /* TOC içindeki linkler yaslı görünmesin */
+  counter-increment: tmstoc;
+  margin: 5px 0;
+  font-size: 0.88rem;
+  line-height: 1.45;
   text-align: left;
+}
+.tms-content .tms-toc li::before {
+  @include sans_bold;
+  content: counter(tmstoc);
+  display: inline-flex;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  color: $brand-indigo;
+  font-size: 0.68rem;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  margin-right: 9px;
+  flex: none;
 }
 .tms-content .tms-toc a {
   color: $text_color;
   text-decoration: none;
+  transition: color 0.2s;
 }
 .tms-content .tms-toc a:hover {
   color: $brand-indigo;
-  text-decoration: underline;
+}
+.tms-content .tms-toc a:focus-visible {
+  outline: 2px solid $brand-indigo;
+  outline-offset: 2px;
+  border-radius: 3px;
 }
 
 /* 4) Görsel + alt yazı */
@@ -1069,40 +1099,40 @@
    Gövde metni 1.125rem; kaynaklar 0.85rem ve soluk renkte kalır ki
    okuyucu ikisini karıştırmasın. */
 .tms-content .page-refs {
-  margin-top: 36px;
+  margin-top: 30px;
   background: #fafafd;
   border: 1px solid #e8e6f4;
   border-radius: 14px;
-  padding: 22px 24px;
+  padding: 15px 20px;
 }
 .tms-content .page-refs h3 {
   @include sans_bold;
-  font-size: 0.82rem;
+  font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #4a5568;
-  margin: 0 0 12px;
+  color: #6b7280;
+  margin: 0 0 8px;
 }
 .tms-content .page-refs ol {
-  padding-left: 18px;
+  padding-left: 16px;
   margin: 0;
 }
 .tms-content .page-refs li {
-  font-size: 0.85rem;
-  line-height: 1.6;
+  font-size: 0.8rem;
+  line-height: 1.5;
   color: #4a5568;
-  margin: 6px 0;
+  margin: 4px 0;
   text-align: left;
 }
-.tms-content .page-refs .page-refs-note {
-  font-size: 0.8rem;
-  line-height: 1.6;
-  color: #4a5568;
+
+/* Yasal uyarı — kutusuz, kaynaklardan da küçük: sayfanın en hafif katmanı */
+.tms-content .page-note {
+  font-size: 0.75rem;
+  line-height: 1.55;
+  color: #6b7280;
   text-align: left;
-  margin: 14px 0 0;
-  padding-top: 12px;
-  border-top: 1px solid #e8e6f4;
+  margin: 14px 2px 0;
 }
 
 /* CTA buton stilleri global blokta tanımlı (dosya başına bakın).
