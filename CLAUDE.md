@@ -125,6 +125,11 @@ CTA en sonda durur ki sayfa eylemle kapansın.
 - **Hizmet listesi ↔ üç yer:** `klinik.html`, schema `availableService`, `llms.txt`.
 - Blog yazılarının URL'leri `permalink: /:title` ile **kilitli**. Global ayar
   `/blog/:title` ama mevcut 6 yazının adresi değişmemeli (trafik var).
+- **`last_modified_at`** — bir sayfanın veya yazının içeriğini değiştirdiğinde
+  front matter'daki bu tarihi de güncelle (`YYYY-AA-GG`). `sitemap.xml` ve
+  `_layouts/post.html` (schema `dateModified`) bu alanı okur. Güncellemezsen
+  Google değişikliği fark etmez. Sadece dizgi/stil düzeltmesiyse dokunma —
+  içerik değişmediyse tarih de değişmemeli.
 
 ---
 

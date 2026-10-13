@@ -5,6 +5,7 @@ permalink: /:title
 author: "Uzm. Dr. İsmail Buçgün"
 category: "Psikoterapi"
 description: Destekleyici psikoterapi nedir, hangi kurama dayanır? Tedavi hedefleri, başlıca kullanım alanları, görüşme sıklığı ve tedavi süresi hakkında bilgilendirme.
+last_modified_at: 2026-10-12
 ---
 
 Destekleyici psikoterapi, günümüzde bireysel psikoterapiler arasında dünyada en yaygın kullanılan, ülkemizde yetişmiş terapist sayısının azlığı nedeniyle kullanımı yaygın olmayan bir psikoterapi yöntemidir ve **Sigmund Freud ile başlayan psikanalitik kuram ve sonrasındaki psikodinamik psikiyatri temellerine dayalıdır.** Psikiyatrik tanısal değerlendirmeyi gerektiren, terapistin girişimlerini özgül bir hedefi başarmaya yönelik olarak tasarladığı bir psikoterapidir. **Hedefi kişilik değişimi değildir.** Ağır bir ruhsal bozukluğun yinelemesini önlemek amacıyla hastanın belirtilerle baş etmesine yardımcı olmak veya görece sağlıklı bir kişinin geçici güncel bir sorunla baş etmesine yardım etmek hedeflenir. 

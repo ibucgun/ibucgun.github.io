@@ -5,7 +5,7 @@ permalink: /:title
 author: "Uzm. Dr. İsmail Buçgün"
 category: "Anksiyete Bozuklukları"
 description: Anksiyete (kaygı) nedir? Korkudan farkı nedir? Ne zaman bozukluk olarak tanımlanır? Anksiyete bozuklukları nelerdir?
-last_modified_at: 2026-06-19
+last_modified_at: 2026-10-13
 refs:
   - "Kaplan ve Sadock Psikiyatri Kitabı, 11. Baskı, Güneş Tıp Kitabevi, 2016"
   - "Anksiyete Bozukluklarının Tedavisine Çok Yönlü Bakış, Psikiyatride Güncel Dergisi, Türkiye Psikiyatri Derneği Yayınları, Bahar 2015"

@@ -5,6 +5,7 @@ permalink: /:title
 author: "Uzm. Dr. İsmail Buçgün"
 category: "Psikoterapi"
 description: Psikanalitik psikoterapi nedir, hangi kurama dayanır? Açıklayıcı psikoterapi ne demektir, destekleyici psikoterapiden farkı nedir? Bilgilendirme amaçlı genel bilgiler.
+last_modified_at: 2026-10-12
 ---
 
 Bir önceki yazımda ruh sağlığı alanındaki önemli tedavilerden birisi olan **[destekleyici psikoterapi nedir](/destekleyici-psikoterapi-nedir)** anlatmaya çalıştım. Psikanalitik, psikodinamik, açıklayıcı, dinamik yönelimli psikoterapi, destekleyici psikoterapi gibi pek çok terim olması nedeniyle kafa karışıklığı oluşmuş olabilir, bu yazıda bu terimleri ve psikanalitik psikoterapinin temel özelliklerini ve destekleyici psikoterapiden farkını açıklamaya çalışacağım.

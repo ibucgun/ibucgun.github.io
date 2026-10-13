@@ -5,6 +5,7 @@ permalink: /:title
 author: "Uzm. Dr. İsmail Buçgün"
 category: "Bipolar Bozukluk"
 description: Bipolar duygudurum bozukluğu tanısı nasıl konur? Ayırıcı tanısı nasıl yapılır?
+last_modified_at: 2026-10-13
 ---
 
 ## Tanı Nasıl Konur?
