@@ -65,6 +65,20 @@ Bu ayrım önemlidir; soru gelirse aşağıdaki bilgi esas alınmalıdır.
 Parlak ışık tedavisi muayenehanede uygulanan tedaviler arasındadır, ancak bu yöntemi
 anlatan bilgilendirme sayfası henüz hazırlanmamıştır.
 
+## Hastalık sayfaları
+
+Bu sayfalar ilgili hastalıkta muayenehanedeki değerlendirme ve tedavi sürecini
+anlatır. Hastalığın tanımı ve genel bilgisi için blog yazılarına bakınız.
+
+- [Depresyon]({{ site.url }}/depresyon)
+- [Tedaviye Dirençli Depresyon]({{ site.url }}/tedaviye-direncli-depresyon)
+- [Bipolar Bozukluk]({{ site.url }}/bipolar-bozukluk)
+- [Anksiyete (Kaygı) Bozuklukları]({{ site.url }}/anksiyete-bozukluklari)
+- [Obsesif Kompulsif Bozukluk (OKB)]({{ site.url }}/okb)
+- [Erişkin Dikkat Eksikliği ve Hiperaktivite Bozukluğu (DEHB)]({{ site.url }}/eriskin-dehb)
+- [Şizofreni ve Psikotik Bozukluklar]({{ site.url }}/sizofreni)
+- [Yaşlılık Psikiyatrisi]({{ site.url }}/yaslilik-psikiyatrisi)
+
 ## Blog yazıları
 {% assign sorted = site.posts | sort: 'date' | reverse %}{% for post in sorted %}
 - [{{ post.title }}]({{ site.url }}{{ post.url }}){% if post.category %} — {{ post.category }}{% endif %}: {{ post.description | strip_newlines | strip }}{% endfor %}

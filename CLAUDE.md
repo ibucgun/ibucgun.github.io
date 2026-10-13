@@ -131,28 +131,29 @@ Eğitim ve sertifika kayıtları (`_data/aldigiegitimler.yml`, schema `hasCreden
 ## Kalan işler
 
 **Site içi**
-1. 8 hastalık sayfası yazıldı (`depresyon`, `tedaviye-direncli-depresyon`, `okb`,
-   `bipolar-bozukluk`, `anksiyete-bozukluklari`, `eriskin-dehb`, `yaslilik-psikiyatrisi`,
-   `sizofreni`), ana sayfa kutuları bunlara bağlı. Bekleyen senkron işler: `llms.txt`
-   ve blog yazılarından geri link. Bipolar ve anksiyete sayfaları muayenehane
-   sürecini anlatır, "nedir"i blog yazıları anlatır. Aynı metin iki yerde olmamalı.
-2. İç linkleme — `index`, `tms`, `klinik`, `randevu`, `iletisim` sayfalarında iç
-   link yok. Hastalık sayfaları yayına girdikçe birlikte çözülür.
+1. İç linkleme — şu sayfalardan hiç iç link çıkmıyor: `tms`, `klinik`, `randevu`,
+   `iletisim`, `tdcs`, `blog`, `eriskin-dehb`, `yaslilik-psikiyatrisi`, `sizofreni`.
+   `/tms` en çok gösterim alan sayfa (62.437) ve oradan hiçbir yere gidilemiyor;
+   öncelik orada.
+
+> Hastalık sayfaları muayenehanedeki **değerlendirme ve tedavi sürecini** anlatır,
+> hastalığın "nedir"ini **blog yazıları** anlatır. Aynı metni iki yere yazma;
+> birbirine link ver. Ana sayfa kutuları, `llms.txt` ve blog geri linkleri bağlandı.
 
 **Ölçüm**
-3. GA4 dönüşüm takibi yok. `head.html`'de GA kurulu (lazy-load, PageSpeed için)
+2. GA4 dönüşüm takibi yok. `head.html`'de GA kurulu (lazy-load, PageSpeed için)
    ama `tel:` / `wa.me` tıklamaları ölçülmüyor.
-4. `/tms` başlık ve açıklama CTR yazımı — 62.437 gösterim, %0,73 tıklama.
-   3. madde kurulmadan etkisi ölçülemez.
+3. `/tms` başlık ve açıklama CTR yazımı — 62.437 gösterim, %0,73 tıklama.
+   2. madde kurulmadan etkisi ölçülemez.
 
 **Bekleyen**
-5. `/parlakisik` içeriği yazılacak. Şu an `noindex` + sitemap dışı, içeriği
+4. `/parlakisik` içeriği yazılacak. Şu an `noindex` + sitemap dışı, içeriği
    boşaltıldı. Tedavi **uygulanıyor**, eksik olan sadece sayfa.
-6. `/hakkimda` sayfası. Ham malzeme: silinen `_data/meslekiilgialanlari.yml`
+5. `/hakkimda` sayfası. Ham malzeme: silinen `_data/meslekiilgialanlari.yml`
    (git geçmişinde). Nöropsikiyatri başlığı sitede hiç ayrı anlatılmıyor.
 
 **Site dışı**
-7. İyi Psikolog ve Türkiye Psikiyatristleri'ne adres güncelleme maili gönderildi,
+6. İyi Psikolog ve Türkiye Psikiyatristleri'ne adres güncelleme maili gönderildi,
    takip edilecek. Doktorum360 için KVKK 11. madde talebi opsiyonel.
    (DoktorTakvimi ve Doktorsitesi düzeltildi.)
 
