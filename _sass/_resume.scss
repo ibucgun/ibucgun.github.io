@@ -1065,6 +1065,46 @@
   font-style: italic;
 }
 
+/* 5) Kaynaklar kutusu — blog yazılarındaki .post-refs ile aynı hiyerarşi.
+   Gövde metni 1.125rem; kaynaklar 0.85rem ve soluk renkte kalır ki
+   okuyucu ikisini karıştırmasın. */
+.tms-content .page-refs {
+  margin-top: 36px;
+  background: #fafafd;
+  border: 1px solid #e8e6f4;
+  border-radius: 14px;
+  padding: 22px 24px;
+}
+.tms-content .page-refs h3 {
+  @include sans_bold;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #4a5568;
+  margin: 0 0 12px;
+}
+.tms-content .page-refs ol {
+  padding-left: 18px;
+  margin: 0;
+}
+.tms-content .page-refs li {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #4a5568;
+  margin: 6px 0;
+  text-align: left;
+}
+.tms-content .page-refs .page-refs-note {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: #4a5568;
+  text-align: left;
+  margin: 14px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid #e8e6f4;
+}
+
 /* CTA buton stilleri global blokta tanımlı (dosya başına bakın).
    .cta-buttons konteyneri hem TMS hem Randevu sayfasında çalışır. */
 

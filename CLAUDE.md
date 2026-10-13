@@ -97,10 +97,23 @@ Eğitim ve sertifika kayıtları (`_data/aldigiegitimler.yml`, schema `hasCreden
 | `_includes/head.html` | Meta, OG, canonical, schema çağrıları, GA4 |
 | `_includes/schema/hekim-klinik.html` | Ana sayfa JSON-LD (Physician + MedicalClinic) |
 | `_includes/schema/tms.html` | `/tms` JSON-LD (FAQPage + MedicalProcedure) |
-| Kökteki hastalık sayfaları | `depresyon.html` vb.; tms.html yapısı (`tms-content`, `tms-toc`, callout, Kaynaklar) |
+| Kökteki hastalık sayfaları | `depresyon.html` vb.; `tms-content` + `tms-toc` yapısı |
 | `_includes/iletisim-cta.html` | Ara / WhatsApp butonu; `baslik`, `metin`, `buton` parametreleri |
 | `_data/categories.yml` | Blog kategori renkleri |
 | `llms.txt` | Dil modelleri için site özeti — **hizmet değişince güncelle** |
+
+### Hastalık sayfası düzeni
+
+Sırası sabittir; yeni sayfa da aynı düzende olmalı:
+
+1. Giriş paragrafı → `<nav class="tms-toc">` → numaralı `<h2>` bölümleri
+2. `<div class="page-refs" id="kaynaklar">` — `<h3>Kaynaklar</h3>`, `<ol>`,
+   sonunda `<p class="page-refs-note">` (bilgilendirme + hazırlayan + tarih)
+3. `{% include iletisim-cta.html %}` — **en sonda**
+
+Kaynak kutusu bilerek küçük ve soluktur (0.85rem, `#4a5568`); gövde metni
+1.125rem. Blogdaki `.post-refs` ile aynı hiyerarşi. CTA en sonda durur ki
+sayfa eylemle kapansın.
 
 ### Senkron tutulması gerekenler
 
