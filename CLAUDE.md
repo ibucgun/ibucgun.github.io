@@ -189,6 +189,20 @@ CTA en sonda durur ki sayfa eylemle kapansın.
    takip edilecek. Doktorum360 için KVKK 11. madde talebi opsiyonel.
    (DoktorTakvimi ve Doktorsitesi düzeltildi.)
 
+**En son — içerik bittikten sonra**
+8. Yeniden tasarım ("yapay zeka yapımı" görünümden çıkarmak). Yöntem kararlaştırıldı:
+   ayrı public repo `tasarim`, önizleme `ismailbucgun.com/tasarim/` adresinde
+   (ana site özel domain kullandığı için GitHub proje repolarını onun altına koyar).
+   - Başlarken `master`'a `tasarim-oncesi` tag'i at — geri dönüş noktası.
+   - Önizleme reposunda `CNAME`'i sil (iki repo aynı domaini talep etmesin),
+     `baseurl: /tasarim`, `_config.yml` `defaults` ile tüm sayfalara `noindex`.
+   - **Tuzak:** sitedeki kök-mutlak yollar (`/css/main.css` vb., ~87 adet, 24 dosya)
+     `relative_url`'e çevrilmeli. Çevrilmezse önizleme canlı sitenin CSS'ini yükler
+     ve hata vermeden **eski tasarımı** gösterir. Canlıda çıktı aynı kalır.
+   - Birleştirirken `_config.yml` ve `CNAME` ana sitedeki haliyle kalır.
+   - `design-taste-frontend` skill'i kullanılacak; npm/React/GSAP kısımları hariç,
+     Jekyll + SCSS + vanilla JS'e uyarlanarak. Önce mevcut tasarım denetlenir.
+
 ---
 
 ## Çalışma şekli
