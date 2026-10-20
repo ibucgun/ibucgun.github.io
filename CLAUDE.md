@@ -237,16 +237,35 @@ CTA en sonda durur ki sayfa eylemle kapansın.
 > birbirine link ver. Ana sayfa kutuları, `llms.txt` ve blog geri linkleri bağlandı.
 
 **Ölçüm**
-3. GA4 dönüşüm takibi yok. `head.html`'de GA kurulu (lazy-load, PageSpeed için)
-   ama `tel:` / `wa.me` tıklamaları ölçülmüyor.
+3. **GA4 dönüşüm takibi — kod hazır, panel ayarı bekliyor.** `head.html` telefon ve
+   WhatsApp tıklamalarını `phone_click` / `whatsapp_click` olayı ve `link_location`
+   parametresiyle gönderir (`hero`, `cta`, `iletisim_karti`, `menu`, `footer`, `icerik`).
+   GA4 panelinde: iki olayı **anahtar etkinlik** yap; `link_location` için etkinlik kapsamlı
+   **özel boyut** tanımla. `gtag` kuyruğu sayfa başında tanımlı (erken tıklama kaybolmasın),
+   ağ yüklemesi yine gecikmeli. Yeni bir buton kapsayıcısı eklenirse `konum` eşlemesine ekle.
 4. `/tms` başlık ve açıklama CTR yazımı — 62.437 gösterim, %0,73 tıklama.
    3. madde kurulmadan etkisi ölçülemez.
 
 **Bekleyen**
 5. `/parlakisik` içeriği yazılacak. Şu an `noindex` + sitemap dışı, içeriği
    boşaltıldı. Tedavi **uygulanıyor**, eksik olan sadece sayfa.
-6. `/hakkimda` sayfası. Ham malzeme: silinen `_data/meslekiilgialanlari.yml`
-   (git geçmişinde). Nöropsikiyatri başlığı sitede hiç ayrı anlatılmıyor.
+6. **`/hakkimda` — taslak, yayında değil.** Amaç: ana sayfayı özgeçmiş görünümünden çıkarmak.
+   - Taslakta: `noindex` + sitemap dışı, **hiçbir yerden link yok** (menü, footer, `llms.txt`,
+     404, blog). Adresi bilen açabilir ve repo herkese açık; taslağa gizli bilgi konmaz.
+   - Taşınacak 4 bölüm: Yeterlilik ve Üyelikler, Akademik Eğitim, Çalıştığım Kurumlar,
+     Aldığım Eğitimler. Veri zaten `_data/*.yml`'de; sayfa aynı dosyaları okur, içerik
+     kopyalanmaz. Bölüm şablonları `_includes/ozgecmis/`'e alınır. Canlı ana sayfaya
+     yayına kadar **dokunulmaz**.
+   - Yalnız CV dökümü olmaz: başta birinci şahısla kısa anlatım (neden bu alanlar, nasıl
+     çalışıyorum). Ham malzeme: git geçmişindeki `_data/meslekiilgialanlari.yml`.
+   - **Sıra:** önce GA4 dönüşüm takibi (madde 3), sonra yayın — ana sayfa "adana psikiyatri"de
+     üst sırada, değişikliğin etkisi ölçülebilmeli.
+   - Yayın listesi: noindex/sitemap satırlarını sil, `last_modified_at` ekle · ana sayfadan
+     4 bölümü kaldır, yerine kısa yeterlilik özeti (FEBP + uzmanlık sonrası eğitimler) ve
+     `/hakkimda` linki · menü ve footer linki · blog yazar kutusundan link · `llms.txt` ·
+     schema: `/hakkimda`'ya `ProfilePage` (`mainEntity` → mevcut `/#hekim`; ikinci kişi düğümü
+     açılmaz, Physician ana sayfada kalır), `hasCredential`'a DUSEP, RCPsych, NEI · Search
+     Console'dan dizine ekleme isteği · 2–3 hafta sıralama takibi.
 
 **Site dışı**
 7. İyi Psikolog ve Türkiye Psikiyatristleri'ne adres güncelleme maili gönderildi,

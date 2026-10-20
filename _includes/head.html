@@ -67,20 +67,21 @@
       var gaLoaded = false;
       var GA_ID = 'G-62LZJT42N1';
 
+      // Kuyruk en baştan tanımlı: gtag.js henüz yüklenmeden gelen olaylar
+      // (ör. ilk hareketi telefon butonuna basmak olan ziyaretçi) kaybolmaz,
+      // script yüklenince sırayla işlenir. Ağ yüklemesi yine gecikmeli.
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { dataLayer.push(arguments); };
+      gtag('js', new Date());
+      gtag('config', GA_ID, { 'anonymize_ip': true });
+
       function loadGA() {
         if (gaLoaded) return;
         gaLoaded = true;
-
         var script = document.createElement('script');
         script.async = true;
         script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
         document.head.appendChild(script);
-
-        window.dataLayer = window.dataLayer || [];
-        window.gtag = function () { dataLayer.push(arguments); };
-
-        gtag('js', new Date());
-        gtag('config', GA_ID, { 'anonymize_ip': true });
       }
 
       window.addEventListener('load', function () {
@@ -90,6 +91,24 @@
       ['scroll', 'click', 'touchstart', 'keydown'].forEach(function (eventName) {
         window.addEventListener(eventName, loadGA, { once: true, passive: true });
       });
+
+      // Dönüşüm takibi: telefon ve WhatsApp tıklamaları.
+      // GA4'te phone_click ve whatsapp_click "anahtar etkinlik" olarak işaretli olmalı;
+      // link_location için etkinlik kapsamlı özel boyut tanımlı olmalı.
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest && e.target.closest('a[href^="tel:"], a[href*="wa.me/"]');
+        if (!a) return;
+        var konum = a.closest('.nav-wrapper') ? 'menu'
+                  : a.closest('.modern-hero-layout') ? 'hero'
+                  : a.closest('.page-footer') ? 'footer'
+                  : a.closest('.tms-cta-section') ? 'cta'
+                  : a.closest('.modern-contact-card') ? 'iletisim_karti'
+                  : 'icerik';
+        gtag('event', a.getAttribute('href').indexOf('tel:') === 0 ? 'phone_click' : 'whatsapp_click', {
+          link_location: konum
+        });
+        loadGA();
+      }, true);
     })();
   </script>
 
