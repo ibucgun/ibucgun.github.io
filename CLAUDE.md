@@ -67,7 +67,7 @@ sıralama düşmesine yol açmıştı.
 ## Sunulan hizmetler
 
 TMS ve derin TMS · psikiyatrik değerlendirme · farmakolojik tedavi ·
-parlak ışık tedavisi · BDT · KİPT · psikometrik ve nöropsikolojik testler ·
+parlak ışık tedavisi · psikometrik ve nöropsikolojik testler ·
 ilaç kan düzeyi takibi
 
 ## Sunulmayan — bu ayrım önemli
@@ -77,13 +77,21 @@ ilaç kan düzeyi takibi
 | EKT | Anestezi gerektirir, hastanede uygulanır; hasta yönlendirilir |
 | tDCS | Uygulanmıyor. `/tdcs` yalnızca bilgilendirme sayfası |
 | Esketamin | Muayenehanede uygulanabilir ama henüz uygulanmadı. Sitede ne "uygulanır" ne "uygulanmaz" yazılır |
-| Psikanalitik psikoterapi | Eğitimi var, **yeni hasta kabul edilmiyor** |
-| Destekleyici psikoterapi | TPD sertifikası var, **yeni hasta kabul edilmiyor** |
+| **Psikoterapi** (BDT, KİPT, destekleyici, psikanalitik) | Eğitimleri var ve yapıyor, ama **şu anda yeni hasta kabul edilemiyor.** İhtiyacı olan yeni hasta ilk muayenede veya takipte belirlenip o yöntemle çalışan uzmana **yönlendirilir**; psikiyatrik takip ve ilaç muayenehanede sürebilir |
 | Çocuk ve ergen psikiyatrisi | Hizmet verilmiyor (18+) |
 | Online görüşme | İlk muayene yalnızca yüz yüze |
 
-Eğitim ve sertifika kayıtları (`_data/aldigiegitimler.yml`, schema `hasCredential`)
-**kalır** — eğitim beyanı serbesttir, hizmet beyanı değildir.
+Eğitim ve sertifika kayıtları (`_data/aldigiegitimler.yml`, schema `hasCredential`,
+`knowsAbout`) **kalır** — eğitim beyanı serbesttir, hizmet beyanı değildir.
+
+**Psikoterapi nasıl yazılır:** Çerçeve "yapmıyorum" değil, **"şu anda yeni hasta
+kabul edemiyorum"**. Hastalık sayfalarında kılavuz bilgisi kalır ("OKB'de kılavuzlarda
+önerilen yöntem BDT'dir"), ardından: "Şu anda psikoterapi için yeni hasta kabul
+edemediğimden, … hastaları bu yöntemle çalışan bir uzmana yönlendiriyorum." Yalnız
+"yönlendiriyorum" yazmak "bu hizmeti vermiyorum" diye okunur, yetmez. Sebebi
+("doluyuz", "yoğunluk nedeniyle") **yazılmaz** — dolaylı hasta yoğunluğu beyanıdır.
+Schema `availableService`'te psikoterapi yok: yeni hastaya açık olmayan hizmet
+listelenmez.
 
 ---
 
@@ -163,7 +171,7 @@ CTA en sonda durur ki sayfa eylemle kapansın.
    | `depresyon` · `tedaviye-direncli-depresyon` · `okb` · `bipolar-bozukluk` | hayır |
    | `anksiyete-bozukluklari` · `eriskin-dehb` · `yaslilik-psikiyatrisi` · `sizofreni` | hayır |
 
-2. İç linkleme — şu sayfalardan hiç iç link çıkmıyor: `tms`, `klinik`, `randevu`,
+2. İç linkleme — şu sayfalardan hiç iç link çıkmıyor: `tms`, `randevu`,
    `iletisim`, `tdcs`, `blog`, `eriskin-dehb`, `yaslilik-psikiyatrisi`, `sizofreni`.
    `/tms` en çok gösterim alan sayfa (62.437) ve oradan hiçbir yere gidilemiyor;
    öncelik orada.

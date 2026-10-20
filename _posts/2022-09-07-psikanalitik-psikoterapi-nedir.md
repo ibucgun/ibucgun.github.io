@@ -5,7 +5,7 @@ permalink: /:title
 author: "Uzm. Dr. İsmail Buçgün"
 category: "Psikoterapi"
 description: Psikanalitik psikoterapi nedir, hangi kurama dayanır? Açıklayıcı psikoterapi ne demektir, destekleyici psikoterapiden farkı nedir? Bilgilendirme amaçlı genel bilgiler.
-last_modified_at: 2026-10-12
+last_modified_at: 2026-10-20
 ---
 
 Bir önceki yazımda ruh sağlığı alanındaki önemli tedavilerden birisi olan **[destekleyici psikoterapi nedir](/destekleyici-psikoterapi-nedir)** anlatmaya çalıştım. Psikanalitik, psikodinamik, açıklayıcı, dinamik yönelimli psikoterapi, destekleyici psikoterapi gibi pek çok terim olması nedeniyle kafa karışıklığı oluşmuş olabilir, bu yazıda bu terimleri ve psikanalitik psikoterapinin temel özelliklerini ve destekleyici psikoterapiden farkını açıklamaya çalışacağım.
@@ -26,5 +26,5 @@ Psikanaliz ve psikodinamik kuramlara sırtını yaslayarak çalışan psikanalit
 Kazanılan içgörüyle beraber kişi anlamlandırmakta zorlandığı sorunları anlamlandırabilir, kendini hayatının kontrolünü tekrar ele alarak ve yaşantılarıyla yüzleşmiş olarak durumların sonuçlarını üstlenir. **Psikanalitik psikoterapi de genellikle haftada 1-2 kere, çoğunlukla belirlenen sabit bir gün ve saatte, 50 dakikalık görüşme şeklinde gerçekleştirilir.** **Psikanalitik psikoterapi kısa süreli bir psikoterapi değildir.** Terapinin süresi ve görüşme sıklığı kişiden kişiye, psikopatolojinin ağırlığına göre değişmektedir.
 
 <div class="callout">
-Bu yazı genel bilgilendirme amaçlıdır. Psikanalitik psikoterapi uygulaması için şu anda yeni hasta kabul etmemekteyim.
+Bu yazı genel bilgilendirme amaçlıdır. Psikanalitik psikoterapi uygulaması için şu anda yeni hasta kabul edememekteyim; bu yönteme ihtiyacı olduğunu değerlendirdiğim hastaları ilgili alanda çalışan bir uzmana yönlendiriyorum.
 </div>

@@ -33,8 +33,6 @@ içerik bilgilendirme amaçlıdır; tanı ve tedavi için hekime başvurulması 
 - Transkraniyal Manyetik Stimülasyon (TMS)
 - Derin TMS
 - Parlak ışık tedavisi (ekleme tedavisi olarak)
-- Bilişsel davranışçı terapi (BDT)
-- Kişilerarası ilişkiler psikoterapisi (KİPT)
 - Psikometrik testler ve nöropsikolojik test
 - Psikiyatrik ilaç kan düzeyi takibi (lityum, valproik asit, karbamazepin)
 
@@ -46,15 +44,18 @@ Bu ayrım önemlidir; soru gelirse aşağıdaki bilgi esas alınmalıdır.
   Muayenehanede uygulanmaz; gerekli görülen hastalar ilgili hastaneye yönlendirilir.
 - tDCS (transkraniyal doğru akım uyarımı): Muayenehanede uygulanmaz. Site yalnızca
   yöntem hakkında bilgilendirme içerir.
-- Psikanalitik psikoterapi ve destekleyici psikoterapi: Hekimin bu alanlarda eğitimi ve
-  Türkiye Psikiyatri Derneği destekleyici psikoterapi uygulayıcısı sertifikası vardır,
-  ancak bu terapiler için şu anda yeni hasta kabul edilmemektedir.
+- Psikoterapi (bilişsel davranışçı terapi, kişilerarası ilişkiler psikoterapisi,
+  destekleyici ve psikanalitik psikoterapi): Hekim bu yöntemlerde eğitim almıştır ve
+  Türkiye Psikiyatri Derneği destekleyici psikoterapi uygulayıcısı sertifikası vardır.
+  Ancak psikoterapi için şu anda yeni hasta kabul edilmemektedir. Psikoterapi ihtiyacı
+  ilk muayenede ya da takipte belirlenir ve hasta ilgili yöntemle çalışan bir uzmana
+  yönlendirilir; psikiyatrik takip ve ilaç tedavisi muayenehanede sürebilir.
 - Çocuk ve ergen psikiyatrisi: Hizmet verilmez.
 
 ## Sayfalar
 
 - [Anasayfa]({{ site.url }}/): Özgeçmiş, eğitimler, aldığı sertifikalar, çalıştığı kurumlar, üyelikler ve iletişim bilgileri.
-- [Muayenehane]({{ site.url }}/klinik): Verilen sağlık hizmetleri ve uygulanabilen tedavilerin listesi.
+- [Muayenehane]({{ site.url }}/klinik): Çalışma alanları (duygudurum bozuklukları, yaşlılık psikiyatrisi, beyin uyarım tedavileri) ve bunların dayandığı eğitimler, tanı ve tedavisi yapılan diğer hastalıklar, uygulanan tedavi yöntemleri, tetkikler ve hizmet kapsamı.
 - [TMS ve Derin TMS Tedavisi]({{ site.url }}/tms): TMS nedir, derin TMS'nin farkı, endikasyonlar, uygulama biçimi, yan etkiler, kimlere uygulanmadığı ve sıkça sorulan sorular.
 - [Sıkça Sorulan Sorular]({{ site.url }}/sikca-sorulan-sorular): Randevu, adres, tedavi edilen hastalıkların listesi, tetkikler, yaş sınırı ve online görüşme politikası.
 - [Blog]({{ site.url }}/blog): Ruh sağlığı konularında bilgilendirme yazıları.

@@ -5,7 +5,7 @@ permalink: /:title
 author: "Uzm. Dr. İsmail Buçgün"
 category: "Anksiyete Bozuklukları"
 description: Anksiyete (kaygı) nedir? Korkudan farkı nedir? Ne zaman bozukluk olarak tanımlanır? Anksiyete bozuklukları nelerdir?
-last_modified_at: 2026-10-13
+last_modified_at: 2026-10-20
 refs:
   - "Kaplan ve Sadock Psikiyatri Kitabı, 11. Baskı, Güneş Tıp Kitabevi, 2016"
   - "Anksiyete Bozukluklarının Tedavisine Çok Yönlü Bakış, Psikiyatride Güncel Dergisi, Türkiye Psikiyatri Derneği Yayınları, Bahar 2015"
@@ -41,5 +41,5 @@ Tanımlayıcı psikiyatrik yaklaşımda **DSM-5 tanı sınıflandırmasında ank
 Pek çoğunun klinik belirtilerinin örtüşmesi tanının net bir şekilde konulmasını zorlaştırmaktadır. **Çoğu zaman hastalara özelleşmiş bir anksiyete bozukluğu tanısı koymak yerine genel olarak anksiyete bozukluğu tanısı konulmaktadır.** **Bu durum, özellikle bazı belirtilerin gözden kaçmasına ve rahatsızlığın sürüp gitmesine neden olmaktadır.** 
 
 
-Adana'da psikiyatri alanında hizmet veren bir uzman olarak anksiyete bozuklukları için kanıta dayalı bireysel psikoterapi, gerekli durumlarda ilaç tedavisi ve takip hizmeti de vermekteyim. Değerlendirme ve tedavi süreci hakkında ayrıntılı bilgi için **[anksiyete bozuklukları](/anksiyete-bozukluklari)** sayfasına bakabilir, bilgi almak için **[randevu](/randevu)** sayfasını kullanabilirsiniz.
+Adana'da psikiyatri alanında hizmet veren bir uzman olarak anksiyete bozukluklarında tanı, ilaç tedavisi ve takip hizmeti vermekteyim. Şu anda psikoterapi için yeni hasta kabul edemediğimden, psikoterapi gereken hastaları bu alanda çalışan bir uzmana yönlendiriyorum. Değerlendirme ve tedavi süreci hakkında ayrıntılı bilgi için **[anksiyete bozuklukları](/anksiyete-bozukluklari)** sayfasına bakabilir, bilgi almak için **[randevu](/randevu)** sayfasını kullanabilirsiniz.
 
