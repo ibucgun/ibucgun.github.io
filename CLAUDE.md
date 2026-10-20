@@ -41,7 +41,8 @@ için iddia ekleme.
 ### Kuruluş türü
 
 Burası hukuken bir **muayenehane**. "Klinik", "poliklinik", "tıp merkezi"
-kelimeleri **tesis adı olarak** kullanılamaz. Google Business Profile adı
+kelimeleri **tesis adı olarak** kullanılamaz. "Poliklinik hizmeti" de yazılmaz — poliklinik
+ayrı bir ruhsat türüdür; yerine "ayaktan muayene ve tedavi". Google Business Profile adı
 "Uzm. Dr. İsmail Buçgün - Adana Psikiyatri - TMS" ve en önemli hasta kaynağı.
 
 > **Türkçe arama tuzağı:** `grep -i "klinik"` yetmez — ünsüz yumuşaması nedeniyle
@@ -94,7 +95,7 @@ yok (yalnızca 2021 kongre kursu); "üç alanda da eğitim aldım" denmez.
 | **Psikoterapi** (BDT, KİPT, destekleyici, psikanalitik) | Eğitimleri var ve yapıyor, ama **şu anda yeni hasta kabul edilemiyor.** İhtiyacı olan yeni hasta ilk muayenede veya takipte belirlenip o yöntemle çalışan uzmana **yönlendirilir**; psikiyatrik takip ve ilaç muayenehanede sürebilir |
 | **Acil durumlar** (intihar riski, kendine/başkasına zarar, akut kriz, deliryum) | Muayenehane acil hizmet vermez. "Randevu alabileceğiniz durumlar" listelerine **yazılmaz**; her zaman "randevu beklemeden 112 Acil Çağrı Merkezi'ni arayın veya en yakın hastanenin acil servisine başvurun" kalıbıyla yönlendirilir |
 | Çocuk ve ergen psikiyatrisi | Hizmet verilmiyor (18+) |
-| Online görüşme | İlk muayene yalnızca yüz yüze |
+| **Online muayene ve takip** | **Hiç yapılmıyor** — ilk muayene, kontrol ve takip dahil yalnızca yüz yüze. "İlk muayene yüz yüze" diye **yazılmaz**: kronik hastalar kontrollerin online olabileceğini sanıp geliyordu |
 
 Eğitim ve sertifika kayıtları (`_data/aldigiegitimler.yml`, schema `hasCredential`,
 `knowsAbout`) **kalır** — eğitim beyanı serbesttir, hizmet beyanı değildir.

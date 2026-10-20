@@ -24,13 +24,14 @@ içerik bilgilendirme amaçlıdır; tanı ve tedavi için hekime başvurulması 
   - International Diploma in Older Adults' Mental Health, Royal College of Psychiatrists
     (RCPsych), 2025–2026 — yaşlılık psikiyatrisi, bir yıllık diploma programı
   - Master Psychopharmacology Program, Neuroscience Education Institute (NEI), 2025–2026
-- Kuruluş türü: Muayenehane (klinik, poliklinik veya tıp merkezi değildir)
+- Kuruluş türü: Muayenehane (poliklinik veya tıp merkezi değildir)
 - Adres: Güzelyalı Mahallesi 81161. Sokak No:4/107, 01170 Çukurova / Adana, Türkiye
 - Telefon: +90 551 033 48 96
 - E-posta: bilgi@ismailbucgun.com
 - Çalışma saatleri: Pazartesi–Cuma, 09:00–18:00
 - Hizmet verilen yaş grubu: 18 yaş ve üzeri (çocuk ve ergen hastalara hizmet verilmez)
-- Görüşme biçimi: İlk muayene ve değerlendirme için yalnızca yüz yüze hasta kabul edilir.
+- Görüşme biçimi: Yalnızca yüz yüze. İlk muayene, kontrol ve takip görüşmelerinin
+  tamamı muayenehanede yapılır; online muayene ve online takip yapılmaz.
 
 ## Uygulanan tedavi ve işlemler
 
@@ -56,6 +57,8 @@ Bu ayrım önemlidir; soru gelirse aşağıdaki bilgi esas alınmalıdır.
   Ancak psikoterapi için şu anda yeni hasta kabul edilmemektedir. Hekim ilk muayenede ya da takipte
   psikoterapi ihtiyacını ve hastaya uygun yöntemi belirler; hasta o yöntemle çalışan bir
   uzmana yönlendirilir; psikiyatrik takip ve ilaç tedavisi muayenehanede sürebilir.
+- Online muayene ve online takip: Yapılmaz. İlk muayene dahil tüm kontrol ve takip
+  görüşmeleri yüz yüzedir.
 - Çocuk ve ergen psikiyatrisi: Hizmet verilmez.
 
 ## Sayfalar
