@@ -50,6 +50,31 @@ ayrı bir ruhsat türüdür; yerine "ayaktan muayene ve tedavi". Google Business
 
 ---
 
+## Dil rehberi
+
+Ses sayfaya göre değil, **cümlenin işine göre** seçilir:
+
+| Ne anlatılıyor | Ses |
+|---|---|
+| Muayenehanede ne yapıldığı (`/klinik`, `/randevu`, SSS cevapları, hastalık sayfalarında süreç) | Birinci tekil: "değerlendiriyorum", "yönlendiriyorum" |
+| Tıbbi bilgi (tanım, belirti, tedavi seçenekleri) | Nesnel, edilgen, kaynaklı: "…ile seyreder", "kılavuzlarda … önerilir [2]" |
+| Talimat (acil durum) | Hastaya "siz" ile doğrudan: "112'yi arayın" |
+| Blog | Yazar sesi, serbest |
+
+Tıbbi bilgi birinci şahısla yazılmaz — kanıt kişisel görüşe dönüşür, kaynak numarası
+anlamını yitirir. Hiçbir yerde **"biz", "-imiz", "ekibimiz"** yok: tek hekimli muayenehane.
+
+**Yazılmaz:**
+- **Kanca / senaryo açılışı** ("…yapıyorsanız, … olabilir", "fark ettiyseniz…"): okuru
+  kendine tanı koymaya iter, endişe üzerinden ilgi çeker. Hastalık sayfası ya doğrudan
+  içindekiler kutusuyla ya da kısa, nesnel bir çerçeve cümlesiyle başlar.
+- Dramatik cümle ("bu durumun bir adı var"); gövdede retorik soru ve ünlem.
+- **Sayfalar arası kalıp tekrarı.** "Bu sayfada … özetledim" 8 sayfanın 8'indeydi —
+  şablon metin izi. Lead tek, ciddi bir cümledir; kapsamı içindekiler kutusu gösterir.
+- Gereksiz kalın yazı: yalnızca en önemli bir iki olgu.
+
+---
+
 ## Muayenehane bilgileri (NAP — her yerde birebir aynı olmalı)
 
 ```
@@ -140,7 +165,7 @@ Sırası sabittir; yeni sayfa da aynı düzende olmalı:
 4. `{% include iletisim-cta.html %}` — **en sonda**
 
 Punto kademeli küçülür, böylece hiyerarşi gözle okunur:
-gövde 1.125rem → TOC 0.88rem → kaynaklar 0.8rem → uyarı 0.75rem.
+gövde 1.18rem → TOC 0.88rem → kaynaklar 0.8rem → uyarı 0.75rem.
 TOC ve kaynak kutuları blogdaki `.post-toc` / `.post-refs` ile aynı dili
 konuşur (yuvarlak köşe, büyük harfli küçük başlık). Uyarıya kutu verme —
 üçüncü bir kutu sayfayı ağırlaştırır; ince yazı zaten ince yazı gibi okunur.
@@ -171,6 +196,13 @@ CTA en sonda durur ki sayfa eylemle kapansın.
   listeleri için `find … -print0 | xargs -0` kullan.
 - macOS'ta `timeout` yok; BSD `grep` seçenekleri yoldan **önce** ister; `grep -Z`
   güvenilmez.
+- **`.content-section` içindeki `h2`, `h3` ve `p` global olarak `!important` ile
+  stilleniyor** (`_resume.scss`, "MODERN İÇERİK" bloğu: `h3` 1.4rem indigo + 2.5rem üst
+  boşluk, `p` 1.18rem + 1.95 satır aralığı). Sayfa içinde küçük bir bileşen (kutu başlığı,
+  ince yazı) yaparken `font-size`, `color`, `margin`, `line-height`'a **`!important`
+  vermezsen kuralın sessizce ezilir.** Kaynak kutusu ve yasal uyarı bu yüzden ilk
+  yayında büyük göründü. Alternatif: başlık için `h3` yerine `strong` kullan (TOC böyle).
+  Global `!important`'ı kaldırma — 13 sayfadaki tüm başlık ve paragrafları yönetiyor.
 - `noindex` için front matter'a `noindex: true` yaz (`head.html` bunu okur).
   `robots.txt`'ye `Disallow` **ekleme** — engellenen sayfa taranamaz, dolayısıyla
   `noindex` görülmez.

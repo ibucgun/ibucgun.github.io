@@ -1105,14 +1105,18 @@
   border-radius: 14px;
   padding: 15px 20px;
 }
+/* !important şart: .content-section h3 (yukarıda) font-size, color ve margin'i
+   !important ile veriyor; olmadan başlık 1.4rem indigo ve üstünde 2.5rem boşlukla
+   çıkıyordu. Kapsam bilerek kutuyla sınırlı — global kurala dokunmuyoruz. */
 .tms-content .page-refs h3 {
   @include sans_bold;
-  font-size: 0.72rem;
+  font-size: 0.72rem !important;
   font-weight: 600;
+  line-height: 1.4;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #6b7280;
-  margin: 0 0 8px;
+  color: #6b7280 !important;
+  margin: 0 0 8px !important;
 }
 .tms-content .page-refs ol {
   padding-left: 16px;
@@ -1127,9 +1131,10 @@
 }
 
 /* Yasal uyarı — kutusuz, kaynaklardan da küçük: sayfanın en hafif katmanı */
+/* Aynı sebeple: .content-section p, font-size ve line-height'ı !important veriyor. */
 .tms-content .page-note {
-  font-size: 0.75rem;
-  line-height: 1.55;
+  font-size: 0.75rem !important;
+  line-height: 1.55 !important;
   color: #6b7280;
   text-align: left;
   margin: 14px 2px 0;
