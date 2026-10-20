@@ -175,6 +175,19 @@ konuşur (yuvarlak köşe, büyük harfli küçük başlık). Uyarıya kutu verm
 üçüncü bir kutu sayfayı ağırlaştırır; ince yazı zaten ince yazı gibi okunur.
 CTA en sonda durur ki sayfa eylemle kapansın.
 
+### Ölçüm (GA4)
+
+`head.html` telefon ve WhatsApp tıklamalarını `phone_click` / `whatsapp_click` olayı ve
+`link_location` parametresiyle gönderir (`hero`, `cta`, `iletisim_karti`, `menu`, `footer`,
+`icerik`). GA4'te ikisi **anahtar etkinlik**, `link_location` özel boyut ("Buton konumu").
+Uçtan uca 2026-10-20'de doğrulandı. `gtag` kuyruğu sayfa başında tanımlı (erken tıklama
+kaybolmasın), ağ yüklemesi gecikmeli. Yeni bir buton kapsayıcısı eklenirse `konum`
+eşlemesine ekle.
+
+**Referans dönemi: 2026-10-20 → 2026-11-10.** Bu tarihe kadar dönüşümü etkileyecek büyük
+değişiklik (`/tms` başlığı, ana sayfanın sadeleşmesi) yapılmaz; önce mevcut durum ölçülür.
+Veri çok azsa dönem uzatılır.
+
 ### Senkron tutulması gerekenler
 
 - **Sayfa metni ↔ schema.** `/tms` SSS metinleri `_includes/schema/tms.html`
@@ -237,19 +250,13 @@ CTA en sonda durur ki sayfa eylemle kapansın.
 > birbirine link ver. Ana sayfa kutuları, `llms.txt` ve blog geri linkleri bağlandı.
 
 **Ölçüm**
-3. **GA4 dönüşüm takibi — kod hazır, panel ayarı bekliyor.** `head.html` telefon ve
-   WhatsApp tıklamalarını `phone_click` / `whatsapp_click` olayı ve `link_location`
-   parametresiyle gönderir (`hero`, `cta`, `iletisim_karti`, `menu`, `footer`, `icerik`).
-   GA4 panelinde: iki olayı **anahtar etkinlik** yap; `link_location` için etkinlik kapsamlı
-   **özel boyut** tanımla. `gtag` kuyruğu sayfa başında tanımlı (erken tıklama kaybolmasın),
-   ağ yüklemesi yine gecikmeli. Yeni bir buton kapsayıcısı eklenirse `konum` eşlemesine ekle.
-4. `/tms` başlık ve açıklama CTR yazımı — 62.437 gösterim, %0,73 tıklama.
-   3. madde kurulmadan etkisi ölçülemez.
+3. `/tms` başlık ve açıklama CTR yazımı — 62.437 gösterim, %0,73 tıklama.
+   Ölçüm kuruldu; referans dönemi bittikten sonra (2026-11-10) yapılır.
 
 **Bekleyen**
-5. `/parlakisik` içeriği yazılacak. Şu an `noindex` + sitemap dışı, içeriği
+4. `/parlakisik` içeriği yazılacak. Şu an `noindex` + sitemap dışı, içeriği
    boşaltıldı. Tedavi **uygulanıyor**, eksik olan sadece sayfa.
-6. **`/hakkimda` — taslak, yayında değil.** Amaç: ana sayfayı özgeçmiş görünümünden çıkarmak.
+5. **`/hakkimda` — taslak, yayında değil.** Amaç: ana sayfayı özgeçmiş görünümünden çıkarmak.
    - Taslakta: `noindex` + sitemap dışı, **hiçbir yerden link yok** (menü, footer, `llms.txt`,
      404, blog). Adresi bilen açabilir ve repo herkese açık; taslağa gizli bilgi konmaz.
    - Taşınacak 4 bölüm: Yeterlilik ve Üyelikler, Akademik Eğitim, Çalıştığım Kurumlar,
@@ -258,8 +265,8 @@ CTA en sonda durur ki sayfa eylemle kapansın.
      yayına kadar **dokunulmaz**.
    - Yalnız CV dökümü olmaz: başta birinci şahısla kısa anlatım (neden bu alanlar, nasıl
      çalışıyorum). Ham malzeme: git geçmişindeki `_data/meslekiilgialanlari.yml`.
-   - **Sıra:** önce GA4 dönüşüm takibi (madde 3), sonra yayın — ana sayfa "adana psikiyatri"de
-     üst sırada, değişikliğin etkisi ölçülebilmeli.
+   - **Sıra:** ölçüm kuruldu; yayın referans döneminden sonra (2026-11-10) — ana sayfa
+     "adana psikiyatri"de üst sırada, değişikliğin etkisi ölçülebilmeli.
    - Yayın listesi: noindex/sitemap satırlarını sil, `last_modified_at` ekle · ana sayfadan
      4 bölümü kaldır, yerine kısa yeterlilik özeti (FEBP + uzmanlık sonrası eğitimler) ve
      `/hakkimda` linki · menü ve footer linki · blog yazar kutusundan link · `llms.txt` ·
@@ -268,12 +275,12 @@ CTA en sonda durur ki sayfa eylemle kapansın.
      Console'dan dizine ekleme isteği · 2–3 hafta sıralama takibi.
 
 **Site dışı**
-7. İyi Psikolog ve Türkiye Psikiyatristleri'ne adres güncelleme maili gönderildi,
+6. İyi Psikolog ve Türkiye Psikiyatristleri'ne adres güncelleme maili gönderildi,
    takip edilecek. Doktorum360 için KVKK 11. madde talebi opsiyonel.
    (DoktorTakvimi ve Doktorsitesi düzeltildi.)
 
 **En son — içerik bittikten sonra**
-8. Yeniden tasarım ("yapay zeka yapımı" görünümden çıkarmak). Yöntem kararlaştırıldı:
+7. Yeniden tasarım ("yapay zeka yapımı" görünümden çıkarmak). Yöntem kararlaştırıldı:
    ayrı public repo `tasarim`, önizleme `ismailbucgun.com/tasarim/` adresinde
    (ana site özel domain kullandığı için GitHub proje repolarını onun altına koyar).
    - Başlarken `master`'a `tasarim-oncesi` tag'i at — geri dönüş noktası.
