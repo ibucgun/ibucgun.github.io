@@ -227,6 +227,10 @@ CTA en sonda durur ki sayfa eylemle kapansın.
      `relative_url`'e çevrilmeli. Çevrilmezse önizleme canlı sitenin CSS'ini yükler
      ve hata vermeden **eski tasarımı** gösterir. Canlıda çıktı aynı kalır.
    - Birleştirirken `_config.yml` ve `CNAME` ana sitedeki haliyle kalır.
+   - Menü etiketi ve `/klinik` sayfa başlığı "Klinik" → **"Hizmetler"** olacak. Gerekçe:
+     menüdeki "Klinik" tesis adı gibi okunuyor (mevzuat). URL `/klinik` **değişmez**
+     (trafik ve linkler var). Değişecek yerler: `_includes/navigation-lib/links.html`,
+     `klinik.html` `title`; tutarlılık için `404.html` ve `llms.txt`'deki "Muayenehane" etiketi.
    - `design-taste-frontend` skill'i kullanılacak; npm/React/GSAP kısımları hariç,
      Jekyll + SCSS + vanilla JS'e uyarlanarak. Önce mevcut tasarım denetlenir.
 
