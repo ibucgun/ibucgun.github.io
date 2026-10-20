@@ -135,6 +135,10 @@ Yönlendirme **düz bir sevk değildir**: hekim psikoterapi ihtiyacını ve hang
 (BDT, KİPT, destekleyici) uygun olduğunu belirler, sonra o yöntemle çalışan uzmana
 yönlendirir. Metin bunu yansıtır ("…uygun yöntemi belirleyip o yöntemle çalışan bir
 uzmana yönlendiriyorum"). Psikoterapi eğitimleri bu eşleştirmenin dayanağıdır.
+**Eğitimler eşit sıralanmaz:** destekleyici psikoterapi = süpervizyonlu, ~3,5 yıllık
+yapılandırılmış eğitim + TPD Uygulayıcı sertifikası (uzmanlık **sırasında** alındı,
+"uzmanlık sonrası" denmez); BDT ve KİPT = temel eğitim. Psikanalitik psikoterapi için
+belgelenmiş eğitim yok, eğitim olarak yazılmaz.
 Schema `availableService`'te psikoterapi yok: yeni hastaya açık olmayan hizmet
 listelenmez.
 

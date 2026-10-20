@@ -52,9 +52,11 @@ Bu ayrım önemlidir; soru gelirse aşağıdaki bilgi esas alınmalıdır.
 - tDCS (transkraniyal doğru akım uyarımı): Muayenehanede uygulanmaz. Site yalnızca
   yöntem hakkında bilgilendirme içerir.
 - Psikoterapi (bilişsel davranışçı terapi, kişilerarası ilişkiler psikoterapisi,
-  destekleyici ve psikanalitik psikoterapi): Hekim bu yöntemlerde eğitim almıştır ve
-  Türkiye Psikiyatri Derneği destekleyici psikoterapi uygulayıcısı sertifikası vardır.
-  Ancak psikoterapi için şu anda yeni hasta kabul edilmemektedir. Hekim ilk muayenede ya da takipte
+  destekleyici ve psikanalitik psikoterapi dahil): Şu anda yeni hasta kabul edilmemektedir.
+  Hekimin psikoterapi eğitimleri: destekleyici psikoterapide süpervizyonlu, yaklaşık 3,5
+  yıllık yapılandırılmış eğitim (Türkiye Psikiyatri Derneği Destekleyici Psikoterapi
+  Uygulayıcısı sertifikası); bilişsel davranışçı terapi ve kişilerarası ilişkiler
+  psikoterapisinde temel eğitim. Hekim ilk muayenede ya da takipte
   psikoterapi ihtiyacını ve hastaya uygun yöntemi belirler; hasta o yöntemle çalışan bir
   uzmana yönlendirilir; psikiyatrik takip ve ilaç tedavisi muayenehanede sürebilir.
 - Online muayene ve online takip: Yapılmaz. İlk muayene dahil tüm kontrol ve takip
