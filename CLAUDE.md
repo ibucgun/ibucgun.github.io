@@ -70,6 +70,20 @@ TMS ve derin TMS · psikiyatrik değerlendirme · farmakolojik tedavi ·
 parlak ışık tedavisi · psikometrik ve nöropsikolojik testler ·
 ilaç kan düzeyi takibi
 
+**Konumlandırma:** İlk başvuruda herkese **genel psikiyatrik değerlendirme** yapılır
+(tanısını bilmeyen hasta da gelebilir). Ağırlık **tedavi ve takipte** üç alandadır:
+duygudurum bozuklukları, yaşlılık psikiyatrisi, beyin uyarım tedavileri. "Genel
+psikiyatri ikinci planda" ya da "sadece bu alanlara bakıyorum" gibi yazılmaz. Alt alan
+için "uzmanı" denmez (yasal yan dal unvanı yok); "ağırlıklı olarak ilgilendiğim
+alanlar" + dayandığı eğitim.
+
+**Ayrışma noktası: uzmanlık sonrası eğitimler** — FEBP + DUSEP (duygudurum, 2 yıl,
+süpervizyonlu), RCPsych International Diploma (yaşlılık psikiyatrisi), NEI Master
+Psychopharmacology. Fark **olgularla** gösterilir ("uzmanlık sonrası", "yapılandırılmış",
+"süpervizyonlu"); "diğer uzmanlardan farklı olarak", "klasik uzmanlığın ötesinde" gibi
+**karşılaştırma yazılmaz** — üstünlük iddiası sayılır. TMS için yapılandırılmış program
+yok (yalnızca 2021 kongre kursu); "üç alanda da eğitim aldım" denmez.
+
 ## Sunulmayan — bu ayrım önemli
 
 | Yöntem | Durum |
@@ -78,6 +92,7 @@ ilaç kan düzeyi takibi
 | tDCS | Uygulanmıyor. `/tdcs` yalnızca bilgilendirme sayfası |
 | Esketamin | Muayenehanede uygulanabilir ama henüz uygulanmadı. Sitede ne "uygulanır" ne "uygulanmaz" yazılır |
 | **Psikoterapi** (BDT, KİPT, destekleyici, psikanalitik) | Eğitimleri var ve yapıyor, ama **şu anda yeni hasta kabul edilemiyor.** İhtiyacı olan yeni hasta ilk muayenede veya takipte belirlenip o yöntemle çalışan uzmana **yönlendirilir**; psikiyatrik takip ve ilaç muayenehanede sürebilir |
+| **Acil durumlar** (intihar riski, kendine/başkasına zarar, akut kriz, deliryum) | Muayenehane acil hizmet vermez. "Randevu alabileceğiniz durumlar" listelerine **yazılmaz**; her zaman "randevu beklemeden 112 Acil Çağrı Merkezi'ni arayın veya en yakın hastanenin acil servisine başvurun" kalıbıyla yönlendirilir |
 | Çocuk ve ergen psikiyatrisi | Hizmet verilmiyor (18+) |
 | Online görüşme | İlk muayene yalnızca yüz yüze |
 
@@ -90,6 +105,10 @@ kabul edemiyorum"**. Hastalık sayfalarında kılavuz bilgisi kalır ("OKB'de k�
 edemediğimden, … hastaları bu yöntemle çalışan bir uzmana yönlendiriyorum." Yalnız
 "yönlendiriyorum" yazmak "bu hizmeti vermiyorum" diye okunur, yetmez. Sebebi
 ("doluyuz", "yoğunluk nedeniyle") **yazılmaz** — dolaylı hasta yoğunluğu beyanıdır.
+Yönlendirme **düz bir sevk değildir**: hekim psikoterapi ihtiyacını ve hangi yöntemin
+(BDT, KİPT, destekleyici) uygun olduğunu belirler, sonra o yöntemle çalışan uzmana
+yönlendirir. Metin bunu yansıtır ("…uygun yöntemi belirleyip o yöntemle çalışan bir
+uzmana yönlendiriyorum"). Psikoterapi eğitimleri bu eşleştirmenin dayanağıdır.
 Schema `availableService`'te psikoterapi yok: yeni hastaya açık olmayan hizmet
 listelenmez.
 
