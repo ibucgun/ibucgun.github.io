@@ -257,7 +257,7 @@ Veri çok azsa dönem uzatılır.
 
    | Sayfa | İskelete göre yazıldı | Açıldı |
    |---|---|---|
-   | `tedaviye-direncli-depresyon` (pilot) | hayır | hayır |
+   | `tedaviye-direncli-depresyon` (pilot) | taslak, onay bekliyor | hayır |
    | `depresyon` · `okb` · `bipolar-bozukluk` · `anksiyete-bozukluklari` | hayır | hayır |
    | `eriskin-dehb` · `yaslilik-psikiyatrisi` · `sizofreni` | hayır | hayır |
 
