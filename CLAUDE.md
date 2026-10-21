@@ -220,6 +220,9 @@ Veri çok azsa dönem uzatılır.
 - **Sayfa metni ↔ schema.** `/tms` SSS metinleri `_includes/schema/tms.html`
   içinde birebir tekrarlanır. Birini değiştirince diğerini de değiştir.
 - **Hizmet listesi ↔ üç yer:** `klinik.html`, schema `availableService`, `llms.txt`.
+  **Bilinçli istisna — esketamin:** hizmet listesinde (`/klinik`, schema) **yer almaz**;
+  yalnızca dirençli depresyon sayfasında ve `llms.txt`'de "uygulanabilir" olarak geçer.
+  Tutarsızlık sanıp listeye ekleme.
 - Blog yazılarının URL'leri `permalink: /:title` ile **kilitli**. Global ayar
   `/blog/:title` ama mevcut 6 yazının adresi değişmemeli (trafik var).
 - **`last_modified_at`** — bir sayfanın veya yazının içeriğini değiştirdiğinde

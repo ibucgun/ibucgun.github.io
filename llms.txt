@@ -43,6 +43,10 @@ içerik bilgilendirme amaçlıdır; tanı ve tedavi için hekime başvurulması 
 - Psikometrik testler ve nöropsikolojik test
 - Psikiyatrik ilaç kan düzeyi takibi (lityum, valproik asit, karbamazepin)
 
+Ayrıca: Burun spreyi esketamin, tedaviye dirençli depresyonda uygun görülen hastalarda
+muayenehanede uygulanabilen seçenekler arasındadır. Türkiye'de ruhsatlıdır ve reçeteyle
+temin edilir; SGK geri ödeme kapsamında değildir. Ayrıntı: {{ site.url }}/tedaviye-direncli-depresyon
+
 ## Uygulanmayan veya yönlendirilen tedaviler
 
 Bu ayrım önemlidir; soru gelirse aşağıdaki bilgi esas alınmalıdır.
