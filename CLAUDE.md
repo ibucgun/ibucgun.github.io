@@ -160,6 +160,7 @@ listelenmez.
 | `_includes/iletisim-cta.html` | Ara / WhatsApp butonu; `baslik`, `metin`, `buton` parametreleri |
 | `_data/categories.yml` | Blog kategori renkleri |
 | `llms.txt` | Dil modelleri için site özeti — **hizmet değişince güncelle** |
+| `.claude/skills/metin-denetimi/` | Metin denetimi skill'i: mevzuat + yapay zekâ yazım izleri; `scripts/denetle.py` tarama, yedek ve karşılaştırma |
 
 ### Hastalık sayfası düzeni
 
@@ -333,6 +334,9 @@ Veri çok azsa dönem uzatılır.
 ## Çalışma şekli
 
 - Değişiklikten önce dosyayı oku; varsayımla düzenleme yapma.
+- **Site metni yazıldıktan ya da düzenlendikten sonra `metin-denetimi` skill'ini çalıştır.**
+  Önce denetim raporu; düzeltme yalnız onayla, ardından `denetle.py --karsilastir` BAŞARILI
+  dönmeden iş bitmiş sayılmaz. Mevzuat bulguları raporlanır, kendiliğinden düzeltilmez.
 - Toplu değişiklikten sonra doğrula (grep sayımı, JSON geçerliliği, link kontrolü).
 - Commit ve push kullanıcıya aittir — istemeden commit etme.
 - Push sonrası canlı doğrulama `curl` ile yapılır.

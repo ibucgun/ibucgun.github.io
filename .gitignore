@@ -2,3 +2,7 @@ _site
 .sass-cache
 .DS_Store
 _vendor
+
+# Claude Code yerel ayarları (her makinede ayrı; repo herkese açık)
+.claude/settings.local.json
+.claude/worktrees/
