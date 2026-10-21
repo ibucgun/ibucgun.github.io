@@ -116,7 +116,7 @@ yok (yalnızca 2021 kongre kursu); "üç alanda da eğitim aldım" denmez.
 |---|---|
 | EKT | Anestezi gerektirir, hastanede uygulanır; hasta yönlendirilir |
 | tDCS | Uygulanmıyor. `/tdcs` yalnızca bilgilendirme sayfası |
-| Esketamin | Muayenehanede uygulanabilir ama henüz uygulanmadı. Sitede ne "uygulanır" ne "uygulanmaz" yazılır |
+| Esketamin | Uygun hastalarda **muayenehanede uygulanabilir**, henüz uygulanmadı. "Uygun görülen hastalarda muayenehanede uygulanabilen seçenekler arasındadır" yazılır; **"uyguluyorum"** ya da deneyim ima eden ifade **yazılmaz**. Türkiye'de ruhsatlı, reçeteyle temin ediliyor, **SGK geri ödemesi yok** (kullanıcı beyanı, 2026-10; değişirse sayfayı güncelle). Fiyat/maliyet yorumu yazılmaz. FDA onayı (2019) kaynakla yazılır |
 | **Psikoterapi** (BDT, KİPT, destekleyici, psikanalitik) | Eğitimleri var ve yapıyor, ama **şu anda yeni hasta kabul edilemiyor.** İhtiyacı olan yeni hasta ilk muayenede veya takipte belirlenip o yöntemle çalışan uzmana **yönlendirilir**; psikiyatrik takip ve ilaç muayenehanede sürebilir |
 | **Acil durumlar** (intihar riski, kendine/başkasına zarar, akut kriz, deliryum) | Muayenehane acil hizmet vermez. "Randevu alabileceğiniz durumlar" listelerine **yazılmaz**; her zaman "randevu beklemeden 112 Acil Çağrı Merkezi'ni arayın veya en yakın hastanenin acil servisine başvurun" kalıbıyla yönlendirilir |
 | Çocuk ve ergen psikiyatrisi | Hizmet verilmiyor (18+) |
@@ -189,8 +189,15 @@ bölümün **ilk cümlesi soruyu tek başına cevaplar** ("Bu yöntem…" diye b
 cümle olmadan "Adana'da X için kime gidilir?" sorusunda sayfa kaynak gösterilemez. Metin
 içinde en az 2 ilgili sayfaya link. "Sık sorulanlar" bölümü **eklenmez** (karar).
 
-**Uzunluk: 650–950 kelime** — nedir 80–120 · belirtiler 80–150 · değerlendirme 120–180 ·
-tedavi 200–300 · takip 80–150. Büyüme eksik konudan gelir, dolgudan değil.
+**Kapsam:** Sayfa yalnız muayenehanede yapılanı değil, **kılavuzdaki seçenekleri** anlatır.
+Muayenehanede uygulanmayan bir seçenek (EKT gibi) genel bilimsel bilgi olarak, kaynağıyla
+yazılır; hemen yanında "muayenehanede uygulanmamaktadır, … yönlendirilir" notu bulunur.
+Seçeneği hiç anmamak sayfayı eksik bırakır; notsuz anmak sunuluyormuş gibi okunur.
+
+**Uzunluk: 650–950 kelime** (bağlayıcı) — bölüm aralıkları yol göstericidir: nedir 80–120 ·
+belirtiler 80–150 · değerlendirme 120–180 · tedavi 200–300 · takip 80–150. Tedavinin asıl konu
+olduğu sayfada (dirençli depresyon) tedavi bölümü uzayabilir. Büyüme eksik konudan gelir,
+dolgudan değil.
 
 Punto kademesi: gövde 1.18rem → TOC 0.88rem → kaynaklar 0.8rem → uyarı 0.75rem. TOC ve
 kaynak kutusu blogdaki `.post-toc` / `.post-refs` ile aynı dili konuşur; uyarıya kutu verilmez.
