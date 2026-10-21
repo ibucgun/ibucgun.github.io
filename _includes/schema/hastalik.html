@@ -1,0 +1,31 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "@id": "{{ site.url }}{{ page.url }}#sayfa",
+  "url": "{{ site.url }}{{ page.url }}",
+  "name": {{ page.seo_title | default: page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "inLanguage": "tr-TR",
+  {%- if page.kosul %}
+  "about": {
+    "@type": "MedicalCondition",
+    "name": {{ page.kosul | jsonify }}{% if page.kosul_diger %},
+    "alternateName": {{ page.kosul_diger | jsonify }}{% endif %}
+  },
+  {%- endif %}
+  "medicalAudience": "https://schema.org/Patient",
+  "author": {
+    "@type": "Physician",
+    "@id": "{{ site.url }}/#hekim",
+    "name": {{ site.resume_name | jsonify }},
+    "url": "{{ site.url }}/"
+  },
+  "reviewedBy": { "@id": "{{ site.url }}/#hekim" },
+  {%- if page.last_modified_at %}
+  "lastReviewed": "{{ page.last_modified_at | date: '%Y-%m-%d' }}",
+  "dateModified": "{{ page.last_modified_at | date_to_xmlschema }}",
+  {%- endif %}
+  "isPartOf": { "@type": "WebSite", "url": "{{ site.url }}/", "name": {{ site.title | jsonify }} }
+}
+</script>

@@ -1,9 +1,11 @@
 <head>
+  {%- comment -%} seo_title: <title> ve paylaşım başlığı için; sayfadaki H1 her zaman page.title {%- endcomment -%}
+  {%- assign baslik = page.seo_title | default: page.title -%}
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{{ page.title }} | Adana Psikiyatri{% else %}{{ site.title }}{% endif %}</title>
+  <title>{% if baslik %}{{ baslik }} | Adana Psikiyatri{% else %}{{ site.title }}{% endif %}</title>
 
   <!-- Google font typography settings - defined in _config.yml -->
   {% if site.resume_theme == 'default' %}
@@ -37,7 +39,7 @@
   <!-- Open Graph -->
   <meta property="og:locale" content="tr_TR">
   <meta property="og:type" content="{% if page.url == '/' %}website{% else %}article{% endif %}">
-  <meta property="og:title" content="{% if page.title %}{{ page.title }} | Adana Psikiyatri{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:title" content="{% if baslik %}{{ baslik }} | Adana Psikiyatri{% else %}{{ site.title }}{% endif %}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta property="og:image" content="{{ site.url }}/images/ekrangoruntusu.png" />
   <meta property="og:site_name" content="Uzm. Dr. İsmail Buçgün">
@@ -48,7 +50,7 @@
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | Adana Psikiyatri{% else %}{{ site.title }}{% endif %}">
+  <meta name="twitter:title" content="{% if baslik %}{{ baslik }} | Adana Psikiyatri{% else %}{{ site.title }}{% endif %}">
   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   <meta name="twitter:site" content="@drismailbucgun" />
   <meta name="twitter:creator" content="@drismailbucgun">
@@ -56,6 +58,9 @@
   <!-- Schema.org JSON-LD: sadece anasayfada hekim + klinik kimliği, tms sayfasında tms -->
   {% if page.url == "/" %}
     {% include schema/hekim-klinik.html %}
+  {% endif %}
+  {% if page.layout == "hastalik" %}
+  {% include schema/hastalik.html %}
   {% endif %}
   {% if page.url == "/tms" or page.url == "/tms/" or page.url == "/tms.html" %}
   {% include schema/tms.html %}

@@ -151,29 +151,49 @@ listelenmez.
 | `_layouts/resume.html` | Ana sayfa |
 | `_layouts/page.html` | İç sayfalar (`wide_layout: true` ile geniş yerleşim) |
 | `_layouts/post.html` | Blog yazısı |
-| `_includes/head.html` | Meta, OG, canonical, schema çağrıları, GA4 |
+| `_includes/head.html` | Meta, OG, canonical, schema çağrıları, GA4; `seo_title` varsa `<title>` onu kullanır |
 | `_includes/schema/hekim-klinik.html` | Ana sayfa JSON-LD (Physician + MedicalClinic) |
 | `_includes/schema/tms.html` | `/tms` JSON-LD (FAQPage + MedicalProcedure) |
-| Kökteki hastalık sayfaları | `depresyon.html` vb.; `tms-content` + `tms-toc` yapısı |
+| Kökteki hastalık sayfaları | `depresyon.html` vb.; `layout: hastalik` |
+| `_layouts/hastalik.html` | Hastalık sayfası şablonu: kaynaklar, uyarı (otomatik tarih), acil kutusu, CTA |
+| `_includes/schema/hastalik.html` | `MedicalWebPage` + `MedicalCondition`; yazar ve gözden geçiren `/#hekim` |
 | `_includes/iletisim-cta.html` | Ara / WhatsApp butonu; `baslik`, `metin`, `buton` parametreleri |
 | `_data/categories.yml` | Blog kategori renkleri |
 | `llms.txt` | Dil modelleri için site özeti — **hizmet değişince güncelle** |
 
 ### Hastalık sayfası düzeni
 
-Sırası sabittir; yeni sayfa da aynı düzende olmalı:
+Hepsi **`layout: hastalik`** kullanır. Sayfa dosyasında yalnızca içindekiler ve 5 bölüm
+bulunur. **Kaynaklar → yasal uyarı → acil durum kutusu → CTA** şablondan gelir, sırası
+sabittir. Acil kutusu her sayfada var ve **CTA'nın hemen üstünde**: sayfa tek bir "ne
+yapmalıyım" bloğuyla kapanır (acilse 112, değilse randevu).
 
-1. Giriş paragrafı → `<nav class="tms-toc">` → numaralı `<h2>` bölümleri
-2. `<div class="page-refs" id="kaynaklar">` — `<h3>Kaynaklar</h3>` + `<ol>`
-3. `<p class="page-note">` — yasal uyarı, **kutunun dışında**, kutusuz
-4. `{% include iletisim-cta.html %}` — **en sonda**
+**Front matter:** `title` (H1, kısa) · `seo_title` (`<title>`; kalıp **"[X] Tedavisi"**, sonek
+dahil ≤55 karakter — uzarsa Google sondan keser ve "Adana" kaybolur; şemsiye sayfada yazılmaz, H1 kullanılır) · `description` (≤155, tırnaklı) · `lead` (tek cümle) ·
+`kosul` / `kosul_diger` (schema `MedicalCondition`) · `refs` (kaynak listesi) · `acil` /
+`acil_baslik` (yoksa genel metin) · `last_modified_at` (uyarıdaki tarih ve schema
+`lastReviewed` buradan gelir; elle tarih yazılmaz).
 
-Punto kademeli küçülür, böylece hiyerarşi gözle okunur:
-gövde 1.18rem → TOC 0.88rem → kaynaklar 0.8rem → uyarı 0.75rem.
-TOC ve kaynak kutuları blogdaki `.post-toc` / `.post-refs` ile aynı dili
-konuşur (yuvarlak köşe, büyük harfli küçük başlık). Uyarıya kutu verme —
-üçüncü bir kutu sayfayı ağırlaştırır; ince yazı zaten ince yazı gibi okunur.
-CTA en sonda durur ki sayfa eylemle kapansın.
+**Bölümler — her sayfada aynı sıra ve aynı kalıp:**
+1. **[X] nedir?** — nesnel, kaynaklı. Blog yazısı varsa kısa tutulur, yazıya link verilir.
+2. **[X]'in belirtileri nelerdir?** — liste.
+3. **[X]'te değerlendirme nasıl yapılır?** — birinci tekil. İlk cümle yerel hizmet cümlesi
+   ("Adana Çukurova'daki muayenehanemde…").
+4. **[X] nasıl tedavi edilir?** — alt başlıklar sabit sırada: ilaç → psikoterapi (kılavuz +
+   yönlendirme) → beyin uyarım (varsa, `/tms` linki) → diğer.
+5. **[X] tedavisi ne kadar sürer, takip nasıl yapılır?**
+
+Neden böyle (arama ve yapay zekâ): yapay zekâ sistemleri sayfayı pasaj pasaj alıntılar.
+Başlıklarda hastalık adı geçer ki pasaj başlığıyla alıntılandığında bağlam kalsın. Her
+bölümün **ilk cümlesi soruyu tek başına cevaplar** ("Bu yöntem…" diye başlamaz). Yerel
+cümle olmadan "Adana'da X için kime gidilir?" sorusunda sayfa kaynak gösterilemez. Metin
+içinde en az 2 ilgili sayfaya link. "Sık sorulanlar" bölümü **eklenmez** (karar).
+
+**Uzunluk: 650–950 kelime** — nedir 80–120 · belirtiler 80–150 · değerlendirme 120–180 ·
+tedavi 200–300 · takip 80–150. Büyüme eksik konudan gelir, dolgudan değil.
+
+Punto kademesi: gövde 1.18rem → TOC 0.88rem → kaynaklar 0.8rem → uyarı 0.75rem. TOC ve
+kaynak kutusu blogdaki `.post-toc` / `.post-refs` ile aynı dili konuşur; uyarıya kutu verilmez.
 
 ### Ölçüm (GA4)
 
@@ -229,16 +249,17 @@ Veri çok azsa dönem uzatılır.
 ## Kalan işler
 
 **Site içi**
-1. **8 hastalık sayfası `noindex` + sitemap dışı.** İçerikleri hazır ve yayında,
-   ama arama sonuçlarına kapalı. Her sayfa gözden geçirilip onaylandıkça front
-   matter'daki `noindex: true` ve `sitemap:` satırları **tek tek** silinerek açılır.
-   Ana sayfa kutuları, blog geri linkleri ve `llms.txt` kayıtları duruyor —
-   kaldırma, sayfalar çalışıyor, sadece indekslenmiyor.
+1. **8 hastalık sayfası — şablona geçti, içerik yeniden yazılacak, `noindex`.** Sıradaki iş:
+   içeriği 5 bölümlük iskelete göre yeniden yazmak. Pilot `tedaviye-direncli-depresyon`,
+   sonra birer birer. Her biri kullanıcı onayıyla açılır: `noindex` + `sitemap:` satırlarını
+   sil, `last_modified_at`'ı güncelle. Ana sayfa kutuları, blog geri linkleri ve `llms.txt`
+   kayıtları kalır. Yaşlılık sayfasındaki deliryum kutusu konuya özgü, içerikte kalır.
 
-   | Sayfa | Açıldı mı |
-   |---|---|
-   | `depresyon` · `tedaviye-direncli-depresyon` · `okb` · `bipolar-bozukluk` | hayır |
-   | `anksiyete-bozukluklari` · `eriskin-dehb` · `yaslilik-psikiyatrisi` · `sizofreni` | hayır |
+   | Sayfa | İskelete göre yazıldı | Açıldı |
+   |---|---|---|
+   | `tedaviye-direncli-depresyon` (pilot) | hayır | hayır |
+   | `depresyon` · `okb` · `bipolar-bozukluk` · `anksiyete-bozukluklari` | hayır | hayır |
+   | `eriskin-dehb` · `yaslilik-psikiyatrisi` · `sizofreni` | hayır | hayır |
 
 2. İç linkleme — şu sayfalardan hiç iç link çıkmıyor: `tms`, `randevu`,
    `iletisim`, `tdcs`, `blog`, `eriskin-dehb`, `yaslilik-psikiyatrisi`, `sizofreni`.
