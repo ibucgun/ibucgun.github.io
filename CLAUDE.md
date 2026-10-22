@@ -64,6 +64,9 @@ Ses sayfaya göre değil, **cümlenin işine göre** seçilir:
 Tıbbi bilgi birinci şahısla yazılmaz — kanıt kişisel görüşe dönüşür, kaynak numarası
 anlamını yitirir. Hiçbir yerde **"biz", "-imiz", "ekibimiz"** yok: tek hekimli muayenehane.
 
+FDA kararları **"FDA onayı"** diye yazılır; "clearance / 510(k)" ayrımına girilmez (hasta için
+kafa karıştırıcı, karar). Kaynak eklerken bu ifade değiştirilmez.
+
 **Yazılmaz:**
 - **Kanca / senaryo açılışı** ("…yapıyorsanız, … olabilir", "fark ettiyseniz…"): okuru
   kendine tanı koymaya iter, endişe üzerinden ilgi çeker. Hastalık sayfası ya doğrudan
