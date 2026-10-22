@@ -173,6 +173,13 @@ CEKINCELER = [  # mevzuat.md -> B
     ("112 acil kalıbı", r"112 acil çağrı merkezi"),
 ]
 
+# A10 — atıfsız otorite: literatüre/kılavuza/onaya dayanan iddia, aynı cümlede atıf yok
+OTORITE = re.compile(r"(\bçalışmalar(?!ı?m)|kılavuzlarda|kılavuzlar|\baraştırmalar(?!ı?m)|"
+                     r"literatürde|bildirilm|gösterilm|incelenm|fda onay|onayı? almış|onayı? aldı)")
+# Uygulama ifadeleri somut iddia değildir: "güncel kılavuzlar doğrultusunda planlanır"
+PRATIK = re.compile(r"kılavuzlar\w* doğrultusunda|kılavuzlarda tanımlı protokol|kanıt düzey|kılavuzlarına göre|"
+                    r"kılavuzlar ve algoritmalar")
+
 TEKRAR_IZINLI = [  # bilinçli tekrarlar: mevzuat.md -> C
     "112 acil çağrı merkezi", "şu anda psikoterapi için yeni hasta kabul edemediğimden",
     "bu sayfa yalnızca genel bilgilendirme", "muayenehanede uygulanmamaktadır",
@@ -188,6 +195,8 @@ def tara(yol):
     mevzuat, izler = [], {k: [] for k, _, _ in IZLER}
     izler["mektedir_yigini"], izler["iki_nokta"], izler["retorik_soru"], izler["unlem"] = [], [], [], []
     kelime, cumleler, mektedir_toplam = 0, [], 0
+    refs_var = bool(re.search(r"^refs:", icerik, re.M)) or "page-refs" in icerik or "post-refs" in icerik
+    govde_ilk = ayir(icerik)[2]  # front matter (lead, description) özet metindir; atıf gövdede aranır
     for no, t, st in satirlar:
         baslik = st == "baslik"
         lt = tr_lower(t)
@@ -221,6 +230,20 @@ def tara(yol):
                 w = len(re.findall(r"\w+", c))
                 if w >= 3:
                     cumleler.append(w)
+            # Atıf noktadan sonra gelir ("…bildirilmiştir.[2] Sonraki…"): bölmeden önce kendi cümlesine al
+            t2 = re.sub(r"([.!?])\s*((?:\[\d+\]\s*)+)", lambda m: " " + m.group(2).strip() + m.group(1) + " ", t)
+            satir_kaynakli = "kaynak:" in tr_lower(t) or no < govde_ilk  # "(Kaynak: …)" biçimi ya da front matter
+            for c in re.split(r"(?<=[.!?])\s+", t2):
+                lc = tr_lower(c)
+                if not OTORITE.search(lc) or PRATIK.search(lc) or re.search(r"\[\d+\]", c) or satir_kaynakli:
+                    continue
+                if tur == "blog" and refs_var:  # blogda numaralı atıf kullanılmıyor; liste varsa yeterli
+                    continue
+                if tur == "yasal":
+                    continue
+                mevzuat.append({"satir": no, "kod": "A10", "kategori": "kaynak", "duzey": "RİSK",
+                                "aciklama": "atıfsız otorite (kaynak eklenmeli)" + ("" if refs_var else " — sayfada kaynak listesi YOK"),
+                                "alinti": c.strip()[:150]})
     say = {k: len(v) for k, v in izler.items()}
     yogunluk_haric = {"retorik_soru", "kalip"} if tur == "blog" else set()
     toplam_iz = sum(v for k, v in say.items() if k not in yogunluk_haric)
@@ -276,9 +299,9 @@ def degismezler(icerik):
     lduz = tr_lower(duz)
     return {
         "atif": Counter(re.findall(r"\[(\d+)\]", govde)),
-        "sayi": Counter(re.findall(r"\d+(?:[.,]\d+)?", duz)),
+        "sayi": Counter(re.findall(r"\d+(?:[.,]\d+)?", re.sub(r"\[\d+\]", " ", duz))),
         "link": Counter(re.findall(r'href="([^"]*)"', govde) + re.findall(r"\]\(([^)]+)\)", govde)),
-        "etiket": Counter((a, b.lower()) for a, b in re.findall(r"<\s*(/?)([a-zA-Z0-9]+)", govde)),
+        "etiket": Counter((a, b.lower()) for a, b in re.findall(r"<\s*(/?)([a-zA-Z0-9]+)", govde) if b.lower() != "sup"),
         "liquid": Counter(re.findall(r"\{%.*?%\}|\{\{.*?\}\}", govde, re.S)),
         "baslik": [t for _, t, st in satirlar if st == "baslik"],
         "fm": {k: v for k, v in anahtarlar.items() if k not in DUZELTILEBILIR_FM},
@@ -294,7 +317,12 @@ def karsilastir(yol):
     once_ic, simdi_ic = open(yp, encoding="utf-8").read(), open(yol, encoding="utf-8").read()
     a, b = degismezler(once_ic), degismezler(simdi_ic)
     hatalar, uyarilar = [], []
-    for k, ad in (("atif", "atıf"), ("sayi", "sayı"), ("link", "link"), ("etiket", "HTML etiketi"), ("liquid", "Liquid")):
+    eksik_atif, yeni_atif = a["atif"] - b["atif"], b["atif"] - a["atif"]
+    if eksik_atif:
+        hatalar.append(f"atıf eksildi: {dict(eksik_atif)}")
+    if yeni_atif:
+        uyarilar.append(f"yeni atıf eklendi: {dict(yeni_atif)} — kaynak bu cümleyi gerçekten destekliyor mu? Kullanıcı onayı gerekli")
+    for k, ad in (("sayi", "sayı"), ("link", "link"), ("etiket", "HTML etiketi"), ("liquid", "Liquid")):
         if a[k] != b[k]:
             eksik, fazla = a[k] - b[k], b[k] - a[k]
             hatalar.append(f"{ad} değişti — eksilen: {dict(eksik) or '-'} · eklenen: {dict(fazla) or '-'}")

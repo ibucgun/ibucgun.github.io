@@ -54,7 +54,9 @@ düzeltilebilir. `title`, `seo_title`, `acil`, `acil_baslik`, `refs` denetlenir 
 
 Bunların her biri bir sebepten orada; betik hepsini kontrol eder:
 
-- **Atıflar** (`<sup>[n]</sup>`), **sayılar, yıllar, yüzdeler, dozlar, seans sayıları** — tıbbi olgu
+- **Atıflar** (`<sup>[n]</sup>`), **sayılar, yıllar, yüzdeler, dozlar, seans sayıları** — tıbbi olgu.
+  Atıf **silinmez**. Atıf **eklemek** serbest ama yalnızca gerçek bir kaynakla, kullanıcı onayıyla;
+  asla uydurulmaz (`references/mevzuat.md` → A10)
 - **Linkler** (`href`), **HTML etiketleri**, **Liquid** (`{% %}`, `{{ }}`) — sayfa yapısı
 - **H2 ve H3 başlıkları** — hastalık sayfası iskeleti sabittir; değişiklik gerekiyorsa öner
 - **Çekinceli kalıplar** (`references/mevzuat.md` → B) — yasal güvence
@@ -87,6 +89,9 @@ bağlamında oku ve karar ver.
 ### 3. Okuyarak denetim
 Betiğin göremediklerine bak; bunlar anlam düzeyinde:
 
+- **Atıfsız otorite (A10)** — betik bulur; her biri için kaynak listesinde destekleyen kaynak
+  var mı bak, varsa numarasını öner, yoksa "kaynak gerekiyor" de. Kaynak listesi hiç olmayan
+  sayfalarda (betik belirtir) bunu ayrıca raporla
 - **Sunulmayan hizmet ima ediliyor mu?** `CLAUDE.md` → *Sunulmayan* tablosuyla karşılaştır:
   EKT, tDCS, psikoterapi (yeni hasta), çocuk-ergen, online, acil
 - **Konumlandırma doğru mu?** Alt alan için "uzmanı" yok; eğitimler olgularla; karşılaştırma yok
@@ -109,7 +114,7 @@ uydurma, kullanıcıya sor. Yapıyı koru: liste liste, başlık başlık kalır
 python3 .claude/skills/metin-denetimi/scripts/denetle.py --karsilastir <dosya>
 ```
 
-Yedekle şimdiki hali karşılaştırır: atıflar, sayılar, linkler, HTML etiketleri, Liquid,
+Yedekle şimdiki hali karşılaştırır: atıflar (eksilme hata, ekleme uyarı), sayılar, linkler, HTML etiketleri, Liquid,
 başlıklar, front matter, çekince sayıları, acil kalıbı ve mevzuat bayrakları. **BAŞARISIZ**
 dönerse düzeltmeyi bitmiş sayma: gösterdiği farkları geri al ya da kullanıcıya gerekçesiyle
 sun. Çekince sayısındaki bir düşüş gerçekten gerekliyse (örneğin aynı cümlenin tekrarı

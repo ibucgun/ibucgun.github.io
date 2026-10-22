@@ -265,6 +265,8 @@ Veri çok azsa dönem uzatılır.
    sonra birer birer. Her biri kullanıcı onayıyla açılır: `noindex` + `sitemap:` satırlarını
    sil, `last_modified_at`'ı güncelle. Ana sayfa kutuları, blog geri linkleri ve `llms.txt`
    kayıtları kalır. Yaşlılık sayfasındaki deliryum kutusu konuya özgü, içerikte kalır.
+   Her sayfada `metin-denetimi`'nin A10 (atıfsız otorite) bulgularına atıf eklenir; şu an
+   7 cümle var (depresyon 2, dirençli 2, OKB 1, bipolar 1, şizofreni 1).
 
    | Sayfa | İskelete göre yazıldı | Açıldı |
    |---|---|---|
@@ -276,19 +278,27 @@ Veri çok azsa dönem uzatılır.
    `iletisim`, `tdcs`, `blog`, `eriskin-dehb`, `yaslilik-psikiyatrisi`, `sizofreni`.
    `/tms` en çok gösterim alan sayfa (62.437) ve oradan hiçbir yere gidilemiyor;
    öncelik orada.
+3. **`/tms` kaynak listesi.** Sayfada 10 atıfsız iddia var (FDA onay yılları, endikasyonlar,
+   "literatürde çalışmalar bulunmaktadır") ve **hiç kaynak listesi yok**; sitenin en çok
+   gösterim alan sayfası. Gerçek kaynaklar (FDA kararları, temel çalışmalar) eklenecek:
+   atıf numaraları metne, `.page-refs` kutusu sayfa sonuna (`/tms` `tms-content` kullandığı
+   için stil hazır; hastalık şablonunda olmadığından kutu elle eklenir). SSS metni değişirse
+   `_includes/schema/tms.html` ile senkron. Başlık ve metin değişmediği için referans
+   dönemini beklemesi gerekmez. Aynı sorun `/tdcs`'te (6, kaynak listesi yok; yalnız tek bir
+   satır içi "Kaynak:" notu) ve `/klinik`'te (1, FDA ifadesi) de var.
 
 > Hastalık sayfaları muayenehanedeki **değerlendirme ve tedavi sürecini** anlatır,
 > hastalığın "nedir"ini **blog yazıları** anlatır. Aynı metni iki yere yazma;
 > birbirine link ver. Ana sayfa kutuları, `llms.txt` ve blog geri linkleri bağlandı.
 
 **Ölçüm**
-3. `/tms` başlık ve açıklama CTR yazımı — 62.437 gösterim, %0,73 tıklama.
+4. `/tms` başlık ve açıklama CTR yazımı — 62.437 gösterim, %0,73 tıklama.
    Ölçüm kuruldu; referans dönemi bittikten sonra (2026-11-10) yapılır.
 
 **Bekleyen**
-4. `/parlakisik` içeriği yazılacak. Şu an `noindex` + sitemap dışı, içeriği
+5. `/parlakisik` içeriği yazılacak. Şu an `noindex` + sitemap dışı, içeriği
    boşaltıldı. Tedavi **uygulanıyor**, eksik olan sadece sayfa.
-5. **`/hakkimda` — taslak, yayında değil.** Amaç: ana sayfayı özgeçmiş görünümünden çıkarmak.
+6. **`/hakkimda` — taslak, yayında değil.** Amaç: ana sayfayı özgeçmiş görünümünden çıkarmak.
    - Taslakta: `noindex` + sitemap dışı, **hiçbir yerden link yok** (menü, footer, `llms.txt`,
      404, blog). Adresi bilen açabilir ve repo herkese açık; taslağa gizli bilgi konmaz.
    - Taşınacak 4 bölüm: Yeterlilik ve Üyelikler, Akademik Eğitim, Çalıştığım Kurumlar,
@@ -307,12 +317,12 @@ Veri çok azsa dönem uzatılır.
      Console'dan dizine ekleme isteği · 2–3 hafta sıralama takibi.
 
 **Site dışı**
-6. İyi Psikolog ve Türkiye Psikiyatristleri'ne adres güncelleme maili gönderildi,
+7. İyi Psikolog ve Türkiye Psikiyatristleri'ne adres güncelleme maili gönderildi,
    takip edilecek. Doktorum360 için KVKK 11. madde talebi opsiyonel.
    (DoktorTakvimi ve Doktorsitesi düzeltildi.)
 
 **En son — içerik bittikten sonra**
-7. Yeniden tasarım ("yapay zeka yapımı" görünümden çıkarmak). Yöntem kararlaştırıldı:
+8. Yeniden tasarım ("yapay zeka yapımı" görünümden çıkarmak). Yöntem kararlaştırıldı:
    ayrı public repo `tasarim`, önizleme `ismailbucgun.com/tasarim/` adresinde
    (ana site özel domain kullandığı için GitHub proje repolarını onun altına koyar).
    - Başlarken `master`'a `tasarim-oncesi` tag'i at — geri dönüş noktası.

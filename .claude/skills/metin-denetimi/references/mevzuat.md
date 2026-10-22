@@ -92,6 +92,29 @@ gerekçesiz yazılır.
 "Biz", "ekibimiz", "kliniğimizde", "muayenehanemizde" yazılmaz. Tek hekimli bir
 muayenehanede çoğul şahıs kurum ve ekip ima eder.
 
+### A10. Atıfsız otorite (kaynak gerekli)
+"Çalışmalarda … bildirilmiştir", "kılavuzlarda önerilir", "FDA onayı almıştır" gibi literatüre,
+kılavuza ya da resmî onaya dayanan bir iddia, **aynı cümlede atıf numarası taşımıyorsa**.
+
+Neden mevzuat: çekince kalıbı ancak arkasında kaynak varsa güvencedir. Kaynaksız kalınca
+"bildirilmiştir" boş bir kalıba, iddia da hekimin kaynaksız beyanına dönüşür. Aynı zamanda
+yapay zekâ metninin en belirgin izlerinden biridir ("ödünç otorite").
+
+**Düzeltme — atıf asla uydurulmaz:**
+1. Sayfanın kaynak listesinde (`refs`) cümleyi **gerçekten** destekleyen bir kaynak varsa,
+   numarasını **öner**. Kaynağın bu iddiayı içerdiğinden emin değilsen söyle.
+2. Yoksa "kaynak gerekiyor" diye raporla; gerçek ve doğrulanabilir bir kaynak önerebiliyorsan
+   (kılavuz, FDA kararı, çok merkezli çalışma) künyesiyle öner, ama ekleme kararı hekimin.
+3. Otorite çerçevesini silip cümleyi kesin bir beyana çevirmek çözüm **değildir**: kaynaksız
+   iddia hekimin iddiasına dönüşür, durum kötüleşir.
+
+Atıf eklemek karşılaştırma betiğinde **UYARI** verir (onay gerekli), atıf silmek **HATA**.
+Atıflı bir cümleyi bölüp bir parçasını atıfsız bırakmak da HATA verir (yeni A10 bayrağı).
+
+Uygulama ifadeleri somut iddia değildir, bayrak çıkarmaz: "güncel kılavuzlar doğrultusunda
+planlanır", "kılavuzlarda tanımlı protokolleri … seçerek uyguluyorum", "kanıt düzeyine göre".
+Lead ve description özet metindir; atıf gövdede aranır.
+
 ---
 
 ## B. Korunan çekince kalıpları

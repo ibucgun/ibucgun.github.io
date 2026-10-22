@@ -104,6 +104,11 @@ bunları listeler.
 - **Bilinçli tekrarlar iz değildir:** acil kalıbı, psikoterapi kalıbı, yasal uyarı
   (`mevzuat.md` → C). Tutarlılık için her sayfada aynı olmaları gerekir.
 
+### 18. Ödünç otorite
+"Çalışmalar gösteriyor", "uzmanlar belirtiyor", "kılavuzlarda önerilir" ama kaynak yok.
+Bu sitede mevzuat konusudur: `mevzuat.md` → A10. Yazım izi diye çerçeveyi silmek yasaktır;
+çözüm atıftır.
+
 ---
 
 ## Alınmayan kurallar (turkce-humanizer'dan farklar)
