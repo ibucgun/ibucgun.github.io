@@ -181,8 +181,9 @@ dahil ≤55 karakter — uzarsa Google sondan keser ve "Adana" kaybolur; şemsiy
 **Bölümler — her sayfada aynı sıra ve aynı kalıp:**
 1. **[X] nedir?** — nesnel, kaynaklı. Blog yazısı varsa kısa tutulur, yazıya link verilir.
 2. **[X]'in belirtileri nelerdir?** — liste.
-3. **[X]'te değerlendirme nasıl yapılır?** — birinci tekil. İlk cümle yerel hizmet cümlesi
-   ("Adana Çukurova'daki muayenehanemde…").
+3. **[X]'te değerlendirme nasıl yapılır?** — ilk cümle soruyu genel olarak, nesnel dille
+   cevaplar; **hemen ardından, aynı paragrafta** yerel hizmet cümlesi gelir ("Adana Çukurova'daki
+   muayenehanemde…"), devamı birinci tekil (pilotta kullanıcı kararı).
 4. **[X] nasıl tedavi edilir?** — alt başlıklar sabit sırada (pilotta kullanıcı kararı):
    ilaç → TMS / derin TMS (varsa, `/tms` linki) → diğer ilaç seçenekleri (esketamin gibi,
    varsa) → psikoterapi (kılavuz + yönlendirme) → muayenehanede uygulanmayanlar (EKT, notuyla)
@@ -265,9 +266,9 @@ Veri çok azsa dönem uzatılır.
 ## Kalan işler
 
 **Site içi**
-1. **8 hastalık sayfası — şablona geçti, içerik yeniden yazılacak, `noindex`.** Sıradaki iş:
-   içeriği 5 bölümlük iskelete göre yeniden yazmak. Pilot `tedaviye-direncli-depresyon`,
-   sonra birer birer. Her biri kullanıcı onayıyla açılır: `noindex` + `sitemap:` satırlarını
+1. **Hastalık sayfaları — pilot açıldı, kalan 7 yeniden yazılacak (`noindex`).** Sıradaki iş:
+   içeriği 5 bölümlük iskelete göre birer birer yeniden yazmak; örnek olarak açılmış pilot
+   `tedaviye-direncli-depresyon` esas alınır. Her biri kullanıcı onayıyla açılır: `noindex` + `sitemap:` satırlarını
    sil, `last_modified_at`'ı güncelle. Ana sayfa kutuları, blog geri linkleri ve `llms.txt`
    kayıtları kalır. Yaşlılık sayfasındaki deliryum kutusu konuya özgü, içerikte kalır.
    Her sayfada `metin-denetimi`'nin A10 (atıfsız otorite) bulgularına atıf eklenir; şu an
@@ -275,7 +276,7 @@ Veri çok azsa dönem uzatılır.
 
    | Sayfa | İskelete göre yazıldı | Açıldı |
    |---|---|---|
-   | `tedaviye-direncli-depresyon` (pilot) | evet | hayır — açılış onayı bekliyor |
+   | `tedaviye-direncli-depresyon` (pilot) | evet | evet (2026-10-23) |
    | `depresyon` · `okb` · `bipolar-bozukluk` · `anksiyete-bozukluklari` | hayır | hayır |
    | `eriskin-dehb` · `yaslilik-psikiyatrisi` · `sizofreni` | hayır | hayır |
 
