@@ -183,8 +183,10 @@ dahil ≤55 karakter — uzarsa Google sondan keser ve "Adana" kaybolur; şemsiy
 2. **[X]'in belirtileri nelerdir?** — liste.
 3. **[X]'te değerlendirme nasıl yapılır?** — birinci tekil. İlk cümle yerel hizmet cümlesi
    ("Adana Çukurova'daki muayenehanemde…").
-4. **[X] nasıl tedavi edilir?** — alt başlıklar sabit sırada: ilaç → psikoterapi (kılavuz +
-   yönlendirme) → beyin uyarım (varsa, `/tms` linki) → diğer.
+4. **[X] nasıl tedavi edilir?** — alt başlıklar sabit sırada (pilotta kullanıcı kararı):
+   ilaç → TMS / derin TMS (varsa, `/tms` linki) → diğer ilaç seçenekleri (esketamin gibi,
+   varsa) → psikoterapi (kılavuz + yönlendirme) → muayenehanede uygulanmayanlar (EKT, notuyla)
+   → diğer (parlak ışık vb.).
 5. **[X] tedavisi ne kadar sürer, takip nasıl yapılır?**
 
 Neden böyle (arama ve yapay zekâ): yapay zekâ sistemleri sayfayı pasaj pasaj alıntılar.
@@ -269,7 +271,7 @@ Veri çok azsa dönem uzatılır.
    sil, `last_modified_at`'ı güncelle. Ana sayfa kutuları, blog geri linkleri ve `llms.txt`
    kayıtları kalır. Yaşlılık sayfasındaki deliryum kutusu konuya özgü, içerikte kalır.
    Her sayfada `metin-denetimi`'nin A10 (atıfsız otorite) bulgularına atıf eklenir; şu an
-   7 cümle var (depresyon 2, dirençli 2, OKB 1, bipolar 1, şizofreni 1).
+   6 cümle var (depresyon 2, dirençli 1 — TMS 2008 FDA, OKB 1, bipolar 1, şizofreni 1).
 
    | Sayfa | İskelete göre yazıldı | Açıldı |
    |---|---|---|
