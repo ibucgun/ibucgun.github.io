@@ -271,11 +271,11 @@ Veri çok azsa dönem uzatılır.
    sil, `last_modified_at`'ı güncelle. Ana sayfa kutuları, blog geri linkleri ve `llms.txt`
    kayıtları kalır. Yaşlılık sayfasındaki deliryum kutusu konuya özgü, içerikte kalır.
    Her sayfada `metin-denetimi`'nin A10 (atıfsız otorite) bulgularına atıf eklenir; şu an
-   6 cümle var (depresyon 2, dirençli 1 — TMS 2008 FDA, OKB 1, bipolar 1, şizofreni 1).
+   5 cümle var (depresyon 2, OKB 1, bipolar 1, şizofreni 1).
 
    | Sayfa | İskelete göre yazıldı | Açıldı |
    |---|---|---|
-   | `tedaviye-direncli-depresyon` (pilot) | taslak, onay bekliyor | hayır |
+   | `tedaviye-direncli-depresyon` (pilot) | evet | hayır — açılış onayı bekliyor |
    | `depresyon` · `okb` · `bipolar-bozukluk` · `anksiyete-bozukluklari` | hayır | hayır |
    | `eriskin-dehb` · `yaslilik-psikiyatrisi` · `sizofreni` | hayır | hayır |
 
@@ -285,7 +285,9 @@ Veri çok azsa dönem uzatılır.
    öncelik orada.
 3. **`/tms` kaynak listesi.** Sayfada 10 atıfsız iddia var (FDA onay yılları, endikasyonlar,
    "literatürde çalışmalar bulunmaktadır") ve **hiç kaynak listesi yok**; sitenin en çok
-   gösterim alan sayfası. Gerçek kaynaklar (FDA kararları, temel çalışmalar) eklenecek:
+   gösterim alan sayfası. FDA yılları için Cohen SL ve ark. *Brain Stimul.* 2022;15(1):73-75
+   (TMS FDA kronolojisi, "approved" diyor; pilotta kullanıldı); ilaç onaylarında prospektüs.
+   Gerçek kaynaklar (FDA kararları, temel çalışmalar) eklenecek:
    atıf numaraları metne, `.page-refs` kutusu sayfa sonuna (`/tms` `tms-content` kullandığı
    için stil hazır; hastalık şablonunda olmadığından kutu elle eklenir). SSS metni değişirse
    `_includes/schema/tms.html` ile senkron. Başlık ve metin değişmediği için referans
