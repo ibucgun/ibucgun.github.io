@@ -6,3 +6,6 @@ _vendor
 # Claude Code yerel ayarları (her makinede ayrı; repo herkese açık)
 .claude/settings.local.json
 .claude/worktrees/
+
+# Yerel raporlar (Search Console verisi içerir; repo herkese açık)
+_raporlar/

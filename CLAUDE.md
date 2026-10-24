@@ -78,6 +78,12 @@ kafa karıştırıcı, karar). Kaynak eklerken bu ifade değiştirilmez.
 
 ---
 
+## Görsel kimlik
+
+Kurumsal font **Poppins**, vurgu rengi **#4d41e0** (`_sass/_variables.scss`; favicon ve
+uygulama simgesi de bu renk). Renk değiştirilebilir. İstenen izlenim: sakin, sıcak, sade,
+modern ve çağdaş.
+
 ## Muayenehane bilgileri (NAP — her yerde birebir aynı olmalı)
 
 ```
