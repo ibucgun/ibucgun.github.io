@@ -84,6 +84,44 @@ Kurumsal font **Poppins**, vurgu rengi **#4d41e0** (`_sass/_variables.scss`; fav
 uygulama simgesi de bu renk). Renk değiştirilebilir. İstenen izlenim: sakin, sıcak, sade,
 modern ve çağdaş.
 
+### Marka rengi — karar bekliyor
+
+#4d41e0, Tailwind `indigo-600` ile neredeyse aynı (ΔE 2): "yapay zekâ / şablon" görüntüsünün
+ana kaynağı. Yerine yeni renk aranıyor; **karar verilmedi**, uygulama 2026-11-10 sonrası
+(yeniden tasarımla, 8. iş). Karar verilince bu bölüm tek satıra iner.
+
+**Önde giden: canlı kiremit #a9462d** (beyazda 5,8:1). Muayene odasındaki koltuğun rengine
+dayanır (Normod kadife koltuk; fotoğraftan ölçülen ışık tonu #ba5c42). Gerçek site üzerinde
+demo yapıldı. Türetilen aile: koyu #853723 · açık zemin #f8f0ee · çok açık #fcf9f9 ·
+kenarlık #eedad5 · belirgin kenarlık #e3c4bc.
+
+**Hâlâ seçenek: indigo ailesi**, ama #4d41e0 değil; doygunluğu düşük, Tailwind'den uzak bir
+ton (örn. tozlu indigo #545298, menekşe-indigo #534c94, denim indigosu #425394). Kullanıcı
+indigo adaylarını "karaktersiz" buldu; indigoya dönülürse karakter tipografi ve düzenden gelmeli.
+
+**Elenenler ve gerekçesi** (tekrar önerme):
+- Erik, mürdüm, fuşya, gül tonları (ton 300–340°): kadın sağlığı / tüp bebek çağrışımı.
+- Zeytin, adaçayı: "wellness / alternatif tıp" çağrışımı, trend rengi.
+- Mürekkep indigo, gece mavisi gibi çok koyu tonlar: "eski usul".
+- Önceki kiremit #9b4c36: kahve alt tonlu, "ölü" bulundu.
+- Eski sitenin turuncusu #cc5400 ve ona yakın tonlar (ΔE < 20): "eski siteye dönüş".
+
+**Hangi renk seçilirse seçilsin geçerli kararlar:**
+- Zemin **beyaz** kalır. Sıcaklık metin (#2b2724, gövde #4a4540, ikincil #6f6a64), nötr
+  griler (kenarlık #e6e3de, belirgin #d6d2cb) ve **Skylight** yüzeyden (#f6f5ee: altbilgi,
+  İçindekiler, yasal kutular) gelir. Duvarlar Jotun Skylight 1624 (ekran karşılığı ≈ #f1f0e7;
+  sitede bir kademe açığı kullanılır).
+- Tek vurgu rengi. Bekleme salonundaki yanık turuncu sitede kullanılmaz (eski turuncuya
+  yakın); açık gri koltuklar nötr tonların kaynağı.
+- Kiremit seçilirse: acil kırmızısı #a61b3a'ya geçer (kiremitle karışmasın); bilgi kutuları
+  (`callout-info`) marka zemini değil nötr Skylight + gri kenarlık olur, yoksa acil kutusuyla
+  karışıyor (demoda görüldü).
+- Renk değişiminde ayrıca güncellenecek görseller: favicon, `apple-touch-icon.png`, ana
+  sayfadaki harita görseli (etiket mor, görsele gömülü), paylaşım görseli
+  (`images/ekrangoruntusu.png`, zaten yenilenecek).
+- Aday renk beyazda en az 5,5:1 (beyaz yazılı butonda rahat okunurluk) ve en yakın Tailwind
+  renginden ΔE ≥ 10 olmalı.
+
 ### Renk kuralı — kalıcı
 
 **Sitenin bütün renkleri `_sass/_variables.scss`'te, görev adıyla tanımlıdır** (`$brand-indigo`,
@@ -366,7 +404,8 @@ Veri çok azsa dönem uzatılır.
    (DoktorTakvimi ve Doktorsitesi düzeltildi.)
 
 **En son — içerik bittikten sonra**
-8. Yeniden tasarım ("yapay zeka yapımı" görünümden çıkarmak). Yöntem kararlaştırıldı:
+8. Yeniden tasarım ("yapay zeka yapımı" görünümden çıkarmak). İlk karar marka rengi: bkz.
+   "Görsel kimlik → Marka rengi — karar bekliyor". Yöntem kararlaştırıldı:
    ayrı public repo `tasarim`, önizleme `ismailbucgun.com/tasarim/` adresinde
    (ana site özel domain kullandığı için GitHub proje repolarını onun altına koyar).
    - Başlarken `master`'a `tasarim-oncesi` tag'i at — geri dönüş noktası.
