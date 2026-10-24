@@ -5,9 +5,50 @@ $container-width: 980px !default;
 $grid-gutter:     10px !default;
 
 // Colors
+// ---------------------------------------
+// Sitenin TÜM renkleri burada tanımlıdır. Başka bir SCSS dosyasına, layout'a
+// ya da include'a sabit renk kodu (#rrggbb, rgb(0,0,0)) yazılmaz; aşağıdaki
+// görevlerden biri kullanılır. Yeni bir görev gerekiyorsa önce buraya eklenir.
+// Kural ve kontrol komutu: CLAUDE.md → "Görsel kimlik".
+
+// Marka
+$brand-indigo:      #4d41e0;   // vurgu rengi: bağlantı, buton, başlık vurgusu, simge
+$brand-indigo-dark: #3a30b8;   // buton üzerine gelince
+$brand-tint:        #f3f1fd;   // açık marka zemini: içindekiler, bilgi kutusu, rozet, simge kutusu
+$brand-wash:        #faf9ff;   // çok hafif marka zemini: geniş yüzeyler, kart arka planı
+$brand-line:        #e8e6f4;   // marka kenarlığı: kart ve kutu çerçevesi
+$brand-line-strong: #d9d5f4;   // belirgin marka kenarlığı: üzerine gelince, ayraç, soluk simge
+
+// Metin
 $white:             #fff;
 $black:             #333;
-$brand-indigo:      #4d41e0;
+$text-strong:       #1a202c;   // başlık ve vurgulu metin
+$text-body:         #4a5568;   // gövde metni
+$text-muted:        #6b7280;   // ikincil metin: tarih, not, altbilgi (beyazda 4,8:1)
+
+// Yüzey ve kenarlık
+$border:            #e2e8f0;   // nötr ince çizgi ve çerçeve
+$border-strong:     #d1d5db;   // nötr ayraç (altbilgideki "·" vb.)
+$surface-alt:       #f7f8fa;   // nötr açık gri zemin: kod, tablo başlığı, yasal kutu
+
+// Durum kutuları
+$danger:            #c53030;   // acil durum kutusu metni ve simgesi
+$danger-tint:       #fff5f5;
+$danger-line:       #feb2b2;
+$warning:           #92400e;   // uyarı kutusu
+$warning-tint:      #fffbeb;
+$warning-line:      #fcd34d;
+
+// Üçüncü taraf marka rengi (yalnız ilgili butonda)
+$instagram:         #e1306c;
+
+// Saydamlık — rgba($brand-indigo, $alpha-…) ve rgba($shadow-color, $shadow-…) ile kullanılır
+$alpha-soft:        0.06;      // hafif marka gölgesi / zemin
+$alpha-mid:         0.12;      // orta: kenarlık, gölge
+$alpha-strong:      0.25;      // belirgin: buton gölgesi, kutu kenarı
+$shadow-color:      #000;
+$shadow-faint:      0.04;      // kart gölgesi
+$shadow-soft:       0.08;      // üzerine gelince yükselen gölge
 
 // Styles
 $text_color:        $black;

@@ -84,6 +84,35 @@ Kurumsal font **Poppins**, vurgu rengi **#4d41e0** (`_sass/_variables.scss`; fav
 uygulama simgesi de bu renk). Renk değiştirilebilir. İstenen izlenim: sakin, sıcak, sade,
 modern ve çağdaş.
 
+### Renk kuralı — kalıcı
+
+**Sitenin bütün renkleri `_sass/_variables.scss`'te, görev adıyla tanımlıdır** (`$brand-indigo`,
+`$brand-tint`, `$text-body`, `$border`, `$danger` …; listenin kendisi ve her birinin görevi
+dosyada yazılı). Başka hiçbir SCSS dosyasına, layout'a, include'a, sayfaya ya da yazıya sabit
+renk kodu (`#rrggbb`, `#rgb`, `rgb(…)`, `rgba(0,0,0,…)`) **yazılmaz**:
+
+- Renk gerekiyorsa mevcut görevlerden biri kullanılır. Hiçbiri uymuyorsa önce
+  `_variables.scss`'e **görev adıyla** yeni değişken eklenir, sonra o kullanılır.
+  Birbirine yakın yeni bir ton eklenmez: aynı iş için tek değer.
+- Saydamlık için sayı yazılmaz: `rgba($brand-indigo, $alpha-soft|mid|strong)`,
+  gölgede `rgba($shadow-color, $shadow-faint|soft)`.
+- Satır içi SVG'lerde renk `currentColor`'dır; rengi kapsayan öğenin CSS `color`'ı verir.
+  Simge `<img>` olarak eklenmez (dış SVG dosyasının rengi CSS'ten değiştirilemez).
+- Blog kategori rozetlerinin hepsi aynı marka rengindedir; kategoriye özel renk yoktur.
+- Marka rengini değiştirmek = `_variables.scss`'te tek satır. Favicon ve
+  `apple-touch-icon.png` görsel dosyadır, ayrıca güncellenir.
+
+**Kontrol (her SCSS/şablon değişikliğinden sonra; çıktı boş olmalı):**
+
+```bash
+grep -rniE '#[0-9a-f]{6}\b|#[0-9a-f]{3}\b|rgba?\( *[0-9]' _sass _layouts _includes _posts *.html | grep -vE '^_sass/_(variables|normalize)\.scss:|^_includes/(icons|schema)/'
+```
+
+İstisnalar: `_normalize.scss` (tarayıcı sıfırlama, dokunulmaz), `_includes/schema/`
+(JSON-LD; renk yok, `#hekim` gibi kimlikler var), `_includes/icons/` (temadan kalma, hiçbir
+yerden çağrılmayan sosyal medya ikonları). Komut `href="#abc"` gibi yalnız a–f harfli bir
+sayfa içi bağlantıyı da yakalayabilir; öyle bir satır renk değildir, atlanır.
+
 ## Muayenehane bilgileri (NAP — her yerde birebir aynı olmalı)
 
 ```
@@ -167,7 +196,7 @@ listelenmez.
 | `_layouts/hastalik.html` | Hastalık sayfası şablonu: kaynaklar, uyarı (otomatik tarih), acil kutusu, CTA |
 | `_includes/schema/hastalik.html` | `MedicalWebPage` + `MedicalCondition`; yazar ve gözden geçiren `/#hekim` |
 | `_includes/iletisim-cta.html` | Ara / WhatsApp butonu; `baslik`, `metin`, `buton` parametreleri |
-| `_data/categories.yml` | Blog kategori renkleri |
+| `_sass/_variables.scss` | Sitenin tüm renkleri (görev adlı değişkenler) ve saydamlık seviyeleri |
 | `llms.txt` | Dil modelleri için site özeti — **hizmet değişince güncelle** |
 | `.claude/skills/metin-denetimi/` | Metin denetimi skill'i: mevzuat + yapay zekâ yazım izleri; `scripts/denetle.py` tarama, yedek ve karşılaştırma |
 

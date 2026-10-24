@@ -1,7 +1,7 @@
 blockquote {
   background-color: $white;
   color: $black;
-  border-left: 04px solid #eeeeee;
+  border-left: 04px solid $border;
   padding-left: 5px;
   font-size: 16px !important;
   font-style: italic;
@@ -19,10 +19,10 @@ pre,
 code {
   font-family: $mono-font !important;
   font-size: 15px !important;
-  color: #586e75;
-  border: 01px solid #dddddd;
+  color: $text-body;
+  border: 01px solid $border;
   border-radius: 03px;
-  background-color: #fdf6e3;
+  background-color: $surface-alt;
 }
 
 code {
@@ -43,10 +43,10 @@ pre {
 .highlight {
   isolation: isolate;
   border-radius: 03px;
-  background: #fdf6e3;
+  background: $surface-alt;
 
   .highlighter-rouge & {
-    background: #fdf6e3;
+    background: $surface-alt;
   }
 }
 
@@ -74,7 +74,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   overflow-x: auto;
-  border: 01px solid #dddddd;
+  border: 01px solid $border;
 
   & + table {
     margin-top: 30px;
@@ -82,7 +82,7 @@ table {
 
   tr {
     &:nth-child(even) {
-      background-color: #efefef;
+      background-color: $surface-alt;
     }
   }
 
@@ -91,12 +91,12 @@ table {
   }
 
   th {
-    background-color: #efefef;
-    border: 01px solid #dddddd;
+    background-color: $surface-alt;
+    border: 01px solid $border;
   }
 
   td {
-    border: 01px solid #dddddd;
+    border: 01px solid $border;
   }
 
   tr,

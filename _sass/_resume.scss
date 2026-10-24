@@ -50,8 +50,8 @@
 .modern-section-card {
   @include clean_card; // Mixins dosyasındaki hafif gölgeli kural
   padding: 1.8rem 2rem !important;
-  border: 1px solid rgba($brand-indigo, 0.12) !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+  border: 1px solid rgba($brand-indigo, $alpha-mid) !important;
+  box-shadow: 0 4px 20px rgba($shadow-color, $shadow-faint) !important;
   margin-bottom: 2.5rem !important;
 
   // Başlık Alanı (İkon + H2)
@@ -67,7 +67,8 @@
 
     // İkonun etrafındaki hafif mor/lavanta kutu
     .section-icon-wrapper {
-      background: #f0ebff !important; 
+      background: $brand-tint !important;
+      color: $brand-indigo; // içindeki SVG'ler currentColor ile bu rengi alır
       width: 52px !important;
       height: 52px !important;
       min-width: 52px !important;
@@ -98,7 +99,7 @@
   .resume-item {
     margin-bottom: 1.2rem !important; // Maddeler arası dengeli boşluk
     padding-bottom: 1.2rem !important;
-    border-bottom: 1px solid #e2e8f0 !important; // Belirgin ama ince ara çizgi
+    border-bottom: 1px solid $border !important; // Belirgin ama ince ara çizgi
 
     &:last-child {
       border-bottom: none !important;
@@ -134,7 +135,7 @@
       @include sans_regular;
       font-size: 1.1rem !important;
       line-height: 1.6 !important; // Okuma konforu için ferah satır aralığı
-      color: #4a5568 !important;
+      color: $text-body !important;
       margin: 0 !important;
       text-align: left !important;
     }
@@ -180,8 +181,8 @@
   // Öne Çıkan Yatay Kart
   .practice-box-featured {
     display: flex;
-    background: #ffffff;
-    border: 1px solid rgba($brand-indigo, 0.12);
+    background: $white;
+    border: 1px solid rgba($brand-indigo, $alpha-mid);
     border-radius: 20px;
     overflow: hidden;
     text-decoration: none;
@@ -202,7 +203,7 @@
       justify-content: center;
 
       .badge-blue {
-        background: #f4f3ff;
+        background: $brand-tint;
         color: $brand-indigo;
         font-weight: 600;
         font-size: 0.75rem;
@@ -236,7 +237,7 @@
 
     &:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba($brand-indigo, 0.08);
+      box-shadow: 0 10px 25px rgba($brand-indigo, $alpha-soft);
     }
   }
 
@@ -247,8 +248,8 @@
     gap: 15px;
 
     .practice-box-small {
-      background: #fcfdff;
-      border: 1px solid rgba($brand-indigo, 0.12);
+      background: $brand-wash;
+      border: 1px solid rgba($brand-indigo, $alpha-mid);
       padding: 20px;
       border-radius: 15px;
       text-decoration: none;
@@ -270,7 +271,7 @@
 
       &:hover {
         border-color: $brand-indigo;
-        background: #fff;
+        background: $white;
       }
     }
   }
@@ -291,7 +292,7 @@
 
 /* --- AÇILIR KAPANIR EĞİTİM MADDELERİ (Anayasa Uyumlu) --- */
 .resume-item-collapsible {
-  border-bottom: 1px solid #e2e8f0 !important;
+  border-bottom: 1px solid $border !important;
   transition: all 0.3s ease;
   position: relative;
 
@@ -368,7 +369,7 @@
 
   /* Açık Durum Ayarları */
   &[open] {
-    background-color: rgba($brand-indigo, 0.03); 
+    background-color: rgba($brand-indigo, $alpha-soft); 
     margin-left: -2rem; // Kartın iç padding'ini dengelemek için (Anayasa paddingi 2rem idi)
     margin-right: -2rem;
     padding-left: 2rem;
@@ -389,7 +390,7 @@
       @include sans_regular;
       font-size: 1.1rem !important;
       line-height: 1.6 !important;
-      color: #4a5568 !important;
+      color: $text-body !important;
       margin: 0 !important;
     }
   }
@@ -457,7 +458,7 @@
   padding: 12px 35px;
   border-radius: 50px;
   text-decoration: none;
-  box-shadow: 0 10px 25px rgba($brand-indigo, 0.25);
+  box-shadow: 0 10px 25px rgba($brand-indigo, $alpha-strong);
   transition: all 0.3s ease;
   line-height: 1.2;
 
@@ -476,7 +477,7 @@
 
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 35px rgba($brand-indigo, 0.35);
+    box-shadow: 0 15px 35px rgba($brand-indigo, $alpha-strong);
   }
 }
 
@@ -503,15 +504,15 @@
   justify-content: center;
   background: white;
   color: $brand-indigo;
-  border: 1px solid rgba($brand-indigo, 0.2);
+  border: 1px solid rgba($brand-indigo, $alpha-strong);
   width: 60px;
   border-radius: 50px;
   text-decoration: none;
   transition: all 0.3s ease;
 
   &:hover {
-    color: #E1306C;
-    border-color: #E1306C;
+    color: $instagram;
+    border-color: $instagram;
     transform: translateY(-3px) rotate(8deg);
   }
 }
@@ -605,7 +606,7 @@
     .header-title {
       @include sans_bold;
       font-size: 1.25rem;
-      color: #4a5568;
+      color: $text-body;
       margin: 0 0 1.5rem 0 !important;
       padding-left: 0 !important;
     }
@@ -640,7 +641,7 @@
         position: absolute;
         top: 10%; left: -10%;
         width: 120%; height: 100%;
-        background: radial-gradient(circle, rgba($brand-indigo, 0.15) 0%, transparent 70%);
+        background: radial-gradient(circle, rgba($brand-indigo, $alpha-mid) 0%, transparent 70%);
         filter: blur(40px);
         z-index: -1;
       }
@@ -650,7 +651,7 @@
       width: 400px;
       height: auto;
       border-radius: 24px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+      box-shadow: 0 20px 50px rgba($shadow-color, $shadow-soft);
       display: block;
     }
   }
@@ -689,11 +690,11 @@
 
 /* --- MODERN İLETİŞİM KARTI --- */
 .modern-contact-card {
-  background: #ffffff;
-  border: 2px solid #f0f2f5;
+  background: $white;
+  border: 2px solid $border;
   border-radius: 24px;
   padding: 3rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+  box-shadow: 0 10px 30px rgba($shadow-color, $shadow-faint);
   margin-top: 2rem;
 
   .contact-flex-container {
@@ -727,7 +728,7 @@
         gap: 15px;
         margin-bottom: 15px;
         font-size: 1.05rem;
-        color: #4a5568;
+        color: $text-body;
         line-height: 1.5;
         
         .contact-icon { font-size: 1.2rem; }
@@ -743,13 +744,13 @@
     .btn-outlined-contact {
       display: inline-block;
       padding: 12px 25px;
-      border: 2px solid #edf2f7;
+      border: 2px solid $border;
       border-radius: 12px;
-      color: #4a5568;
+      color: $text-body;
       text-decoration: none;
       font-weight: 600;
       transition: all 0.3s ease;
-      &:hover { border-color: $brand-indigo; color: $brand-indigo; background: #f0ebff; }
+      &:hover { border-color: $brand-indigo; color: $brand-indigo; background: $brand-tint; }
     }
   }
 
@@ -762,7 +763,7 @@
       display: block;
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+      box-shadow: 0 15px 35px rgba($shadow-color, $shadow-faint);
       
       .static-map-img {
         width: 100%;
@@ -775,7 +776,7 @@
       .map-overlay {
         position: absolute;
         inset: 0;
-        background: rgba($brand-indigo, 0.1);
+        background: rgba($brand-indigo, $alpha-mid);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -783,12 +784,12 @@
         transition: all 0.3s ease;
         
         .map-btn {
-          background: #ffffff;
+          background: $white;
           color: $text_color;
           padding: 12px 20px;
           border-radius: 50px;
           font-weight: 600;
-          box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+          box-shadow: 0 10px 20px rgba($shadow-color, $shadow-soft);
         }
       }
 
@@ -820,13 +821,13 @@
 }
 
 .modern-page-card {
-  background: #ffffff !important;
+  background: $white !important;
   
   // KENAR ÇİZGİLERİ: 1px kalınlık ve belirgin indigo tonu
-  border: 1px solid rgba($brand-indigo, 0.3) !important;
+  border: 1px solid rgba($brand-indigo, $alpha-strong) !important;
   
   // GÖLGE: Çerçeveyi destekleyen hafif derinlik
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0 8px 30px rgba($shadow-color, $shadow-faint) !important;
   
   border-radius: 20px !important;
   
@@ -850,7 +851,7 @@
     .header-title {
       @include sans_bold;
       font-size: 2.8rem !important;
-      color: #1a202c !important;
+      color: $text-strong !important;
       margin-bottom: 20px !important;
       letter-spacing: -0.04em !important;
     }
@@ -871,7 +872,7 @@
 .page-intro-area {
   margin: 30px auto 0;
   padding: 0 40px 20px; // Yanlardan daraltarak odak noktası oluşturur
-  border-bottom: 1px solid rgba($brand-indigo, 0.1); // İçerikle araya çok hafif bir sınır
+  border-bottom: 1px solid rgba($brand-indigo, $alpha-mid); // İçerikle araya çok hafif bir sınır
   max-width: 900px; // Okuma kolaylığı için genişliği sınırlıyoruz
 
   @include media_mobile {
@@ -901,7 +902,7 @@
   @include sans_regular;
   font-size: 1.18rem !important;
   line-height: 1.95 !important;
-  color: #4a5568 !important;
+  color: $text-body !important;
   text-align: justify; // Profesyonel yaslama
 
   p {
@@ -909,7 +910,7 @@
   }
   
   strong {
-    color: #1a202c;
+    color: $text-strong;
     font-weight: 600;
   }
 }
@@ -922,7 +923,7 @@
   h2 {
   @include sans_bold;
   font-size: 1.85rem !important;
-  color: #1a202c !important;
+  color: $text-strong !important;
   margin: 3.5rem 0 1.5rem !important;
   
   // Dikeyde hizalamayı bozmamak için flex kuralları
@@ -975,22 +976,22 @@
       display: block; font-weight: 600;
       font-size: 1.1rem; letter-spacing: 0.05em; margin-bottom: 2px;
     }
-    .callout-text { font-size: 1.1rem; color: #1a202c; margin: 0 !important; text-align: left !important; }
+    .callout-text { font-size: 1.1rem; color: $text-strong; margin: 0 !important; text-align: left !important; }
   }
 
   .callout-info {
-    background-color: #f0ebff; border: 1px solid rgba($brand-indigo, 0.2);
+    background-color: $brand-tint; border: 1px solid rgba($brand-indigo, $alpha-strong);
     .callout-label, svg { color: $brand-indigo; stroke: $brand-indigo; }
   }
 
   .callout-medical {
-    background-color: #fff5f5; border: 1px solid #feb2b2;
-    .callout-label, svg { color: #c53030; stroke: #c53030; }
+    background-color: $danger-tint; border: 1px solid $danger-line;
+    .callout-label, svg { color: $danger; stroke: $danger; }
   }
 
   .callout-warning {
-    background-color: #fffbeb; border: 1px solid #fcd34d;
-    .callout-label, svg { color: #92400e; stroke: #92400e; }
+    background-color: $warning-tint; border: 1px solid $warning-line;
+    .callout-label, svg { color: $warning; stroke: $warning; }
   }
 }
 
@@ -1020,7 +1021,7 @@
 
 /* 3) İçindekiler (TOC) — blogdaki .post-toc ile aynı görünüm, biraz daha sıkı */
 .tms-content .tms-toc {
-  background: #f3f1fd;
+  background: $brand-tint;
   border-radius: 14px;
   padding: 15px 20px;
   margin: 26px 0;
@@ -1055,7 +1056,7 @@
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: #fff;
+  background: $white;
   color: $brand-indigo;
   font-size: 0.68rem;
   font-weight: 600;
@@ -1090,7 +1091,7 @@
 }
 .tms-content figcaption {
   font-size: 0.9rem;
-  color: #6b7280;
+  color: $text-muted;
   margin-top: 0.4rem;
   font-style: italic;
 }
@@ -1100,8 +1101,8 @@
    okuyucu ikisini karıştırmasın. */
 .tms-content .page-refs {
   margin-top: 30px;
-  background: #fafafd;
-  border: 1px solid #e8e6f4;
+  background: $brand-wash;
+  border: 1px solid $brand-line;
   border-radius: 14px;
   padding: 15px 20px;
 }
@@ -1115,7 +1116,7 @@
   line-height: 1.4;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #6b7280 !important;
+  color: $text-muted !important;
   margin: 0 0 8px !important;
 }
 .tms-content .page-refs ol {
@@ -1125,7 +1126,7 @@
 .tms-content .page-refs li {
   font-size: 0.8rem;
   line-height: 1.5;
-  color: #4a5568;
+  color: $text-body;
   margin: 4px 0;
   text-align: left;
 }
@@ -1135,7 +1136,7 @@
 .tms-content .page-note {
   font-size: 0.75rem !important;
   line-height: 1.55 !important;
-  color: #6b7280;
+  color: $text-muted;
   text-align: left;
   margin: 14px 2px 0;
 }
@@ -1169,14 +1170,14 @@
   line-height: 1.7;
 }
 .legal-content .legal-intro {
-  background: #f7f8fa;
+  background: $surface-alt;
   border-left: 4px solid $brand-indigo;
   padding: 1rem 1.25rem;
   border-radius: 6px;
   margin: 1rem 0 2rem 0;
 }
 .legal-content .legal-statement {
-  background: #f0ebff;
+  background: $brand-tint;
   border: 1px solid $brand-indigo;
   border-radius: 8px;
   padding: 1.25rem 1.5rem;
@@ -1184,7 +1185,7 @@
   font-style: italic;
 }
 .legal-content .legal-meta {
-  background: #f7f8fa;
+  background: $surface-alt;
   padding: 0.75rem 1rem;
   border-radius: 6px;
   margin-top: 2rem;
@@ -1194,7 +1195,7 @@
   text-align: center;
   margin-top: 1.5rem;
   font-size: 0.95rem;
-  color: #6b7280;
+  color: $text-muted;
 }
 .legal-content .legal-related a {
   color: $brand-indigo;
@@ -1215,10 +1216,10 @@
 .page-footer .footer-links-row {
   margin-bottom: 1rem;
   font-size: 0.85rem;
-  color: #6b7280;
+  color: $text-muted;
 }
 .page-footer .footer-links-row a {
-  color: #6b7280;
+  color: $text-muted;
   text-decoration: none;
 }
 .page-footer .footer-links-row a:hover {
@@ -1227,22 +1228,22 @@
 }
 .page-footer .footer-sep {
   margin: 0 0.4rem;
-  color: #d1d5db;
+  color: $border-strong;
 }
 .page-footer .footer-line {
   margin: 0.25rem 0;
   font-size: 0.85rem;
-  color: #6b7280;
+  color: $text-muted;
   line-height: 1.5;
 }
 /* Yönetmelik bilgisi: son güncelleme + site editörü */
 .page-footer .footer-meta {
   margin-top: 0.9rem;
   font-size: 0.78rem;
-  color: #9ca3af;
+  color: $text-muted;
 }
 .page-footer .footer-meta a {
-  color: #9ca3af;
+  color: $text-muted;
   text-decoration: none;
 }
 .page-footer .footer-meta a:hover {
@@ -1276,8 +1277,8 @@
     flex: 0 0 38%;
     margin: 0;
     padding: 14px;
-    background: #faf9ff;
-    border: 1px solid rgba($brand-indigo, 0.12);
+    background: $brand-wash;
+    border: 1px solid rgba($brand-indigo, $alpha-mid);
     border-radius: 16px;
     text-align: center;
  
@@ -1290,7 +1291,7 @@
     figcaption {
       @include sans_regular;
       font-size: 0.8rem;
-      color: #6b7180;
+      color: $text-muted;
       line-height: 1.45;
       margin-top: 12px;
     }
@@ -1317,8 +1318,8 @@
     align-items: center;
     gap: 12px;
     padding: 12px 14px;
-    background: #fcfdff;
-    border: 1px solid rgba($brand-indigo, 0.12);
+    background: $brand-wash;
+    border: 1px solid rgba($brand-indigo, $alpha-mid);
     border-radius: 12px;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -1338,7 +1339,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #f0ebff;
+      background: $brand-tint;
       color: $brand-indigo;
       border-radius: 10px;
       font-size: 0.78rem;
@@ -1353,7 +1354,7 @@
  
     &:hover {
       border-color: $brand-indigo;
-      background: #fff;
+      background: $white;
     }
   }
  
