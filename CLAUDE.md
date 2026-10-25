@@ -111,6 +111,13 @@ Bilgi kutusu (`callout-info`) ve İçindekiler nötr Skylight (`$surface-alt`) z
 zeytin. Acil kırmızısı `$danger` #a61b3a. Favicon, `apple-touch-icon.png` ve harita görselindeki
 etiket kiremide boyandı (eski mor hâlleri git geçmişinde).
 
+**Değerlendirmede (kullanıcı birkaç gün canlı hâle bakacak, 2026-10-25):** "zeytin ağırlıklı"
+alternatif. Koyu zeytin ana renk olur (başlık çizgisi, H2 çubuğu, rozetler, kart kenarı, vurgu);
+kiremit **yalnız eylem butonlarında** kalır (telefon, WhatsApp, "Randevu Al", blog randevu
+butonu). Demoda: hiyerarşi netleşiyor ve site daha sakin; ama genel renk zeytine geçiyor,
+kiremidin koltuk hikâyesi butonlarla sınırlı kalıyor. Seçilirse: `$brand` → koyu zeytin,
+kiremit için ayrı `$action` değişkeni yalnız butonlara bağlanır, görev ayrımı güncellenir.
+
 **Kalan iki iş:**
 - Mobilde iki dolu kiremit buton üst üste ağır; WhatsApp çerçeveli ikincil buton olmalı. Buton
   hiyerarşisi dönüşümü etkiler; referans döneminden (2026-11-10) sonra.
