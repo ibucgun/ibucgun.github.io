@@ -80,63 +80,87 @@ kafa karıştırıcı, karar). Kaynak eklerken bu ifade değiştirilmez.
 
 ## Görsel kimlik
 
-Kurumsal font **Poppins**, vurgu rengi **#4d41e0** (`_sass/_variables.scss`; favicon ve
-uygulama simgesi de bu renk). Renk değiştirilebilir. İstenen izlenim: sakin, sıcak, sade,
-modern ve çağdaş.
+Kurumsal font **Poppins**. İstenen izlenim: sakin, sıcak, sade, modern ve çağdaş.
 
-### Marka rengi — karar bekliyor
+### Marka renkleri (2026-10-25'te uygulandı)
 
-#4d41e0, Tailwind `indigo-600` ile neredeyse aynı (ΔE 2): "yapay zekâ / şablon" görüntüsünün
-ana kaynağı. Yerine yeni renk aranıyor; **karar verilmedi**, uygulama 2026-11-10 sonrası
-(yeniden tasarımla, 8. iş). Karar verilince bu bölüm tek satıra iner.
+**Ana renk: çini kiremidi #9d4c2f** (beyazda 6,0:1). **Alt renk: koyu zeytin #4b5431** (8,0:1).
+Kaynak: muayene odasındaki kiremit kadife koltuk; zeytin Akdeniz paletinin eşi (kiremit çatı,
+zeytin ağacı). Canlı site üzerinde demo yapılarak seçildi.
 
-**Önde giden: canlı kiremit #a9462d** (beyazda 5,8:1). Muayene odasındaki koltuğun rengine
-dayanır (Normod kadife koltuk; fotoğraftan ölçülen ışık tonu #ba5c42). Gerçek site üzerinde
-demo yapıldı. Türetilen aile: koyu #853723 · açık zemin #f8f0ee · çok açık #fcf9f9 ·
-kenarlık #eedad5 · belirgin kenarlık #e3c4bc.
+| Görev | Kiremit ailesi | Zeytin ailesi |
+|---|---|---|
+| Ana ton | #9d4c2f | #4b5431 |
+| Koyu (üzerine gelince) | #7a3b24 | #343a22 |
+| Açık zemin | #f7f1ee | #f2f3f1 |
+| Çok açık zemin | #fcfaf9 | — |
+| Kenarlık | #ebdbd5 · belirgin #e0c6bc | #dbddd6 |
 
-**Hâlâ seçenek: indigo ailesi**, ama #4d41e0 değil; doygunluğu düşük, Tailwind'den uzak bir
-ton (örn. tozlu indigo #545298, menekşe-indigo #534c94, denim indigosu #425394). Kullanıcı
-indigo adaylarını "karaktersiz" buldu; indigoya dönülürse karakter tipografi ve düzenden gelmeli.
+**Görev ayrımı — renkle değil biçimle de ayrılır** (iki rengin parlaklığı yakın; renk
+körlüğünde yalnız renge dayanan ayrım kaybolur):
+- **Kiremit = eylem ve vurgu, her zaman dolu şekil:** butonlar, menüdeki "Randevu Al",
+  rozetler, başlık çizgisi ve H2 yanındaki dikey çubuk, hover.
+- **Zeytin = bilgi ve gezinme, her zaman metin ya da simge:** alt başlıklar (H3), metin içi
+  bağlantılar (altı çizili), İçindekiler başlığı, bölüm simgeleri, ikincil bilgi satırları
+  (tarih, kurum alt satırı, "Adana Psikiyatri ve TMS").
+- İkisi dışında renk yok; geri kalan her şey sıcak nötrlerle.
+
+**Değişkenler:** `$brand`, `$brand-dark`, `$brand-tint`, `$brand-wash`, `$brand-line(-strong)`
+(kiremit) ve `$brand-alt`, `$brand-alt-dark`, `$brand-alt-tint`, `$brand-alt-line` (zeytin).
+Bilgi kutusu (`callout-info`) ve İçindekiler nötr Skylight (`$surface-alt`) zeminde, etiketleri
+zeytin. Acil kırmızısı `$danger` #a61b3a. Favicon, `apple-touch-icon.png` ve harita görselindeki
+etiket kiremide boyandı (eski mor hâlleri git geçmişinde).
+
+**Kalan iki iş:**
+- Mobilde iki dolu kiremit buton üst üste ağır; WhatsApp çerçeveli ikincil buton olmalı. Buton
+  hiyerarşisi dönüşümü etkiler; referans döneminden (2026-11-10) sonra.
+- Paylaşım görseli (`images/ekrangoruntusu.png`) eski turuncu tasarımdan kalma ve "kliniğimde"
+  yazıyor (mevzuat); yeni paletle yeniden yapılacak.
+
+**Bu seçimde geçerli olan ilkeler** (renk yeniden tartışılırsa):
+- Zemin **beyaz**. Sıcaklık metin (#2b2724, gövde #4a4540, ikincil #6f6a64), nötr griler
+  (kenarlık #e6e3de, belirgin #d6d2cb) ve **Skylight** yüzeyden (#f6f5ee: altbilgi, İçindekiler,
+  bilgi ve yasal kutular). Duvarlar Jotun Skylight 1624 (ekran ≈ #f1f0e7; sitede bir kademe açığı).
+- Renk, şablon renklerinin **hepsinden** ΔE ≥ 10 uzak olmalı: Tailwind, Bootstrap, Material,
+  shadcn/Vercel, Stripe ve Discord "blurple". Eski #4d41e0 Tailwind `indigo-600`'e ΔE 2'ydi,
+  "yapay zekâ / şablon" görüntüsünün ana kaynağıydı. Çini kiremidi 11,9, koyu zeytin ≥ 15.
+- Rengin **fiziksel bir kaynağı** olmalı (boya, toprak, kumaş); az doygun, hafif kırık.
+- Beyazda en az 5,5:1. İki renk birlikte kullanılacaksa renk körlüğü simülasyonunda
+  (protanopi, deuteranopi) ayrışma kontrol edilir; ayrışmıyorsa görevler biçimle ayrılır.
+- Bekleme salonundaki yanık turuncu kullanılmaz (eski turuncuya yakın); açık gri koltuklar
+  nötr tonların kaynağı.
 
 **Elenenler ve gerekçesi** (tekrar önerme):
+- #4d41e0 ve "biraz yumuşatılmış" hâlleri (doygunluk %46'ya kadar hâlâ Tailwind indigo
+  skalasında); "sakin mor" #5048a8 Material indigo'ya ΔE 6,7.
 - Erik, mürdüm, fuşya, gül tonları (ton 300–340°): kadın sağlığı / tüp bebek çağrışımı.
-- Zeytin, adaçayı: "wellness / alternatif tıp" çağrışımı, trend rengi.
+- Zeytin ve sage **ana renk olarak**: "wellness / alternatif tıp" çağrışımı; sage 2026'da
+  "fazla kullanılmış", açık hâli beyazda 2,4:1. Koyu zeytin **alt renk olarak** seçildi.
 - Mürekkep indigo, gece mavisi gibi çok koyu tonlar: "eski usul".
-- Önceki kiremit #9b4c36: kahve alt tonlu, "ölü" bulundu.
+- Önceki kiremit #9b4c36: kahve alt tonlu, "ölü" bulundu. Canlı kiremit #a9462d: Tailwind
+  `orange-800`'e ΔE 9,4.
+- Mavi aile (denim #43559d, lacivert-mavi #3e5998): şablondan ayrışıyor ama fiziksel
+  kaynağı/hikâyesi zayıf, sağlıkta en kalabalık renk bölgesi; 210°'nin altı Tailwind
+  sky/cyan'a giriyor.
 - Eski sitenin turuncusu #cc5400 ve ona yakın tonlar (ΔE < 20): "eski siteye dönüş".
-
-**Hangi renk seçilirse seçilsin geçerli kararlar:**
-- Zemin **beyaz** kalır. Sıcaklık metin (#2b2724, gövde #4a4540, ikincil #6f6a64), nötr
-  griler (kenarlık #e6e3de, belirgin #d6d2cb) ve **Skylight** yüzeyden (#f6f5ee: altbilgi,
-  İçindekiler, yasal kutular) gelir. Duvarlar Jotun Skylight 1624 (ekran karşılığı ≈ #f1f0e7;
-  sitede bir kademe açığı kullanılır).
-- Tek vurgu rengi. Bekleme salonundaki yanık turuncu sitede kullanılmaz (eski turuncuya
-  yakın); açık gri koltuklar nötr tonların kaynağı.
-- Kiremit seçilirse: acil kırmızısı #a61b3a'ya geçer (kiremitle karışmasın); bilgi kutuları
-  (`callout-info`) marka zemini değil nötr Skylight + gri kenarlık olur, yoksa acil kutusuyla
-  karışıyor (demoda görüldü).
-- Renk değişiminde ayrıca güncellenecek görseller: favicon, `apple-touch-icon.png`, ana
-  sayfadaki harita görseli (etiket mor, görsele gömülü), paylaşım görseli
-  (`images/ekrangoruntusu.png`, zaten yenilenecek).
-- Aday renk beyazda en az 5,5:1 (beyaz yazılı butonda rahat okunurluk) ve en yakın Tailwind
-  renginden ΔE ≥ 10 olmalı.
 
 ### Renk kuralı — kalıcı
 
-**Sitenin bütün renkleri `_sass/_variables.scss`'te, görev adıyla tanımlıdır** (`$brand-indigo`,
-`$brand-tint`, `$text-body`, `$border`, `$danger` …; listenin kendisi ve her birinin görevi
+**Sitenin bütün renkleri `_sass/_variables.scss`'te, görev adıyla tanımlıdır** (`$brand`,
+`$brand-tint`, `$brand-alt`, `$text-body`, `$border`, `$danger` …; listenin kendisi ve her birinin görevi
 dosyada yazılı). Başka hiçbir SCSS dosyasına, layout'a, include'a, sayfaya ya da yazıya sabit
 renk kodu (`#rrggbb`, `#rgb`, `rgb(…)`, `rgba(0,0,0,…)`) **yazılmaz**:
 
 - Renk gerekiyorsa mevcut görevlerden biri kullanılır. Hiçbiri uymuyorsa önce
   `_variables.scss`'e **görev adıyla** yeni değişken eklenir, sonra o kullanılır.
   Birbirine yakın yeni bir ton eklenmez: aynı iş için tek değer.
-- Saydamlık için sayı yazılmaz: `rgba($brand-indigo, $alpha-soft|mid|strong)`,
+- Saydamlık için sayı yazılmaz: `rgba($brand, $alpha-soft|mid|strong)`,
   gölgede `rgba($shadow-color, $shadow-faint|soft)`.
 - Satır içi SVG'lerde renk `currentColor`'dır; rengi kapsayan öğenin CSS `color`'ı verir.
   Simge `<img>` olarak eklenmez (dış SVG dosyasının rengi CSS'ten değiştirilemez).
 - Blog kategori rozetlerinin hepsi aynı marka rengindedir; kategoriye özel renk yoktur.
+- Vurgu için yalnızca iki renk var: ana renk ve alt renk, görevleri yukarıda. Üçüncü bir
+  vurgu rengi eklenmez.
 - Marka rengini değiştirmek = `_variables.scss`'te tek satır. Favicon ve
   `apple-touch-icon.png` görsel dosyadır, ayrıca güncellenir.
 
@@ -293,7 +317,9 @@ eşlemesine ekle.
 
 **Referans dönemi: 2026-10-20 → 2026-11-10.** Bu tarihe kadar dönüşümü etkileyecek büyük
 değişiklik (`/tms` başlığı, ana sayfanın sadeleşmesi) yapılmaz; önce mevcut durum ölçülür.
-Veri çok azsa dönem uzatılır.
+Veri çok azsa dönem uzatılır. **İstisna:** marka rengi kullanıcı kararıyla 2026-10-25'te
+değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-20 → 10-24 (mor) ve
+10-25 → 11-10 (kiremit); karşılaştırmada bu kırılma hesaba katılır.
 
 ### Senkron tutulması gerekenler
 
@@ -404,8 +430,8 @@ Veri çok azsa dönem uzatılır.
    (DoktorTakvimi ve Doktorsitesi düzeltildi.)
 
 **En son — içerik bittikten sonra**
-8. Yeniden tasarım ("yapay zeka yapımı" görünümden çıkarmak). İlk karar marka rengi: bkz.
-   "Görsel kimlik → Marka rengi — karar bekliyor". Yöntem kararlaştırıldı:
+8. Yeniden tasarım ("yapay zeka yapımı" görünümden çıkarmak). Marka renkleri uygulandı: bkz.
+   "Görsel kimlik → Marka renkleri" (kalan iki iş orada). Yöntem kararlaştırıldı:
    ayrı public repo `tasarim`, önizleme `ismailbucgun.com/tasarim/` adresinde
    (ana site özel domain kullandığı için GitHub proje repolarını onun altına koyar).
    - Başlarken `master`'a `tasarim-oncesi` tag'i at — geri dönüş noktası.

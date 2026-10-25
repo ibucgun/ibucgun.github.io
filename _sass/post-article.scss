@@ -33,10 +33,10 @@ $post-bg-tint: $brand-wash;
     text-decoration: none;
     transition: color 0.2s;
 
-    &:hover { color: $brand-indigo; }
+    &:hover { color: $brand; }
 
     &:focus-visible {
-      outline: 2px solid $brand-indigo;
+      outline: 2px solid $brand;
       outline-offset: 2px;
       border-radius: 3px;
     }
@@ -54,7 +54,7 @@ $post-bg-tint: $brand-wash;
   background: $post-surface;
   border: 1px solid $post-line;
   border-radius: 22px;
-  box-shadow: 0 1px 2px rgba($shadow-color, $shadow-faint), 0 10px 30px rgba($brand-indigo, $alpha-soft);
+  box-shadow: 0 1px 2px rgba($shadow-color, $shadow-faint), 0 10px 30px rgba($brand, $alpha-soft);
   padding: 70px 80px;
 
   @media (max-width: 680px) {
@@ -118,7 +118,7 @@ $post-bg-tint: $brand-wash;
   width: 46px;
   height: 46px;
   border-radius: 50%;
-  background: $brand-indigo;
+  background: $brand;
   color: $white;
   @include sans_bold;
   font-weight: 600;
@@ -169,7 +169,7 @@ $post-bg-tint: $brand-wash;
 
 // --- İçindekiler (TOC) ---
 .post-toc {
-  background: $brand-tint;
+  background: $surface-alt;
   border-radius: 14px;
   padding: 18px 22px;
   margin: 30px 0;
@@ -180,7 +180,7 @@ $post-bg-tint: $brand-wash;
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: $brand-indigo;
+    color: $brand-alt;
     margin: 0 0 10px;
   }
 
@@ -203,7 +203,7 @@ $post-bg-tint: $brand-wash;
       height: 20px;
       border-radius: 50%;
       background: $white;
-      color: $brand-indigo;
+      color: $brand-alt;
       font-size: 0.7rem;
       font-weight: 600;
       align-items: center;
@@ -218,10 +218,10 @@ $post-bg-tint: $brand-wash;
     text-decoration: none;
     transition: color 0.2s;
 
-    &:hover { color: $brand-indigo; }
+    &:hover { color: $brand; }
 
     &:focus-visible {
-      outline: 2px solid $brand-indigo;
+      outline: 2px solid $brand;
       outline-offset: 2px;
       border-radius: 3px;
     }
@@ -314,7 +314,7 @@ $post-bg-tint: $brand-wash;
         width: 7px;
         height: 7px;
         border-radius: 50%;
-        background: $brand-indigo;
+        background: $brand;
       }
     }
   }
@@ -332,16 +332,16 @@ $post-bg-tint: $brand-wash;
   }
 
   a {
-    color: $brand-indigo;
+    color: $brand-alt;
     font-weight: 500;
     text-decoration: none;
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid $brand-alt-line;
     transition: border-color 0.2s;
 
-    &:hover { border-bottom-color: $brand-indigo; }
+    &:hover { border-bottom-color: $brand-alt; }
 
     &:focus-visible {
-      outline: 2px solid $brand-indigo;
+      outline: 2px solid $brand;
       outline-offset: 2px;
       border-radius: 2px;
     }
@@ -351,8 +351,8 @@ $post-bg-tint: $brand-wash;
   .callout {
     margin: 1.6em 0;
     padding: 18px 22px;
-    background: $brand-tint;
-    border-left: 3px solid $brand-indigo;
+    background: $surface-alt;
+    border-left: 3px solid $brand;
     border-radius: 0 12px 12px 0;
     font-size: 1.09rem;
     line-height: 1.65;
@@ -433,7 +433,7 @@ $post-bg-tint: $brand-wash;
   }
 
   a {
-    background: $brand-indigo;
+    background: $brand;
     color: $white;
     @include sans_bold;
     font-weight: 600;
@@ -445,12 +445,12 @@ $post-bg-tint: $brand-wash;
     transition: background 0.2s, transform 0.2s;
 
     &:hover {
-      background: $brand-indigo-dark;
+      background: $brand-dark;
       transform: translateY(-1px);
     }
 
     &:focus-visible {
-      outline: 2px solid $brand-indigo;
+      outline: 2px solid $brand;
       outline-offset: 3px;
     }
   }
@@ -486,13 +486,13 @@ $post-bg-tint: $brand-wash;
     svg { width: 17px; height: 17px; }
 
     &:hover {
-      border-color: $brand-indigo;
-      color: $brand-indigo;
+      border-color: $brand;
+      color: $brand;
       background: $brand-tint;
     }
 
     &:focus-visible {
-      outline: 2px solid $brand-indigo;
+      outline: 2px solid $brand;
       outline-offset: 2px;
     }
   }
@@ -505,7 +505,7 @@ $post-bg-tint: $brand-wash;
   background: $post-surface;
   border: 1px solid $post-line;
   border-radius: 18px;
-  box-shadow: 0 1px 2px rgba($shadow-color, $shadow-faint), 0 10px 30px rgba($brand-indigo, $alpha-soft);
+  box-shadow: 0 1px 2px rgba($shadow-color, $shadow-faint), 0 10px 30px rgba($brand, $alpha-soft);
   padding: 30px 80px;
   display: flex;
   gap: 18px;
@@ -531,7 +531,7 @@ $post-bg-tint: $brand-wash;
 
   .role {
     font-size: 0.82rem;
-    color: $brand-indigo;
+    color: $brand-alt;
     font-weight: 500;
     margin: 2px 0 8px;
   }
@@ -544,7 +544,7 @@ $post-bg-tint: $brand-wash;
   }
 
   .bio-more {
-    color: $brand-indigo;
+    color: $brand-alt;
     font-weight: 500;
     text-decoration: none;
     transition: opacity 0.2s;
@@ -593,17 +593,17 @@ $post-bg-tint: $brand-wash;
   gap: 10px;
   text-decoration: none;
   color: inherit;
-  box-shadow: 0 1px 2px rgba($shadow-color, $shadow-faint), 0 10px 30px rgba($brand-indigo, $alpha-soft);
+  box-shadow: 0 1px 2px rgba($shadow-color, $shadow-faint), 0 10px 30px rgba($brand, $alpha-soft);
   transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 14px rgba($shadow-color, $shadow-soft), 0 18px 44px rgba($brand-indigo, $alpha-mid);
+    box-shadow: 0 6px 14px rgba($shadow-color, $shadow-soft), 0 18px 44px rgba($brand, $alpha-mid);
     border-color: $brand-line-strong;
   }
 
   &:focus-visible {
-    outline: 2px solid $brand-indigo;
+    outline: 2px solid $brand;
     outline-offset: 3px;
   }
 
@@ -620,7 +620,7 @@ $post-bg-tint: $brand-wash;
     &::before { content: none !important; display: none !important; }
   }
 
-  &:hover h4 { color: $brand-indigo; }
+  &:hover h4 { color: $brand; }
 
   .rx {
     font-size: 0.82rem;
@@ -653,7 +653,7 @@ $post-bg-tint: $brand-wash;
     @include sans_bold;
     font-weight: 600;
     font-size: 0.88rem;
-    color: $brand-indigo;
+    color: $brand-alt;
     display: inline-flex;
     align-items: center;
     gap: 7px;
@@ -663,7 +663,7 @@ $post-bg-tint: $brand-wash;
     &:hover { gap: 11px; }
 
     &:focus-visible {
-      outline: 2px solid $brand-indigo;
+      outline: 2px solid $brand;
       outline-offset: 3px;
       border-radius: 4px;
     }

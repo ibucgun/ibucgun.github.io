@@ -104,11 +104,11 @@ ul.nav-ul {
       transition: 0.3s;
 
       &:hover {
-        color: $brand-indigo;
+        color: $brand;
       }
 
       &.nav-cta {
-        background: $brand-indigo;
+        background: $brand;
         color: $white !important;
         border-radius: 50px;
         font-weight: 600;
@@ -155,7 +155,7 @@ ul.nav-ul {
 
     &.nav-cta {
       color: $white !important;
-      background-color: $brand-indigo;
+      background-color: $brand;
       padding: 12px 30px;
     }
   }

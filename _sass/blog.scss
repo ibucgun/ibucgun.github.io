@@ -22,7 +22,7 @@
   .header-accent-line {
     width: 120px;
     height: 7px;
-    background: $brand-indigo;
+    background: $brand;
     margin: 0 auto;
     border-radius: 10px;
   }
@@ -77,7 +77,7 @@ $blog-surface: $white;
   padding: 5px 11px;
   border-radius: 999px;
   background: $brand-tint;
-  color: $brand-indigo;
+  color: $brand;
   white-space: nowrap;
 }
 
@@ -107,15 +107,15 @@ $blog-surface: $white;
     border: 1.5px solid $blog-line;
     border-radius: 14px;
     background: $blog-surface;
-    box-shadow: 0 1px 2px rgba($shadow-color, $shadow-faint), 0 6px 18px rgba($brand-indigo, $alpha-soft);
+    box-shadow: 0 1px 2px rgba($shadow-color, $shadow-faint), 0 6px 18px rgba($brand, $alpha-soft);
     transition: border-color 0.2s, box-shadow 0.2s;
 
     &::placeholder { color: $text-muted; }
 
     &:focus {
       outline: none;
-      border-color: $brand-indigo;
-      box-shadow: 0 0 0 4px rgba($brand-indigo, $alpha-mid);
+      border-color: $brand;
+      box-shadow: 0 0 0 4px rgba($brand, $alpha-mid);
     }
   }
 }
@@ -165,13 +165,13 @@ $blog-surface: $white;
   }
 
   &:focus-visible {
-    outline: 2px solid $brand-indigo;
+    outline: 2px solid $brand;
     outline-offset: 2px;
   }
 
   &.active {
-    background: $brand-indigo;
-    border-color: $brand-indigo;
+    background: $brand;
+    border-color: $brand;
     color: $white;
   }
 }
@@ -209,18 +209,18 @@ $blog-surface: $white;
   border: 1px solid $blog-line;
   border-radius: 18px;
   padding: 28px 30px;
-  box-shadow: 0 1px 2px rgba($shadow-color, $shadow-faint), 0 10px 30px rgba($brand-indigo, $alpha-soft);
+  box-shadow: 0 1px 2px rgba($shadow-color, $shadow-faint), 0 10px 30px rgba($brand, $alpha-soft);
   text-decoration: none;
   color: inherit;
   transition: transform 0.2s, box-shadow 0.2s;
 
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 14px rgba($shadow-color, $shadow-soft), 0 18px 44px rgba($brand-indigo, $alpha-mid);
+    box-shadow: 0 6px 14px rgba($shadow-color, $shadow-soft), 0 18px 44px rgba($brand, $alpha-mid);
   }
 
   &:focus-visible {
-    outline: 2px solid $brand-indigo;
+    outline: 2px solid $brand;
     outline-offset: 4px;
   }
 
@@ -252,7 +252,7 @@ $blog-surface: $white;
     transition: color 0.2s;
   }
 
-  &:hover h2 { color: $brand-indigo; }
+  &:hover h2 { color: $brand; }
 
   .excerpt {
     @include sans_regular;
@@ -280,7 +280,7 @@ $blog-surface: $white;
     @include sans_bold;
     font-size: 0.88rem;
     font-weight: 600;
-    color: $brand-indigo;
+    color: $brand-alt;
   }
 }
 
@@ -318,17 +318,17 @@ $blog-surface: $white;
   min-height: 210px;
   text-decoration: none;
   color: inherit;
-  box-shadow: 0 1px 2px rgba($shadow-color, $shadow-faint), 0 10px 30px rgba($brand-indigo, $alpha-soft);
+  box-shadow: 0 1px 2px rgba($shadow-color, $shadow-faint), 0 10px 30px rgba($brand, $alpha-soft);
   transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 6px 14px rgba($shadow-color, $shadow-soft), 0 18px 44px rgba($brand-indigo, $alpha-mid);
+    box-shadow: 0 6px 14px rgba($shadow-color, $shadow-soft), 0 18px 44px rgba($brand, $alpha-mid);
     border-color: $brand-line-strong;
   }
 
   &:focus-visible {
-    outline: 2px solid $brand-indigo;
+    outline: 2px solid $brand;
     outline-offset: 4px;
   }
 
@@ -361,7 +361,7 @@ $blog-surface: $white;
     transition: color 0.2s;
   }
 
-  &:hover h3 { color: $brand-indigo; }
+  &:hover h3 { color: $brand; }
 
   .excerpt {
     @include sans_regular;
@@ -391,7 +391,7 @@ $blog-surface: $white;
     @include sans_bold;
     font-size: 0.82rem;
     font-weight: 600;
-    color: $brand-indigo;
+    color: $brand-alt;
     display: inline-flex;
     align-items: center;
     gap: 5px;
@@ -433,17 +433,17 @@ $blog-surface: $white;
     @include sans_bold;
     font-weight: 600;
     font-size: 0.9rem;
-    color: $brand-indigo;
-    background: rgba($brand-indigo, $alpha-soft);
+    color: $brand;
+    background: rgba($brand, $alpha-soft);
     border: none;
     cursor: pointer;
     padding: 10px 18px;
     border-radius: 999px;
     transition: background 0.2s;
 
-    &:hover { background: rgba($brand-indigo, $alpha-mid); }
+    &:hover { background: rgba($brand, $alpha-mid); }
     &:focus-visible {
-      outline: 2px solid $brand-indigo;
+      outline: 2px solid $brand;
       outline-offset: 2px;
     }
   }

@@ -11,30 +11,37 @@ $grid-gutter:     10px !default;
 // görevlerden biri kullanılır. Yeni bir görev gerekiyorsa önce buraya eklenir.
 // Kural ve kontrol komutu: CLAUDE.md → "Görsel kimlik".
 
-// Marka
-$brand-indigo:      #4d41e0;   // vurgu rengi: bağlantı, buton, başlık vurgusu, simge
-$brand-indigo-dark: #3a30b8;   // buton üzerine gelince
-$brand-tint:        #f3f1fd;   // açık marka zemini: içindekiler, bilgi kutusu, rozet, simge kutusu
-$brand-wash:        #faf9ff;   // çok hafif marka zemini: geniş yüzeyler, kart arka planı
-$brand-line:        #e8e6f4;   // marka kenarlığı: kart ve kutu çerçevesi
-$brand-line-strong: #d9d5f4;   // belirgin marka kenarlığı: üzerine gelince, ayraç, soluk simge
+// Marka — ana renk: çini kiremidi (eylem ve vurgu; her zaman dolu şekil)
+// Kaynak: muayene odasındaki kiremit koltuk. Karar ve görev ayrımı: CLAUDE.md → "Marka renkleri".
+$brand:             #9d4c2f;   // butonlar, "Randevu Al", rozetler, başlık çizgisi, hover
+$brand-dark:        #7a3b24;   // buton üzerine gelince
+$brand-tint:        #f7f1ee;   // açık kiremit zemini: rozet, menü hover zemini
+$brand-wash:        #fcfaf9;   // çok hafif kiremit zemini: küçük kartlar, kaynak kutusu
+$brand-line:        #ebdbd5;   // kiremit kenarlığı: kart ve kutu çerçevesi
+$brand-line-strong: #e0c6bc;   // belirgin kenarlık: üzerine gelince, ayraç, soluk simge
 
-// Metin
+// Alt renk: koyu zeytin (bilgi ve gezinme; her zaman metin ya da simge)
+$brand-alt:         #4b5431;   // alt başlık (H3), metin içi bağlantı, İçindekiler başlığı, simge, ikincil bilgi satırı
+$brand-alt-dark:    #343a22;   // bağlantı üzerine gelince
+$brand-alt-tint:    #f2f3f1;   // simge kutusu zemini
+$brand-alt-line:    #dbddd6;   // zeytin kenarlık (gerekirse)
+
+// Metin (sıcak nötrler)
 $white:             #fff;
-$black:             #333;
-$text-strong:       #1a202c;   // başlık ve vurgulu metin
-$text-body:         #4a5568;   // gövde metni
-$text-muted:        #6b7280;   // ikincil metin: tarih, not, altbilgi (beyazda 4,8:1)
+$black:             #2f2b28;   // genel metin rengi ($text_color)
+$text-strong:       #2b2724;   // başlık ve vurgulu metin
+$text-body:         #4a4540;   // gövde metni
+$text-muted:        #6f6a64;   // ikincil metin: tarih, not, altbilgi
 
-// Yüzey ve kenarlık
-$border:            #e2e8f0;   // nötr ince çizgi ve çerçeve
-$border-strong:     #d1d5db;   // nötr ayraç (altbilgideki "·" vb.)
-$surface-alt:       #f7f8fa;   // nötr açık gri zemin: kod, tablo başlığı, yasal kutu
+// Yüzey ve kenarlık (sıcak nötrler; Skylight = muayenehane duvarı, Jotun 1624)
+$border:            #e6e3de;   // nötr ince çizgi ve çerçeve
+$border-strong:     #d6d2cb;   // nötr ayraç (altbilgideki "·" vb.)
+$surface-alt:       #f6f5ee;   // Skylight yüzey: İçindekiler, bilgi kutusu, altbilgi, kod, tablo, yasal kutu
 
 // Durum kutuları
-$danger:            #c53030;   // acil durum kutusu metni ve simgesi
-$danger-tint:       #fff5f5;
-$danger-line:       #feb2b2;
+$danger:            #a61b3a;   // acil durum kutusu metni ve simgesi (kiremitle karışmasın diye mavi alt tonlu)
+$danger-tint:       #fdf2f4;
+$danger-line:       #f1c6cf;
 $warning:           #92400e;   // uyarı kutusu
 $warning-tint:      #fffbeb;
 $warning-line:      #fcd34d;
@@ -42,7 +49,7 @@ $warning-line:      #fcd34d;
 // Üçüncü taraf marka rengi (yalnız ilgili butonda)
 $instagram:         #e1306c;
 
-// Saydamlık — rgba($brand-indigo, $alpha-…) ve rgba($shadow-color, $shadow-…) ile kullanılır
+// Saydamlık — rgba($brand, $alpha-…) ve rgba($shadow-color, $shadow-…) ile kullanılır
 $alpha-soft:        0.06;      // hafif marka gölgesi / zemin
 $alpha-mid:         0.12;      // orta: kenarlık, gölge
 $alpha-strong:      0.25;      // belirgin: buton gölgesi, kutu kenarı
