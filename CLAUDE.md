@@ -120,11 +120,9 @@ Demoda: hiyerarşi netleşiyor (Randevu Al ana, WhatsApp ikincil buton), site da
 baskın. Seçilirse: `$brand` → koyu zeytin, kiremit için `$action` değişkeni yalnız bu öğelere
 bağlanır; simgeler ve harita etiketinin rengi yeniden kararlaştırılır.
 
-**Kalan iki iş:**
+**Kalan iş:**
 - Mobilde iki dolu kiremit buton üst üste ağır; WhatsApp çerçeveli ikincil buton olmalı. Buton
   hiyerarşisi dönüşümü etkiler; referans döneminden (2026-11-10) sonra.
-- Paylaşım görseli (`images/ekrangoruntusu.png`) eski turuncu tasarımdan kalma ve "kliniğimde"
-  yazıyor (mevzuat); yeni paletle yeniden yapılacak.
 
 **Bu seçimde geçerli olan ilkeler** (renk yeniden tartışılırsa):
 - Zemin **beyaz**. Sıcaklık metin (#2b2724, gövde #4a4540, ikincil #6f6a64), nötr griler
@@ -261,6 +259,7 @@ listelenmez.
 | `_layouts/page.html` | İç sayfalar (`wide_layout: true` ile geniş yerleşim) |
 | `_layouts/post.html` | Blog yazısı |
 | `_includes/head.html` | Meta, OG, canonical, schema çağrıları, GA4; `seo_title` varsa `<title>` onu kullanır |
+| `images/paylasim.jpg` | Paylaşım önizlemesi (OG/Twitter, 1200×630): ana sayfa üst bölümünün ekran görüntüsü. Tasarım ya da renk değişince yeniden çekilir, **dosya adı da değişir** (WhatsApp/Facebook önbelleği) |
 | `_includes/schema/hekim-klinik.html` | Ana sayfa JSON-LD (Physician + MedicalClinic) |
 | `_includes/schema/tms.html` | `/tms` JSON-LD (FAQPage + MedicalProcedure) |
 | Kökteki hastalık sayfaları | `depresyon.html` vb.; `layout: hastalik` |
@@ -440,7 +439,7 @@ değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-2
 
 **En son — içerik bittikten sonra**
 8. Yeniden tasarım ("yapay zeka yapımı" görünümden çıkarmak). Marka renkleri uygulandı: bkz.
-   "Görsel kimlik → Marka renkleri" (kalan iki iş orada). Yöntem kararlaştırıldı:
+   "Görsel kimlik → Marka renkleri" (kalan iş orada). Yöntem kararlaştırıldı:
    ayrı public repo `tasarim`, önizleme `ismailbucgun.com/tasarim/` adresinde
    (ana site özel domain kullandığı için GitHub proje repolarını onun altına koyar).
    - Başlarken `master`'a `tasarim-oncesi` tag'i at — geri dönüş noktası.
