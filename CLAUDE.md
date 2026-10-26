@@ -358,7 +358,7 @@ değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-2
 - macOS'ta `timeout` yok; BSD `grep` seçenekleri yoldan **önce** ister; `grep -Z`
   güvenilmez.
 - **`.content-section` içindeki `h2`, `h3` ve `p` global olarak `!important` ile
-  stilleniyor** (`_resume.scss`, "MODERN İÇERİK" bloğu: `h3` 1.4rem indigo + 2.5rem üst
+  stilleniyor** (`_resume.scss`, "MODERN İÇERİK" bloğu: `h3` 1.4rem renkli + 2.5rem üst
   boşluk, `p` 1.18rem + 1.95 satır aralığı). Sayfa içinde küçük bir bileşen (kutu başlığı,
   ince yazı) yaparken `font-size`, `color`, `margin`, `line-height`'a **`!important`
   vermezsen kuralın sessizce ezilir.** Kaynak kutusu ve yasal uyarı bu yüzden ilk
