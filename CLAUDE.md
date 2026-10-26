@@ -64,6 +64,11 @@ Ses sayfaya göre değil, **cümlenin işine göre** seçilir:
 Tıbbi bilgi birinci şahısla yazılmaz — kanıt kişisel görüşe dönüşür, kaynak numarası
 anlamını yitirir. Hiçbir yerde **"biz", "-imiz", "ekibimiz"** yok: tek hekimli muayenehane.
 
+**Tedavi yanıtı terimleri TPD Depresyon Tedavi Kılavuzu'na göre** (Öztürk, Tatlı, Buçgün ve ark.
+2025; hekimin yazarı olduğu kılavuz, hastalık sayfalarında kaynak): yanıt = ölçek puanında en az
+%50 azalma · **düzelme = remisyon** · **iyileşme = düzelmeden sonra en az 6 ay iyilik hâli**
+(recovery) · depreşme = relapse · yineleme = recurrence. "İyileşme (remisyon)" yazılmaz.
+
 FDA kararları **"FDA onayı"** diye yazılır; "clearance / 510(k)" ayrımına girilmez (hasta için
 kafa karıştırıcı, karar). Kaynak eklerken bu ifade değiştirilmez.
 
@@ -389,7 +394,7 @@ değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-2
    | Sayfa | İskelete göre yazıldı | Açıldı |
    |---|---|---|
    | `tedaviye-direncli-depresyon` (pilot) | 5 bölümlük eski düzende; **6. bölüme çevrilecek** | evet (2026-10-23) |
-   | `depresyon` | 6 bölümlük yeni düzende taslak, kullanıcı okuması bekliyor | hayır |
+   | `depresyon` | evet (6 bölüm, yeni düzenin örneği) | evet (2026-10-26) |
    | `okb` · `bipolar-bozukluk` · `anksiyete-bozukluklari` | hayır | hayır |
    | `eriskin-dehb` · `yaslilik-psikiyatrisi` · `sizofreni` | hayır | hayır |
 
