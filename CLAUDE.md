@@ -383,9 +383,9 @@ değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-2
 ## Kalan işler
 
 **Site içi**
-1. **Hastalık sayfaları — pilot açıldı, kalan 7 yeniden yazılacak (`noindex`).** Sıradaki iş:
-   içeriği 6 bölümlük iskelete göre birer birer yeniden yazmak; örnek `depresyon` (yeni düzenin
-   ilk sayfası). Pilot `tedaviye-direncli-depresyon` yayında ama eski 5 bölümlük düzende, çevrilecek. Her biri kullanıcı onayıyla açılır: `noindex` + `sitemap:` satırlarını
+1. **Hastalık sayfaları — 2'si açıldı, kalan 6 yeniden yazılacak (`noindex`).** Sıradaki iş:
+   içeriği 6 bölümlük iskelete göre birer birer yeniden yazmak; örnek `depresyon` ve
+   `tedaviye-direncli-depresyon` (ikisi de yayında, 6 bölüm). Her biri kullanıcı onayıyla açılır: `noindex` + `sitemap:` satırlarını
    sil, `last_modified_at`'ı güncelle. Ana sayfa kutuları, blog geri linkleri ve `llms.txt`
    kayıtları kalır. Yaşlılık sayfasındaki deliryum kutusu konuya özgü, içerikte kalır.
    Her sayfada `metin-denetimi`'nin A10 (atıfsız otorite) bulgularına atıf eklenir; şu an
@@ -393,7 +393,7 @@ değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-2
 
    | Sayfa | İskelete göre yazıldı | Açıldı |
    |---|---|---|
-   | `tedaviye-direncli-depresyon` (pilot) | 5 bölümlük eski düzende; **6. bölüme çevrilecek** | evet (2026-10-23) |
+   | `tedaviye-direncli-depresyon` (pilot) | evet (6 bölüm) | evet (2026-10-23) |
    | `depresyon` | evet (6 bölüm, yeni düzenin örneği) | evet (2026-10-26) |
    | `okb` · `bipolar-bozukluk` · `anksiyete-bozukluklari` | hayır | hayır |
    | `eriskin-dehb` · `yaslilik-psikiyatrisi` · `sizofreni` | hayır | hayır |
