@@ -272,7 +272,7 @@ listelenmez.
 
 ### Hastalık sayfası düzeni
 
-Hepsi **`layout: hastalik`** kullanır. Sayfa dosyasında yalnızca içindekiler ve 5 bölüm
+Hepsi **`layout: hastalik`** kullanır. Sayfa dosyasında yalnızca içindekiler ve 6 bölüm
 bulunur. **Kaynaklar → yasal uyarı → acil durum kutusu → CTA** şablondan gelir, sırası
 sabittir. Acil kutusu her sayfada var ve **CTA'nın hemen üstünde**: sayfa tek bir "ne
 yapmalıyım" bloğuyla kapanır (acilse 112, değilse randevu).
@@ -283,17 +283,22 @@ dahil ≤55 karakter — uzarsa Google sondan keser ve "Adana" kaybolur; şemsiy
 `acil_baslik` (yoksa genel metin) · `last_modified_at` (uyarıdaki tarih ve schema
 `lastReviewed` buradan gelir; elle tarih yazılmaz).
 
-**Bölümler — her sayfada aynı sıra ve aynı kalıp:**
-1. **[X] nedir?** — nesnel, kaynaklı. Blog yazısı varsa kısa tutulur, yazıya link verilir.
+**Bölümler — her sayfada aynı sıra ve aynı kalıp.** 1–5 **genel bilgidir**: nesnel, edilgen,
+kaynaklı; birinci şahıs yok. Hekimin kendi yaklaşımı yalnız 6. bölümdedir (kullanıcı kararı,
+2026-10-26: genel bilgi arasına giren "ben böyle yapıyorum" cümleleri sesi bölüyordu).
+1. **[X] nedir?** — Blog yazısı varsa kısa tutulur, yazıya link verilir.
 2. **[X]'in belirtileri nelerdir?** — liste.
-3. **[X]'te değerlendirme nasıl yapılır?** — ilk cümle soruyu genel olarak, nesnel dille
-   cevaplar; **hemen ardından, aynı paragrafta** yerel hizmet cümlesi gelir ("Adana Çukurova'daki
-   muayenehanemde…"), devamı birinci tekil (pilotta kullanıcı kararı).
-4. **[X] nasıl tedavi edilir?** — alt başlıklar sabit sırada (pilotta kullanıcı kararı):
-   ilaç → TMS / derin TMS (varsa, `/tms` linki) → diğer ilaç seçenekleri (esketamin gibi,
-   varsa) → psikoterapi (kılavuz + yönlendirme) → muayenehanede uygulanmayanlar (EKT, notuyla)
-   → diğer (parlak ışık vb.).
-5. **[X] tedavisi ne kadar sürer, takip nasıl yapılır?**
+3. **[X]'te değerlendirme nasıl yapılır?** — kılavuzlara göre genel değerlendirme.
+4. **[X] nasıl tedavi edilir?** — alt başlıklar sabit sırada: ilaç → TMS / derin TMS (varsa,
+   `/tms` linki) → diğer ilaç seçenekleri (esketamin gibi, varsa) → psikoterapi → muayenehanede
+   uygulanmayanlar (EKT) → diğer (parlak ışık vb.). **İstisna:** muayenehane notları
+   (EKT kutusu, psikoterapi yeni hasta kalıbı, esketamin kalıbı) ilgili seçeneğin yanında kalır;
+   notsuz anılan seçenek sunuluyormuş gibi okunur.
+5. **[X] tedavisi ne kadar sürer, takip nasıl yapılır?** — genel seyir ve kılavuz süreleri.
+6. **Adana'da [X] değerlendirmesi ve tedavisi** (`id="muayenehane"`) — birinci tekil. İlk cümle
+   yerel: "Adana Çukurova'daki muayenehanemde…". Değerlendirmede neye bakıldığı, ölçekler,
+   testler, muayenehanede uygulanan tedaviler, kontrol aralıkları. Kendi içinde tam bir pasaj:
+   "Adana'da X tedavisi" sorusunda alıntılanacak yer burası.
 
 Neden böyle (arama ve yapay zekâ): yapay zekâ sistemleri sayfayı pasaj pasaj alıntılar.
 Başlıklarda hastalık adı geçer ki pasaj başlığıyla alıntılandığında bağlam kalsın. Her
@@ -307,7 +312,7 @@ yazılır; hemen yanında "muayenehanede uygulanmamaktadır, … yönlendirilir"
 Seçeneği hiç anmamak sayfayı eksik bırakır; notsuz anmak sunuluyormuş gibi okunur.
 
 **Uzunluk: 650–950 kelime** (bağlayıcı) — bölüm aralıkları yol göstericidir: nedir 80–120 ·
-belirtiler 80–150 · değerlendirme 120–180 · tedavi 200–300 · takip 80–150. Tedavinin asıl konu
+belirtiler 80–150 · değerlendirme 60–120 · tedavi 200–300 · takip 80–130 · muayenehane 120–180. Tedavinin asıl konu
 olduğu sayfada (dirençli depresyon) tedavi bölümü uzayabilir. Büyüme eksik konudan gelir,
 dolgudan değil.
 
@@ -374,8 +379,8 @@ değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-2
 
 **Site içi**
 1. **Hastalık sayfaları — pilot açıldı, kalan 7 yeniden yazılacak (`noindex`).** Sıradaki iş:
-   içeriği 5 bölümlük iskelete göre birer birer yeniden yazmak; örnek olarak açılmış pilot
-   `tedaviye-direncli-depresyon` esas alınır. Her biri kullanıcı onayıyla açılır: `noindex` + `sitemap:` satırlarını
+   içeriği 6 bölümlük iskelete göre birer birer yeniden yazmak; örnek `depresyon` (yeni düzenin
+   ilk sayfası). Pilot `tedaviye-direncli-depresyon` yayında ama eski 5 bölümlük düzende, çevrilecek. Her biri kullanıcı onayıyla açılır: `noindex` + `sitemap:` satırlarını
    sil, `last_modified_at`'ı güncelle. Ana sayfa kutuları, blog geri linkleri ve `llms.txt`
    kayıtları kalır. Yaşlılık sayfasındaki deliryum kutusu konuya özgü, içerikte kalır.
    Her sayfada `metin-denetimi`'nin A10 (atıfsız otorite) bulgularına atıf eklenir; şu an
@@ -383,8 +388,8 @@ değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-2
 
    | Sayfa | İskelete göre yazıldı | Açıldı |
    |---|---|---|
-   | `tedaviye-direncli-depresyon` (pilot) | evet | evet (2026-10-23) |
-   | `depresyon` | taslak, kullanıcı okuması bekliyor | hayır |
+   | `tedaviye-direncli-depresyon` (pilot) | 5 bölümlük eski düzende; **6. bölüme çevrilecek** | evet (2026-10-23) |
+   | `depresyon` | 6 bölümlük yeni düzende taslak, kullanıcı okuması bekliyor | hayır |
    | `okb` · `bipolar-bozukluk` · `anksiyete-bozukluklari` | hayır | hayır |
    | `eriskin-dehb` · `yaslilik-psikiyatrisi` · `sizofreni` | hayır | hayır |
 
