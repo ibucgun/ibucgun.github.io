@@ -285,7 +285,8 @@ yapmalıyım" bloğuyla kapanır (acilse 112, değilse randevu).
 **Front matter:** `title` (H1, kısa) · `seo_title` (`<title>`; kalıp **"[X] Tedavisi"**, sonek
 dahil ≤55 karakter — uzarsa Google sondan keser ve "Adana" kaybolur; şemsiye sayfada yazılmaz, H1 kullanılır) · `description` (≤155, tırnaklı) · `lead` (tek cümle) ·
 `kosul` / `kosul_diger` (schema `MedicalCondition`) · `refs` (kaynak listesi) · `acil` /
-`acil_baslik` (yoksa genel metin) · `last_modified_at` (uyarıdaki tarih ve schema
+`acil_baslik` (yoksa genel metin; OKB'de yalnız intiharı anan kısa metin — genel metindeki "başkalarına
+zarar verme düşünceleri" zarar obsesyonu olan hastayı korkutur) · `last_modified_at` (uyarıdaki tarih ve schema
 `lastReviewed` buradan gelir; elle tarih yazılmaz).
 
 **Bölümler — her sayfada aynı sıra ve aynı kalıp.** 1–5 **genel bilgidir**: nesnel, edilgen,
