@@ -315,6 +315,10 @@ içinde en az 2 ilgili sayfaya link. "Sık sorulanlar" bölümü **eklenmez** (k
 Muayenehanede uygulanmayan bir seçenek (EKT gibi) genel bilimsel bilgi olarak, kaynağıyla
 yazılır; hemen yanında "muayenehanede uygulanmamaktadır, … yönlendirilir" notu bulunur.
 Seçeneği hiç anmamak sayfayı eksik bırakır; notsuz anmak sunuluyormuş gibi okunur.
+**İstisna:** kılavuzun o hastalıkta önermediği bir yöntem (OKB'de EKT) tedavi seçeneği olarak
+yazılmaz (alt başlık yok, muayenehane notu yok); tedavi bölümünün giriş paragrafında tek cümleyle
+"rutin olarak önerilmez" diye anılır — hasta ve yakınlarının yanlış inancını düzeltmek için
+(kullanıcı kararı, 2026-10-27).
 
 **Uzunluk: 650–1050 kelime** (bağlayıcı; 6 bölümlük düzene geçince 950'den yükseltildi, kullanıcı kararı 2026-10-27) — bölüm aralıkları yol göstericidir: nedir 80–120 ·
 belirtiler 80–150 · değerlendirme 60–120 · tedavi 200–300 · takip 80–130 · muayenehane 120–180. Tedavinin asıl konu
