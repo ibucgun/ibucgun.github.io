@@ -316,7 +316,7 @@ Muayenehanede uygulanmayan bir seçenek (EKT gibi) genel bilimsel bilgi olarak, 
 yazılır; hemen yanında "muayenehanede uygulanmamaktadır, … yönlendirilir" notu bulunur.
 Seçeneği hiç anmamak sayfayı eksik bırakır; notsuz anmak sunuluyormuş gibi okunur.
 
-**Uzunluk: 650–950 kelime** (bağlayıcı) — bölüm aralıkları yol göstericidir: nedir 80–120 ·
+**Uzunluk: 650–1050 kelime** (bağlayıcı; 6 bölümlük düzene geçince 950'den yükseltildi, kullanıcı kararı 2026-10-27) — bölüm aralıkları yol göstericidir: nedir 80–120 ·
 belirtiler 80–150 · değerlendirme 60–120 · tedavi 200–300 · takip 80–130 · muayenehane 120–180. Tedavinin asıl konu
 olduğu sayfada (dirençli depresyon) tedavi bölümü uzayabilir. Büyüme eksik konudan gelir,
 dolgudan değil.
@@ -434,6 +434,8 @@ değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-2
      yayına kadar **dokunulmaz**.
    - Yalnız CV dökümü olmaz: başta birinci şahısla kısa anlatım (neden bu alanlar, nasıl
      çalışıyorum). Ham malzeme: git geçmişindeki `_data/meslekiilgialanlari.yml`.
+     Hekim dönem dönem halka açık psikoeğitim etkinlikleri düzenledi (konu ve sürüp sürmediği
+     kullanıcıdan alınacak); olgu olarak yazılır, sayı ve ilgi beyanı yazılmaz.
    - **Sıra:** ölçüm kuruldu; yayın referans döneminden sonra (2026-11-10) — ana sayfa
      "adana psikiyatri"de üst sırada, değişikliğin etkisi ölçülebilmeli.
    - Yayın listesi: noindex/sitemap satırlarını sil, `last_modified_at` ekle · ana sayfadan
