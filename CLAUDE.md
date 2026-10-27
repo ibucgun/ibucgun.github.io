@@ -389,13 +389,14 @@ değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-2
    sil, `last_modified_at`'ı güncelle. Ana sayfa kutuları, blog geri linkleri ve `llms.txt`
    kayıtları kalır. Yaşlılık sayfasındaki deliryum kutusu konuya özgü, içerikte kalır.
    Her sayfada `metin-denetimi`'nin A10 (atıfsız otorite) bulgularına atıf eklenir; şu an
-   3 cümle var (OKB 1, bipolar 1, şizofreni 1).
+   2 cümle var (OKB 1, şizofreni 1).
 
    | Sayfa | İskelete göre yazıldı | Açıldı |
    |---|---|---|
    | `tedaviye-direncli-depresyon` (pilot) | evet (6 bölüm) | evet (2026-10-23) |
    | `depresyon` | evet (6 bölüm, yeni düzenin örneği) | evet (2026-10-26) |
-   | `okb` · `bipolar-bozukluk` · `anksiyete-bozukluklari` | hayır | hayır |
+   | `bipolar-bozukluk` | taslak (6 bölüm), kullanıcı okuması bekliyor | hayır |
+   | `okb` · `anksiyete-bozukluklari` | hayır | hayır |
    | `eriskin-dehb` · `yaslilik-psikiyatrisi` · `sizofreni` | hayır | hayır |
 
 2. İç linkleme — şu sayfalardan hiç iç link çıkmıyor: `tms`, `randevu`,
