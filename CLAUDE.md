@@ -427,6 +427,11 @@ değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-2
   (CANMAT'ın tedavi ortamı değerlendirmesi), acil durumda 112 kalıbı; istemsiz yatış anlatılacaksa
   hukuki dayanak gerçek kaynakla. `medical-blog-writer` ile yazılır, `metin-denetimi` ile denetlenir.
   Bipolar sayfasının 6. bölümündeki yatış cümlesinden yazıya link verilir.
+- **Blog yazısı: "Tedaviye dirençli bipolar depresyon".** Ana kaynak: ISBD task force raporu
+  (kullanıcı gönderecek). Ek: tanım için Br J Psychiatry 2019;214:27-35 uzlaşı tanımı (en az iki
+  yeterli tedavi denemesi, her biri en az 8 hafta), Schoeyen 2015 *Am J Psychiatry* (EKT RKÇ),
+  Elsayed 2022 *Neuropsychiatr Dis Treat* derlemesi (üçü Singh 2025 *Lancet*'te atıflı; künyeler
+  yazarken kaynaktan doğrulanır). Bipolar ve dirençli depresyon sayfalarından link verilir.
 5. `/parlakisik` içeriği yazılacak. Şu an `noindex` + sitemap dışı, içeriği
    boşaltıldı. Tedavi **uygulanıyor**, eksik olan sadece sayfa.
 6. **`/hakkimda` — taslak, yayında değil.** Amaç: ana sayfayı özgeçmiş görünümünden çıkarmak.
