@@ -423,6 +423,10 @@ değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-2
    Ölçüm kuruldu; referans dönemi bittikten sonra (2026-11-10) yapılır.
 
 **Bekleyen**
+- **Blog yazısı: "Bipolar bozuklukta hastane yatışı ne zaman gerekir?"** Yatarak tedavi ölçütleri
+  (CANMAT'ın tedavi ortamı değerlendirmesi), acil durumda 112 kalıbı; istemsiz yatış anlatılacaksa
+  hukuki dayanak gerçek kaynakla. `medical-blog-writer` ile yazılır, `metin-denetimi` ile denetlenir.
+  Bipolar sayfasının 6. bölümündeki yatış cümlesinden yazıya link verilir.
 5. `/parlakisik` içeriği yazılacak. Şu an `noindex` + sitemap dışı, içeriği
    boşaltıldı. Tedavi **uygulanıyor**, eksik olan sadece sayfa.
 6. **`/hakkimda` — taslak, yayında değil.** Amaç: ana sayfayı özgeçmiş görünümünden çıkarmak.
