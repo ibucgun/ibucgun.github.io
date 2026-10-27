@@ -383,7 +383,7 @@ değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-2
 ## Kalan işler
 
 **Site içi**
-1. **Hastalık sayfaları — 2'si açıldı, kalan 6 yeniden yazılacak (`noindex`).** Sıradaki iş:
+1. **Hastalık sayfaları — 3'ü açıldı, kalan 5 yeniden yazılacak (`noindex`).** Sıradaki iş:
    içeriği 6 bölümlük iskelete göre birer birer yeniden yazmak; örnek `depresyon` ve
    `tedaviye-direncli-depresyon` (ikisi de yayında, 6 bölüm). Her biri kullanıcı onayıyla açılır: `noindex` + `sitemap:` satırlarını
    sil, `last_modified_at`'ı güncelle. Ana sayfa kutuları, blog geri linkleri ve `llms.txt`
@@ -395,7 +395,7 @@ değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-2
    |---|---|---|
    | `tedaviye-direncli-depresyon` (pilot) | evet (6 bölüm) | evet (2026-10-23) |
    | `depresyon` | evet (6 bölüm, yeni düzenin örneği) | evet (2026-10-26) |
-   | `bipolar-bozukluk` | evet (6 bölüm) | hayır — açılış onayı bekliyor |
+   | `bipolar-bozukluk` | evet (6 bölüm) | evet (2026-10-27) |
    | `okb` · `anksiyete-bozukluklari` | hayır | hayır |
    | `eriskin-dehb` · `yaslilik-psikiyatrisi` · `sizofreni` | hayır | hayır |
 
