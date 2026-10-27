@@ -395,7 +395,7 @@ değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-2
    |---|---|---|
    | `tedaviye-direncli-depresyon` (pilot) | evet (6 bölüm) | evet (2026-10-23) |
    | `depresyon` | evet (6 bölüm, yeni düzenin örneği) | evet (2026-10-26) |
-   | `bipolar-bozukluk` | taslak (6 bölüm), kullanıcı okuması bekliyor | hayır |
+   | `bipolar-bozukluk` | evet (6 bölüm) | hayır — açılış onayı bekliyor |
    | `okb` · `anksiyete-bozukluklari` | hayır | hayır |
    | `eriskin-dehb` · `yaslilik-psikiyatrisi` · `sizofreni` | hayır | hayır |
 
