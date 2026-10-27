@@ -388,20 +388,22 @@ değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-2
 ## Kalan işler
 
 **Site içi**
-1. **Hastalık sayfaları — 3'ü açıldı, kalan 5 yeniden yazılacak (`noindex`).** Sıradaki iş:
+1. **Hastalık sayfaları — 4'ü açıldı, kalan 4 yeniden yazılacak (`noindex`).** Sıradaki iş:
    içeriği 6 bölümlük iskelete göre birer birer yeniden yazmak; örnek `depresyon` ve
    `tedaviye-direncli-depresyon` (ikisi de yayında, 6 bölüm). Her biri kullanıcı onayıyla açılır: `noindex` + `sitemap:` satırlarını
    sil, `last_modified_at`'ı güncelle. Ana sayfa kutuları, blog geri linkleri ve `llms.txt`
    kayıtları kalır. Yaşlılık sayfasındaki deliryum kutusu konuya özgü, içerikte kalır.
    Her sayfada `metin-denetimi`'nin A10 (atıfsız otorite) bulgularına atıf eklenir; şu an
-   2 cümle var (OKB 1, şizofreni 1).
+   1 cümle var (şizofreni). Akış: kullanıcı kaynakları verir, 1–5. bölümler 6. bölüm düşünülerek
+   yazılır, 6. bölüm kullanıcının anlattığı uygulamayla en son yazılır; sayfa o zamana kadar `noindex`.
 
    | Sayfa | İskelete göre yazıldı | Açıldı |
    |---|---|---|
    | `tedaviye-direncli-depresyon` (pilot) | evet (6 bölüm) | evet (2026-10-23) |
    | `depresyon` | evet (6 bölüm, yeni düzenin örneği) | evet (2026-10-26) |
    | `bipolar-bozukluk` | evet (6 bölüm) | evet (2026-10-27) |
-   | `okb` · `anksiyete-bozukluklari` | hayır | hayır |
+   | `okb` | evet (6 bölüm) | evet (2026-10-27) |
+   | `anksiyete-bozukluklari` | hayır | hayır |
    | `eriskin-dehb` · `yaslilik-psikiyatrisi` · `sizofreni` | hayır | hayır |
 
 2. İç linkleme — şu sayfalardan hiç iç link çıkmıyor: `tms`, `randevu`,
