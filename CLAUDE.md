@@ -403,7 +403,7 @@ değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-2
    | `depresyon` | evet (6 bölüm, yeni düzenin örneği) | evet (2026-10-26) |
    | `bipolar-bozukluk` | evet (6 bölüm) | evet (2026-10-27) |
    | `okb` | evet (6 bölüm) | evet (2026-10-27) |
-   | `anksiyete-bozukluklari` | 1–5. bölümler (6. bölüm kullanıcıdan bekleniyor; TMS anılmaz, karar) | hayır |
+   | `anksiyete-bozukluklari` | evet (6 bölüm; TMS ve pregabalin anılmaz, karar — pregabalin kötüye kullanım nedeniyle) | hayır |
    | `eriskin-dehb` · `yaslilik-psikiyatrisi` · `sizofreni` | hayır | hayır |
 
 2. İç linkleme — şu sayfalardan hiç iç link çıkmıyor: `tms`, `randevu`,
