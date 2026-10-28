@@ -388,7 +388,7 @@ değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-2
 ## Kalan işler
 
 **Site içi**
-1. **Hastalık sayfaları — 4'ü açıldı, kalan 4 yeniden yazılacak (`noindex`).** Sıradaki iş:
+1. **Hastalık sayfaları — 5'i açıldı, kalan 3 yeniden yazılacak (`noindex`).** Sıradaki iş:
    içeriği 6 bölümlük iskelete göre birer birer yeniden yazmak; örnek `depresyon` ve
    `tedaviye-direncli-depresyon` (ikisi de yayında, 6 bölüm). Her biri kullanıcı onayıyla açılır: `noindex` + `sitemap:` satırlarını
    sil, `last_modified_at`'ı güncelle. Ana sayfa kutuları, blog geri linkleri ve `llms.txt`
@@ -403,7 +403,7 @@ değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-2
    | `depresyon` | evet (6 bölüm, yeni düzenin örneği) | evet (2026-10-26) |
    | `bipolar-bozukluk` | evet (6 bölüm) | evet (2026-10-27) |
    | `okb` | evet (6 bölüm) | evet (2026-10-27) |
-   | `anksiyete-bozukluklari` | evet (6 bölüm; TMS ve pregabalin anılmaz, karar — pregabalin kötüye kullanım nedeniyle) | hayır |
+   | `anksiyete-bozukluklari` | evet (6 bölüm; TMS ve pregabalin anılmaz, karar — pregabalin kötüye kullanım nedeniyle) | evet (2026-10-28) |
    | `eriskin-dehb` · `yaslilik-psikiyatrisi` · `sizofreni` | hayır | hayır |
 
 2. İç linkleme — şu sayfalardan hiç iç link çıkmıyor: `tms`, `randevu`,
