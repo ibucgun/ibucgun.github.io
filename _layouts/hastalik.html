@@ -23,7 +23,7 @@ layout: page
 {%- endif %}
 
 {%- assign aylar = "Ocak,Şubat,Mart,Nisan,Mayıs,Haziran,Temmuz,Ağustos,Eylül,Ekim,Kasım,Aralık" | split: "," %}
-<p class="page-note">Bu sayfa yalnızca genel bilgilendirme amacı taşır; kişisel tanı, tedavi veya tıbbi tavsiye yerine geçmez. Hazırlayan: {{ site.resume_name }}, {{ site.author_specialty }}.{% if page.last_modified_at %}{% assign ay = page.last_modified_at | date: "%-m" | minus: 1 %} Son güncelleme: {{ aylar[ay] }} {{ page.last_modified_at | date: "%Y" }}.{% endif %}</p>
+<p class="page-note">Bu sayfa yalnızca genel bilgilendirme amacı taşır; kişisel tanı, tedavi veya tıbbi tavsiye yerine geçmez. Hazırlayan: {{ site.resume_name }}, {{ site.author_specialty }}.{% if page.last_modified_at %}{% assign ay = page.last_modified_at | date: "%-m" | minus: 1 %} Son güncelleme: <time datetime="{{ page.last_modified_at | date: '%Y-%m-%d' }}">{{ page.last_modified_at | date: "%-d" }} {{ aylar[ay] }} {{ page.last_modified_at | date: "%Y" }}</time>.{% endif %}</p>
 
 {%- capture acil_varsayilan -%}Kendinize ya da başkalarına zarar verme veya yaşamınıza son verme düşünceleriniz varsa randevu beklemeden <b>112 Acil Çağrı Merkezi'ni arayın</b> veya en yakın hastanenin acil servisine başvurun.{%- endcapture %}
 <div class="callout callout-medical">
