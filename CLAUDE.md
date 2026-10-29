@@ -388,7 +388,7 @@ değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-2
 ## Kalan işler
 
 **Site içi**
-1. **Hastalık sayfaları — 5'i açıldı, kalan 3 yeniden yazılacak (`noindex`).** Sıradaki iş:
+1. **Hastalık sayfaları — 6'sı açıldı, kalan 2 yeniden yazılacak (`noindex`).** Sıradaki iş:
    içeriği 6 bölümlük iskelete göre birer birer yeniden yazmak; örnek `depresyon` ve
    `tedaviye-direncli-depresyon` (ikisi de yayında, 6 bölüm). Her biri kullanıcı onayıyla açılır: `noindex` + `sitemap:` satırlarını
    sil, `last_modified_at`'ı güncelle. Ana sayfa kutuları, blog geri linkleri ve `llms.txt`
@@ -404,10 +404,11 @@ değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-2
    | `bipolar-bozukluk` | evet (6 bölüm) | evet (2026-10-27) |
    | `okb` | evet (6 bölüm) | evet (2026-10-27) |
    | `anksiyete-bozukluklari` | evet (6 bölüm; TMS ve pregabalin anılmaz, karar — pregabalin kötüye kullanım nedeniyle) | evet (2026-10-28) |
-   | `eriskin-dehb` · `yaslilik-psikiyatrisi` · `sizofreni` | hayır | hayır |
+   | `eriskin-dehb` | evet (6 bölüm; Türkiye'de amfetamin grubu yok, uyarıcı olarak metilfenidat — kullanıcı beyanı 2026-10) | evet (2026-10-29) |
+   | `yaslilik-psikiyatrisi` · `sizofreni` | hayır | hayır |
 
 2. İç linkleme — şu sayfalardan hiç iç link çıkmıyor: `tms`, `randevu`,
-   `iletisim`, `tdcs`, `blog`, `eriskin-dehb`, `yaslilik-psikiyatrisi`, `sizofreni`.
+   `iletisim`, `tdcs`, `blog`, `yaslilik-psikiyatrisi`, `sizofreni`.
    `/tms` en çok gösterim alan sayfa (62.437) ve oradan hiçbir yere gidilemiyor;
    öncelik orada.
 3. **`/tms` kaynak listesi.** Sayfada 10 atıfsız iddia var (FDA onay yılları, endikasyonlar,
