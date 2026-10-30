@@ -393,8 +393,7 @@ değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-2
    `tedaviye-direncli-depresyon` (ikisi de yayında, 6 bölüm). Her biri kullanıcı onayıyla açılır: `noindex` + `sitemap:` satırlarını
    sil, `last_modified_at`'ı güncelle. Ana sayfa kutuları, blog geri linkleri ve `llms.txt`
    kayıtları kalır. Yaşlılık sayfasındaki deliryum kutusu konuya özgü, içerikte kalır.
-   Her sayfada `metin-denetimi`'nin A10 (atıfsız otorite) bulgularına atıf eklenir; şu an
-   1 cümle var (şizofreni). Akış: kullanıcı kaynakları verir, 1–5. bölümler 6. bölüm düşünülerek
+   Her sayfada `metin-denetimi`'nin A10 (atıfsız otorite) bulgularına atıf eklenir. Akış: kullanıcı kaynakları verir, 1–5. bölümler 6. bölüm düşünülerek
    yazılır, 6. bölüm kullanıcının anlattığı uygulamayla en son yazılır; sayfa o zamana kadar `noindex`.
 
    | Sayfa | İskelete göre yazıldı | Açıldı |
@@ -405,7 +404,8 @@ değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-2
    | `okb` | evet (6 bölüm) | evet (2026-10-27) |
    | `anksiyete-bozukluklari` | evet (6 bölüm; TMS ve pregabalin anılmaz, karar — pregabalin kötüye kullanım nedeniyle) | evet (2026-10-28) |
    | `eriskin-dehb` | evet (6 bölüm; Türkiye'de amfetamin grubu yok, uyarıcı olarak metilfenidat — kullanıcı beyanı 2026-10) | evet (2026-10-29) |
-   | `yaslilik-psikiyatrisi` · `sizofreni` | hayır | hayır |
+   | `sizofreni` | evet (6 bölüm; TMS yalnız dirençli işitsel halüsinasyonda, klozapin sonrası · uzun etkili enjeksiyon reçete edilir, başka kurumda uygulanır — kullanıcı beyanı 2026-10) | hayır |
+   | `yaslilik-psikiyatrisi` | hayır | hayır |
 
 2. İç linkleme — şu sayfalardan hiç iç link çıkmıyor: `tms`, `randevu`,
    `iletisim`, `tdcs`, `blog`, `yaslilik-psikiyatrisi`, `sizofreni`.
