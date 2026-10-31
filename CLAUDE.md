@@ -405,7 +405,7 @@ değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-2
    | `anksiyete-bozukluklari` | evet (6 bölüm; TMS ve pregabalin anılmaz, karar — pregabalin kötüye kullanım nedeniyle) | evet (2026-10-28) |
    | `eriskin-dehb` | evet (6 bölüm; Türkiye'de amfetamin grubu yok, uyarıcı olarak metilfenidat — kullanıcı beyanı 2026-10) | evet (2026-10-29) |
    | `sizofreni` | evet (6 bölüm; TMS yalnız dirençli işitsel halüsinasyonda, klozapin sonrası · uzun etkili enjeksiyon reçete edilir, başka kurumda uygulanır — kullanıcı beyanı 2026-10) | evet (2026-10-30) |
-   | `yaslilik-psikiyatrisi` | hayır | hayır |
+   | `yaslilik-psikiyatrisi` | evet (alan sayfası, 5 bölüm: nedir · neden ayrı alan · konular · değerlendirme ve tedavi · muayenehane; hastalık iskeleti uymadığı için — kullanıcı kararı 2026-10-31. "Pozitif yaşlılık psikiyatrisi" bölümü yazılmaz · Türkiye'de yan dal olmadığı kaynaksız yazılır · TMS tedaviye yanıt alınamayan durumlarda, özellikle depresyonda; 4. bölümde Adler 2026 *Am J Psychiatry* kaynaklı — çalışma "ilaçtan üstün" diyor ama karşılaştırma yazılmaz, yalnız yazarların "daha erken kullanım" sonucu) | hayır |
 
 2. İç linkleme — şu sayfalardan hiç iç link çıkmıyor: `tms`, `randevu`,
    `iletisim`, `tdcs`, `blog`, `yaslilik-psikiyatrisi`.
