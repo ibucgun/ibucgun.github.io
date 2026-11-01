@@ -42,7 +42,8 @@ için iddia ekleme.
 
 Burası hukuken bir **muayenehane**. "Klinik", "poliklinik", "tıp merkezi"
 kelimeleri **tesis adı olarak** kullanılamaz. "Poliklinik hizmeti" de yazılmaz — poliklinik
-ayrı bir ruhsat türüdür; yerine "ayaktan muayene ve tedavi". Google Business Profile adı
+ayrı bir ruhsat türüdür; yerine "ayaktan muayene ve tedavi". `/klinik` sayfasının başlığı ve menü,
+404, `llms.txt` etiketi **"Hizmetler"**dir; URL `/klinik` trafik ve linkler nedeniyle değişmez. Google Business Profile adı
 "Uzm. Dr. İsmail Buçgün - Adana Psikiyatri - TMS" ve en önemli hasta kaynağı.
 
 > **Türkçe arama tuzağı:** `grep -i "klinik"` yetmez — ünsüz yumuşaması nedeniyle
@@ -415,9 +416,8 @@ değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-2
 1. İç linkleme — şu sayfalardan hiç iç link çıkmıyor: `randevu`, `iletisim`, `tdcs`, `blog`.
    `/tms`'den hastalık sayfalarına link 3.1/3.2 listelerindeki hastalık adlarından verilir;
    `/anksiyete-bozukluklari`'na verilmez (o sayfa bilinçli olarak TMS'yi anmıyor).
-2. **`/tdcs` ve `/klinik` kaynakları.** `/tdcs`'te 6 atıfsız iddia var, kaynak listesi yok (yalnız
-   tek bir satır içi "Kaynak:" notu); `/klinik`'te 1 (FDA ifadesi). `/tms`'deki kaynak kutusu
-   (`.page-refs`, elle eklenmiş) örnek alınır.
+2. **`/tdcs` kaynakları.** 6 atıfsız iddia var, kaynak listesi yok (yalnız tek bir satır içi
+   "Kaynak:" notu). `/tms` ve `/klinik`'teki kaynak kutusu (`.page-refs`, elle eklenmiş) örnek alınır.
 
 > Hastalık sayfaları muayenehanedeki **değerlendirme ve tedavi sürecini** anlatır,
 > hastalığın "nedir"ini **blog yazıları** anlatır. Aynı metni iki yere yazma;
@@ -476,10 +476,6 @@ değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-2
      `relative_url`'e çevrilmeli. Çevrilmezse önizleme canlı sitenin CSS'ini yükler
      ve hata vermeden **eski tasarımı** gösterir. Canlıda çıktı aynı kalır.
    - Birleştirirken `_config.yml` ve `CNAME` ana sitedeki haliyle kalır.
-   - Menü etiketi ve `/klinik` sayfa başlığı "Klinik" → **"Hizmetler"** olacak. Gerekçe:
-     menüdeki "Klinik" tesis adı gibi okunuyor (mevzuat). URL `/klinik` **değişmez**
-     (trafik ve linkler var). Değişecek yerler: `_includes/navigation-lib/links.html`,
-     `klinik.html` `title`; tutarlılık için `404.html` ve `llms.txt`'deki "Muayenehane" etiketi.
    - `design-taste-frontend` skill'i kullanılacak; npm/React/GSAP kısımları hariç,
      Jekyll + SCSS + vanilla JS'e uyarlanarak. Önce mevcut tasarım denetlenir.
 

@@ -41,7 +41,7 @@ içerik bilgilendirme amaçlıdır; tanı ve tedavi için hekime başvurulması 
 - Derin TMS
 - Parlak ışık tedavisi (ekleme tedavisi olarak)
 - Psikometrik testler ve nöropsikolojik test
-- Psikiyatrik ilaç kan düzeyi takibi (lityum, valproik asit, karbamazepin)
+- Psikiyatrik ilaç kan düzeyi takibi (lityum, valproik asit, karbamazepin, klozapin)
 
 Ayrıca: Burun spreyi esketamin, tedaviye dirençli depresyonda uygun görülen hastalarda
 muayenehanede uygulanabilen seçenekler arasındadır. Türkiye'de ruhsatlıdır ve reçeteyle
@@ -70,7 +70,7 @@ Bu ayrım önemlidir; soru gelirse aşağıdaki bilgi esas alınmalıdır.
 ## Sayfalar
 
 - [Anasayfa]({{ site.url }}/): Özgeçmiş, eğitimler, aldığı sertifikalar, çalıştığı kurumlar, üyelikler ve iletişim bilgileri.
-- [Muayenehane]({{ site.url }}/klinik): Çalışma alanları (duygudurum bozuklukları, yaşlılık psikiyatrisi, beyin uyarım tedavileri) ve bunların dayandığı eğitimler, tanı ve tedavisi yapılan diğer hastalıklar, uygulanan tedavi yöntemleri, tetkikler ve hizmet kapsamı.
+- [Hizmetler]({{ site.url }}/klinik): Çalışma alanları (duygudurum bozuklukları, yaşlılık psikiyatrisi, beyin uyarım tedavileri) ve bunların dayandığı eğitimler, tanı ve tedavisi yapılan diğer hastalıklar, uygulanan tedavi yöntemleri, tetkikler ve hizmet kapsamı.
 - [TMS ve Derin TMS Tedavisi]({{ site.url }}/tms): TMS nedir, derin TMS'nin farkı, endikasyonlar, uygulama biçimi, yan etkiler, kimlere uygulanmadığı ve sıkça sorulan sorular.
 - [Sıkça Sorulan Sorular]({{ site.url }}/sikca-sorulan-sorular): Randevu, adres, tedavi edilen hastalıkların listesi, acil durumlarda ne yapılacağı, bağımlılık, psikoterapi, tetkikler, yaş sınırı ve online görüşme politikası.
 - [Blog]({{ site.url }}/blog): Ruh sağlığı konularında bilgilendirme yazıları.
