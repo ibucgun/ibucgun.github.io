@@ -412,10 +412,9 @@ değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-2
 ## Kalan işler
 
 **Site içi**
-1. İç linkleme — şu sayfalardan hiç iç link çıkmıyor: `tms`, `randevu`,
-   `iletisim`, `tdcs`, `blog`.
-   `/tms` en çok gösterim alan sayfa (62.437) ve oradan hiçbir yere gidilemiyor;
-   öncelik orada.
+1. İç linkleme — şu sayfalardan hiç iç link çıkmıyor: `randevu`, `iletisim`, `tdcs`, `blog`.
+   `/tms`'den hastalık sayfalarına link 3.1/3.2 listelerindeki hastalık adlarından verilir;
+   `/anksiyete-bozukluklari`'na verilmez (o sayfa bilinçli olarak TMS'yi anmıyor).
 2. **`/tdcs` ve `/klinik` kaynakları.** `/tdcs`'te 6 atıfsız iddia var, kaynak listesi yok (yalnız
    tek bir satır içi "Kaynak:" notu); `/klinik`'te 1 (FDA ifadesi). `/tms`'deki kaynak kutusu
    (`.page-refs`, elle eklenmiş) örnek alınır.
