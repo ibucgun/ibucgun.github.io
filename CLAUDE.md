@@ -343,6 +343,12 @@ A10 (atıfsız otorite) bulgularına atıf eklenir. 8 sayfanın hepsi yayında (
   durumlarda, özellikle depresyonda; Adler 2026 *Am J Psychiatry* "ilaçtan üstün" diyor ama
   karşılaştırma yazılmaz, yalnız "daha erken kullanılabilir" sonucu. Deliryum kutusu konuya
   özgü, içerikte kalır. Hedef kitle halk: tıbbi terim yerine sade ifade.
+- `tms` (hastalık şablonu dışında, `layout: page`; kaynak kutusu elle): **gebelik hiç anılmaz**
+  (gebelere TMS uygulanmıyor); doğum sonrası ve emzirme dönemi kalır. Kafa içi metal implantta
+  "uygulanmaz"; kalp pili, nöbet/epilepsi öyküsü ve nöbet eşiğini düşüren ilaçta "muayenehane
+  ortamında uygulama güvenli olmayabilir". 2021 anksiyetenin eşlik ettiği depresyon onayı **derin
+  TMS**'e aittir. OKB onay yılı (2018) FDA duyurusundan; Cohen 2022 2017 yazıyor, kullanılmaz.
+  Sayfa metni hekimin kendi yazısı: kaynak eklerken dili değiştirilmez.
 
 Punto kademesi: gövde 1.18rem → TOC 0.88rem → kaynaklar 0.8rem → uyarı 0.75rem. TOC ve
 kaynak kutusu blogdaki `.post-toc` / `.post-refs` ile aynı dili konuşur; uyarıya kutu verilmez.
@@ -410,16 +416,9 @@ değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-2
    `iletisim`, `tdcs`, `blog`.
    `/tms` en çok gösterim alan sayfa (62.437) ve oradan hiçbir yere gidilemiyor;
    öncelik orada.
-2. **`/tms` kaynak listesi.** Sayfada 10 atıfsız iddia var (FDA onay yılları, endikasyonlar,
-   "literatürde çalışmalar bulunmaktadır") ve **hiç kaynak listesi yok**; sitenin en çok
-   gösterim alan sayfası. FDA yılları için Cohen SL ve ark. *Brain Stimul.* 2022;15(1):73-75
-   (TMS FDA kronolojisi, "approved" diyor; pilotta kullanıldı); ilaç onaylarında prospektüs.
-   Gerçek kaynaklar (FDA kararları, temel çalışmalar) eklenecek:
-   atıf numaraları metne, `.page-refs` kutusu sayfa sonuna (`/tms` `tms-content` kullandığı
-   için stil hazır; hastalık şablonunda olmadığından kutu elle eklenir). SSS metni değişirse
-   `_includes/schema/tms.html` ile senkron. Başlık ve metin değişmediği için referans
-   dönemini beklemesi gerekmez. Aynı sorun `/tdcs`'te (6, kaynak listesi yok; yalnız tek bir
-   satır içi "Kaynak:" notu) ve `/klinik`'te (1, FDA ifadesi) de var.
+2. **`/tdcs` ve `/klinik` kaynakları.** `/tdcs`'te 6 atıfsız iddia var, kaynak listesi yok (yalnız
+   tek bir satır içi "Kaynak:" notu); `/klinik`'te 1 (FDA ifadesi). `/tms`'deki kaynak kutusu
+   (`.page-refs`, elle eklenmiş) örnek alınır.
 
 > Hastalık sayfaları muayenehanedeki **değerlendirme ve tedavi sürecini** anlatır,
 > hastalığın "nedir"ini **blog yazıları** anlatır. Aynı metni iki yere yazma;
