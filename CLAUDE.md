@@ -326,6 +326,24 @@ belirtiler 80–150 · değerlendirme 60–120 · tedavi 200–300 · takip 80�
 olduğu sayfada (dirençli depresyon) tedavi bölümü uzayabilir. Büyüme eksik konudan gelir,
 dolgudan değil.
 
+**Yeni sayfa akışı:** kullanıcı kaynakları verir, 1–5. bölümler 6. bölüm düşünülerek
+yazılır, 6. bölüm kullanıcının anlattığı uygulamayla en son yazılır. O zamana kadar `noindex` + sitemap
+dışı; kullanıcı onayıyla bu iki satır silinir, `last_modified_at` güncellenir. `metin-denetimi`'nin
+A10 (atıfsız otorite) bulgularına atıf eklenir. 8 sayfanın hepsi yayında (2026-11-01).
+
+**Sayfaya özgü kararlar** (kullanıcı kararı/beyanı, 2026-10):
+- `anksiyete-bozukluklari`: TMS ve pregabalin anılmaz (pregabalin kötüye kullanım nedeniyle).
+- `eriskin-dehb`: Türkiye'de amfetamin grubu yok, uyarıcı olarak metilfenidat.
+- `sizofreni`: TMS yalnız dirençli işitsel halüsinasyonda, klozapin sonrası. Uzun etkili
+  enjeksiyon reçete edilir, başka kurumda uygulanır.
+- `yaslilik-psikiyatrisi`: **alan sayfası**, hastalık iskeleti uymaz; 5 bölüm (nedir · neden ayrı
+  alan · konular · değerlendirme ve tedavi · muayenehane), ~1200 kelime. "Neden ayrı alan"
+  tanı üstü yazılır, tek hastalık üzerinden değil. "Pozitif yaşlılık psikiyatrisi" bölümü
+  yazılmaz. Türkiye'de yan dal olmadığı kaynaksız yazılır. TMS tedaviye yanıt alınamayan
+  durumlarda, özellikle depresyonda; Adler 2026 *Am J Psychiatry* "ilaçtan üstün" diyor ama
+  karşılaştırma yazılmaz, yalnız "daha erken kullanılabilir" sonucu. Deliryum kutusu konuya
+  özgü, içerikte kalır. Hedef kitle halk: tıbbi terim yerine sade ifade.
+
 Punto kademesi: gövde 1.18rem → TOC 0.88rem → kaynaklar 0.8rem → uyarı 0.75rem. TOC ve
 kaynak kutusu blogdaki `.post-toc` / `.post-refs` ile aynı dili konuşur; uyarıya kutu verilmez.
 
@@ -388,30 +406,11 @@ değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-2
 ## Kalan işler
 
 **Site içi**
-1. **Hastalık sayfaları — 7'si açıldı, kalan 1 yeniden yazılacak (`noindex`).** Sıradaki iş:
-   içeriği 6 bölümlük iskelete göre birer birer yeniden yazmak; örnek `depresyon` ve
-   `tedaviye-direncli-depresyon` (ikisi de yayında, 6 bölüm). Her biri kullanıcı onayıyla açılır: `noindex` + `sitemap:` satırlarını
-   sil, `last_modified_at`'ı güncelle. Ana sayfa kutuları, blog geri linkleri ve `llms.txt`
-   kayıtları kalır. Yaşlılık sayfasındaki deliryum kutusu konuya özgü, içerikte kalır.
-   Her sayfada `metin-denetimi`'nin A10 (atıfsız otorite) bulgularına atıf eklenir. Akış: kullanıcı kaynakları verir, 1–5. bölümler 6. bölüm düşünülerek
-   yazılır, 6. bölüm kullanıcının anlattığı uygulamayla en son yazılır; sayfa o zamana kadar `noindex`.
-
-   | Sayfa | İskelete göre yazıldı | Açıldı |
-   |---|---|---|
-   | `tedaviye-direncli-depresyon` (pilot) | evet (6 bölüm) | evet (2026-10-23) |
-   | `depresyon` | evet (6 bölüm, yeni düzenin örneği) | evet (2026-10-26) |
-   | `bipolar-bozukluk` | evet (6 bölüm) | evet (2026-10-27) |
-   | `okb` | evet (6 bölüm) | evet (2026-10-27) |
-   | `anksiyete-bozukluklari` | evet (6 bölüm; TMS ve pregabalin anılmaz, karar — pregabalin kötüye kullanım nedeniyle) | evet (2026-10-28) |
-   | `eriskin-dehb` | evet (6 bölüm; Türkiye'de amfetamin grubu yok, uyarıcı olarak metilfenidat — kullanıcı beyanı 2026-10) | evet (2026-10-29) |
-   | `sizofreni` | evet (6 bölüm; TMS yalnız dirençli işitsel halüsinasyonda, klozapin sonrası · uzun etkili enjeksiyon reçete edilir, başka kurumda uygulanır — kullanıcı beyanı 2026-10) | evet (2026-10-30) |
-   | `yaslilik-psikiyatrisi` | evet (alan sayfası, 5 bölüm: nedir · neden ayrı alan · konular · değerlendirme ve tedavi · muayenehane; hastalık iskeleti uymadığı için — kullanıcı kararı 2026-10-31. "Pozitif yaşlılık psikiyatrisi" bölümü yazılmaz · Türkiye'de yan dal olmadığı kaynaksız yazılır · TMS tedaviye yanıt alınamayan durumlarda, özellikle depresyonda; 4. bölümde Adler 2026 *Am J Psychiatry* kaynaklı — çalışma "ilaçtan üstün" diyor ama karşılaştırma yazılmaz, yalnız yazarların "daha erken kullanım" sonucu) | hayır |
-
-2. İç linkleme — şu sayfalardan hiç iç link çıkmıyor: `tms`, `randevu`,
-   `iletisim`, `tdcs`, `blog`, `yaslilik-psikiyatrisi`.
+1. İç linkleme — şu sayfalardan hiç iç link çıkmıyor: `tms`, `randevu`,
+   `iletisim`, `tdcs`, `blog`.
    `/tms` en çok gösterim alan sayfa (62.437) ve oradan hiçbir yere gidilemiyor;
    öncelik orada.
-3. **`/tms` kaynak listesi.** Sayfada 10 atıfsız iddia var (FDA onay yılları, endikasyonlar,
+2. **`/tms` kaynak listesi.** Sayfada 10 atıfsız iddia var (FDA onay yılları, endikasyonlar,
    "literatürde çalışmalar bulunmaktadır") ve **hiç kaynak listesi yok**; sitenin en çok
    gösterim alan sayfası. FDA yılları için Cohen SL ve ark. *Brain Stimul.* 2022;15(1):73-75
    (TMS FDA kronolojisi, "approved" diyor; pilotta kullanıldı); ilaç onaylarında prospektüs.
@@ -427,7 +426,7 @@ değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-2
 > birbirine link ver. Ana sayfa kutuları, `llms.txt` ve blog geri linkleri bağlandı.
 
 **Ölçüm**
-4. `/tms` başlık ve açıklama CTR yazımı — 62.437 gösterim, %0,73 tıklama.
+3. `/tms` başlık ve açıklama CTR yazımı — 62.437 gösterim, %0,73 tıklama.
    Ölçüm kuruldu; referans dönemi bittikten sonra (2026-11-10) yapılır.
 
 **Bekleyen**
@@ -440,9 +439,9 @@ değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-2
   yeterli tedavi denemesi, her biri en az 8 hafta), Schoeyen 2015 *Am J Psychiatry* (EKT RKÇ),
   Elsayed 2022 *Neuropsychiatr Dis Treat* derlemesi (üçü Singh 2025 *Lancet*'te atıflı; künyeler
   yazarken kaynaktan doğrulanır). Bipolar ve dirençli depresyon sayfalarından link verilir.
-5. `/parlakisik` içeriği yazılacak. Şu an `noindex` + sitemap dışı, içeriği
+4. `/parlakisik` içeriği yazılacak. Şu an `noindex` + sitemap dışı, içeriği
    boşaltıldı. Tedavi **uygulanıyor**, eksik olan sadece sayfa.
-6. **`/hakkimda` — taslak, yayında değil.** Amaç: ana sayfayı özgeçmiş görünümünden çıkarmak.
+5. **`/hakkimda` — taslak, yayında değil.** Amaç: ana sayfayı özgeçmiş görünümünden çıkarmak.
    - Taslakta: `noindex` + sitemap dışı, **hiçbir yerden link yok** (menü, footer, `llms.txt`,
      404, blog). Adresi bilen açabilir ve repo herkese açık; taslağa gizli bilgi konmaz.
    - Taşınacak 4 bölüm: Yeterlilik ve Üyelikler, Akademik Eğitim, Çalıştığım Kurumlar,
@@ -463,12 +462,12 @@ değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-2
      Console'dan dizine ekleme isteği · 2–3 hafta sıralama takibi.
 
 **Site dışı**
-7. İyi Psikolog ve Türkiye Psikiyatristleri'ne adres güncelleme maili gönderildi,
+6. İyi Psikolog ve Türkiye Psikiyatristleri'ne adres güncelleme maili gönderildi,
    takip edilecek. Doktorum360 için KVKK 11. madde talebi opsiyonel.
    (DoktorTakvimi ve Doktorsitesi düzeltildi.)
 
 **En son — içerik bittikten sonra**
-8. Yeniden tasarım ("yapay zeka yapımı" görünümden çıkarmak). Marka renkleri uygulandı: bkz.
+7. Yeniden tasarım ("yapay zeka yapımı" görünümden çıkarmak). Marka renkleri uygulandı: bkz.
    "Görsel kimlik → Marka renkleri" (kalan iş orada). Yöntem kararlaştırıldı:
    ayrı public repo `tasarim`, önizleme `ismailbucgun.com/tasarim/` adresinde
    (ana site özel domain kullandığı için GitHub proje repolarını onun altına koyar).
