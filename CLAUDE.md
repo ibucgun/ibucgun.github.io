@@ -335,7 +335,7 @@ A10 (atıfsız otorite) bulgularına atıf eklenir. 8 sayfanın hepsi yayında (
 **Sayfaya özgü kararlar** (kullanıcı kararı/beyanı, 2026-10):
 - `anksiyete-bozukluklari`: TMS ve pregabalin anılmaz (pregabalin kötüye kullanım nedeniyle).
 - `eriskin-dehb`: Türkiye'de amfetamin grubu yok, uyarıcı olarak metilfenidat.
-- `sizofreni`: TMS yalnız dirençli işitsel halüsinasyonda, klozapin sonrası. Uzun etkili
+- `sizofreni`: TMS (4.2 ve 6. bölüm, `/tms` 3.2 ile uyumlu): işitsel halüsinasyonda klozapin sonrası, negatif belirtilerde ilaç tedavisine rağmen süren durumda, tedaviye ek olarak. Uzun etkili
   enjeksiyon reçete edilir, başka kurumda uygulanır.
 - `yaslilik-psikiyatrisi`: **alan sayfası**, hastalık iskeleti uymaz; 5 bölüm (nedir · neden ayrı
   alan · konular · değerlendirme ve tedavi · muayenehane), ~1200 kelime. "Neden ayrı alan"
