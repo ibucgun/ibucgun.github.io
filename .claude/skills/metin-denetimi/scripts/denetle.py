@@ -24,6 +24,17 @@ def tr_lower(s):
     return s.replace("I", "ı").replace("İ", "i").lower()
 
 
+def atif_ac(icerik):
+    """[1,4] ve [1–3] biçimli atıfları [1][4] / [1][2][3] biçimine açar (/tms, /klinik bu biçimi kullanır)."""
+    def ac(m):
+        nolar = []
+        for parca in m.group(1).split(","):
+            a, _, b = parca.strip().replace("–", "-").partition("-")
+            nolar += range(int(a), int(b) + 1) if b else [int(a)]
+        return "".join(f"[{n}]" for n in nolar)
+    return re.sub(r"\[(\d+(?:\s*[,–-]\s*\d+)+)\]", ac, icerik)
+
+
 def metin_turu(yol):
     ad = os.path.basename(yol)
     if "/_posts/" in yol.replace(os.sep, "/") or yol.startswith("_posts"):
@@ -189,7 +200,7 @@ TEKRAR_IZINLI = [  # bilinçli tekrarlar: mevzuat.md -> C
 # ---------------------------------------------------------------- tarama
 
 def tara(yol):
-    icerik = open(yol, encoding="utf-8").read()
+    icerik = atif_ac(open(yol, encoding="utf-8").read())
     satirlar, _ = satir_metinleri(icerik)
     tur = metin_turu(yol)
     mevzuat, izler = [], {k: [] for k, _, _ in IZLER}
@@ -261,7 +272,7 @@ def tekrarlar(yollar):
     esik = 2 if len(yollar) == 2 else 3
     cumle_dosya, acilis_dosya = {}, {}
     for yol in yollar:
-        satirlar, _ = satir_metinleri(open(yol, encoding="utf-8").read())
+        satirlar, _ = satir_metinleri(atif_ac(open(yol, encoding="utf-8").read()))
         goruldu_c, goruldu_a = set(), set()
         for _, t, st in satirlar:
             if st != "govde":
@@ -314,7 +325,7 @@ def karsilastir(yol):
     yp = yedek_yolu(yol)
     if not os.path.exists(yp):
         return {"durum": "YEDEK_YOK", "hatalar": [f"Yedek yok. Önce: denetle.py --yedekle {yol}"], "uyarilar": []}
-    once_ic, simdi_ic = open(yp, encoding="utf-8").read(), open(yol, encoding="utf-8").read()
+    once_ic, simdi_ic = atif_ac(open(yp, encoding="utf-8").read()), atif_ac(open(yol, encoding="utf-8").read())
     a, b = degismezler(once_ic), degismezler(simdi_ic)
     hatalar, uyarilar = [], []
     eksik_atif, yeni_atif = a["atif"] - b["atif"], b["atif"] - a["atif"]
