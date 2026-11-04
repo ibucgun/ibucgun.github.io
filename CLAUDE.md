@@ -93,47 +93,40 @@ kademeleri ana sayfaya göre `_variables.scss`'te: `$fs-m-title` 1.75rem · `$fs
 bunları kullanır; yeni bileşende mobil boyut sayı olarak yazılmaz. Telefonda gövde metni sola
 yaslıdır (iki yana yaslama dar ekranda kelime arası boşluk açar); masaüstünde iki yana yaslı.
 
-### Marka renkleri (2026-10-25'te uygulandı)
+### Marka renkleri (2026-11-04'te son hâli)
 
-**Ana renk: çini kiremidi #9d4c2f** (beyazda 6,0:1). **Alt renk: koyu zeytin #4b5431** (8,0:1).
-Kaynak: muayene odasındaki kiremit kadife koltuk; zeytin Akdeniz paletinin eşi (kiremit çatı,
-zeytin ağacı). Canlı site üzerinde demo yapılarak seçildi.
+**Ana renk: zeytin #59643a** (beyazda 6,3:1) — sitenin genel tonu. **Eylem rengi: çini kiremidi
+#9d4c2f** (6,0:1) — **yalnız butonlar**. Kaynak: muayene odasındaki kiremit kadife koltuk; zeytin
+Akdeniz paletinin eşi (kiremit çatı, zeytin ağacı). Canlı site kopyası üzerinde demo yapılarak
+seçildi. Koyu zeytin #4b5431 gövde metnine çok yakın kaldığı için (H3 ve bağlantılar siyah
+okunuyordu) bir ton açıldı; #606c3d 5,7:1 ile kontrast sınırına yakın bulundu.
 
-| Görev | Kiremit ailesi | Zeytin ailesi |
+| Görev | Zeytin (`$brand…`) | Kiremit (`$action…`) |
 |---|---|---|
-| Ana ton | #9d4c2f | #4b5431 |
-| Koyu (üzerine gelince) | #7a3b24 | #343a22 |
-| Açık zemin | #f7f1ee | #f2f3f1 |
-| Çok açık zemin | #fcfaf9 | — |
-| Kenarlık | #ebdbd5 · belirgin #e0c6bc | #dbddd6 |
+| Ana ton | #59643a | #9d4c2f |
+| Koyu (üzerine gelince) | #424a2b | #7a3b24 |
+| Açık zemin | #f2f3ef | #f7f1ee (çerçeveli buton hover) |
+| Çok açık zemin | #fafaf9 | — |
+| Kenarlık | #dde0d7 · belirgin #cacec0 | — |
 
-**Görev ayrımı — renkle değil biçimle de ayrılır** (iki rengin parlaklığı yakın; renk
-körlüğünde yalnız renge dayanan ayrım kaybolur):
-- **Kiremit = eylem ve vurgu, her zaman dolu şekil:** butonlar, menüdeki "Randevu Al",
-  rozetler, başlık çizgisi ve H2 yanındaki dikey çubuk, hover.
-- **Zeytin = bilgi ve gezinme, her zaman metin ya da simge:** alt başlıklar (H3), metin içi
-  bağlantılar (altı çizili), İçindekiler başlığı, bölüm simgeleri, ikincil bilgi satırları
-  (tarih, kurum alt satırı, "Adana Psikiyatri ve TMS").
+**Görev ayrımı:**
+- **Kiremit = yalnız buton:** "Randevu Al" (menü, ana sayfa, sayfa sonları), WhatsApp, blog
+  yazısındaki randevu kutusunun butonu. Başka hiçbir öğeye kiremit verilmez.
+- **Buton hiyerarşisi:** "Randevu Al" **dolu** kiremit (birincil); WhatsApp **çerçeveli**
+  (beyaz zemin, kiremit yazı ve 2px çerçeve; çerçeve `inset` gölgeyle çizilir ki boy değişmesin).
+- **Zeytin = geri kalan her şey:** başlık altı çizgisi, H2 yanındaki dikey çubuk, H3, metin içi
+  bağlantılar, rozetler, simgeler ve simge kutuları, kart kenarları, hover, İçindekiler başlığı,
+  ikincil bilgi satırları ("Adana Psikiyatri ve TMS", tarih).
+- Renk körlüğünde iki renk karışabilir; kiremit yalnız butonda olduğu için ayrım biçimle
+  (buton şekli ve yazısı) korunur.
 - İkisi dışında renk yok; geri kalan her şey sıcak nötrlerle.
 
 **Değişkenler:** `$brand`, `$brand-dark`, `$brand-tint`, `$brand-wash`, `$brand-line(-strong)`
-(kiremit) ve `$brand-alt`, `$brand-alt-dark`, `$brand-alt-tint`, `$brand-alt-line` (zeytin).
-Bilgi kutusu (`callout-info`) ve İçindekiler nötr Skylight (`$surface-alt`) zeminde, etiketleri
-zeytin. Acil kırmızısı `$danger` #a61b3a. Favicon, `apple-touch-icon.png` ve harita görselindeki
-etiket kiremide boyandı (eski mor hâlleri git geçmişinde).
-
-**Değerlendirmede — "zeytin ana renk" alternatifi** (kullanıcı ayrıntılı inceleyip görüş
-yazacak; 2026-10-25 canlı demo yapıldı): koyu zeytin genel ton olur — rozetler, simge kutuları,
-kart kenarları, açılır kutu zemini, H1 altı çizgi, vurgular, blog rozet/filtre/yazar dairesi,
-**WhatsApp butonu**. Kiremit yalnız **"Randevu Al" butonları** (menü, ana sayfa, sayfa sonları,
-blog randevu kutusu) ve **başlıkların yanındaki dikey çizgi** (`.content-section h2::before`).
-Demoda: hiyerarşi netleşiyor (Randevu Al ana, WhatsApp ikincil buton), site daha sakin; zeytin
-baskın. Seçilirse: `$brand` → koyu zeytin, kiremit için `$action` değişkeni yalnız bu öğelere
-bağlanır; simgeler ve harita etiketinin rengi yeniden kararlaştırılır.
-
-**Kalan iş:**
-- Mobilde iki dolu kiremit buton üst üste ağır; WhatsApp çerçeveli ikincil buton olmalı. Buton
-  hiyerarşisi dönüşümü etkiler; referans döneminden (2026-11-10) sonra.
+(zeytin) ve `$action`, `$action-dark`, `$action-tint` (kiremit, yalnız butonlarda). Eski
+`$brand-alt…` değişkenleri kaldırıldı (ana renkle birleşti). Bilgi kutusu (`callout-info`) ve
+İçindekiler nötr Skylight (`$surface-alt`) zeminde, etiketleri zeytin. Acil kırmızısı `$danger`
+#a61b3a. Favicon, `apple-touch-icon.png` ve harita görselindeki etiket zeytine boyandı (eski
+kiremit ve mor hâlleri git geçmişinde); harita iğnesi Google kırmızısı kalır.
 
 **Bu seçimde geçerli olan ilkeler** (renk yeniden tartışılırsa):
 - Zemin **beyaz**. Sıcaklık metin (#2b2724, gövde #4a4540, ikincil #6f6a64), nötr griler
@@ -141,7 +134,10 @@ bağlanır; simgeler ve harita etiketinin rengi yeniden kararlaştırılır.
   bilgi ve yasal kutular). Duvarlar Jotun Skylight 1624 (ekran ≈ #f1f0e7; sitede bir kademe açığı).
 - Renk, şablon renklerinin **hepsinden** ΔE ≥ 10 uzak olmalı: Tailwind, Bootstrap, Material,
   shadcn/Vercel, Stripe ve Discord "blurple". Eski #4d41e0 Tailwind `indigo-600`'e ΔE 2'ydi,
-  "yapay zekâ / şablon" görüntüsünün ana kaynağıydı. Çini kiremidi 11,9, koyu zeytin ≥ 15.
+  "yapay zekâ / şablon" görüntüsünün ana kaynağıydı. Ölçü CIE76 ΔE; Tailwind 3 **ve 4**
+  (v4'te gri "olive" skalası var) ile Radix de kontrol edilir. Zeytin #59643a ≥ 15 (en yakın
+  Radix lime12 15,2); çini kiremidi 11,9 (Tailwind 3 amber-800). Koyu zeytin #4b5431 Radix
+  lime12'ye 8,8'di.
 - Rengin **fiziksel bir kaynağı** olmalı (boya, toprak, kumaş); az doygun, hafif kırık.
 - Beyazda en az 5,5:1. İki renk birlikte kullanılacaksa renk körlüğü simülasyonunda
   (protanopi, deuteranopi) ayrışma kontrol edilir; ayrışmıyorsa görevler biçimle ayrılır.
@@ -152,8 +148,9 @@ bağlanır; simgeler ve harita etiketinin rengi yeniden kararlaştırılır.
 - #4d41e0 ve "biraz yumuşatılmış" hâlleri (doygunluk %46'ya kadar hâlâ Tailwind indigo
   skalasında); "sakin mor" #5048a8 Material indigo'ya ΔE 6,7.
 - Erik, mürdüm, fuşya, gül tonları (ton 300–340°): kadın sağlığı / tüp bebek çağrışımı.
-- Zeytin ve sage **ana renk olarak**: "wellness / alternatif tıp" çağrışımı; sage 2026'da
-  "fazla kullanılmış", açık hâli beyazda 2,4:1. Koyu zeytin **alt renk olarak** seçildi.
+- Sage ve açık yeşiller: "wellness / alternatif tıp" çağrışımı; sage 2026'da "fazla
+  kullanılmış", açık hâli beyazda 2,4:1. (Zeytin bu kaygıya rağmen 2026-11-04'te kullanıcı
+  kararıyla ana renk oldu: koyu ve kırık tonu, kiremitle birlikte Akdeniz paleti.)
 - Mürekkep indigo, gece mavisi gibi çok koyu tonlar: "eski usul".
 - Önceki kiremit #9b4c36: kahve alt tonlu, "ölü" bulundu. Canlı kiremit #a9462d: Tailwind
   `orange-800`'e ΔE 9,4.
@@ -165,7 +162,7 @@ bağlanır; simgeler ve harita etiketinin rengi yeniden kararlaştırılır.
 ### Renk kuralı — kalıcı
 
 **Sitenin bütün renkleri `_sass/_variables.scss`'te, görev adıyla tanımlıdır** (`$brand`,
-`$brand-tint`, `$brand-alt`, `$text-body`, `$border`, `$danger` …; listenin kendisi ve her birinin görevi
+`$brand-tint`, `$action`, `$text-body`, `$border`, `$danger` …; listenin kendisi ve her birinin görevi
 dosyada yazılı). Başka hiçbir SCSS dosyasına, layout'a, include'a, sayfaya ya da yazıya sabit
 renk kodu (`#rrggbb`, `#rgb`, `rgb(…)`, `rgba(0,0,0,…)`) **yazılmaz**:
 
@@ -177,10 +174,10 @@ renk kodu (`#rrggbb`, `#rgb`, `rgb(…)`, `rgba(0,0,0,…)`) **yazılmaz**:
 - Satır içi SVG'lerde renk `currentColor`'dır; rengi kapsayan öğenin CSS `color`'ı verir.
   Simge `<img>` olarak eklenmez (dış SVG dosyasının rengi CSS'ten değiştirilemez).
 - Blog kategori rozetlerinin hepsi aynı marka rengindedir; kategoriye özel renk yoktur.
-- Vurgu için yalnızca iki renk var: ana renk ve alt renk, görevleri yukarıda. Üçüncü bir
-  vurgu rengi eklenmez.
-- Marka rengini değiştirmek = `_variables.scss`'te tek satır. Favicon ve
-  `apple-touch-icon.png` görsel dosyadır, ayrıca güncellenir.
+- Vurgu için yalnızca iki renk var: ana renk (zeytin) ve eylem rengi (kiremit, yalnız buton),
+  görevleri yukarıda. Üçüncü bir vurgu rengi eklenmez.
+- Marka rengini değiştirmek = `_variables.scss`'te tek satır. Favicon, `apple-touch-icon.png`,
+  harita görseli (`images/klinikkonumu.webp`) ve paylaşım görseli ayrıca güncellenir.
 
 **Kontrol (her SCSS/şablon değişikliğinden sonra; çıktı boş olmalı):**
 
@@ -370,9 +367,10 @@ eşlemesine ekle.
 
 **Referans dönemi: 2026-10-20 → 2026-11-10.** Bu tarihe kadar dönüşümü etkileyecek büyük
 değişiklik (`/tms` başlığı, ana sayfanın sadeleşmesi) yapılmaz; önce mevcut durum ölçülür.
-Veri çok azsa dönem uzatılır. **İstisna:** marka rengi kullanıcı kararıyla 2026-10-25'te
-değişti (butonlar mordan kiremide). Dönüşüm verisi iki parça okunur: 10-20 → 10-24 (mor) ve
-10-25 → 11-10 (kiremit); karşılaştırmada bu kırılma hesaba katılır.
+Veri çok azsa dönem uzatılır. **İstisnalar** (kullanıcı kararı): 2026-10-25'te butonlar mordan
+kiremide; 2026-11-04'te ana renk zeytin oldu ve WhatsApp butonu çerçeveli ikincil butona döndü
+(büyük olasılıkla `whatsapp_click`'i etkiler). Dönüşüm verisi üç parça okunur: 10-20 → 10-24
+(mor), 10-25 → 11-03 (kiremit, iki dolu buton), 11-04 → (zeytin, WhatsApp çerçeveli).
 
 ### Senkron tutulması gerekenler
 

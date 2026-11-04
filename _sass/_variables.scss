@@ -21,20 +21,20 @@ $lh-m-body:   1.75;
 // görevlerden biri kullanılır. Yeni bir görev gerekiyorsa önce buraya eklenir.
 // Kural ve kontrol komutu: CLAUDE.md → "Görsel kimlik".
 
-// Marka — ana renk: çini kiremidi (eylem ve vurgu; her zaman dolu şekil)
-// Kaynak: muayene odasındaki kiremit koltuk. Karar ve görev ayrımı: CLAUDE.md → "Marka renkleri".
-$brand:             #9d4c2f;   // butonlar, "Randevu Al", rozetler, başlık çizgisi, hover
-$brand-dark:        #7a3b24;   // buton üzerine gelince
-$brand-tint:        #f7f1ee;   // açık kiremit zemini: rozet, menü hover zemini
-$brand-wash:        #fcfaf9;   // çok hafif kiremit zemini: küçük kartlar, kaynak kutusu
-$brand-line:        #ebdbd5;   // kiremit kenarlığı: kart ve kutu çerçevesi
-$brand-line-strong: #e0c6bc;   // belirgin kenarlık: üzerine gelince, ayraç, soluk simge
+// Marka — ana renk: zeytin (sitenin genel tonu)
+// Karar ve görev ayrımı: CLAUDE.md → "Marka renkleri".
+$brand:             #59643a;   // başlık çizgisi, H2 çubuğu, H3, metin içi bağlantı, rozet, simge, hover
+$brand-dark:        #424a2b;   // bağlantı ve rozet üzerine gelince
+$brand-tint:        #f2f3ef;   // açık zeytin zemini: rozet, simge kutusu, menü hover zemini
+$brand-wash:        #fafaf9;   // çok hafif zeytin zemini: küçük kartlar, kaynak kutusu
+$brand-line:        #dde0d7;   // zeytin kenarlık: kart ve kutu çerçevesi
+$brand-line-strong: #cacec0;   // belirgin kenarlık: üzerine gelince, ayraç, soluk simge
 
-// Alt renk: koyu zeytin (bilgi ve gezinme; her zaman metin ya da simge)
-$brand-alt:         #4b5431;   // alt başlık (H3), metin içi bağlantı, İçindekiler başlığı, simge, ikincil bilgi satırı
-$brand-alt-dark:    #343a22;   // bağlantı üzerine gelince
-$brand-alt-tint:    #f2f3f1;   // simge kutusu zemini
-$brand-alt-line:    #dbddd6;   // zeytin kenarlık (gerekirse)
+// Eylem rengi: çini kiremidi — YALNIZ butonlar ("Randevu Al", WhatsApp, blog randevu kutusu)
+// Kaynak: muayene odasındaki kiremit koltuk.
+$action:            #9d4c2f;   // dolu buton zemini, çerçeveli butonun çerçevesi ve yazısı
+$action-dark:       #7a3b24;   // dolu buton üzerine gelince
+$action-tint:       #f7f1ee;   // çerçeveli buton üzerine gelince
 
 // Metin (sıcak nötrler)
 $white:             #fff;

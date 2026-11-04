@@ -189,7 +189,7 @@ $post-bg-tint: $brand-wash;
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: $brand-alt;
+    color: $brand;
     margin: 0 0 10px;
   }
 
@@ -212,7 +212,7 @@ $post-bg-tint: $brand-wash;
       height: 20px;
       border-radius: 50%;
       background: $white;
-      color: $brand-alt;
+      color: $brand;
       font-size: 0.7rem;
       font-weight: 600;
       align-items: center;
@@ -341,13 +341,13 @@ $post-bg-tint: $brand-wash;
   }
 
   a {
-    color: $brand-alt;
+    color: $brand;
     font-weight: 400;
     text-decoration: none;
-    border-bottom: 1px solid $brand-alt-line;
+    border-bottom: 1px solid $brand-line;
     transition: border-color 0.2s;
 
-    &:hover { border-bottom-color: $brand-alt; }
+    &:hover { border-bottom-color: $brand; }
 
     &:focus-visible {
       outline: 2px solid $brand;
@@ -449,7 +449,7 @@ $post-bg-tint: $brand-wash;
   }
 
   a {
-    background: $brand;
+    background: $action;
     color: $white;
     @include sans_bold;
     font-weight: 600;
@@ -461,12 +461,12 @@ $post-bg-tint: $brand-wash;
     transition: background 0.2s, transform 0.2s;
 
     &:hover {
-      background: $brand-dark;
+      background: $action-dark;
       transform: translateY(-1px);
     }
 
     &:focus-visible {
-      outline: 2px solid $brand;
+      outline: 2px solid $action;
       outline-offset: 3px;
     }
   }
@@ -547,7 +547,7 @@ $post-bg-tint: $brand-wash;
 
   .role {
     font-size: 0.82rem;
-    color: $brand-alt;
+    color: $brand;
     font-weight: 400;
     margin: 2px 0 8px;
   }
@@ -560,7 +560,7 @@ $post-bg-tint: $brand-wash;
   }
 
   .bio-more {
-    color: $brand-alt;
+    color: $brand;
     font-weight: 400;
     text-decoration: none;
     transition: opacity 0.2s;
@@ -669,7 +669,7 @@ $post-bg-tint: $brand-wash;
     @include sans_bold;
     font-weight: 600;
     font-size: 0.88rem;
-    color: $brand-alt;
+    color: $brand;
     display: inline-flex;
     align-items: center;
     gap: 7px;

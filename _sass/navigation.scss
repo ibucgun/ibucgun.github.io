@@ -108,7 +108,7 @@ ul.nav-ul {
       }
 
       &.nav-cta {
-        background: $brand;
+        background: $action;
         color: $white !important;
         border-radius: 50px;
         font-weight: 600;
@@ -155,7 +155,7 @@ ul.nav-ul {
 
     &.nav-cta {
       color: $white !important;
-      background-color: $brand;
+      background-color: $action;
       padding: 12px 30px;
     }
   }
