@@ -371,7 +371,9 @@ eşlemesine ekle.
 değişiklik (`/tms` başlığı, ana sayfanın sadeleşmesi) yapılmaz; önce mevcut durum ölçülür.
 Veri çok azsa dönem uzatılır. **İstisnalar** (kullanıcı kararı): 2026-10-25'te butonlar mordan
 kiremide; 2026-11-04'te ana renk zeytin oldu ve WhatsApp butonu çerçeveli ikincil butona döndü
-(büyük olasılıkla `whatsapp_click`'i etkiler). Dönüşüm verisi üç parça okunur: 10-20 → 10-24
+(büyük olasılıkla `whatsapp_click`'i etkiler); aynı gün `/tms` arama başlığı "TMS ve Derin TMS
+Tedavisi Nedir?" ve açıklaması yeniden yazıldı (önceki CTR: 62.437 gösterim, %0,73; Search
+Console'da 11-04 öncesi ve sonrası karşılaştırılır). Dönüşüm verisi üç parça okunur: 10-20 → 10-24
 (mor), 10-25 → 11-03 (kiremit, iki dolu buton), 11-04 → (zeytin, WhatsApp çerçeveli).
 
 ### Senkron tutulması gerekenler
@@ -427,10 +429,6 @@ kiremide; 2026-11-04'te ana renk zeytin oldu ve WhatsApp butonu çerçeveli ikin
 > Hastalık sayfaları muayenehanedeki **değerlendirme ve tedavi sürecini** anlatır,
 > hastalığın "nedir"ini **blog yazıları** anlatır. Aynı metni iki yere yazma;
 > birbirine link ver. Ana sayfa kutuları, `llms.txt` ve blog geri linkleri bağlandı.
-
-**Ölçüm**
-3. `/tms` başlık ve açıklama CTR yazımı — 62.437 gösterim, %0,73 tıklama.
-   Ölçüm kuruldu; referans dönemi bittikten sonra (2026-11-10) yapılır.
 
 **Bekleyen**
 - **Blog yazısı: "Bipolar bozuklukta hastane yatışı ne zaman gerekir?"** Yatarak tedavi ölçütleri
