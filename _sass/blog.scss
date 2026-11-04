@@ -17,6 +17,12 @@
     margin: 0 0 20px;
     letter-spacing: -0.04em;
     line-height: 1.1;
+
+    @include media_mobile {
+      font-size: $fs-m-title;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+    }
   }
 
   .header-accent-line {
@@ -149,7 +155,7 @@ $blog-surface: $white;
 .blog-chip {
   @include sans_bold;
   font-size: 0.85rem;
-  font-weight: 500;
+  font-weight: 400;
   padding: 8px 15px;
   border-radius: 999px;
   cursor: pointer;

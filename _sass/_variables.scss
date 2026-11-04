@@ -4,6 +4,16 @@
 $container-width: 980px !default;
 $grid-gutter:     10px !default;
 
+// Yazı boyutları — mobil (≤600px)
+// ---------------------------------------
+// Ana sayfanın mobil kademeleri; iç sayfalar ve blog yazıları da bunları kullanır.
+// Kalınlık yalnız 400 ve 600 (head.html yalnız bu ikisini yükler).
+$fs-m-title:  1.75rem;   // sayfa ve blog yazısı başlığı (H1)
+$fs-m-h2:     1.4rem;    // bölüm başlığı (ana sayfa kart başlığı)
+$fs-m-h3:     1.2rem;    // alt başlık (ana sayfa öğe başlığı)
+$fs-m-body:   1.1rem;    // gövde, liste, giriş cümlesi (ana sayfa gövdesi)
+$lh-m-body:   1.75;
+
 // Colors
 // ---------------------------------------
 // Sitenin TÜM renkleri burada tanımlıdır. Başka bir SCSS dosyasına, layout'a

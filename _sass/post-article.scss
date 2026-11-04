@@ -88,11 +88,16 @@ $post-bg-tint: $brand-wash;
 .post-title {
   @include sans_extrabold;
   font-size: clamp(1.7rem, 4vw, 2.25rem);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.18;
   letter-spacing: -0.02em;
   color: $post-ink;
   margin: 0;
+
+  @include media_mobile {
+    font-size: $fs-m-title;
+    line-height: 1.25;
+  }
 }
 
 .post-lead {
@@ -101,6 +106,10 @@ $post-bg-tint: $brand-wash;
   font-size: 1.125rem;
   color: $post-muted;
   line-height: 1.6;
+
+  @include media_mobile {
+    font-size: $fs-m-body;
+  }
 }
 
 // --- Yazar künyesi (avatar + isim + tarih) ---
@@ -156,7 +165,7 @@ $post-bg-tint: $brand-wash;
 
   .when-label {
     color: $post-muted;
-    font-weight: 500;
+    font-weight: 400;
   }
 
   @media (max-width: 520px) {
@@ -333,7 +342,7 @@ $post-bg-tint: $brand-wash;
 
   a {
     color: $brand-alt;
-    font-weight: 500;
+    font-weight: 400;
     text-decoration: none;
     border-bottom: 1px solid $brand-alt-line;
     transition: border-color 0.2s;
@@ -357,7 +366,7 @@ $post-bg-tint: $brand-wash;
     font-size: 1.09rem;
     line-height: 1.65;
     color: $post-ink;
-    font-weight: 500;
+    font-weight: 400;
   }
 
   // Resim
@@ -367,6 +376,13 @@ $post-bg-tint: $brand-wash;
     display: block;
     margin: 1.5em auto;
     border-radius: 8px;
+  }
+
+  // Mobil: ana sayfayla aynı yazı kademeleri (_variables.scss). Blok sonda, üstteki kuralları ezsin diye.
+  @include media_mobile {
+    p, ul li, ol li { font-size: $fs-m-body; line-height: $lh-m-body; }
+    h2 { font-size: $fs-m-h2; }
+    h3 { font-size: $fs-m-h3; }
   }
 }
 
@@ -532,7 +548,7 @@ $post-bg-tint: $brand-wash;
   .role {
     font-size: 0.82rem;
     color: $brand-alt;
-    font-weight: 500;
+    font-weight: 400;
     margin: 2px 0 8px;
   }
 
@@ -545,7 +561,7 @@ $post-bg-tint: $brand-wash;
 
   .bio-more {
     color: $brand-alt;
-    font-weight: 500;
+    font-weight: 400;
     text-decoration: none;
     transition: opacity 0.2s;
 

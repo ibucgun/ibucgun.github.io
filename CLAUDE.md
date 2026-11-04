@@ -87,6 +87,11 @@ kafa karıştırıcı, karar). Kaynak eklerken bu ifade değiştirilmez.
 ## Görsel kimlik
 
 Kurumsal font **Poppins**. İstenen izlenim: sakin, sıcak, sade, modern ve çağdaş.
+Yalnız **400 ve 600** yüklenir (yükleme hızı); yeni kalınlık eklenmez. Mobil (≤600px) yazı
+kademeleri ana sayfaya göre `_variables.scss`'te: `$fs-m-title` 1.75rem · `$fs-m-h2` 1.4rem ·
+`$fs-m-h3` 1.2rem · `$fs-m-body` 1.1rem / `$lh-m-body` 1.75. İç sayfa, hastalık sayfası ve blog
+bunları kullanır; yeni bileşende mobil boyut sayı olarak yazılmaz. Telefonda gövde metni sola
+yaslıdır (iki yana yaslama dar ekranda kelime arası boşluk açar); masaüstünde iki yana yaslı.
 
 ### Marka renkleri (2026-10-25'te uygulandı)
 

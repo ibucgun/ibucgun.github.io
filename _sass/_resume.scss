@@ -149,7 +149,7 @@
     
     .section-header {
       gap: 12px !important;
-      h2 { font-size: 1.4rem !important; }
+      h2 { font-size: $fs-m-h2 !important; }
       .section-icon-wrapper {
         width: 44px !important;
         height: 44px !important;
@@ -158,7 +158,7 @@
     }
     
     .resume-item {
-      .resume-item-title { font-size: 1.2rem !important; }
+      .resume-item-title { font-size: $fs-m-h3 !important; }
       .resume-item-details { font-size: 0.95rem !important; }
     }
   }
@@ -620,6 +620,8 @@
       margin-bottom: 2.5rem;
       max-width: 550px;
 
+      @include media_mobile { text-align: left; }
+
       strong { color: $brand; font-weight: 600; }
     }
   }
@@ -854,6 +856,12 @@
       color: $text-strong !important;
       margin-bottom: 20px !important;
       letter-spacing: -0.04em !important;
+
+      @include media_mobile {
+        font-size: $fs-m-title !important;
+        line-height: 1.25 !important;
+        letter-spacing: -0.02em !important;
+      }
     }
 
     // BAŞLIK ALTI ÇİZGİSİ: Daha geniş ve daha kalın (Vurgulu)
@@ -891,8 +899,8 @@
   
   // MOBİL UYUMLULUK: Yazı boyutunu küçültme
   @include media_mobile {
-    font-size: 1.1rem !important; // Mobilde daha zarif durması için küçültüldü
-    line-height: 1.3 !important; // Satır aralığı daraltıldı
+    font-size: $fs-m-body !important;
+    line-height: 1.55 !important;
     text-align: center; // Merkezi hizalama korundu
   }
 }
@@ -904,6 +912,9 @@
   line-height: 1.95 !important;
   color: $text-body !important;
   text-align: justify; // Profesyonel yaslama
+
+  // Dar ekranda iki yana yaslama kelime arasında boşluk açar
+  @include media_mobile { text-align: left; }
 
   p {
     margin-bottom: 1.8rem;
@@ -967,6 +978,16 @@
     margin-bottom: 2rem;
   }
 
+  @include media_mobile {
+    h2 { font-size: $fs-m-h2 !important; line-height: 1.3 !important; margin-top: 2.5rem !important; }
+    h3 { font-size: $fs-m-h3 !important; margin-top: 2rem !important; }
+    p  { font-size: $fs-m-body !important; line-height: $lh-m-body !important; }
+    // Dar ekranda iki yana yaslama kelime arasında boşluk açar; !important satır içi stilleri de ezer
+    p, li { text-align: left !important; }
+    // Satır içi 1.125rem verilmiş listeler (randevu, tdcs, 404…): kendi boyutu olmayan li bunu alır
+    ol, ul { font-size: $fs-m-body !important; }
+  }
+
   /* --- DİKEY ORTALANMIŞ KUTULAR --- */
   .callout {
     display: flex; gap: 20px;
@@ -1016,6 +1037,11 @@
 .tms-content li {
   text-align: justify;
   font-size: 1.125rem;
+
+  @include media_mobile {
+    font-size: $fs-m-body;
+    line-height: $lh-m-body;
+  }
 }
 
 /* 2) Başlıkların yaslı (justify) görünmesini önleme — koruma kuralı
