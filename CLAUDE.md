@@ -269,7 +269,7 @@ listelenmez.
 | `_layouts/page.html` | İç sayfalar (`wide_layout: true` ile geniş yerleşim) |
 | `_layouts/post.html` | Blog yazısı |
 | `_includes/head.html` | Meta, OG, canonical, schema çağrıları, GA4; `seo_title` varsa `<title>` onu kullanır |
-| `images/paylasim.jpg` | Paylaşım önizlemesi (OG/Twitter, 1200×630): ana sayfa üst bölümünün ekran görüntüsü. Tasarım ya da renk değişince yeniden çekilir, **dosya adı da değişir** (WhatsApp/Facebook önbelleği) |
+| `images/paylasim-2026-11.jpg` | Paylaşım önizlemesi (OG/Twitter, 1200×630): ana sayfa üst bölümünün ekran görüntüsü. Tasarım ya da renk değişince yeniden çekilir, **dosya adı da değişir** (WhatsApp/Facebook önbelleği). Çekim: Firefox headless `--window-size=1394,732 --screenshot`, ardından `sips -z 630 1200` (çerçeve eskisiyle aynı kalır) |
 | `_includes/schema/hekim-klinik.html` | Ana sayfa JSON-LD (Physician + MedicalClinic) |
 | `_includes/schema/tms.html` | `/tms` JSON-LD (FAQPage + MedicalProcedure) |
 | Kökteki hastalık sayfaları | `depresyon.html` vb.; `layout: hastalik` |
