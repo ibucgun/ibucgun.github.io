@@ -105,8 +105,9 @@ okunuyordu) bir ton açıldı; #606c3d 5,7:1 ile kontrast sınırına yakın bul
 |---|---|---|
 | Ana ton | #59643a | #9d4c2f |
 | Koyu (üzerine gelince) | #424a2b | #7a3b24 |
-| Açık zemin | #f2f3ef | #f7f1ee (çerçeveli buton hover) |
-| Çok açık zemin | #fafaf9 | — |
+| Açık zemin (rozet, simge kutusu) | #eff2e4 | #f7f1ee (çerçeveli buton hover) |
+| Yüzey (İçindekiler, açık akordeon, bilgi kutusu, altbilgi) | #f4f6eb (`$surface-alt`) | — |
+| Çok açık zemin (hastalık kutuları, kaynak kutusu) | #f9faf3 | — |
 | Kenarlık | #dde0d7 · belirgin #cacec0 | — |
 
 **Görev ayrımı:**
@@ -123,15 +124,16 @@ okunuyordu) bir ton açıldı; #606c3d 5,7:1 ile kontrast sınırına yakın bul
 
 **Değişkenler:** `$brand`, `$brand-dark`, `$brand-tint`, `$brand-wash`, `$brand-line(-strong)`
 (zeytin) ve `$action`, `$action-dark`, `$action-tint` (kiremit, yalnız butonlarda). Eski
-`$brand-alt…` değişkenleri kaldırıldı (ana renkle birleşti). Bilgi kutusu (`callout-info`) ve
-İçindekiler nötr Skylight (`$surface-alt`) zeminde, etiketleri zeytin. Acil kırmızısı `$danger`
+`$brand-alt…` değişkenleri kaldırıldı (ana renkle birleşti). Kutu zeminleri zeytin tonunda
+(ton açısı ana renkle aynı, az doygun): İçindekiler, açık akordeon, bilgi kutusu ve altbilgi
+`$surface-alt`, hastalık kutuları ve kaynak kutusu `$brand-wash`; etiketleri zeytin. Acil kırmızısı `$danger`
 #a61b3a. Favicon, `apple-touch-icon.png` ve harita görselindeki etiket zeytine boyandı (eski
 kiremit ve mor hâlleri git geçmişinde); harita iğnesi Google kırmızısı kalır.
 
 **Bu seçimde geçerli olan ilkeler** (renk yeniden tartışılırsa):
 - Zemin **beyaz**. Sıcaklık metin (#2b2724, gövde #4a4540, ikincil #6f6a64), nötr griler
-  (kenarlık #e6e3de, belirgin #d6d2cb) ve **Skylight** yüzeyden (#f6f5ee: altbilgi, İçindekiler,
-  bilgi ve yasal kutular). Duvarlar Jotun Skylight 1624 (ekran ≈ #f1f0e7; sitede bir kademe açığı).
+  (kenarlık #e6e3de, belirgin #d6d2cb). Kutu zeminleri ana rengin açık tonudur; kiremide uyan
+  krem Skylight yüzey (#f6f5ee) zeytin ana renge geçince açık zeytine (#f4f6eb) çevrildi.
 - Renk, şablon renklerinin **hepsinden** ΔE ≥ 10 uzak olmalı: Tailwind, Bootstrap, Material,
   shadcn/Vercel, Stripe ve Discord "blurple". Eski #4d41e0 Tailwind `indigo-600`'e ΔE 2'ydi,
   "yapay zekâ / şablon" görüntüsünün ana kaynağıydı. Ölçü CIE76 ΔE; Tailwind 3 **ve 4**

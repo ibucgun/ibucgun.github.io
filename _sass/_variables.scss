@@ -25,8 +25,8 @@ $lh-m-body:   1.75;
 // Karar ve görev ayrımı: CLAUDE.md → "Marka renkleri".
 $brand:             #59643a;   // başlık çizgisi, H2 çubuğu, H3, metin içi bağlantı, rozet, simge, hover
 $brand-dark:        #424a2b;   // bağlantı ve rozet üzerine gelince
-$brand-tint:        #f2f3ef;   // açık zeytin zemini: rozet, simge kutusu, menü hover zemini
-$brand-wash:        #fafaf9;   // çok hafif zeytin zemini: küçük kartlar, kaynak kutusu
+$brand-tint:        #eff2e4;   // açık zeytin zemini: rozet, simge kutusu, menü hover zemini
+$brand-wash:        #f9faf3;   // çok hafif zeytin zemini: hastalık kutuları, kaynak kutusu, sertifika ve üyelik kutuları
 $brand-line:        #dde0d7;   // zeytin kenarlık: kart ve kutu çerçevesi
 $brand-line-strong: #cacec0;   // belirgin kenarlık: üzerine gelince, ayraç, soluk simge
 
@@ -43,10 +43,10 @@ $text-strong:       #2b2724;   // başlık ve vurgulu metin
 $text-body:         #4a4540;   // gövde metni
 $text-muted:        #6f6a64;   // ikincil metin: tarih, not, altbilgi
 
-// Yüzey ve kenarlık (sıcak nötrler; Skylight = muayenehane duvarı, Jotun 1624)
+// Yüzey ve kenarlık (kenarlık sıcak nötr; yüzey açık zeytin, ana renkle aynı ton)
 $border:            #e6e3de;   // nötr ince çizgi ve çerçeve
 $border-strong:     #d6d2cb;   // nötr ayraç (altbilgideki "·" vb.)
-$surface-alt:       #f6f5ee;   // Skylight yüzey: İçindekiler, bilgi kutusu, altbilgi, kod, tablo, yasal kutu
+$surface-alt:       #f4f6eb;   // açık zeytin yüzey: İçindekiler, açık eğitim maddesi, bilgi kutusu, altbilgi, kod, tablo, yasal kutu
 
 // Durum kutuları
 $danger:            #a61b3a;   // acil durum kutusu metni ve simgesi (kiremitle karışmasın diye mavi alt tonlu)

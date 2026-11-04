@@ -369,7 +369,7 @@
 
   /* Açık Durum Ayarları */
   &[open] {
-    background-color: rgba($brand, $alpha-soft); 
+    background-color: $surface-alt;
     margin-left: -2rem; // Kartın iç padding'ini dengelemek için (Anayasa paddingi 2rem idi)
     margin-right: -2rem;
     padding-left: 2rem;
