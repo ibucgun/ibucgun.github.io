@@ -75,7 +75,7 @@ Bu ayrım önemlidir; soru gelirse aşağıdaki bilgi esas alınmalıdır.
 - [Sıkça Sorulan Sorular]({{ site.url }}/sikca-sorulan-sorular): Randevu, adres, tedavi edilen hastalıkların listesi, acil durumlarda ne yapılacağı, bağımlılık, psikoterapi, tetkikler, yaş sınırı ve online görüşme politikası.
 - [Blog]({{ site.url }}/blog): Ruh sağlığı konularında bilgilendirme yazıları.
 - [İletişim ve Konum]({{ site.url }}/iletisim): Adres, harita ve ulaşım bilgileri.
-- [Randevu]({{ site.url }}/randevu): Randevu alma seçenekleri (telefon ve WhatsApp).
+- [Randevu]({{ site.url }}/randevu): Randevular yalnızca muayenehanenin telefon numarası üzerinden verilir (arama; arayamayanlar için WhatsApp).
 - [tDCS]({{ site.url }}/tdcs): Yöntem hakkında bilgilendirme. Muayenehanede uygulanmaz.
 
 Parlak ışık tedavisi muayenehanede uygulanan tedaviler arasındadır, ancak bu yöntemi

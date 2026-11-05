@@ -1,0 +1,14 @@
+{%- comment -%}
+  Acil durum kutusu: hastalık sayfaları ve /randevu. Sayfa sonunda, CTA'nın hemen üstünde durur.
+  Parametreler: baslik, metin (verilmezse genel metin).
+{%- endcomment -%}
+{%- capture acil_varsayilan -%}Kendinize ya da başkalarına zarar verme veya yaşamınıza son verme düşünceleriniz varsa randevu beklemeden <b>112 Acil Çağrı Merkezi'ni arayın</b> veya en yakın hastanenin acil servisine başvurun.{%- endcapture %}
+<div class="callout callout-medical">
+  <div class="callout-icon">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 16V12M12 8H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+  <div class="callout-content">
+    <span class="callout-label">{{ include.baslik | default: "Acil durumlar" }}</span>
+    <p class="callout-text">{{ include.metin | default: acil_varsayilan }}</p>
+  </div>
+</div>

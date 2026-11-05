@@ -203,6 +203,12 @@ bilgi@ismailbucgun.com
 Pazartesi–Cuma 09:00–18:00
 ```
 
+**Randevu:** yalnızca bu telefon numarasından verilir; başka site ya da uygulamadan randevu verilmez
+(sitede yazılı). Aramaları muayenehane asistanı yanıtlar (yalnız `/randevu`'da yazılı: hasta doğrudan
+hekime ulaştığını sanıyordu). Telefon Pazartesi–Cuma **09:00–19:30** yanıtlanır, muayene saatleri
+09:00–18:00 (schema'daki çalışma saatleri muayene saatidir). Yönlendirme sırası her yerde **önce arama**,
+WhatsApp "arayamadığınız durumlarda" (WhatsApp dönüş süresi yazılmaz).
+
 Adres 2026'da Hurmalı/Seyhan'dan buraya taşındı. Eski adresi ("Central Plaza
 Kat:2 D:23" veya "Kat:6 D:62") taşıyan bir yer görürsen bildir — eski kayıtlar
 sıralama düşmesine yol açmıştı.
@@ -276,6 +282,7 @@ listelenmez.
 | `_layouts/hastalik.html` | Hastalık sayfası şablonu: kaynaklar, uyarı (otomatik tarih), acil kutusu, CTA |
 | `_includes/schema/hastalik.html` | `MedicalWebPage` + `MedicalCondition`; yazar ve gözden geçiren `/#hekim` |
 | `_includes/iletisim-cta.html` | Ara / WhatsApp butonu; `baslik`, `metin`, `buton` parametreleri |
+| `_includes/acil-kutusu.html` | Acil durum kutusu (112 kalıbı); hastalık şablonu ve `/randevu`; `baslik`, `metin` parametreleri |
 | `_sass/_variables.scss` | Sitenin tüm renkleri (görev adlı değişkenler) ve saydamlık seviyeleri |
 | `llms.txt` | Dil modelleri için site özeti — **hizmet değişince güncelle** |
 | `.claude/skills/metin-denetimi/` | Metin denetimi skill'i: mevzuat + yapay zekâ yazım izleri; `scripts/denetle.py` tarama, yedek ve karşılaştırma |
@@ -420,7 +427,7 @@ Console'da 11-04 öncesi ve sonrası karşılaştırılır). Dönüşüm verisi 
 ## Kalan işler
 
 **Site içi**
-1. İç linkleme — şu sayfalardan hiç iç link çıkmıyor: `randevu`, `iletisim`, `tdcs`, `blog`.
+1. İç linkleme — şu sayfalardan hiç iç link çıkmıyor: `tdcs`, `blog`.
    `/tms`'den hastalık sayfalarına link 3.1/3.2 listelerindeki hastalık adlarından verilir;
    `/anksiyete-bozukluklari`'na verilmez (o sayfa bilinçli olarak TMS'yi anmıyor).
 2. **`/tdcs` kaynakları.** 6 atıfsız iddia var, kaynak listesi yok (yalnız tek bir satır içi

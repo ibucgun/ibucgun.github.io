@@ -25,16 +25,7 @@ layout: page
 {%- assign aylar = "Ocak,Şubat,Mart,Nisan,Mayıs,Haziran,Temmuz,Ağustos,Eylül,Ekim,Kasım,Aralık" | split: "," %}
 <p class="page-note">Bu sayfa yalnızca genel bilgilendirme amacı taşır; kişisel tanı, tedavi veya tıbbi tavsiye yerine geçmez. Hazırlayan: {{ site.resume_name }}, {{ site.author_specialty }}.{% if page.last_modified_at %}{% assign ay = page.last_modified_at | date: "%-m" | minus: 1 %} Son güncelleme: <time datetime="{{ page.last_modified_at | date: '%Y-%m-%d' }}">{{ page.last_modified_at | date: "%-d" }} {{ aylar[ay] }} {{ page.last_modified_at | date: "%Y" }}</time>.{% endif %}</p>
 
-{%- capture acil_varsayilan -%}Kendinize ya da başkalarına zarar verme veya yaşamınıza son verme düşünceleriniz varsa randevu beklemeden <b>112 Acil Çağrı Merkezi'ni arayın</b> veya en yakın hastanenin acil servisine başvurun.{%- endcapture %}
-<div class="callout callout-medical">
-  <div class="callout-icon">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 16V12M12 8H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </div>
-  <div class="callout-content">
-    <span class="callout-label">{{ page.acil_baslik | default: "Acil durumlar" }}</span>
-    <p class="callout-text">{{ page.acil | default: acil_varsayilan }}</p>
-  </div>
-</div>
+{% include acil-kutusu.html baslik=page.acil_baslik metin=page.acil %}
 
 {% include iletisim-cta.html %}
 
