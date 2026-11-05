@@ -90,9 +90,10 @@ Kurumsal font **Poppins**. İstenen izlenim: sakin, sıcak, sade, modern ve ça�
 Yalnız **400 ve 600** yüklenir (yükleme hızı); yeni kalınlık eklenmez. Mobil (≤600px) yazı
 kademeleri ana sayfaya göre `_variables.scss`'te: `$fs-m-title` 1.75rem · `$fs-m-h2` 1.4rem ·
 `$fs-m-h3` 1.2rem · `$fs-m-body` 1.1rem / `$lh-m-body` 1.75. İç sayfa, hastalık sayfası ve blog
-bunları kullanır; yeni bileşende mobil boyut sayı olarak yazılmaz. Gövde metni her ekranda **sola
-yaslı** (iki yana yaslama kelime aralarında boşluk açıyordu; satır içi `text-align: justify` yazılmaz).
-**Metin içi bağlantılar:** zeytin, altı çizili; site içi sayfa bağlantıları (`href="/…"`) ayrıca kalın.
+bunları kullanır; yeni bileşende mobil boyut sayı olarak yazılmaz. Telefonda gövde metni sola
+yaslıdır (iki yana yaslama dar ekranda kelime arası boşluk açar); masaüstünde iki yana yaslı.
+**Metin içi bağlantılar:** zeytin, altı çizili; site içi sayfa bağlantıları (`href="/…"`) ayrıca kalın ve
+`inline-block` (iki yana yaslı satırda bağlantının içindeki boşluklar açılmasın).
 Telefon ve e-posta bağlantıları otomatik olarak yuvarlak zeminli etiket (açık zeytin); başka bir
 bağlantı için `.link-chip` sınıfı var, sayfa bağlantılarında kullanılmaz (telefonla karışıyor).
 

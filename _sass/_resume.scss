@@ -618,9 +618,11 @@
       font-size: 1.1rem;
       line-height: 1.7;
       color: $text_color;
-      text-align: left;
+      text-align: justify;
       margin-bottom: 2.5rem;
       max-width: 550px;
+
+      @include media_mobile { text-align: left; }
 
       strong { color: $brand; font-weight: 600; }
     }
@@ -911,8 +913,10 @@
   font-size: 1.18rem !important;
   line-height: 1.95 !important;
   color: $text-body !important;
-  // Sola yaslı: iki yana yaslama kelime aralarında boşluk açıyordu
-  text-align: left;
+  text-align: justify; // Profesyonel yaslama
+
+  // Dar ekranda iki yana yaslama kelime arasında boşluk açar
+  @include media_mobile { text-align: left; }
 
   p {
     margin-bottom: 1.8rem;
@@ -969,8 +973,9 @@
     &:hover { color: $brand-dark; }
   }
 
-  // Site içi sayfa bağlantıları kalın (kaynak ve dış bağlantılar normal kalır)
-  p a[href^="/"], li a[href^="/"] { font-weight: 600; }
+  // Site içi sayfa bağlantıları kalın (kaynak ve dış bağlantılar normal kalır).
+  // inline-block: iki yana yaslı satırda bağlantının içindeki boşluklar açılmaz.
+  p a[href^="/"], li a[href^="/"] { font-weight: 600; display: inline-block; }
 
   // Telefon ve e-posta bağlantıları (ve elle verilen .link-chip): yuvarlak zeminli etiket.
   // inline-block, iki yana yaslı metinde bağlantının içindeki boşlukların açılmasını da önler.
@@ -993,7 +998,7 @@
   p {
     font-size: 1.18rem !important;
     line-height: 1.95 !important;
-    text-align: left;
+    text-align: justify;
     margin-bottom: 2rem;
   }
 
@@ -1002,6 +1007,7 @@
     h3 { font-size: $fs-m-h3 !important; margin-top: 2rem !important; }
     p  { font-size: $fs-m-body !important; line-height: $lh-m-body !important; }
     // Dar ekranda iki yana yaslama kelime arasında boşluk açar; !important satır içi stilleri de ezer
+    p, li { text-align: left !important; }
     // Satır içi 1.125rem verilmiş listeler (randevu, tdcs, 404…): kendi boyutu olmayan li bunu alır
     ol, ul { font-size: $fs-m-body !important; }
   }
@@ -1053,7 +1059,7 @@
    NOT: Sadece <p> ve <li> hedefleniyor — başlıklar (h1-h6) etkilenmez */
 .tms-content p,
 .tms-content li {
-  text-align: left;
+  text-align: justify;
   font-size: 1.125rem;
 
   @include media_mobile {
