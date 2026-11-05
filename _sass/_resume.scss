@@ -618,11 +618,9 @@
       font-size: 1.1rem;
       line-height: 1.7;
       color: $text_color;
-      text-align: justify;
+      text-align: left;
       margin-bottom: 2.5rem;
       max-width: 550px;
-
-      @include media_mobile { text-align: left; }
 
       strong { color: $brand; font-weight: 600; }
     }
@@ -913,10 +911,8 @@
   font-size: 1.18rem !important;
   line-height: 1.95 !important;
   color: $text-body !important;
-  text-align: justify; // Profesyonel yaslama
-
-  // Dar ekranda iki yana yaslama kelime arasında boşluk açar
-  @include media_mobile { text-align: left; }
+  // Sola yaslı: iki yana yaslama kelime aralarında boşluk açıyordu
+  text-align: left;
 
   p {
     margin-bottom: 1.8rem;
@@ -965,7 +961,7 @@
     margin: 2.5rem 0 1rem !important;
   }
 
-  // Metin içi bağlantılar: alt renk + alt çizgi (İçindekiler kendi kuralıyla çizgisiz kalır)
+  // Metin içi bağlantılar: zeytin + alt çizgi (İçindekiler kendi kuralıyla çizgisiz kalır)
   p a, li a {
     color: $brand;
     text-decoration: underline;
@@ -973,10 +969,31 @@
     &:hover { color: $brand-dark; }
   }
 
+  // Site içi sayfa bağlantıları kalın (kaynak ve dış bağlantılar normal kalır)
+  p a[href^="/"], li a[href^="/"] { font-weight: 600; }
+
+  // Telefon ve e-posta bağlantıları (ve elle verilen .link-chip): yuvarlak zeminli etiket.
+  // inline-block, iki yana yaslı metinde bağlantının içindeki boşlukların açılmasını da önler.
+  p a[href^="tel:"], li a[href^="tel:"],
+  p a[href^="mailto:"], li a[href^="mailto:"],
+  .link-chip {
+    display: inline-block;
+    white-space: nowrap;
+    padding: 0 0.5em;
+    border-radius: 6px;
+    background: $brand-tint;
+    color: $brand-dark;
+    font-weight: 600;
+    line-height: 1.6;
+    text-decoration: none;
+    transition: background 0.2s ease;
+    &:hover { background: $brand-line; color: $brand-dark; }
+  }
+
   p {
     font-size: 1.18rem !important;
     line-height: 1.95 !important;
-    text-align: justify;
+    text-align: left;
     margin-bottom: 2rem;
   }
 
@@ -985,7 +1002,6 @@
     h3 { font-size: $fs-m-h3 !important; margin-top: 2rem !important; }
     p  { font-size: $fs-m-body !important; line-height: $lh-m-body !important; }
     // Dar ekranda iki yana yaslama kelime arasında boşluk açar; !important satır içi stilleri de ezer
-    p, li { text-align: left !important; }
     // Satır içi 1.125rem verilmiş listeler (randevu, tdcs, 404…): kendi boyutu olmayan li bunu alır
     ol, ul { font-size: $fs-m-body !important; }
   }
@@ -1037,7 +1053,7 @@
    NOT: Sadece <p> ve <li> hedefleniyor — başlıklar (h1-h6) etkilenmez */
 .tms-content p,
 .tms-content li {
-  text-align: justify;
+  text-align: left;
   font-size: 1.125rem;
 
   @include media_mobile {

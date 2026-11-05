@@ -90,8 +90,11 @@ Kurumsal font **Poppins**. İstenen izlenim: sakin, sıcak, sade, modern ve ça�
 Yalnız **400 ve 600** yüklenir (yükleme hızı); yeni kalınlık eklenmez. Mobil (≤600px) yazı
 kademeleri ana sayfaya göre `_variables.scss`'te: `$fs-m-title` 1.75rem · `$fs-m-h2` 1.4rem ·
 `$fs-m-h3` 1.2rem · `$fs-m-body` 1.1rem / `$lh-m-body` 1.75. İç sayfa, hastalık sayfası ve blog
-bunları kullanır; yeni bileşende mobil boyut sayı olarak yazılmaz. Telefonda gövde metni sola
-yaslıdır (iki yana yaslama dar ekranda kelime arası boşluk açar); masaüstünde iki yana yaslı.
+bunları kullanır; yeni bileşende mobil boyut sayı olarak yazılmaz. Gövde metni her ekranda **sola
+yaslı** (iki yana yaslama kelime aralarında boşluk açıyordu; satır içi `text-align: justify` yazılmaz).
+**Metin içi bağlantılar:** zeytin, altı çizili; site içi sayfa bağlantıları (`href="/…"`) ayrıca kalın.
+Telefon ve e-posta bağlantıları otomatik olarak yuvarlak zeminli etiket (açık zeytin); başka bir
+bağlantı için `.link-chip` sınıfı var, sayfa bağlantılarında kullanılmaz (telefonla karışıyor).
 
 ### Marka renkleri (2026-11-04'te son hâli)
 
@@ -205,7 +208,7 @@ Pazartesi–Cuma 09:00–18:00
 
 **Randevu:** yalnızca bu telefon numarasından verilir; başka site ya da uygulamadan randevu verilmez
 (sitede yazılı). Aramaları muayenehane asistanı yanıtlar (yalnız `/randevu`'da yazılı: hasta doğrudan
-hekime ulaştığını sanıyordu). Telefon Pazartesi–Cuma **09:00–19:30** yanıtlanır, muayene saatleri
+hekime ulaştığını sanıyordu). Telefon Pazartesi–Cumartesi **09:00–19:30** yanıtlanır, muayene saatleri
 09:00–18:00 (schema'daki çalışma saatleri muayene saatidir). Yönlendirme sırası her yerde **önce arama**,
 WhatsApp "arayamadığınız durumlarda" (WhatsApp dönüş süresi yazılmaz).
 
