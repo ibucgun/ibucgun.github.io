@@ -204,13 +204,16 @@ Güzelyalı Mah. 81161. Sok. No:4/107
 01170 Çukurova / Adana
 +90 551 033 48 96
 bilgi@ismailbucgun.com
-Pazartesi–Cuma 09:00–18:00
+Pazartesi–Cuma 09:00–19:00
 ```
 
 **Randevu:** yalnızca bu telefon numarasından verilir; başka site ya da uygulamadan randevu verilmez
 (sitede yazılı). Aramaları muayenehane asistanı yanıtlar (yalnız `/randevu`'da yazılı: hasta doğrudan
-hekime ulaştığını sanıyordu). Telefon Pazartesi–Cumartesi **09:00–19:30** yanıtlanır, muayene saatleri
-09:00–18:00 (schema'daki çalışma saatleri muayene saatidir). Yönlendirme sırası her yerde **önce arama**,
+hekime ulaştığını sanıyordu). Sitede **tek saat** yazılır: çalışma
+saatleri = Google Business Profile = schema, Pazartesi–Cuma 09:00–19:00. Ayrı "muayene saati" ya da
+Cumartesi telefon saati yazılmaz (asistan Cumartesi de yanıtlıyor ama Business Profile'da Cumartesi
+kapalı; az söz verilir, kullanıcı kararı 2026-11-05). Business Profile saati aramalarda görünürlük için
+telefona göre ayarlı. Yönlendirme sırası her yerde **önce arama**,
 WhatsApp "arayamadığınız durumlarda" (WhatsApp dönüş süresi yazılmaz).
 
 Adres 2026'da Hurmalı/Seyhan'dan buraya taşındı. Eski adresi ("Central Plaza
