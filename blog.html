@@ -34,7 +34,6 @@ last_modified_at: 2026-06-23
 <div id="blog-content">
 
   {%- assign feat = site.posts.first -%}
-  {%- assign rest = site.posts | offset: 1 -%}
 
   {%- if feat -%}
   <div id="blog-feat-wrap">
@@ -64,12 +63,13 @@ last_modified_at: 2026-06-23
   </div>
   {%- endif -%}
 
-  {%- if rest.size > 0 -%}
+  {%- if site.posts.size > 1 -%}
   <div id="blog-list-head-wrap">
     <p class="blog-list-head">Diğer Yazılar</p>
   </div>
   <div class="blog-grid" id="blog-grid">
-    {%- for post in rest -%}
+    {%- comment -%} En son yazı yukarıda; offset yalnız for parametresi olarak çalışır (filtre olarak yok sayılır) {%- endcomment -%}
+    {%- for post in site.posts offset: 1 -%}
       {%- assign post_slug = post.category | slugify: 'latin' | default: 'bipolar-bozukluk' -%}
       {%- assign words = post.content | number_of_words -%}
       {%- assign read = words | divided_by: 200 | plus: 1 -%}
@@ -135,21 +135,25 @@ last_modified_at: 2026-06-23
     var term = tlow(q.value.trim());
     var filtering = term !== '' || activeCat !== 'all';
 
-    // Featured: yalnız filtre yokken görünür
+    function matches(el){
+      var cat = el.getAttribute('data-category') || '';
+      var search = el.getAttribute('data-search') || '';
+      var okCat  = activeCat === 'all' || cat === activeCat;
+      var okTerm = !term || tlow(search).indexOf(term) !== -1;
+      return okCat && okTerm;
+    }
+
+    // En son yazı listede tekrarlanmaz; filtreye uyuyorsa yerinde görünür
     var featVisible = false;
     if (feat) {
-      featVisible = !filtering;
+      featVisible = !filtering || matches(feat);
       featWrap.style.display = featVisible ? '' : 'none';
     }
 
     // Kartları filtrele
     var visibleCount = 0;
     cards.forEach(function(card){
-      var cat = card.getAttribute('data-category') || '';
-      var search = card.getAttribute('data-search') || '';
-      var okCat  = activeCat === 'all' || cat === activeCat;
-      var okTerm = !term || tlow(search).indexOf(term) !== -1;
-      var show   = okCat && okTerm;
+      var show = matches(card);
       card.style.display = show ? '' : 'none';
       if (show) visibleCount++;
     });
