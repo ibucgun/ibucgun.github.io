@@ -139,14 +139,19 @@ ul.nav-ul {
     left: 0;
     width: 100%;
     height: 100vh;
+    height: 100dvh; // telefonda görünen alan (adres çubuğu hariç); desteklemeyen tarayıcı 100vh kullanır
+    overflow-y: auto; // yatay ekranda sığmazsa kaydırılsın
     z-index: 9999;
     background: $white;
 
+    // Bağlantılar ortada değil, başlığın hemen altından başlar
+    // (ortalanınca ilk bağlantı ekranın üçte birine düşüyordu)
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 18px;
+    padding: calc(#{$nav-height} + 1.5rem) 0 2rem;
 
     opacity: 0;
     visibility: hidden;
