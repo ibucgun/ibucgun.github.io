@@ -887,6 +887,9 @@
    MODERN İÇERİK Stilleri
    ============================================================================= */
 .content-section {
+  // Sayfa içi bağlantı hedefleri (İçindekiler, #iletisim-bilgileri…) sabit menünün altında kalmasın
+  [id] { scroll-margin-top: 90px; }
+
   h2 {
   @include sans_bold;
   font-size: 1.85rem !important;
