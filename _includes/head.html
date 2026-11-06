@@ -20,7 +20,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   </noscript>
 
-  <link rel="preload" as="image" href="/images/avatar.webp" fetchpriority="high">
+  {%- comment -%} Hekim fotoğrafı yalnız ana sayfada görünür; iç sayfalar önceden yüklemez. {%- endcomment %}
+  {% if page.url == "/" %}<link rel="preload" as="image" href="/images/avatar.webp" fetchpriority="high">{% endif %}
   {% endif %}
 
   <meta name="description" content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160 }}{% endif %}" />
