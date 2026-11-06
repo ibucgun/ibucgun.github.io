@@ -61,7 +61,7 @@ Bunların her biri bir sebepten orada; betik hepsini kontrol eder:
 - **H2 ve H3 başlıkları** — hastalık sayfası iskeleti sabittir; değişiklik gerekiyorsa öner
 - **Çekinceli kalıplar** (`references/mevzuat.md` → B) — yasal güvence
 - **Muayenehane notları ve acil kalıbı** (`references/mevzuat.md` → C) — onaylanmış kalıplar
-- **`<b>` ile vurgulanmış uyarı cümleleri** — bilinçli vurgu; örneğin "Ancak psikoterapi
+- **`<b>` ile vurgulanmış uyarı cümleleri** — bilinçli vurgu; örneğin "Ancak haftalık seanslarla yürütülen yapılandırılmış psikoterapi
   için şu anda yeni hasta kabul edemiyorum." Bağlaçla başlasa da birleştirilmez
 
 ## Akış
@@ -95,7 +95,8 @@ Betiğin göremediklerine bak; bunlar anlam düzeyinde:
 - **Sunulmayan hizmet ima ediliyor mu?** `CLAUDE.md` → *Sunulmayan* tablosuyla karşılaştır:
   EKT, tDCS, psikoterapi (yeni hasta), çocuk-ergen, online, acil
 - **Konumlandırma doğru mu?** Alt alan için "uzmanı" yok; eğitimler olgularla; karşılaştırma yok
-- **Psikoterapi çerçevesi** "yapmıyorum" değil "şu anda yeni hasta kabul edemiyorum" mu?
+- **Psikoterapi çerçevesi** "yapmıyorum" değil "haftalık seanslarla yürütülen yapılandırılmış
+  psikoterapi için şu anda yeni hasta kabul edemiyorum" mu?
   Yönlendirme "uygun yöntemi belirleyip" diye mi anlatılıyor?
 - **Ölçüsüz kesinlik** — sonuç vaadi, "her hastada", "mutlaka iyileşir"
 - **Ses doğru mu?** Tıbbi bilgi birinci şahısla mı yazılmış?

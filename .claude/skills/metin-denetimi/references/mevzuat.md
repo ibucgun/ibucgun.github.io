@@ -152,9 +152,12 @@ cümle içi iki nokta noktaya çevrilebilir, yeter ki tek kelime değişmesin.
   verilmektedir; acil psikiyatri hizmeti verilmemektedir."
 - **EKT notu:** "EKT anestezi gerektirdiği için muayenehanede uygulanmamaktadır …
   hastanelere yönlendirilir."
-- **Psikoterapi kalıbı:** "Şu anda psikoterapi için yeni hasta kabul edemediğimden, …
-  uygun yöntemi belirleyip o yöntemle çalışan bir uzmana yönlendiriyorum." ve
-  "Ancak psikoterapi için şu anda yeni hasta kabul edemiyorum." (kalın, bilinçli ayrı)
+- **Psikoterapi kalıbı:** "Şu anda haftalık seanslarla yürütülen yapılandırılmış psikoterapi için
+  yeni hasta kabul edemediğimden, … uygun yöntemi belirleyip o yöntemle çalışan bir uzmana
+  yönlendiriyorum." ve "Ancak haftalık seanslarla yürütülen yapılandırılmış psikoterapi için şu anda
+  yeni hasta kabul edemiyorum." (kalın, bilinçli ayrı). "Haftalık seanslarla yürütülen yapılandırılmış"
+  nitelemesi düşürülmez: muayene ve takip görüşmeleri psikoterapi eğitimleriyle şekillenir, yalnız
+  haftalık yapılandırılmış süreç için yeni hasta alınmaz. "Çift ve aile terapisi uygulamıyorum."
 - **Online notu:** "Muayenehanede yalnızca yüz yüze hizmet verilmektedir … online muayene
   ve online takip yapılmamaktadır."
 - **Esketamin:** "uygun görülen hastalarda muayenehanede uygulanabilen seçenekler arasındadır";

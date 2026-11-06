@@ -192,9 +192,9 @@ PRATIK = re.compile(r"kılavuzlar\w* doğrultusunda|kılavuzlarda tanımlı prot
                     r"kılavuzlar ve algoritmalar")
 
 TEKRAR_IZINLI = [  # bilinçli tekrarlar: mevzuat.md -> C
-    "112 acil çağrı merkezi", "şu anda psikoterapi için yeni hasta kabul edemediğimden",
+    "112 acil çağrı merkezi", "yapılandırılmış psikoterapi için yeni hasta kabul edemediğimden",
     "bu sayfa yalnızca genel bilgilendirme", "muayenehanede uygulanmamaktadır",
-    "yalnızca yüz yüze hizmet", "psikoterapi için şu anda yeni hasta",
+    "yalnızca yüz yüze hizmet", "yapılandırılmış psikoterapi için şu anda yeni hasta",
 ]
 
 # ---------------------------------------------------------------- tarama

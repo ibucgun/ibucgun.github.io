@@ -247,7 +247,7 @@ yok (yalnızca 2021 kongre kursu); "üç alanda da eğitim aldım" denmez.
 | EKT | Anestezi gerektirir, hastanede uygulanır; hasta yönlendirilir |
 | tDCS | Uygulanmıyor. `/tdcs` yalnızca bilgilendirme sayfası |
 | Esketamin | Uygun hastalarda **muayenehanede uygulanabilir**, henüz uygulanmadı. "Uygun görülen hastalarda muayenehanede uygulanabilen seçenekler arasındadır" yazılır; **"uyguluyorum"** ya da deneyim ima eden ifade **yazılmaz**. Türkiye'de ruhsatlı, reçeteyle temin ediliyor, **SGK geri ödemesi yok** (kullanıcı beyanı, 2026-10; değişirse sayfayı güncelle). Fiyat/maliyet yorumu yazılmaz. FDA onayı (2019) kaynakla yazılır |
-| **Psikoterapi** (BDT, KİPT, destekleyici, psikanalitik) | Eğitimleri var ve yapıyor, ama **şu anda yeni hasta kabul edilemiyor.** İhtiyacı olan yeni hasta ilk muayenede veya takipte belirlenip o yöntemle çalışan uzmana **yönlendirilir**; psikiyatrik takip ve ilaç muayenehanede sürebilir |
+| **Psikoterapi** (BDT, KİPT, destekleyici, psikanalitik) | Muayene ve takip görüşmeleri bu eğitimlerle şekillenir (teknikleri kullanılır), ama **haftalık seanslarla yürütülen yapılandırılmış psikoterapiye şu anda yeni hasta kabul edilemiyor.** **Çift ve aile terapisi uygulanmıyor.** İhtiyacı olan yeni hasta ilk muayenede veya takipte belirlenip o yöntemle çalışan uzmana **yönlendirilir**; psikiyatrik takip ve ilaç muayenehanede sürebilir |
 | **Acil durumlar** (intihar riski, kendine/başkasına zarar, akut kriz, deliryum) | Muayenehane acil hizmet vermez. "Randevu alabileceğiniz durumlar" listelerine **yazılmaz**; her zaman "randevu beklemeden 112 Acil Çağrı Merkezi'ni arayın veya en yakın hastanenin acil servisine başvurun" kalıbıyla yönlendirilir |
 | Çocuk ve ergen psikiyatrisi | Hizmet verilmiyor (18+) |
 | **Online muayene ve takip** | **Hiç yapılmıyor** — ilk muayene, kontrol ve takip dahil yalnızca yüz yüze. "İlk muayene yüz yüze" diye **yazılmaz**: kronik hastalar kontrollerin online olabileceğini sanıp geliyordu |
@@ -255,10 +255,15 @@ yok (yalnızca 2021 kongre kursu); "üç alanda da eğitim aldım" denmez.
 Eğitim ve sertifika kayıtları (`_data/aldigiegitimler.yml`, schema `hasCredential`,
 `knowsAbout`) **kalır** — eğitim beyanı serbesttir, hizmet beyanı değildir.
 
-**Psikoterapi nasıl yazılır:** Çerçeve "yapmıyorum" değil, **"şu anda yeni hasta
-kabul edemiyorum"**. Hastalık sayfalarında kılavuz bilgisi kalır ("OKB'de kılavuzlarda
-önerilen yöntem BDT'dir"), ardından: "Şu anda psikoterapi için yeni hasta kabul
-edemediğimden, … hastaları bu yöntemle çalışan bir uzmana yönlendiriyorum." Yalnız
+**Psikoterapi nasıl yazılır:** Çerçeve "yapmıyorum" değil, **"haftalık seanslarla yürütülen
+yapılandırılmış psikoterapi için şu anda yeni hasta kabul edemiyorum"** — nitelemesi düşürülmez
+(yalnız "psikoterapi" yazınca hekim terapi bilmiyor/yapmıyor diye okunuyordu). `/klinik` ve SSS'de
+ayrıca "Muayene ve takip görüşmelerim aldığım psikoterapi eğitimleriyle şekillenir … tekniklerinden
+yararlanıyorum" yazılır; hastalık sayfalarına eklenmez (kalıp tekrarı). Seyrek görüşme "psikoterapi"
+diye sunulmaz, başkalarının uygulamasına atıf yapılmaz (karşılaştırma). Hastalık sayfalarında kılavuz
+bilgisi kalır ("OKB'de kılavuzlarda önerilen yöntem BDT'dir"), ardından: "Şu anda haftalık seanslarla
+yürütülen yapılandırılmış psikoterapi için yeni hasta kabul edemediğimden, … hastaları bu yöntemle
+çalışan bir uzmana yönlendiriyorum." Yalnız
 "yönlendiriyorum" yazmak "bu hizmeti vermiyorum" diye okunur, yetmez. Sebebi
 ("doluyuz", "yoğunluk nedeniyle") **yazılmaz** — dolaylı hasta yoğunluğu beyanıdır.
 Yönlendirme **düz bir sevk değildir**: hekim psikoterapi ihtiyacını ve hangi yöntemin
