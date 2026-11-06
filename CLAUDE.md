@@ -93,7 +93,7 @@ Yalnız **400 ve 600** yüklenir (yükleme hızı); yeni kalınlık eklenmez. Mo
 kademeleri ana sayfaya göre `_variables.scss`'te: `$fs-m-title` 1.75rem · `$fs-m-h2` 1.4rem ·
 `$fs-m-h3` 1.2rem · `$fs-m-body` 1.1rem / `$lh-m-body` 1.75. İç sayfa, hastalık sayfası ve blog
 bunları kullanır; yeni bileşende mobil boyut sayı olarak yazılmaz. Telefonda gövde metni sola
-yaslıdır (iki yana yaslama dar ekranda kelime arası boşluk açar); masaüstünde iki yana yaslı.
+yaslıdır (iki yana yaslama dar ekranda kelime arası boşluk açar); masaüstünde iki yana yaslı (iç sayfalar ve blog yazıları dahil).
 **Metin içi bağlantılar:** zeytin, altı çizili; site içi sayfa bağlantıları (`href="/…"`) ayrıca kalın.
 `inline-block` **verilmez**: tek parça bağlantı alt satıra inip kalan satırın kelime aralarını açıyordu
 (kullanıcı kararı 2026-11-06, ölçümle). Paragraflarda `text-wrap: pretty`; heceleme (`hyphens: auto`)

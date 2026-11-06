@@ -269,6 +269,11 @@ $post-bg-tint: $brand-wash;
     text-wrap: pretty; // son satırda tek kelime kalmasın
   }
 
+  // Masaüstünde iki yana yaslı (iç sayfalarla aynı); telefonda sola yaslı kalır (dar ekranda boşluk açar)
+  @media (min-width: 601px) {
+    p, li { text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
+  }
+
   // .content-section h2::before bar'ı bizim h2'lere bulaşmasın
   h2 {
     @include sans_bold;
