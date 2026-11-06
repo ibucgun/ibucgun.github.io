@@ -296,6 +296,7 @@ listelenmez.
 | `_layouts/hastalik.html` | Hastalık sayfası şablonu: kaynaklar, uyarı (otomatik tarih), acil kutusu, CTA |
 | `_includes/schema/hastalik.html` | `MedicalWebPage` + `MedicalCondition`; yazar ve gözden geçiren `/#hekim` |
 | `_includes/iletisim-cta.html` | Ara / WhatsApp butonu; `baslik`, `metin`, `buton` parametreleri |
+| `_includes/sabit-arama-cubugu.html` | Telefonda (≤600px) altta sabit Randevu Al / WhatsApp çubuğu; `footer.html`'den çağrılır (`.page-footer` dışında). Sayfadaki arama butonları ekrandayken çekilir. GA4 `sabit_cubuk` |
 | `_includes/acil-kutusu.html` | Acil durum kutusu (112 kalıbı); hastalık şablonu ve `/randevu`; `baslik`, `metin` parametreleri |
 | `_sass/_variables.scss` | Sitenin tüm renkleri (görev adlı değişkenler) ve saydamlık seviyeleri |
 | `llms.txt` | Dil modelleri için site özeti — **hizmet değişince güncelle** |
@@ -383,7 +384,7 @@ kaynak kutusu blogdaki `.post-toc` / `.post-refs` ile aynı dili konuşur; uyar�
 
 `head.html` telefon ve WhatsApp tıklamalarını `phone_click` / `whatsapp_click` olayı ve
 `link_location` parametresiyle gönderir (`hero`, `cta`, `iletisim_karti`, `menu`, `footer`,
-`icerik`). GA4'te ikisi **anahtar etkinlik**, `link_location` özel boyut ("Buton konumu").
+`sabit_cubuk`, `icerik`). GA4'te ikisi **anahtar etkinlik**, `link_location` özel boyut ("Buton konumu").
 Uçtan uca 2026-10-20'de doğrulandı. `gtag` kuyruğu sayfa başında tanımlı (erken tıklama
 kaybolmasın), ağ yüklemesi gecikmeli. Yeni bir buton kapsayıcısı eklenirse `konum`
 eşlemesine ekle.
@@ -394,8 +395,10 @@ Veri çok azsa dönem uzatılır. **İstisnalar** (kullanıcı kararı): 2026-10
 kiremide; 2026-11-04'te ana renk zeytin oldu ve WhatsApp butonu çerçeveli ikincil butona döndü
 (büyük olasılıkla `whatsapp_click`'i etkiler); aynı gün `/tms` arama başlığı "TMS ve Derin TMS
 Tedavisi Nedir?" ve açıklaması yeniden yazıldı (önceki CTR: 62.437 gösterim, %0,73; Search
-Console'da 11-04 öncesi ve sonrası karşılaştırılır). Dönüşüm verisi üç parça okunur: 10-20 → 10-24
-(mor), 10-25 → 11-03 (kiremit, iki dolu buton), 11-04 → (zeytin, WhatsApp çerçeveli).
+Console'da 11-04 öncesi ve sonrası karşılaştırılır). 2026-11-06'da telefonda altta sabit arama
+çubuğu eklendi (kullanıcı kararı: dönüşüm bütün işler bitince toplu değerlendirilecek, acelesi yok).
+Dönüşüm verisi dört parça okunur: 10-20 → 10-24 (mor), 10-25 → 11-03 (kiremit, iki dolu buton),
+11-04 → 11-05 (zeytin, WhatsApp çerçeveli), 11-06 → (sabit arama çubuğu).
 
 ### Senkron tutulması gerekenler
 
@@ -493,9 +496,7 @@ Console'da 11-04 öncesi ve sonrası karşılaştırılır). Dönüşüm verisi 
 - **Tasarım raporu (2026-11-06) — kalan işler.** Rapor kararları: masaüstünde iki yana yaslı
   kalır; Instagram **ana sayfada görünür kalır** (aktif kullanılıyor, oradan hasta geliyor;
   altbilgiye taşınmaz, yalnız dönme efekti kaldırılabilir); C5 alt metin önerisi reddedildi.
-  - **2026-11-10 sonrası, tek tek, başlangıç tarihi not edilerek** (tıklamayı etkiler):
-    mobilde altta sabit "Ara · WhatsApp" çubuğu (kullanıcı onayladı; yeni `link_location`
-    `sabit_cubuk`, `head.html` `konum` eşlemesine eklenir) · menüde "Hastalıklar" · altbilgiye
+  - **Tıklamayı etkileyenler, tek tek, başlangıç tarihi not edilerek:** menüde "Hastalıklar" · altbilgiye
     NAP + Pzt–Cum 09:00–19:00 + hastalık bağlantıları, "Site Haritası" (`sitemap.xml`) kaldırılır ·
     hero: Türkçe unvan, kısa paragraf, mobilde sola yaslı, küçük fotoğraf · `/hakkimda` ile birlikte.
   - Hekim fotoğrafı 800 px + `srcset` (D3): büyük asıl fotoğraf kullanıcıdan bekleniyor.

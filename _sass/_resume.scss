@@ -610,6 +610,10 @@
         background: radial-gradient(circle, rgba($brand, $alpha-mid) 0%, transparent 70%);
         filter: blur(40px);
         z-index: -1;
+
+        // Telefonda fotoğraf tam genişlikte: %120 genişlik sayfayı sağdan taşırıp yana
+        // kaydırıyor, sabit başlık ve arama çubuğunu da ekrandan genişletiyordu
+        @include media_mobile { left: 0; width: 100%; }
       }
     }
 
@@ -1406,6 +1410,60 @@
   }
 }
 
+
+/* =============================================================================
+   SABİT ARAMA ÇUBUĞU (_includes/sabit-arama-cubugu.html)
+   Yalnız telefonda (≤600px): ekranın altında "Randevu Al" (dolu) + WhatsApp (çerçeveli).
+   Menü açıkken üstünde kalmasın diye z-index başlıktan (1100) düşük.
+   ============================================================================= */
+.sabit-cubuk { display: none; }
+
+@include media_mobile {
+  .sabit-cubuk {
+    display: flex;
+    gap: 10px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+    background: $white;
+    border-top: 1px solid $border;
+    box-shadow: 0 -4px 16px rgba($shadow-color, $shadow-faint);
+    transition: transform 0.25s ease, visibility 0s;
+
+    .btn-double-line,
+    .btn-whatsapp {
+      flex: 1;
+      max-width: none;
+      width: auto;
+      min-height: 52px;
+      padding: 6px 10px;
+      box-shadow: none;
+      &:hover { transform: none; }
+    }
+    .btn-whatsapp { box-shadow: inset 0 0 0 2px $action; }
+    .btn-double-line {
+      .btn-main-text { font-size: 1rem; }
+      .btn-sub-text  { font-size: 0.78rem; }
+    }
+  }
+
+  // Sayfadaki arama butonları ekrandayken çubuk aşağı çekilir (odaklanılamaz da)
+  .sabit-cubuk--gizli {
+    transform: translateY(110%);
+    visibility: hidden;
+    transition: transform 0.25s ease, visibility 0s 0.25s;
+  }
+
+  // Çubuk sayfanın sonunu (altbilgiyi) örtmesin
+  body { padding-bottom: calc(73px + env(safe-area-inset-bottom)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sabit-cubuk, .sabit-cubuk--gizli { transition: none; }
+}
 
 /* =============================================================================
    YAZDIRMA

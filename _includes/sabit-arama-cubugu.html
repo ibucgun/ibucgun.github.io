@@ -1,0 +1,28 @@
+{%- comment -%}
+  Telefonda (≤600px) ekranın altında sabit "Randevu Al / WhatsApp" çubuğu. Masaüstünde görünmez.
+  Sayfadaki arama butonları (hero, sayfa sonu CTA'sı) ekrandayken çubuk aşağı çekilir; aynı
+  butonlar iki kez görünmesin. GA4'te link_location: sabit_cubuk (head.html "konum" eşlemesi).
+  Altbilgiden (footer.html) çağrılır; .page-footer'ın dışında durur ki tıklama "footer" sayılmasın.
+{%- endcomment %}
+<div class="sabit-cubuk no-print" role="region" aria-label="Hızlı iletişim">
+  <a href="tel:+905510334896" class="btn-double-line" title="Hemen Ara">
+    <span class="btn-main-text">Randevu Al</span>
+    <span class="btn-sub-text">0 (551) 033 48 96</span>
+  </a>
+  <a href="https://wa.me/905510334896" class="btn-whatsapp" title="WhatsApp Mesajı Gönder" rel="noopener">
+    <span>WhatsApp</span>
+  </a>
+</div>
+<script>
+(function () {
+  var cubuk = document.querySelector('.sabit-cubuk');
+  var butonlar = document.querySelectorAll('.hero-action-btns, .cta-buttons');
+  if (!cubuk || !butonlar.length || !('IntersectionObserver' in window)) return;
+  var gorunen = new Set();
+  var gozlemci = new IntersectionObserver(function (kayitlar) {
+    kayitlar.forEach(function (k) { k.isIntersecting ? gorunen.add(k.target) : gorunen.delete(k.target); });
+    cubuk.classList.toggle('sabit-cubuk--gizli', gorunen.size > 0);
+  });
+  butonlar.forEach(function (b) { gozlemci.observe(b); });
+})();
+</script>
