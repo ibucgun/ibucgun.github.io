@@ -401,7 +401,8 @@ kaynak kutusu blogdaki `.post-toc` / `.post-refs` ile aynı dili konuşur; uyar�
 `sabit_cubuk`, `icerik`). GA4'te ikisi **anahtar etkinlik**, `link_location` özel boyut ("Buton konumu").
 Uçtan uca 2026-10-20'de doğrulandı. `gtag` kuyruğu sayfa başında tanımlı (erken tıklama
 kaybolmasın), ağ yüklemesi gecikmeli. Yeni bir buton kapsayıcısı eklenirse `konum`
-eşlemesine ekle.
+eşlemesine ekle. Sayaç `a[href*="wa.me/"]` ile çalışır: **WhatsApp paylaşım bağlantılarında `wa.me`
+kullanılmaz** (`api.whatsapp.com/send`), yoksa paylaşım randevu dönüşümü sayılır.
 
 **Referans dönemi: 2026-10-20 → 2026-11-10.** Bu tarihe kadar dönüşümü etkileyecek büyük
 değişiklik (`/tms` başlığı, ana sayfanın sadeleşmesi) yapılmaz; önce mevcut durum ölçülür.

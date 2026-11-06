@@ -12,7 +12,14 @@ last_modified_at: 2026-06-23
   Rozetlerin hepsi aynı marka rengindedir (_sass/blog.scss → .blog-badge).
 {%- endcomment -%}
 {%- assign active_cats = site.posts | map: "category" | compact | uniq -%}
+{%- comment -%}
+  Arama kutusu ve "N yazı" sayacı yazı sayısı 12'ye ulaşınca görünür: az yazıda boş bir arama
+  kutusu ve küçük sayaç siteyi "az içerikli" gösteriyordu. Kategori filtresi her zaman çalışır.
+{%- endcomment -%}
+{%- assign cok_yazi = false -%}
+{%- if site.posts.size >= 12 -%}{%- assign cok_yazi = true -%}{%- endif -%}
 
+{% if cok_yazi %}
 <div class="blog-search" role="search">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
     <circle cx="11" cy="11" r="7"></circle>
@@ -20,6 +27,7 @@ last_modified_at: 2026-06-23
   </svg>
   <input id="blog-q" type="search" placeholder="Yazılarda ara: anksiyete, bipolar, psikoterapi…" aria-label="Yazılarda ara" autocomplete="off">
 </div>
+{% endif %}
 
 <div class="blog-filterbar">
   <div class="blog-chips" id="blog-chips" role="tablist" aria-label="Kategori filtresi">
@@ -28,7 +36,7 @@ last_modified_at: 2026-06-23
       <button type="button" class="blog-chip" data-cat="{{ cat | slugify: 'latin' }}" role="tab" aria-selected="false">{{ cat }}</button>
     {%- endfor -%}
   </div>
-  <div class="blog-count" aria-live="polite"><b id="blog-num">{{ site.posts | size }}</b> yazı</div>
+  {% if cok_yazi %}<div class="blog-count" aria-live="polite"><b id="blog-num">{{ site.posts | size }}</b> yazı</div>{% endif %}
 </div>
 
 <div id="blog-content">
@@ -118,7 +126,7 @@ last_modified_at: 2026-06-23
   var emptyMsg = document.getElementById('blog-empty-msg');
   var resetBtn = document.getElementById('blog-reset');
 
-  if (!q || !chips) return;
+  if (!chips) return; // arama kutusu (q) ve sayaç (num) az yazıda yok
 
   var cards = grid ? Array.prototype.slice.call(grid.querySelectorAll('.blog-card')) : [];
   var feat  = featWrap ? featWrap.querySelector('.blog-feat') : null;
@@ -128,11 +136,11 @@ last_modified_at: 2026-06-23
   function tlow(s){ return (s || '').toLocaleLowerCase('tr'); }
 
   function setCount(n){
-    num.textContent = n;
+    if (num) num.textContent = n;
   }
 
   function render(){
-    var term = tlow(q.value.trim());
+    var term = q ? tlow(q.value.trim()) : '';
     var filtering = term !== '' || activeCat !== 'all';
 
     function matches(el){
@@ -204,11 +212,11 @@ last_modified_at: 2026-06-23
     e.preventDefault();
   });
 
-  q.addEventListener('input', render);
+  if (q) q.addEventListener('input', render);
 
   if (resetBtn) {
     resetBtn.addEventListener('click', function(){
-      q.value = '';
+      if (q) q.value = '';
       activeCat = 'all';
       Array.prototype.forEach.call(chips.querySelectorAll('.blog-chip'), function(c){
         var on = c.getAttribute('data-cat') === 'all';
@@ -216,7 +224,7 @@ last_modified_at: 2026-06-23
         c.setAttribute('aria-selected', on ? 'true' : 'false');
       });
       render();
-      q.focus();
+      if (q) q.focus();
     });
   }
 
