@@ -6,7 +6,7 @@ $nav-height: 4.5rem;
 }
 
 header.nav-wrapper {
-  width: 100% !important;
+  width: 100%;
   z-index: 1100;
   position: fixed;
   top: 0;
@@ -16,24 +16,24 @@ header.nav-wrapper {
   box-shadow: 0 2px 10px rgba($shadow-color, $shadow-faint);
 
   .nav-container {
-    height: $nav-height !important;
+    height: $nav-height;
     max-width: 1080px;
-    margin: 0 auto !important;
-    padding: 0 24px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    text-align: left !important;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
     position: relative;
 
     &::before,
     &::after {
-      display: none !important;
-      content: none !important;
+      display: none;
+      content: none;
     }
 
     @include media_mobile {
-      padding: 0 20px !important;
+      padding: 0 20px;
     }
   }
 }
@@ -42,18 +42,18 @@ header.nav-wrapper {
   @include sans_bold;
   font-size: 1.2rem;
   color: $text_color;
-  text-decoration: none !important;
-  line-height: 1 !important;
-  display: flex !important;
-  align-items: center !important;
-  margin: 0 !important;
-  margin-right: auto !important;
-  padding: 0 !important;
+  text-decoration: none;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  margin-right: auto;
+  padding: 0;
   white-space: nowrap;
 
   @include media_mobile {
     font-size: 1.1rem;
-    margin-right: 0 !important;
+    margin-right: 0;
     position: relative;
     z-index: 10001; // açık menüde site adı görünür kalsın
   }
@@ -93,26 +93,26 @@ html.nav-kilit { overflow: hidden; }
 
 /* Masaüstü menü */
 ul.nav-ul {
-  list-style: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  display: flex !important;
-  align-items: center !important;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
   gap: 12px;
 
   li {
-    margin: 0 !important;
-    padding: 0 !important;
+    margin: 0;
+    padding: 0;
     display: flex;
     align-items: center;
 
     a {
-      text-decoration: none !important;
-      border: none !important;
+      text-decoration: none;
+      border: none;
       color: $text-body;
       @include sans_regular;
       padding: 8px 12px;
-      line-height: 1 !important;
+      line-height: 1;
       transition: 0.3s;
 
       &:hover {
@@ -121,7 +121,7 @@ ul.nav-ul {
 
       &.nav-cta {
         background: $action;
-        color: $white !important;
+        color: $white;
         border-radius: 50px;
         font-weight: 600;
         padding: 10px 20px;
@@ -142,11 +142,11 @@ ul.nav-ul {
     z-index: 9999;
     background: $white;
 
-    display: flex !important;
-    flex-direction: column !important;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 18px !important;
+    gap: 18px;
 
     opacity: 0;
     visibility: hidden;
@@ -163,10 +163,10 @@ ul.nav-ul {
   ul.nav-ul li a {
     font-size: 1.4rem;
     font-weight: 600;
-    color: $text_color !important;
+    color: $text_color;
 
     &.nav-cta {
-      color: $white !important;
+      color: $white;
       background-color: $action;
       padding: 12px 30px;
     }
