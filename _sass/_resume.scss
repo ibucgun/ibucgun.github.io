@@ -3,45 +3,8 @@
 
 .print-only { display: none !important }
 
-@media print {
-  .no-print { display: none !important }
-  .print-only { display: block !important }
-  body { font-size: 12px; line-height: 1rem; }
-  .page-header { padding: 1rem 0 .2rem;
-    .header-name {
-      @include sans_bold;
-      font-size: 2rem;
-      margin: 0 0 .2rem;
-    }
-  }
-  
-  .content-section {
-    margin: 0 0 1rem;
-
-    .resume-item { margin-bottom: 1rem; }
-    .resume-item-title {
-      font-size: 16px;
-      line-height: .7em;
-	  
-	  
-	 
-    }
-
-    .resume-item-details {
-      font-size: 12px;
-      margin: 0 0 .75rem;
-      line-height: .7em;
-      font-style:italic;
-
-      &.award-title {
-        font-size: 11px;
-      }
-    }
-  }
-}
-
-
-
+// Yazdırma kuralları dosyanın sonunda ("YAZDIRMA"): ekrandaki !important kurallarını
+// ezebilmesi için onlardan sonra gelmeli.
 
 // =============================================================================
 // MODERN BÖLÜM KARTI (ismailbucgun.com Nihai Tasarım)
@@ -306,7 +269,6 @@
     align-items: center !important; 
     cursor: pointer !important;
     list-style: none !important;
-    outline: none !important;
 
     &::-webkit-details-marker { display: none !important; }
 
@@ -1422,4 +1384,50 @@
     .cred-certificate { flex: none; width: 100%; max-width: 360px; margin: 0 auto; }
     .uyelik-grid { grid-template-columns: 1fr; }
   }
+}
+
+
+/* =============================================================================
+   YAZDIRMA
+   Hasta yakınları bilgi sayfasını yazdırıp götürebilir: metin, acil durum kutusu,
+   kaynaklar ve telefon numarası basılır; menü, harita ve butonlar basılmaz.
+   Dosyanın sonunda durur ki ekrandaki !important kurallarını ezebilsin.
+   ============================================================================= */
+@media print {
+  .no-print { display: none !important }
+  .print-only { display: block !important }
+
+  body { font-size: 11pt; line-height: 1.5; color: $text-strong; background: none; }
+  .page-main-content { padding: 0 !important; }
+
+  // İç sayfa kartı: çerçeve, gölge ve iç boşluk kalkar
+  .modern-page-card {
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+  }
+
+  .content-section {
+    h2 { font-size: 15pt !important; margin: 1.6rem 0 .6rem !important; }
+    h3 { font-size: 12.5pt !important; margin: 1.2rem 0 .4rem !important; }
+    p, li { font-size: 11pt !important; line-height: 1.5 !important; color: $text-strong !important; }
+    h2, h3 { break-after: avoid; page-break-after: avoid; }
+  }
+
+  .callout, .page-refs, .tms-toc, .tms-cta-section { break-inside: avoid; page-break-inside: avoid; }
+
+  // Sayfa sonu CTA'sı: buton düz metne döner, telefon numarası basılır
+  .btn-whatsapp, .btn-instagram { display: none !important; }
+  .cta-buttons { justify-content: flex-start; margin-top: .3rem; }
+  .btn-double-line {
+    flex-direction: row;
+    gap: .5em;
+    padding: 0 !important;
+    background: none !important;
+    color: $text-strong !important;
+    box-shadow: none !important;
+    .btn-main-text, .btn-sub-text { font-size: 12pt; opacity: 1; margin: 0; }
+  }
+  a { color: inherit !important; }
 }
