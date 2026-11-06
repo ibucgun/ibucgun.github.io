@@ -200,8 +200,12 @@ $post-bg-tint: $brand-wash;
     padding: 0;
   }
 
+  // Numara solda sabit, metin kendi sütununda: uzun madde ikinci satırda numaranın altına kaymaz
+  // (hastalık sayfalarındaki .tms-toc ile aynı)
   li {
     counter-increment: t;
+    display: flex;
+    align-items: flex-start;
     margin: 7px 0;
     font-size: 0.92rem;
 
@@ -217,7 +221,8 @@ $post-bg-tint: $brand-wash;
       font-weight: 600;
       align-items: center;
       justify-content: center;
-      margin-right: 10px;
+      flex: none;
+      margin: 0.22em 10px 0 0; // ilk satırın ortasına hizalı (satır ~25px, daire 20px)
       @include sans_bold;
     }
   }
