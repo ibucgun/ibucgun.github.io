@@ -86,7 +86,9 @@ kafa karıştırıcı, karar). Kaynak eklerken bu ifade değiştirilmez.
 
 ## Görsel kimlik
 
-Kurumsal font **Poppins**. İstenen izlenim: sakin, sıcak, sade, modern ve çağdaş.
+Kurumsal font **Poppins**, tek font (gövde için ikinci font eklenmez: yükü artırır, kullanıcı kararı
+2026-11-06). İstenen izlenim: sakin, sıcak, sade, modern ve çağdaş; yeniden tasarımda yön
+**akademik ve kanıta dayalı**. Logo/monogram yok, site adı düz metin kalır.
 Yalnız **400 ve 600** yüklenir (yükleme hızı); yeni kalınlık eklenmez. Mobil (≤600px) yazı
 kademeleri ana sayfaya göre `_variables.scss`'te: `$fs-m-title` 1.75rem · `$fs-m-h2` 1.4rem ·
 `$fs-m-h3` 1.2rem · `$fs-m-body` 1.1rem / `$lh-m-body` 1.75. İç sayfa, hastalık sayfası ve blog
@@ -430,6 +432,13 @@ Console'da 11-04 öncesi ve sonrası karşılaştırılır). Dönüşüm verisi 
   vermezsen kuralın sessizce ezilir.** Kaynak kutusu ve yasal uyarı bu yüzden ilk
   yayında büyük göründü. Alternatif: başlık için `h3` yerine `strong` kullan (TOC böyle).
   Global `!important`'ı kaldırma — 13 sayfadaki tüm başlık ve paragrafları yönetiyor.
+- **Yazdırma stili `_resume.scss`'in en sonundaki "YAZDIRMA" bloğundadır**; ekrandaki `!important`
+  kuralları ezebilmesi için sonda kalır. Sayfa kapsayıcısına (`article`) `no-print` verilmez:
+  `page.html`'de verildiği için iç sayfalar yazdırılınca boş çıkıyordu. Yaşlı hastaların
+  yakınları sayfayı yazdırıyor; telefon numarası baskıda düz metin olarak kalır.
+- Mobil menü gerçek `<button>` + `navigation.html`'deki küçük betik (`aria-expanded`, ✕, Esc,
+  odak döngüsü); onay kutusu yöntemine dönülmez. Tarayıcı paneli arka plandayken CSS geçişi
+  ilerlemez: menü "gizli" ölçülürse önce ekran görüntüsü al.
 - `noindex` için front matter'a `noindex: true` yaz (`head.html` bunu okur).
   `robots.txt`'ye `Disallow` **ekleme** — engellenen sayfa taranamaz, dolayısıyla
   `noindex` görülmez.
@@ -480,6 +489,19 @@ Console'da 11-04 öncesi ve sonrası karşılaştırılır). Dönüşüm verisi 
      schema: `/hakkimda`'ya `ProfilePage` (`mainEntity` → mevcut `/#hekim`; ikinci kişi düğümü
      açılmaz, Physician ana sayfada kalır), `hasCredential`'a DUSEP, RCPsych, NEI · Search
      Console'dan dizine ekleme isteği · 2–3 hafta sıralama takibi.
+
+- **Tasarım raporu (2026-11-06) — kalan işler.** Rapor kararları: masaüstünde iki yana yaslı
+  kalır; Instagram **ana sayfada görünür kalır** (aktif kullanılıyor, oradan hasta geliyor;
+  altbilgiye taşınmaz, yalnız dönme efekti kaldırılabilir); C5 alt metin önerisi reddedildi.
+  - **2026-11-10 sonrası, tek tek, başlangıç tarihi not edilerek** (tıklamayı etkiler):
+    mobilde altta sabit "Ara · WhatsApp" çubuğu (kullanıcı onayladı; yeni `link_location`
+    `sabit_cubuk`, `head.html` `konum` eşlemesine eklenir) · menüde "Hastalıklar" · altbilgiye
+    NAP + Pzt–Cum 09:00–19:00 + hastalık bağlantıları, "Site Haritası" (`sitemap.xml`) kaldırılır ·
+    hero: Türkçe unvan, kısa paragraf, mobilde sola yaslı, küçük fotoğraf · `/hakkimda` ile birlikte.
+  - Hekim fotoğrafı 800 px + `srcset` (D3): büyük asıl fotoğraf kullanıcıdan bekleniyor.
+  - `/tms` ve ana sayfadaki TMS görselleri üreticinin tanıtım görseli/stok: muayenehanedeki
+    cihazın sade fotoğrafıyla değiştirilecek (çekilebilir; bina girişi fotoğrafı `/iletisim` için).
+  - Okunabilirlik: metin sütunu ~68ch + `hyphens: auto` (iki yana yaslıdaki boşluklar için).
 
 **Site dışı**
 6. İyi Psikolog ve Türkiye Psikiyatristleri'ne adres güncelleme maili gönderildi,

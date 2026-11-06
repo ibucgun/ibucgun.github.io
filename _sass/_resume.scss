@@ -992,6 +992,23 @@
       font-size: 1.1rem; letter-spacing: 0.05em; margin-bottom: 2px;
     }
     .callout-text { font-size: 1.1rem; color: $text-strong; margin: 0 !important; text-align: left !important; }
+
+    // Telefonda simge başlığın yanına geçer, metin kutunun tam genişliğini kullanır
+    // (simge ayrı sütunda kalınca satır başına 2–4 kelime düşüyordu)
+    @include media_mobile {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      column-gap: 10px;
+      row-gap: 6px;
+      align-items: center;
+      padding: 18px 20px;
+      border-radius: 14px;
+
+      .callout-icon { width: 24px; height: 24px; }
+      .callout-content { display: contents; }
+      .callout-label { margin: 0; }
+      .callout-text { grid-column: 1 / -1; }
+    }
   }
 
   // Bilgi kutusu nötr: sayfadaki tek renkli kutu acil durum kutusu olsun
@@ -1063,8 +1080,11 @@
   margin: 0;
   padding: 0;
 }
+// Numara solda sabit, metin kendi sütununda: uzun madde ikinci satırda numaranın altına kaymaz
 .tms-content .tms-toc li {
   counter-increment: tmstoc;
+  display: flex;
+  align-items: flex-start;
   margin: 5px 0;
   font-size: 0.88rem;
   line-height: 1.45;
@@ -1083,7 +1103,7 @@
   font-weight: 600;
   align-items: center;
   justify-content: center;
-  margin-right: 9px;
+  margin: 0.15em 9px 0 0; // ilk satırın ortasına hizalı
   flex: none;
 }
 .tms-content .tms-toc a {
