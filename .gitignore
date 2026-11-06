@@ -9,3 +9,6 @@ _vendor
 
 # Yerel raporlar (Search Console verisi içerir; repo herkese açık)
 _raporlar/
+
+# Yerel CSS karşılaştırma düzeneği (önizleme sunucusu ayarı)
+.claude/launch.json

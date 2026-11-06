@@ -890,15 +890,15 @@
 
   h2 {
   @include sans_bold;
-  font-size: 1.85rem !important;
-  color: $text-strong !important;
-  margin: 3.5rem 0 1.5rem !important;
+  font-size: 1.85rem;
+  color: $text-strong;
+  margin: 3.5rem 0 1.5rem;
   
   // Dikeyde hizalamayı bozmamak için flex kuralları
-  display: flex !important;
-  align-items: stretch !important; // Çubuğun metin boyu kadar uzamasını sağlar
-  gap: 15px !important;
-  border: none !important;
+  display: flex;
+  align-items: stretch; // Çubuğun metin boyu kadar uzamasını sağlar
+  gap: 15px;
+  border: none !important; // KVKK metinlerindeki başlık kenarlığını ezer
 
   &::before {
     content: "";
@@ -915,9 +915,9 @@
 
   h3 {
     @include sans_bold;
-    font-size: 1.4rem !important;
-    color: $brand !important;
-    margin: 2.5rem 0 1rem !important;
+    font-size: 1.4rem;
+    color: $brand;
+    margin: 2.5rem 0 1rem;
   }
 
   // Metin içi bağlantılar: zeytin + alt çizgi (İçindekiler kendi kuralıyla çizgisiz kalır)
@@ -963,13 +963,13 @@
   p, li { text-wrap: pretty; }
 
   @include media_mobile {
-    h2 { font-size: $fs-m-h2 !important; line-height: 1.3 !important; margin-top: 2.5rem !important; }
-    h3 { font-size: $fs-m-h3 !important; margin-top: 2rem !important; }
+    h2 { font-size: $fs-m-h2; line-height: 1.3; margin-top: 2.5rem; }
+    h3 { font-size: $fs-m-h3; margin-top: 2rem; }
     p  { font-size: $fs-m-body !important; line-height: $lh-m-body !important; }
     // Dar ekranda iki yana yaslama kelime arasında boşluk açar
     p, li { text-align: left !important; }
     // Listeler: kendi boyutu olmayan li bunu alır
-    ol, ul { font-size: $fs-m-body !important; }
+    ol, ul { font-size: $fs-m-body; }
   }
 
   // Masaüstünde metin iki yana yaslı: heceleme (lang="tr") kelime arasındaki büyük boşlukları azaltır
@@ -996,7 +996,7 @@
       display: block; font-weight: 600;
       font-size: 1.1rem; letter-spacing: 0.05em; margin-bottom: 2px;
     }
-    .callout-text { font-size: 1.1rem; color: $text-strong; margin: 0 !important; text-align: left !important; }
+    .callout-text { font-size: 1.1rem; color: $text-strong; margin: 0; text-align: left; }
 
     // Telefonda simge başlığın yanına geçer, metin kutunun tam genişliğini kullanır
     // (simge ayrı sütunda kalınca satır başına 2–4 kelime düşüyordu)
@@ -1211,15 +1211,7 @@
 .legal-content h1 {
   margin-bottom: 1.5rem;
 }
-.legal-content h2 {
-  margin-top: 2rem;
-  font-size: 1.4rem;
-  color: $brand;
-}
-.legal-content h3 {
-  margin-top: 1.5rem;
-  font-size: 1.15rem;
-}
+// h2/h3 genel iç sayfa kuralından gelir (.content-section)
 .legal-content p,
 .legal-content li {
   font-size: 1rem;
