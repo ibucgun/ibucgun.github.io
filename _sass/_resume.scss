@@ -529,9 +529,9 @@
 /* --- MODERN HERO LAYOUT --- */
 .modern-hero-layout {
   /* Üstten 80px, alttan 60px boşluk bırakarak isme nefes aldırıyoruz */
-  padding: 80px 0 60px 0 !important; 
+  padding: 80px 0 60px 0; 
   margin-top: 20px;
-  border-bottom: none !important;
+  border-bottom: none;
 
   .hero-flex-container {
     display: flex;
@@ -552,8 +552,8 @@
       @include sans_bold;
       font-size: 3.1rem;
       color: $text_color;
-      margin: 0 0 0.5rem 0 !important;
-      padding-left: 0 !important;
+      margin: 0 0 0.5rem 0;
+      padding-left: 0;
       letter-spacing: -0.04em;
       line-height: 1.2;
 
@@ -573,8 +573,8 @@
       @include sans_bold;
       font-size: 1.25rem;
       color: $text-body;
-      margin: 0 0 1.5rem 0 !important;
-      padding-left: 0 !important;
+      margin: 0 0 1.5rem 0;
+      padding-left: 0;
     }
 
     .executive-summary p {
@@ -616,7 +616,7 @@
 /* MOBİL UYUM (GÜNCELLENDİ) */
 @include media_mobile {
   .modern-hero-layout {
-    padding: 2rem 0 !important;
+    padding: 2rem 0;
     
     .hero-flex-container {
       flex-direction: column-reverse;
@@ -639,7 +639,8 @@
 
     /* Buton mobil davranışı global blokta tanımlı */
 
-    .hero-avatar { width: 100% !important; max-width: 400px; }
+    // Masaüstü kuralıyla aynı seçici (.hero-image-side içinde); !important gerekmez
+    .hero-image-side .hero-avatar { width: 100%; max-width: 400px; }
   }
 }
 
