@@ -413,7 +413,8 @@ Console'da 11-04 öncesi ve sonrası karşılaştırılır). 2026-11-06'da telef
 Dönüşüm verisi dört parça okunur: 10-20 → 10-24 (mor), 10-25 → 11-03 (kiremit, iki dolu buton),
 11-04 → 11-05 (zeytin, WhatsApp çerçeveli), 11-06 → (sabit arama çubuğu; aynı gün altbilgiye
 adres · telefon · saat satırı eklendi, `footer` konumu o güne kadar telefon içermiyordu; menüdeki
-"Randevu Al" "Randevu" oldu; hover efektleri kaldırıldı).
+"Randevu Al" "Randevu" oldu; hover efektleri kaldırıldı; blog yazısı sonundaki randevu kutusu `/randevu`
+yerine doğrudan arar, GA4 `cta`).
 
 ### Senkron tutulması gerekenler
 
@@ -512,8 +513,7 @@ adres · telefon · saat satırı eklendi, `footer` konumu o güne kadar telefon
   kalır; Instagram **ana sayfada görünür kalır** (aktif kullanılıyor, oradan hasta geliyor;
   altbilgiye taşınmaz, yalnız dönme efekti kaldırılabilir); C5 alt metin önerisi reddedildi. Altbilgi sade kalır: tek iletişim satırı + yasal
   satırlar; hastalık bağlantıları ve sütunlu düzen denendi, kalabalık bulundu (kullanıcı kararı).
-  - **Tıklamayı etkileyenler, tek tek, başlangıç tarihi not edilerek:** menüde "Hastalıklar"
-    (telefonda 15 madde sığmaz: yalnız açılır tek madde olarak) · hero: Türkçe unvan, kısa paragraf, mobilde sola yaslı, küçük fotoğraf · `/hakkimda` ile birlikte.
+  - **Tıklamayı etkileyenler, tek tek, başlangıç tarihi not edilerek:** hero: Türkçe unvan, kısa paragraf, mobilde sola yaslı, küçük fotoğraf · `/hakkimda` ile birlikte.
   - Hekim fotoğrafı 800 px + `srcset` (D3): büyük asıl fotoğraf kullanıcıdan bekleniyor.
   - `/tms` ve ana sayfadaki TMS görselleri üreticinin tanıtım görseli/stok: muayenehanedeki
     cihazın sade fotoğrafıyla değiştirilecek (çekilebilir; bina girişi fotoğrafı `/iletisim` için).
@@ -524,6 +524,14 @@ adres · telefon · saat satırı eklendi, `footer` konumu o güne kadar telefon
 6. İyi Psikolog ve Türkiye Psikiyatristleri'ne adres güncelleme maili gönderildi,
    takip edilecek. Doktorum360 için KVKK 11. madde talebi opsiyonel.
    (DoktorTakvimi ve Doktorsitesi düzeltildi.)
+
+**Sonra düşünülecekler** (şimdilik yapılmaz, kullanıcı kararı 2026-11-06)
+- **Menüde hastalık sayfalarına erişim (A3).** Hastalık sayfalarına menüden ulaşılamıyor; altbilgiye
+  bağlantı koymak kalabalık bulundu, menüye ekleme ertelendi. Konuşulan seçenekler: (1) menüde
+  "Hastalıklar" → ana sayfadaki Çalışma Alanlarım bölümü (`/#…`), yeni sayfa yok; (2) yeni bir
+  hastalıklar sayfası, kutular ana sayfayla **tek veri dosyasından** (`_data/`) gelir, kısa giriş ve
+  gruplama ile (yalnız liste olursa "içi boş sayfa" olur); (3) `/klinik`'teki ilgili bölüme bağlantı.
+  Menü etiketi hasta için "Hastalıklar" daha anlaşılır; telefonda tek madde (15 madde sığmaz).
 
 **En son — içerik bittikten sonra**
 7. Yeniden tasarım ("yapay zeka yapımı" görünümden çıkarmak). Marka renkleri uygulandı: bkz.

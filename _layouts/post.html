@@ -98,10 +98,14 @@
 
           <div class="post-cta">
             <div class="txt">
-              <b>Bir uzmana danışmak ister misiniz?</b>
-              <span>{% if page.cta_text %}{{ page.cta_text }}{% else %}Psikiyatrik değerlendirme ve takip için randevu oluşturabilirsiniz.{% endif %}</span>
+              <b>Randevu ve bilgi için</b>
+              <span>{% if page.cta_text %}{{ page.cta_text }}{% else %}Psikiyatrik değerlendirme ve takip için muayenehaneyi arayarak randevu alabilirsiniz.{% endif %}</span>
             </div>
-            <a href="/randevu">Randevu Al</a>
+            {%- comment -%} Diğer sayfa sonu butonları gibi doğrudan arar (GA4 link_location: cta) {%- endcomment %}
+            <a href="tel:+905510334896" title="Hemen Ara">
+              <span class="cta-main">Randevu Al</span>
+              <span class="cta-sub">0 (551) 033 48 96</span>
+            </a>
           </div>
 
           {%- assign post_url = site.url | append: page.url -%}

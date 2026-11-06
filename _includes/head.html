@@ -114,6 +114,7 @@
                   : a.closest('.sabit-cubuk') ? 'sabit_cubuk'
                   : a.closest('.page-footer') ? 'footer'
                   : a.closest('.tms-cta-section') ? 'cta'
+                  : a.closest('.post-cta') ? 'cta'
                   : a.closest('.modern-contact-card') ? 'iletisim_karti'
                   : 'icerik';
         gtag('event', a.getAttribute('href').indexOf('tel:') === 0 ? 'phone_click' : 'whatsapp_click', {

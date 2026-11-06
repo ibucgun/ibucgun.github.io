@@ -448,23 +448,35 @@ $post-bg-tint: $brand-wash;
     }
 
     span {
+      display: block;
       font-size: 0.85rem;
       color: $post-muted;
       line-height: 1.5;
     }
   }
 
+  // Arama butonu: "Randevu Al" + altında numara (sitedeki diğer arama butonlarıyla aynı düzen)
   a {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.25;
     background: $action;
     color: $white;
     @include sans_bold;
     font-weight: 600;
     font-size: 0.88rem;
-    padding: 11px 22px;
+    padding: 9px 24px;
     border-radius: 999px;
     text-decoration: none;
     white-space: nowrap;
     transition: background 0.2s;
+
+    .cta-sub {
+      @include sans_regular;
+      font-size: 0.75rem;
+      opacity: 0.9;
+    }
 
     &:hover {
       background: $action-dark;
@@ -473,6 +485,29 @@ $post-bg-tint: $brand-wash;
     &:focus-visible {
       outline: 2px solid $action;
       outline-offset: 3px;
+    }
+  }
+
+  // Telefonda: ortalı başlık ve metin, altında geniş buton (sayfa sonu kutularıyla aynı düzen)
+  @include media_mobile {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    padding: 20px 18px;
+    text-align: center;
+
+    .txt { min-width: 0; }
+    .txt b { font-size: 1.05rem; }
+    .txt span { font-size: 0.92rem; }
+
+    a {
+      align-self: center;
+      width: 100%;
+      max-width: 300px;
+      padding: 12px 20px;
+      font-size: 1rem;
+
+      .cta-sub { font-size: 0.8rem; }
     }
   }
 }
