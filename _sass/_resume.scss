@@ -928,8 +928,9 @@
   }
 
   // Site içi sayfa bağlantıları kalın (kaynak ve dış bağlantılar normal kalır).
-  // inline-block: iki yana yaslı satırda bağlantının içindeki boşluklar açılmaz.
-  p a[href^="/"], li a[href^="/"] { font-weight: 600; display: inline-block; }
+  // inline-block DEĞİL: tek parça bağlantı satıra sığmayınca alt satıra iner, kalan satırdaki
+  // kelime araları çok açılıyordu (/klinik'te ölçüldü: 15px üstü boşluklu satır 4 → 1).
+  p a[href^="/"], li a[href^="/"] { font-weight: 600; }
 
   // Telefon ve e-posta bağlantıları (ve elle verilen .link-chip): yuvarlak zeminli etiket.
   // inline-block, iki yana yaslı metinde bağlantının içindeki boşlukların açılmasını da önler.
@@ -955,6 +956,10 @@
     text-align: justify;
     margin-bottom: 2rem;
   }
+
+  // Paragrafın son satırlarını dengeler, tek kelimelik son satır bırakmaz (Chrome, yeni Safari;
+  // desteklemeyen tarayıcıda etkisiz)
+  p, li { text-wrap: pretty; }
 
   @include media_mobile {
     h2 { font-size: $fs-m-h2 !important; line-height: 1.3 !important; margin-top: 2.5rem !important; }

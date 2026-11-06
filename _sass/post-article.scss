@@ -266,6 +266,7 @@ $post-bg-tint: $brand-wash;
     line-height: 1.75;
     color: $post-text;
     margin: 0 0 1.3em;
+    text-wrap: pretty; // son satırda tek kelime kalmasın
   }
 
   // .content-section h2::before bar'ı bizim h2'lere bulaşmasın

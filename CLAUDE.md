@@ -94,8 +94,11 @@ kademeleri ana sayfaya göre `_variables.scss`'te: `$fs-m-title` 1.75rem · `$fs
 `$fs-m-h3` 1.2rem · `$fs-m-body` 1.1rem / `$lh-m-body` 1.75. İç sayfa, hastalık sayfası ve blog
 bunları kullanır; yeni bileşende mobil boyut sayı olarak yazılmaz. Telefonda gövde metni sola
 yaslıdır (iki yana yaslama dar ekranda kelime arası boşluk açar); masaüstünde iki yana yaslı.
-**Metin içi bağlantılar:** zeytin, altı çizili; site içi sayfa bağlantıları (`href="/…"`) ayrıca kalın ve
-`inline-block` (iki yana yaslı satırda bağlantının içindeki boşluklar açılmasın).
+**Metin içi bağlantılar:** zeytin, altı çizili; site içi sayfa bağlantıları (`href="/…"`) ayrıca kalın.
+`inline-block` **verilmez**: tek parça bağlantı alt satıra inip kalan satırın kelime aralarını açıyordu
+(kullanıcı kararı 2026-11-06, ölçümle). Paragraflarda `text-wrap: pretty`; heceleme (`hyphens: auto`)
+masaüstünde açık ama Chrome Türkçe hecelemiyor, yalnız Firefox/Safari'de etkili. Metin sütunu
+daraltılmaz (~70 karaktere daraltma denendi, iki yana yaslı metinde boşlukları artırdığı için geri alındı).
 Telefon ve e-posta bağlantıları otomatik olarak yuvarlak zeminli etiket (açık zeytin); başka bir
 bağlantı için `.link-chip` sınıfı var, sayfa bağlantılarında kullanılmaz (telefonla karışıyor).
 
@@ -514,7 +517,8 @@ adres · telefon · saat satırı eklendi, `footer` konumu o güne kadar telefon
   - Hekim fotoğrafı 800 px + `srcset` (D3): büyük asıl fotoğraf kullanıcıdan bekleniyor.
   - `/tms` ve ana sayfadaki TMS görselleri üreticinin tanıtım görseli/stok: muayenehanedeki
     cihazın sade fotoğrafıyla değiştirilecek (çekilebilir; bina girişi fotoğrafı `/iletisim` için).
-  - Okunabilirlik: metin sütunu ~68ch + `hyphens: auto` (iki yana yaslıdaki boşluklar için).
+  - Okunabilirlik: kalın yazının azaltılması (B5; ana sayfa girişi, `/klinik`, `/tms` 7. madde) —
+    metin işi, sayfa sayfa önerilir, `metin-denetimi` ile.
 
 **Site dışı**
 6. İyi Psikolog ve Türkiye Psikiyatristleri'ne adres güncelleme maili gönderildi,
