@@ -304,6 +304,7 @@ listelenmez.
 | `_includes/head.html` | Meta, OG, canonical, schema çağrıları, GA4; `seo_title` varsa `<title>` onu kullanır |
 | `images/paylasim-2026-11.jpg` | Paylaşım önizlemesi (OG/Twitter, 1200×630): ana sayfa üst bölümünün ekran görüntüsü. Tasarım ya da renk değişince yeniden çekilir, **dosya adı da değişir** (WhatsApp/Facebook önbelleği). Çekim: Firefox headless `--window-size=1394,732 --screenshot`, ardından `sips -z 630 1200` (çerçeve eskisiyle aynı kalır) |
 | `_includes/schema/hekim-klinik.html` | Ana sayfa JSON-LD (Physician + MedicalClinic) |
+| (kural) | Yapısal veri **yalnız JSON-LD**; şablonlarda mikro veri (`itemscope`/`itemprop`) kullanılmaz. `page.html` eskiden her sayfayı `Person` işaretliyordu ("Depresyon adında kişi"), 2026-11-06'da kaldırıldı |
 | `_includes/schema/tms.html` | `/tms` JSON-LD (FAQPage + MedicalProcedure) |
 | Kökteki hastalık sayfaları | `depresyon.html` vb.; `layout: hastalik` |
 | `_layouts/hastalik.html` | Hastalık sayfası şablonu: kaynaklar, uyarı (otomatik tarih), acil kutusu, CTA |
@@ -513,6 +514,8 @@ yerine doğrudan arar, GA4 `cta`).
   kalır; Instagram **ana sayfada görünür kalır** (aktif kullanılıyor, oradan hasta geliyor;
   altbilgiye taşınmaz, yalnız dönme efekti kaldırılabilir); C5 alt metin önerisi reddedildi. Altbilgi sade kalır: tek iletişim satırı + yasal
   satırlar; hastalık bağlantıları ve sütunlu düzen denendi, kalabalık bulundu (kullanıcı kararı).
+  `/iletisim`'deki Google Haritalar iframe'i kalır (`loading="lazy"`, çerez politikasında yazılı; yol
+  tarifi için etkileşim gerekli); ana sayfada sabit harita görseli kalır.
   - **Tıklamayı etkileyenler, tek tek, başlangıç tarihi not edilerek:** hero: Türkçe unvan, kısa paragraf, mobilde sola yaslı, küçük fotoğraf · `/hakkimda` ile birlikte.
   - Hekim fotoğrafı 800 px + `srcset` (D3): büyük asıl fotoğraf kullanıcıdan bekleniyor.
   - `/tms` ve ana sayfadaki TMS görselleri üreticinin tanıtım görseli/stok: muayenehanedeki

@@ -3,7 +3,7 @@
   {% include head.html %}
   <body class="theme-{% if site.resume_theme %}{{ site.resume_theme }}{% endif %}">
     
-    <div class="wrapper" itemscope itemtype="http://schema.org/Person">
+    <div class="wrapper">
       {% include navigation.html %}
 
       <main class="page-main-content">
@@ -11,7 +11,7 @@
           {% comment %} Geniş yerleşim — dış kart yok, başlık ve içerik sayfa zeminine oturur (örn. /blog). {% endcomment %}
           <header class="page-header page-header--wide">
             <div class="title-bar">
-              <h1 class="header-title" itemprop="name">{{ page.title }}</h1>
+              <h1 class="header-title">{{ page.title }}</h1>
               <div class="header-accent-line"></div>
             </div>
 
@@ -26,7 +26,7 @@
             {% endif %}
           </header>
 
-          <section class="wide-content" itemprop="description">
+          <section class="wide-content">
             {{ content | replace: '&#8617;', '&#8617;&#xfe0e;' }}
           </section>
         {% else %}
@@ -34,7 +34,7 @@
 
             <header class="page-header">
               <div class="title-bar">
-                <h1 class="header-title" itemprop="name">{{ page.title }}</h1>
+                <h1 class="header-title">{{ page.title }}</h1>
                 <div class="header-accent-line"></div>
               </div>
 
@@ -49,7 +49,7 @@
               {% endif %}
             </header>
 
-            <section class="content-section" itemprop="description">
+            <section class="content-section">
               <div class="resume-item">
                 <div class="resume-item-copy">
                   {{ content | replace: '&#8617;', '&#8617;&#xfe0e;' }}
