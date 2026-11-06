@@ -198,12 +198,11 @@ renk kodu (`#rrggbb`, `#rgb`, `rgb(…)`, `rgba(0,0,0,…)`) **yazılmaz**:
 **Kontrol (her SCSS/şablon değişikliğinden sonra; çıktı boş olmalı):**
 
 ```bash
-grep -rniE '#[0-9a-f]{6}\b|#[0-9a-f]{3}\b|rgba?\( *[0-9]' _sass _layouts _includes _posts *.html | grep -vE '^_sass/_(variables|normalize)\.scss:|^_includes/(icons|schema)/'
+grep -rniE '#[0-9a-f]{6}\b|#[0-9a-f]{3}\b|rgba?\( *[0-9]' _sass _layouts _includes _posts *.html | grep -vE '^_sass/_(variables|normalize)\.scss:|^_includes/schema/'
 ```
 
 İstisnalar: `_normalize.scss` (tarayıcı sıfırlama, dokunulmaz), `_includes/schema/`
-(JSON-LD; renk yok, `#hekim` gibi kimlikler var), `_includes/icons/` (temadan kalma, hiçbir
-yerden çağrılmayan sosyal medya ikonları). Komut `href="#abc"` gibi yalnız a–f harfli bir
+(JSON-LD; renk yok, `#hekim` gibi kimlikler var). Komut `href="#abc"` gibi yalnız a–f harfli bir
 sayfa içi bağlantıyı da yakalayabilir; öyle bir satır renk değildir, atlanır.
 
 ## Muayenehane bilgileri (NAP — her yerde birebir aynı olmalı)
@@ -519,6 +518,10 @@ yerine doğrudan arar, GA4 `cta`).
   tarifi için etkileşim gerekli); ana sayfada sabit harita görseli kalır.
   - **Tıklamayı etkileyenler, tek tek, başlangıç tarihi not edilerek:** hero: Türkçe unvan, kısa paragraf, mobilde sola yaslı, küçük fotoğraf · `/hakkimda` ile birlikte.
   - Hekim fotoğrafı 800 px + `srcset` (D3): büyük asıl fotoğraf kullanıcıdan bekleniyor.
+  - CSS: kullanılmayan tema kodu 2026-11-06'da silindi (ızgara sistemi, kod renklendirme, sosyal
+    ikonlar, `_assets/`). Kalan: 22 seçici birden çok yerde tanımlı, 232 `!important` (173'ü
+    `_resume.scss`) — yeniden tasarımda baştan yazılırken temizlenir, tek tek sökülmez. Hız için asıl
+    kazanç Poppins'in yerel yüklenmesi (F1, `head.html`; CSS sıkıştırılmış hâlde yalnız ~10 KB).
   - `/tms` ve ana sayfadaki TMS görselleri üreticinin tanıtım görseli/stok: muayenehanedeki
     cihazın sade fotoğrafıyla değiştirilecek (çekilebilir; bina girişi fotoğrafı `/iletisim` için).
   - Okunabilirlik: kalın yazının azaltılması (B5; ana sayfa girişi, `/klinik`, `/tms` 7. madde) —

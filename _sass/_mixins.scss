@@ -1,48 +1,7 @@
 // Mixins
 // ---------------------------------------/
 
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  border-radius: $radius;
-}
-
-@mixin transition($value) {
-  -webkit-transition: $value;
-  -moz-transition: $value;
-  transition: $value;
-}
-
-// Clearfix
-//
-// Clears floats via mixin (avoid using as a class).
-
-@mixin clearfix {
-  &:before {
-    display: table;
-    content: "";
-  }
-
-  &:after {
-    display: table;
-    clear: both;
-    content: "";
-  }
-}
-
 // media querie tools
-
-@mixin media_max($screen_width) {
-  @media (max-width: $screen_width) { @content; }
-}
-
-@mixin media_min($screen_width) {
-  @media (min-width: $screen_width) { @content; }
-}
-
-@mixin media_larger_than_mobile {
-  @media (min-width: 600px) { @content; }
-}
 
 @mixin media_mobile {
   @media (max-width: 600px) { @content; }
@@ -73,24 +32,6 @@
   font-weight: 600;
   letter-spacing: -0.01em; // Extrabold başlıklar genelde hafif dar olunca daha premium durur
   line-height: 1.2; // Başlık olduğu için satır arası çok açık olmamalı
-}
-
-@mixin serif {
-  font-family: "Poppins", Palatino, Georgia, serif;
-}
-
-@mixin serif_regular {
-  @include serif;
-  font-weight: 400;
-}
-
-@mixin serif_bold {
-  @include serif;
-  font-weight: 600;
-  // Serif fontlarda harfler kalınlaştıkça birbirine çok değer. 
-  // 0.02em - 0.03em arası bir değer sıkışıklığı çözer.
-  letter-spacing: 0.02em; 
-  line-height: 1.3;
 }
 
 // layout

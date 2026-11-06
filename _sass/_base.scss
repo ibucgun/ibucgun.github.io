@@ -53,13 +53,6 @@ a, button, summary, [tabindex] {
   zoom: 1;
 }
 
-// clearfix (now called group,
-// via http://css-tricks.com/snippets/css/clear-fix/)
-.group:before,
-.group:after { content:""; display:table; }
-.group:after { clear:both; }
-.group { zoom:1; /* For IE 6/7 (trigger hasLayout) */ }
-
 ::-moz-selection {
     background: rgba($black, 0.8);
     color: $white;

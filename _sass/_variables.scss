@@ -1,8 +1,6 @@
 // Variables
 // ---------------------------------------/
 
-$container-width: 980px !default;
-$grid-gutter:     10px !default;
 
 // Yazı boyutları — mobil (≤600px)
 // ---------------------------------------
@@ -52,9 +50,6 @@ $surface-alt:       #f4f6eb;   // açık zeytin yüzey: İçindekiler, açık e�
 $danger:            #a61b3a;   // acil durum kutusu metni ve simgesi (kiremitle karışmasın diye mavi alt tonlu)
 $danger-tint:       #fdf2f4;
 $danger-line:       #f1c6cf;
-$warning:           #92400e;   // uyarı kutusu
-$warning-tint:      #fffbeb;
-$warning-line:      #fcd34d;
 
 // Üçüncü taraf marka rengi (yalnız ilgili butonda)
 $instagram:         #e1306c;

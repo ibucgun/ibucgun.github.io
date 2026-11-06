@@ -1,8 +1,6 @@
 // Resume styles
 // ---------------------------------------/
 
-.print-only { display: none !important }
-
 // Yazdırma kuralları dosyanın sonunda ("YAZDIRMA"): ekrandaki !important kurallarını
 // ezebilmesi için onlardan sonra gelmeli.
 
@@ -1028,11 +1026,6 @@
     background-color: $danger-tint; border: 1px solid $danger-line;
     .callout-label, svg { color: $danger; stroke: $danger; }
   }
-
-  .callout-warning {
-    background-color: $warning-tint; border: 1px solid $warning-line;
-    .callout-label, svg { color: $warning; stroke: $warning; }
-  }
 }
 
 
@@ -1502,7 +1495,6 @@
    ============================================================================= */
 @media print {
   .no-print { display: none !important }
-  .print-only { display: block !important }
 
   body { font-size: 11pt; line-height: 1.5; color: $text-strong; background: none; }
   .page-main-content { padding: 0 !important; }

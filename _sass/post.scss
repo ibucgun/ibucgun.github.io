@@ -40,35 +40,6 @@ pre {
   }
 }
 
-.highlight {
-  isolation: isolate;
-  border-radius: 03px;
-  background: $surface-alt;
-
-  .highlighter-rouge & {
-    background: $surface-alt;
-  }
-}
-
-.rouge-table {
-  margin-bottom: 0;
-  font-size: 100%;
-
-  &,
-  td,
-  th {
-    border: none;
-    text-align: left;
-    padding: 0px;
-  }
-
-  .gutter {
-    vertical-align: top;
-    user-select: none;
-    opacity: .25;
-  }
-}
-
 table {
   margin-bottom: 30px;
   width: 100%;
