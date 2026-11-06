@@ -199,7 +199,6 @@
     }
 
     &:hover {
-      transform: translateY(-5px);
       box-shadow: 0 10px 25px rgba($brand, $alpha-soft);
     }
   }
@@ -212,7 +211,7 @@
 
     .practice-box-small {
       background: $brand-wash;
-      border: 1px solid rgba($brand, $alpha-mid);
+      border: 1px solid $brand-line-strong;
       padding: 20px;
       border-radius: 15px;
       text-decoration: none;
@@ -223,6 +222,13 @@
         font-size: 1.15rem;
         color: $text_color;
         margin-bottom: 5px;
+
+        // Kutunun bağlantı olduğu anlaşılsın (dokunmatik ekranda hover yok). Ekran okuyucu oku okumaz.
+        &::after {
+          content: " →";
+          content: " →" / "";
+          color: $brand;
+        }
       }
 
       .small-box-copy {
@@ -438,8 +444,7 @@
   }
 
   &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 35px rgba($action, $alpha-strong);
+    background: $action-dark;
   }
 }
 
@@ -457,7 +462,6 @@
   font-weight: 600;
   transition: all 0.3s ease;
   &:hover {
-    transform: translateY(-3px);
     background: $action-tint;
   }
 }
@@ -466,7 +470,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: white;
+  background: $white;
   color: $brand;
   border: 1px solid rgba($brand, $alpha-strong);
   width: 60px;
@@ -477,7 +481,6 @@
   &:hover {
     color: $instagram;
     border-color: $instagram;
-    transform: translateY(-3px) rotate(8deg);
   }
 }
 
@@ -598,30 +601,14 @@
     display: flex;
     justify-content: center;
 
-    .avatar-glow-wrapper {
-      position: relative;
-      z-index: 1;
-
-      &::after {
-        content: "";
-        position: absolute;
-        top: 10%; left: -10%;
-        width: 120%; height: 100%;
-        background: radial-gradient(circle, rgba($brand, $alpha-mid) 0%, transparent 70%);
-        filter: blur(40px);
-        z-index: -1;
-
-        // Telefonda fotoğraf tam genişlikte: %120 genişlik sayfayı sağdan taşırıp yana
-        // kaydırıyor, sabit başlık ve arama çubuğunu da ekrandan genişletiyordu
-        @include media_mobile { left: 0; width: 100%; }
-      }
-    }
+    // Fotoğraf arkasındaki bulanık parlama kaldırıldı (hazır tema izi; telefonda sayfayı taşırıyordu)
+    .avatar-glow-wrapper { position: relative; }
 
     .hero-avatar {
       width: 400px;
       height: auto;
       border-radius: 24px;
-      box-shadow: 0 20px 50px rgba($shadow-color, $shadow-soft);
+      box-shadow: 0 8px 24px rgba($shadow-color, $shadow-faint);
       display: block;
     }
   }
@@ -701,7 +688,7 @@
         color: $text-body;
         line-height: 1.5;
         
-        .contact-icon { font-size: 1.2rem; }
+        .contact-icon { display: flex; flex: none; padding-top: 2px; color: $brand; }
         .phone-link { 
           color: $text_color; 
           font-weight: 600; 
@@ -740,7 +727,6 @@
         height: 300px;
         object-fit: cover;
         display: block;
-        transition: transform 0.5s ease;
       }
 
       .map-overlay {
@@ -754,6 +740,9 @@
         transition: all 0.3s ease;
         
         .map-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
           background: $white;
           color: $text_color;
           padding: 12px 20px;
@@ -764,7 +753,6 @@
       }
 
       &:hover {
-        .static-map-img { transform: scale(1.05); }
         .map-overlay { opacity: 1; }
       }
     }
@@ -976,6 +964,13 @@
     p, li { text-align: left !important; }
     // Satır içi 1.125rem verilmiş listeler (randevu, tdcs, 404…): kendi boyutu olmayan li bunu alır
     ol, ul { font-size: $fs-m-body !important; }
+  }
+
+  // Masaüstünde metin iki yana yaslı: heceleme (lang="tr") kelime arasındaki büyük boşlukları azaltır
+  @media (min-width: 601px) {
+    p, li { -webkit-hyphens: auto; hyphens: auto; }
+    // Kaynak künyeleri (DOI, sayfa) ve İçindekiler hecelenmez
+    .page-refs li, .tms-toc li { -webkit-hyphens: manual; hyphens: manual; }
   }
 
   /* --- DİKEY ORTALANMIŞ KUTULAR --- */
@@ -1257,6 +1252,32 @@
   padding: 2rem 1rem 1.5rem 1rem;
   margin-top: 2rem;
   text-align: center;
+}
+
+// Üst satır: iletişim (adres · telefon · saat); alttaki yasal satırlardan ince çizgiyle ayrılır.
+.page-footer .footer-nap {
+  max-width: 900px; // masaüstünde tek satır
+  margin: 0 auto 1.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid $border;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: $text-body;
+
+  a {
+    color: $brand-dark;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    &:hover { color: $brand; text-decoration: underline; }
+  }
+  .footer-saat, .footer-adres > span { white-space: nowrap; }
+
+  // Telefonda her bilgi kendi satırında; ayırıcı noktalar satır sonlarına düşmesin
+  @include media_mobile {
+    .footer-sep { display: none; }
+    .footer-adres > span, a, .footer-saat { display: block; }
+  }
 }
 .page-footer .footer-links-row {
   margin-bottom: 1rem;

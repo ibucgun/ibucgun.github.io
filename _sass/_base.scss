@@ -11,6 +11,17 @@ html {
   scroll-behavior: smooth;
 }
 
+// Hareketi azaltmayı seçen kullanıcı (işletim sistemi ayarı): bütün sitede geçiş, animasyon ve
+// yumuşak kaydırma kapanır. Bileşenlerin kendi kuralları da var; bu genel güvencedir.
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 body{
   @include sans;
   color: $text_color;

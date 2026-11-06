@@ -117,10 +117,15 @@ okunuyordu) bir ton açıldı; #606c3d 5,7:1 ile kontrast sınırına yakın bul
 | Kenarlık | #dde0d7 · belirgin #cacec0 | — |
 
 **Görev ayrımı:**
-- **Kiremit = yalnız buton:** "Randevu Al" (menü, ana sayfa, sayfa sonları), WhatsApp, blog
+- **Kiremit = yalnız buton:** "Randevu Al" (ana sayfa, sayfa sonları, sabit çubuk), menüdeki "Randevu", WhatsApp, blog
   yazısındaki randevu kutusunun butonu. Başka hiçbir öğeye kiremit verilmez.
 - **Buton hiyerarşisi:** "Randevu Al" **dolu** kiremit (birincil); WhatsApp **çerçeveli**
   (beyaz zemin, kiremit yazı ve 2px çerçeve; çerçeve `inset` gölgeyle çizilir ki boy değişmesin).
+- **Etiketler:** arama açan butonlar "Randevu Al" + altında numara; menüdeki `/randevu` bağlantısı
+  "Randevu" (aynı etiket iki ayrı iş yapmasın, kullanıcı kararı 2026-11-06). `/tms` ve `/tdcs` "Bilgi Al".
+- **Hareket:** üzerine gelince yukarı kalkma, dönme, büyüme yok (hazır tema izi); yalnız renk, kenar ve
+  gölge değişir. Fotoğraf arkasında parlama yok. Simgeler satır içi SVG, emoji simge kullanılmaz.
+  `prefers-reduced-motion` genel kuralı `_base.scss`'te.
 - **Zeytin = geri kalan her şey:** başlık altı çizgisi, H2 yanındaki dikey çubuk, H3, metin içi
   bağlantılar, rozetler, simgeler ve simge kutuları, kart kenarları, hover, İçindekiler başlığı,
   ikincil bilgi satırları ("Adana Psikiyatri ve TMS", tarih).
@@ -200,14 +205,19 @@ sayfa içi bağlantıyı da yakalayabilir; öyle bir satır renk değildir, atla
 
 ## Muayenehane bilgileri (NAP — her yerde birebir aynı olmalı)
 
+Adres açık biçimde yazılır ("Mahallesi", "Sokak"; "Mah./Sok." kısaltması yok), Google Business
+Profile ile aynı (kullanıcı kararı 2026-11-06). Schema'da `streetAddress` yalnız sokak kısmıdır.
+
 ```
 Uzm. Dr. İsmail Buçgün
-Güzelyalı Mah. 81161. Sok. No:4/107
-01170 Çukurova / Adana
+Güzelyalı Mahallesi 81161. Sokak No:4/107, 01170 Çukurova / Adana
 +90 551 033 48 96
 bilgi@ismailbucgun.com
 Pazartesi–Cuma 09:00–19:00
 ```
+
+Sitede görünen telefon biçimi her yerde **0 (551) 033 48 96** (`tel:+905510334896`); "0551 033 48 96"
+yazılmaz. `+90 551 …` yalnız schema ve dış profiller içindir.
 
 **Randevu:** yalnızca bu telefon numarasından verilir; başka site ya da uygulamadan randevu verilmez
 (sitede yazılı). Aramaları muayenehane asistanı yanıtlar (yalnız `/randevu`'da yazılı: hasta doğrudan
@@ -398,7 +408,9 @@ Tedavisi Nedir?" ve açıklaması yeniden yazıldı (önceki CTR: 62.437 göster
 Console'da 11-04 öncesi ve sonrası karşılaştırılır). 2026-11-06'da telefonda altta sabit arama
 çubuğu eklendi (kullanıcı kararı: dönüşüm bütün işler bitince toplu değerlendirilecek, acelesi yok).
 Dönüşüm verisi dört parça okunur: 10-20 → 10-24 (mor), 10-25 → 11-03 (kiremit, iki dolu buton),
-11-04 → 11-05 (zeytin, WhatsApp çerçeveli), 11-06 → (sabit arama çubuğu).
+11-04 → 11-05 (zeytin, WhatsApp çerçeveli), 11-06 → (sabit arama çubuğu; aynı gün altbilgiye
+adres · telefon · saat satırı eklendi, `footer` konumu o güne kadar telefon içermiyordu; menüdeki
+"Randevu Al" "Randevu" oldu; hover efektleri kaldırıldı).
 
 ### Senkron tutulması gerekenler
 
@@ -495,10 +507,10 @@ Dönüşüm verisi dört parça okunur: 10-20 → 10-24 (mor), 10-25 → 11-03 (
 
 - **Tasarım raporu (2026-11-06) — kalan işler.** Rapor kararları: masaüstünde iki yana yaslı
   kalır; Instagram **ana sayfada görünür kalır** (aktif kullanılıyor, oradan hasta geliyor;
-  altbilgiye taşınmaz, yalnız dönme efekti kaldırılabilir); C5 alt metin önerisi reddedildi.
-  - **Tıklamayı etkileyenler, tek tek, başlangıç tarihi not edilerek:** menüde "Hastalıklar" · altbilgiye
-    NAP + Pzt–Cum 09:00–19:00 + hastalık bağlantıları, "Site Haritası" (`sitemap.xml`) kaldırılır ·
-    hero: Türkçe unvan, kısa paragraf, mobilde sola yaslı, küçük fotoğraf · `/hakkimda` ile birlikte.
+  altbilgiye taşınmaz, yalnız dönme efekti kaldırılabilir); C5 alt metin önerisi reddedildi. Altbilgi sade kalır: tek iletişim satırı + yasal
+  satırlar; hastalık bağlantıları ve sütunlu düzen denendi, kalabalık bulundu (kullanıcı kararı).
+  - **Tıklamayı etkileyenler, tek tek, başlangıç tarihi not edilerek:** menüde "Hastalıklar"
+    (telefonda 15 madde sığmaz: yalnız açılır tek madde olarak) · hero: Türkçe unvan, kısa paragraf, mobilde sola yaslı, küçük fotoğraf · `/hakkimda` ile birlikte.
   - Hekim fotoğrafı 800 px + `srcset` (D3): büyük asıl fotoğraf kullanıcıdan bekleniyor.
   - `/tms` ve ana sayfadaki TMS görselleri üreticinin tanıtım görseli/stok: muayenehanedeki
     cihazın sade fotoğrafıyla değiştirilecek (çekilebilir; bina girişi fotoğrafı `/iletisim` için).

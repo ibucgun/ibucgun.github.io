@@ -218,10 +218,9 @@ $blog-surface: $white;
   box-shadow: 0 1px 2px rgba($shadow-color, $shadow-faint), 0 10px 30px rgba($brand, $alpha-soft);
   text-decoration: none;
   color: inherit;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: box-shadow 0.2s;
 
   &:hover {
-    transform: translateY(-3px);
     box-shadow: 0 6px 14px rgba($shadow-color, $shadow-soft), 0 18px 44px rgba($brand, $alpha-mid);
   }
 
@@ -325,10 +324,9 @@ $blog-surface: $white;
   text-decoration: none;
   color: inherit;
   box-shadow: 0 1px 2px rgba($shadow-color, $shadow-faint), 0 10px 30px rgba($brand, $alpha-soft);
-  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  transition: box-shadow 0.2s, border-color 0.2s;
 
   &:hover {
-    transform: translateY(-4px);
     box-shadow: 0 6px 14px rgba($shadow-color, $shadow-soft), 0 18px 44px rgba($brand, $alpha-mid);
     border-color: $brand-line-strong;
   }

@@ -102,10 +102,10 @@
   margin-bottom: 3rem;
   border: 1px solid rgba($shadow-color, $shadow-faint); // Çok ince, neredeyse görünmez çerçeve
   box-shadow: 0 4px 20px rgba($shadow-color, $shadow-faint); // Çok hafif bir gölge
-  transition: transform 0.3s ease;
+  transition: box-shadow 0.3s ease;
 
+  // Üzerine gelince yalnız gölge hafifçe belirginleşir (yukarı kalkma yok: şablon izi)
   &:hover {
-    transform: translateY(-4px); // Üzerine gelince hafifçe kalkar
     box-shadow: 0 12px 30px rgba($brand, $alpha-soft);
   }
 }
