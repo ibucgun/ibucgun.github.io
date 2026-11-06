@@ -16,7 +16,7 @@ Bireysel psikoterapiler destekleyici psikoterapiden psikanalize uzanan bir yelpa
 
 Açıklayıcı psikoterapi terimi, hasta ve terapist arasındaki ilişkilerin analizi ve daha önce tanınıp anlaşılmamış duygular, düşünceler, gereksinimler ve çatışmalarla ilgili içgörü gelişimi ve hastanın bilinçli olarak bu çatışmaları çözme ve daha iyi bir şekilde bütünselleştirme girişimi izleyen bir süreç yoluyla kişilik değişimini amaçlayan çeşitli yaklaşımlar için kullanılan ortak bir terimdir, bir tür psikanalitik psikoterapidir. Aşağıdaki resimde bireysel psikoterapiler yelpazesini ve terminolojik farklılıkları görebilirsiniz.
 
-<center><img src="/images/psikoterapileryelpazesi.png" alt="Bireysel Psikoterapiler Yelpazesi" width="600px" height="270px" style="max-width:100%;"/></center>
+<center><img src="/images/psikoterapileryelpazesi.png" alt="Bireysel Psikoterapiler Yelpazesi" width="600px" height="270px"/></center>
 
 
 Hangi hastada hangi yöntemin seçileceği hastanın psikopatoloji düzeyi ve o anki gereksinimlerine göre belirlenir. Tedavi planları her zaman hastanın tedavi hedefleri dikkate alınarak şekillendirilir. **Hastaların çoğunluğunun tedavisi, uyumlu ve bütünleşmiş bir tarzda kullanılması gereken destekleyici ve açıklayıcı unsurların birlikteliğini gerektirir.**

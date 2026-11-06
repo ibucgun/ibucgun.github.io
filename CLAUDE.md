@@ -188,6 +188,9 @@ renk kodu (`#rrggbb`, `#rgb`, `rgb(…)`, `rgba(0,0,0,…)`) **yazılmaz**:
 - Saydamlık için sayı yazılmaz: `rgba($brand, $alpha-soft|mid|strong)`,
   gölgede `rgba($shadow-color, $shadow-faint|soft)`.
 - Satır içi SVG'lerde renk `currentColor`'dır; rengi kapsayan öğenin CSS `color`'ı verir.
+- Sayfalara ve yazılara **satır içi `style="…"` yazılmaz** (2026-11-06'da temizlendi; tek istisna ana sayfa
+  TMS kartının arka plan görseli). İç sayfa içeriği `<div class="resume-item tms-content">` ile sarılır;
+  bu sınıf olmadan yazılan sayfa listeleri ve başlıkları farklı boyutta gösterir.
   Simge `<img>` olarak eklenmez (dış SVG dosyasının rengi CSS'ten değiştirilemez).
 - Blog kategori rozetlerinin hepsi aynı marka rengindedir; kategoriye özel renk yoktur.
 - Vurgu için yalnızca iki renk var: ana renk (zeytin) ve eylem rengi (kiremit, yalnız buton),
