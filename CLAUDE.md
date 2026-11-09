@@ -452,12 +452,15 @@ yerine doğrudan arar, GA4 `cta`).
   1.18rem + 1.95 satır aralığı; telefonda sola yaslama da `!important`). Sayfa içinde küçük bir
   paragraf bileşeni (kutu metni, ince yazı) yaparken `font-size`/`line-height`'a `!important`
   vermezsen kuralın sessizce ezilir. Başlıklar (`h2`, `h3`) artık `!important` değil.
-- **`!important` temizliği ölçümle yapılır** (2026-11-06…09: 232 → 112). Yöntem: bir bloğun hepsini
+- **`!important` temizliği ölçümle yapılır** (2026-11-06…09: 232 → 49). Yöntem: bir bloğun hepsini
   kaldır, derle, bütün siteyi (sitemap'teki sayfalar + `/404`, `/parlakisik`, `/blog`; 1280 ve 390px)
   canlı CSS ve yeni CSS ile yan yana açıp her öğenin hesaplanan stilini karşılaştır; fark çıkaranı
   geri koy ya da seçiciyi düzelt. Fark sıfır değilse adım bitmiş sayılmaz. Düzenek scratchpad'de
   (yerel önizleme sunucusu, `.claude/launch.json`, repoya girmez); geçici klasör silinebilir,
   gerekirse yeniden kurulur. Önceki sürümün CSS'i `git archive <commit> css _sass` ile üretilir.
+  Ekran görüntüsüyle karşılaştırmada: yazı tipi yüklenmeden ya da pencere boyutu değiştikten hemen sonra
+  alınan ilk görüntü farklı çıkabilir (yazılarda dağınık birkaç bin piksel); ikinci çekim esas alınır.
+  `!important` 2026-11-09 itibarıyla 49: iç sayfa paragrafı (6, gerekli), yazdırma bloğu (bilinçli), blog.
 - **GitHub Pages yayını takılabilir** ("Deployment cancelled" / "in progress deployment, please
   cancel …"): kod hatası değildir, site önceki hâliyle yayında kalır. Takılı kayıt bir süre sonra
   kendiliğinden "failure"a düşer; sonra boş commit (`git commit --allow-empty`) ile yeni derleme
@@ -529,9 +532,8 @@ yerine doğrudan arar, GA4 `cta`).
   - **Tıklamayı etkileyenler, tek tek, başlangıç tarihi not edilerek:** hero: Türkçe unvan, kısa paragraf, mobilde sola yaslı, küçük fotoğraf · `/hakkimda` ile birlikte.
   - Hekim fotoğrafı 800 px + `srcset` (D3): büyük asıl fotoğraf kullanıcıdan bekleniyor.
   - CSS: kullanılmayan tema kodu 2026-11-06'da silindi (ızgara sistemi, kod renklendirme, sosyal
-    ikonlar, `_assets/`). `!important` 232'den 112'ye indirildi (iç sayfa
-    tipografisi, ana sayfa kartları, menü, hero; görünüm ölçümle birebir aynı). Kalan: sayfa kartı ve
-    başlığı, akordeon, yazdırma bloğu (bilinçli) ve birden çok yerde tanımlı seçiciler. Hız için asıl
+    ikonlar, `_assets/`). `!important` 232'den 49'a indirildi (görünüm ölçümle birebir
+    aynı); kalanlar gerekli ya da bilinçli. Kalan iş: birden çok yerde tanımlı seçicilerin birleştirilmesi. Hız için asıl
     kazanç Poppins'in yerel yüklenmesi (F1, `head.html`; CSS sıkıştırılmış hâlde yalnız ~10 KB).
   - `/tms` ve ana sayfadaki TMS görselleri üreticinin tanıtım görseli/stok: muayenehanedeki
     cihazın sade fotoğrafıyla değiştirilecek (çekilebilir; bina girişi fotoğrafı `/iletisim` için).
