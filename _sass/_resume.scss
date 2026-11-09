@@ -92,11 +92,10 @@
     }
 
     // Özet Metin / Açıklama
-    // !important: iç sayfalardaki genel .resume-item-copy kuralı (1.18rem !important) ezilsin
     .resume-item-copy {
       @include sans_regular;
-      font-size: 1.1rem !important;
-      line-height: 1.6 !important; // Okuma konforu için ferah satır aralığı
+      font-size: 1.1rem;
+      line-height: 1.6; // Okuma konforu için ferah satır aralığı
       color: $text-body;
       margin: 0;
       text-align: left;
@@ -779,44 +778,44 @@
 }
 
 .modern-page-card {
-  background: $white !important;
+  background: $white;
   
   // KENAR ÇİZGİLERİ: 1px kalınlık, marka renginin saydam tonu
-  border: 1px solid rgba($brand, $alpha-strong) !important;
+  border: 1px solid rgba($brand, $alpha-strong);
   
   // GÖLGE: Çerçeveyi destekleyen hafif derinlik
-  box-shadow: 0 8px 30px rgba($shadow-color, $shadow-faint) !important;
+  box-shadow: 0 8px 30px rgba($shadow-color, $shadow-faint);
   
-  border-radius: 20px !important;
+  border-radius: 20px;
   
   // HİZALAMA: Menüdeki metinlerle (1080px wrapper içi) tam dikey hizada
-  width: 100% !important;
-  margin: 0 auto !important;
-  padding: 70px 80px !important; // Geniş ve ferah iç boşluk
+  width: 100%;
+  margin: 0 auto;
+  padding: 70px 80px; // Geniş ve ferah iç boşluk
 
   @include media_mobile {
-    padding: 40px 20px !important;
-    border-radius: 0 !important;
-    border: none !important; // Mobilde ekranı tam kaplaması için çizgiyi kaldırıyoruz
-    box-shadow: none !important;
+    padding: 40px 20px;
+    border-radius: 0;
+    border: none; // Mobilde ekranı tam kaplaması için çizgiyi kaldırıyoruz
+    box-shadow: none;
   }
 
   .page-header {
     text-align: center;
     margin-bottom: 60px;
-    padding: 0 !important;
+    padding: 0;
 
     .header-title {
       @include sans_bold;
-      font-size: 2.8rem !important;
-      color: $text-strong !important;
-      margin-bottom: 20px !important;
-      letter-spacing: -0.04em !important;
+      font-size: 2.8rem;
+      color: $text-strong;
+      margin-bottom: 20px;
+      letter-spacing: -0.04em;
 
       @include media_mobile {
-        font-size: $fs-m-title !important;
-        line-height: 1.25 !important;
-        letter-spacing: -0.02em !important;
+        font-size: $fs-m-title;
+        line-height: 1.25;
+        letter-spacing: -0.02em;
       }
     }
 
@@ -847,16 +846,16 @@
 
 .page-intro-text {
   @include sans_regular;
-  font-size: 1.3rem !important; // Ana metinden daha büyük ve belirgin
-  line-height: 1.6 !important;
-  color: $text_color !important; // Daha yumuşak, modern bir gri
+  font-size: 1.3rem; // Ana metinden daha büyük ve belirgin
+  line-height: 1.6;
+  color: $text_color; // Daha yumuşak, modern bir gri
   text-align: center; // Başlıkla uyumlu merkezi hizalama
-  margin: 0 !important;
+  margin: 0;
   
   // MOBİL UYUMLULUK: Yazı boyutunu küçültme
   @include media_mobile {
-    font-size: $fs-m-body !important;
-    line-height: 1.55 !important;
+    font-size: $fs-m-body;
+    line-height: 1.55;
     text-align: center; // Merkezi hizalama korundu
   }
 }
@@ -864,9 +863,9 @@
 // Kart içi metinlerin profesyonel yerleşimi
 .resume-item-copy {
   @include sans_regular;
-  font-size: 1.18rem !important;
-  line-height: 1.95 !important;
-  color: $text-body !important;
+  font-size: 1.18rem;
+  line-height: 1.95;
+  color: $text-body;
   text-align: justify; // Profesyonel yaslama
 
   // Dar ekranda iki yana yaslama kelime arasında boşluk açar

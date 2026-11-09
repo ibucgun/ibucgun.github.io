@@ -448,13 +448,20 @@ yerine doğrudan arar, GA4 `cta`).
   listeleri için `find … -print0 | xargs -0` kullan.
 - macOS'ta `timeout` yok; BSD `grep` seçenekleri yoldan **önce** ister; `grep -Z`
   güvenilmez.
-- **`.content-section` içindeki `h2`, `h3` ve `p` global olarak `!important` ile
-  stilleniyor** (`_resume.scss`, "MODERN İÇERİK" bloğu: `h3` 1.4rem renkli + 2.5rem üst
-  boşluk, `p` 1.18rem + 1.95 satır aralığı). Sayfa içinde küçük bir bileşen (kutu başlığı,
-  ince yazı) yaparken `font-size`, `color`, `margin`, `line-height`'a **`!important`
-  vermezsen kuralın sessizce ezilir.** Kaynak kutusu ve yasal uyarı bu yüzden ilk
-  yayında büyük göründü. Alternatif: başlık için `h3` yerine `strong` kullan (TOC böyle).
-  Global `!important`'ı kaldırma — 13 sayfadaki tüm başlık ve paragrafları yönetiyor.
+- **`.content-section p` hâlâ `!important` ile stilleniyor** (`_resume.scss`, "MODERN İÇERİK":
+  1.18rem + 1.95 satır aralığı; telefonda sola yaslama da `!important`). Sayfa içinde küçük bir
+  paragraf bileşeni (kutu metni, ince yazı) yaparken `font-size`/`line-height`'a `!important`
+  vermezsen kuralın sessizce ezilir. Başlıklar (`h2`, `h3`) artık `!important` değil.
+- **`!important` temizliği ölçümle yapılır** (2026-11-06…09: 232 → 112). Yöntem: bir bloğun hepsini
+  kaldır, derle, bütün siteyi (sitemap'teki sayfalar + `/404`, `/parlakisik`, `/blog`; 1280 ve 390px)
+  canlı CSS ve yeni CSS ile yan yana açıp her öğenin hesaplanan stilini karşılaştır; fark çıkaranı
+  geri koy ya da seçiciyi düzelt. Fark sıfır değilse adım bitmiş sayılmaz. Düzenek scratchpad'de
+  (yerel önizleme sunucusu, `.claude/launch.json`, repoya girmez); geçici klasör silinebilir,
+  gerekirse yeniden kurulur. Önceki sürümün CSS'i `git archive <commit> css _sass` ile üretilir.
+- **GitHub Pages yayını takılabilir** ("Deployment cancelled" / "in progress deployment, please
+  cancel …"): kod hatası değildir, site önceki hâliyle yayında kalır. Takılı kayıt bir süre sonra
+  kendiliğinden "failure"a düşer; sonra boş commit (`git commit --allow-empty`) ile yeni derleme
+  başlatılır. Derleme kayıtlarındaki "github-pages gem can't satisfy your Gemfile" yalnız uyarıdır.
 - **Yazdırma stili `_resume.scss`'in en sonundaki "YAZDIRMA" bloğundadır**; ekrandaki `!important`
   kuralları ezebilmesi için sonda kalır. Sayfa kapsayıcısına (`article`) `no-print` verilmez:
   `page.html`'de verildiği için iç sayfalar yazdırılınca boş çıkıyordu. Yaşlı hastaların
@@ -522,8 +529,9 @@ yerine doğrudan arar, GA4 `cta`).
   - **Tıklamayı etkileyenler, tek tek, başlangıç tarihi not edilerek:** hero: Türkçe unvan, kısa paragraf, mobilde sola yaslı, küçük fotoğraf · `/hakkimda` ile birlikte.
   - Hekim fotoğrafı 800 px + `srcset` (D3): büyük asıl fotoğraf kullanıcıdan bekleniyor.
   - CSS: kullanılmayan tema kodu 2026-11-06'da silindi (ızgara sistemi, kod renklendirme, sosyal
-    ikonlar, `_assets/`). Kalan: 22 seçici birden çok yerde tanımlı, 232 `!important` (173'ü
-    `_resume.scss`) — yeniden tasarımda baştan yazılırken temizlenir, tek tek sökülmez. Hız için asıl
+    ikonlar, `_assets/`). `!important` 232'den 112'ye indirildi (iç sayfa
+    tipografisi, ana sayfa kartları, menü, hero; görünüm ölçümle birebir aynı). Kalan: sayfa kartı ve
+    başlığı, akordeon, yazdırma bloğu (bilinçli) ve birden çok yerde tanımlı seçiciler. Hız için asıl
     kazanç Poppins'in yerel yüklenmesi (F1, `head.html`; CSS sıkıştırılmış hâlde yalnız ~10 KB).
   - `/tms` ve ana sayfadaki TMS görselleri üreticinin tanıtım görseli/stok: muayenehanedeki
     cihazın sade fotoğrafıyla değiştirilecek (çekilebilir; bina girişi fotoğrafı `/iletisim` için).
