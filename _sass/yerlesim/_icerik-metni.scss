@@ -1,43 +1,41 @@
 // İç sayfa içeriğinin metni (.content-section, .tms-content): H2/H3, paragraf, liste,
 // metin içi bağlantılar ve telefon etiketi, bilgi ve acil durum kutuları (.callout).
 
-/* =============================================================================
-   MODERN İÇERİK Stilleri
-   ============================================================================= */
 .content-section {
   // Sayfa içi bağlantı hedefleri (İçindekiler, #iletisim-bilgileri…) sabit menünün altında kalmasın
   [id] { scroll-margin-top: 90px; }
 
+  // H2: solda zeytin dikey çubuk (::before), çubuk başlık boyunca uzar
   h2 {
-  @include sans_bold;
-  font-size: 1.85rem;
-  color: $text-strong;
-  margin: 3.5rem 0 1.5rem;
-  
-  // Dikeyde hizalamayı bozmamak için flex kuralları
-  display: flex;
-  align-items: stretch; // Çubuğun metin boyu kadar uzamasını sağlar
-  gap: 15px;
-  border: none !important; // KVKK metinlerindeki başlık kenarlığını ezer
+    @include sans_bold;
+    font-size: 1.85rem;
+    color: $text-strong;
+    margin: 3.5rem 0 1.5rem;
+    display: flex;
+    align-items: stretch;
+    gap: 15px;
+    border: none !important; // KVKK metinlerindeki başlık kenarlığını ezer
 
-  &::before {
-    content: "";
-    width: 6px;
-    // Sabit height: 1.8rem; yerine bunları ekliyoruz:
-    min-height: 1.8rem; 
-    height: auto; 
-    
-    background: $brand;
-    border-radius: 4px;
-    flex-shrink: 0; // Çubuğun daralmasını engeller
+    @include media_mobile { font-size: $fs-m-h2; line-height: 1.3; margin-top: 2.5rem; }
+
+    &::before {
+      content: "";
+      width: 6px;
+      min-height: 1.8rem;
+      height: auto;
+      background: $brand;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
   }
-}
 
   h3 {
     @include sans_bold;
     font-size: 1.4rem;
     color: $brand;
     margin: 2.5rem 0 1rem;
+
+    @include media_mobile { font-size: $fs-m-h3; margin-top: 2rem; }
   }
 
   // Metin içi bağlantılar: zeytin + alt çizgi (İçindekiler kendi kuralıyla çizgisiz kalır)
@@ -71,25 +69,28 @@
     &:hover { background: $brand-line; color: $brand-dark; }
   }
 
+  // Paragraf: !important, KVKK metinleri, bilgi kutuları ve hastalık sayfalarının kendi paragraf
+  // kurallarını ezer (kaldırılınca 35 ölçümde yazı küçüldü)
   p {
     font-size: 1.18rem !important;
     line-height: 1.95 !important;
     text-align: justify;
     margin-bottom: 2rem;
+
+    @include media_mobile { font-size: $fs-m-body !important; line-height: $lh-m-body !important; }
   }
 
-  // Paragrafın son satırlarını dengeler, tek kelimelik son satır bırakmaz (Chrome, yeni Safari;
-  // desteklemeyen tarayıcıda etkisiz)
-  p, li { text-wrap: pretty; }
+  // Paragrafın son satırlarını dengeler, tek kelimelik son satır bırakmaz (Chrome, yeni Safari);
+  // telefonda sola yaslı (iki yana yaslama dar ekranda kelime arasında boşluk açar)
+  p, li {
+    text-wrap: pretty;
 
-  @include media_mobile {
-    h2 { font-size: $fs-m-h2; line-height: 1.3; margin-top: 2.5rem; }
-    h3 { font-size: $fs-m-h3; margin-top: 2rem; }
-    p  { font-size: $fs-m-body !important; line-height: $lh-m-body !important; }
-    // Dar ekranda iki yana yaslama kelime arasında boşluk açar
-    p, li { text-align: left !important; }
-    // Listeler: kendi boyutu olmayan li bunu alır
-    ol, ul { font-size: $fs-m-body; }
+    @include media_mobile { text-align: left !important; }
+  }
+
+  // Telefonda listeler gövde boyutunda; kendi boyutu olmayan li bunu alır
+  ol, ul {
+    @include media_mobile { font-size: $fs-m-body; }
   }
 
   // Masaüstünde metin iki yana yaslı: heceleme (lang="tr") kelime arasındaki büyük boşlukları azaltır

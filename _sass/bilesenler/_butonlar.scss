@@ -1,14 +1,9 @@
 // Arama ve WhatsApp butonları: "Randevu Al" (dolu kiremit), WhatsApp (çerçeveli), Instagram.
-// Kullanan: ana sayfa hero, sayfa sonu kutusu (_includes/iletisim-cta.html), /tms, /randevu, sabit çubuk.
+// Kullanan: ana sayfa hero (.hero-action-btns), sayfa sonu kutusu (_includes/iletisim-cta.html,
+// .cta-buttons), /tms, /randevu, sabit çubuk (yerlesim/_sabit-cubuk.scss kendi boyutunu verir).
+// Telefonda butonlar alt alta ve en çok 300px genişlikte.
 
-/* =========================================================
-   GLOBAL CTA BUTONLARI (Telefon / WhatsApp / Instagram)
-   Üç sayfada kullanılır:
-     - Anasayfa hero  → .hero-action-btns konteynerinde
-     - TMS sayfası     → .cta-buttons konteynerinde
-     - Randevu sayfası → .cta-buttons konteynerinde
-   ========================================================= */
-
+// Birincil: dolu kiremit, iki satır (etiket + telefon numarası)
 .btn-double-line {
   display: inline-flex;
   flex-direction: column;
@@ -41,7 +36,7 @@
   }
 }
 
-// İkincil buton: çerçeveli. Çerçeve iç gölgeyle çizilir, boyu "Randevu Al" ile aynı kalsın.
+// İkincil: çerçeveli. Çerçeve iç gölgeyle çizilir ki boyu "Randevu Al" ile aynı kalsın.
 .btn-whatsapp {
   display: inline-flex;
   align-items: center;
@@ -59,6 +54,18 @@
   }
 }
 
+// Telefonda iki buton aynı genişlikte, alt alta
+@include media_mobile {
+  .btn-double-line,
+  .btn-whatsapp {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    padding: 15px 0;
+  }
+}
+
+// Instagram: yalnız simge, yuvarlak
 .btn-instagram {
   display: inline-flex;
   align-items: center;
@@ -71,50 +78,37 @@
   text-decoration: none;
   transition: all 0.3s ease;
 
+  @include media_mobile {
+    width: 50px;
+    height: 50px;
+  }
+
   &:hover {
     color: $instagram;
     border-color: $instagram;
   }
 }
 
-/* Konteyner ortak kuralları */
+// Buton kapsayıcıları: yan yana; telefonda alt alta ve ortalı
 .hero-action-btns,
 .cta-buttons {
   display: flex;
   align-items: stretch;
   gap: 15px;
+
+  @include media_mobile {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .hero-action-btns {
   margin-bottom: 2rem;
+
+  @include media_mobile { width: 100%; }
 }
 
 .cta-buttons {
   justify-content: center;
   margin-top: 1rem;
-}
-
-@include media_mobile {
-  .btn-double-line,
-  .btn-whatsapp {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    padding: 15px 0;
-  }
-
-  .btn-instagram {
-    width: 50px;
-    height: 50px;
-  }
-
-  .hero-action-btns,
-  .cta-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero-action-btns {
-    width: 100%;
-  }
 }

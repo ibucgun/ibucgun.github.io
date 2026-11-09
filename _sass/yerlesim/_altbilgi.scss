@@ -1,84 +1,84 @@
-// Altbilgi (_includes/footer.html): iletişim satırı, yasal bağlantılar, telif ve güncelleme satırı.
+// Altbilgi (_includes/footer.html), yukarıdan aşağı: iletişim satırı (adres · telefon · saat),
+// yasal bağlantılar, telif ve uyarı satırları, yönetmelik satırı (son güncelleme + site editörü).
 
-/* =========================================================
-   FOOTER — Sade yapı: linkler satırı + telif + uyarı
-   ========================================================= */
 .page-footer {
   padding: 2rem 1rem 1.5rem 1rem;
   margin-top: 2rem;
   text-align: center;
-}
 
-// Üst satır: iletişim (adres · telefon · saat); alttaki yasal satırlardan ince çizgiyle ayrılır.
-.page-footer .footer-nap {
-  max-width: 900px; // masaüstünde tek satır
-  margin: 0 auto 1.25rem;
-  padding-bottom: 1.25rem;
-  border-bottom: 1px solid $border;
-  font-size: 0.9rem;
-  line-height: 1.7;
-  color: $text-body;
+  // İletişim satırı; alttaki yasal satırlardan ince çizgiyle ayrılır
+  .footer-nap {
+    max-width: 900px; // masaüstünde tek satır
+    margin: 0 auto 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid $border;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: $text-body;
 
-  a {
-    color: $brand-dark;
-    font-weight: 600;
+    a {
+      color: $brand-dark;
+      font-weight: 600;
+      text-decoration: none;
+      white-space: nowrap;
+      &:hover { color: $brand; text-decoration: underline; }
+    }
+    .footer-saat, .footer-adres > span { white-space: nowrap; }
+
+    // Telefonda her bilgi kendi satırında; ayırıcı noktalar satır sonlarına düşmesin
+    @include media_mobile {
+      .footer-sep { display: none; }
+      .footer-adres > span, a, .footer-saat { display: block; }
+    }
+  }
+
+  // KVKK · Çerez · Açık Rıza bağlantıları; telefonda satır kırılınca aralık açılır
+  .footer-links-row {
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    color: $text-muted;
+
+    @include media_mobile { line-height: 2; }
+  }
+  .footer-links-row a {
+    color: $text-muted;
     text-decoration: none;
-    white-space: nowrap;
-    &:hover { color: $brand; text-decoration: underline; }
   }
-  .footer-saat, .footer-adres > span { white-space: nowrap; }
+  .footer-links-row a:hover {
+    color: $brand;
+    text-decoration: underline;
+  }
 
-  // Telefonda her bilgi kendi satırında; ayırıcı noktalar satır sonlarına düşmesin
-  @include media_mobile {
-    .footer-sep { display: none; }
-    .footer-adres > span, a, .footer-saat { display: block; }
+  // Ayırıcı nokta
+  .footer-sep {
+    margin: 0 0.4rem;
+    color: $border-strong;
+  }
+
+  // Telif ve uyarı satırları
+  .footer-line {
+    margin: 0.25rem 0;
+    font-size: 0.85rem;
+    color: $text-muted;
+    line-height: 1.5;
+
+    @include media_mobile { font-size: 0.8rem; }
+  }
+
+  // Yönetmelik satırı: son güncelleme + site editörü (.footer-line ile birlikte kullanılır)
+  .footer-meta {
+    margin-top: 0.9rem;
+    font-size: 0.78rem;
+    color: $text-muted;
+
+    @include media_mobile { font-size: 0.8rem; } // telefonda diğer satırlarla aynı
+  }
+  .footer-meta a {
+    color: $text-muted;
+    text-decoration: none;
+  }
+  .footer-meta a:hover {
+    color: $brand;
+    text-decoration: underline;
   }
 }
-.page-footer .footer-links-row {
-  margin-bottom: 1rem;
-  font-size: 0.85rem;
-  color: $text-muted;
-}
-.page-footer .footer-links-row a {
-  color: $text-muted;
-  text-decoration: none;
-}
-.page-footer .footer-links-row a:hover {
-  color: $brand;
-  text-decoration: underline;
-}
-.page-footer .footer-sep {
-  margin: 0 0.4rem;
-  color: $border-strong;
-}
-.page-footer .footer-line {
-  margin: 0.25rem 0;
-  font-size: 0.85rem;
-  color: $text-muted;
-  line-height: 1.5;
-}
-/* Yönetmelik bilgisi: son güncelleme + site editörü */
-.page-footer .footer-meta {
-  margin-top: 0.9rem;
-  font-size: 0.78rem;
-  color: $text-muted;
-}
-.page-footer .footer-meta a {
-  color: $text-muted;
-  text-decoration: none;
-}
-.page-footer .footer-meta a:hover {
-  color: $brand;
-  text-decoration: underline;
-}
- 
-/* Mobilde linkler satırı sarmal olabilsin */
-  @include media_mobile {
-  .page-footer .footer-links-row {
-    line-height: 2;
-  }
-  .page-footer .footer-line {
-    font-size: 0.8rem;
-  }
-}
- 

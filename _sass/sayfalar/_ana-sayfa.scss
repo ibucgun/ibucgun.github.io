@@ -1,33 +1,37 @@
-// Ana sayfa (_layouts/resume.html)
-// Bölüm kartları (Çalışma Alanlarım, Yeterlilik, Eğitim…), hastalık kutuları ve TMS kartı,
-// hero (ad, unvan, giriş, butonlar, fotoğraf), iletişim kartı ve harita, Yeterlilik ve Üyelikler.
+// Ana sayfa (_layouts/resume.html), yukarıdan aşağı:
+// 1. Bölüm kartı (.modern-section-card): Çalışma Alanlarım, Yeterlilik ve Üyelikler, Eğitim, Kurumlar…
+// 2. Çalışma Alanlarım içeriği: TMS kartı ve hastalık kutuları (.practice-container)
+// 3. Hero: ad, unvan, giriş, butonlar (bilesenler/_butonlar.scss), fotoğraf
+// 4. İletişim kartı ve harita görseli
+// 5. Yeterlilik ve Üyelikler (#uyelikler): FEBP belgesi ve üyelik kutuları
 
-// =============================================================================
-// MODERN BÖLÜM KARTI (ismailbucgun.com Nihai Tasarım)
-// =============================================================================
-
+// ── 1. Bölüm kartı ─────────────────────────────────────────────────────────────
 .modern-section-card {
-  @include clean_card; // Mixins dosyasındaki hafif gölgeli kural
+  @include clean_card;
   padding: 1.8rem 2rem;
   border: 1px solid rgba($brand, $alpha-mid);
   box-shadow: 0 4px 20px rgba($shadow-color, $shadow-faint);
   margin-bottom: 2.5rem;
 
-  // Başlık Alanı (İkon + H2)
+  @include media_mobile { padding: 1.2rem; }
+
+  // Başlık satırı: simge kutusu + H2
   .section-header {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-bottom: 1.8rem; // Başlık ile ilk madde arası ideal mesafe
+    margin-bottom: 1.8rem;
     border: none;
     background: transparent;
     padding: 0;
     box-shadow: none;
 
-    // Bölüm simgesi kutusu — alt renk (zeytin)
+    @include media_mobile { gap: 12px; }
+
+    // Simge kutusu: içindeki SVG currentColor ile zeytin olur
     .section-icon-wrapper {
       background: $brand-tint;
-      color: $brand; // içindeki SVG'ler currentColor ile bu rengi alır
+      color: $brand;
       width: 52px;
       height: 52px;
       min-width: 52px;
@@ -35,13 +39,19 @@
       align-items: center;
       justify-content: center;
       border-radius: 12px;
+
+      @include media_mobile {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+      }
     }
 
     .section-icon {
       width: 28px;
       height: 28px;
       object-fit: contain;
-	}
+    }
 
     h2 {
       @include sans_extrabold;
@@ -51,14 +61,16 @@
       line-height: 1;
       border: none;
       padding: 0;
+
+      @include media_mobile { font-size: $fs-m-h2; }
     }
   }
 
-  // Maddeler (Eğitim, Deneyim, vb.)
+  // Maddeler (eğitim, kurum…): aralarında ince çizgi
   .resume-item {
-    margin-bottom: 1.2rem; // Maddeler arası dengeli boşluk
+    margin-bottom: 1.2rem;
     padding-bottom: 1.2rem;
-    border-bottom: 1px solid $border; // Belirgin ama ince ara çizgi
+    border-bottom: 1px solid $border;
 
     &:last-child {
       border-bottom: none;
@@ -66,34 +78,38 @@
       margin-bottom: 0;
     }
 
-    // Okul / Kurum İsmi
+    // Okul / kurum adı
     .resume-item-title {
       @include sans_bold;
       font-size: 1.35rem;
       color: $text_color;
-      margin-bottom: 4px; // Detay satırı ile arasındaki orta yol (ne yapışık ne uzak)
+      margin-bottom: 4px;
       line-height: 1.3;
       text-align: left;
+
+      @include media_mobile { font-size: $fs-m-h3; }
     }
 
-    // Eğitim Türü / Pozisyon / Yıl
+    // Derece / görev • yıl
     .resume-item-details {
       @include sans_bold;
-      color: $brand; // ikincil bilgi satırı: alt renk
+      color: $brand;
       font-size: 1rem;
-      text-transform: none; // Uppercase kaldırıldı, yazıldığı gibi
+      text-transform: none;
       margin-top: 0;
-      margin-bottom: 0.6rem; // Altındaki açıklama metniyle mesafe
+      margin-bottom: 0.6rem;
       display: block;
       line-height: 1.3;
       text-align: left;
+
+      @include media_mobile { font-size: 0.95rem; }
     }
 
-    // Özet Metin / Açıklama
+    // Açıklama metni
     .resume-item-copy {
       @include sans_regular;
       font-size: 1.1rem;
-      line-height: 1.6; // Okuma konforu için ferah satır aralığı
+      line-height: 1.6;
       color: $text-body;
       margin: 0;
       text-align: left;
@@ -101,29 +117,8 @@
   }
 }
 
-// Mobil Düzenlemeler
-@include media_mobile {
-  .modern-section-card {
-    padding: 1.2rem;
-    
-    .section-header {
-      gap: 12px;
-      h2 { font-size: $fs-m-h2; }
-      .section-icon-wrapper {
-        width: 44px;
-        height: 44px;
-        min-width: 44px;
-      }
-    }
-    
-    .resume-item {
-      .resume-item-title { font-size: $fs-m-h3; }
-      .resume-item-details { font-size: 0.95rem; }
-    }
-  }
-}
-
-// TMS ve Çalışma Alanları Section
+// ── 2. Çalışma Alanlarım ───────────────────────────────────────────────────────
+// Bölüm girişindeki açıklama paragrafı (#uyelikler'de de kullanılır)
 .section-intro-text {
   @include sans_regular;
   font-size: 1.1rem;
@@ -137,7 +132,7 @@
   flex-direction: column;
   gap: 15px;
 
-  // Öne Çıkan Yatay Kart
+  // TMS kartı: solda görsel, sağda metin; telefonda alt alta
   .practice-box-featured {
     display: flex;
     background: $white;
@@ -146,6 +141,8 @@
     overflow: hidden;
     text-decoration: none;
     transition: all 0.3s ease;
+
+    @include media_mobile { flex-direction: column; }
 
     .featured-img-side {
       flex: 1;
@@ -161,6 +158,7 @@
       flex-direction: column;
       justify-content: center;
 
+      // "Beyin Uyarım Tedavileri" rozeti
       .badge-blue {
         background: $brand-tint;
         color: $brand;
@@ -199,11 +197,13 @@
     }
   }
 
-  // Alt Grid
+  // Hastalık kutuları: iki sütun; telefonda tek sütun
   .practice-grid-bottom {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
+
+    @include media_mobile { grid-template-columns: 1fr; }
 
     .practice-box-small {
       background: $brand-wash;
@@ -242,23 +242,14 @@
   }
 }
 
-// Mobil Düzenleme — masaüstü kurallarıyla aynı seçici (.practice-container içinde); !important gerekmez
-@include media_mobile {
-  .practice-container {
-    .practice-box-featured { flex-direction: column; }
-    .practice-grid-bottom {
-      grid-template-columns: 1fr;
-    }
-  }
-}
-
-
-/* --- MODERN HERO LAYOUT --- */
+// ── 3. Hero ────────────────────────────────────────────────────────────────────
+// Masaüstünde solda metin, sağda fotoğraf; telefonda fotoğraf üstte, metin ortalı.
 .modern-hero-layout {
-  /* Üstten 80px, alttan 60px boşluk bırakarak isme nefes aldırıyoruz */
-  padding: 80px 0 60px 0; 
+  padding: 80px 0 60px 0;
   margin-top: 20px;
   border-bottom: none;
+
+  @include media_mobile { padding: 2rem 0; }
 
   .hero-flex-container {
     display: flex;
@@ -266,15 +257,24 @@
     gap: 4rem;
     min-height: 500px;
     justify-content: space-between;
+
+    @include media_mobile {
+      flex-direction: column-reverse;
+      text-align: center;
+      gap: 2.5rem;
+      min-height: auto;
+    }
   }
 
-  /* Metin Alanı */
   .hero-text-side {
     flex: 1.2;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; // İsim ve ünvanın sola "ip gibi" hizalanması için
+    align-items: flex-start;
 
+    @include media_mobile { align-items: center; }
+
+    // H1: ad + ikinci satırda "Adana Psikiyatri ve TMS"
     .header-name {
       @include sans_bold;
       font-size: 3.1rem;
@@ -284,7 +284,11 @@
       letter-spacing: -0.04em;
       line-height: 1.2;
 
-      // İkinci satır: klinik kimliği (SEO için H1'de "Adana Psikiyatri")
+      @include media_mobile {
+        font-size: 2.4rem;
+        text-align: center;
+      }
+
       .h1-alt {
         display: block;
         font-size: 1.5rem;
@@ -293,17 +297,23 @@
         letter-spacing: -0.01em;
         line-height: 1.3;
         margin-top: 0.55rem;
+
+        @include media_mobile { font-size: 1.2rem; margin-top: 0.4rem; }
       }
     }
 
+    // Unvan satırı
     .header-title {
       @include sans_bold;
       font-size: 1.25rem;
       color: $text-body;
       margin: 0 0 1.5rem 0;
       padding-left: 0;
+
+      @include media_mobile { text-align: center; }
     }
 
+    // Giriş paragrafı (telefonda ortalı; sola yaslamak D4 hero işinde konuşulacak)
     .executive-summary p {
       @include sans_regular;
       font-size: 1.1rem;
@@ -312,19 +322,16 @@
       text-align: justify;
       margin-bottom: 2.5rem;
       max-width: 550px;
-      // Telefonda ortalı: kural aşağıdaki mobil blokta (hero paragrafını sola yaslamak D4 hero işinde)
+
+      @include media_mobile { text-align: center; margin: 0 auto 2rem; }
     }
   }
 
-  /* Buton stilleri: bilesenler/_butonlar.scss */
-
-  /* Görsel ve Parlama (Glow) */
   .hero-image-side {
     flex: 0.8;
     display: flex;
     justify-content: center;
 
-    // Fotoğraf arkasındaki bulanık parlama kaldırıldı (hazır tema izi; telefonda sayfayı taşırıyordu)
     .avatar-glow-wrapper { position: relative; }
 
     .hero-avatar {
@@ -333,43 +340,14 @@
       border-radius: 24px;
       box-shadow: 0 8px 24px rgba($shadow-color, $shadow-faint);
       display: block;
+
+      @include media_mobile { width: 100%; max-width: 400px; }
     }
   }
 }
 
-/* MOBİL UYUM (GÜNCELLENDİ) */
-@include media_mobile {
-  .modern-hero-layout {
-    padding: 2rem 0;
-    
-    .hero-flex-container {
-      flex-direction: column-reverse;
-      text-align: center;
-      gap: 2.5rem;
-      min-height: auto;
-    }
-
-    .hero-text-side {
-      align-items: center; // Mobilde metinleri ortalar
-      
-      .header-name {
-        font-size: 2.4rem;
-        text-align: center;
-        .h1-alt { font-size: 1.2rem; margin-top: 0.4rem; }
-      }
-      .header-title { text-align: center; }
-      .executive-summary p { text-align: center; margin: 0 auto 2rem; }
-    }
-
-    /* Buton mobil davranışı: bilesenler/_butonlar.scss */
-
-    // Masaüstü kuralıyla aynı seçici (.hero-image-side içinde); !important gerekmez
-    .hero-image-side .hero-avatar { width: 100%; max-width: 400px; }
-  }
-}
-
-
-/* --- MODERN İLETİŞİM KARTI --- */
+// ── 4. İletişim kartı ──────────────────────────────────────────────────────────
+// Solda bilgiler, sağda Google Haritalar'a bağlanan harita görseli; telefonda alt alta, ortalı.
 .modern-contact-card {
   background: $white;
   border: 2px solid $border;
@@ -378,13 +356,16 @@
   box-shadow: 0 10px 30px rgba($shadow-color, $shadow-faint);
   margin-top: 2rem;
 
+  @include media_mobile { padding: 2rem; }
+
   .contact-flex-container {
     display: flex;
     gap: 3rem;
     align-items: center;
+
+    @include media_mobile { flex-direction: column; text-align: center; }
   }
 
-  /* Bilgi Tarafı */
   .contact-details-side {
     flex: 1;
 
@@ -402,6 +383,7 @@
       .clinic-subtitle { color: $brand; font-weight: 600; font-size: 0.95rem; }
     }
 
+    // Adres ve telefon satırları (simge + metin)
     .contact-list {
       margin-bottom: 2rem;
       .contact-item {
@@ -411,17 +393,20 @@
         font-size: 1.05rem;
         color: $text-body;
         line-height: 1.5;
-        
+
+        @include media_mobile { justify-content: center; text-align: center; }
+
         .contact-icon { display: flex; flex: none; padding-top: 2px; color: $brand; }
-        .phone-link { 
-          color: $text_color; 
-          font-weight: 600; 
+        .phone-link {
+          color: $text_color;
+          font-weight: 600;
           text-decoration: none;
           &:hover { color: $brand; }
         }
       }
     }
 
+    // "Tüm İletişim Detayları →"
     .btn-outlined-contact {
       display: inline-block;
       padding: 12px 25px;
@@ -435,17 +420,17 @@
     }
   }
 
-  /* Harita Görseli Tarafı */
+  // Harita görseli; üzerine gelince "Haritalarda Aç" etiketi görünür
   .contact-map-side {
     flex: 1;
-    
+
     .map-link-container {
       position: relative;
       display: block;
       border-radius: 20px;
       overflow: hidden;
       box-shadow: 0 15px 35px rgba($shadow-color, $shadow-faint);
-      
+
       .static-map-img {
         width: 100%;
         height: 300px;
@@ -462,7 +447,7 @@
         justify-content: center;
         opacity: 0;
         transition: all 0.3s ease;
-        
+
         .map-btn {
           display: inline-flex;
           align-items: center;
@@ -483,30 +468,18 @@
   }
 }
 
-/* MOBİL UYUM */
-@include media_mobile {
-  .modern-contact-card {
-    padding: 2rem;
-    .contact-flex-container { flex-direction: column; text-align: center; }
-    .contact-item { justify-content: center; text-align: center; }
-    .contact-map-side .static-map-img { height: 200px; }
-  }
-}
-
-
-
-// ============================================
-// Yeterlilik ve Üyelikler (#uyelikler)
-// ============================================
+// ── 5. Yeterlilik ve Üyelikler ─────────────────────────────────────────────────
+// Solda FEBP belgesi, sağda açıklama ve üyelik kutuları; telefonda alt alta.
 #uyelikler {
- 
+
   .cred-flex {
     display: flex;
     gap: 30px;
     align-items: center;
+
+    @include media_mobile { flex-direction: column; align-items: stretch; }
   }
- 
-  // Sol: FEBP belgesi
+
   .cred-certificate {
     flex: 0 0 38%;
     margin: 0;
@@ -515,13 +488,15 @@
     border: 1px solid rgba($brand, $alpha-mid);
     border-radius: 16px;
     text-align: center;
- 
+
+    @include media_mobile { flex: none; width: 100%; max-width: 360px; margin: 0 auto; }
+
     img {
       display: block;
       width: 100%;
       border-radius: 10px;
     }
- 
+
     figcaption {
       @include sans_regular;
       font-size: 0.8rem;
@@ -530,23 +505,24 @@
       margin-top: 12px;
     }
   }
- 
-  // Sağ: açıklama + üyelik ızgarası
+
   .cred-body {
     flex: 1;
- 
+
     .section-intro-text {
       margin-top: 0;
       margin-bottom: 1.2rem;
     }
   }
- 
+
   .uyelik-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
+
+    @include media_mobile { grid-template-columns: 1fr; }
   }
- 
+
   .uyelik-box {
     display: flex;
     align-items: center;
@@ -557,14 +533,15 @@
     border-radius: 12px;
     text-decoration: none;
     transition: all 0.3s ease;
- 
+
     .uyelik-logo {
       width: 40px;
       height: 40px;
       object-fit: contain;
       flex-shrink: 0;
     }
- 
+
+    // Logo yoksa baş harfler
     .uyelik-mark {
       @include sans_bold;
       width: 40px;
@@ -578,23 +555,17 @@
       border-radius: 10px;
       font-size: 0.78rem;
     }
- 
+
     .uyelik-name {
       @include sans_bold;
       font-size: 0.95rem;
       color: $text_color;
       line-height: 1.3;
     }
- 
+
     &:hover {
       border-color: $brand;
       background: $white;
     }
-  }
- 
-  @include media_mobile {
-    .cred-flex { flex-direction: column; align-items: stretch; }
-    .cred-certificate { flex: none; width: 100%; max-width: 360px; margin: 0 auto; }
-    .uyelik-grid { grid-template-columns: 1fr; }
   }
 }
