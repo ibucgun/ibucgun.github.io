@@ -1,6 +1,8 @@
 // Bilgi ve acil durum kutuları (.callout): solda simge, üstte isteğe bağlı etiket, altında metin.
 // .callout-info nötr bilgi kutusu (muayenehane notları: EKT, psikoterapi, esketamin; blog yazılarındaki notlar),
 // .callout-medical acil durum kutusu (_includes/acil-kutusu.html, /sss, /yaslilik-psikiyatrisi).
+// Etiketi olmayan kutuya .etiketsiz eklenir (blog yazılarındaki notlar). :has() kullanılmaz: GitHub Pages'in
+// Sass derleyicisi :has() içeren seçiciyi sessizce bozuyor.
 // Kullanan: iç sayfalar, hastalık sayfaları, blog yazıları. Blogdaki alıntı (blockquote) ayrı biçimdedir.
 
 .callout {
@@ -58,7 +60,7 @@
     .callout-label { margin: 0; }
     .callout-text { grid-column: 1 / -1; font-size: $fs-m-body; line-height: $lh-m-body; }
     .callout-text:first-child { grid-column: 2; }
-    &:not(:has(.callout-label)) .callout-icon { align-self: start; margin-top: 4px; } // etiketsiz: simge ilk satırda
+    &.etiketsiz .callout-icon { align-self: start; margin-top: 4px; } // etiketsiz kutuda simge ilk satırda
   }
 }
 

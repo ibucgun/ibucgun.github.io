@@ -347,7 +347,8 @@ Her dosyanın başında neyi biçimlendirdiği ve hangi şablonların kullandı�
   `sayfa-metni` (sayfa dosyasındaki sarmalayıcı); parçalar `icindekiler`, `kaynaklar`, `sayfa-notu`, `yasal-*`.
   Ana sayfadaki temadan kalma adlar (`resume-item`, `practice-*`, `badge-blue`) yeniden tasarımda değişir.
   Bilgi kutusu blog yazısında da iç sayfadaki yapıyla yazılır: `callout callout-info` > `callout-icon` (SVG) +
-  `callout-content` > (isteğe bağlı `callout-label`) + `p.callout-text`; yalın `<div class="callout">` biçimlenmez.
+  `callout-content` > (isteğe bağlı `callout-label`) + `p.callout-text`; etiket yoksa kutuya `etiketsiz` sınıfı eklenir.
+  Yalın `<div class="callout">` biçimlenmez.
   **Değiştirilmeyecek adlar:** `tms-cta-section`, `post-cta`, `modern-hero-layout`, `modern-contact-card`,
   `hero-action-btns`, `cta-buttons`, `sabit-cubuk`, `nav-wrapper`, `page-footer` (GA4 `konum` eşlemesi ve sabit
   çubuk bunlara bakar; değişirse ölçüm sessizce bozulur).
@@ -496,6 +497,9 @@ yerine doğrudan arar, GA4 `cta`).
   Ekran görüntüsüyle karşılaştırmada: yazı tipi yüklenmeden ya da pencere boyutu değiştikten hemen sonra
   alınan ilk görüntü farklı çıkabilir (yazılarda dağınık birkaç bin piksel); ikinci çekim esas alınır.
   `!important` 2026-11-09 itibarıyla 49: iç sayfa paragrafı (6, gerekli), yazdırma bloğu (bilinçli), blog.
+- **GitHub Pages'in Sass derleyicisi eski** (libsass): `:has()` içeren seçiciyi hata vermeden bozuyor
+  (`.a:not(:has(.b)) .c` canlıda `.a .c` oldu). Yeni CSS sözdizimi kullanılmaz; push sonrası canlı `main.css`
+  yerel derlemeyle kural kural karşılaştırılır.
 - **GitHub Pages yayını takılabilir** ("Deployment cancelled" / "in progress deployment, please
   cancel …"): kod hatası değildir, site önceki hâliyle yayında kalır. Takılı kayıt bir süre sonra
   kendiliğinden "failure"a düşer; sonra boş commit (`git commit --allow-empty`) ile yeni derleme

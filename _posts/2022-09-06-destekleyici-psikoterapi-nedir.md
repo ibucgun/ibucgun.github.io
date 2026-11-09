@@ -34,7 +34,7 @@ Karşılıklı konuşmaya dayalı bir tarzı vardır. Tedavi planı hastanın he
 
 **Tedavi bir takım kurallar içerir ve bu kurallar ilk görüşmede hastaya açıklanır, hasta ile konuşularak netleştirilir. Destekleyici psikoterapi genellikle haftada 1 kere, çoğunlukla belirlenen sabit bir gün ve saatte, 50 dakikalık görüşme şeklinde gerçekleştirilir.** 1 yıldan kısa süren tedaviler kısa süreli, 1 yıldan uzun süren tedaviler ise uzun süreli destekleyici psikoterapi olarak tanımlanır. Akut krize müdahale amacıyla da kullanılabilir. Bu durumda daha az sayıda görüşme genellikle hedeflere ulaşmak için yeterlidir. Fakat kişilik bozukluğu gibi durumlarda daha çok sayıda görüşme ve uzun tedavi süreleri gerekebilir. Tedavi, hastanın mevcut belirtileri azaldığında, hedeflere ulaşıldığında ve daha yeterli başa çıkma mekanizmaları geliştirildiğinde tamamlanmış olur.
 
-<div class="callout callout-info">
+<div class="callout callout-info etiketsiz">
   <div class="callout-icon">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 16V12M12 8H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </div>
