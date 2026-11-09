@@ -189,7 +189,7 @@ renk kodu (`#rrggbb`, `#rgb`, `rgb(…)`, `rgba(0,0,0,…)`) **yazılmaz**:
   gölgede `rgba($shadow-color, $shadow-faint|soft)`.
 - Satır içi SVG'lerde renk `currentColor`'dır; rengi kapsayan öğenin CSS `color`'ı verir.
 - Sayfalara ve yazılara **satır içi `style="…"` yazılmaz** (2026-11-06'da temizlendi; tek istisna ana sayfa
-  TMS kartının arka plan görseli). İç sayfa içeriği `<div class="resume-item tms-content">` ile sarılır;
+  TMS kartının arka plan görseli). İç sayfa içeriği `<div class="sayfa-metni">` ile sarılır;
   bu sınıf olmadan yazılan sayfa listeleri ve başlıkları farklı boyutta gösterir.
   Simge `<img>` olarak eklenmez (dış SVG dosyasının rengi CSS'ten değiştirilemez).
 - Blog kategori rozetlerinin hepsi aynı marka rengindedir; kategoriye özel renk yoktur.
@@ -343,6 +343,12 @@ Her dosyanın başında neyi biçimlendirdiği ve hangi şablonların kullandı�
 - Yeni `!important` eklenmez. Bir kural ezilemiyorsa seçicinin özgüllüğü düzeltilir; `!important` yalnız
   ölçümle gerekli çıkarsa ve yanında nedeni yazılarak kalır.
 - Yorumlar ne işe yaradığını anlatır, tarihçeyi değil ("Nihai tasarım", "güncellendi" yazılmaz).
+- Sınıf adları Türkçe ve işini anlatır. İç sayfa iskeleti: `sayfa-karti` > `sayfa-icerigi` > `sayfa-govdesi` >
+  `sayfa-metni` (sayfa dosyasındaki sarmalayıcı); parçalar `icindekiler`, `kaynaklar`, `sayfa-notu`, `yasal-*`.
+  Ana sayfadaki temadan kalma adlar (`resume-item`, `practice-*`, `badge-blue`) yeniden tasarımda değişir.
+  **Değiştirilmeyecek adlar:** `tms-cta-section`, `post-cta`, `modern-hero-layout`, `modern-contact-card`,
+  `hero-action-btns`, `cta-buttons`, `sabit-cubuk`, `nav-wrapper`, `page-footer` (GA4 `konum` eşlemesi ve sabit
+  çubuk bunlara bakar; değişirse ölçüm sessizce bozulur).
 - Değişiklik sonrası görünüm düzenekle doğrulanır (bkz. "Bilinen tuzaklar → `!important` temizliği").
 
 ### Hastalık sayfası düzeni
@@ -475,7 +481,7 @@ yerine doğrudan arar, GA4 `cta`).
   listeleri için `find … -print0 | xargs -0` kullan.
 - macOS'ta `timeout` yok; BSD `grep` seçenekleri yoldan **önce** ister; `grep -Z`
   güvenilmez.
-- **`.content-section p` hâlâ `!important` ile stilleniyor** (`_sass/yerlesim/_icerik-metni.scss`:
+- **`.sayfa-icerigi p` hâlâ `!important` ile stilleniyor** (`_sass/yerlesim/_icerik-metni.scss`:
   `$fs-govde` + `$lh-govde`; telefonda sola yaslama da `!important`). Sayfa içinde küçük bir
   paragraf bileşeni (kutu metni, ince yazı) yaparken `font-size`/`line-height`'a `!important`
   vermezsen kuralın sessizce ezilir. Başlıklar (`h2`, `h3`) artık `!important` değil.
@@ -512,7 +518,7 @@ yerine doğrudan arar, GA4 `cta`).
    `/tms`'den hastalık sayfalarına link 3.1/3.2 listelerindeki hastalık adlarından verilir;
    `/anksiyete-bozukluklari`'na verilmez (o sayfa bilinçli olarak TMS'yi anmıyor).
 2. **`/tdcs` kaynakları.** 6 atıfsız iddia var, kaynak listesi yok (yalnız tek bir satır içi
-   "Kaynak:" notu). `/tms` ve `/klinik`'teki kaynak kutusu (`.page-refs`, elle eklenmiş) örnek alınır.
+   "Kaynak:" notu). `/tms` ve `/klinik`'teki kaynak kutusu (`.kaynaklar`, elle eklenmiş) örnek alınır.
 
 > Hastalık sayfaları muayenehanedeki **değerlendirme ve tedavi sürecini** anlatır,
 > hastalığın "nedir"ini **blog yazıları** anlatır. Aynı metni iki yere yazma;

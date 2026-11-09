@@ -1,31 +1,31 @@
 // İçerik görselleri: figure ve alt yazı, içerikteki görsellerin taşmaması, /iletisim harita çerçevesi.
 
 /* 4) Görsel + alt yazı */
-.tms-content figure {
+.sayfa-metni figure {
   margin: 1.5rem 0;
   text-align: center;
 }
-.tms-content figure img {
+.sayfa-metni figure img {
   max-width: 100%;
   height: auto;
   border: 0;
 }
 
 // İçerikteki görseller kutudan taşmasın (figure dışındakiler de; /tdcs gibi)
-.content-section img {
+.sayfa-icerigi img {
   max-width: 100%;
   height: auto;
 }
 
 // /iletisim Google Haritalar çerçevesi
-.content-section .harita-cerceve {
+.sayfa-icerigi .harita-cerceve {
   display: block;
   width: 100%;
   height: 450px;
   border: 0;
   border-radius: 14px;
 }
-.tms-content figcaption {
+.sayfa-metni figcaption {
   font-size: $fs-sm;
   color: $text-muted;
   margin-top: 0.4rem;

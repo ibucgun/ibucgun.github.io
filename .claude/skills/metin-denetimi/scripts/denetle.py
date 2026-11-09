@@ -80,7 +80,7 @@ def fm_degeri(ham):
 ATLA = [
     r"<script\b.*?</script>", r"<style\b.*?</style>", r"<svg\b.*?</svg>", r"<!--.*?-->",
     r"\{%-?\s*comment\s*-?%\}.*?\{%-?\s*endcomment\s*-?%\}",
-    r'<nav class="tms-toc".*?</nav>', r"```.*?```",
+    r'<nav class="icindekiler".*?</nav>', r"```.*?```",
 ]
 
 
@@ -206,7 +206,7 @@ def tara(yol):
     mevzuat, izler = [], {k: [] for k, _, _ in IZLER}
     izler["mektedir_yigini"], izler["iki_nokta"], izler["retorik_soru"], izler["unlem"] = [], [], [], []
     kelime, cumleler, mektedir_toplam = 0, [], 0
-    refs_var = bool(re.search(r"^refs:", icerik, re.M)) or "page-refs" in icerik or "post-refs" in icerik
+    refs_var = bool(re.search(r"^refs:", icerik, re.M)) or 'class="kaynaklar"' in icerik or "post-refs" in icerik
     govde_ilk = ayir(icerik)[2]  # front matter (lead, description) özet metindir; atıf gövdede aranır
     for no, t, st in satirlar:
         baslik = st == "baslik"

@@ -7,12 +7,12 @@ layout: page
     Kaynaklar (page.refs) → yasal uyarı → acil durum kutusu → CTA
   Front matter: seo_title, kosul, kosul_diger, refs, acil, acil_baslik, last_modified_at
 {%- endcomment -%}
-<div class="resume-item tms-content">
+<div class="sayfa-metni">
 
 {{ content }}
 
 {%- if page.refs %}
-<div class="page-refs" id="kaynaklar">
+<div class="kaynaklar" id="kaynaklar">
 <h3>Kaynaklar</h3>
 <ol>
 {%- for r in page.refs %}
@@ -23,7 +23,7 @@ layout: page
 {%- endif %}
 
 {%- assign aylar = "Ocak,Şubat,Mart,Nisan,Mayıs,Haziran,Temmuz,Ağustos,Eylül,Ekim,Kasım,Aralık" | split: "," %}
-<p class="page-note">Bu sayfa yalnızca genel bilgilendirme amacı taşır; kişisel tanı, tedavi veya tıbbi tavsiye yerine geçmez. Hazırlayan: {{ site.resume_name }}, {{ site.author_specialty }}.{% if page.last_modified_at %}{% assign ay = page.last_modified_at | date: "%-m" | minus: 1 %} Son güncelleme: <time datetime="{{ page.last_modified_at | date: '%Y-%m-%d' }}">{{ page.last_modified_at | date: "%-d" }} {{ aylar[ay] }} {{ page.last_modified_at | date: "%Y" }}</time>.{% endif %}</p>
+<p class="sayfa-notu">Bu sayfa yalnızca genel bilgilendirme amacı taşır; kişisel tanı, tedavi veya tıbbi tavsiye yerine geçmez. Hazırlayan: {{ site.resume_name }}, {{ site.author_specialty }}.{% if page.last_modified_at %}{% assign ay = page.last_modified_at | date: "%-m" | minus: 1 %} Son güncelleme: <time datetime="{{ page.last_modified_at | date: '%Y-%m-%d' }}">{{ page.last_modified_at | date: "%-d" }} {{ aylar[ay] }} {{ page.last_modified_at | date: "%Y" }}</time>.{% endif %}</p>
 
 {% include acil-kutusu.html baslik=page.acil_baslik metin=page.acil %}
 

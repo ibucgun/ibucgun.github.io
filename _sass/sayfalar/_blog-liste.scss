@@ -51,7 +51,7 @@
   }
 
   // Blog başlıklarındaki içeriden gelen accent-bar (::before) override'ı.
-  // .content-section h2 ::before kuralı yanlışlıkla tetiklenmesin diye.
+  // .sayfa-icerigi h2 ::before kuralı yanlışlıkla tetiklenmesin diye.
   .blog-feat h2,
   .blog-card h3 {
     display: block !important;

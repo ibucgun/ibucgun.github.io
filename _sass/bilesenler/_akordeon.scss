@@ -115,8 +115,9 @@
       line-height: $lh-govde;
       color: $text-body;
       margin: 0;
+      text-align: justify;
 
-      @include media_mobile { font-size: $fs-base; }
+      @include media_mobile { font-size: $fs-base; text-align: left; }
     }
   }
 }

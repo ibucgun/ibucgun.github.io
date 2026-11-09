@@ -1,7 +1,7 @@
-// İç sayfa içeriğinin metni (.content-section, .tms-content): H2/H3, paragraf, liste,
+// İç sayfa içeriğinin metni (.sayfa-icerigi, .sayfa-metni): H2/H3, paragraf, liste,
 // metin içi bağlantılar ve telefon etiketi, bilgi ve acil durum kutuları (.callout).
 
-.content-section {
+.sayfa-icerigi {
   // Sayfa içi bağlantı hedefleri (İçindekiler, #iletisim-bilgileri…) sabit menünün altında kalmasın
   [id] { scroll-margin-top: 90px; }
 
@@ -97,7 +97,7 @@
   @media (min-width: 601px) {
     p, li { -webkit-hyphens: auto; hyphens: auto; }
     // Kaynak künyeleri (DOI, sayfa) ve İçindekiler hecelenmez
-    .page-refs li, .tms-toc li { -webkit-hyphens: manual; hyphens: manual; }
+    .kaynaklar li, .icindekiler li { -webkit-hyphens: manual; hyphens: manual; }
   }
 
   /* --- DİKEY ORTALANMIŞ KUTULAR --- */
@@ -157,8 +157,8 @@
 /* 1) İçerik metnini eski inline stillerin yerine geçirir
    (text-align: justify; font-size: $fs-govde;)
    NOT: Sadece <p> ve <li> hedefleniyor — başlıklar (h1-h6) etkilenmez */
-.tms-content p,
-.tms-content li {
+.sayfa-metni p,
+.sayfa-metni li {
   text-align: justify;
   font-size: $fs-govde;
 
@@ -171,7 +171,7 @@
 /* 2) Başlıkların yaslı (justify) görünmesini önleme — koruma kuralı
    Tema CSS'i veya kalıtım nedeniyle h2/h3 yaslı görünebiliyor;
    bunu net bir şekilde sola yaslı yapar */
-.tms-content h2,
-.tms-content h3 {
+.sayfa-metni h2,
+.sayfa-metni h3 {
   text-align: left;
 }

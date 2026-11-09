@@ -13,21 +13,21 @@
   .page-main-content { padding: 0 !important; }
 
   // İç sayfa kartı: çerçeve, gölge ve iç boşluk kalkar
-  .modern-page-card {
+  .sayfa-karti {
     border: none !important;
     box-shadow: none !important;
     border-radius: 0 !important;
     padding: 0 !important;
   }
 
-  .content-section {
+  .sayfa-icerigi {
     h2 { font-size: 15pt !important; margin: 1.6rem 0 .6rem !important; }
     h3 { font-size: 12.5pt !important; margin: 1.2rem 0 .4rem !important; }
     p, li { font-size: 11pt !important; line-height: 1.5 !important; color: $text-strong !important; }
     h2, h3 { break-after: avoid; page-break-after: avoid; }
   }
 
-  .callout, .page-refs, .tms-toc, .tms-cta-section { break-inside: avoid; page-break-inside: avoid; }
+  .callout, .kaynaklar, .icindekiler, .tms-cta-section { break-inside: avoid; page-break-inside: avoid; }
 
   // Sayfa sonu CTA'sı: buton düz metne döner, telefon numarası basılır
   .btn-whatsapp, .btn-instagram { display: none !important; }

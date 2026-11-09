@@ -1,5 +1,5 @@
 // İç sayfa iskeleti (_layouts/page.html): sayfa kartı, başlık ve altındaki çizgi, giriş cümlesi,
-// içerik sarmalayıcısı (.resume-item-copy).
+// içerik sarmalayıcısı (.sayfa-govdesi).
 
 /* --- MODERN GENİŞ SAYFA KARTI (NİHAİ TASARIM) --- */
 
@@ -8,7 +8,7 @@
   background: transparent;
 }
 
-.modern-page-card {
+.sayfa-karti {
   background: $white;
   
   // KENAR ÇİZGİLERİ: 1px kalınlık, marka renginin saydam tonu
@@ -92,7 +92,7 @@
 }
 
 // Kart içi metinlerin profesyonel yerleşimi
-.resume-item-copy {
+.sayfa-govdesi {
   @include sans_regular;
   font-size: $fs-govde;
   line-height: $lh-govde;

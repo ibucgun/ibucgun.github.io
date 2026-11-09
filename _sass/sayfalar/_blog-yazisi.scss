@@ -44,7 +44,7 @@ $post-bg-tint: $brand-wash;
   .current { color: $post-muted; }
 }
 
-// --- Article kartı (.modern-page-card analogu, ama post için bağımsız) ---
+// --- Article kartı (.sayfa-karti analogu, ama post için bağımsız) ---
 // Effective content width klinik/TMS kartlarıyla aynı (872px) olsun diye
 // max-width kaldırıldı (block 100% wrapper-içi 1032px), padding 80 her yan.
 .post-article {
@@ -205,7 +205,7 @@ img.post-avatar--foto {
   }
 
   // Numara solda sabit, metin kendi sütununda: uzun madde ikinci satırda numaranın altına kaymaz
-  // (hastalık sayfalarındaki .tms-toc ile aynı)
+  // (hastalık sayfalarındaki .icindekiler ile aynı)
   li {
     counter-increment: t;
     display: flex;
@@ -278,7 +278,7 @@ img.post-avatar--foto {
     p, li { text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
   }
 
-  // .content-section h2::before bar'ı bizim h2'lere bulaşmasın
+  // .sayfa-icerigi h2::before bar'ı bizim h2'lere bulaşmasın
   h2 {
     @include sans_bold;
     display: block !important;
@@ -682,7 +682,7 @@ img.post-avatar--foto {
     margin: 0;
     transition: color 0.2s;
 
-    // Global .content-section h2::before bar'a karşı koruma (h4 ama emin olmak için)
+    // Global .sayfa-icerigi h2::before bar'a karşı koruma (h4 ama emin olmak için)
     &::before { content: none !important; display: none !important; }
   }
 
