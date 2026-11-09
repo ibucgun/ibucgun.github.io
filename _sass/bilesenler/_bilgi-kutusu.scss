@@ -1,0 +1,78 @@
+// Bilgi ve acil durum kutuları (.callout): solda simge, üstte isteğe bağlı etiket, altında metin.
+// .callout-info nötr bilgi kutusu (muayenehane notları: EKT, psikoterapi, esketamin; blog yazılarındaki notlar),
+// .callout-medical acil durum kutusu (_includes/acil-kutusu.html, /sss, /yaslilik-psikiyatrisi).
+// Kullanan: iç sayfalar, hastalık sayfaları, blog yazıları. Blogdaki alıntı (blockquote) ayrı biçimdedir.
+
+.callout {
+  display: flex;
+  gap: 20px;
+  align-items: center; // simge metnin dikey ortasında
+  padding: 20px 28px;
+  border-radius: 18px;
+  margin: 2.5rem 0;
+  border: 1px solid transparent;
+  font-size: $fs-govde;
+  line-height: $lh-govde;
+
+  .callout-icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+
+    svg { width: 100%; height: 100%; display: block; stroke-width: 2.5; }
+  }
+
+  .callout-content { flex: 1; }
+
+  .callout-label {
+    display: block;
+    font-weight: 600;
+    font-size: $fs-lg;
+    letter-spacing: 0.05em;
+    margin-bottom: 2px;
+  }
+
+  .callout-text {
+    font-size: $fs-govde;
+    line-height: $lh-govde;
+    color: $text-strong;
+    margin: 0;
+    text-align: left;
+  }
+
+  // Telefonda simge etiketin yanına geçer, metin kutunun tam genişliğini kullanır
+  // (simge ayrı sütunda kalınca satır başına 2–4 kelime düşüyordu). Etiket yoksa metin simgenin yanında kalır.
+  @include media_mobile {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    column-gap: 10px;
+    row-gap: 6px;
+    align-items: center;
+    padding: 18px 20px;
+    border-radius: 14px;
+
+    .callout-icon { width: 24px; height: 24px; }
+    .callout-content { display: contents; }
+    .callout-label { margin: 0; }
+    .callout-text { grid-column: 1 / -1; font-size: $fs-m-body; line-height: $lh-m-body; }
+    .callout-text:first-child { grid-column: 2; }
+    &:not(:has(.callout-label)) .callout-icon { align-self: start; margin-top: 4px; } // etiketsiz: simge ilk satırda
+  }
+}
+
+// Bilgi kutusu nötr: sayfadaki tek renkli kutu acil durum kutusu olsun
+.callout-info {
+  background-color: $surface-alt;
+  border-color: $border;
+
+  .callout-label, svg { color: $brand; stroke: $brand; }
+}
+
+.callout-medical {
+  background-color: $danger-tint;
+  border-color: $danger-line;
+
+  .callout-label, svg { color: $danger; stroke: $danger; }
+}

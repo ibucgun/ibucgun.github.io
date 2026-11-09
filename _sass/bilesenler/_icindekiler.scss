@@ -1,64 +1,79 @@
-// İç sayfalardaki İçindekiler kutusu (.icindekiler). Blogdaki eşi: sayfalar/_blog-yazisi.scss (.post-toc).
+// İçindekiler kutusu (.icindekiler): hastalık sayfaları ve /tms (sayfa dosyasında elle),
+// blog yazıları (_layouts/post.html, maddeleri betik doldurur). Başlık <strong>, maddeler numaralı.
 
-/* 3) İçindekiler (TOC) — blogdaki .post-toc ile aynı görünüm, biraz daha sıkı */
-.sayfa-metni .icindekiler {
+.icindekiler {
   background: $surface-alt;
   border-radius: 14px;
-  padding: 15px 20px;
-  margin: 26px 0;
-}
-.sayfa-metni .icindekiler strong {
-  @include sans_bold;
-  display: block;
-  font-size: $fs-2xs;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: $brand;
-  margin: 0 0 8px;
-}
-.sayfa-metni .icindekiler ol {
-  list-style: none;
-  counter-reset: tmstoc;
-  margin: 0;
-  padding: 0;
-}
-// Numara solda sabit, metin kendi sütununda: uzun madde ikinci satırda numaranın altına kaymaz
-.sayfa-metni .icindekiler li {
-  counter-increment: tmstoc;
-  display: flex;
-  align-items: flex-start;
-  margin: 5px 0;
-  font-size: $fs-sm;
-  line-height: 1.45;
+  padding: 18px 22px;
+  margin: 30px 0;
   text-align: left;
-}
-.sayfa-metni .icindekiler li::before {
-  @include sans_bold;
-  content: counter(tmstoc);
-  display: inline-flex;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: $white;
-  color: $brand;
-  font-size: $fs-2xs;
-  font-weight: 600;
-  align-items: center;
-  justify-content: center;
-  margin: 0.15em 9px 0 0; // ilk satırın ortasına hizalı
-  flex: none;
-}
-.sayfa-metni .icindekiler a {
-  color: $text_color;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.sayfa-metni .icindekiler a:hover {
-  color: $brand;
-}
-.sayfa-metni .icindekiler a:focus-visible {
-  outline: 2px solid $brand;
-  outline-offset: 2px;
-  border-radius: 3px;
+
+  > strong {
+    @include sans_bold;
+    display: block;
+    font-size: $fs-2xs;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $brand;
+    margin: 0 0 10px;
+  }
+
+  ol {
+    list-style: none;
+    counter-reset: icindekiler;
+    margin: 0;
+    padding: 0;
+  }
+
+  // Numara solda sabit, metin kendi sütununda: uzun madde ikinci satırda numaranın altına kaymaz
+  li {
+    counter-increment: icindekiler;
+    display: flex;
+    align-items: flex-start;
+    margin: 7px 0;
+    font-size: $fs-md;
+    line-height: 1.7;
+    text-align: left;
+    -webkit-hyphens: manual;
+    hyphens: manual;
+
+    // Telefonda maddeler çoğu zaman iki satır: satır aralığı sıkılaşır
+    @include media_mobile { line-height: 1.5; margin: 6px 0; }
+
+    &::before {
+      @include sans_bold;
+      content: counter(icindekiler);
+      display: inline-flex;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: $white;
+      color: $brand;
+      font-size: $fs-2xs;
+      font-weight: 600;
+      align-items: center;
+      justify-content: center;
+      flex: none;
+      margin: 0.22em 10px 0 0; // ilk satırın ortasına hizalı
+
+      @include media_mobile { margin-top: 0.1em; }
+    }
+  }
+
+  // li a: iç sayfadaki metin içi bağlantı kuralını (.sayfa-icerigi li a) aynı özgüllükle, sonra gelerek ezer
+  li a {
+    color: $text-body;
+    font-weight: 400;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover { color: $brand; }
+
+    &:focus-visible {
+      outline: 2px solid $brand;
+      outline-offset: 2px;
+      border-radius: 3px;
+    }
+  }
 }

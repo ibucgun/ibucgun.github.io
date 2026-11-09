@@ -1,5 +1,5 @@
-// Blog yazısı (_layouts/post.html): kırıntı menü, yazı kartı, metin, İçindekiler, kaynaklar,
-// randevu kutusu, paylaşım, yazar kutusu, ilgili yazılar.
+// Blog yazısı (_layouts/post.html): kırıntı menü, yazı kartı, metin, randevu kutusu, paylaşım,
+// yazar kutusu, ilgili yazılar. İçindekiler, kaynaklar ve bilgi kutusu iç sayfalarla ortak (bilesenler/).
 
 // Lokal yardımcı renkler (site genel paletiyle aynı kıyıda)
 $post-muted:   $text-body;
@@ -180,72 +180,6 @@ img.post-avatar--foto {
   }
 }
 
-// --- İçindekiler (TOC) ---
-.post-toc {
-  background: $surface-alt;
-  border-radius: 14px;
-  padding: 18px 22px;
-  margin: 30px 0;
-
-  h4 {
-    @include sans_bold;
-    font-size: $fs-2xs;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: $brand;
-    margin: 0 0 10px;
-  }
-
-  ol {
-    list-style: none;
-    counter-reset: t;
-    margin: 0;
-    padding: 0;
-  }
-
-  // Numara solda sabit, metin kendi sütununda: uzun madde ikinci satırda numaranın altına kaymaz
-  // (hastalık sayfalarındaki .icindekiler ile aynı)
-  li {
-    counter-increment: t;
-    display: flex;
-    align-items: flex-start;
-    margin: 7px 0;
-    font-size: $fs-md;
-
-    &::before {
-      content: counter(t);
-      display: inline-flex;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: $white;
-      color: $brand;
-      font-size: $fs-2xs;
-      font-weight: 600;
-      align-items: center;
-      justify-content: center;
-      flex: none;
-      margin: 0.22em 10px 0 0; // ilk satırın ortasına hizalı (satır ~25px, daire 20px)
-      @include sans_bold;
-    }
-  }
-
-  a {
-    color: $post-text;
-    text-decoration: none;
-    transition: color 0.2s;
-
-    &:hover { color: $brand; }
-
-    &:focus-visible {
-      outline: 2px solid $brand;
-      outline-offset: 2px;
-      border-radius: 3px;
-    }
-  }
-}
-
 // --- Gövde tipografisi ---
 // Önemli: özgüllüğü düşük tutuluyor, ::before bar gibi global kuralları
 // override etmek için sadece kendi bağlamımızda agresif olmalıyız.
@@ -373,19 +307,6 @@ img.post-avatar--foto {
     }
   }
 
-  // Vurgu kutusu — yazar markdown'da <div class="callout">...</div> ile kullanabilir
-  .callout {
-    margin: 1.6em 0;
-    padding: 18px 22px;
-    background: $surface-alt;
-    border-left: 3px solid $brand;
-    border-radius: 0 12px 12px 0;
-    font-size: $fs-lg;
-    line-height: 1.65;
-    color: $post-ink;
-    font-weight: 400;
-  }
-
   // Resim
   img {
     max-width: 100%;
@@ -400,37 +321,6 @@ img.post-avatar--foto {
     p, ul li, ol li { font-size: $fs-m-body; line-height: $lh-m-body; }
     h2 { font-size: $fs-m-h2; }
     h3 { font-size: $fs-m-h3; }
-  }
-}
-
-// --- Kaynaklar kutusu ---
-.post-refs {
-  margin-top: 36px;
-  background: $brand-wash;
-  border: 1px solid $post-line;
-  border-radius: 14px;
-  padding: 22px 24px;
-
-  h3 {
-    @include sans_bold;
-    font-size: $fs-xs;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: $post-muted;
-    margin: 0 0 12px;
-  }
-
-  ol {
-    padding-left: 18px;
-    margin: 0;
-
-    li {
-      font-size: $fs-sm;
-      line-height: 1.6;
-      color: $post-muted;
-      margin: 6px 0;
-    }
   }
 }
 

@@ -75,8 +75,8 @@
           </header>
 
           {%- if h2_count >= 2 -%}
-          <nav class="post-toc" id="post-toc" aria-label="İçindekiler">
-            <h4>İçindekiler</h4>
+          <nav class="icindekiler" id="post-toc" aria-label="İçindekiler">
+            <strong>İçindekiler</strong>
             <ol id="post-toc-list"></ol>
           </nav>
           {%- endif -%}
@@ -86,7 +86,7 @@
           </div>
 
           {%- if page.refs -%}
-          <div class="post-refs">
+          <div class="kaynaklar">
             <h3>Kaynaklar</h3>
             <ol>
               {%- for r in page.refs -%}

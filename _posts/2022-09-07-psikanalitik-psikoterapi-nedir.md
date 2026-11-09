@@ -25,6 +25,11 @@ Psikanaliz ve psikodinamik kuramlara sırtını yaslayarak çalışan psikanalit
 
 Kazanılan içgörüyle beraber kişi anlamlandırmakta zorlandığı sorunları anlamlandırabilir, kendini hayatının kontrolünü tekrar ele alarak ve yaşantılarıyla yüzleşmiş olarak durumların sonuçlarını üstlenir. **Psikanalitik psikoterapi de genellikle haftada 1-2 kere, çoğunlukla belirlenen sabit bir gün ve saatte, 50 dakikalık görüşme şeklinde gerçekleştirilir.** **Psikanalitik psikoterapi kısa süreli bir psikoterapi değildir.** Terapinin süresi ve görüşme sıklığı kişiden kişiye, psikopatolojinin ağırlığına göre değişmektedir.
 
-<div class="callout">
-Bu yazı genel bilgilendirme amaçlıdır. Psikanalitik psikoterapi uygulaması için şu anda yeni hasta kabul edememekteyim; bu yönteme ihtiyacı olduğunu değerlendirdiğim hastaları ilgili alanda çalışan bir uzmana yönlendiriyorum.
+<div class="callout callout-info">
+  <div class="callout-icon">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 16V12M12 8H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+  <div class="callout-content">
+    <p class="callout-text">Bu yazı genel bilgilendirme amaçlıdır. Psikanalitik psikoterapi uygulaması için şu anda yeni hasta kabul edememekteyim; bu yönteme ihtiyacı olduğunu değerlendirdiğim hastaları ilgili alanda çalışan bir uzmana yönlendiriyorum.</p>
+  </div>
 </div>

@@ -326,8 +326,8 @@ Her dosyanın başında neyi biçimlendirdiği ve hangi şablonların kullandı�
 | Klasör / dosya | İçerik |
 |---|---|
 | `_variables.scss`, `_mixins.scss`, `_base.scss`, `_normalize.scss` | Renkler ve ölçüler, yardımcılar, genel ayarlar (odak halkası, hareket azaltma); normalize'a dokunulmaz |
-| `yerlesim/` | Her sayfada olanlar: `_menu`, `_altbilgi`, `_sabit-cubuk`, `_ic-sayfa` (kart, başlık, giriş), `_icerik-metni` (H2/H3, paragraf, bağlantı, bilgi/acil kutuları) |
-| `bilesenler/` | Tekrar kullanılan parçalar: `_butonlar`, `_akordeon`, `_icindekiler`, `_kaynaklar`, `_gorseller`, `_metin-ogeleri` (tablo, alıntı, kod) |
+| `yerlesim/` | Her sayfada olanlar: `_menu`, `_altbilgi`, `_sabit-cubuk`, `_ic-sayfa` (kart, başlık, giriş), `_icerik-metni` (H2/H3, paragraf, bağlantı) |
+| `bilesenler/` | Tekrar kullanılan parçalar: `_butonlar`, `_akordeon`, `_icindekiler`, `_kaynaklar`, `_bilgi-kutusu`, `_gorseller`, `_metin-ogeleri` (tablo, alıntı, kod) |
 | `sayfalar/` | Tek sayfaya özgü olanlar: `_ana-sayfa`, `_yasal`, `_blog-liste`, `_blog-yazisi` |
 | `_yazdirma.scss` | `@media print`; en sonda |
 
@@ -346,6 +346,8 @@ Her dosyanın başında neyi biçimlendirdiği ve hangi şablonların kullandı�
 - Sınıf adları Türkçe ve işini anlatır. İç sayfa iskeleti: `sayfa-karti` > `sayfa-icerigi` > `sayfa-govdesi` >
   `sayfa-metni` (sayfa dosyasındaki sarmalayıcı); parçalar `icindekiler`, `kaynaklar`, `sayfa-notu`, `yasal-*`.
   Ana sayfadaki temadan kalma adlar (`resume-item`, `practice-*`, `badge-blue`) yeniden tasarımda değişir.
+  Bilgi kutusu blog yazısında da iç sayfadaki yapıyla yazılır: `callout callout-info` > `callout-icon` (SVG) +
+  `callout-content` > (isteğe bağlı `callout-label`) + `p.callout-text`; yalın `<div class="callout">` biçimlenmez.
   **Değiştirilmeyecek adlar:** `tms-cta-section`, `post-cta`, `modern-hero-layout`, `modern-contact-card`,
   `hero-action-btns`, `cta-buttons`, `sabit-cubuk`, `nav-wrapper`, `page-footer` (GA4 `konum` eşlemesi ve sabit
   çubuk bunlara bakar; değişirse ölçüm sessizce bozulur).
@@ -426,8 +428,8 @@ A10 (atıfsız otorite) bulgularına atıf eklenir. 8 sayfanın hepsi yayında (
   TMS**'e aittir. OKB onay yılı (2018) FDA duyurusundan; Cohen 2022 2017 yazıyor, kullanılmaz.
   Sayfa metni hekimin kendi yazısı: kaynak eklerken dili değiştirilmez.
 
-Punto kademesi: gövde `$fs-govde` → TOC `$fs-sm` → kaynaklar `$fs-xs` → uyarı `$fs-2xs`. TOC ve
-kaynak kutusu blogdaki `.post-toc` / `.post-refs` ile aynı dili konuşur; uyarıya kutu verilmez.
+Punto kademesi: gövde `$fs-govde` → İçindekiler `$fs-md` → kaynaklar `$fs-sm` → uyarı `$fs-2xs`. İçindekiler,
+kaynak kutusu ve bilgi kutusu blog yazılarıyla ortak bileşendir (`icindekiler`, `kaynaklar`, `callout`); uyarıya kutu verilmez.
 
 ### Ölçüm (GA4)
 

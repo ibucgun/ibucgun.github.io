@@ -1,5 +1,5 @@
 // İç sayfa içeriğinin metni (.sayfa-icerigi, .sayfa-metni): H2/H3, paragraf, liste,
-// metin içi bağlantılar ve telefon etiketi, bilgi ve acil durum kutuları (.callout).
+// metin içi bağlantılar ve telefon etiketi. Bilgi ve acil durum kutuları: bilesenler/_bilgi-kutusu.scss.
 
 .sayfa-icerigi {
   // Sayfa içi bağlantı hedefleri (İçindekiler, #iletisim-bilgileri…) sabit menünün altında kalmasın
@@ -96,57 +96,8 @@
   // Masaüstünde metin iki yana yaslı: heceleme (lang="tr") kelime arasındaki büyük boşlukları azaltır
   @media (min-width: 601px) {
     p, li { -webkit-hyphens: auto; hyphens: auto; }
-    // Kaynak künyeleri (DOI, sayfa) ve İçindekiler hecelenmez
-    .kaynaklar li, .icindekiler li { -webkit-hyphens: manual; hyphens: manual; }
   }
 
-  /* --- DİKEY ORTALANMIŞ KUTULAR --- */
-  .callout {
-    display: flex; gap: 20px;
-    padding: 20px 28px; border-radius: 18px;
-    margin: 2.5rem 0; align-items: center; // Dikey Ortalama
-    border: 1px solid transparent;
-
-    .callout-icon {
-      flex-shrink: 0; width: 32px; height: 32px;
-      display: flex; align-items: center;
-      svg { width: 100%; height: 100%; display: block; stroke-width: 2.5; }
-    }
-    .callout-content { flex: 1; }
-    .callout-label {
-      display: block; font-weight: 600;
-      font-size: $fs-lg; letter-spacing: 0.05em; margin-bottom: 2px;
-    }
-    .callout-text { font-size: $fs-lg; color: $text-strong; margin: 0; text-align: left; }
-
-    // Telefonda simge başlığın yanına geçer, metin kutunun tam genişliğini kullanır
-    // (simge ayrı sütunda kalınca satır başına 2–4 kelime düşüyordu)
-    @include media_mobile {
-      display: grid;
-      grid-template-columns: 24px 1fr;
-      column-gap: 10px;
-      row-gap: 6px;
-      align-items: center;
-      padding: 18px 20px;
-      border-radius: 14px;
-
-      .callout-icon { width: 24px; height: 24px; }
-      .callout-content { display: contents; }
-      .callout-label { margin: 0; }
-      .callout-text { grid-column: 1 / -1; }
-    }
-  }
-
-  // Bilgi kutusu nötr: sayfadaki tek renkli kutu acil durum kutusu olsun
-  .callout-info {
-    background-color: $surface-alt; border: 1px solid $border;
-    .callout-label, svg { color: $brand; stroke: $brand; }
-  }
-
-  .callout-medical {
-    background-color: $danger-tint; border: 1px solid $danger-line;
-    .callout-label, svg { color: $danger; stroke: $danger; }
-  }
 }
 
 
