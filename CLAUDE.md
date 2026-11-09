@@ -533,7 +533,11 @@ yerine doğrudan arar, GA4 `cta`).
   - Hekim fotoğrafı 800 px + `srcset` (D3): büyük asıl fotoğraf kullanıcıdan bekleniyor.
   - CSS: kullanılmayan tema kodu 2026-11-06'da silindi (ızgara sistemi, kod renklendirme, sosyal
     ikonlar, `_assets/`). `!important` 232'den 49'a indirildi (görünüm ölçümle birebir
-    aynı); kalanlar gerekli ya da bilinçli. Kalan iş: birden çok yerde tanımlı seçicilerin birleştirilmesi. Hız için asıl
+    aynı); kalanlar gerekli ya da bilinçli. Tekrarlanan seçiciler incelendi (2026-11-09): çoğu olağan
+    SCSS gruplaması (ortak kural + tek tek fark), birleştirilmez; gerçek çakışma ve ölü kurallar silindi.
+    Hiçbir öğeyle eşleşmeyen kuralların kalanı bilinçli: normalize, durum kuralları (`:focus-visible`,
+    hareket azaltma, menü/çubuk durumu), 12 yazıdan sonra görünecek blog araması, yazılarda kullanılabilecek
+    tablo/alıntı/kod/H3 biçimleri. Hız için asıl
     kazanç Poppins'in yerel yüklenmesi (F1, `head.html`; CSS sıkıştırılmış hâlde yalnız ~10 KB).
   - `/tms` ve ana sayfadaki TMS görselleri üreticinin tanıtım görseli/stok: muayenehanedeki
     cihazın sade fotoğrafıyla değiştirilecek (çekilebilir; bina girişi fotoğrafı `/iletisim` için).

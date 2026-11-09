@@ -289,8 +289,6 @@
       color: $text_color;
       margin: 0;
       line-height: 1.2;
-
-      a { color: inherit; text-decoration: none; border: none; }
     }
 
     .resume-item-details {
@@ -582,10 +580,7 @@
       text-align: justify;
       margin-bottom: 2.5rem;
       max-width: 550px;
-
-      @include media_mobile { text-align: left; }
-
-      strong { color: $brand; font-weight: 600; }
+      // Telefonda ortalı: kural aşağıdaki mobil blokta (hero paragrafını sola yaslamak D4 hero işinde)
     }
   }
 
@@ -1049,10 +1044,8 @@
 /* 2) Başlıkların yaslı (justify) görünmesini önleme — koruma kuralı
    Tema CSS'i veya kalıtım nedeniyle h2/h3 yaslı görünebiliyor;
    bunu net bir şekilde sola yaslı yapar */
-.tms-content h1,
 .tms-content h2,
-.tms-content h3,
-.tms-content h4 {
+.tms-content h3 {
   text-align: left;
 }
 
