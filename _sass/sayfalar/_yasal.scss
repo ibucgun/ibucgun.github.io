@@ -10,11 +10,7 @@
 .yasal-metin h1 {
   margin-bottom: 1.5rem;
 }
-// h2/h3 ve paragraf genel iç sayfa kuralından gelir (.sayfa-icerigi); listeler daha küçük
-.yasal-metin li {
-  font-size: $fs-base;
-  line-height: 1.7;
-}
+// Başlık, paragraf ve liste genel iç sayfa kuralından gelir (.sayfa-icerigi, .sayfa-govdesi)
 .yasal-metin .yasal-giris {
   background: $surface-alt;
   border-left: 4px solid $brand;

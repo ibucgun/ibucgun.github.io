@@ -486,8 +486,7 @@ yerine doğrudan arar, GA4 `cta`).
   güvenilmez.
 - **İç sayfa paragrafı `.sayfa-icerigi p` (özgüllük 0,1,1).** Sayfa içinde küçük bir paragraf bileşeni
   (kutu metni, ince yazı) iki sınıflı seçiciyle yazılır (`.sayfa-metni .sayfa-notu` gibi); tek sınıf + etiket
-  aynı özgüllükte kalır ve dosya sırasına bağlı olur. KVKK sayfalarında paragraf 18px, liste 16px
-  (`.yasal-metin li`): eskiden `!important` yüzünden böyle kalmış, görünüm korunarak bırakıldı.
+  aynı özgüllükte kalır ve dosya sırasına bağlı olur.
 - **`!important` temizliği ölçümle yapılır** (2026-11-06…09: 232 → 27). Yöntem: bir bloğun hepsini
   kaldır, derle, bütün siteyi (sitemap'teki sayfalar + `/404`, `/parlakisik`, `/blog`; 1280 ve 390px)
   canlı CSS ve yeni CSS ile yan yana açıp her öğenin hesaplanan stilini karşılaştır; fark çıkaranı
