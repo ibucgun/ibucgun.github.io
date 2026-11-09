@@ -244,37 +244,35 @@
   }
 }
 
-// Mobil Düzenleme
+// Mobil Düzenleme — masaüstü kurallarıyla aynı seçici (.practice-container içinde); !important gerekmez
 @include media_mobile {
-  .practice-box-featured {
-    flex-direction: column !important;
-    .featured-img-side { height: 180px; min-height: 180px; }
-    .featured-text-side { padding: 20px; }
-  }
-  .practice-grid-bottom {
-    grid-template-columns: 1fr !important;
+  .practice-container {
+    .practice-box-featured { flex-direction: column; }
+    .practice-grid-bottom {
+      grid-template-columns: 1fr;
+    }
   }
 }
 
 
 /* --- AÇILIR KAPANIR EĞİTİM MADDELERİ (Anayasa Uyumlu) --- */
 .resume-item-collapsible {
-  border-bottom: 1px solid $border !important;
+  border-bottom: 1px solid $border;
   transition: all 0.3s ease;
   position: relative;
 
-  &:last-child { border-bottom: none !important; }
+  &:last-child { border-bottom: none; }
 
   /* Tıklanan Başlık Alanı */
   .resume-item-summary {
-    padding: 1rem 0 !important;
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important; 
-    cursor: pointer !important;
-    list-style: none !important;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    cursor: pointer;
+    list-style: none;
 
-    &::-webkit-details-marker { display: none !important; }
+    &::-webkit-details-marker { display: none; }
 
     /* Yazı Grubu */
     .summary-content-wrapper {
@@ -287,22 +285,22 @@
 
     .resume-item-title {
       @include sans_bold;
-      font-size: 1.3rem !important;
-      color: $text_color !important;
-      margin: 0 !important;
-      line-height: 1.2 !important;
+      font-size: 1.3rem;
+      color: $text_color;
+      margin: 0;
+      line-height: 1.2;
 
-      a { color: inherit !important; text-decoration: none !important; border: none !important; }
+      a { color: inherit; text-decoration: none; border: none; }
     }
 
     .resume-item-details {
       @include sans_bold;
-      color: $brand !important;
-      font-size: 1rem !important;
-      margin: 0 !important;
-      line-height: 1.2 !important;
-      text-transform: none !important;
-      display: block !important;
+      color: $brand;
+      font-size: 1rem;
+      margin: 0;
+      line-height: 1.2;
+      text-transform: none;
+      display: block;
     }
 
     /* Sağdaki Artı/Eksi İkonu */
@@ -349,15 +347,15 @@
 
   /* Gizlenen İçerik */
   .collapsible-body {
-    padding-bottom: 1.2rem !important;
+    padding-bottom: 1.2rem;
     animation: slideDown 0.3s ease-out;
 
     .resume-item-copy {
       @include sans_regular;
-      font-size: 1.1rem !important;
-      line-height: 1.6 !important;
-      color: $text-body !important;
-      margin: 0 !important;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: $text-body;
+      margin: 0;
     }
   }
 }
@@ -367,14 +365,14 @@
   .resume-item-collapsible {
     
     .resume-item-summary {
-      padding: 0.85rem 0 !important;
+      padding: 0.85rem 0;
 
       .resume-item-title {
-        font-size: 1.15rem !important; // Mobilde başlık biraz küçülür
+        font-size: 1.15rem; // Mobilde başlık biraz küçülür
       }
 
       .resume-item-details {
-        font-size: 0.95rem !important; // Mobilde detay satırı küçülür
+        font-size: 0.95rem; // Mobilde detay satırı küçülür
       }
 
       .collapse-icon {
@@ -391,7 +389,7 @@
 
     .collapsible-body {
       .resume-item-copy {
-        font-size: 1rem !important; // Mobilde okuma fontu
+        font-size: 1rem; // Mobilde okuma fontu
       }
     }
   }
