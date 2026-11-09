@@ -20,12 +20,12 @@
 
   .btn-main-text {
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: $fs-lg;
     display: block;
   }
   .btn-sub-text {
     font-weight: 400;
-    font-size: 0.85rem;
+    font-size: $fs-sm;
     opacity: 0.9;
     display: block;
     margin-top: 2px;

@@ -32,25 +32,25 @@
 
     .resume-item-title {
       @include sans_bold;
-      font-size: 1.3rem;
+      font-size: $fs-2xl;
       color: $text_color;
       margin: 0;
       line-height: 1.2;
 
-      @include media_mobile { font-size: 1.15rem; }
+      @include media_mobile { font-size: $fs-lg; }
     }
 
     // Kurum • tarih satırı
     .resume-item-details {
       @include sans_bold;
       color: $brand;
-      font-size: 1rem;
+      font-size: $fs-base;
       margin: 0;
       line-height: 1.2;
       text-transform: none;
       display: block;
 
-      @include media_mobile { font-size: 0.95rem; }
+      @include media_mobile { font-size: $fs-md; }
     }
 
     // Sağdaki artı simgesi: iki çizgi; açılınca dikey çizgi döner ve kaybolur (eksi kalır)
@@ -111,12 +111,12 @@
 
     .resume-item-copy {
       @include sans_regular;
-      font-size: 1.1rem;
+      font-size: $fs-lg;
       line-height: 1.6;
       color: $text-body;
       margin: 0;
 
-      @include media_mobile { font-size: 1rem; }
+      @include media_mobile { font-size: $fs-base; }
     }
   }
 }

@@ -12,7 +12,7 @@
     margin: 0 auto 1.25rem;
     padding-bottom: 1.25rem;
     border-bottom: 1px solid $border;
-    font-size: 0.9rem;
+    font-size: $fs-sm;
     line-height: 1.7;
     color: $text-body;
 
@@ -35,7 +35,7 @@
   // KVKK · Çerez · Açık Rıza bağlantıları; telefonda satır kırılınca aralık açılır
   .footer-links-row {
     margin-bottom: 1rem;
-    font-size: 0.85rem;
+    font-size: $fs-sm;
     color: $text-muted;
 
     @include media_mobile { line-height: 2; }
@@ -58,20 +58,20 @@
   // Telif ve uyarı satırları
   .footer-line {
     margin: 0.25rem 0;
-    font-size: 0.85rem;
+    font-size: $fs-sm;
     color: $text-muted;
     line-height: 1.5;
 
-    @include media_mobile { font-size: 0.8rem; }
+    @include media_mobile { font-size: $fs-xs; }
   }
 
   // Yönetmelik satırı: son güncelleme + site editörü (.footer-line ile birlikte kullanılır)
   .footer-meta {
     margin-top: 0.9rem;
-    font-size: 0.78rem;
+    font-size: $fs-xs;
     color: $text-muted;
 
-    @include media_mobile { font-size: 0.8rem; } // telefonda diğer satırlarla aynı
+    @include media_mobile { font-size: $fs-xs; } // telefonda diğer satırlarla aynı
   }
   .footer-meta a {
     color: $text-muted;

@@ -8,7 +8,7 @@
   // H2: solda zeytin dikey çubuk (::before), çubuk başlık boyunca uzar
   h2 {
     @include sans_bold;
-    font-size: 1.85rem;
+    font-size: $fs-6xl;
     color: $text-strong;
     margin: 3.5rem 0 1.5rem;
     display: flex;
@@ -31,7 +31,7 @@
 
   h3 {
     @include sans_bold;
-    font-size: 1.4rem;
+    font-size: $fs-3xl;
     color: $brand;
     margin: 2.5rem 0 1rem;
 
@@ -72,7 +72,7 @@
   // Paragraf: !important, KVKK metinleri, bilgi kutuları ve hastalık sayfalarının kendi paragraf
   // kurallarını ezer (kaldırılınca 35 ölçümde yazı küçüldü)
   p {
-    font-size: 1.18rem !important;
+    font-size: $fs-govde-ic !important;
     line-height: 1.95 !important;
     text-align: justify;
     margin-bottom: 2rem;
@@ -115,9 +115,9 @@
     .callout-content { flex: 1; }
     .callout-label {
       display: block; font-weight: 600;
-      font-size: 1.1rem; letter-spacing: 0.05em; margin-bottom: 2px;
+      font-size: $fs-lg; letter-spacing: 0.05em; margin-bottom: 2px;
     }
-    .callout-text { font-size: 1.1rem; color: $text-strong; margin: 0; text-align: left; }
+    .callout-text { font-size: $fs-lg; color: $text-strong; margin: 0; text-align: left; }
 
     // Telefonda simge başlığın yanına geçer, metin kutunun tam genişliğini kullanır
     // (simge ayrı sütunda kalınca satır başına 2–4 kelime düşüyordu)
@@ -155,12 +155,12 @@
    ========================================================= */
 
 /* 1) İçerik metnini eski inline stillerin yerine geçirir
-   (text-align: justify; font-size: 1.125rem;)
+   (text-align: justify; font-size: $fs-govde-blog;)
    NOT: Sadece <p> ve <li> hedefleniyor — başlıklar (h1-h6) etkilenmez */
 .tms-content p,
 .tms-content li {
   text-align: justify;
-  font-size: 1.125rem;
+  font-size: $fs-govde-blog;
 
   @include media_mobile {
     font-size: $fs-m-body;

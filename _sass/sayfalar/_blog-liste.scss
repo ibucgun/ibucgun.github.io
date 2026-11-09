@@ -76,7 +76,7 @@ $blog-surface: $white;
 .blog-badge {
   @include sans_bold;
   display: inline-block;
-  font-size: 0.72rem;
+  font-size: $fs-2xs;
   font-weight: 600;
   letter-spacing: 0.01em;
   padding: 5px 11px;
@@ -106,7 +106,7 @@ $blog-surface: $white;
   input {
     @include sans_regular;
     width: 100%;
-    font-size: 1rem;
+    font-size: $fs-base;
     color: $text_color;
     padding: 14px 18px 14px 50px;
     border: 1.5px solid $blog-line;
@@ -153,7 +153,7 @@ $blog-surface: $white;
 
 .blog-chip {
   @include sans_bold;
-  font-size: 0.85rem;
+  font-size: $fs-sm;
   font-weight: 400;
   padding: 8px 15px;
   border-radius: 999px;
@@ -182,7 +182,7 @@ $blog-surface: $white;
 }
 
 .blog-count {
-  font-size: 0.9rem;
+  font-size: $fs-sm;
   color: $blog-muted;
   white-space: nowrap;
 
@@ -200,7 +200,7 @@ $blog-surface: $white;
 .blog-feat-eyebrow {
   @include sans_bold;
   font-weight: 600;
-  font-size: 0.72rem;
+  font-size: $fs-2xs;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: $blog-faint;
@@ -237,7 +237,7 @@ $blog-surface: $white;
   }
 
   .read {
-    font-size: 0.8rem;
+    font-size: $fs-xs;
     color: $blog-muted;
     display: inline-flex;
     align-items: center;
@@ -261,7 +261,7 @@ $blog-surface: $white;
   .excerpt {
     @include sans_regular;
     margin-top: 12px;
-    font-size: 1rem;
+    font-size: $fs-base;
     color: $blog-muted;
     line-height: 1.6;
     max-width: 62ch;
@@ -276,13 +276,13 @@ $blog-surface: $white;
   }
 
   .date {
-    font-size: 0.85rem;
+    font-size: $fs-sm;
     color: $blog-faint;
   }
 
   .more {
     @include sans_bold;
-    font-size: 0.88rem;
+    font-size: $fs-sm;
     font-weight: 600;
     color: $brand;
   }
@@ -292,7 +292,7 @@ $blog-surface: $white;
 .blog-list-head {
   @include sans_bold;
   font-weight: 600;
-  font-size: 0.82rem;
+  font-size: $fs-xs;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $blog-faint;
@@ -344,7 +344,7 @@ $blog-surface: $white;
   }
 
   .read {
-    font-size: 0.8rem;
+    font-size: $fs-xs;
     color: $blog-muted;
     display: inline-flex;
     align-items: center;
@@ -355,7 +355,7 @@ $blog-surface: $white;
 
   h3 {
     @include sans_bold;
-    font-size: 1.1rem;
+    font-size: $fs-lg;
     font-weight: 600;
     line-height: 1.32;
     letter-spacing: -0.01em;
@@ -368,7 +368,7 @@ $blog-surface: $white;
 
   .excerpt {
     @include sans_regular;
-    font-size: 0.9rem;
+    font-size: $fs-sm;
     color: $blog-muted;
     line-height: 1.55;
     display: -webkit-box;
@@ -386,13 +386,13 @@ $blog-surface: $white;
   }
 
   .date {
-    font-size: 0.78rem;
+    font-size: $fs-xs;
     color: $blog-faint;
   }
 
   .more {
     @include sans_bold;
-    font-size: 0.82rem;
+    font-size: $fs-xs;
     font-weight: 600;
     color: $brand;
     display: inline-flex;
@@ -422,20 +422,20 @@ $blog-surface: $white;
 
   h3 {
     @include sans_bold;
-    font-size: 1.15rem;
+    font-size: $fs-xl;
     color: $text_color;
     margin: 0 0 6px;
   }
 
   p {
-    font-size: 0.95rem;
+    font-size: $fs-md;
     margin: 0 0 16px;
   }
 
   .blog-reset {
     @include sans_bold;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: $fs-sm;
     color: $brand;
     background: rgba($brand, $alpha-soft);
     border: none;

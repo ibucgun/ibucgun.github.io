@@ -10,7 +10,7 @@
 .tms-content .tms-toc strong {
   @include sans_bold;
   display: block;
-  font-size: 0.72rem;
+  font-size: $fs-2xs;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -29,7 +29,7 @@
   display: flex;
   align-items: flex-start;
   margin: 5px 0;
-  font-size: 0.88rem;
+  font-size: $fs-sm;
   line-height: 1.45;
   text-align: left;
 }
@@ -42,7 +42,7 @@
   border-radius: 50%;
   background: $white;
   color: $brand;
-  font-size: 0.68rem;
+  font-size: $fs-2xs;
   font-weight: 600;
   align-items: center;
   justify-content: center;

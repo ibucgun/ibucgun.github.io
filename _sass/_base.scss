@@ -25,7 +25,7 @@ html {
 body{
   @include sans;
   color: $text_color;
-  font-size: 1.1rem;
+  font-size: $fs-lg;
   line-height: 1.7;
 }
 

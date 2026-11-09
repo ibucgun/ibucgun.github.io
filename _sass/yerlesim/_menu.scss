@@ -44,7 +44,7 @@ header.nav-wrapper {
 // Site adı
 .nav-logo-link {
   @include sans_bold;
-  font-size: 1.2rem;
+  font-size: $fs-xl;
   color: $text_color;
   text-decoration: none;
   line-height: 1;
@@ -56,7 +56,7 @@ header.nav-wrapper {
   white-space: nowrap;
 
   @include media_mobile {
-    font-size: 1.1rem;
+    font-size: $fs-lg;
     margin-right: 0;
     position: relative;
     z-index: 10001; // açık menüde site adı görünür kalsın
@@ -165,7 +165,7 @@ ul.nav-ul {
       }
 
       @include media_mobile {
-        font-size: 1.4rem;
+        font-size: $fs-3xl;
         font-weight: 600;
         color: $text_color;
 

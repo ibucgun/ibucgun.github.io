@@ -15,7 +15,7 @@
    çıkıyordu. Kapsam bilerek kutuyla sınırlı — global kurala dokunmuyoruz. */
 .tms-content .page-refs h3 {
   @include sans_bold;
-  font-size: 0.72rem !important;
+  font-size: $fs-2xs !important;
   font-weight: 600;
   line-height: 1.4;
   letter-spacing: 0.08em;
@@ -28,7 +28,7 @@
   margin: 0;
 }
 .tms-content .page-refs li {
-  font-size: 0.8rem;
+  font-size: $fs-xs;
   line-height: 1.5;
   color: $text-body;
   margin: 4px 0;
@@ -38,7 +38,7 @@
 /* Yasal uyarı — kutusuz, kaynaklardan da küçük: sayfanın en hafif katmanı */
 /* Aynı sebeple: .content-section p, font-size ve line-height'ı !important veriyor. */
 .tms-content .page-note {
-  font-size: 0.75rem !important;
+  font-size: $fs-2xs !important;
   line-height: 1.55 !important;
   color: $text-muted;
   text-align: left;

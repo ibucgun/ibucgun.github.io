@@ -19,7 +19,7 @@ $post-bg-tint: $brand-wash;
   flex-wrap: wrap;
   margin: 0;
   padding: 20px 0 0;
-  font-size: 0.82rem;
+  font-size: $fs-xs;
   color: $post-faint;
 
   @media (max-width: 680px) {
@@ -73,7 +73,7 @@ $post-bg-tint: $brand-wash;
   }
 
   .read {
-    font-size: 0.8rem;
+    font-size: $fs-xs;
     color: $post-muted;
     display: inline-flex;
     align-items: center;
@@ -101,7 +101,7 @@ $post-bg-tint: $brand-wash;
 .post-lead {
   @include sans_regular;
   margin-top: 16px;
-  font-size: 1.125rem;
+  font-size: $fs-govde-blog;
   color: $post-muted;
   line-height: 1.6;
 
@@ -135,7 +135,7 @@ img.post-avatar--foto {
   color: $white;
   @include sans_bold;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: $fs-base;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -147,13 +147,13 @@ img.post-avatar--foto {
   .who {
     @include sans_bold;
     font-weight: 600;
-    font-size: 0.92rem;
+    font-size: $fs-md;
     color: $post-ink;
     line-height: 1.3;
   }
 
   .sub {
-    font-size: 0.78rem;
+    font-size: $fs-xs;
     color: $post-faint;
     margin-top: 2px;
     line-height: 1.3;
@@ -163,7 +163,7 @@ img.post-avatar--foto {
 .post-byline .when {
   margin-left: auto;
   text-align: right;
-  font-size: 0.78rem;
+  font-size: $fs-xs;
   color: $post-faint;
   line-height: 1.5;
 
@@ -189,7 +189,7 @@ img.post-avatar--foto {
 
   h4 {
     @include sans_bold;
-    font-size: 0.75rem;
+    font-size: $fs-2xs;
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -211,7 +211,7 @@ img.post-avatar--foto {
     display: flex;
     align-items: flex-start;
     margin: 7px 0;
-    font-size: 0.92rem;
+    font-size: $fs-md;
 
     &::before {
       content: counter(t);
@@ -221,7 +221,7 @@ img.post-avatar--foto {
       border-radius: 50%;
       background: $white;
       color: $brand;
-      font-size: 0.7rem;
+      font-size: $fs-2xs;
       font-weight: 600;
       align-items: center;
       justify-content: center;
@@ -266,7 +266,7 @@ img.post-avatar--foto {
   }
 
   p {
-    font-size: 1.125rem;
+    font-size: $fs-govde-blog;
     line-height: 1.75;
     color: $post-text;
     margin: 0 0 1.3em;
@@ -282,7 +282,7 @@ img.post-avatar--foto {
   h2 {
     @include sans_bold;
     display: block !important;
-    font-size: 1.56rem;
+    font-size: $fs-4xl;
     font-weight: 600;
     line-height: 1.25;
     letter-spacing: -0.015em;
@@ -301,7 +301,7 @@ img.post-avatar--foto {
 
   h3 {
     @include sans_bold;
-    font-size: 1.22rem;
+    font-size: $fs-xl;
     font-weight: 600;
     line-height: 1.3;
     letter-spacing: -0.01em;
@@ -326,7 +326,7 @@ img.post-avatar--foto {
       position: relative;
       padding-left: 24px;
       margin: 0.55em 0;
-      font-size: 1.125rem;
+      font-size: $fs-govde-blog;
       line-height: 1.7;
       color: $post-text;
 
@@ -348,7 +348,7 @@ img.post-avatar--foto {
     padding-left: 22px;
 
     li {
-      font-size: 1.125rem;
+      font-size: $fs-govde-blog;
       line-height: 1.7;
       color: $post-text;
       margin: 0.4em 0;
@@ -380,7 +380,7 @@ img.post-avatar--foto {
     background: $surface-alt;
     border-left: 3px solid $brand;
     border-radius: 0 12px 12px 0;
-    font-size: 1.09rem;
+    font-size: $fs-lg;
     line-height: 1.65;
     color: $post-ink;
     font-weight: 400;
@@ -413,7 +413,7 @@ img.post-avatar--foto {
 
   h3 {
     @include sans_bold;
-    font-size: 0.82rem;
+    font-size: $fs-xs;
     font-weight: 600;
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -426,7 +426,7 @@ img.post-avatar--foto {
     margin: 0;
 
     li {
-      font-size: 0.85rem;
+      font-size: $fs-sm;
       line-height: 1.6;
       color: $post-muted;
       margin: 6px 0;
@@ -452,7 +452,7 @@ img.post-avatar--foto {
     b {
       @include sans_bold;
       display: block;
-      font-size: 0.97rem;
+      font-size: $fs-md;
       font-weight: 600;
       color: $post-ink;
       margin-bottom: 4px;
@@ -460,7 +460,7 @@ img.post-avatar--foto {
 
     span {
       display: block;
-      font-size: 0.85rem;
+      font-size: $fs-sm;
       color: $post-muted;
       line-height: 1.5;
     }
@@ -476,7 +476,7 @@ img.post-avatar--foto {
     color: $white;
     @include sans_bold;
     font-weight: 600;
-    font-size: 0.88rem;
+    font-size: $fs-sm;
     padding: 9px 24px;
     border-radius: 999px;
     text-decoration: none;
@@ -485,7 +485,7 @@ img.post-avatar--foto {
 
     .cta-sub {
       @include sans_regular;
-      font-size: 0.75rem;
+      font-size: $fs-2xs;
       opacity: 0.9;
     }
 
@@ -508,17 +508,17 @@ img.post-avatar--foto {
     text-align: center;
 
     .txt { min-width: 0; }
-    .txt b { font-size: 1.05rem; }
-    .txt span { font-size: 0.92rem; }
+    .txt b { font-size: $fs-base; }
+    .txt span { font-size: $fs-md; }
 
     a {
       align-self: center;
       width: 100%;
       max-width: 300px;
       padding: 12px 20px;
-      font-size: 1rem;
+      font-size: $fs-base;
 
-      .cta-sub { font-size: 0.8rem; }
+      .cta-sub { font-size: $fs-xs; }
     }
   }
 }
@@ -532,7 +532,7 @@ img.post-avatar--foto {
   flex-wrap: wrap;
 
   span {
-    font-size: 0.82rem;
+    font-size: $fs-xs;
     color: $post-faint;
     margin-right: 4px;
   }
@@ -586,25 +586,25 @@ img.post-avatar--foto {
   .post-avatar {
     width: 58px;
     height: 58px;
-    font-size: 1.18rem;
+    font-size: $fs-govde-ic;
   }
 
   .who {
     @include sans_bold;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: $fs-base;
     color: $post-ink;
   }
 
   .role {
-    font-size: 0.82rem;
+    font-size: $fs-xs;
     color: $brand;
     font-weight: 400;
     margin: 2px 0 8px;
   }
 
   p {
-    font-size: 0.88rem;
+    font-size: $fs-sm;
     color: $post-muted;
     line-height: 1.65;
     margin: 0;
@@ -632,7 +632,7 @@ img.post-avatar--foto {
   h3 {
     @include sans_bold;
     font-weight: 600;
-    font-size: 0.82rem;
+    font-size: $fs-xs;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: $post-faint;
@@ -675,7 +675,7 @@ img.post-avatar--foto {
 
   h4 {
     @include sans_bold;
-    font-size: 1rem;
+    font-size: $fs-base;
     font-weight: 600;
     line-height: 1.32;
     color: $post-ink;
@@ -689,7 +689,7 @@ img.post-avatar--foto {
   &:hover h4 { color: $brand; }
 
   .rx {
-    font-size: 0.82rem;
+    font-size: $fs-xs;
     color: $post-muted;
     line-height: 1.55;
     margin: 0;
@@ -700,7 +700,7 @@ img.post-avatar--foto {
   }
 
   .rd {
-    font-size: 0.75rem;
+    font-size: $fs-2xs;
     color: $post-faint;
     margin-top: auto;
   }
@@ -718,7 +718,7 @@ img.post-avatar--foto {
   a {
     @include sans_bold;
     font-weight: 600;
-    font-size: 0.88rem;
+    font-size: $fs-sm;
     color: $brand;
     display: inline-flex;
     align-items: center;

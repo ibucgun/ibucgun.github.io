@@ -38,7 +38,7 @@
 
     .header-title {
       @include sans_bold;
-      font-size: 2.8rem;
+      font-size: $fs-8xl;
       color: $text-strong;
       margin-bottom: 20px;
       letter-spacing: -0.04em;
@@ -77,7 +77,7 @@
 
 .page-intro-text {
   @include sans_regular;
-  font-size: 1.3rem; // Ana metinden daha büyük ve belirgin
+  font-size: $fs-2xl; // Ana metinden daha büyük ve belirgin
   line-height: 1.6;
   color: $text_color; // Daha yumuşak, modern bir gri
   text-align: center; // Başlıkla uyumlu merkezi hizalama
@@ -94,7 +94,7 @@
 // Kart içi metinlerin profesyonel yerleşimi
 .resume-item-copy {
   @include sans_regular;
-  font-size: 1.18rem;
+  font-size: $fs-govde-ic;
   line-height: 1.95;
   color: $text-body;
   text-align: justify; // Profesyonel yaslama

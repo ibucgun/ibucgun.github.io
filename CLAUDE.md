@@ -336,6 +336,9 @@ Her dosyanın başında neyi biçimlendirdiği ve hangi şablonların kullandı�
   "Bir yere ekle geç" yapılmaz.
 - Telefon kuralı ayrı bir "mobil" bloğa değil, bileşenin kendi kuralının içine yazılır (`@include media_mobile`).
 - Renk ve yazı boyutu yalnız `_variables.scss`'teki adlandırılmış değişkenlerden gelir; sayı yazılmaz.
+  Yazı boyutu ölçeği `$fs-2xs` (0.72rem) … `$fs-9xl` (3.1rem), 15 basamak; yeni boyut gerekiyorsa basamaklardan
+  biri seçilir, ara değer eklenmez (45 dağınık değer toplanmıştı). İstisnalar: gövde metni (`$fs-lg` ana sayfa,
+  `$fs-govde-blog` 1.125, `$fs-govde-ic` 1.18; birleştirilmesi ayrı karar), `clamp()` başlıkları, yazdırmadaki `pt`.
 - Yeni `!important` eklenmez. Bir kural ezilemiyorsa seçicinin özgüllüğü düzeltilir; `!important` yalnız
   ölçümle gerekli çıkarsa ve yanında nedeni yazılarak kalır.
 - Yorumlar ne işe yaradığını anlatır, tarihçeyi değil ("Nihai tasarım", "güncellendi" yazılmaz).
@@ -416,7 +419,7 @@ A10 (atıfsız otorite) bulgularına atıf eklenir. 8 sayfanın hepsi yayında (
   TMS**'e aittir. OKB onay yılı (2018) FDA duyurusundan; Cohen 2022 2017 yazıyor, kullanılmaz.
   Sayfa metni hekimin kendi yazısı: kaynak eklerken dili değiştirilmez.
 
-Punto kademesi: gövde 1.18rem → TOC 0.88rem → kaynaklar 0.8rem → uyarı 0.75rem. TOC ve
+Punto kademesi: gövde 1.18rem → TOC `$fs-sm` → kaynaklar `$fs-xs` → uyarı `$fs-2xs`. TOC ve
 kaynak kutusu blogdaki `.post-toc` / `.post-refs` ile aynı dili konuşur; uyarıya kutu verilmez.
 
 ### Ölçüm (GA4)

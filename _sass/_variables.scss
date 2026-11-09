@@ -2,6 +2,29 @@
 // ---------------------------------------/
 
 
+// Yazı boyutu ölçeği (masaüstü; telefonda aşağıdaki $fs-m-… kademeleri de kullanılır)
+// ---------------------------------------
+// Yeni bir boyut gerekiyorsa önce bu basamaklardan biri kullanılır; sayı yazılmaz.
+$fs-2xs:  0.72rem;  // en küçük boyut: etiket, rozet, yasal uyarı
+$fs-xs:   0.8rem;   // dipnot: tarih, kaynak künyesi, alt yazı, yönetmelik satırı
+$fs-sm:   0.88rem;  // küçük metin: İçindekiler, altbilgi, buton altındaki numara
+$fs-md:   0.95rem;  // ikincil metin: kutu açıklaması, detay satırı
+$fs-base: 1rem;
+$fs-lg:   1.1rem;   // ana sayfa gövdesi, buton yazısı, kutu etiketi
+$fs-xl:   1.2rem;   // küçük başlık: kart başlığı, site adı, blog H3
+$fs-2xl:  1.3rem;   // giriş cümlesi, madde başlığı
+$fs-3xl:  1.4rem;   // iç sayfa H3, telefonda menü bağlantıları
+$fs-4xl:  1.55rem;  // kart ve blog H2
+$fs-5xl:  1.7rem;   // ana sayfa bölüm başlığı
+$fs-6xl:  1.85rem;  // iç sayfa H2
+$fs-7xl:  2.4rem;   // hero adı (telefon)
+$fs-8xl:  2.8rem;   // sayfa başlığı (H1)
+$fs-9xl:  3.1rem;   // hero adı
+
+// Gövde metni üç ayrı boyutta (ana sayfa $fs-lg); birleştirmek ayrı bir tasarım kararı
+$fs-govde-blog: 1.125rem;  // blog yazısı, iç sayfa listeleri
+$fs-govde-ic:   1.18rem;   // iç sayfa paragrafı
+
 // Yazı boyutları — mobil (≤600px)
 // ---------------------------------------
 // Ana sayfanın mobil kademeleri; iç sayfalar ve blog yazıları da bunları kullanır.
