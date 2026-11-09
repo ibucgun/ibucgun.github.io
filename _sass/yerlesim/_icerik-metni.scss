@@ -72,8 +72,8 @@
   // Paragraf: !important, KVKK metinleri, bilgi kutuları ve hastalık sayfalarının kendi paragraf
   // kurallarını ezer (kaldırılınca 35 ölçümde yazı küçüldü)
   p {
-    font-size: $fs-govde-ic !important;
-    line-height: 1.95 !important;
+    font-size: $fs-govde !important;
+    line-height: $lh-govde !important;
     text-align: justify;
     margin-bottom: 2rem;
 
@@ -155,12 +155,12 @@
    ========================================================= */
 
 /* 1) İçerik metnini eski inline stillerin yerine geçirir
-   (text-align: justify; font-size: $fs-govde-blog;)
+   (text-align: justify; font-size: $fs-govde;)
    NOT: Sadece <p> ve <li> hedefleniyor — başlıklar (h1-h6) etkilenmez */
 .tms-content p,
 .tms-content li {
   text-align: justify;
-  font-size: $fs-govde-blog;
+  font-size: $fs-govde;
 
   @include media_mobile {
     font-size: $fs-m-body;

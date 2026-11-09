@@ -10,7 +10,7 @@ $fs-xs:   0.8rem;   // dipnot: tarih, kaynak künyesi, alt yazı, yönetmelik sa
 $fs-sm:   0.88rem;  // küçük metin: İçindekiler, altbilgi, buton altındaki numara
 $fs-md:   0.95rem;  // ikincil metin: kutu açıklaması, detay satırı
 $fs-base: 1rem;
-$fs-lg:   1.1rem;   // ana sayfa gövdesi, buton yazısı, kutu etiketi
+$fs-lg:   1.1rem;   // buton yazısı, kutu metni, alıntı
 $fs-xl:   1.2rem;   // küçük başlık: kart başlığı, site adı, blog H3
 $fs-2xl:  1.3rem;   // giriş cümlesi, madde başlığı
 $fs-3xl:  1.4rem;   // iç sayfa H3, telefonda menü bağlantıları
@@ -21,9 +21,9 @@ $fs-7xl:  2.4rem;   // hero adı (telefon)
 $fs-8xl:  2.8rem;   // sayfa başlığı (H1)
 $fs-9xl:  3.1rem;   // hero adı
 
-// Gövde metni üç ayrı boyutta (ana sayfa $fs-lg); birleştirmek ayrı bir tasarım kararı
-$fs-govde-blog: 1.125rem;  // blog yazısı, iç sayfa listeleri
-$fs-govde-ic:   1.18rem;   // iç sayfa paragrafı
+// Gövde metni: ana sayfa, iç sayfa, hastalık sayfası ve blog paragrafları ile listeleri (masaüstü)
+$fs-govde: 1.125rem;  // 18px
+$lh-govde: 1.75;
 
 // Yazı boyutları — mobil (≤600px)
 // ---------------------------------------

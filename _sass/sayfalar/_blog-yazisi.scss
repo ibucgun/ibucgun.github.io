@@ -101,7 +101,7 @@ $post-bg-tint: $brand-wash;
 .post-lead {
   @include sans_regular;
   margin-top: 16px;
-  font-size: $fs-govde-blog;
+  font-size: $fs-govde;
   color: $post-muted;
   line-height: 1.6;
 
@@ -266,8 +266,8 @@ img.post-avatar--foto {
   }
 
   p {
-    font-size: $fs-govde-blog;
-    line-height: 1.75;
+    font-size: $fs-govde;
+    line-height: $lh-govde;
     color: $post-text;
     margin: 0 0 1.3em;
     text-wrap: pretty; // son satırda tek kelime kalmasın
@@ -326,8 +326,8 @@ img.post-avatar--foto {
       position: relative;
       padding-left: 24px;
       margin: 0.55em 0;
-      font-size: $fs-govde-blog;
-      line-height: 1.7;
+      font-size: $fs-govde;
+      line-height: $lh-govde;
       color: $post-text;
 
       &::before {
@@ -348,8 +348,8 @@ img.post-avatar--foto {
     padding-left: 22px;
 
     li {
-      font-size: $fs-govde-blog;
-      line-height: 1.7;
+      font-size: $fs-govde;
+      line-height: $lh-govde;
       color: $post-text;
       margin: 0.4em 0;
     }
@@ -586,7 +586,7 @@ img.post-avatar--foto {
   .post-avatar {
     width: 58px;
     height: 58px;
-    font-size: $fs-govde-ic;
+    font-size: $fs-xl;
   }
 
   .who {

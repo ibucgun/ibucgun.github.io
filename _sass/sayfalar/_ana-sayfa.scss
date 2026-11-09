@@ -108,11 +108,13 @@
     // Açıklama metni
     .resume-item-copy {
       @include sans_regular;
-      font-size: $fs-lg;
-      line-height: 1.6;
+      font-size: $fs-govde;
+      line-height: $lh-govde;
       color: $text-body;
       margin: 0;
       text-align: left;
+
+      @include media_mobile { font-size: $fs-m-body; }
     }
   }
 }
@@ -121,10 +123,12 @@
 // Bölüm girişindeki açıklama paragrafı (#uyelikler'de de kullanılır)
 .section-intro-text {
   @include sans_regular;
-  font-size: $fs-lg;
+  font-size: $fs-govde;
   color: $text_color;
-  line-height: 1.6;
+  line-height: $lh-govde;
   margin-bottom: 2rem;
+
+  @include media_mobile { font-size: $fs-m-body; }
 }
 
 .practice-container {
@@ -316,14 +320,14 @@
     // Giriş paragrafı (telefonda ortalı; sola yaslamak D4 hero işinde konuşulacak)
     .executive-summary p {
       @include sans_regular;
-      font-size: $fs-lg;
-      line-height: 1.7;
+      font-size: $fs-govde;
+      line-height: $lh-govde;
       color: $text_color;
       text-align: justify;
       margin-bottom: 2.5rem;
       max-width: 550px;
 
-      @include media_mobile { text-align: center; margin: 0 auto 2rem; }
+      @include media_mobile { font-size: $fs-m-body; text-align: center; margin: 0 auto 2rem; }
     }
   }
 
@@ -370,11 +374,13 @@
     flex: 1;
 
     .contact-intro {
-      font-size: $fs-lg;
+      font-size: $fs-govde;
       color: $text_color;
-      line-height: 1.6;
+      line-height: $lh-govde;
       margin-bottom: 2rem;
       strong { color: $brand; }
+
+      @include media_mobile { font-size: $fs-m-body; }
     }
 
     .clinic-brand {

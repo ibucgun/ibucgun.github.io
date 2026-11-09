@@ -111,8 +111,8 @@
 
     .resume-item-copy {
       @include sans_regular;
-      font-size: $fs-lg;
-      line-height: 1.6;
+      font-size: $fs-govde;
+      line-height: $lh-govde;
       color: $text-body;
       margin: 0;
 

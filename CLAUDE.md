@@ -337,8 +337,9 @@ Her dosyanın başında neyi biçimlendirdiği ve hangi şablonların kullandı�
 - Telefon kuralı ayrı bir "mobil" bloğa değil, bileşenin kendi kuralının içine yazılır (`@include media_mobile`).
 - Renk ve yazı boyutu yalnız `_variables.scss`'teki adlandırılmış değişkenlerden gelir; sayı yazılmaz.
   Yazı boyutu ölçeği `$fs-2xs` (0.72rem) … `$fs-9xl` (3.1rem), 15 basamak; yeni boyut gerekiyorsa basamaklardan
-  biri seçilir, ara değer eklenmez (45 dağınık değer toplanmıştı). İstisnalar: gövde metni (`$fs-lg` ana sayfa,
-  `$fs-govde-blog` 1.125, `$fs-govde-ic` 1.18; birleştirilmesi ayrı karar), `clamp()` başlıkları, yazdırmadaki `pt`.
+  biri seçilir, ara değer eklenmez. Gövde metni (paragraf ve liste; ana sayfa, iç sayfa, hastalık sayfası, blog)
+  masaüstünde tek boyut ve tek satır aralığı: `$fs-govde` 18px / `$lh-govde` 1.75 (kullanıcı kararı 2026-11-09);
+  telefonda `$fs-m-body` / `$lh-m-body`. İstisnalar: `clamp()` başlıkları, yazdırmadaki `pt`.
 - Yeni `!important` eklenmez. Bir kural ezilemiyorsa seçicinin özgüllüğü düzeltilir; `!important` yalnız
   ölçümle gerekli çıkarsa ve yanında nedeni yazılarak kalır.
 - Yorumlar ne işe yaradığını anlatır, tarihçeyi değil ("Nihai tasarım", "güncellendi" yazılmaz).
@@ -419,7 +420,7 @@ A10 (atıfsız otorite) bulgularına atıf eklenir. 8 sayfanın hepsi yayında (
   TMS**'e aittir. OKB onay yılı (2018) FDA duyurusundan; Cohen 2022 2017 yazıyor, kullanılmaz.
   Sayfa metni hekimin kendi yazısı: kaynak eklerken dili değiştirilmez.
 
-Punto kademesi: gövde 1.18rem → TOC `$fs-sm` → kaynaklar `$fs-xs` → uyarı `$fs-2xs`. TOC ve
+Punto kademesi: gövde `$fs-govde` → TOC `$fs-sm` → kaynaklar `$fs-xs` → uyarı `$fs-2xs`. TOC ve
 kaynak kutusu blogdaki `.post-toc` / `.post-refs` ile aynı dili konuşur; uyarıya kutu verilmez.
 
 ### Ölçüm (GA4)
@@ -475,7 +476,7 @@ yerine doğrudan arar, GA4 `cta`).
 - macOS'ta `timeout` yok; BSD `grep` seçenekleri yoldan **önce** ister; `grep -Z`
   güvenilmez.
 - **`.content-section p` hâlâ `!important` ile stilleniyor** (`_sass/yerlesim/_icerik-metni.scss`:
-  1.18rem + 1.95 satır aralığı; telefonda sola yaslama da `!important`). Sayfa içinde küçük bir
+  `$fs-govde` + `$lh-govde`; telefonda sola yaslama da `!important`). Sayfa içinde küçük bir
   paragraf bileşeni (kutu metni, ince yazı) yaparken `font-size`/`line-height`'a `!important`
   vermezsen kuralın sessizce ezilir. Başlıklar (`h2`, `h3`) artık `!important` değil.
 - **`!important` temizliği ölçümle yapılır** (2026-11-06…09: 232 → 49). Yöntem: bir bloğun hepsini

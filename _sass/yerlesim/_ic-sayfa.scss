@@ -94,8 +94,8 @@
 // Kart içi metinlerin profesyonel yerleşimi
 .resume-item-copy {
   @include sans_regular;
-  font-size: $fs-govde-ic;
-  line-height: 1.95;
+  font-size: $fs-govde;
+  line-height: $lh-govde;
   color: $text-body;
   text-align: justify; // Profesyonel yaslama
 
