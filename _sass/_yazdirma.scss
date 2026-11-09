@@ -24,6 +24,7 @@
     h2 { font-size: 15pt !important; margin: 1.6rem 0 .6rem !important; }
     h3 { font-size: 12.5pt !important; margin: 1.2rem 0 .4rem !important; }
     p, li { font-size: 11pt !important; line-height: 1.5 !important; color: $text-strong !important; }
+    .sayfa-notu { font-size: $fs-2xs !important; line-height: 1.55 !important; } // yasal uyarı baskıda da en küçük satır
     h2, h3 { break-after: avoid; page-break-after: avoid; }
   }
 

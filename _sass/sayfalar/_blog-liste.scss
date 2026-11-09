@@ -49,19 +49,6 @@
   @include media_mobile {
     padding: 0;
   }
-
-  // Blog başlıklarındaki içeriden gelen accent-bar (::before) override'ı.
-  // .sayfa-icerigi h2 ::before kuralı yanlışlıkla tetiklenmesin diye.
-  .blog-feat h2,
-  .blog-card h3 {
-    display: block !important;
-    gap: 0 !important;
-
-    &::before {
-      content: none !important;
-      display: none !important;
-    }
-  }
 }
 
 // --- Yardımcı renkler (sadece blog index için, mevcut palet kıyısında) ---

@@ -14,7 +14,6 @@
     display: flex;
     align-items: stretch;
     gap: 15px;
-    border: none !important; // KVKK metinlerindeki başlık kenarlığını ezer
 
     @include media_mobile { font-size: $fs-m-h2; line-height: 1.3; margin-top: 2.5rem; }
 
@@ -69,15 +68,13 @@
     &:hover { background: $brand-line; color: $brand-dark; }
   }
 
-  // Paragraf: !important, KVKK metinleri, bilgi kutuları ve hastalık sayfalarının kendi paragraf
-  // kurallarını ezer (kaldırılınca 35 ölçümde yazı küçüldü)
   p {
-    font-size: $fs-govde !important;
-    line-height: $lh-govde !important;
+    font-size: $fs-govde;
+    line-height: $lh-govde;
     text-align: justify;
     margin-bottom: 2rem;
 
-    @include media_mobile { font-size: $fs-m-body !important; line-height: $lh-m-body !important; }
+    @include media_mobile { font-size: $fs-m-body; line-height: $lh-m-body; }
   }
 
   // Paragrafın son satırlarını dengeler, tek kelimelik son satır bırakmaz (Chrome, yeni Safari);
@@ -85,7 +82,7 @@
   p, li {
     text-wrap: pretty;
 
-    @include media_mobile { text-align: left !important; }
+    @include media_mobile { text-align: left; }
   }
 
   // Telefonda listeler gövde boyutunda; kendi boyutu olmayan li bunu alır
@@ -116,6 +113,7 @@
   @include media_mobile {
     font-size: $fs-m-body;
     line-height: $lh-m-body;
+    text-align: left; // dar ekranda iki yana yaslama kelime arasında boşluk açar
   }
 }
 

@@ -6,7 +6,7 @@ blockquote {
   color: $black;
   border-left: 04px solid $border;
   padding-left: 5px;
-  font-size: $fs-base !important;
+  font-size: $fs-base;
   font-style: italic;
 
   > :last-child {
@@ -20,8 +20,8 @@ blockquote {
 
 pre,
 code {
-  font-family: $mono-font !important;
-  font-size: $fs-md !important;
+  font-family: $mono-font;
+  font-size: $fs-md;
   color: $text-body;
   border: 01px solid $border;
   border-radius: 03px;

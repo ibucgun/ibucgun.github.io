@@ -484,11 +484,11 @@ yerine doğrudan arar, GA4 `cta`).
   listeleri için `find … -print0 | xargs -0` kullan.
 - macOS'ta `timeout` yok; BSD `grep` seçenekleri yoldan **önce** ister; `grep -Z`
   güvenilmez.
-- **`.sayfa-icerigi p` hâlâ `!important` ile stilleniyor** (`_sass/yerlesim/_icerik-metni.scss`:
-  `$fs-govde` + `$lh-govde`; telefonda sola yaslama da `!important`). Sayfa içinde küçük bir
-  paragraf bileşeni (kutu metni, ince yazı) yaparken `font-size`/`line-height`'a `!important`
-  vermezsen kuralın sessizce ezilir. Başlıklar (`h2`, `h3`) artık `!important` değil.
-- **`!important` temizliği ölçümle yapılır** (2026-11-06…09: 232 → 49). Yöntem: bir bloğun hepsini
+- **İç sayfa paragrafı `.sayfa-icerigi p` (özgüllük 0,1,1).** Sayfa içinde küçük bir paragraf bileşeni
+  (kutu metni, ince yazı) iki sınıflı seçiciyle yazılır (`.sayfa-metni .sayfa-notu` gibi); tek sınıf + etiket
+  aynı özgüllükte kalır ve dosya sırasına bağlı olur. KVKK sayfalarında paragraf 18px, liste 16px
+  (`.yasal-metin li`): eskiden `!important` yüzünden böyle kalmış, görünüm korunarak bırakıldı.
+- **`!important` temizliği ölçümle yapılır** (2026-11-06…09: 232 → 27). Yöntem: bir bloğun hepsini
   kaldır, derle, bütün siteyi (sitemap'teki sayfalar + `/404`, `/parlakisik`, `/blog`; 1280 ve 390px)
   canlı CSS ve yeni CSS ile yan yana açıp her öğenin hesaplanan stilini karşılaştır; fark çıkaranı
   geri koy ya da seçiciyi düzelt. Fark sıfır değilse adım bitmiş sayılmaz. Düzenek scratchpad'de
@@ -496,7 +496,8 @@ yerine doğrudan arar, GA4 `cta`).
   gerekirse yeniden kurulur. Önceki sürümün CSS'i `git archive <commit> css _sass` ile üretilir.
   Ekran görüntüsüyle karşılaştırmada: yazı tipi yüklenmeden ya da pencere boyutu değiştikten hemen sonra
   alınan ilk görüntü farklı çıkabilir (yazılarda dağınık birkaç bin piksel); ikinci çekim esas alınır.
-  `!important` 2026-11-09 itibarıyla 49: iç sayfa paragrafı (6, gerekli), yazdırma bloğu (bilinçli), blog.
+  Kalan `!important` (27, derlenmiş CSS): yazdırma bloğu (bilinçli; ekran kurallarını ezmek için), hareket azaltma
+  (`_base` ve blogdaki iki blok), normalize. Ekran kurallarında `!important` yok.
 - **GitHub Pages'in Sass derleyicisi eski** (libsass): `:has()` içeren seçiciyi hata vermeden bozuyor
   (`.a:not(:has(.b)) .c` canlıda `.a .c` oldu). Yeni CSS sözdizimi kullanılmaz; push sonrası canlı `main.css`
   yerel derlemeyle kural kural karşılaştırılır.
@@ -504,8 +505,8 @@ yerine doğrudan arar, GA4 `cta`).
   cancel …"): kod hatası değildir, site önceki hâliyle yayında kalır. Takılı kayıt bir süre sonra
   kendiliğinden "failure"a düşer; sonra boş commit (`git commit --allow-empty`) ile yeni derleme
   başlatılır. Derleme kayıtlarındaki "github-pages gem can't satisfy your Gemfile" yalnız uyarıdır.
-- **Yazdırma stili `_sass/_yazdirma.scss`'tedir ve `main.scss`'te en sonda içe aktarılır**; ekrandaki `!important`
-  kuralları ezebilmesi için sonda kalır. Sayfa kapsayıcısına (`article`) `no-print` verilmez:
+- **Yazdırma stili `_sass/_yazdirma.scss`'tedir ve `main.scss`'te en sonda içe aktarılır**; ekran kurallarını
+  ezebilmesi için sonda kalır ve `!important` kullanır (yasal uyarı satırının baskı boyutu da orada). Sayfa kapsayıcısına (`article`) `no-print` verilmez:
   `page.html`'de verildiği için iç sayfalar yazdırılınca boş çıkıyordu. Yaşlı hastaların
   yakınları sayfayı yazdırıyor; telefon numarası baskıda düz metin olarak kalır.
 - Mobil menü gerçek `<button>` + `navigation.html`'deki küçük betik (`aria-expanded`, ✕, Esc,
@@ -571,8 +572,8 @@ yerine doğrudan arar, GA4 `cta`).
   - **Tıklamayı etkileyenler, tek tek, başlangıç tarihi not edilerek:** hero: Türkçe unvan, kısa paragraf, mobilde sola yaslı, küçük fotoğraf · `/hakkimda` ile birlikte.
   - Hekim fotoğrafı 800 px + `srcset` (D3): büyük asıl fotoğraf kullanıcıdan bekleniyor.
   - CSS: kullanılmayan tema kodu 2026-11-06'da silindi (ızgara sistemi, kod renklendirme, sosyal
-    ikonlar, `_assets/`). `!important` 232'den 49'a indirildi (görünüm ölçümle birebir
-    aynı); kalanlar gerekli ya da bilinçli. Tekrarlanan seçiciler incelendi (2026-11-09): çoğu olağan
+    ikonlar, `_assets/`). `!important` 232'den 27'ye indirildi (görünüm ölçümle birebir
+    aynı); kalanlar yazdırma, hareket azaltma ve normalize. Tekrarlanan seçiciler incelendi (2026-11-09): çoğu olağan
     SCSS gruplaması (ortak kural + tek tek fark), birleştirilmez; gerçek çakışma ve ölü kurallar silindi.
     Hiçbir öğeyle eşleşmeyen kuralların kalanı bilinçli: normalize, durum kuralları (`:focus-visible`,
     hareket azaltma, menü/çubuk durumu), 12 yazıdan sonra görünecek blog araması, yazılarda kullanılabilecek

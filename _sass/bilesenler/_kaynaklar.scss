@@ -44,10 +44,9 @@
 }
 
 // Yasal uyarı: kutusuz, kaynaklardan da küçük, sayfanın en hafif katmanı.
-// !important: .sayfa-icerigi p yazı boyutunu ve satır aralığını !important ile veriyor.
 .sayfa-metni .sayfa-notu {
-  font-size: $fs-2xs !important;
-  line-height: 1.55 !important;
+  font-size: $fs-2xs;
+  line-height: 1.55;
   color: $text-muted;
   text-align: left;
   margin: 14px 2px 0;

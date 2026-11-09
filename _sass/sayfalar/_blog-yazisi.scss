@@ -212,10 +212,8 @@ img.post-avatar--foto {
     p, li { text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
   }
 
-  // .sayfa-icerigi h2::before bar'ı bizim h2'lere bulaşmasın
   h2 {
     @include sans_bold;
-    display: block !important;
     font-size: $fs-4xl;
     font-weight: 600;
     line-height: 1.25;
@@ -223,12 +221,6 @@ img.post-avatar--foto {
     margin: 2.4em 0 0.5em;
     color: $post-ink;
     scroll-margin-top: 90px;
-    gap: 0 !important;
-
-    &::before {
-      content: none !important;
-      display: none !important;
-    }
 
     &:first-child { margin-top: 0; }
   }
@@ -571,9 +563,6 @@ img.post-avatar--foto {
     color: $post-ink;
     margin: 0;
     transition: color 0.2s;
-
-    // Global .sayfa-icerigi h2::before bar'a karşı koruma (h4 ama emin olmak için)
-    &::before { content: none !important; display: none !important; }
   }
 
   &:hover h4 { color: $brand; }

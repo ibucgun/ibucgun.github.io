@@ -10,8 +10,7 @@
 .yasal-metin h1 {
   margin-bottom: 1.5rem;
 }
-// h2/h3 genel iç sayfa kuralından gelir (.sayfa-icerigi)
-.yasal-metin p,
+// h2/h3 ve paragraf genel iç sayfa kuralından gelir (.sayfa-icerigi); listeler daha küçük
 .yasal-metin li {
   font-size: $fs-base;
   line-height: 1.7;
@@ -36,13 +35,13 @@
   padding: 0.75rem 1rem;
   border-radius: 6px;
   margin-top: 2rem;
-  font-size: $fs-md;
 }
 .yasal-metin .yasal-baglantilar {
   text-align: center;
   margin-top: 1.5rem;
-  font-size: $fs-md;
   color: $text-muted;
+
+  @include media_mobile { text-align: left; } // telefonda diğer paragraflar gibi
 }
 .yasal-metin .yasal-baglantilar a {
   color: $brand;
