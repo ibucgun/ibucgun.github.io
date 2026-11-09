@@ -1,0 +1,120 @@
+// Arama ve WhatsApp butonları: "Randevu Al" (dolu kiremit), WhatsApp (çerçeveli), Instagram.
+// Kullanan: ana sayfa hero, sayfa sonu kutusu (_includes/iletisim-cta.html), /tms, /randevu, sabit çubuk.
+
+/* =========================================================
+   GLOBAL CTA BUTONLARI (Telefon / WhatsApp / Instagram)
+   Üç sayfada kullanılır:
+     - Anasayfa hero  → .hero-action-btns konteynerinde
+     - TMS sayfası     → .cta-buttons konteynerinde
+     - Randevu sayfası → .cta-buttons konteynerinde
+   ========================================================= */
+
+.btn-double-line {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: $action;
+  color: $white;
+  padding: 12px 35px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba($action, $alpha-strong);
+  transition: all 0.3s ease;
+  line-height: 1.2;
+
+  .btn-main-text {
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: block;
+  }
+  .btn-sub-text {
+    font-weight: 400;
+    font-size: 0.85rem;
+    opacity: 0.9;
+    display: block;
+    margin-top: 2px;
+  }
+
+  &:hover {
+    background: $action-dark;
+  }
+}
+
+// İkincil buton: çerçeveli. Çerçeve iç gölgeyle çizilir, boyu "Randevu Al" ile aynı kalsın.
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: $white;
+  color: $action;
+  box-shadow: inset 0 0 0 2px $action;
+  padding: 0 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  &:hover {
+    background: $action-tint;
+  }
+}
+
+.btn-instagram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: $white;
+  color: $brand;
+  border: 1px solid rgba($brand, $alpha-strong);
+  width: 60px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $instagram;
+    border-color: $instagram;
+  }
+}
+
+/* Konteyner ortak kuralları */
+.hero-action-btns,
+.cta-buttons {
+  display: flex;
+  align-items: stretch;
+  gap: 15px;
+}
+
+.hero-action-btns {
+  margin-bottom: 2rem;
+}
+
+.cta-buttons {
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+@include media_mobile {
+  .btn-double-line,
+  .btn-whatsapp {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    padding: 15px 0;
+  }
+
+  .btn-instagram {
+    width: 50px;
+    height: 50px;
+  }
+
+  .hero-action-btns,
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-action-btns {
+    width: 100%;
+  }
+}

@@ -1,0 +1,64 @@
+// İç sayfalardaki İçindekiler kutusu (.tms-toc). Blogdaki eşi: sayfalar/_blog-yazisi.scss (.post-toc).
+
+/* 3) İçindekiler (TOC) — blogdaki .post-toc ile aynı görünüm, biraz daha sıkı */
+.tms-content .tms-toc {
+  background: $surface-alt;
+  border-radius: 14px;
+  padding: 15px 20px;
+  margin: 26px 0;
+}
+.tms-content .tms-toc strong {
+  @include sans_bold;
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $brand;
+  margin: 0 0 8px;
+}
+.tms-content .tms-toc ol {
+  list-style: none;
+  counter-reset: tmstoc;
+  margin: 0;
+  padding: 0;
+}
+// Numara solda sabit, metin kendi sütununda: uzun madde ikinci satırda numaranın altına kaymaz
+.tms-content .tms-toc li {
+  counter-increment: tmstoc;
+  display: flex;
+  align-items: flex-start;
+  margin: 5px 0;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  text-align: left;
+}
+.tms-content .tms-toc li::before {
+  @include sans_bold;
+  content: counter(tmstoc);
+  display: inline-flex;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: $white;
+  color: $brand;
+  font-size: 0.68rem;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  margin: 0.15em 9px 0 0; // ilk satırın ortasına hizalı
+  flex: none;
+}
+.tms-content .tms-toc a {
+  color: $text_color;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.tms-content .tms-toc a:hover {
+  color: $brand;
+}
+.tms-content .tms-toc a:focus-visible {
+  outline: 2px solid $brand;
+  outline-offset: 2px;
+  border-radius: 3px;
+}

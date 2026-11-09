@@ -318,6 +318,29 @@ listelenmez.
 | `llms.txt` | Dil modelleri için site özeti — **hizmet değişince güncelle** |
 | `.claude/skills/metin-denetimi/` | Metin denetimi skill'i: mevzuat + yapay zekâ yazım izleri; `scripts/denetle.py` tarama, yedek ve karşılaştırma |
 
+### CSS düzeni
+
+`css/main.scss` yalnız içe aktarma listesidir; sıra önemlidir (sonra gelen, aynı özgüllükteki kuralı ezer).
+Her dosyanın başında neyi biçimlendirdiği ve hangi şablonların kullandığı yazar.
+
+| Klasör / dosya | İçerik |
+|---|---|
+| `_variables.scss`, `_mixins.scss`, `_base.scss`, `_normalize.scss` | Renkler ve ölçüler, yardımcılar, genel ayarlar (odak halkası, hareket azaltma); normalize'a dokunulmaz |
+| `yerlesim/` | Her sayfada olanlar: `_menu`, `_altbilgi`, `_sabit-cubuk`, `_ic-sayfa` (kart, başlık, giriş), `_icerik-metni` (H2/H3, paragraf, bağlantı, bilgi/acil kutuları) |
+| `bilesenler/` | Tekrar kullanılan parçalar: `_butonlar`, `_akordeon`, `_icindekiler`, `_kaynaklar`, `_gorseller`, `_metin-ogeleri` (tablo, alıntı, kod) |
+| `sayfalar/` | Tek sayfaya özgü olanlar: `_ana-sayfa`, `_yasal`, `_blog-liste`, `_blog-yazisi` |
+| `_yazdirma.scss` | `@media print`; en sonda |
+
+**Kurallar** (parça parça eklenen kod dağıldığı için konuldu, 2026-11-09):
+- Yeni kural ait olduğu dosyaya yazılır; yoksa doğru klasörde yeni dosya açılıp `main.scss`'e eklenir.
+  "Bir yere ekle geç" yapılmaz.
+- Telefon kuralı ayrı bir "mobil" bloğa değil, bileşenin kendi kuralının içine yazılır (`@include media_mobile`).
+- Renk ve yazı boyutu yalnız `_variables.scss`'teki adlandırılmış değişkenlerden gelir; sayı yazılmaz.
+- Yeni `!important` eklenmez. Bir kural ezilemiyorsa seçicinin özgüllüğü düzeltilir; `!important` yalnız
+  ölçümle gerekli çıkarsa ve yanında nedeni yazılarak kalır.
+- Yorumlar ne işe yaradığını anlatır, tarihçeyi değil ("Nihai tasarım", "güncellendi" yazılmaz).
+- Değişiklik sonrası görünüm düzenekle doğrulanır (bkz. "Bilinen tuzaklar → `!important` temizliği").
+
 ### Hastalık sayfası düzeni
 
 Hepsi **`layout: hastalik`** kullanır. Sayfa dosyasında yalnızca içindekiler ve 6 bölüm
@@ -448,7 +471,7 @@ yerine doğrudan arar, GA4 `cta`).
   listeleri için `find … -print0 | xargs -0` kullan.
 - macOS'ta `timeout` yok; BSD `grep` seçenekleri yoldan **önce** ister; `grep -Z`
   güvenilmez.
-- **`.content-section p` hâlâ `!important` ile stilleniyor** (`_resume.scss`, "MODERN İÇERİK":
+- **`.content-section p` hâlâ `!important` ile stilleniyor** (`_sass/yerlesim/_icerik-metni.scss`:
   1.18rem + 1.95 satır aralığı; telefonda sola yaslama da `!important`). Sayfa içinde küçük bir
   paragraf bileşeni (kutu metni, ince yazı) yaparken `font-size`/`line-height`'a `!important`
   vermezsen kuralın sessizce ezilir. Başlıklar (`h2`, `h3`) artık `!important` değil.
@@ -465,7 +488,7 @@ yerine doğrudan arar, GA4 `cta`).
   cancel …"): kod hatası değildir, site önceki hâliyle yayında kalır. Takılı kayıt bir süre sonra
   kendiliğinden "failure"a düşer; sonra boş commit (`git commit --allow-empty`) ile yeni derleme
   başlatılır. Derleme kayıtlarındaki "github-pages gem can't satisfy your Gemfile" yalnız uyarıdır.
-- **Yazdırma stili `_resume.scss`'in en sonundaki "YAZDIRMA" bloğundadır**; ekrandaki `!important`
+- **Yazdırma stili `_sass/_yazdirma.scss`'tedir ve `main.scss`'te en sonda içe aktarılır**; ekrandaki `!important`
   kuralları ezebilmesi için sonda kalır. Sayfa kapsayıcısına (`article`) `no-print` verilmez:
   `page.html`'de verildiği için iç sayfalar yazdırılınca boş çıkıyordu. Yaşlı hastaların
   yakınları sayfayı yazdırıyor; telefon numarası baskıda düz metin olarak kalır.

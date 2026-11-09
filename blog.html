@@ -9,7 +9,7 @@ last_modified_at: 2026-06-23
 
 {%- comment -%}
   Kategori adları doğrudan post front matter'ından gelir (örn. "Bipolar Bozukluk").
-  Rozetlerin hepsi aynı marka rengindedir (_sass/blog.scss → .blog-badge).
+  Rozetlerin hepsi aynı marka rengindedir (_sass/sayfalar/_blog-liste.scss → .blog-badge).
 {%- endcomment -%}
 {%- assign active_cats = site.posts | map: "category" | compact | uniq -%}
 {%- comment -%}

@@ -1,0 +1,176 @@
+// İç sayfa içeriğinin metni (.content-section, .tms-content): H2/H3, paragraf, liste,
+// metin içi bağlantılar ve telefon etiketi, bilgi ve acil durum kutuları (.callout).
+
+/* =============================================================================
+   MODERN İÇERİK Stilleri
+   ============================================================================= */
+.content-section {
+  // Sayfa içi bağlantı hedefleri (İçindekiler, #iletisim-bilgileri…) sabit menünün altında kalmasın
+  [id] { scroll-margin-top: 90px; }
+
+  h2 {
+  @include sans_bold;
+  font-size: 1.85rem;
+  color: $text-strong;
+  margin: 3.5rem 0 1.5rem;
+  
+  // Dikeyde hizalamayı bozmamak için flex kuralları
+  display: flex;
+  align-items: stretch; // Çubuğun metin boyu kadar uzamasını sağlar
+  gap: 15px;
+  border: none !important; // KVKK metinlerindeki başlık kenarlığını ezer
+
+  &::before {
+    content: "";
+    width: 6px;
+    // Sabit height: 1.8rem; yerine bunları ekliyoruz:
+    min-height: 1.8rem; 
+    height: auto; 
+    
+    background: $brand;
+    border-radius: 4px;
+    flex-shrink: 0; // Çubuğun daralmasını engeller
+  }
+}
+
+  h3 {
+    @include sans_bold;
+    font-size: 1.4rem;
+    color: $brand;
+    margin: 2.5rem 0 1rem;
+  }
+
+  // Metin içi bağlantılar: zeytin + alt çizgi (İçindekiler kendi kuralıyla çizgisiz kalır)
+  p a, li a {
+    color: $brand;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    &:hover { color: $brand-dark; }
+  }
+
+  // Site içi sayfa bağlantıları kalın (kaynak ve dış bağlantılar normal kalır).
+  // inline-block DEĞİL: tek parça bağlantı satıra sığmayınca alt satıra iner, kalan satırdaki
+  // kelime araları çok açılıyordu (/klinik'te ölçüldü: 15px üstü boşluklu satır 4 → 1).
+  p a[href^="/"], li a[href^="/"] { font-weight: 600; }
+
+  // Telefon ve e-posta bağlantıları (ve elle verilen .link-chip): yuvarlak zeminli etiket.
+  // inline-block, iki yana yaslı metinde bağlantının içindeki boşlukların açılmasını da önler.
+  p a[href^="tel:"], li a[href^="tel:"],
+  p a[href^="mailto:"], li a[href^="mailto:"],
+  .link-chip {
+    display: inline-block;
+    white-space: nowrap;
+    padding: 0 0.5em;
+    border-radius: 6px;
+    background: $brand-tint;
+    color: $brand-dark;
+    font-weight: 600;
+    line-height: 1.6;
+    text-decoration: none;
+    transition: background 0.2s ease;
+    &:hover { background: $brand-line; color: $brand-dark; }
+  }
+
+  p {
+    font-size: 1.18rem !important;
+    line-height: 1.95 !important;
+    text-align: justify;
+    margin-bottom: 2rem;
+  }
+
+  // Paragrafın son satırlarını dengeler, tek kelimelik son satır bırakmaz (Chrome, yeni Safari;
+  // desteklemeyen tarayıcıda etkisiz)
+  p, li { text-wrap: pretty; }
+
+  @include media_mobile {
+    h2 { font-size: $fs-m-h2; line-height: 1.3; margin-top: 2.5rem; }
+    h3 { font-size: $fs-m-h3; margin-top: 2rem; }
+    p  { font-size: $fs-m-body !important; line-height: $lh-m-body !important; }
+    // Dar ekranda iki yana yaslama kelime arasında boşluk açar
+    p, li { text-align: left !important; }
+    // Listeler: kendi boyutu olmayan li bunu alır
+    ol, ul { font-size: $fs-m-body; }
+  }
+
+  // Masaüstünde metin iki yana yaslı: heceleme (lang="tr") kelime arasındaki büyük boşlukları azaltır
+  @media (min-width: 601px) {
+    p, li { -webkit-hyphens: auto; hyphens: auto; }
+    // Kaynak künyeleri (DOI, sayfa) ve İçindekiler hecelenmez
+    .page-refs li, .tms-toc li { -webkit-hyphens: manual; hyphens: manual; }
+  }
+
+  /* --- DİKEY ORTALANMIŞ KUTULAR --- */
+  .callout {
+    display: flex; gap: 20px;
+    padding: 20px 28px; border-radius: 18px;
+    margin: 2.5rem 0; align-items: center; // Dikey Ortalama
+    border: 1px solid transparent;
+
+    .callout-icon {
+      flex-shrink: 0; width: 32px; height: 32px;
+      display: flex; align-items: center;
+      svg { width: 100%; height: 100%; display: block; stroke-width: 2.5; }
+    }
+    .callout-content { flex: 1; }
+    .callout-label {
+      display: block; font-weight: 600;
+      font-size: 1.1rem; letter-spacing: 0.05em; margin-bottom: 2px;
+    }
+    .callout-text { font-size: 1.1rem; color: $text-strong; margin: 0; text-align: left; }
+
+    // Telefonda simge başlığın yanına geçer, metin kutunun tam genişliğini kullanır
+    // (simge ayrı sütunda kalınca satır başına 2–4 kelime düşüyordu)
+    @include media_mobile {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      column-gap: 10px;
+      row-gap: 6px;
+      align-items: center;
+      padding: 18px 20px;
+      border-radius: 14px;
+
+      .callout-icon { width: 24px; height: 24px; }
+      .callout-content { display: contents; }
+      .callout-label { margin: 0; }
+      .callout-text { grid-column: 1 / -1; }
+    }
+  }
+
+  // Bilgi kutusu nötr: sayfadaki tek renkli kutu acil durum kutusu olsun
+  .callout-info {
+    background-color: $surface-alt; border: 1px solid $border;
+    .callout-label, svg { color: $brand; stroke: $brand; }
+  }
+
+  .callout-medical {
+    background-color: $danger-tint; border: 1px solid $danger-line;
+    .callout-label, svg { color: $danger; stroke: $danger; }
+  }
+}
+
+
+/* =========================================================
+   TMS sayfası için ek stiller
+   ========================================================= */
+
+/* 1) İçerik metnini eski inline stillerin yerine geçirir
+   (text-align: justify; font-size: 1.125rem;)
+   NOT: Sadece <p> ve <li> hedefleniyor — başlıklar (h1-h6) etkilenmez */
+.tms-content p,
+.tms-content li {
+  text-align: justify;
+  font-size: 1.125rem;
+
+  @include media_mobile {
+    font-size: $fs-m-body;
+    line-height: $lh-m-body;
+  }
+}
+
+/* 2) Başlıkların yaslı (justify) görünmesini önleme — koruma kuralı
+   Tema CSS'i veya kalıtım nedeniyle h2/h3 yaslı görünebiliyor;
+   bunu net bir şekilde sola yaslı yapar */
+.tms-content h2,
+.tms-content h3 {
+  text-align: left;
+}

@@ -4,25 +4,31 @@ sitemap:
   exclude: 'yes'
 ---
 
-// "Reset" styles and SCSS reusable components
+// Sitenin bütün stili. Dosya düzeni ve kurallar: CLAUDE.md → "CSS düzeni".
+// Sıra önemlidir: sonra gelen, aynı özgüllükteki kuralı ezer.
+
+// Temel
 @import "normalize";
 @import "mixins";
 @import "variables";
-
-// Generic site base styles
 @import "base";
 
-// Layouts
-@import "resume";
+// Sayfalar ve bileşenler
+@import "sayfalar/ana-sayfa";
+@import "bilesenler/akordeon";
+@import "bilesenler/butonlar";
+@import "yerlesim/ic-sayfa";
+@import "yerlesim/icerik-metni";
+@import "bilesenler/icindekiler";
+@import "bilesenler/gorseller";
+@import "bilesenler/kaynaklar";
+@import "sayfalar/yasal";
+@import "yerlesim/altbilgi";
+@import "yerlesim/sabit-cubuk";
+@import "yerlesim/menu";
+@import "bilesenler/metin-ogeleri";
+@import "sayfalar/blog-liste";
+@import "sayfalar/blog-yazisi";
 
-// Navigation
-@import "navigation";
-
-// Navigation
-@import "post";
-
-// Blog index
-@import "blog";
-
-// Post (yazı) sayfası
-@import "post-article";
+// Yazdırma: en sonda
+@import "yazdirma";
