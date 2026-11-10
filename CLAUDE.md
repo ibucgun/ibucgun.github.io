@@ -599,6 +599,9 @@ tek sütun oldu ve sabit arama çubuğu tablette de görünür oldu (önce table
      schema: `/hakkimda`'ya `ProfilePage` (`mainEntity` → mevcut `/#hekim`; ikinci kişi düğümü
      açılmaz, Physician ana sayfada kalır), `hasCredential`'a DUSEP, RCPsych, NEI · Search
      Console'dan dizine ekleme isteği · 2–3 hafta sıralama takibi.
+   - Yayınlar (yalnız künye): TPD Depresyon Tedavi Kılavuzu–I (2025) ve –III (2026, yazar), Brain and Behavior
+     2024 (Alzheimer, yüz ifadesi tanıma), uzmanlık tezi (ÇOMÜ 2020). Kaynak: Google Scholar ve ORCID profilleri (şemada
+     `sameAs`). Scholar'daki "sentetik kannabinoid" kaydı listeye alınmaz (kullanıcı kararı).
 
 - **Tasarım raporu (2026-11-06) — kalan işler.** Rapor kararları: masaüstünde iki yana yaslı
   kalır; Instagram **ana sayfada görünür kalır** (aktif kullanılıyor, oradan hasta geliyor;
