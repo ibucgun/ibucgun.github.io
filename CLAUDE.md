@@ -240,9 +240,10 @@ sıralama düşmesine yol açmıştı; taşınmanın ardından ana sayfa ve Busi
 
 Bina: asansör var; tekerlekli sandalyeyle giriş, oturma ve tuvalet uygun, otopark yok (Business Profile
 özellikleri). **Kat numarası hiçbir açık yerde yazılmaz:** resmî numarataj ile asansördeki kat düğmesi farklı,
-hasta yanlış kata gidiyor (kullanıcı kararı); tarif "binanın üst katı" olarak kalır. **SGK anlaşması yok; muayene ücretini hasta öder;
+hasta yanlış kata gidiyor (kullanıcı kararı); tarif "binanın üst katı" olarak kalır. **SGK anlaşması yok;
 reçetedeki ilaçlar SGK kapsamı dışında, ücretli alınır; SGK ilaç raporu, istirahat ve ehliyet raporu
-düzenlenmez** (kullanıcı beyanı 2026-11-10; SSS 2. soru). Durum bildirir hekim raporu sitede anılmaz (kullanıcı kararı). Ücret tutarı sitede
+düzenlenmez** (kullanıcı beyanı 2026-11-10; SSS 2. soru). Sitede yalnız "SGK ile anlaşması yoktur" yazılır;
+"ücreti hasta öder" yazılmaz, durum bildirir hekim raporu anılmaz (kullanıcı kararı). Ücret tutarı sitede
 yazılmaz. Özel sigorta anlaşması yok; bazı kurumların faturayla geri ödemesi **yazılmaz** (sigorta sorularını
 artırır, hasta zaten biliyor).
 
