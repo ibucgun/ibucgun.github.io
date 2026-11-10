@@ -447,9 +447,10 @@ kaybolmasın), ağ yüklemesi gecikmeli. Yeni bir buton kapsayıcısı eklenirse
 eşlemesine ekle. Sayaç `a[href*="wa.me/"]` ile çalışır: **WhatsApp paylaşım bağlantılarında `wa.me`
 kullanılmaz** (`api.whatsapp.com/send`), yoksa paylaşım randevu dönüşümü sayılır.
 
-**Referans dönemi: 2026-10-20 → 2026-11-10.** Bu tarihe kadar dönüşümü etkileyecek büyük
-değişiklik (`/tms` başlığı, ana sayfanın sadeleşmesi) yapılmaz; önce mevcut durum ölçülür.
-Veri çok azsa dönem uzatılır. **İstisnalar** (kullanıcı kararı): 2026-10-25'te butonlar mordan
+**Referans dönemi: 2026-10-20 → 2026-11-10, kapandı.** Kullanıcı kararı (2026-11-10): kalan işler
+(başlık/açıklama paketi, `/hakkimda`, hero, çerez onayı vb.) beklemeden yapılır, etki **sonra toplu**
+değerlendirilir; bu yüzden tek tek değişiklik dönemi tutulmaz, karşılaştırma aşağıdaki başlangıç durumuyla
+yapılır. Dönem içindeki değişiklikler (kullanıcı kararı): 2026-10-25'te butonlar mordan
 kiremide; 2026-11-04'te ana renk zeytin oldu ve WhatsApp butonu çerçeveli ikincil butona döndü
 (büyük olasılıkla `whatsapp_click`'i etkiler); aynı gün `/tms` arama başlığı "TMS ve Derin TMS
 Tedavisi Nedir?" ve açıklaması yeniden yazıldı (önceki CTR: 62.437 gösterim, %0,73; Search
@@ -461,6 +462,20 @@ adres · telefon · saat satırı eklendi, `footer` konumu o güne kadar telefon
 "Randevu Al" "Randevu" oldu; hover efektleri kaldırıldı; blog yazısı sonundaki randevu kutusu `/randevu`
 yerine doğrudan arar, GA4 `cta`). 2026-11-10'da tablette (601–960px) menü ≡ butonuna geçti, ana sayfa
 tek sütun oldu ve sabit arama çubuğu tablette de görünür oldu (önce tablette ilk ekranda randevu butonu yoktu).
+
+**Başlangıç durumu (karşılaştırma için; kaynak dosyalar kullanıcıda):**
+- GA4, 2026-10-20 → 11-09 (21 gün): `phone_click` 21 olay / 16 kişi (hero 14, icerik 3 [tek kişi], sabit_cubuk 2,
+  cta 1, iletisim_karti 1); `whatsapp_click` 22 / 18 (hero 10, cta 9, sabit_cubuk 3). Menü ve altbilgi 0.
+  Son 28 gün: 387 etkin kullanıcı, ~578 oturum (organik arama 423, doğrudan 98, Instagram 25, chatgpt.com 12).
+- Search Console, son 3 ay (2026-08-09 → 11-08): 1.025 tıklama, 88.036 gösterim, TO %1,16, ort. sıra 6,7;
+  mobil tıklamaların %84'ü. Günlük tıklama ay ay sabit (10–13); gösterim Ekim'de düştü (820/gün), Kasım'da
+  geri geldi. Sayfalar: `/` 537 tık (sıra 3,5) · `/tms` 202 tık, 38.067 gösterim, TO %0,53, sıra 7,35 ·
+  bipolar blog yazıları 127 · `/tdcs` 47. "adana psikiyatri" sıra 4,1; "adana psikiyatrist" 2,5;
+  "tms", "tms nedir", "tms tedavisi" ~23.000 gösterim, sıra 7–9; "tms tedavisi adana" sıra 15,7.
+  Anksiyete sorguları sıra 40–75. Eski adres sorguları ("central plaza") hâlâ ~250 gösterim.
+- Business Profile, Ekim 2026 (Eylül'e göre): 125 arama (−%35), 60 yol tarifi (−%1), 44 web sitesi (+%25),
+  19 sohbet (−%17), 2.652 profil görüntüleme (−%28), 1.494 aramada görünme (−%36). Telefonla gelen hastanın
+  ana kaynağı Business Profile (sitedeki `phone_click`'in ~6 katı).
 
 ### Senkron tutulması gerekenler
 
