@@ -40,6 +40,7 @@
     text-align: left;
     -webkit-hyphens: manual; // DOI ve sayfa numaraları hecelenmez
     hyphens: manual;
+    overflow-wrap: break-word; // uzun adres (URL) dar ekranda satıra sığmazsa kırılır
   }
 }
 

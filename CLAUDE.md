@@ -334,7 +334,11 @@ Her dosyanın başında neyi biçimlendirdiği ve hangi şablonların kullandı�
 **Kurallar** (parça parça eklenen kod dağıldığı için konuldu, 2026-11-09):
 - Yeni kural ait olduğu dosyaya yazılır; yoksa doğru klasörde yeni dosya açılıp `main.scss`'e eklenir.
   "Bir yere ekle geç" yapılmaz.
-- Telefon kuralı ayrı bir "mobil" bloğa değil, bileşenin kendi kuralının içine yazılır (`@include media_mobile`).
+- Telefon kuralı ayrı bir "mobil" bloğa değil, bileşenin kendi kuralının içine yazılır (`@include media_mobile`, ≤600px).
+  Tablet için `@include media_tablet` (≤960px; telefonu da kapsar): menü ≡ butonuna geçer, ana sayfa hero'su ve
+  Yeterlilik bölümü tek sütun olur. Masaüstü menüsü ~940px ister; arada kural yokken 601–960px'te menü kesiliyor,
+  ana sayfa yatay kayıyordu. Sabit arama çubuğu yalnız telefonda (≤600px). Uzun adresler (URL) iç sayfa metninde ve
+  kaynak kutusunda `overflow-wrap: break-word` ile kırılır.
 - Renk ve yazı boyutu yalnız `_variables.scss`'teki adlandırılmış değişkenlerden gelir; sayı yazılmaz.
   Yazı boyutu ölçeği `$fs-2xs` (0.72rem) … `$fs-9xl` (3.1rem), 15 basamak; yeni boyut gerekiyorsa basamaklardan
   biri seçilir, ara değer eklenmez. Gövde metni (paragraf ve liste; ana sayfa, iç sayfa, hastalık sayfası, blog)
@@ -508,7 +512,7 @@ yerine doğrudan arar, GA4 `cta`).
   ezebilmesi için sonda kalır ve `!important` kullanır (yasal uyarı satırının baskı boyutu da orada). Sayfa kapsayıcısına (`article`) `no-print` verilmez:
   `page.html`'de verildiği için iç sayfalar yazdırılınca boş çıkıyordu. Yaşlı hastaların
   yakınları sayfayı yazdırıyor; telefon numarası baskıda düz metin olarak kalır.
-- Mobil menü gerçek `<button>` + `navigation.html`'deki küçük betik (`aria-expanded`, ✕, Esc,
+- Mobil menü (≤960px) gerçek `<button>` + `navigation.html`'deki küçük betik (sınır betikte ve `noscript`'te de 960) (`aria-expanded`, ✕, Esc,
   odak döngüsü); onay kutusu yöntemine dönülmez. Tarayıcı paneli arka plandayken CSS geçişi
   ilerlemez: menü "gizli" ölçülürse önce ekran görüntüsü al.
 - `noindex` için front matter'a `noindex: true` yaz (`head.html` bunu okur).

@@ -105,6 +105,7 @@
 .hero-action-btns {
   margin-bottom: 2rem;
 
+  @include media_tablet { justify-content: center; }
   @include media_mobile { width: 100%; }
 }
 

@@ -5,7 +5,7 @@
     <a href="/" class="nav-logo-link">Uzm. Dr. İsmail Buçgün</a>
 
     {%- comment -%}
-      Mobil menü butonu (≤600px). Açma/kapama aşağıdaki betikte; menü açıkken ✕ görünür,
+      Mobil menü butonu (≤960px: telefon ve tablet). Açma/kapama aşağıdaki betikte; menü açıkken ✕ görünür,
       Esc kapatır, Tab menünün içinde döner. JS yoksa noscript stili menüyü düz liste gösterir.
     {%- endcomment %}
     <button type="button" class="nav-menu-button" aria-expanded="false" aria-controls="nav-menu" aria-label="Menüyü aç">
@@ -23,7 +23,7 @@
 </header>
 <div class="nav-buffer"></div>
 <noscript><style>
-  @media (max-width: 600px) {
+  @media (max-width: 960px) {
     header.nav-wrapper { position: static !important; }
     header.nav-wrapper .nav-container { height: auto !important; flex-wrap: wrap !important; padding: 14px 20px !important; }
     .nav-buffer, .nav-menu-button { display: none !important; }
@@ -61,7 +61,7 @@
   });
 
   // Ekran masaüstü genişliğine geçerse açık menü kapanır
-  var masaustu = window.matchMedia('(min-width: 601px)');
+  var masaustu = window.matchMedia('(min-width: 961px)');
   if (masaustu.addEventListener) masaustu.addEventListener('change', function (m) { if (m.matches) ayarla(false); });
 })();
 </script>

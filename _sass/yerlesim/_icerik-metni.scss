@@ -2,6 +2,8 @@
 // metin içi bağlantılar ve telefon etiketi. Bilgi ve acil durum kutuları: bilesenler/_bilgi-kutusu.scss.
 
 .sayfa-icerigi {
+  overflow-wrap: break-word; // uzun adres (URL) dar ekranda satıra sığmazsa kırılır
+
   // Sayfa içi bağlantı hedefleri (İçindekiler, #iletisim-bilgileri…) sabit menünün altında kalmasın
   [id] { scroll-margin-top: 90px; }
 

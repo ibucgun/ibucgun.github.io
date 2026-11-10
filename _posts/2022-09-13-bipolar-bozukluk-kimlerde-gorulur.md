@@ -4,7 +4,7 @@ title: "Bipolar Bozukluk Kimlerde Görülür?"
 permalink: /:title
 author: "Uzm. Dr. İsmail Buçgün"
 category: "Bipolar Bozukluk"
-description: Bipolar duygudurum bozukluğu kimlerde görüşür? Nedeni Nedir? Genetik midir?
+description: Bipolar duygudurum bozukluğu kimlerde görülür? Nedeni nedir? Genetik midir?
 last_modified_at: 2026-10-13
 ---
 

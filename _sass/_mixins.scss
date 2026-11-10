@@ -7,6 +7,12 @@
   @media (max-width: 600px) { @content; }
 }
 
+// Telefon + tablet (dikey iPad, dar dizüstü): menü ≡ butonuna geçer, ana sayfa hero'su tek sütun olur.
+// Menü masaüstünde ~940px ister; 960px'in altında sığmıyordu.
+@mixin media_tablet {
+  @media (max-width: 960px) { @content; }
+}
+
 // type utilities
 
 @mixin sans {

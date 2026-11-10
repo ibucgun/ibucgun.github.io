@@ -4,7 +4,7 @@ title: "Psikanalitik Psikoterapi Nedir?"
 permalink: /:title
 author: "Uzm. Dr. İsmail Buçgün"
 category: "Psikoterapi"
-description: Psikanalitik psikoterapi nedir, hangi kurama dayanır? Açıklayıcı psikoterapi ne demektir, destekleyici psikoterapiden farkı nedir? Bilgilendirme amaçlı genel bilgiler.
+description: Psikanalitik psikoterapi nedir, hangi kurama dayanır, destekleyici psikoterapiden farkı nedir? Bilgilendirme amaçlı genel bilgiler.
 last_modified_at: 2026-11-09
 ---
 

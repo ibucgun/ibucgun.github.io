@@ -249,14 +249,12 @@
       "inLanguage": "tr-TR",
       "author": {
         "@type": "Physician",
-        "name": "{{ site.resume_name }}",
-        "medicalSpecialty": "Psychiatry",
+        "@id": "{{ site.url }}/#hekim",
+        "name": {{ site.resume_name | jsonify }},
+        "medicalSpecialty": "Psychiatric",
         "url": "{{ site.url }}/"
       },
-      "publisher": {
-        "@type": "Person",
-        "name": "{{ site.resume_name }}"
-      },
+      "publisher": { "@id": "{{ site.url }}/#hekim" },
       "mainEntityOfPage": "{{ site.url }}{{ page.url }}"
     }
     </script>
