@@ -242,10 +242,10 @@ Bina: asansör var; tekerlekli sandalyeyle giriş, oturma ve tuvalet uygun, otop
 özellikleri). **Kat numarası hiçbir açık yerde yazılmaz:** resmî numarataj ile asansördeki kat düğmesi farklı,
 hasta yanlış kata gidiyor (kullanıcı kararı); tarif "binanın üst katı" olarak kalır. **SGK anlaşması yok;
 reçetedeki ilaçlar SGK kapsamı dışında, ücretli alınır; SGK ilaç raporu, istirahat ve ehliyet raporu
-düzenlenmez** (kullanıcı beyanı 2026-11-10; SSS 2. soru). Sitede yalnız "SGK ile anlaşması yoktur" yazılır;
-"ücreti hasta öder" ve ilaç raporu yazılmaz (hastayla görüşmede konuşuluyor), durum bildirir hekim raporu
-anılmaz (kullanıcı kararı). Ücret tutarı sitede
-yazılmaz. Özel sigorta anlaşması yok; bazı kurumların faturayla geri ödemesi **yazılmaz** (sigorta sorularını
+düzenlenmez** (kullanıcı beyanı 2026-11-10; SSS 2. soru). Sitede yalnız "SGK ile anlaşması yoktur" ve
+istirahat/ehliyet raporunun düzenlenemediği yazılır; "ücreti hasta öder", reçetenin ücretli olması ve ilaç
+raporu yazılmaz (hastayla görüşmede konuşuluyor), durum bildirir hekim raporu anılmaz (kullanıcı kararı).
+Ücret tutarı sitede yazılmaz. Özel sigorta anlaşması yok; bazı kurumların faturayla geri ödemesi **yazılmaz** (sigorta sorularını
 artırır, hasta zaten biliyor).
 
 ## Sunulan hizmetler
@@ -320,7 +320,7 @@ listelenmez.
 | `_layouts/post.html` | Blog yazısı |
 | `_includes/head.html` | Meta, OG, canonical, schema çağrıları, GA4; `seo_title` varsa `<title>` onu kullanır |
 | `images/paylasim-2026-11.jpg` | Paylaşım önizlemesi (OG/Twitter, 1200×630): ana sayfa üst bölümünün ekran görüntüsü. Tasarım ya da renk değişince yeniden çekilir, **dosya adı da değişir** (WhatsApp/Facebook önbelleği). Çekim: Firefox headless `--window-size=1394,732 --screenshot`, ardından `sips -z 630 1200` (çerçeve eskisiyle aynı kalır) |
-| `_includes/schema/hekim-klinik.html` | Ana sayfa JSON-LD (Physician + MedicalClinic) |
+| `_includes/schema/hekim-klinik.html` | Ana sayfa JSON-LD (Physician + MedicalClinic). Hekim `sameAs`: Twitter, Facebook, Instagram (hepsi kullanılıyor, kalır), Doktortakvimi, Scholar, ORCID; muayenehane `sameAs`/`hasMap`: Haritalar kaydı |
 | (kural) | Yapısal veri **yalnız JSON-LD**; şablonlarda mikro veri (`itemscope`/`itemprop`) kullanılmaz. `page.html` eskiden her sayfayı `Person` işaretliyordu ("Depresyon adında kişi"), 2026-11-06'da kaldırıldı |
 | `_includes/schema/tms.html` | `/tms` JSON-LD (FAQPage + MedicalProcedure) |
 | Kökteki hastalık sayfaları | `depresyon.html` vb.; `layout: hastalik` |
