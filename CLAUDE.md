@@ -233,15 +233,27 @@ kapalı; az söz verilir, kullanıcı kararı 2026-11-05). Business Profile saat
 telefona göre ayarlı. Yönlendirme sırası her yerde **önce arama**,
 WhatsApp "arayamadığınız durumlarda" (WhatsApp dönüş süresi yazılmaz).
 
-Adres 2026'da Hurmalı/Seyhan'dan buraya taşındı. Eski adresi ("Central Plaza
-Kat:2 D:23" veya "Kat:6 D:62") taşıyan bir yer görürsen bildir — eski kayıtlar
-sıralama düşmesine yol açmıştı.
+Adres 2026'da Hurmalı/Seyhan'dan buraya taşındı. Taşınma tarihi hiçbir yere yazılmaz (kullanıcı kararı).
+Eski adresi ("Central Plaza Kat:2 D:23" veya "Kat:6 D:62") taşıyan bir yer görürsen bildir — eski kayıtlar
+sıralama düşmesine yol açmıştı; taşınmanın ardından ana sayfa ve Business Profile yerel aramada geriledi
+(bkz. Ölçüm). Eski Instagram gönderi açıklamalarında eski adres ve "Psikoterapist" unvanı duruyor.
+
+Bina: asansör var; tekerlekli sandalyeyle giriş, oturma ve tuvalet uygun, otopark yok (Business Profile
+özellikleri). **Kat numarası hiçbir açık yerde yazılmaz:** resmî numarataj ile asansördeki kat düğmesi farklı,
+hasta yanlış kata gidiyor (kullanıcı kararı); tarif "binanın üst katı" olarak kalır. **SGK anlaşması yok; muayene ücretini hasta öder;
+reçetedeki ilaçlar SGK kapsamı dışında, ücretli alınır; SGK ilaç raporu, istirahat ve ehliyet raporu
+düzenlenmez** (kullanıcı beyanı 2026-11-10; SSS 2. soru). Durum bildirir hekim raporu sitede anılmaz (kullanıcı kararı). Ücret tutarı sitede
+yazılmaz. Özel sigorta anlaşması yok; bazı kurumların faturayla geri ödemesi **yazılmaz** (sigorta sorularını
+artırır, hasta zaten biliyor).
 
 ## Sunulan hizmetler
 
 TMS ve derin TMS · psikiyatrik değerlendirme · farmakolojik tedavi ·
 parlak ışık tedavisi · psikometrik ve nöropsikolojik testler ·
 ilaç kan düzeyi takibi
+
+Bağımlılık: alkol, madde ve kumar bağımlılığında, kendi isteğiyle başvuran hastalarda tedavi ve takip yapılır
+(SSS 6. soru; Business Profile hizmet listesinde de var; kullanıcı kararı 2026-11-10).
 
 **Konumlandırma:** İlk başvuruda herkese **genel psikiyatrik değerlendirme** yapılır
 (tanısını bilmeyen hasta da gelebilir). Ağırlık **tedavi ve takipte** üç alandadır:
@@ -476,6 +488,11 @@ tek sütun oldu ve sabit arama çubuğu tablette de görünür oldu (önce table
 - Business Profile, Ekim 2026 (Eylül'e göre): 125 arama (−%35), 60 yol tarifi (−%1), 44 web sitesi (+%25),
   19 sohbet (−%17), 2.652 profil görüntüleme (−%28), 1.494 aramada görünme (−%36). Telefonla gelen hastanın
   ana kaynağı Business Profile (sitedeki `phone_click`'in ~6 katı).
+  Aylık Business Profile aramaları (panel 2026-06'dan beri tutuyor): Haz ~165 · Tem ~210 · Ağu ~160 · Eyl ~190 ·
+  Eki ~125. Ana sayfa Search Console'da haftalık ort. sıra Ağu–Eyl ~3,0 → 28 Eyl haftasından beri ~4,2,
+  gösterim haftada ~2.100 → ~1.600 ("adana psikiyatri" 3,5 → 5). Düşüş taşınmanın ardından,
+  Ekim–Kasım site değişikliklerinden önce başladı. GA4 şehir (son 28 gün): Adana 94 kullanıcı (%24) ama anahtar
+  etkinliklerin %63'ü; İstanbul/Ankara/İzmir'in bir kısmı mobil operatör konumu olabilir.
 
 ### Senkron tutulması gerekenler
 

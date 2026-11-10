@@ -106,9 +106,12 @@
       // Dönüşüm takibi: telefon ve WhatsApp tıklamaları.
       // GA4'te phone_click ve whatsapp_click "anahtar etkinlik" olarak işaretli olmalı;
       // link_location için etkinlik kapsamlı özel boyut tanımlı olmalı.
+      // Yol tarifi: Google Haritalar bağlantıları (ana sayfadaki harita görseli, /iletisim) → directions_click.
+      // GA4'te anahtar etkinlik değil; ara ölçüm.
       document.addEventListener('click', function (e) {
-        var a = e.target.closest && e.target.closest('a[href^="tel:"], a[href*="wa.me/"]');
+        var a = e.target.closest && e.target.closest('a[href^="tel:"], a[href*="wa.me/"], a[href*="maps.google."], a[href*="maps.app.goo.gl"], a[href*="google.com/maps"]');
         if (!a) return;
+        var href = a.getAttribute('href');
         var konum = a.closest('.nav-wrapper') ? 'menu'
                   : a.closest('.modern-hero-layout') ? 'hero'
                   : a.closest('.sabit-cubuk') ? 'sabit_cubuk'
@@ -117,7 +120,10 @@
                   : a.closest('.post-cta') ? 'cta'
                   : a.closest('.modern-contact-card') ? 'iletisim_karti'
                   : 'icerik';
-        gtag('event', a.getAttribute('href').indexOf('tel:') === 0 ? 'phone_click' : 'whatsapp_click', {
+        var olay = href.indexOf('tel:') === 0 ? 'phone_click'
+                 : href.indexOf('wa.me/') > -1 ? 'whatsapp_click'
+                 : 'directions_click';
+        gtag('event', olay, {
           link_location: konum
         });
         loadGA();

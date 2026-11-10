@@ -5,7 +5,7 @@ permalink: /:title
 author: "Uzm. Dr. İsmail Buçgün"
 category: "Psikoterapi"
 description: Destekleyici psikoterapi nedir, hangi kurama dayanır? Tedavi hedefleri, başlıca kullanım alanları, görüşme sıklığı ve tedavi süresi hakkında bilgilendirme.
-last_modified_at: 2026-11-09
+last_modified_at: 2026-11-10
 ---
 
 Destekleyici psikoterapi, günümüzde bireysel psikoterapiler arasında dünyada en yaygın kullanılan, ülkemizde yetişmiş terapist sayısının azlığı nedeniyle kullanımı yaygın olmayan bir psikoterapi yöntemidir ve **Sigmund Freud ile başlayan psikanalitik kuram ve sonrasındaki psikodinamik psikiyatri temellerine dayalıdır.** Psikiyatrik tanısal değerlendirmeyi gerektiren, terapistin girişimlerini özgül bir hedefi başarmaya yönelik olarak tasarladığı bir psikoterapidir. **Hedefi kişilik değişimi değildir.** Ağır bir ruhsal bozukluğun yinelemesini önlemek amacıyla hastanın belirtilerle baş etmesine yardımcı olmak veya görece sağlıklı bir kişinin geçici güncel bir sorunla baş etmesine yardım etmek hedeflenir. 
@@ -39,6 +39,6 @@ Karşılıklı konuşmaya dayalı bir tarzı vardır. Tedavi planı hastanın he
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 16V12M12 8H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </div>
   <div class="callout-content">
-    <p class="callout-text">Bu yazı genel bilgilendirme amaçlıdır. Şu anda haftalık seanslarla yürütülen yapılandırılmış psikoterapi için yeni hasta kabul edemediğimden, psikoterapiye ihtiyacı olan hastalarda uygun yöntemi belirleyip o yöntemle çalışan bir uzmana yönlendiriyorum.</p>
+    <p class="callout-text">Bu yazı genel bilgilendirme amaçlıdır. Şu anda haftalık seanslarla yürütülen yapılandırılmış psikoterapi için yeni hasta kabul edemediğimden, psikoterapiye ihtiyacı olan hastalarda uygun yöntemi belirleyip o yöntemle çalışan bir uzmana yönlendiriyorum. Ayrıntılar <a href="/sikca-sorulan-sorular">sıkça sorulan sorular</a> sayfasındadır.</p>
   </div>
 </div>
