@@ -1,15 +1,16 @@
-// Telefonda altta sabit arama çubuğu (_includes/sabit-arama-cubugu.html).
+// Telefonda ve tablette altta sabit arama çubuğu (_includes/sabit-arama-cubugu.html).
 
 /* =============================================================================
    SABİT ARAMA ÇUBUĞU (_includes/sabit-arama-cubugu.html)
-   Yalnız telefonda (≤600px): ekranın altında "Randevu Al" (dolu) + WhatsApp (çerçeveli).
+   Telefonda ve tablette (≤960px): ekranın altında "Randevu Al" (dolu) + WhatsApp (çerçeveli).
    Menü açıkken üstünde kalmasın diye z-index başlıktan (1100) düşük.
    ============================================================================= */
 .sabit-cubuk { display: none; }
 
-@include media_mobile {
+@include media_tablet {
   .sabit-cubuk {
     display: flex;
+    justify-content: center;
     gap: 10px;
     position: fixed;
     left: 0;
@@ -25,7 +26,7 @@
     .btn-double-line,
     .btn-whatsapp {
       flex: 1;
-      max-width: none;
+      max-width: 320px; // tablette butonlar ekran boyunca uzamasın
       width: auto;
       min-height: 52px;
       padding: 6px 10px;

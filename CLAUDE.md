@@ -289,8 +289,9 @@ yönlendirir. Metin bunu yansıtır ("…uygun yöntemi belirleyip o yöntemle �
 uzmana yönlendiriyorum"). Psikoterapi eğitimleri bu eşleştirmenin dayanağıdır.
 **Eğitimler eşit sıralanmaz:** destekleyici psikoterapi = süpervizyonlu, ~3,5 yıllık
 yapılandırılmış eğitim + TPD Uygulayıcı sertifikası (uzmanlık **sırasında** alındı,
-"uzmanlık sonrası" denmez); BDT ve KİPT = temel eğitim. Psikanalitik psikoterapi için
-belgelenmiş eğitim yok, eğitim olarak yazılmaz.
+"uzmanlık sonrası" denmez); BDT ve KİPT = temel eğitim. Psikanalitik psikoterapi eğitimi destekleyici
+psikoterapi eğitimi içinde verildi: görüşmelerde tekniklerinden yararlanıldığı yazılabilir
+(`llms.txt`'teki gibi), ayrı bir eğitim olarak listelenmez.
 Schema `availableService`'te psikoterapi yok: yeni hastaya açık olmayan hizmet
 listelenmez.
 
@@ -312,7 +313,7 @@ listelenmez.
 | `_layouts/hastalik.html` | Hastalık sayfası şablonu: kaynaklar, uyarı (otomatik tarih), acil kutusu, CTA |
 | `_includes/schema/hastalik.html` | `MedicalWebPage` + `MedicalCondition`; yazar ve gözden geçiren `/#hekim` |
 | `_includes/iletisim-cta.html` | Ara / WhatsApp butonu; `baslik`, `metin`, `buton` parametreleri |
-| `_includes/sabit-arama-cubugu.html` | Telefonda (≤600px) altta sabit Randevu Al / WhatsApp çubuğu; `footer.html`'den çağrılır (`.page-footer` dışında). Sayfadaki arama butonları ekrandayken çekilir. GA4 `sabit_cubuk` |
+| `_includes/sabit-arama-cubugu.html` | Telefonda ve tablette (≤960px) altta sabit Randevu Al / WhatsApp çubuğu; `footer.html`'den çağrılır (`.page-footer` dışında). Sayfadaki arama butonları ekrandayken çekilir. GA4 `sabit_cubuk` |
 | `_includes/acil-kutusu.html` | Acil durum kutusu (112 kalıbı); hastalık şablonu ve `/randevu`; `baslik`, `metin` parametreleri |
 | `_sass/_variables.scss` | Sitenin tüm renkleri (görev adlı değişkenler) ve saydamlık seviyeleri |
 | `llms.txt` | Dil modelleri için site özeti — **hizmet değişince güncelle** |
@@ -337,7 +338,7 @@ Her dosyanın başında neyi biçimlendirdiği ve hangi şablonların kullandı�
 - Telefon kuralı ayrı bir "mobil" bloğa değil, bileşenin kendi kuralının içine yazılır (`@include media_mobile`, ≤600px).
   Tablet için `@include media_tablet` (≤960px; telefonu da kapsar): menü ≡ butonuna geçer, ana sayfa hero'su ve
   Yeterlilik bölümü tek sütun olur. Masaüstü menüsü ~940px ister; arada kural yokken 601–960px'te menü kesiliyor,
-  ana sayfa yatay kayıyordu. Sabit arama çubuğu yalnız telefonda (≤600px). Uzun adresler (URL) iç sayfa metninde ve
+  ana sayfa yatay kayıyordu. Sabit arama çubuğu telefonda ve tablette (≤960px; kullanıcı kararı 2026-11-10). Uzun adresler (URL) iç sayfa metninde ve
   kaynak kutusunda `overflow-wrap: break-word` ile kırılır.
 - Renk ve yazı boyutu yalnız `_variables.scss`'teki adlandırılmış değişkenlerden gelir; sayı yazılmaz.
   Yazı boyutu ölçeği `$fs-2xs` (0.72rem) … `$fs-9xl` (3.1rem), 15 basamak; yeni boyut gerekiyorsa basamaklardan
@@ -458,7 +459,8 @@ Dönüşüm verisi dört parça okunur: 10-20 → 10-24 (mor), 10-25 → 11-03 (
 11-04 → 11-05 (zeytin, WhatsApp çerçeveli), 11-06 → (sabit arama çubuğu; aynı gün altbilgiye
 adres · telefon · saat satırı eklendi, `footer` konumu o güne kadar telefon içermiyordu; menüdeki
 "Randevu Al" "Randevu" oldu; hover efektleri kaldırıldı; blog yazısı sonundaki randevu kutusu `/randevu`
-yerine doğrudan arar, GA4 `cta`).
+yerine doğrudan arar, GA4 `cta`). 2026-11-10'da tablette (601–960px) menü ≡ butonuna geçti, ana sayfa
+tek sütun oldu ve sabit arama çubuğu tablette de görünür oldu (önce tablette ilk ekranda randevu butonu yoktu).
 
 ### Senkron tutulması gerekenler
 
