@@ -330,7 +330,7 @@ listelenmez.
 | `_includes/schema/hastalik.html` | `MedicalWebPage` + `MedicalCondition`; yazar ve gözden geçiren `/#hekim` |
 | `_includes/iletisim-cta.html` | Ara / WhatsApp butonu; `baslik`, `metin`, `buton` parametreleri |
 | `_includes/sabit-arama-cubugu.html` | Telefonda ve tablette (≤960px) altta sabit Randevu Al / WhatsApp çubuğu; `footer.html`'den çağrılır (`.page-footer` dışında). Sayfadaki arama butonları ekrandayken çekilir. GA4 `sabit_cubuk` |
-| `_includes/sayfa-notu.html` | Yasal uyarı satırı ("genel bilgilendirme…, Hazırlayan…, Son güncelleme"; tarih `last_modified_at`'ten); kaynak kutusunun altında: hastalık şablonu ve `/parlakisik` |
+| `_includes/sayfa-notu.html` | Yasal uyarı satırı ("genel bilgilendirme…, Hazırlayan…, Son güncelleme"; tarih `last_modified_at`'ten); kaynak kutusunun altında: hastalık şablonu, `/tms` ve `/parlakisik` |
 | `_includes/acil-kutusu.html` | Acil durum kutusu (112 kalıbı); hastalık şablonu ve `/randevu`; `baslik`, `metin` parametreleri |
 | `_sass/_variables.scss` | Sitenin tüm renkleri (görev adlı değişkenler) ve saydamlık seviyeleri |
 | `llms.txt` | Dil modelleri için site özeti — **hizmet değişince güncelle** |
@@ -577,8 +577,11 @@ tek sütun oldu ve sabit arama çubuğu tablette de görünür oldu (önce table
 1. İç linkleme — şu sayfalardan hiç iç link çıkmıyor: `tdcs`, `blog`.
    `/tms`'den hastalık sayfalarına link 3.1/3.2 listelerindeki hastalık adlarından verilir;
    `/anksiyete-bozukluklari`'na verilmez (o sayfa bilinçli olarak TMS'yi anmıyor).
-2. **`/tdcs` kaynakları.** 6 atıfsız iddia var, kaynak listesi yok (yalnız tek bir satır içi
-   "Kaynak:" notu). `/tms` ve `/klinik`'teki kaynak kutusu (`.kaynaklar`, elle eklenmiş) örnek alınır.
+2. **`/tdcs` düzenlemesi.** Kaynak kutusu yok: 6 atıfsız iddia, yalnız tek bir satır içi "Kaynak:" notu;
+   `/tms` ve `/parlakisik`'teki kaynak kutusu (`.kaynaklar`, elle) örnek alınır. 57. satırdaki "güvenli ve etkili
+   bir yöntem" kesinlik bildiriyor (mevzuat), ölçülü dille yeniden yazılır. Kaynak kutusunun altına yasal uyarı
+   satırı (`{% include sayfa-notu.html %}`) eklenir. Metin `/parlakisik` gibi halk diliyle gözden geçirilir
+   (gereksiz çalışma ayrıntısı çıkarılır), `metin-denetimi` ile denetlenir; içerik değişince `last_modified_at`.
 
 > Hastalık sayfaları muayenehanedeki **değerlendirme ve tedavi sürecini** anlatır,
 > hastalığın "nedir"ini **blog yazıları** anlatır. Aynı metni iki yere yazma;

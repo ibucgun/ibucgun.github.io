@@ -1,6 +1,6 @@
 {%- comment -%}
   Yasal uyarı satırı: kaynak kutusunun altında. Hastalık sayfaları (_layouts/hastalik.html) ve
-  kaynaklı tedavi sayfaları (/parlakisik) kullanır. Tarih page.last_modified_at'ten gelir.
+  kaynaklı tedavi sayfaları (/tms, /parlakisik) kullanır. Tarih page.last_modified_at'ten gelir.
 {%- endcomment -%}
 {%- assign aylar = "Ocak,Şubat,Mart,Nisan,Mayıs,Haziran,Temmuz,Ağustos,Eylül,Ekim,Kasım,Aralık" | split: "," %}
 <p class="sayfa-notu">Bu sayfa yalnızca genel bilgilendirme amacı taşır; kişisel tanı, tedavi veya tıbbi tavsiye yerine geçmez. Hazırlayan: {{ site.resume_name }}, {{ site.author_specialty }}.{% if page.last_modified_at %}{% assign ay = page.last_modified_at | date: "%-m" | minus: 1 %} Son güncelleme: <time datetime="{{ page.last_modified_at | date: '%Y-%m-%d' }}">{{ page.last_modified_at | date: "%-d" }} {{ aylar[ay] }} {{ page.last_modified_at | date: "%Y" }}</time>.{% endif %}</p>
