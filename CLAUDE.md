@@ -231,7 +231,9 @@ saatleri = Google Business Profile = schema, Pazartesi–Cuma 09:00–19:00. Ayr
 Cumartesi telefon saati yazılmaz (asistan Cumartesi de yanıtlıyor ama Business Profile'da Cumartesi
 kapalı; az söz verilir, kullanıcı kararı 2026-11-05). Business Profile saati aramalarda görünürlük için
 telefona göre ayarlı. Yönlendirme sırası her yerde **önce arama**,
-WhatsApp "arayamadığınız durumlarda" (WhatsApp dönüş süresi yazılmaz).
+WhatsApp "arayamadığınız durumlarda" (WhatsApp dönüş süresi yazılmaz). Bütün WhatsApp butonları aynı hazır
+metinle açılır: "Merhaba, randevu hakkında bilgi almak istiyorum." (`?text=` ile; asistan siteden gelen mesajı
+buradan tanır). Hazır metne tanı, şikâyet ya da sayfaya özgü konu yazılmaz (hastanın sağlık bilgisini onun yerine yazmak olur).
 
 Adres 2026'da Hurmalı/Seyhan'dan buraya taşındı. Taşınma tarihi hiçbir yere yazılmaz (kullanıcı kararı).
 Eski adresi ("Central Plaza Kat:2 D:23" veya "Kat:6 D:62") taşıyan bir yer görürsen bildir — eski kayıtlar
@@ -461,6 +463,10 @@ kaybolmasın), ağ yüklemesi gecikmeli. Yeni bir buton kapsayıcısı eklenirse
 eşlemesine ekle. Sayaç `a[href*="wa.me/"]` ile çalışır: **WhatsApp paylaşım bağlantılarında `wa.me`
 kullanılmaz** (`api.whatsapp.com/send`), yoksa paylaşım randevu dönüşümü sayılır.
 
+Business Profile gönderileri (2026-11-11'den itibaren hafta içi her gün 10:00, "Daha fazla bilgi" butonu) siteye
+`?utm_source=google&utm_medium=gbp&utm_campaign=gonderi&utm_content=NN` (gönderi sıra numarası) ile bağlanır;
+GA4'te kaynak/araç `google / gbp`. Gönderi metinleri de tanıtım sayılır: sitedeki mevzuat ve terim kuralları geçerli.
+
 **Referans dönemi: 2026-10-20 → 2026-11-10, kapandı.** Kullanıcı kararı (2026-11-10): kalan işler
 (başlık/açıklama paketi, `/hakkimda`, hero, çerez onayı vb.) beklemeden yapılır, etki **sonra toplu**
 değerlendirilir; bu yüzden tek tek değişiklik dönemi tutulmaz, karşılaştırma aşağıdaki başlangıç durumuyla
@@ -580,8 +586,12 @@ tek sütun oldu ve sabit arama çubuğu tablette de görünür oldu (önce table
   yeterli tedavi denemesi, her biri en az 8 hafta), Schoeyen 2015 *Am J Psychiatry* (EKT RKÇ),
   Elsayed 2022 *Neuropsychiatr Dis Treat* derlemesi (üçü Singh 2025 *Lancet*'te atıflı; künyeler
   yazarken kaynaktan doğrulanır). Bipolar ve dirençli depresyon sayfalarından link verilir.
-4. `/parlakisik` içeriği yazılacak. Şu an `noindex` + sitemap dışı, içeriği
-   boşaltıldı. Tedavi **uygulanıyor**, eksik olan sadece sayfa.
+4. `/parlakisik`: 1–6. bölümler yazıldı (`/tms` gibi soru başlıklı, elle kaynak kutusu; 6 kaynak),
+   hâlâ `noindex` + sitemap dışı. Eksik: 7. bölüm "Adana'da … nasıl uyguluyorum" (hekimin uygulaması:
+   muayenehanede mi evde mi, hangi hastalar, protokol, göz muayenesi, kontrol aralığı). Yayında: `llms.txt`'teki
+   "sayfa hazırlanmamıştır" notu kaldırılıp sayfa listesine eklenir, ilgili hastalık sayfalarından link verilir.
+   Kararlar: çalışma yüzdeleri yazılmaz (başarı oranı gibi okunur), Lam 2016'nın ışık–fluoksetin karşılaştırması
+   yazılmaz (yöntem üstünlüğü); birim "lux" ("lüks" denetimde tesis övgüsü sanılıyor ve hasta için belirsiz).
 5. **`/hakkimda` — taslak, yayında değil.** Amaç: ana sayfayı özgeçmiş görünümünden çıkarmak.
    - Taslakta: `noindex` + sitemap dışı, **hiçbir yerden link yok** (menü, footer, `llms.txt`,
      404, blog). Adresi bilen açabilir ve repo herkese açık; taslağa gizli bilgi konmaz.
