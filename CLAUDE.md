@@ -449,6 +449,13 @@ A10 (atıfsız otorite) bulgularına atıf eklenir. 8 sayfanın hepsi yayında (
   ortamında uygulama güvenli olmayabilir". 2021 anksiyetenin eşlik ettiği depresyon onayı **derin
   TMS**'e aittir. OKB onay yılı (2018) FDA duyurusundan; Cohen 2022 2017 yazıyor, kullanılmaz.
   Sayfa metni hekimin kendi yazısı: kaynak eklerken dili değiştirilmez.
+- `parlakisik` (`layout: page`, `/tms` gibi soru başlıklı, kaynak kutusu elle; 2026-11-11 yayında): 7. bölüm
+  hekimin uygulaması — uygun hastalarda, özellikle mevsimsel depresyonda, bazen depresyonda ilaca ek olarak
+  **öneriliyor**; tanı ve kılavuza göre ekleniyor. **Cihazın hastaya verildiği/aldırıldığı yazılmaz** (kullanıcı
+  kararı); muayenehanede seans yapılıyormuş gibi de yazılmaz. Çalışma yüzdeleri yazılmaz (başarı oranı gibi
+  okunur); Lam 2016'nın ışık–fluoksetin karşılaştırması yazılmaz (yöntem üstünlüğü). Birim "lux" ("lüks" hasta
+  için belirsiz, denetimde tesis övgüsü sanılıyor). Hastalık sayfalarındaki parlak ışık bölümleri ve `/klinik`
+  buraya bağlanır.
 
 Punto kademesi: gövde `$fs-govde` → İçindekiler `$fs-md` → kaynaklar `$fs-sm` → uyarı `$fs-2xs`. İçindekiler,
 kaynak kutusu ve bilgi kutusu blog yazılarıyla ortak bileşendir (`icindekiler`, `kaynaklar`, `callout`); uyarıya kutu verilmez.
@@ -586,12 +593,6 @@ tek sütun oldu ve sabit arama çubuğu tablette de görünür oldu (önce table
   yeterli tedavi denemesi, her biri en az 8 hafta), Schoeyen 2015 *Am J Psychiatry* (EKT RKÇ),
   Elsayed 2022 *Neuropsychiatr Dis Treat* derlemesi (üçü Singh 2025 *Lancet*'te atıflı; künyeler
   yazarken kaynaktan doğrulanır). Bipolar ve dirençli depresyon sayfalarından link verilir.
-4. `/parlakisik`: 1–6. bölümler yazıldı (`/tms` gibi soru başlıklı, elle kaynak kutusu; 6 kaynak),
-   hâlâ `noindex` + sitemap dışı. Eksik: 7. bölüm "Adana'da … nasıl uyguluyorum" (hekimin uygulaması:
-   muayenehanede mi evde mi, hangi hastalar, protokol, göz muayenesi, kontrol aralığı). Yayında: `llms.txt`'teki
-   "sayfa hazırlanmamıştır" notu kaldırılıp sayfa listesine eklenir, ilgili hastalık sayfalarından link verilir.
-   Kararlar: çalışma yüzdeleri yazılmaz (başarı oranı gibi okunur), Lam 2016'nın ışık–fluoksetin karşılaştırması
-   yazılmaz (yöntem üstünlüğü); birim "lux" ("lüks" denetimde tesis övgüsü sanılıyor ve hasta için belirsiz).
 5. **`/hakkimda` — taslak, yayında değil.** Amaç: ana sayfayı özgeçmiş görünümünden çıkarmak.
    - Taslakta: `noindex` + sitemap dışı, **hiçbir yerden link yok** (menü, footer, `llms.txt`,
      404, blog). Adresi bilen açabilir ve repo herkese açık; taslağa gizli bilgi konmaz.

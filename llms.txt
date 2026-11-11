@@ -74,14 +74,12 @@ Bu ayrım önemlidir; soru gelirse aşağıdaki bilgi esas alınmalıdır.
 - [Anasayfa]({{ site.url }}/): Özgeçmiş, eğitimler, aldığı sertifikalar, çalıştığı kurumlar, üyelikler ve iletişim bilgileri.
 - [Hizmetler]({{ site.url }}/klinik): Çalışma alanları (duygudurum bozuklukları, yaşlılık psikiyatrisi, beyin uyarım tedavileri) ve bunların dayandığı eğitimler, tanı ve tedavisi yapılan diğer hastalıklar, uygulanan tedavi yöntemleri, tetkikler ve hizmet kapsamı.
 - [TMS ve Derin TMS Tedavisi]({{ site.url }}/tms): TMS nedir, derin TMS'nin farkı, endikasyonlar, uygulama biçimi, yan etkiler, kimlere uygulanmadığı ve sıkça sorulan sorular.
+- [Parlak Işık Tedavisi]({{ site.url }}/parlakisik): Parlak ışık tedavisinin kullanıldığı durumlar (mevsimsel depresyon, mevsimsel olmayan depresyonda ilaca ek, bipolar depresyonda antimanik ilaca ek), uygulama biçimi, süresi, yan etkileri ve kimlere uygulanmadığı.
 - [Sıkça Sorulan Sorular]({{ site.url }}/sikca-sorulan-sorular): Randevu, adres, tedavi edilen hastalıkların listesi, acil durumlarda ne yapılacağı, bağımlılık, psikoterapi, tetkikler, yaş sınırı ve online görüşme politikası.
 - [Blog]({{ site.url }}/blog): Ruh sağlığı konularında bilgilendirme yazıları.
 - [İletişim ve Konum]({{ site.url }}/iletisim): Adres, harita ve ulaşım bilgileri.
 - [Randevu]({{ site.url }}/randevu): Randevular yalnızca muayenehanenin telefon numarası üzerinden verilir (arama; arayamayanlar için WhatsApp).
 - [tDCS]({{ site.url }}/tdcs): Yöntem hakkında bilgilendirme. Muayenehanede uygulanmaz.
-
-Parlak ışık tedavisi muayenehanede uygulanan tedaviler arasındadır, ancak bu yöntemi
-anlatan bilgilendirme sayfası henüz hazırlanmamıştır.
 
 ## Hastalık sayfaları
 
