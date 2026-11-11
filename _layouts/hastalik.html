@@ -22,8 +22,7 @@ layout: page
 </div>
 {%- endif %}
 
-{%- assign aylar = "Ocak,Şubat,Mart,Nisan,Mayıs,Haziran,Temmuz,Ağustos,Eylül,Ekim,Kasım,Aralık" | split: "," %}
-<p class="sayfa-notu">Bu sayfa yalnızca genel bilgilendirme amacı taşır; kişisel tanı, tedavi veya tıbbi tavsiye yerine geçmez. Hazırlayan: {{ site.resume_name }}, {{ site.author_specialty }}.{% if page.last_modified_at %}{% assign ay = page.last_modified_at | date: "%-m" | minus: 1 %} Son güncelleme: <time datetime="{{ page.last_modified_at | date: '%Y-%m-%d' }}">{{ page.last_modified_at | date: "%-d" }} {{ aylar[ay] }} {{ page.last_modified_at | date: "%Y" }}</time>.{% endif %}</p>
+{% include sayfa-notu.html %}
 
 {% include acil-kutusu.html baslik=page.acil_baslik metin=page.acil %}
 

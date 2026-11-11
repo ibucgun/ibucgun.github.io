@@ -330,6 +330,7 @@ listelenmez.
 | `_includes/schema/hastalik.html` | `MedicalWebPage` + `MedicalCondition`; yazar ve gözden geçiren `/#hekim` |
 | `_includes/iletisim-cta.html` | Ara / WhatsApp butonu; `baslik`, `metin`, `buton` parametreleri |
 | `_includes/sabit-arama-cubugu.html` | Telefonda ve tablette (≤960px) altta sabit Randevu Al / WhatsApp çubuğu; `footer.html`'den çağrılır (`.page-footer` dışında). Sayfadaki arama butonları ekrandayken çekilir. GA4 `sabit_cubuk` |
+| `_includes/sayfa-notu.html` | Yasal uyarı satırı ("genel bilgilendirme…, Hazırlayan…, Son güncelleme"; tarih `last_modified_at`'ten); kaynak kutusunun altında: hastalık şablonu ve `/parlakisik` |
 | `_includes/acil-kutusu.html` | Acil durum kutusu (112 kalıbı); hastalık şablonu ve `/randevu`; `baslik`, `metin` parametreleri |
 | `_sass/_variables.scss` | Sitenin tüm renkleri (görev adlı değişkenler) ve saydamlık seviyeleri |
 | `llms.txt` | Dil modelleri için site özeti — **hizmet değişince güncelle** |
