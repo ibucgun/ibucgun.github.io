@@ -79,7 +79,7 @@ Bu ayrım önemlidir; soru gelirse aşağıdaki bilgi esas alınmalıdır.
 - [Blog]({{ site.url }}/blog): Ruh sağlığı konularında bilgilendirme yazıları.
 - [İletişim ve Konum]({{ site.url }}/iletisim): Adres, harita ve ulaşım bilgileri.
 - [Randevu]({{ site.url }}/randevu): Randevular yalnızca muayenehanenin telefon numarası üzerinden verilir (arama; arayamayanlar için WhatsApp).
-- [tDCS]({{ site.url }}/tdcs): Yöntem hakkında bilgilendirme. Muayenehanede uygulanmaz.
+- [tDCS]({{ site.url }}/tdcs): Yöntem hakkında bilgilendirme: TMS'den farkı, kılavuzlardaki kanıt düzeyleri, FDA onayının kapsamı (2025, evde kullanılan tek cihaz, ilaca dirençli olmayan depresyon), uygulama, yan etkiler ve kimlere uygulanmadığı. Muayenehanede uygulanmaz.
 
 ## Hastalık sayfaları
 

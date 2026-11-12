@@ -330,7 +330,7 @@ listelenmez.
 | `_includes/schema/hastalik.html` | `MedicalWebPage` + `MedicalCondition`; yazar ve gözden geçiren `/#hekim` |
 | `_includes/iletisim-cta.html` | Ara / WhatsApp butonu; `baslik`, `metin`, `buton` parametreleri |
 | `_includes/sabit-arama-cubugu.html` | Telefonda ve tablette (≤960px) altta sabit Randevu Al / WhatsApp çubuğu; `footer.html`'den çağrılır (`.page-footer` dışında). Sayfadaki arama butonları ekrandayken çekilir. GA4 `sabit_cubuk` |
-| `_includes/sayfa-notu.html` | Yasal uyarı satırı ("genel bilgilendirme…, Hazırlayan…, Son güncelleme"; tarih `last_modified_at`'ten); kaynak kutusunun altında: hastalık şablonu, `/tms` ve `/parlakisik` |
+| `_includes/sayfa-notu.html` | Yasal uyarı satırı ("genel bilgilendirme…, Hazırlayan…, Son güncelleme"; tarih `last_modified_at`'ten); kaynak kutusunun altında: hastalık şablonu, `/tms`, `/tdcs` ve `/parlakisik` |
 | `_includes/acil-kutusu.html` | Acil durum kutusu (112 kalıbı); hastalık şablonu ve `/randevu`; `baslik`, `metin` parametreleri |
 | `_sass/_variables.scss` | Sitenin tüm renkleri (görev adlı değişkenler) ve saydamlık seviyeleri |
 | `llms.txt` | Dil modelleri için site özeti — **hizmet değişince güncelle** |
@@ -457,6 +457,13 @@ A10 (atıfsız otorite) bulgularına atıf eklenir. 8 sayfanın hepsi yayında (
   okunur); Lam 2016'nın ışık–fluoksetin karşılaştırması yazılmaz (yöntem üstünlüğü). Birim "lux" ("lüks" hasta
   için belirsiz, denetimde tesis övgüsü sanılıyor). Hastalık sayfalarındaki parlak ışık bölümleri ve `/klinik`
   buraya bağlanır.
+- `tdcs` (`layout: page`, soru başlıklı, kaynak kutusu elle; 2026-11-12'de baştan yazıldı): tDCS **uygulanmıyor**;
+  baştaki bilgilendirme kutusu ve 8. bölüm ("araştırmaları takip ediyorum, hizmet olarak sunmuyorum") bu çerçeveyi
+  korur. tDCS, TMS'in alternatifi gibi değil, kanıta uygun biçimde ilaca dirençli olmayan depresyonda erken basamakta
+  ve evde uygulanabilen bir seçenek olarak anlatılır (Lefaucheur 2017: dirençli depresyonda muhtemelen etkisiz; FDA
+  onayı da dirençli olmayanlar için). Kanıt düzeyleri iki kılavuz yan yana verilerek yazılır (Fregni 2021 ve Lefaucheur
+  2017). FDA onaylı cihazın markası yazılmaz, kaynak FDA PMA P230024 kaydıdır; kontrendikasyonlar onaylı kullanım
+  bilgisinden. TMS–tDCS karşılaştırma görseli (`tmsvstdcs.jpg`) kullanıcı kararıyla kalır (`/tms`'de de var).
 
 Punto kademesi: gövde `$fs-govde` → İçindekiler `$fs-md` → kaynaklar `$fs-sm` → uyarı `$fs-2xs`. İçindekiler,
 kaynak kutusu ve bilgi kutusu blog yazılarıyla ortak bileşendir (`icindekiler`, `kaynaklar`, `callout`); uyarıya kutu verilmez.
@@ -574,15 +581,9 @@ tek sütun oldu ve sabit arama çubuğu tablette de görünür oldu (önce table
 ## Kalan işler
 
 **Site içi**
-1. İç linkleme — şu sayfalardan hiç iç link çıkmıyor: `tdcs`, `blog`.
+1. İç linkleme — şu sayfadan hiç iç link çıkmıyor: `blog`.
    `/tms`'den hastalık sayfalarına link 3.1/3.2 listelerindeki hastalık adlarından verilir;
    `/anksiyete-bozukluklari`'na verilmez (o sayfa bilinçli olarak TMS'yi anmıyor).
-2. **`/tdcs` düzenlemesi.** Kaynak kutusu yok: 6 atıfsız iddia, yalnız tek bir satır içi "Kaynak:" notu;
-   `/tms` ve `/parlakisik`'teki kaynak kutusu (`.kaynaklar`, elle) örnek alınır. 57. satırdaki "güvenli ve etkili
-   bir yöntem" kesinlik bildiriyor (mevzuat), ölçülü dille yeniden yazılır. Kaynak kutusunun altına yasal uyarı
-   satırı (`{% include sayfa-notu.html %}`) eklenir. Metin `/parlakisik` gibi halk diliyle gözden geçirilir
-   (gereksiz çalışma ayrıntısı çıkarılır), `metin-denetimi` ile denetlenir; içerik değişince `last_modified_at`.
-
 > Hastalık sayfaları muayenehanedeki **değerlendirme ve tedavi sürecini** anlatır,
 > hastalığın "nedir"ini **blog yazıları** anlatır. Aynı metni iki yere yazma;
 > birbirine link ver. Ana sayfa kutuları, `llms.txt` ve blog geri linkleri bağlandı.
