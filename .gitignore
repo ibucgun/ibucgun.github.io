@@ -12,3 +12,7 @@ _raporlar/
 
 # Yerel CSS karşılaştırma düzeneği (önizleme sunucusu ayarı)
 .claude/launch.json
+
+# Proje notları (Claude Code okur; yalnız bu bilgisayarda, repo herkese açık)
+CLAUDE.md
+.claude/skills/
