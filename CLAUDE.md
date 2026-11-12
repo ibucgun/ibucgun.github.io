@@ -511,8 +511,13 @@ tek sütun oldu ve sabit arama çubuğu tablette de görünür oldu (önce table
 - Business Profile, Ekim 2026 (Eylül'e göre): 125 arama (−%35), 60 yol tarifi (−%1), 44 web sitesi (+%25),
   19 sohbet (−%17), 2.652 profil görüntüleme (−%28), 1.494 aramada görünme (−%36). Telefonla gelen hastanın
   ana kaynağı Business Profile (sitedeki `phone_click`'in ~6 katı).
-  Aylık Business Profile aramaları (panel 2026-06'dan beri tutuyor): Haz ~165 · Tem ~210 · Ağu ~160 · Eyl ~190 ·
-  Eki ~125. Ana sayfa Search Console'da haftalık ort. sıra Ağu–Eyl ~3,0 → 28 Eyl haftasından beri ~4,2,
+  Business Profile telefon aramaları, aylık (parantezde geçen yılın aynı ayına göre): Haz 162 (+%59) · Tem 225 (+%48) ·
+  Ağu 160 (−%18) · Eyl 195 (−%4) · Eki 125 (−%26) · Kas 1–8: 31. Günlük grafikte taşınmadan sonraki iki hafta yüksek
+  (Eyl 16–30 ~8/gün; büyük olasılıkla adres soran mevcut hastalar), asıl düşüş ~17 Ekim'den sonra (~3/gün). Business Profile pini 2026-10-13'te bina girişine
+~7 m kaydırıldı (schema koordinatı aynı gün); düşüşle zaman olarak yakın, nedensellik kanıtlanamadı. Pin yeniden oynatılmaz.
+  2025'te de Eyl → Eki %17 düşüş var (mevsim payı). Profil görüntüleme Eki 2.652 (−%39), aramada görünme 1.494
+  (−%50, geçen yıla göre); en çok düşen terim yakınlığa dayanan "psikiyatri" (Eyl 311 → Eki 127), "adana psikiyatri
+  doktorları" sabit. Görüntülemenin ~%88'i Google Arama mobilden, Haritalar uygulaması ~%4. Ana sayfa Search Console'da haftalık ort. sıra Ağu–Eyl ~3,0 → 28 Eyl haftasından beri ~4,2,
   gösterim haftada ~2.100 → ~1.600 ("adana psikiyatri" 3,5 → 5). Düşüş taşınmanın ardından,
   Ekim–Kasım site değişikliklerinden önce başladı. GA4 şehir (son 28 gün): Adana 94 kullanıcı (%24) ama anahtar
   etkinliklerin %63'ü; İstanbul/Ankara/İzmir'in bir kısmı mobil operatör konumu olabilir.
